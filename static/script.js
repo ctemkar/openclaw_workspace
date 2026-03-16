@@ -4,11 +4,10 @@ function updateStatus() {
         .then(response => {
             if (!response.ok) {
                 console.error('Error fetching status:', response.status, response.statusText);
-                // Optionally update UI to show error state
                 const tradingStatusSpan = document.getElementById('tradingStatus');
                 const llmStatusSpan = document.getElementById('llmStatus');
-                if(tradingStatusSpan) tradingStatusSpan.textContent = 'API Error';
-                if(llmStatusSpan) llmStatusSpan.textContent = 'API Error';
+                if (tradingStatusSpan) tradingStatusSpan.textContent = 'API Error';
+                if (llmStatusSpan) llmStatusSpan.textContent = 'API Error';
                 return Promise.reject(response);
             }
             return response.json();
@@ -16,13 +15,11 @@ function updateStatus() {
         .then(data => {
             const tradingStatusSpan = document.getElementById('tradingStatus');
             const llmStatusSpan = document.getElementById('llmStatus');
-            const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp'); // Assuming this exists for timestamp
+            const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp');
 
-            // Update trading status
             if (tradingStatusSpan) {
                 const tradingInfo = data.trading || {};
                 tradingStatusSpan.textContent = tradingInfo.status || 'N/A';
-                // Update timestamp if available
                 if (tradingInfo.last_update && tradingLogsTimestampSpan) {
                     try {
                         tradingLogsTimestampSpan.textContent = `Last update: ${new Date(tradingInfo.last_update).toLocaleString()}`;
@@ -33,20 +30,13 @@ function updateStatus() {
                 }
             }
 
-            // Update LLM status
             if (llmStatusSpan) {
                 const llmInfo = data.llm_generator || {};
                 llmStatusSpan.textContent = llmInfo.status || 'N/A';
-                // Optionally update timestamp for LLM status if a span exists for it
-                // const llmLogsTimestampSpan = document.getElementById('llmLogsTimestamp'); // Assuming this exists
-                // if (llmInfo.last_update && llmLogsTimestampSpan) {
-                //     llmLogsTimestampSpan.textContent = `Last update: ${new Date(llmInfo.last_update).toLocaleString()}`;
-                // }
             }
         })
         .catch(error => {
             console.error('Error in updateStatus fetch:', error);
-            // Display a global error message or reset status indicators
             const tradingStatusSpan = document.getElementById('tradingStatus');
             const llmStatusSpan = document.getElementById('llmStatus');
             if (tradingStatusSpan) tradingStatusSpan.textContent = 'Error';
@@ -66,7 +56,6 @@ function updateTradeProgress() {
         })
         .then(data => {
             const tradesByStrategy = {};
-            // Check if data contains trades and is an array
             if (data && data.trades && Array.isArray(data.trades) && data.trades.length > 0) {
                 data.trades.forEach(trade => {
                     const strategyName = trade.strategy_name || 'Unknown Strategy';
@@ -77,19 +66,16 @@ function updateTradeProgress() {
                 });
             }
 
-            // Update the LLM strategies display to include trade progress
             const llmStrategiesContainer = document.getElementById('llmStrategiesContainer');
-            // Clear existing strategies to re-render with progress
             llmStrategiesContainer.innerHTML = '<h4>Available Strategies & Trade Progress:</h4>';
 
-            // Re-fetch strategies to combine with progress data
             fetch('/api/llm/strategies')
                 .then(response => response.json())
                 .then(strategies => {
                     if (strategies && strategies.length > 0) {
                         strategies.forEach(strategy => {
                             const strategyDiv = document.createElement('div');
-                            strategyDiv.className = 'strategy-section'; // Added class for styling
+                            strategyDiv.className = 'strategy-section';
 
                             let progressHtml = '<p><strong>Trade Progress:</strong> No active trades for this strategy.</p>';
                             const strategyName = strategy.strategy_name;
@@ -112,7 +98,7 @@ function updateTradeProgress() {
                                 <p><strong>LLM Provider:</strong> ${strategy.llm_provider || 'N/A'}</p>
                                 <p><strong>Model:</strong> ${strategy.model || 'N/A'}</p>
                                 <p><strong>Description:</strong> ${strategy.description}</p>
-                                <p><strong>Risk:</strong> Stop Loss ${strategy.risk_parameters?.stop_loss_pct * 100?.toFixed(2)}%, Take Profit ${strategy.risk_parameters?.take_profit_pct * 100?.toFixed(2)}%</p>
+                                <p><strong>Risk:</strong> Stop Loss ${(strategy.risk_parameters?.stop_loss_pct * 100)?.toFixed(2) ?? 'N/A'}%, Take Profit ${(strategy.risk_parameters?.take_profit_pct * 100)?.toFixed(2) ?? 'N/A'}%</p>
                                 <p><strong>Rationale:</strong> ${strategy.profit_rationale}</p>
                                 ${progressHtml}
                             `;
@@ -126,9 +112,46 @@ function updateTradeProgress() {
         })
         .catch(error => {
             console.error('Error fetching trade progress:', error);
-            // Display an error message if progress cannot be fetched
             document.getElementById('llmStrategiesContainer').innerHTML = '<h4>Available Strategies & Trade Progress:</h4><p>Could not load trade progress. Please check console for errors.</p>';
         });
+}
+
+// --- Configuration Update Function ---
+function saveTradingConfig() {
+    const capitalInput = document.getElementById('configCapital');
+    const tradeSizeInput = document.getElementById('configTradeSize');
+    const stopLossInput = document.getElementById('configStopLoss');
+    const takeProfitInput = document.getElementById('configTakeProfit');
+
+    const config = {
+        capital: parseFloat(capitalInput.value),
+        trade_size_usd: parseFloat(tradeSizeInput.value),
+        stop_loss_pct: parseFloat(stopLossInput.value),
+        take_profit_pct: parseFloat(takeProfitInput.value)
+    };
+
+    if (isNaN(config.capital) || isNaN(config.trade_size_usd) || isNaN(config.stop_loss_pct) || isNaN(config.take_profit_pct)) {
+        alert('Please enter valid numbers for all trading parameters.');
+        return;
+    }
+
+    fetch('/api/trading/configure', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(config),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Save config response:', data);
+        alert(data.message || 'Configuration saved successfully!');
+        updateStatus(); 
+    })
+    .catch(error => {
+        console.error('Error saving trading configuration:', error);
+        alert('Failed to save configuration. Please check the console for details.');
+    });
 }
 
 // --- Initial Load and Periodic Updates ---
@@ -137,67 +160,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const llmStatusSpan = document.getElementById('llmStatus');
     const tradingLogsPre = document.getElementById('tradingLogs');
     const llmLogsPre = document.getElementById('llmLogs');
-    const statusUpdatesPre = document.getElementById('statusUpdates'); // Assuming this exists for general status updates
-    const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp'); // Assuming this exists for timestamp
+    const statusUpdatesPre = document.getElementById('statusUpdates');
+    const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp');
 
     const startTradingBtn = document.getElementById('startTradingBtn');
     const stopTradingBtn = document.getElementById('stopTradingBtn');
-    const generateLlmStrategiesBtn = document.getElementById('generateLlmStrategiesBtn'); // Assuming this exists
+    const generateLlmStrategiesBtn = document.getElementById('triggerLlmGenBtn'); 
+    const saveTradingConfigBtn = document.getElementById('saveTradingConfigBtn'); 
+    const resetConfigBtn = document.getElementById('resetConfigBtn');
 
-    // --- Status Update Function (NOW DEFINED) ---
-    if (!window.updateStatus) { // Define updateStatus only if it doesn't exist globally
-        window.updateStatus = function() {
-            fetch('/api/status/all')
-                .then(response => {
-                    if (!response.ok) {
-                        console.error('Error fetching status:', response.status, response.statusText);
-                        // Optionally update UI to show error state
-                        if(tradingStatusSpan) tradingStatusSpan.textContent = 'API Error';
-                        if(llmStatusSpan) llmStatusSpan.textContent = 'API Error';
-                        return Promise.reject(response);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Update trading status
-                    if (tradingStatusSpan) {
-                        const tradingInfo = data.trading || {};
-                        tradingStatusSpan.textContent = tradingInfo.status || 'N/A';
-                        // Update timestamp if available
-                        if (tradingInfo.last_update && tradingLogsTimestampSpan) {
-                            try {
-                                // Directly use the date string, assume it's ISO format
-                                tradingLogsTimestampSpan.textContent = `Last update: ${new Date(tradingInfo.last_update).toLocaleString()}`;
-                            } catch (e) {
-                                console.error("Error formatting timestamp:", tradingInfo.last_update, e);
-                                tradingLogsTimestampSpan.textContent = 'Last update: invalid date';
-                            }
-                        }
-                    }
+    const capitalInput = document.getElementById('configCapital');
+    const tradeSizeInput = document.getElementById('configTradeSize');
+    const stopLossInput = document.getElementById('configStopLoss');
+    const takeProfitInput = document.getElementById('configTakeProfit');
 
-                    // Update LLM status
-                    if (llmStatusSpan) {
-                        const llmInfo = data.llm_generator || {};
-                        llmStatusSpan.textContent = llmInfo.status || 'N/A';
-                        // Optionally update timestamp for LLM status if a span exists for it
-                        // const llmLogsTimestampSpan = document.getElementById('llmLogsTimestamp');
-                        // if (llmInfo.last_update && llmLogsTimestampSpan) {
-                        //     llmLogsTimestampSpan.textContent = `Last update: ${new Date(llmInfo.last_update).toLocaleString()}`;
-                        // }
-                    }
-                })
-                .catch(error => {
-                    console.error('Error in updateStatus fetch:', error);
-                    // Display a global error message or reset status indicators
-                    if(tradingStatusSpan) tradingStatusSpan.textContent = 'Error';
-                    if(llmStatusSpan) llmStatusSpan.textContent = 'Error';
-                });
-        }
-    }
+    // --- Fetch current config and status on load ---
+    function initializeUI() {
+        updateStatus();
 
-    // --- LLM Strategies Update (modified to combine with progress) ---
-    function updateStrategiesAndProgress() {
-        updateTradeProgress(); // This function now handles fetching and displaying strategies with their progress
+        fetch('/api/trading/configure') // Assuming this endpoint can be used to GET current config
+            .then(configResponse => {
+                if (!configResponse.ok) {
+                    console.warn("Could not fetch current trade config, using defaults or placeholders.");
+                    if (capitalInput) capitalInput.value = "10000.00";
+                    if (tradeSizeInput) tradeSizeInput.value = "10.00"; 
+                    if (stopLossInput) stopLossInput.value = "0.01";
+                    if (takeProfitInput) takeProfitInput.value = "0.02";
+                    return; 
+                }
+                return configResponse.json();
+            })
+            .then(configData => {
+                 if (configData && configData.received) { 
+                     const cfg = configData.received;
+                     if (capitalInput) capitalInput.value = cfg.capital?.toFixed(2) ?? "10000.00";
+                     if (tradeSizeInput) tradeSizeInput.value = cfg.trade_size_usd?.toFixed(2) ?? "10.00"; 
+                     if (stopLossInput) stopLossInput.value = cfg.stop_loss_pct?.toFixed(3) ?? "0.01";
+                     if (takeProfitInput) takeProfitInput.value = cfg.take_profit_pct?.toFixed(3) ?? "0.02";
+                 } else if (configData) { 
+                     if (capitalInput) capitalInput.value = configData.capital?.toFixed(2) ?? "10000.00";
+                     if (tradeSizeInput) tradeSizeInput.value = configData.trade_size_usd?.toFixed(2) ?? "10.00";
+                     if (stopLossInput) stopLossInput.value = configData.stop_loss_pct?.toFixed(3) ?? "0.01";
+                     if (takeProfitInput) takeProfitInput.value = configData.take_profit_pct?.toFixed(3) ?? "0.02";
+                 } else {
+                     if (capitalInput) capitalInput.value = "10000.00";
+                     if (tradeSizeInput) tradeSizeInput.value = "10.00";
+                     if (stopLossInput) stopLossInput.value = "0.01";
+                     if (takeProfitInput) takeProfitInput.value = "0.02";
+                 }
+            })
+            .catch(error => {
+                console.warn("Could not fetch and apply current trade config:", error);
+                if (capitalInput) capitalInput.value = "10000.00";
+                if (tradeSizeInput) tradeSizeInput.value = "10.00";
+                if (stopLossInput) stopLossInput.value = "0.01";
+                if (takeProfitInput) takeProfitInput.value = "0.02";
+            });
     }
 
     // --- Event Listeners ---
@@ -205,7 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
         startTradingBtn.addEventListener('click', () => {
             fetch('/api/trading/start', { method: 'POST' })
                 .then(response => response.json())
-                .then(data => console.log('Start trading response:', data))
+                .then(data => {
+                    console.log('Start trading response:', data);
+                    alert(data.message || 'Trading script command sent.');
+                    updateStatus(); 
+                })
                 .catch(error => console.error('Error starting trading:', error));
         });
     }
@@ -213,41 +235,146 @@ document.addEventListener('DOMContentLoaded', () => {
         stopTradingBtn.addEventListener('click', () => {
             fetch('/api/trading/stop', { method: 'POST' })
                 .then(response => response.json())
-                .then(data => console.log('Stop trading response:', data))
+                .then(data => {
+                    console.log('Stop trading response:', data);
+                    alert(data.message || 'Trading script stop command sent.');
+                    updateStatus(); 
+                })
                 .catch(error => console.error('Error stopping trading:', error));
         });
     }
     if (generateLlmStrategiesBtn) {
-        generateLlmStrategiesBtn.addEventListener('click', updateStrategiesAndProgress);
+        generateLlmStrategiesBtn.addEventListener('click', () => {
+            fetch('/api/llm/generate', { method: 'POST' }) 
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Generate LLM strategies response:', data);
+                    alert(data.message || 'LLM strategy generation command sent.');
+                    updateStatus(); 
+                })
+                .catch(error => console.error('Error generating LLM strategies:', error));
+        });
+    }
+    if (saveTradingConfigBtn) {
+        saveTradingConfigBtn.addEventListener('click', saveTradingConfig);
+    }
+    if (resetConfigBtn) {
+        resetConfigBtn.addEventListener('click', () => {
+            alert('Reset configuration to defaults (implementation needed).');
+            if (capitalInput) capitalInput.value = "10000.00";
+            if (tradeSizeInput) tradeSizeInput.value = "10.00"; 
+            if (stopLossInput) stopLossInput.value = "0.01";
+            if (takeProfitInput) takeProfitInput.value = "0.02";
+        });
     }
 
-    // --- Initial Load ---
-    updateStatus(); // Call the defined updateStatus function
-    // updateLogs(); // Assuming these functions exist elsewhere or are not critical initially
-    // updateMarketData();
-    updateStrategiesAndProgress(); // Call the combined function for initial load
+    // --- Initial Setup ---
+    initializeUI();
 
     // --- Auto-refresh data periodically ---
-    setInterval(updateStatus, 5000); // Refresh status every 5 seconds
-    // setInterval(updateLogs, 10000);
-    // setInterval(updateMarketData, 30000);
-    setInterval(updateStrategiesAndProgress, 60000); // Refresh strategies and progress every minute
-
-    // ... (rest of the existing code, potentially including chart rendering if Chart.js is used) ...
+    setInterval(updateStatus, 5000); 
+    setInterval(updateTradeProgress, 60000); 
 });
 
-// Placeholder for Chart.js if needed
 if (typeof Chart === 'undefined') {
     console.warn("Chart.js not found. Charts will not be rendered.");
 }
 
-// Define updateLogs, updateMarketData if they exist and are needed for initial load/intervals
 function updateLogs() {
-    // Placeholder: Implement fetching and displaying logs
-    console.log("updateLogs called");
+    fetch('/api/trading/logs')
+        .then(response => response.json())
+        .then(data => {
+            const tradingLogsPre = document.getElementById('tradingLogs');
+            const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp');
+            if (tradingLogsPre) tradingLogsPre.textContent = data.logs || 'No logs found.';
+            if (tradingLogsTimestampSpan) {
+                try {
+                    tradingLogsTimestampSpan.textContent = data.last_updated ? `Last update: ${new Date(data.last_updated).toLocaleString()}` : '-';
+                } catch (e) {
+                    console.error("Error formatting log timestamp:", data.last_updated, e);
+                    tradingLogsTimestampSpan.textContent = '-';
+                }
+            }
+        })
+        .catch(error => console.error('Error fetching trading logs:', error));
+
+    fetch('/api/llm/logs')
+        .then(response => response.json())
+        .then(data => {
+            const llmLogsPre = document.getElementById('llmLogs');
+            if (llmLogsPre) llmLogsPre.textContent = data.logs || 'No LLM logs found.';
+        })
+        .catch(error => console.error('Error fetching LLM logs:', error));
 }
 
 function updateMarketData() {
-    // Placeholder: Implement fetching and displaying market data
-    console.log("updateMarketData called");
+    fetch('/api/market/prices')
+        .then(response => response.json())
+        .then(data => {
+            const marketPricesContainer = document.getElementById('marketPricesContainer');
+            if (marketPricesContainer) {
+                marketPricesContainer.innerHTML = '<h4>Current Market Prices:</h4>';
+                for (const symbol in data) {
+                    marketPricesContainer.innerHTML += `<p><strong>${symbol}:</strong> $${data[symbol].toFixed(2)}</p>`;
+                }
+            }
+        })
+        .catch(error => console.error('Error fetching market prices:', error));
+
+    fetch('/api/market/charts?symbol=BTC/USD&period=1h')
+        .then(response => response.json())
+        .then(data => renderChart('btcChart', data))
+        .catch(error => console.error('Error fetching BTC/USD chart data:', error));
+        
+    fetch('/api/market/charts?symbol=ETH/USD&period=1h')
+        .then(response => response.json())
+        .then(data => renderChart('ethChart', data))
+        .catch(error => console.error('Error fetching ETH/USD chart data:', error));
+
+    fetch('/api/market/charts?symbol=SOL/USD&period=1h')
+        .then(response => response.json())
+        .then(data => renderChart('solChart', data))
+        .catch(error => console.error('Error fetching SOL/USD chart data:', error));
+}
+
+function renderChart(canvasId, chartData) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    if (!ctx) {
+        console.error(`Canvas element with id "${canvasId}" not found.`);
+        return;
+    }
+    
+    if (window.tradingCharts && window.tradingCharts[canvasId]) {
+        window.tradingCharts[canvasId].destroy();
+    } else if (window.tradingCharts) {
+        window.tradingCharts[canvasId] = null; 
+    } else {
+        window.tradingCharts = {}; 
+    }
+
+    const timestamps = chartData.data.map(item => new Date(item.timestamp).toLocaleTimeString());
+    const prices = chartData.data.map(item => item.price);
+
+    const newChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: timestamps,
+            datasets: [{
+                label: `${chartData.symbol} Price`,
+                data: prices,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+    window.tradingCharts[canvasId] = newChart; 
 }

@@ -15,10 +15,6 @@
             <button id="startTradingBtn">Start Trading Script</button>
             <button id="stopTradingBtn">Stop Trading Script</button>
             <button id="triggerLlmGenBtn">Generate LLM Strategies</button>
-            <button id="configureTradingBtn">Save Trading Config</button>
-            <button id="resetConfigBtn">Reset Config to Defaults</button>
-            <p>Trading Script Status: <span id="tradingStatus">Unknown</span></p>
-            <p>LLM Generator Status: <span id="llmStatus">Unknown</span></p>
             
             <div class="param-config">
                 <h3>Trading Parameters</h3>
@@ -26,7 +22,11 @@
                 <label for="configTradeSize">Trade Size ($):</label><input type="number" id="configTradeSize" step="0.01"><br>
                 <label for="configStopLoss">Stop Loss (%):</label><input type="number" id="configStopLoss" step="0.001"><br>
                 <label for="configTakeProfit">Take Profit (%):</label><input type="number" id="configTakeProfit" step="0.001"><br>
+                <button id="saveTradingConfigBtn">Save Trading Config</button>
+                <button id="resetConfigBtn">Reset Config to Defaults</button>
             </div>
+            <p>Trading Script Status: <span id="tradingStatus">Unknown</span></p>
+            <p>LLM Generator Status: <span id="llmStatus">Unknown</span></p>
         </div>
 
         <div class="llm-strategies-section section">

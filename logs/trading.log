@@ -2546,3 +2546,354 @@ fatal: bad revision 'HEAD'
 [2026-03-16 17:14:41][17463] Current price for SOL/USD: 93.42
 [2026-03-16 17:14:41][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.424 > 92.48976.
 [2026-03-16 17:14:41][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:15:42][17321] --- Starting trade cycle ---
+[2026-03-16 17:15:42][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:15:42][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:15:42][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:15:43][17321] Current price for ETH/USD: 2266.49
+[2026-03-16 17:15:43][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2266.49 > 2243.8250999999996.
+[2026-03-16 17:15:43][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:15:44][17321] Current price for BTC/USD: 73386.80
+[2026-03-16 17:15:44][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73386.8 > 72652.932.
+[2026-03-16 17:15:44][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:15:45][17321] Current price for SOL/USD: 93.42
+[2026-03-16 17:15:45][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.424 > 92.48976.
+[2026-03-16 17:15:45][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:19:41][17463] --- Starting trade cycle ---
+[2026-03-16 17:19:41][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:19:41][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:19:41][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:19:43][17463] Current price for ETH/USD: 2267.59
+[2026-03-16 17:19:43][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2267.59 > 2244.9141.
+[2026-03-16 17:19:43][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:19:44][17463] Current price for BTC/USD: 73396.44
+[2026-03-16 17:19:44][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73396.44 > 72662.4756.
+[2026-03-16 17:19:44][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:19:45][17463] Current price for SOL/USD: 93.52
+[2026-03-16 17:19:45][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.523 > 92.58776999999999.
+[2026-03-16 17:19:45][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:20:45][17321] --- Starting trade cycle ---
+[2026-03-16 17:20:45][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:20:45][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:20:45][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:20:46][17321] Current price for ETH/USD: 2265.07
+[2026-03-16 17:20:46][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2265.07 > 2242.4193.
+[2026-03-16 17:20:46][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:20:47][17321] Current price for BTC/USD: 73327.12
+[2026-03-16 17:20:47][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73327.12 > 72593.84879999999.
+[2026-03-16 17:20:47][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:20:48][17321] Current price for SOL/USD: 93.52
+[2026-03-16 17:20:48][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.523 > 92.58776999999999.
+[2026-03-16 17:20:48][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:24:45][17463] --- Starting trade cycle ---
+[2026-03-16 17:24:45][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:24:45][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:24:45][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:24:48][17463] Current price for ETH/USD: 2269.71
+[2026-03-16 17:24:48][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2269.71 > 2247.0129.
+[2026-03-16 17:24:48][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:24:49][17463] Current price for BTC/USD: 73433.19
+[2026-03-16 17:24:49][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73433.19 > 72698.8581.
+[2026-03-16 17:24:49][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:24:50][17463] Current price for SOL/USD: 93.59
+[2026-03-16 17:24:50][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.586 > 92.65014.
+[2026-03-16 17:24:50][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:25:48][17321] --- Starting trade cycle ---
+[2026-03-16 17:25:48][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:25:48][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:25:48][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:25:51][17321] Current price for ETH/USD: 2269.71
+[2026-03-16 17:25:51][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2269.71 > 2247.0129.
+[2026-03-16 17:25:51][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:25:52][17321] Current price for BTC/USD: 73447.80
+[2026-03-16 17:25:52][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73447.8 > 72713.322.
+[2026-03-16 17:25:52][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:25:53][17321] Current price for SOL/USD: 93.59
+[2026-03-16 17:25:53][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.586 > 92.65014.
+[2026-03-16 17:25:53][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:29:50][17463] --- Starting trade cycle ---
+[2026-03-16 17:29:50][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:29:50][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:29:50][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:29:51][17463] Current price for ETH/USD: 2266.09
+[2026-03-16 17:29:51][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2266.09 > 2243.4291000000003.
+[2026-03-16 17:29:51][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:29:52][17463] Current price for BTC/USD: 73449.33
+[2026-03-16 17:29:52][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73449.33 > 72714.8367.
+[2026-03-16 17:29:52][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:29:53][17463] Current price for SOL/USD: 93.54
+[2026-03-16 17:29:53][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.54 > 92.6046.
+[2026-03-16 17:29:53][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:30:53][17321] --- Starting trade cycle ---
+[2026-03-16 17:30:53][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:30:53][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:30:53][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:30:54][17321] Current price for ETH/USD: 2265.13
+[2026-03-16 17:30:54][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2265.13 > 2242.4787.
+[2026-03-16 17:30:54][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:30:55][17321] Current price for BTC/USD: 73442.61
+[2026-03-16 17:30:55][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73442.61 > 72708.1839.
+[2026-03-16 17:30:55][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:30:56][17321] Current price for SOL/USD: 93.54
+[2026-03-16 17:30:56][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.54 > 92.6046.
+[2026-03-16 17:30:56][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:34:53][17463] --- Starting trade cycle ---
+[2026-03-16 17:34:53][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:34:53][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:34:53][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:34:55][17463] Current price for ETH/USD: 2259.48
+[2026-03-16 17:34:55][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2259.48 > 2236.8852.
+[2026-03-16 17:34:55][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:34:56][17463] Current price for BTC/USD: 73311.38
+[2026-03-16 17:34:56][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73311.38 > 72578.2662.
+[2026-03-16 17:34:56][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:34:57][17463] Current price for SOL/USD: 93.44
+[2026-03-16 17:34:57][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.443 > 92.50856999999999.
+[2026-03-16 17:34:57][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:35:56][17321] --- Starting trade cycle ---
+[2026-03-16 17:35:56][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:35:56][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:35:56][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:35:58][17321] Current price for ETH/USD: 2259.14
+[2026-03-16 17:35:58][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2259.14 > 2236.5486.
+[2026-03-16 17:35:58][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:35:59][17321] Current price for BTC/USD: 73288.37
+[2026-03-16 17:35:59][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73288.37 > 72555.48629999999.
+[2026-03-16 17:35:59][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:36:00][17321] Current price for SOL/USD: 93.44
+[2026-03-16 17:36:00][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.443 > 92.50856999999999.
+[2026-03-16 17:36:00][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:39:57][17463] --- Starting trade cycle ---
+[2026-03-16 17:39:57][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:39:57][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:39:57][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:39:59][17463] Current price for ETH/USD: 2259.14
+[2026-03-16 17:39:59][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2259.14 > 2236.5486.
+[2026-03-16 17:39:59][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:40:00][17463] Current price for BTC/USD: 73220.37
+[2026-03-16 17:40:00][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73220.37 > 72488.1663.
+[2026-03-16 17:40:00][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:40:01][17463] Current price for SOL/USD: 93.38
+[2026-03-16 17:40:01][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.381 > 92.44719.
+[2026-03-16 17:40:01][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:41:00][17321] --- Starting trade cycle ---
+[2026-03-16 17:41:00][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:41:00][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:41:00][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:41:01][17321] Current price for ETH/USD: 2259.14
+[2026-03-16 17:41:01][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2259.14 > 2236.5486.
+[2026-03-16 17:41:01][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:41:02][17321] Current price for BTC/USD: 73251.26
+[2026-03-16 17:41:02][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73251.26 > 72518.7474.
+[2026-03-16 17:41:02][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:41:03][17321] Current price for SOL/USD: 93.38
+[2026-03-16 17:41:03][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.381 > 92.44719.
+[2026-03-16 17:41:03][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:45:01][17463] --- Starting trade cycle ---
+[2026-03-16 17:45:01][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:45:01][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:45:01][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:45:02][17463] Current price for ETH/USD: 2259.53
+[2026-03-16 17:45:02][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2259.53 > 2236.9347000000002.
+[2026-03-16 17:45:02][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:45:03][17463] Current price for BTC/USD: 73277.90
+[2026-03-16 17:45:03][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73277.9 > 72545.121.
+[2026-03-16 17:45:03][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:45:04][17463] Current price for SOL/USD: 93.51
+[2026-03-16 17:45:04][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.511 > 92.57589.
+[2026-03-16 17:45:04][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:46:03][17321] --- Starting trade cycle ---
+[2026-03-16 17:46:03][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:46:03][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:46:03][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:46:04][17321] Current price for ETH/USD: 2260.51
+[2026-03-16 17:46:04][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2260.51 > 2237.9049.
+[2026-03-16 17:46:04][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:46:05][17321] Current price for BTC/USD: 73248.84
+[2026-03-16 17:46:05][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73248.84 > 72516.3516.
+[2026-03-16 17:46:05][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:46:06][17321] Current price for SOL/USD: 93.51
+[2026-03-16 17:46:06][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.511 > 92.57589.
+[2026-03-16 17:46:06][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:50:04][17463] --- Starting trade cycle ---
+[2026-03-16 17:50:04][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:50:04][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:50:04][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:50:06][17463] Current price for ETH/USD: 2264.90
+[2026-03-16 17:50:06][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2264.9 > 2242.251.
+[2026-03-16 17:50:06][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:50:07][17463] Current price for BTC/USD: 73355.75
+[2026-03-16 17:50:07][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73355.75 > 72622.1925.
+[2026-03-16 17:50:07][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:50:08][17463] Current price for SOL/USD: 93.55
+[2026-03-16 17:50:08][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.554 > 92.61846.
+[2026-03-16 17:50:08][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:51:06][17321] --- Starting trade cycle ---
+[2026-03-16 17:51:06][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:51:06][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:51:06][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:51:08][17321] Current price for ETH/USD: 2269.27
+[2026-03-16 17:51:08][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2269.27 > 2246.5773.
+[2026-03-16 17:51:08][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:51:09][17321] Current price for BTC/USD: 73514.83
+[2026-03-16 17:51:09][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73514.83 > 72779.6817.
+[2026-03-16 17:51:09][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:51:10][17321] Current price for SOL/USD: 93.74
+[2026-03-16 17:51:10][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.741 > 92.80359.
+[2026-03-16 17:51:10][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:55:08][17463] --- Starting trade cycle ---
+[2026-03-16 17:55:08][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:55:08][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:55:08][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:55:10][17463] Current price for ETH/USD: 2268.66
+[2026-03-16 17:55:10][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2268.66 > 2245.9734.
+[2026-03-16 17:55:10][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:55:11][17463] Current price for BTC/USD: 73579.37
+[2026-03-16 17:55:11][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73579.37 > 72843.5763.
+[2026-03-16 17:55:11][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:55:12][17463] Current price for SOL/USD: 93.83
+[2026-03-16 17:55:12][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.833 > 92.89466999999999.
+[2026-03-16 17:55:12][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 17:56:10][17321] --- Starting trade cycle ---
+[2026-03-16 17:56:10][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 17:56:10][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 17:56:10][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 17:56:11][17321] Current price for ETH/USD: 2276.30
+[2026-03-16 17:56:11][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2276.3 > 2253.5370000000003.
+[2026-03-16 17:56:11][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 17:56:12][17321] Current price for BTC/USD: 73713.59
+[2026-03-16 17:56:12][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73713.59 > 72976.4541.
+[2026-03-16 17:56:12][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 17:56:13][17321] Current price for SOL/USD: 93.95
+[2026-03-16 17:56:13][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.952 > 93.01248.
+[2026-03-16 17:56:13][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:00:12][17463] --- Starting trade cycle ---
+[2026-03-16 18:00:12][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 18:00:12][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:00:12][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:00:14][17463] Current price for ETH/USD: 2276.93
+[2026-03-16 18:00:14][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2276.93 > 2254.1607.
+[2026-03-16 18:00:14][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:00:14][17463] Current price for BTC/USD: 73817.34
+[2026-03-16 18:00:14][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73817.34 > 73079.1666.
+[2026-03-16 18:00:14][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:00:15][17463] Current price for SOL/USD: 93.97
+[2026-03-16 18:00:15][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.973 > 93.03327.
+[2026-03-16 18:00:15][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:01:13][17321] --- Starting trade cycle ---
+[2026-03-16 18:01:13][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 18:01:13][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:01:13][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:01:15][17321] Current price for ETH/USD: 2277.92
+[2026-03-16 18:01:15][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2277.92 > 2255.1408.
+[2026-03-16 18:01:15][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:01:16][17321] Current price for BTC/USD: 73758.28
+[2026-03-16 18:01:16][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73758.28 > 73020.6972.
+[2026-03-16 18:01:16][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:01:17][17321] Current price for SOL/USD: 93.95
+[2026-03-16 18:01:17][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.952 > 93.01248.
+[2026-03-16 18:01:17][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:05:16][17463] --- Starting trade cycle ---
+[2026-03-16 18:05:16][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 18:05:16][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:05:16][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:05:17][17463] Current price for ETH/USD: 2275.49
+[2026-03-16 18:05:17][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2275.49 > 2252.7351.
+[2026-03-16 18:05:17][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:05:18][17463] Current price for BTC/USD: 73740.50
+[2026-03-16 18:05:18][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73740.5 > 73003.095.
+[2026-03-16 18:05:18][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:05:19][17463] Current price for SOL/USD: 93.80
+[2026-03-16 18:05:19][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.803 > 92.86497.
+[2026-03-16 18:05:19][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:06:17][17321] --- Starting trade cycle ---
+[2026-03-16 18:06:17][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_155537.json
+[2026-03-16 18:06:17][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:06:17][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:06:18][17321] Current price for ETH/USD: 2276.74
+[2026-03-16 18:06:18][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2276.74 > 2253.9725999999996.
+[2026-03-16 18:06:18][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:06:19][17321] Current price for BTC/USD: 73740.50
+[2026-03-16 18:06:19][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73740.5 > 73003.095.
+[2026-03-16 18:06:19][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:06:20][17321] Current price for SOL/USD: 93.80
+[2026-03-16 18:06:20][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.803 > 92.86497.
+[2026-03-16 18:06:20][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:10:19][17463] --- Starting trade cycle ---
+[2026-03-16 18:10:19][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:10:19][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:10:19][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:10:21][17463] Current price for ETH/USD: 2275.23
+[2026-03-16 18:10:21][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2275.23 > 2252.4777.
+[2026-03-16 18:10:21][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:10:22][17463] Current price for BTC/USD: 73668.90
+[2026-03-16 18:10:22][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73668.9 > 72932.211.
+[2026-03-16 18:10:22][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:10:23][17463] Current price for SOL/USD: 93.83
+[2026-03-16 18:10:23][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.828 > 92.88972.
+[2026-03-16 18:10:23][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:11:20][17321] --- Starting trade cycle ---
+[2026-03-16 18:11:20][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:11:20][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:11:20][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:11:22][17321] Current price for ETH/USD: 2275.23
+[2026-03-16 18:11:22][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2275.23 > 2252.4777.
+[2026-03-16 18:11:22][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:11:23][17321] Current price for BTC/USD: 73684.18
+[2026-03-16 18:11:23][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73684.18 > 72947.3382.
+[2026-03-16 18:11:23][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:11:23][17321] Current price for SOL/USD: 93.83
+[2026-03-16 18:11:23][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.828 > 92.88972.
+[2026-03-16 18:11:23][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:15:23][17463] --- Starting trade cycle ---
+[2026-03-16 18:15:23][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:15:23][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:15:23][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:15:25][17463] Current price for ETH/USD: 2274.47
+[2026-03-16 18:15:25][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2274.47 > 2251.7252999999996.
+[2026-03-16 18:15:25][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:15:25][17463] Current price for BTC/USD: 73617.46
+[2026-03-16 18:15:25][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73617.46 > 72881.28540000001.
+[2026-03-16 18:15:25][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:15:26][17463] Current price for SOL/USD: 93.81
+[2026-03-16 18:15:26][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.814 > 92.87585999999999.
+[2026-03-16 18:15:26][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:16:24][17321] --- Starting trade cycle ---
+[2026-03-16 18:16:24][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:16:24][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:16:24][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:16:26][17321] Current price for ETH/USD: 2274.55
+[2026-03-16 18:16:26][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2274.55 > 2251.8045.
+[2026-03-16 18:16:26][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:16:27][17321] Current price for BTC/USD: 73618.88
+[2026-03-16 18:16:27][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73618.88 > 72882.6912.
+[2026-03-16 18:16:27][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:16:28][17321] Current price for SOL/USD: 93.81
+[2026-03-16 18:16:28][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.814 > 92.87585999999999.
+[2026-03-16 18:16:28][17321] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:20:26][17463] --- Starting trade cycle ---
+[2026-03-16 18:20:26][17463] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:20:26][17463] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:20:26][17463] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:20:28][17463] Current price for ETH/USD: 2277.07
+[2026-03-16 18:20:28][17463] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2277.07 > 2254.2993.
+[2026-03-16 18:20:28][17463] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:20:29][17463] Current price for BTC/USD: 73758.59
+[2026-03-16 18:20:29][17463] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73758.59 > 73021.00409999999.
+[2026-03-16 18:20:29][17463] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:20:30][17463] Current price for SOL/USD: 93.85
+[2026-03-16 18:20:30][17463] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.852 > 92.91348.
+[2026-03-16 18:20:30][17463] Trade cycle finished. Sleeping for 5 minutes.
+[2026-03-16 18:21:28][17321] --- Starting trade cycle ---
+[2026-03-16 18:21:28][17321] Loading strategies from: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies_20260316_180846.json
+[2026-03-16 18:21:28][17321] LLM strategies unchanged. Proceeding with existing symbols.
+[2026-03-16 18:21:28][17321] Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+[2026-03-16 18:21:29][17321] Current price for ETH/USD: 2275.33
+[2026-03-16 18:21:29][17321] Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2275.33 > 2252.5767.
+[2026-03-16 18:21:29][17321] Executing trade logic for BTC/USD using strategy: 'Gemini_Momentum_Strategy'...
+[2026-03-16 18:21:30][17321] Current price for BTC/USD: 73638.00
+[2026-03-16 18:21:30][17321] Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 73638.0 > 72901.62.
+[2026-03-16 18:21:30][17321] Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+[2026-03-16 18:21:31][17321] Current price for SOL/USD: 93.81
+[2026-03-16 18:21:31][17321] Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 93.81 > 92.8719.
+[2026-03-16 18:21:31][17321] Trade cycle finished. Sleeping for 5 minutes.

@@ -1,10 +1,10 @@
 {
-    "last_log": "2026-03-16 17:14:41",
+    "last_log": "2026-03-16 18:21:31",
     "last_message": "Trade cycle finished. Sleeping for 5 minutes.",
-    "pid": 17463,
-    "last_heartbeat": "2026-03-16T17:14:41.738846",
+    "pid": 17321,
+    "last_heartbeat": "2026-03-16T18:21:31.360949",
     "trading_status": "error",
     "error_message": "name 'ccxt' is not defined",
     "is_running": false,
-    "trading_cycle_complete": "2026-03-16T17:14:41.738223"
+    "trading_cycle_complete": "2026-03-16T18:21:31.360689"
 }
