@@ -1,85 +1,49 @@
 === TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 02:01:14 (Asia/Bangkok)
-Dashboard Port: 51228
+Timestamp: 2026-03-18 02:09:45 (Asia/Bangkok)
+Dashboard Port: 54306 (not 5001 as expected)
 
---- SYSTEM STATUS ---
-Trading Script Status: RUNNING
-Last Update: 2026-03-18T02:01:08.513974Z
+=== SYSTEM STATUS ===
+Trading Status: running
+Last Update: 2026-03-18T02:09:18.401472Z
 
---- TRADING CONFIGURATION ---
-Capital: $10,000.00
-Trade Size: $10.00
-Stop Loss: 1.00%
-Take Profit: 2.00%
+=== MARKET DATA ===
+BTC/USDT: $40,036.44
+ETH/USDT: $2,996.26
+SOL/USDT: $99.30
 
---- PERFORMANCE ANALYSIS ---
-Completed Trades: 0
-Active Trades: 0
+=== TRADING PERFORMANCE ===
+Completed Trades: 0 (no trades executed)
 
---- LOG ANALYSIS (Last 50 entries) ---
-[2026-03-18 01:53:03] API: Received request to start trading script.
-[2026-03-18 01:53:11] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:53:21] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:53:31] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:53:41] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:53:52] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:53:54] API: Received request to generate LLM strategies.
-[2026-03-18 01:54:02] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:54:03] API: Received request to generate LLM strategies.
-[2026-03-18 01:54:12] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:54:22] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:54:32] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:54:42] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:54:52] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:02] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:12] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:22] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:32] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:42] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:55:52] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:56:02] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:56:12] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:56:22] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:56:36] TRADE FAILURE (Gemini): gemini Failed to place buy order on symbol 'BTCUSDT' for price 75,008.11 USDT and quantity 0.00013465 BTC due to insufficient funds
-[2026-03-18 01:56:37] TRADE FAILURE (GPT-4): gemini Failed to place sell order on symbol 'ETHUSDT' for price 2,311.51 USDT and quantity 0.004282 ETH due to insufficient funds
-[2026-03-18 01:57:17] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:57:27] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:57:37] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:57:47] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:57:57] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:07] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:17] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:27] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:37] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:47] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:58:57] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:07] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:17] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:27] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:37] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:48] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:59:58] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:08] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:18] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:28] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:32] API: Received request to generate LLM strategies.
-[2026-03-18 02:00:38] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:48] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:00:58] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 02:01:08] STRATEGY ERROR: 'str' object has no attribute 'get'
+=== RISK PARAMETERS ===
+From trading_config.json:
+- Initial Capital: $1000.00
+- Max Position Size: $100.00
+- Stop Loss: 1.00%
+- Take Profit: 2.00%
+- Max Drawdown: 10.00%
+- Max Daily Loss: 5.00%
 
---- RISK ANALYSIS ---
-1. STRATEGY ERRORS: Persistent "str object has no attribute 'get'" errors indicate a bug in strategy parsing logic.
-2. INSUFFICIENT FUNDS: Two trade failures due to insufficient funds (BTC and ETH trades).
-3. NO COMPLETED TRADES: System has not executed any successful trades yet.
-4. CAPITAL UTILIZATION: $0 of $10,000 capital deployed.
+=== CRITICAL ISSUES DETECTED ===
+1. STRATEGY PARSING ERROR: Continuous error in trading logs
+   - Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
+   - Frequency: Every 10 seconds since 02:01:28
+   - Root Cause: llm_strategies.json contains malformed data
+   - Impact: Trading bot cannot parse strategies, no trades being executed
 
---- RECOMMENDATIONS ---
-1. Fix strategy parsing bug causing repeated errors.
-2. Verify exchange account balance and API credentials.
-3. Consider increasing trade size from $10 to utilize available capital.
-4. Monitor for successful trade execution.
+2. DASHBOARD PORT MISMATCH:
+   - Expected: Port 5001
+   - Actual: Port 54306
+   - Impact: Monitoring script needs to update endpoint
 
---- ALERT STATUS ---
-NO STOP-LOSS OR TAKE-PROFIT TRIGGERS DETECTED
-NO CRITICAL DRAWDOWN INDICATORS
+3. LLM STRATEGIES API ERROR:
+   - /api/llm/strategies returns 500 Internal Server Error
+   - Likely same parsing issue as trading bot
+
+=== RECOMMENDED ACTIONS ===
+1. Fix llm_strategies.json format
+2. Update monitoring script to use port 54306
+3. Restart trading bot after fixing strategy file
+4. Verify API endpoints are functioning correctly
+
+=== NEXT MONITORING CHECK ===
+Scheduled for next cron run (every 5 minutes)
