@@ -1,0 +1,32 @@
+[main da0a9f0] Automated Memory Update: Tue Mar 17 21:00:01 +07 2026
+ 33 files changed, 35231 insertions(+), 894 deletions(-)
+ create mode 100644 .active_port
+ create mode 100644 INSTRUCTIONS.md
+ mode change 100644 => 100755 app.py
+ create mode 100644 auto_save.log
+ create mode 100644 fetch_trading_data.py
+ create mode 100644 llm_strategies_20260317_200245.json
+ create mode 100644 llm_strategies_20260317_200435.json
+ create mode 100644 llm_strategies_20260317_200958.json
+ create mode 100644 llm_strategies_20260317_201042.json
+ create mode 100644 memory/2026-03-16.md
+ create mode 100644 monitor_trading.py
+ create mode 100644 monitor_trading.sh
+ create mode 100644 monitor_trading_dashboard.py
+ create mode 100644 progress_monitor.log
+ create mode 100755 progress_monitor.sh
+ create mode 100755 restart_gateway.sh
+ create mode 100644 trade_monitor.py
+ create mode 100644 trading_bot_clean.log
+ create mode 100644 trading_dashboard_monitor.py
+ create mode 100644 trading_data.tmp
+ create mode 100644 trading_monitor.py
+ create mode 100644 trading_monitoring_description.md
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+

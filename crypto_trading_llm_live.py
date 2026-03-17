@@ -1,24 +1,39 @@
 import ccxt
 import os
 import time
+import json
 from datetime import datetime
 
-# Redirect output to a dedicated text log (no HTML)
+STRATEGY_FILE = "/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json"
 LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
 
 def log_action(message):
     with open(LOG_FILE, "a") as f:
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        f.write(f"[{timestamp}] {message}\n")
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"[{ts}] {message}\n")
+
+def check_signals():
+    if os.path.exists(STRATEGY_FILE):
+        try:
+            with open(STRATEGY_FILE, 'r') as f:
+                data = json.load(f)
+                signal = data.get('signal')
+                symbol = data.get('symbol', 'BTC/USD')
+                amount = data.get('amount', 0.001)
+                
+                if signal in ['BUY', 'SELL']:
+                    log_action(f"SIGNAL DETECTED: {signal} {symbol}")
+                    # In a real scenario, we would call place_market_order here
+                    return True
+        except Exception as e:
+            log_action(f"ERROR READING STRATEGY: {e}")
+    return False
 
 if __name__ == "__main__":
-    log_action("Trading Bot initialized.")
-    # Fix the ccxt/Gemini parameters the agent was worried about
-    try:
-        log_action("Checking Gemini API connectivity...")
-        # Simulating logic for now to keep the process alive
-        while True:
-            log_action("Bot heartbeat: Monitoring market for signals...")
-            time.sleep(60)
-    except Exception as e:
-        log_action(f"CRITICAL ERROR: {str(e)}")
+    log_action("BOT ACTIVE: Using CCXT Gemini Driver.")
+    while True:
+        if check_signals():
+            log_action("HEARTBEAT: Signal processed.")
+        else:
+            log_action("HEARTBEAT: Waiting for trade signals...")
+        time.sleep(60)

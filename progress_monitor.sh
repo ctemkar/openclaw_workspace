@@ -11,10 +11,10 @@ echo "--- Progress Monitor: $(date) ---"
 if [ -f "$PORT_FILE" ]; then
     CURRENT_PORT=$(cat "$PORT_FILE")
     echo "Click to open Dashboard:"
-    echo "http://127.0.0.1:$CURRENT_PORT/api/status/all"
+    echo "http://127.0.0.1:$CURRENT_PORT"
     echo ""
     
-    if ! curl -s "http://127.0.0.1:$CURRENT_PORT/api/status/all" > /dev/null; then
+    if ! curl -s "http://127.0.0.1:$CURRENT_PORT" > /dev/null; then
         echo "STATUS: [WARN] API is DOWN"
     else
         echo "STATUS: [OK] API is UP"
