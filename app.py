@@ -194,9 +194,7 @@ if __name__ == '__main__':
     monitor_thread = threading.Thread(target=update_task_statuses, daemon=True)
     monitor_thread.start()
     
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('', 0))
-        port = s.getsockname()[1]
+    port = 5001
     
     with open('/Users/chetantemkar/.openclaw/workspace/app/.active_port', 'w') as f:
         f.write(str(port))

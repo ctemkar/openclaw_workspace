@@ -1,55 +1,43 @@
-=== CRON JOB EXECUTION SUMMARY ===
-Job ID: trading_dashboard_monitor
-Execution Time: 2026-03-18 01:57:45 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Time: 2026-03-18 02:33:15 (Asia/Bangkok)
 
-=== EXECUTION RESULTS ===
-• Dashboard Check: FAILED (Port 5001 not responding)
-• Bot Status: DETECTED (PID 79629 running)
-• Log Analysis: COMPLETED
-• Market Data: FETCHED (Live prices from Binance)
-• Alert Generation: COMPLETED
+STATUS OVERVIEW:
+- Trading Status: RUNNING
+- Capital: $10,000.00
+- Stop Loss: 1.0%
+- Take Profit: 2.0%
 
-=== KEY FINDINGS ===
-1. CRITICAL: Trade execution failures due to insufficient funds
-   - BTC Buy order failed: $75,008.11 for 0.00013465 BTC
-   - ETH Sell order failed: $2,311.51 for 0.004282 ETH
-   - Both failed with "insufficient funds" error
+MARKET DATA:
+- BTC/USDT: $39,835.30
+- ETH/USDT: $3,003.22
+- SOL/USDT: $99.25
 
-2. CRITICAL: Persistent strategy parsing errors
-   - "'str' object has no attribute 'get'" error
-   - Occurring every 10 seconds for 20+ minutes
-   - 150+ errors logged
+CRITICAL ALERTS (3):
+1. STRATEGY MALFUNCTION - HIGH SEVERITY
+   • 47+ consecutive strategy errors: "str object has no attribute 'get'"
+   • Bot may be executing incorrect logic
+   • ACTION: Investigate and fix immediately
 
-3. WARNING: Dashboard server offline
-   - Port 5001 not in use
-   - Previous dashboard (port 49399) also offline
-   - Reduced monitoring capability
+2. TRADE EXECUTION FAILURE - MEDIUM SEVERITY
+   • Failed sell order due to insufficient funds
+   • Symbol: ETHUSD, Price: $2,314.61, Quantity: 0.004277 ETH
+   • ACTION: Check account balances
 
-=== DATA EXTRACTED ===
-• Live Market Prices:
-  - BTC/USDT: $74,677.46
-  - ETH/USDT: $2,331.29
+3. DATA TYPE HANDLING ISSUE - MEDIUM SEVERITY
+   • String/dictionary confusion in strategy code
+   • .get() method called on string object
+   • ACTION: Review data type handling
 
-• Bot Status:
-  - Process: Active (PID 79629)
-  - Errors: Continuous strategy parsing failures
-  - Trade Attempts: 2 failed attempts at 01:56:36-37
+RECENT ACTIVITY:
+- 47+ strategy errors in last 15 minutes
+- 2 successful buy orders filled at 74728.83
+- 1 trade failure due to insufficient funds
 
-• Risk Parameters:
-  - No active positions
-  - No stop-loss/take-profit triggers
-  - No drawdown indicators
+RECOMMENDATION:
+PAUSE trading until critical errors are resolved to prevent potential losses.
+Strategy appears to have fundamental implementation issues requiring immediate attention.
 
-=== FILES UPDATED ===
-1. trading_monitoring.log - Updated with latest analysis
-2. critical_alerts.log - Updated with new trade failure alerts
-3. cron_summary.txt - This execution summary
-
-=== RECOMMENDATIONS FOR NEXT EXECUTION ===
-1. Attempt to restart dashboard if still offline
-2. Check if strategy errors persist
-3. Monitor for any new trade attempts
-4. Verify if funding issue resolved
-
-=== NEXT SCHEDULED CHECK ===
-As per cron schedule configuration
+Monitoring logs saved to:
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log

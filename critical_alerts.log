@@ -1,57 +1,22 @@
-=== CRITICAL TRADING ALERT ===
-Alert Time: 2026-03-18 02:09:50 (Asia/Bangkok)
-Severity: HIGH
-Alert Type: STRATEGY PARSING FAILURE
-
-=== ALERT DETAILS ===
-The trading bot has been experiencing continuous strategy parsing errors for approximately 8 minutes.
-
-Error Pattern: "STRATEGY ERROR: 'str' object has no attribute 'get'"
-Error Frequency: Every 10 seconds
-First Error: 2026-03-18 02:01:28
-Latest Error: 2026-03-18 02:09:30
-Total Errors: ~48 consecutive failures
-
-=== IMPACT ANALYSIS ===
-1. TRADING ACTIVITY: COMPLETELY HALTED
-   - No trades have been executed
-   - Completed trades file is empty
-   - Bot is stuck in error loop
-
-2. FINANCIAL IMPACT:
-   - Zero trading activity despite market conditions
-   - Potential missed opportunities
-   - Capital not deployed
-
-3. SYSTEM INTEGRITY:
-   - Dashboard API partially functional
-   - LLM strategies endpoint broken (500 error)
-   - Market data fetching still working
-
-=== ROOT CAUSE ===
-File: llm_strategies.json
-Issue: Malformed JSON structure
-Current Content: {"strategy": "simple_buy_sell"}
-Expected Format: Proper strategy object with get() method support
-
-=== URGENT ACTIONS REQUIRED ===
-1. IMMEDIATE: Fix llm_strategies.json file format
-2. RESTART: Stop and restart the trading bot
-3. VERIFY: Check that strategies are being parsed correctly
-4. MONITOR: Watch for successful trade execution
-
-=== RISK LEVEL ===
-HIGH - Trading system is non-functional
-No capital at risk (no positions open)
-High opportunity cost (markets active)
-
-=== ALERT TRIGGERS ===
-- Continuous strategy errors for >5 minutes ✓ TRIGGERED
-- Zero trading activity ✓ TRIGGERED
-- API endpoint failures ✓ TRIGGERED
-
-=== NEXT STEPS ===
-1. Investigate and fix strategy file
-2. Restart trading system
-3. Verify recovery
-4. Resume normal monitoring
+[ACTIVE ALERT] 2026-03-18 02:49:19
+- BOT STATUS: ACTIVE but with data format errors
+- CURRENT ISSUE: Strategy file format mismatch
+- File: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json
+- Problem: File contains {"strategy": "initialize", "message": "Waiting for AI signals..."}
+- Error: Bot expects dictionary with .get() method, gets string/JSON object instead
+- Error Message: AttributeError: 'str' object has no attribute 'get'
+- ERROR FREQUENCY: Every 10 seconds (continuous since 02:15:52)
+- TOTAL ERRORS: ~204 consecutive errors in last 34 minutes
+- PROCESS STATE: Bot running (PID: 79629) with active error handling
+- RECENT TRADES: 2 successful BTC buy orders at 02:24:56 and 02:25:17
+- TRADE FAILURE: ETH sell order failed due to insufficient funds (02:24:56)
+- DASHBOARD STATUS: Available at http://localhost:5001/ but stale (last update 22+ hours ago)
+- POSITIONS: 2 BTC buy orders at $74,728.83
+- Risk Parameters: Capital=$1000.00, Trade Size=$100.00, Stop Loss=1.0%, Take Profit=2.0%
+- ACTION REQUIRED:
+  1. Fix strategy file format in llm_strategies.json
+  2. Check dashboard status update mechanism
+  3. Verify account balances for insufficient funds issue
+  4. Add better validation for strategy file format
+  5. Monitor for any position liquidation needs
+- PRIORITY: MEDIUM (bot running but with continuous errors)
