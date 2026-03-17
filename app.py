@@ -14,7 +14,7 @@ MOCK_TRADING_CONFIG = {
 }
 
 MOCK_TRADES = []
-MOCK_LLM_STRATEGIES = []
+# Real data only - no mock strategies
 MOCK_TRADING_LOGS = ["Initial log entry."]
 MOCK_LLM_LOGS = ["Initial LLM log entry."]
 MOCK_MARKET_PRICES = {"BTC/USDT": 40000.0, "ETH/USDT": 3000.0, "SOL/USDT": 100.0}

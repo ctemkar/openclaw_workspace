@@ -1,57 +1,24 @@
-=== TRADING MONITORING SUMMARY ===
-Execution Time: 2026-03-18 02:06:30 (Asia/Bangkok)
+TRADING MONITORING SUMMARY - 2026-03-18 03:48:04
 
-=== EXECUTION RESULTS ===
-1. Dashboard Fetch: FAILED
-   - Port 5001: Not responding
-   - Port 51228: Not responding
-   - Status: Dashboard services offline
+STATUS: ⚠️ WARNING - STRATEGY ERRORS DETECTED
 
-2. Log Analysis: COMPLETED
-   - Trading bot running (PID: 79629)
-   - Continuous strategy errors every 10 seconds
-   - Last error: 02:06:19 "'str' object has no attribute 'get'"
-   - Two trade failures due to insufficient funds (01:56:36-37)
+KEY FINDINGS:
+1. Trading system is online and running
+2. Continuous strategy execution errors occurring every ~10 seconds
+3. 2 recent BUY trades executed successfully (02:24-02:25)
+4. Risk parameters configured: $10k capital, 1% stop loss, 2% take profit
+5. No stop-loss or take-profit triggers detected
+6. No critical drawdown indicators
 
-3. Risk Parameters Check: COMPLETED
-   - Capital: $10,000.00 (0% utilized)
-   - Stop Loss: 1.00% (not triggered - no positions)
-   - Take Profit: 2.00% (not triggered - no positions)
-   - Drawdown: 0% (no active trades)
+CRITICAL ISSUE:
+- Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
+- Frequency: Continuous since 03:39:56 (8+ minutes)
+- Impact: Strategy decisions failing, potential missed opportunities
 
-4. Alert Processing: COMPLETED
-   - Critical alerts logged: YES
-   - Monitoring logs updated: YES
-   - No stop-loss/take-profit triggers detected
+RECOMMENDATIONS:
+1. Investigate LLM response parsing immediately
+2. Check data type conversion from string to dictionary
+3. Consider pausing trading until resolved
+4. Implement better error handling
 
-=== ROOT CAUSE ANALYSIS ===
-BUG IDENTIFIED: Strategy parsing logic error
-- Expected: JSON with model names as keys, each containing strategy data
-- Actual: {"strategy": "initialize", "message": "Waiting for AI signals..."}
-- Error: Code tries to iterate over dictionary items, then call .get() on values
-- Result: "'str' object has no attribute 'get'" error every 10 seconds
-
-ADDITIONAL ISSUES:
-1. Insufficient funds on exchange account
-2. Dashboard services offline
-3. No successful trades in history
-
-=== RECOMMENDATIONS ===
-IMMEDIATE ACTIONS:
-1. Fix strategy file format or parsing logic
-2. Verify exchange account funding
-3. Restart dashboard services
-4. Consider pausing bot until issues resolved
-
-MONITORING ADJUSTMENTS:
-1. Update cron job to check correct dashboard port
-2. Add error threshold alerts
-3. Implement health checks for all services
-
-=== FILES UPDATED ===
-1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-3. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring_summary.txt
-
-=== NEXT SCHEDULED CHECK ===
-Based on cron job configuration
+NEXT CHECK: Recommended in 10-15 minutes

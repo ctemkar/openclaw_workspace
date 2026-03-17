@@ -1,80 +1,62 @@
-=== TRADING MONITORING ENTRY ===
-Timestamp: 2026-03-18 02:49:19
-Status: ACTIVE WITH DATA FORMAT ERRORS
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 03:49:30 +07 (Asia/Bangkok)
 
---- DASHBOARD STATUS ---
-Dashboard Access: Available at http://localhost:5001/
-API Status: Dashboard responding but status data stale
-Last Dashboard Update: 2026-03-17T03:57:09.284546Z (22 hours, 52 minutes ago)
-Note: Dashboard status is stale but bot is actively running
+1. SYSTEM STATUS:
+   - Dashboard API: ONLINE (http://localhost:5001/)
+   - Trading Bot: RUNNING (PID: 79629, new PID: 91802 for dashboard)
+   - Last Update: 2026-03-18T03:48:40.000000Z
+   - Trading Status: running with critical errors
 
---- PROCESS STATUS ---
-Bot Process: Running (PID: 79629)
-Process Command: python crypto_trading_llm_live.py
-Process Age: ~72 minutes (started ~1:37 AM)
-Bot Status: ACTIVE but with data format errors
+2. RISK PARAMETERS (Current Configuration):
+   - Capital: $10,000.00
+   - Stop Loss: 1.00% (per trade)
+   - Take Profit: 2.00% (per trade)
+   - Trade Size: $10.00 (per trade)
 
---- RECENT LOG ACTIVITY (from trading_bot_clean.log) ---
-Last Successful Trade: 02:25:17 (gemini-pro buy filled at $74,728.83)
-Previous Trade: 02:24:56 (gemini-pro buy filled at $74,728.83)
-Trade Failure: 02:24:56 (deepseek-coder sell failed - insufficient funds)
-Current Error Pattern: Continuous "STRATEGY ERROR: 'str' object has no attribute 'get'"
-Error Frequency: Every 10 seconds (since 02:15:52)
-Total Errors in Last 34 minutes: ~204 consecutive errors
+3. RECENT TRADES & ACTIVITY:
+   - Last Successful Trades: 2 BUY orders filled at 02:24-02:25 (0.00013382 BTC @ $74,728.83 each)
+   - Recent Trade Failures (03:48:40):
+     * Gemini: Failed BUY order for BTCUSDT @ $75,409.74 (0.00013393 BTC) - INSUFFICIENT FUNDS
+     * GPT-4: Failed SELL order for ETHUSDT @ $2,295.73 (0.004312 ETH) - INSUFFICIENT FUNDS
+   - API Activity: LLM strategy generation (03:45:19), Start trading script (03:46:01)
 
---- TRADING ACTIVITY ---
-Active Trades: 2 BTC buy orders (from 02:24:56 and 02:25:17)
-Trade Details:
-1. Buy 0.00013382 BTC at $74,728.83 (gemini-pro, filled at 02:25:17)
-2. Buy 0.00013382 BTC at $74,728.83 (gemini-pro, filled at 02:24:56)
-Last Successful Trade: 02:25:17 (buy order)
-Recent Trades: No new trades in last 24 minutes
-Failed Trade Attempt: ETH sell order failed due to insufficient funds
+4. CRITICAL ALERTS:
+   - ⚠️ CONTINUOUS STRATEGY ERRORS DETECTED!
+   - Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
+   - Frequency: Every ~10 seconds (continuous since at least 03:28:13)
+   - Total Errors: 120+ errors in last 21 minutes
+   - Impact: Strategy execution is completely failing, affecting all trade decisions
+   
+   - ⚠️ INSUFFICIENT FUNDS ERRORS DETECTED!
+   - Time: 03:48:40
+   - Issue: Failed to place orders due to insufficient funds
+   - Impact: Trading execution blocked for both BTC and ETH pairs
 
---- RISK PARAMETERS (from previous monitoring) ---
-Capital: $1000.00
-Trade Size: $100.00
-Stop Loss: 1.0%
-Take Profit: 2.0%
+5. PERFORMANCE ANALYSIS:
+   - No stop-loss or take-profit triggers detected
+   - No critical drawdown indicators detected
+   - Trading system is in degraded state with multiple critical issues
+   - Strategy errors preventing proper decision-making
+   - Funding issues preventing trade execution
 
---- CURRENT ISSUE ANALYSIS ---
-ROOT CAUSE: Strategy file format error
-File: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json
-Current Content: {"strategy": "initialize", "message": "Waiting for AI signals..."}
-Problem: File contains a string/JSON object, but bot expects a dictionary with .get() method
-Error: Bot tries to call .get() on string "initialize" or JSON object
+6. ROOT CAUSE ANALYSIS:
+   - Primary Issue: LLM strategy response returning string instead of dictionary
+   - Secondary Issue: Insufficient funds for new trades
+   - System Impact: Complete breakdown of trading pipeline
+   - Risk Level: HIGH - Trading system non-functional
 
---- RISK ASSESSMENT ---
-MEDIUM PRIORITY ISSUES:
-1. DATA FORMAT ERROR: Strategy file format mismatch causing continuous errors
-2. STALE DASHBOARD: Dashboard not updating (last update 22+ hours ago)
-3. TRADE FAILURE: ETH sell order failed due to insufficient funds
-4. ERROR SPAM: Continuous error logging every 10 seconds
+7. RECOMMENDED ACTIONS:
+   - IMMEDIATE: Pause all trading activity
+   - Investigate LLM response parsing logic
+   - Check account balance and funding status
+   - Verify strategy data structure conversion
+   - Implement emergency error recovery
+   - Consider system restart after fixing root causes
 
-POSITIVE INDICATORS:
-1. Bot process is actively running
-2. Recent successful trades (02:24:56, 02:25:17)
-3. Error handling is working (catching exceptions)
-4. No critical system failures
+8. NEXT MONITORING CHECK:
+   - Schedule immediate follow-up (5-10 minutes)
+   - Focus on error resolution and system recovery
+   - Check for any position liquidation risks
+   - Verify account status and available capital
 
---- ALERT STATUS ---
-No new stop-loss/take-profit orders detected
-No critical drawdown alerts in recent logs
-EXISTING ALERT: Continuous strategy errors every 10 seconds
-
---- RECOMMENDATIONS ---
-1. FIX STRATEGY FILE: Update llm_strategies.json with proper dictionary format
-2. CHECK DASHBOARD: Investigate why dashboard status is not updating
-3. VERIFY FUNDS: Check account balances for insufficient funds issue
-4. IMPROVE ERROR HANDLING: Add better validation for strategy file format
-5. MONITOR TRADES: Watch for any position liquidation needs
-
---- TECHNICAL DETAILS ---
-Strategy File: /Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json
-Error: AttributeError: 'str' object has no attribute 'get'
-Error Location: crypto_trading_llm_live.py (line referencing strategy.get())
-Process ID: 79629
-Dashboard Port: 5001
-Log File: trading_bot_clean.log
-
-=== END OF MONITORING ENTRY ===
+=== END OF REPORT ===
