@@ -6,7 +6,30 @@ import random
 
 app = Flask(__name__)
 TASK_STATUS = {"trading": "stopped", "last_update": "never"}
-ACTIVE_PORT = 5000 # Default port, will be updated
+
+# --- Mock Data ---
+MOCK_TRADING_CONFIG = {
+    "capital": 10000.0,
+    "trade_size_usd": 10.0,
+    "stop_loss_pct": 0.01,
+    "take_profit_pct": 0.02
+}
+
+MOCK_TRADES = []
+MOCK_LLM_STRATEGIES = []
+MOCK_TRADING_LOGS = ["Initial log entry."]
+MOCK_LLM_LOGS = ["Initial LLM log entry."]
+MOCK_MARKET_PRICES = {"BTC/USDT": 40000.0, "ETH/USDT": 3000.0, "SOL/USDT": 100.0}
+
+# Moved LOG_FILE and STRATEGY_FILE definition outside functions
+LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
+STRATEGY_FILE = "/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json"
+
+def log_action(message):
+    # Ensure LOG_FILE is accessible here
+    with open(LOG_FILE, "a") as f:
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"[{ts}] {message}\n")
 
 def update_task_statuses():
     while True:
@@ -138,6 +161,10 @@ def static_files(filename):
     return send_from_directory('static', filename)
 
 if __name__ == '__main__':
+    # Ensure LOG_FILE and STRATEGY_FILE are available before the thread starts
+    LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
+    STRATEGY_FILE = "/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json"
+
     if not os.path.exists(os.path.dirname(LOG_FILE)):
         os.makedirs(os.path.dirname(LOG_FILE))
     open(LOG_FILE, 'a').close() 
@@ -151,7 +178,6 @@ if __name__ == '__main__':
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('', 0))
         port = s.getsockname()[1]
-        ACTIVE_PORT = port # Store the active port
     
     with open('/Users/chetantemkar/.openclaw/workspace/app/.active_port', 'w') as f:
         f.write(str(port))
