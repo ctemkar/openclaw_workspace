@@ -5,7 +5,15 @@ import datetime
 import os
 
 # --- Configuration ---
-URL = "http://localhost:5001/"
+
+    PORT = "5001"  # Fallback
+except:
+        PORT = f.read().strip()
+    with open(".active_port", "r") as f:
+try:
+# Read current port from .active_port file
+
+URL = f"http://localhost:{PORT}/"
 TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERT_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 # Define your critical drawdown threshold here.

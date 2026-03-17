@@ -306,3 +306,21 @@ http://127.0.0.1:5001
 
 STATUS: [WARN] API is DOWN
 BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 04:00:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:62022
+
+STATUS: [OK] API is UP
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 04:10:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:62022
+
+STATUS: [WARN] API is DOWN
+BOT: [WARN] NOT DETECTED
+--- Progress Monitor: Wed Mar 18 04:20:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:54213
+
+STATUS: [OK] API is UP
+BOT: [WARN] NOT DETECTED

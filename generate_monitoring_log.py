@@ -1,11 +1,20 @@
 import json
 import subprocess
+import os
 from datetime import datetime
+
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        PORT = f.read().strip()
+except:
+    PORT = "5001"  # Fallback
 
 def get_api_data(endpoint):
     """Fetch data from API endpoint"""
     try:
-        result = subprocess.run(['curl', '-s', endpoint], 
+        url = f'http://localhost:{PORT}{endpoint}'
+        result = subprocess.run(['curl', '-s', url], 
                               capture_output=True, text=True, timeout=5)
         if result.stdout:
             return json.loads(result.stdout)
@@ -18,9 +27,9 @@ def main():
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
     # Get API data
-    status_data = get_api_data('http://localhost:5001/api/trading/status')
-    config_data = get_api_data('http://localhost:5001/api/trading/configure')
-    prices_data = get_api_data('http://localhost:5001/api/market/prices')
+    status_data = get_api_data('/api/trading/status')
+    config_data = get_api_data('/api/trading/configure')
+    prices_data = get_api_data('/api/market/prices')
     
     # Read completed trades
     try:

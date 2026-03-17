@@ -1,11 +1,20 @@
 
+import os
 import requests
 import json
+
+    PORT = "5001"  # Fallback
+except:
+        PORT = f.read().strip()
+    with open(".active_port", "r") as f:
+try:
+# Read current port from .active_port file
+
 from datetime import datetime
 
 TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-SOURCE_URL = "http://localhost:5001/"
+SOURCE_URL = f"http://localhost:{PORT}/"
 
 def fetch_and_analyze_trading_data():
     try:

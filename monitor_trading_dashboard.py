@@ -1,11 +1,18 @@
-
+import os
 import requests
 import logging
 from datetime import datetime
 
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        PORT = f.read().strip()
+except:
+    PORT = "5001"  # Fallback
+
 LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL = "http://localhost:5001/"
+URL = f"http://localhost:{PORT}/"
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')

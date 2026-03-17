@@ -2,10 +2,16 @@ import requests
 import json
 import os
 
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        port = f.read().strip()
+except:
+    port = "5001"  # Fallback
+
 LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
 CRITICAL_ALERTS_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
 host = 'localhost'
-port = 5001
 
 try:
     response = requests.get(f'http://{host}:{port}')

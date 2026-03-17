@@ -1,14 +1,22 @@
 import requests
 import json
 import logging
+import os
 from datetime import datetime
+
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        PORT = f.read().strip()
+except:
+    PORT = "5001"  # Fallback
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 TRADING_LOG_PATH = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
 CRITICAL_ALERTS_LOG_PATH = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
-API_URL = 'http://localhost:5001/'
+API_URL = f'http://localhost:{PORT}/'
 
 def log_to_file(log_path, message):
     with open(log_path, 'a') as f:

@@ -1,68 +1,38 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 03:57:45 +07 (Asia/Bangkok)
-Monitoring Cycle: trading_dashboard_monitor (cron:c938ab27-b332-4519-8e46-fb75eac6ff31)
+2026-03-18 04:19:43 - INFO - TRADING DASHBOARD MONITORING REPORT
+===========================================================
+TIMESTAMP: 2026-03-18 04:19:43 (Asia/Bangkok)
+DASHBOARD STATUS: Online on port 54213
+TRADING BOT STATUS: Running with errors (strategy parsing failure)
 
-DASHBOARD STATUS:
-- Dashboard URL: http://localhost:5001/ - NOT ACCESSIBLE (404 Not Found)
-- Alternative API Ports: 5000, 54227 (active)
-- Flask API: Running but dashboard endpoint missing
-- Last Dashboard Access: Unknown (dashboard endpoint not found)
+CURRENT TRADES:
+- Total trades recorded: 2
+- Last trade: 02:25:17 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) via gemini-pro
+- Previous trade: 02:24:56 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) via gemini-pro
+- Both trades show "filled" status
 
-TRADING BOT STATUS:
-- Process ID: 79629
-- Status: RUNNING (sleeping state)
-- Uptime: ~2+ hours (since ~01:40)
-- Current State: Continuous error loop
-- Last Successful Trade: 2026-03-18 02:25:17 (90+ minutes ago)
+TRADING PARAMETERS:
+- Trade Size: $10.00 per trade
+- Exchange: Gemini
+- Strategy Source: llm_strategies.json
+- Current Strategy File: Contains initialization message only
 
-TRADING ACTIVITY SUMMARY:
-- Active Symbols: BTC/USD, ETH/USD, SOL/USD
-- Current Strategies:
-  * BTC/USD: 'Gemini_Momentum_Strategy'
-  * ETH/USD: 'Claude_Sentiment_Strategy' 
-  * SOL/USD: 'OpenAI_Volatility_Strategy'
-- Recent Market Prices:
-  * BTC/USD: ~73,800-74,000
-  * ETH/USD: ~2,260-2,270
-  * SOL/USD: ~93.80-94.10
-- Last Trade Cycle: No buy conditions met (prices above strategy thresholds)
+RISK ASSESSMENT:
+- No stop-loss or take-profit parameters configured in current bot
+- All trades are market orders with 1% slippage buffer
+- No position sizing or risk management rules detected
+- Total exposure: ~$20.00 across 2 trades
 
-ERROR ANALYSIS:
-1. CRITICAL ERROR: Persistent strategy parsing failure
-   - Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
-   - Frequency: Every 10 seconds (continuous loop)
-   - Duration: 20+ minutes (since ~03:37)
-   - Impact: Trading decisions completely halted
-   - Root Cause: LLM response parsing error (string vs dictionary)
+ALERTS:
+- CRITICAL: Trading bot cannot parse strategy file (JSON format error)
+- WARNING: No active risk management parameters (stop-loss, take-profit)
+- WARNING: Strategy file contains only initialization message (string instead of dict)
+- WARNING: Both recent trades are BUY signals at same price level
 
-2. TRADE EXECUTION FAILURES:
-   - Last trade failures (03:48:40):
-     * BTC/USDT buy order failed: insufficient funds
-     * ETH/USDT sell order failed: insufficient funds
+RECOMMENDATIONS:
+1. Fix llm_strategies.json format - should be dictionary, not string
+2. Implement proper risk management parameters
+3. Verify LLM strategy generation API is working correctly
+4. Consider diversifying trade signals beyond gemini-pro model
+5. Add error handling for malformed strategy files
 
-3. DASHBOARD ISSUES:
-   - Port 5001: In use by another program
-   - Dashboard endpoint: 404 Not Found
-   - API endpoints: Functional on alternative ports
-
-RISK PARAMETERS:
-- Market Exposure: Minimal (no recent trades)
-- Position Risk: Low (no active positions)
-- System Risk: HIGH (continuous error state)
-- Financial Risk: LOW (no trading activity)
-- Operational Risk: CRITICAL (system degradation)
-
-ALERT STATUS:
-- Critical Alert Already Logged: Yes (03:55:42)
-- Alert Severity: CRITICAL (SYSTEM DEGRADATION)
-- Alert Escalation: Manual Intervention Required
-- Time in Error State: 20+ minutes
-
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Stop trading bot to prevent further error loops
-2. HIGH: Investigate LLM response parsing logic
-3. MEDIUM: Fix dashboard port conflict (5001)
-4. LOW: Review strategy generation API calls
-
-NEXT MONITORING CYCLE: 5 minutes
-=== MONITORING COMPLETE ===
+NEXT CHECK: Scheduled for next cron run

@@ -1,9 +1,18 @@
 
+import os
 import requests
 import json
+
+    PORT = "5001"  # Fallback
+except:
+        PORT = f.read().strip()
+    with open(".active_port", "r") as f:
+try:
+# Read current port from .active_port file
+
 from datetime import datetime
 
-TRADING_DATA_URL = "http://localhost:5001/"
+TRADING_DATA_URL = f"http://localhost:{PORT}/"
 LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 

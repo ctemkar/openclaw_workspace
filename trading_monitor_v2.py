@@ -3,9 +3,16 @@ import json
 import os
 from datetime import datetime
 
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        PORT = f.read().strip()
+except:
+    PORT = "5001"  # Fallback
+
 LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-BASE_URL = "http://localhost:5001"
+BASE_URL = f"http://localhost:{PORT}"
 
 def fetch_all_data():
     """Fetch data from multiple API endpoints"""

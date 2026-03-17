@@ -1,6 +1,13 @@
 import requests, time, os
 
-URL = 'http://localhost:5001/'
+# Read current port from .active_port file
+try:
+    with open(".active_port", "r") as f:
+        PORT = f.read().strip()
+except:
+    PORT = "5001"  # Fallback
+
+URL = f'http://localhost:{PORT}/'
 LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
 ALERT_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
 
