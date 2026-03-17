@@ -1,1 +1,1 @@
-Placeholder for trading data
+{tool_code}2026-03-17 22:59:34,825 - ERROR - Failed to fetch data from http://localhost:5001/: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))

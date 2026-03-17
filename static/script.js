@@ -70,7 +70,14 @@ function updateTradeProgress() {
             llmStrategiesContainer.innerHTML = '<h4>Available Strategies & Trade Progress:</h4>';
 
             fetch('/api/llm/strategies')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Error fetching LLM strategies:', response.status, response.statusText);
+                        llmStrategiesContainer.innerHTML += '<p>Failed to load LLM strategies.</p>';
+                        return Promise.reject(response);
+                    }
+                    return response.json();
+                })
                 .then(strategies => {
                     if (strategies && strategies.length > 0) {
                         strategies.forEach(strategy => {
@@ -89,7 +96,6 @@ function updateTradeProgress() {
                                             <strong>Investment:</strong> $${trade.investment_usd?.toFixed(2) ?? 'N/A'} |
                                             <strong>Status:</strong> ${trade.status || 'unknown'} |
                                             <strong>P&L:</strong> $${trade.pnl_usd?.toFixed(2) ?? 'N/A'}
-                                            <!-- Added fields: -->
                                             <strong>Buy Price:</strong> ${trade.buy_price?.toFixed(4) ?? 'N/A'} |
                                             <strong>Sell Price:</strong> ${trade.sell_price?.toFixed(4) ?? 'N/A'} |
                                             <strong>Bought:</strong> ${trade.buy_timestamp ? new Date(trade.buy_timestamp).toLocaleString() : 'N/A'} |
@@ -113,7 +119,10 @@ function updateTradeProgress() {
                         llmStrategiesContainer.innerHTML += '<p>No strategies generated yet. Click "Generate LLM Strategies" to fetch them.</p>';
                     }
                 })
-                .catch(error => console.error('Error fetching LLM strategies after progress update:', error));
+                .catch(error => {
+                    console.error('Error fetching LLM strategies after progress update:', error);
+                    llmStrategiesContainer.innerHTML = '<h4>Available Strategies & Trade Progress:</h4><p>Could not load LLM strategies. Please check console for errors.</p>';
+                });
         })
         .catch(error => {
             console.error('Error fetching trade progress:', error);
@@ -147,7 +156,13 @@ function saveTradingConfig() {
         },
         body: JSON.stringify(config),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            console.error('Save config returned error:', response.status, response.statusText);
+            return response.text().then(text => { throw new Error(text || 'Failed to save config') });
+        }
+        return response.json();
+    })
     .then(data => {
         console.log('Save config response:', data);
         alert(data.message || 'Configuration saved successfully!');
@@ -155,7 +170,7 @@ function saveTradingConfig() {
     })
     .catch(error => {
         console.error('Error saving trading configuration:', error);
-        alert('Failed to save configuration. Please check the console for details.');
+        alert(`Failed to save configuration: ${error.message}. Please check the console for details.`);
     });
 }
 
@@ -179,34 +194,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const stopLossInput = document.getElementById('configStopLoss');
     const takeProfitInput = document.getElementById('configTakeProfit');
 
-    // --- Fetch current config and status on load ---
     function initializeUI() {
         updateStatus();
 
-        // Fetch current configuration using GET
         fetch('/api/trading/configure', { method: 'GET' }) 
             .then(configResponse => {
                 if (!configResponse.ok) {
                     console.warn("Could not fetch current trade config, using defaults or placeholders. Status:", configResponse.status);
-                    // Define placeholders if fetch fails
                     const defaults = { capital: "10000.00", trade_size_usd: "10.00", stop_loss_pct: "0.01", take_profit_pct: "0.02" };
                     if (capitalInput) capitalInput.value = defaults.capital;
                     if (tradeSizeInput) tradeSizeInput.value = defaults.trade_size_usd; 
                     if (stopLossInput) stopLossInput.value = defaults.stop_loss_pct;
                     if (takeProfitInput) takeProfitInput.value = defaults.take_profit_pct;
-                    return Promise.reject(configResponse); // Reject to prevent further then() processing if fetch failed
+                    return Promise.reject(configResponse);
                 }
                 return configResponse.json();
             })
             .then(configData => {
-                 // Apply fetched configuration
                  if (configData) { 
                      if (capitalInput) capitalInput.value = configData.capital?.toFixed(2) ?? "10000.00";
                      if (tradeSizeInput) tradeSizeInput.value = configData.trade_size_usd?.toFixed(2) ?? "10.00";
                      if (stopLossInput) stopLossInput.value = configData.stop_loss_pct?.toFixed(3) ?? "0.01";
                      if (takeProfitInput) takeProfitInput.value = configData.take_profit_pct?.toFixed(3) ?? "0.02";
                  } else {
-                     // Fallback if configData is empty but response was ok
                      console.warn("Received empty config data, using placeholders.");
                      if (capitalInput) capitalInput.value = "10000.00";
                      if (tradeSizeInput) tradeSizeInput.value = "10.00";
@@ -216,7 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.warn("Initialization UI: Error fetching or applying current trade config. Using placeholders:", error);
-                // Ensure placeholders are set even if an error occurred after a successful fetch but failed parsing
                 if (capitalInput && !capitalInput.value) capitalInput.value = "10000.00";
                 if (tradeSizeInput && !tradeSizeInput.value) tradeSizeInput.value = "10.00";
                 if (stopLossInput && !stopLossInput.value) stopLossInput.value = "0.01";
@@ -228,37 +237,64 @@ document.addEventListener('DOMContentLoaded', () => {
     if (startTradingBtn) {
         startTradingBtn.addEventListener('click', () => {
             fetch('/api/trading/start', { method: 'POST' })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Start trading returned error:', response.status, response.statusText);
+                        return response.text().then(text => { throw new Error(text || 'Failed to send start command') });
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     console.log('Start trading response:', data);
                     alert(data.message || 'Trading script command sent.');
                     updateStatus(); 
                 })
-                .catch(error => console.error('Error starting trading:', error));
+                .catch(error => {
+                    console.error('Error starting trading:', error);
+                    alert(`Failed to start trading: ${error.message}`);
+                });
         });
     }
     if (stopTradingBtn) {
         stopTradingBtn.addEventListener('click', () => {
             fetch('/api/trading/stop', { method: 'POST' })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Stop trading returned error:', response.status, response.statusText);
+                        return response.text().then(text => { throw new Error(text || 'Failed to send stop command') });
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     console.log('Stop trading response:', data);
                     alert(data.message || 'Trading script stop command sent.');
                     updateStatus(); 
                 })
-                .catch(error => console.error('Error stopping trading:', error));
+                .catch(error => {
+                    console.error('Error stopping trading:', error);
+                    alert(`Failed to stop trading: ${error.message}`);
+                });
         });
     }
     if (generateLlmStrategiesBtn) {
         generateLlmStrategiesBtn.addEventListener('click', () => {
             fetch('/api/llm/generate', { method: 'POST' }) 
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Generate LLM strategies returned error:', response.status, response.statusText);
+                        return response.text().then(text => { throw new Error(text || 'Failed to send LLM generate command') });
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     console.log('Generate LLM strategies response:', data);
                     alert(data.message || 'LLM strategy generation command sent.');
                     updateStatus(); 
                 })
-                .catch(error => console.error('Error generating LLM strategies:', error));
+                .catch(error => {
+                    console.error('Error generating LLM strategies:', error);
+                    alert(`Failed to generate LLM strategies: ${error.message}`);
+                });
         });
     }
     if (saveTradingConfigBtn) {
@@ -266,10 +302,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (resetConfigBtn) {
         resetConfigBtn.addEventListener('click', () => {
-            // Directly set default values as placeholders, no API call needed for reset
             alert('Configuration reset to default values.');
-            if (capitalInput) capitalInput.value = "10000.00"; // Keep 10000 as default in UI for reset action
-            if (tradeSizeInput) tradeSizeInput.value = "10.00"; 
+            if (capitalInput) capitalInput.value = "10000.00";
+            if (tradeSizeInput) tradeSizeInput.value = "10.00";
             if (stopLossInput) stopLossInput.value = "0.01";
             if (takeProfitInput) takeProfitInput.value = "0.02";
         });
@@ -289,7 +324,13 @@ if (typeof Chart === 'undefined') {
 
 function updateLogs() {
     fetch('/api/trading/logs')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching trading logs:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => {
             const tradingLogsPre = document.getElementById('tradingLogs');
             const tradingLogsTimestampSpan = document.getElementById('tradingLogsTimestamp');
@@ -306,7 +347,13 @@ function updateLogs() {
         .catch(error => console.error('Error fetching trading logs:', error));
 
     fetch('/api/llm/logs')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching LLM logs:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => {
             const llmLogsPre = document.getElementById('llmLogs');
             if (llmLogsPre) llmLogsPre.textContent = data.logs || 'No LLM logs found.';
@@ -316,7 +363,13 @@ function updateLogs() {
 
 function updateMarketData() {
     fetch('/api/market/prices')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching market prices:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => {
             const marketPricesContainer = document.getElementById('marketPricesContainer');
             if (marketPricesContainer) {
@@ -329,17 +382,35 @@ function updateMarketData() {
         .catch(error => console.error('Error fetching market prices:', error));
 
     fetch('/api/market/charts?symbol=BTC/USD&period=1h')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching BTC/USD chart data:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => renderChart('btcChart', data))
         .catch(error => console.error('Error fetching BTC/USD chart data:', error));
         
     fetch('/api/market/charts?symbol=ETH/USD&period=1h')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching ETH/USD chart data:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => renderChart('ethChart', data))
         .catch(error => console.error('Error fetching ETH/USD chart data:', error));
 
     fetch('/api/market/charts?symbol=SOL/USD&period=1h')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.error('Error fetching SOL/USD chart data:', response.status, response.statusText);
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
         .then(data => renderChart('solChart', data))
         .catch(error => console.error('Error fetching SOL/USD chart data:', error));
 }
