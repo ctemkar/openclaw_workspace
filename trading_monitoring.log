@@ -1,87 +1,85 @@
 === TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 01:57:45 (Asia/Bangkok)
-Dashboard Status: OFFLINE (Port 5001 not responding)
-Trading Bot Status: RUNNING (PID 79629) with CRITICAL ERRORS
+Timestamp: 2026-03-18 02:01:14 (Asia/Bangkok)
+Dashboard Port: 51228
 
-=== SYSTEM STATUS ===
-• Trading Bot Process: ACTIVE (PID 79629)
-• Dashboard Server: OFFLINE (Port 5001 not in use)
-• Last Known Dashboard: Port 49399 (now offline)
-• Bot Heartbeat: Active (process running)
+--- SYSTEM STATUS ---
+Trading Script Status: RUNNING
+Last Update: 2026-03-18T02:01:08.513974Z
 
-=== MARKET DATA (LIVE) ===
-• BTC/USDT: $74,677.46 (Binance API)
-• ETH/USDT: $2,331.29 (Binance API)
-• Note: Previous report prices were outdated
+--- TRADING CONFIGURATION ---
+Capital: $10,000.00
+Trade Size: $10.00
+Stop Loss: 1.00%
+Take Profit: 2.00%
 
-=== CRITICAL ISSUES DETECTED ===
-1. STRATEGY PARSING ERRORS (CONTINUING)
-   • Error: "'str' object has no attribute 'get'"
-   • Frequency: Every 10 seconds
-   • Duration: Since 01:37:18 (20+ minutes)
-   • Error Count: 150+ errors and counting
-   • Impact: Strategy processing compromised
+--- PERFORMANCE ANALYSIS ---
+Completed Trades: 0
+Active Trades: 0
 
-2. TRADE EXECUTION FAILURES (NEW)
-   • Time: 01:56:36 - BTC Buy order failed
-     - Symbol: BTCUSDT
-     - Price: $75,008.11
-     - Quantity: 0.00013465 BTC
-     - Reason: "Insufficient funds"
-   
-   • Time: 01:56:37 - ETH Sell order failed  
-     - Symbol: ETHUSDT
-     - Price: $2,311.51
-     - Quantity: 0.004282 ETH
-     - Reason: "Insufficient funds"
+--- LOG ANALYSIS (Last 50 entries) ---
+[2026-03-18 01:53:03] API: Received request to start trading script.
+[2026-03-18 01:53:11] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:21] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:54] API: Received request to generate LLM strategies.
+[2026-03-18 01:54:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:03] API: Received request to generate LLM strategies.
+[2026-03-18 01:54:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:32] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:42] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:32] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:42] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:36] TRADE FAILURE (Gemini): gemini Failed to place buy order on symbol 'BTCUSDT' for price 75,008.11 USDT and quantity 0.00013465 BTC due to insufficient funds
+[2026-03-18 01:56:37] TRADE FAILURE (GPT-4): gemini Failed to place sell order on symbol 'ETHUSDT' for price 2,311.51 USDT and quantity 0.004282 ETH due to insufficient funds
+[2026-03-18 01:57:17] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:27] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:37] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:47] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:57] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:07] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:17] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:27] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:37] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:47] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:58:57] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:07] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:17] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:27] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:37] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:48] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:59:58] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:08] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:18] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:28] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:32] API: Received request to generate LLM strategies.
+[2026-03-18 02:00:38] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:48] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:00:58] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 02:01:08] STRATEGY ERROR: 'str' object has no attribute 'get'
 
-=== ACTIVE STRATEGIES (FROM LAST REPORT) ===
-1. GeneratedStrategy_ETH_SELL_Gemini
-   • Symbol: ETH/USDT
-   • LLM Provider: Gemini
-   • Risk: Stop Loss 1.5%, Take Profit 2.5%
-   • Signal: SELL
+--- RISK ANALYSIS ---
+1. STRATEGY ERRORS: Persistent "str object has no attribute 'get'" errors indicate a bug in strategy parsing logic.
+2. INSUFFICIENT FUNDS: Two trade failures due to insufficient funds (BTC and ETH trades).
+3. NO COMPLETED TRADES: System has not executed any successful trades yet.
+4. CAPITAL UTILIZATION: $0 of $10,000 capital deployed.
 
-2. GeneratedStrategy_BTC_BUY_Qwen
-   • Symbol: BTC/USDT
-   • LLM Provider: Qwen
-   • Risk: Stop Loss 1.0%, Take Profit 2.0%
-   • Signal: BUY
+--- RECOMMENDATIONS ---
+1. Fix strategy parsing bug causing repeated errors.
+2. Verify exchange account balance and API credentials.
+3. Consider increasing trade size from $10 to utilize available capital.
+4. Monitor for successful trade execution.
 
-3. GeneratedStrategy_SOL_SELL_Deepseek
-   • Symbol: SOL/USDT
-   • LLM Provider: Deepseek
-   • Risk: Stop Loss 0.8%, Take Profit 1.5%
-   • Signal: SELL
-
-=== TRADING ACTIVITY ===
-• Active Trades: 0 (No open positions)
-• Recent Trade Attempts: 2 FAILED attempts
-• Completed Trades: 0 (empty completed_trades.json)
-• Capital Status: INSUFFICIENT FUNDS (critical)
-
-=== RISK ASSESSMENT ===
-• CRITICAL: Insufficient funds for trade execution
-• HIGH: Persistent strategy parsing errors
-• MEDIUM: Dashboard offline (reduced monitoring capability)
-• LOW: No active positions (mitigates immediate loss risk)
-
-=== STOP-LOSS/TAKE-PROFIT STATUS ===
-• No active positions → No SL/TP triggers
-• However: Trade execution failures prevent new positions
-• Market volatility: Prices differ significantly from previous report
-
-=== DRAWDOWN INDICATORS ===
-• No active trades → No drawdown
-• Capital issue prevents new positions
-• Operational risk: HIGH (multiple system failures)
-
-=== RECOMMENDATIONS ===
-1. IMMEDIATE: Check exchange account balance
-2. IMMEDIATE: Investigate strategy data format errors
-3. Restart dashboard server for monitoring
-4. Review API credentials and funding
-5. Consider pausing bot until funds and errors resolved
-
-=== NEXT CHECK ===
-Scheduled for next cron execution
+--- ALERT STATUS ---
+NO STOP-LOSS OR TAKE-PROFIT TRIGGERS DETECTED
+NO CRITICAL DRAWDOWN INDICATORS

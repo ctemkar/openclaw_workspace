@@ -64,9 +64,10 @@ def get_trading_progress():
 @api_bp.route('/llm/strategies')
 def get_llm_strategies():
     strategies = []
-    if os.path.exists(STRATEGY_FILE):
+    strategy_file = "llm_strategies.json"
+    if os.path.exists(strategy_file):
         try:
-            with open(STRATEGY_FILE, "r") as f:
+            with open(strategy_file, "r") as f:
                 data = json.load(f)
                 # Convert the strategy dictionary to a list format for the dashboard
                 for model_name, strategy_data in data.items():
