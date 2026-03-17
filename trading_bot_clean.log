@@ -1,7 +1,3 @@
-[2026-03-18 03:55:42] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 03:55:52] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 03:56:02] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 03:56:12] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 03:56:22] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 03:56:32] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 03:56:42] STRATEGY ERROR: 'str' object has no attribute 'get'
@@ -98,3 +94,7 @@
 [2026-03-18 04:42:27] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 04:42:37] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 04:42:47] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 04:43:01] SUCCESS: Gemini-Pro buy filled at 74800.0
+[2026-03-18 04:43:02] TRADE FAILURE (GPT-4o): gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.71 and quantity 0.004271 ETH due to insufficient funds
+[2026-03-18 04:45:54] SUCCESS: Gemini-Pro buy filled at 74770.04
+[2026-03-18 04:45:55] TRADE FAILURE (GPT-4o): gemini Failed to place sell order on symbol 'ETHUSD' for price $2,316.53 and quantity 0.004273 ETH due to insufficient funds

@@ -1,43 +1,29 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Time: 2026-03-18 02:33:15 (Asia/Bangkok)
+Time: 2026-03-18 04:51:46 (Asia/Bangkok)
 
 STATUS OVERVIEW:
-- Trading Status: RUNNING
-- Capital: $10,000.00
-- Stop Loss: 1.0%
-- Take Profit: 2.0%
+✅ Dashboard is running on port 61804
+✅ Trading bot process is active (PID: 2917)
+✅ Position: 0.00053507 BTC (4 trades)
+✅ Current P&L: +$0.01 (+0.02%)
 
-MARKET DATA:
-- BTC/USDT: $39,835.30
-- ETH/USDT: $3,003.22
-- SOL/USDT: $99.25
+RISK ASSESSMENT:
+✅ No stop-loss or take-profit triggers
+✅ Distance to stop-loss: 1.02% (safe)
+✅ Distance to take-profit: 1.98% (progressing)
 
-CRITICAL ALERTS (3):
-1. STRATEGY MALFUNCTION - HIGH SEVERITY
-   • 47+ consecutive strategy errors: "str object has no attribute 'get'"
-   • Bot may be executing incorrect logic
-   • ACTION: Investigate and fix immediately
+CRITICAL ISSUES DETECTED:
+⚠️  EXCESSIVE STRATEGY ERRORS: 93 errors in recent logs
+⚠️  INSUFFICIENT FUNDS ERRORS: 2 trade failures
 
-2. TRADE EXECUTION FAILURE - MEDIUM SEVERITY
-   • Failed sell order due to insufficient funds
-   • Symbol: ETHUSD, Price: $2,314.61, Quantity: 0.004277 ETH
-   • ACTION: Check account balances
+RECOMMENDED ACTIONS:
+1. Investigate strategy errors - appears to be a persistent bug
+2. Check account balance - insufficient funds errors indicate liquidity issues
+3. Monitor position closely - currently small but profitable
 
-3. DATA TYPE HANDLING ISSUE - MEDIUM SEVERITY
-   • String/dictionary confusion in strategy code
-   • .get() method called on string object
-   • ACTION: Review data type handling
+NEXT CHECK: In 5 minutes (as per cron schedule)
 
-RECENT ACTIVITY:
-- 47+ strategy errors in last 15 minutes
-- 2 successful buy orders filled at 74728.83
-- 1 trade failure due to insufficient funds
-
-RECOMMENDATION:
-PAUSE trading until critical errors are resolved to prevent potential losses.
-Strategy appears to have fundamental implementation issues requiring immediate attention.
-
-Monitoring logs saved to:
+Logs updated:
 - /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
 - /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
