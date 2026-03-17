@@ -1,66 +1,68 @@
 === TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 03:51:36 +07 (Asia/Bangkok)
+Timestamp: 2026-03-18 03:57:45 +07 (Asia/Bangkok)
+Monitoring Cycle: trading_dashboard_monitor (cron:c938ab27-b332-4519-8e46-fb75eac6ff31)
 
-1. SYSTEM STATUS:
-   - Dashboard API: ONLINE (http://localhost:5001/)
-   - Trading Bot: RUNNING (PID: 79629)
-   - Dashboard Server: RUNNING (PID: 94511)
-   - Last Update: 2026-03-18T03:51:36.334719Z
-   - Trading Status: running (but likely with ongoing errors)
+DASHBOARD STATUS:
+- Dashboard URL: http://localhost:5001/ - NOT ACCESSIBLE (404 Not Found)
+- Alternative API Ports: 5000, 54227 (active)
+- Flask API: Running but dashboard endpoint missing
+- Last Dashboard Access: Unknown (dashboard endpoint not found)
 
-2. RISK PARAMETERS (Current Configuration):
-   - Capital: $10,000.00
-   - Stop Loss: 1.00% (per trade)
-   - Take Profit: 2.00% (per trade)
-   - Trade Size: $10.00 (per trade)
+TRADING BOT STATUS:
+- Process ID: 79629
+- Status: RUNNING (sleeping state)
+- Uptime: ~2+ hours (since ~01:40)
+- Current State: Continuous error loop
+- Last Successful Trade: 2026-03-18 02:25:17 (90+ minutes ago)
 
-3. RECENT TRADES & ACTIVITY:
-   - Last Successful Trades: 2 BUY orders filled at 02:24-02:25 (0.00013382 BTC @ $74,728.83 each)
-   - No new trades detected since last monitoring check (03:49:30)
-   - Trade history unchanged from previous report
+TRADING ACTIVITY SUMMARY:
+- Active Symbols: BTC/USD, ETH/USD, SOL/USD
+- Current Strategies:
+  * BTC/USD: 'Gemini_Momentum_Strategy'
+  * ETH/USD: 'Claude_Sentiment_Strategy' 
+  * SOL/USD: 'OpenAI_Volatility_Strategy'
+- Recent Market Prices:
+  * BTC/USD: ~73,800-74,000
+  * ETH/USD: ~2,260-2,270
+  * SOL/USD: ~93.80-94.10
+- Last Trade Cycle: No buy conditions met (prices above strategy thresholds)
 
-4. SYSTEM HEALTH CHECK:
-   - Dashboard API: Responsive (200 OK)
-   - Trading Bot Process: Active (PID 79629)
-   - Dashboard Process: Active (PID 94511)
-   - No new API errors detected in this check
-   - System appears stable but likely still experiencing underlying strategy errors
+ERROR ANALYSIS:
+1. CRITICAL ERROR: Persistent strategy parsing failure
+   - Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
+   - Frequency: Every 10 seconds (continuous loop)
+   - Duration: 20+ minutes (since ~03:37)
+   - Impact: Trading decisions completely halted
+   - Root Cause: LLM response parsing error (string vs dictionary)
 
-5. CRITICAL ISSUES (PERSISTENT):
-   - ⚠️ STRATEGY EXECUTION ERRORS (from previous report):
-     * Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
-     * Frequency: Every ~10 seconds (continuous)
-     * Impact: Strategy execution completely failing
-   
-   - ⚠️ INSUFFICIENT FUNDS ERRORS (from previous report):
-     * Time: 03:48:40
-     * Issue: Failed to place orders due to insufficient funds
-     * Impact: Trading execution blocked
+2. TRADE EXECUTION FAILURES:
+   - Last trade failures (03:48:40):
+     * BTC/USDT buy order failed: insufficient funds
+     * ETH/USDT sell order failed: insufficient funds
 
-6. PERFORMANCE ANALYSIS:
-   - No stop-loss or take-profit triggers detected
-   - No critical drawdown indicators detected
-   - Trading system remains in degraded state
-   - No evidence of recovery from previous critical issues
-   - System appears to be running but likely non-functional
+3. DASHBOARD ISSUES:
+   - Port 5001: In use by another program
+   - Dashboard endpoint: 404 Not Found
+   - API endpoints: Functional on alternative ports
 
-7. MONITORING OBSERVATIONS:
-   - Time since last successful trade: ~1.5 hours
-   - Time since first strategy error detection: ~23 minutes
-   - No new critical alerts generated in this interval
-   - System status unchanged from previous monitoring check
+RISK PARAMETERS:
+- Market Exposure: Minimal (no recent trades)
+- Position Risk: Low (no active positions)
+- System Risk: HIGH (continuous error state)
+- Financial Risk: LOW (no trading activity)
+- Operational Risk: CRITICAL (system degradation)
 
-8. RECOMMENDATIONS:
-   - URGENT: Investigate if strategy errors are still occurring
-   - Check trading bot logs for recent error messages
-   - Verify if insufficient funds issue has been resolved
-   - Consider restarting trading bot with debug logging enabled
-   - Implement error recovery and monitoring for strategy generation
+ALERT STATUS:
+- Critical Alert Already Logged: Yes (03:55:42)
+- Alert Severity: CRITICAL (SYSTEM DEGRADATION)
+- Alert Escalation: Manual Intervention Required
+- Time in Error State: 20+ minutes
 
-9. NEXT MONITORING CHECK:
-   - Immediate follow-up recommended (within 5 minutes)
-   - Focus on error persistence and system recovery status
-   - Check for any new trade attempts or failures
-   - Monitor for position liquidation risks
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Stop trading bot to prevent further error loops
+2. HIGH: Investigate LLM response parsing logic
+3. MEDIUM: Fix dashboard port conflict (5001)
+4. LOW: Review strategy generation API calls
 
-=== END OF REPORT ===
+NEXT MONITORING CYCLE: 5 minutes
+=== MONITORING COMPLETE ===
