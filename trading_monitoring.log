@@ -1,138 +1,44 @@
-=== TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 05:22:47 (Asia/Bangkok)
-Monitoring Source: http://localhost:54174/
-
-API STATUS:
-- Server Status: RUNNING on port 54174
-- API Endpoints: /api/trading/progress, /api/trading/configure
-- Dashboard: Accessible at http://localhost:54174/
-
-TRADE DATA (from /api/trading/progress):
-- Active Trades: 4 BTC positions
-- Recent Trade Activity:
-  1. 04:45:54 - Buy BTC @ $74,770.04 (Gemini-Pro, filled)
-  2. 04:43:01 - Buy BTC @ $74,800.00 (Gemini-Pro, filled)
-  3. 02:25:17 - Buy BTC @ $74,700.83 (gemini-pro, filled)
-  4. 02:24:56 - Buy BTC @ $74,700.83 (gemini-pro, filled)
-
-CONFIGURATION (from /api/trading/configure):
-- Capital: $10,000
-- Stop Loss: 3% (0.03)
-- Trade Size: 10
-
-MARKET ANALYSIS (from analyze_trades.py):
-- Current BTC Price: $74,594
-- Current ETH Price: $2,333.43
-- Current SOL Price: $95.37
-
-POSITION ANALYSIS:
-- Trade 1: Buy $74,770.04, Current $74,594 = -0.24% loss
-- Trade 2: Buy $74,800.00, Current $74,594 = -0.28% loss
-- Trade 3: Buy $74,700.83, Current $74,594 = -0.14% loss
-- Trade 4: Buy $74,700.83, Current $74,594 = -0.14% loss
-
-PORTFOLIO SUMMARY:
-- Total Investment: $298,971.70
-- Current Value: $298,376.00
-- Total Loss: -$595.70 (-0.20%)
-
-RISK ASSESSMENT:
-- Stop Loss Threshold: 1% (from config)
-- Current Loss Level: 0.20%
-- Stop Loss Triggered: NO
-- Take Profit Triggered: NO
-- Max Individual Loss: -0.28% (Trade #2)
-
-SYSTEM HEALTH:
-- Trading Bot: ❌ STOPPED (not running)
-- Dashboard Port: 54174 (active)
-- Strategy Engine: ⚠️ Continuous "str object has no attribute get" errors
-- Last Trade Activity: 04:45:54 (buy order, 37 minutes ago)
-- Bot Status: Shut down gracefully per logs
-- Critical Issue: Positions unmanaged
-
-ALERT STATUS:
-- No critical alerts at this time
-- All positions within acceptable loss limits
-- Stop loss NOT triggered (0.20% vs 1% threshold)
-
-RECOMMENDATIONS:
-1. ⚠️ URGENT: Restart trading bot immediately - positions are unmanaged
-2. Investigate why bot shut down (graceful termination signal received)
-3. Monitor BTC positions closely - approaching 1% stop loss threshold
-4. Consider manual intervention if bot cannot be restarted quickly
-
-NEXT CHECK: 30 minutes
-==========================================[2026-03-18 05:24:43] Position Check - BTC: $74,514.00, Loss: -0.31%, Stop Loss: Not triggered
-TRADING DASHBOARD MONITORING SUMMARY
 ==========================================
-Monitoring Time: 2026-03-18 05:28:57 (Asia/Bangkok)
-Dashboard URL: http://localhost:54174
-Dashboard Status: ✅ ACTIVE (Port 54174)
+TRADING DASHBOARD MONITORING REPORT
+Date: 2026-03-18 05:34:01 (Asia/Bangkok)
+==========================================
+
+DASHBOARD STATUS:
+- Dashboard URL: http://localhost:54174
+- Dashboard Status: ✅ ONLINE (HTTP 200)
+- API Status: ✅ RESPONSIVE
+- Last API Response: Bot status shows "RUNNING"
 
 TRADING BOT STATUS:
-- Trading Bot: ✅ RUNNING (Process ID: 8546)
-- Bot Script: crypto_trading_llm_live.py
-- Bot Status: RUNNING (per API)
-- Last Activity: 04:45:54 (43 minutes ago)
+- Process ID: 8546 (running for 12 minutes)
+- Bot Status: ⚠️ RESTARTING LOOP (multiple "BOT STARTING" entries)
+- Last Trade: 04:45:54 (buy order, 48 minutes ago)
+- Total Active Trades: 4 BTC positions
+- Trade Status: All trades show "filled"
 
-PORTFOLIO ANALYSIS:
-- Total BTC Holdings: 0.00053507 BTC
-- Total Investment: $40.00
-- Current BTC Price: $74,463.00
-- Current Portfolio Value: $39.84
-- Total Loss: -$0.16 (-0.39%)
-- Stop Loss Threshold: 1% ($0.40 loss)
-- Stop Loss Triggered: ❌ NO
+POSITION ANALYSIS:
+- Total Investment: $298,971.70 (4 BTC positions)
+- Current BTC Price: ~$74,463 (CoinGecko)
+- Estimated Current Value: $298,376.00
+- Total Loss: -$595.70 (-0.20%)
+- Stop Loss Threshold: 1% (NOT triggered yet)
 
-ACTIVE TRADES (4 positions):
-1. Buy 0.00013374 BTC @ $74,770.04 (Gemini-Pro) - 04:45:54
-2. Buy 0.00013369 BTC @ $74,800.00 (Gemini-Pro) - 04:43:01  
-3. Buy 0.00013382 BTC @ $74,728.83 (gemini-pro) - 02:25:17
-4. Buy 0.00013382 BTC @ $74,728.83 (gemini-pro) - 02:24:56
-
-RISK PARAMETERS:
-- Capital: $10,000 (configured)
-- Trade Size: $10 (configured)
-- Stop Loss: 3% (configured)
-- Current Drawdown: 0.39% (within limits)
+CRITICAL ISSUES:
+1. ⚠️ Trading bot in restart loop - keeps showing "BOT STARTING"
+2. ⚠️ No new trades in last 48 minutes despite bot showing "RUNNING"
+3. ⚠️ Potential unmanaged positions if bot crashes
 
 ALERT STATUS:
-- Critical Alerts: 1 (Trading Bot Stopped - but now running)
-- Current Alert Level: ⚠️ WARNING (Previous bot stoppage detected)
-- Positions Unmanaged Risk: LOW (Bot is now running)
-
-SYSTEM HEALTH:
-- Dashboard API: ✅ RESPONSIVE
-- Trading Bot Process: ✅ ACTIVE
-- Log Files: ✅ UPDATING
-- Strategy Engine: ⚠️ ERRORS DETECTED ("str object has no attribute get")
+- No stop-loss orders triggered (0.20% loss vs 1% threshold)
+- No take-profit orders triggered
+- Positions within acceptable risk parameters
 
 RECOMMENDATIONS:
-1. ✅ Trading bot is currently running (good)
-2. ⚠️ Investigate strategy engine errors in logs
-3. 📊 Monitor position loss approaching 0.5% threshold
-4. 🔄 Consider restarting bot if errors persist
-5. 📈 Next trade expected based on LLM strategy analysis
+1. Investigate bot restart loop - check logs for errors
+2. Verify bot is actually executing trades, not just showing "RUNNING"
+3. Monitor BTC price closely - approaching 1% stop loss threshold
+4. Consider manual position check if bot instability continues
 
 NEXT CHECK: 30 minutes
-==========================================2026-03-18 05:29:31,153 - INFO - Found dashboard on port 61804
-2026-03-18 05:29:31,153 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
-2026-03-18 05:29:31,153 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
-2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:31,153 - INFO - Trading Log: 
-2026-03-18 05:29:31,153 - INFO - Status Update: Trading: running - Last update: 2026-03-18 05:29:31
-2026-03-18 05:29:31,153 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
-2026-03-18 05:29:59,609 - INFO - Found dashboard on port 61804
-2026-03-18 05:29:59,609 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
-2026-03-18 05:29:59,609 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
-2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
-2026-03-18 05:29:59,609 - INFO - Trading Log: 
-2026-03-18 05:29:59,609 - INFO - Status Update: Trading: running - Last update: 2026-03-18 05:29:59
-2026-03-18 05:29:59,609 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
+==========================================
+[2026-03-18 05:34:01] Position Check - BTC: ~$74,463, Loss: -0.20%, Stop Loss: Not triggered
