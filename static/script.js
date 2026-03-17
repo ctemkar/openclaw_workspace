@@ -79,20 +79,25 @@ function updateTradeProgress() {
 
                             let progressHtml = '<p><strong>Trade Progress:</strong> No active trades for this strategy.</p>';
                             const strategyName = strategy.strategy_name;
-                            
+
                             if (tradesByStrategy[strategyName] && tradesByStrategy[strategyName].length > 0) {
                                 progressHtml = '<h5>Active Trades:</h5>';
                                 tradesByStrategy[strategyName].forEach(trade => {
                                     progressHtml += `
                                         <div class="trade-item">
-                                            <strong>Symbol:</strong> ${trade.symbol || 'N/A'} | 
-                                            <strong>Investment:</strong> $${trade.investment_usd?.toFixed(2) ?? 'N/A'} | 
-                                            <strong>Status:</strong> ${trade.status || 'unknown'} | 
+                                            <strong>Symbol:</strong> ${trade.symbol || 'N/A'} |
+                                            <strong>Investment:</strong> $${trade.investment_usd?.toFixed(2) ?? 'N/A'} |
+                                            <strong>Status:</strong> ${trade.status || 'unknown'} |
                                             <strong>P&L:</strong> $${trade.pnl_usd?.toFixed(2) ?? 'N/A'}
+                                            <!-- Added fields: -->
+                                            <strong>Buy Price:</strong> ${trade.buy_price?.toFixed(4) ?? 'N/A'} |
+                                            <strong>Sell Price:</strong> ${trade.sell_price?.toFixed(4) ?? 'N/A'} |
+                                            <strong>Bought:</strong> ${trade.buy_timestamp ? new Date(trade.buy_timestamp).toLocaleString() : 'N/A'} |
+                                            <strong>Sold:</strong> ${trade.sell_timestamp ? new Date(trade.sell_timestamp).toLocaleString() : 'N/A'}
                                         </div>`;
                                 });
                             }
-                            
+
                             strategyDiv.innerHTML = `
                                 <h4>${strategy.strategy_name} (${strategy.symbol})</h4>
                                 <p><strong>LLM Provider:</strong> ${strategy.llm_provider || 'N/A'}</p>
@@ -146,7 +151,7 @@ function saveTradingConfig() {
     .then(data => {
         console.log('Save config response:', data);
         alert(data.message || 'Configuration saved successfully!');
-        updateStatus(); 
+        updateStatus();
     })
     .catch(error => {
         console.error('Error saving trading configuration:', error);
@@ -165,8 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startTradingBtn = document.getElementById('startTradingBtn');
     const stopTradingBtn = document.getElementById('stopTradingBtn');
-    const generateLlmStrategiesBtn = document.getElementById('triggerLlmGenBtn'); 
-    const saveTradingConfigBtn = document.getElementById('saveTradingConfigBtn'); 
+    const generateLlmStrategiesBtn = document.getElementById('triggerLlmGenBtn');
+    const saveTradingConfigBtn = document.getElementById('saveTradingConfigBtn');
     const resetConfigBtn = document.getElementById('resetConfigBtn');
 
     const capitalInput = document.getElementById('configCapital');
@@ -178,31 +183,31 @@ document.addEventListener('DOMContentLoaded', () => {
     function initializeUI() {
         updateStatus();
 
-        fetch('/api/trading/configure') // Assuming this endpoint can be used to GET current config
+        // Fetch current configuration using GET
+        fetch('/api/trading/configure', { method: 'GET' }) 
             .then(configResponse => {
                 if (!configResponse.ok) {
-                    console.warn("Could not fetch current trade config, using defaults or placeholders.");
-                    if (capitalInput) capitalInput.value = "10000.00";
-                    if (tradeSizeInput) tradeSizeInput.value = "10.00"; 
-                    if (stopLossInput) stopLossInput.value = "0.01";
-                    if (takeProfitInput) takeProfitInput.value = "0.02";
-                    return; 
+                    console.warn("Could not fetch current trade config, using defaults or placeholders. Status:", configResponse.status);
+                    // Define placeholders if fetch fails
+                    const defaults = { capital: "10000.00", trade_size_usd: "10.00", stop_loss_pct: "0.01", take_profit_pct: "0.02" };
+                    if (capitalInput) capitalInput.value = defaults.capital;
+                    if (tradeSizeInput) tradeSizeInput.value = defaults.trade_size_usd; 
+                    if (stopLossInput) stopLossInput.value = defaults.stop_loss_pct;
+                    if (takeProfitInput) takeProfitInput.value = defaults.take_profit_pct;
+                    return Promise.reject(configResponse); // Reject to prevent further then() processing if fetch failed
                 }
                 return configResponse.json();
             })
             .then(configData => {
-                 if (configData && configData.received) { 
-                     const cfg = configData.received;
-                     if (capitalInput) capitalInput.value = cfg.capital?.toFixed(2) ?? "10000.00";
-                     if (tradeSizeInput) tradeSizeInput.value = cfg.trade_size_usd?.toFixed(2) ?? "10.00"; 
-                     if (stopLossInput) stopLossInput.value = cfg.stop_loss_pct?.toFixed(3) ?? "0.01";
-                     if (takeProfitInput) takeProfitInput.value = cfg.take_profit_pct?.toFixed(3) ?? "0.02";
-                 } else if (configData) { 
+                 // Apply fetched configuration
+                 if (configData) { 
                      if (capitalInput) capitalInput.value = configData.capital?.toFixed(2) ?? "10000.00";
                      if (tradeSizeInput) tradeSizeInput.value = configData.trade_size_usd?.toFixed(2) ?? "10.00";
                      if (stopLossInput) stopLossInput.value = configData.stop_loss_pct?.toFixed(3) ?? "0.01";
                      if (takeProfitInput) takeProfitInput.value = configData.take_profit_pct?.toFixed(3) ?? "0.02";
                  } else {
+                     // Fallback if configData is empty but response was ok
+                     console.warn("Received empty config data, using placeholders.");
                      if (capitalInput) capitalInput.value = "10000.00";
                      if (tradeSizeInput) tradeSizeInput.value = "10.00";
                      if (stopLossInput) stopLossInput.value = "0.01";
@@ -210,11 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
                  }
             })
             .catch(error => {
-                console.warn("Could not fetch and apply current trade config:", error);
-                if (capitalInput) capitalInput.value = "10000.00";
-                if (tradeSizeInput) tradeSizeInput.value = "10.00";
-                if (stopLossInput) stopLossInput.value = "0.01";
-                if (takeProfitInput) takeProfitInput.value = "0.02";
+                console.warn("Initialization UI: Error fetching or applying current trade config. Using placeholders:", error);
+                // Ensure placeholders are set even if an error occurred after a successful fetch but failed parsing
+                if (capitalInput && !capitalInput.value) capitalInput.value = "10000.00";
+                if (tradeSizeInput && !tradeSizeInput.value) tradeSizeInput.value = "10.00";
+                if (stopLossInput && !stopLossInput.value) stopLossInput.value = "0.01";
+                if (takeProfitInput && !takeProfitInput.value) takeProfitInput.value = "0.02";
             });
     }
 
@@ -260,8 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (resetConfigBtn) {
         resetConfigBtn.addEventListener('click', () => {
-            alert('Reset configuration to defaults (implementation needed).');
-            if (capitalInput) capitalInput.value = "10000.00";
+            // Directly set default values as placeholders, no API call needed for reset
+            alert('Configuration reset to default values.');
+            if (capitalInput) capitalInput.value = "10000.00"; // Keep 10000 as default in UI for reset action
             if (tradeSizeInput) tradeSizeInput.value = "10.00"; 
             if (stopLossInput) stopLossInput.value = "0.01";
             if (takeProfitInput) takeProfitInput.value = "0.02";

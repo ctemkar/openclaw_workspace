@@ -1,12 +1,22 @@
 #!/bin/bash
 CAPITAL=100.00
-TRADE_SIZE_USD_PER_ORDER=25.00
+# TRADE_SIZE_USD_PER_ORDER=25.00 # Hardcoded value removed
 STOP_LOSS_PCT=0.03
 TAKE_PROFIT_PCT=0.06
 
 EXEC_DIR=$(dirname "$0")
 PYTHON_SCRIPT="${EXEC_DIR}/crypto_trading_llm_live.py"
 VENV_ACTIVATE_SCRIPT="${EXEC_DIR}/venv/bin/activate"
+
+# Load trade size from trading_config.json
+CONFIG_FILE="${EXEC_DIR}/trading_config.json"
+TRADE_SIZE_USD_PER_ORDER=$(jq -r '.trade_size_usd' "$CONFIG_FILE")
+
+# Fallback to default if config or value is not found or invalid
+if [ -z "$TRADE_SIZE_USD_PER_ORDER" ] || [ "$TRADE_SIZE_USD_PER_ORDER" == "null" ] || [[ ! "$TRADE_SIZE_USD_PER_ORDER" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+    echo "Warning: Could not read valid TRADE_SIZE_USD_PER_ORDER from $CONFIG_FILE. Using default of $25.00."
+    TRADE_SIZE_USD_PER_ORDER=25.00
+fi
 
 echo "🚀 Crypto Trading LLM Bot - REAL TRADING MODE (Calling Python Script)"
 echo "========================================================================"
@@ -15,6 +25,7 @@ echo "Trade Size: \$${TRADE_SIZE_USD_PER_ORDER} per trade"
 echo "Risk: Stop loss ${STOP_LOSS_PCT}%, Take profit ${TAKE_PROFIT_PCT}%"
 echo "Frequency: Currently set to run once per execution. For 30-min intervals, this script would be run by cron."
 echo ""
+
 
 PYTHON_CMD="python3"
 if [ -f "$VENV_ACTIVATE_SCRIPT" ]; then

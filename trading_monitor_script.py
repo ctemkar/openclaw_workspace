@@ -1,28 +1,28 @@
-
 import requests
-import logging
+import json
 from datetime import datetime
 
-TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TRADING_DASHBOARD_URL = "http://localhost:5001/"
+LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
+CRITICAL_ALERTS_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
+DATA_URL = 'http://localhost:5001/'
 
-logging.basicConfig(filename=TRADING_LOG_PATH, level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-critical_logger = logging.getLogger('critical_alerts')
-critical_logger.setLevel(logging.WARNING)
-critical_handler = logging.FileHandler(CRITICAL_ALERT_LOG_PATH)
-critical_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-critical_logger.addHandler(critical_handler)
+def log_message(message, log_file=LOG_FILE):
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    with open(log_file, 'a') as f:
+        f.write(f"[{timestamp}] {message}\\n")
 
-
-def fetch_trading_data():
+def fetch_and_parse_data():
     try:
-        response = requests.get(TRADING_DASHBOARD_URL)
+        response = requests.get(DATA_URL)
         response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json()  # Assuming the dashboard returns JSON
+        data = response.json()
+        log_message("Successfully fetched data.")
+        return data
     except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to fetch data from {TRADING_DASHBOARD_URL}: {e}")
+        log_message(f"Error fetching data from {DATA_URL}: {e}")
+        return None
+    except json.JSONDecodeError:
+        log_message(f"Error decoding JSON response from {DATA_URL}")
         return None
 
 def analyze_data(data):
@@ -30,31 +30,41 @@ def analyze_data(data):
         return
 
     # Log all extracted data
-    logging.info(f"Trading data: {data}")
+    log_message(f"Trading Logs: {data.get('trading_logs', 'N/A')}")
+    log_message(f"Status Updates: {data.get('status_updates', 'N/A')}")
+    log_message(f"Capital: {data.get('risk_parameters', {}).get('capital', 'N/A')}")
+    log_message(f"Stop Loss: {data.get('risk_parameters', {}).get('stop_loss', 'N/A')}")
+    log_message(f"Take Profit: {data.get('risk_parameters', {}).get('take_profit', 'N/A')}")
+    log_message(f"Drawdown Indicators: {data.get('risk_parameters', {}).get('drawdown_indicators', 'N/A')}")
 
-    # Parse risk parameters and check for alerts
-    capital = data.get("capital")
-    stop_loss = data.get("stop_loss")
-    take_profit = data.get("take_profit")
-    drawdown_indicators = data.get("drawdown_indicators")
+    critical_alerts = []
+    risk_parameters = data.get('risk_parameters', {})
 
-    alerts = []
-    if stop_loss and stop_loss.get("triggered", False):
-        alerts.append(f"Stop-loss triggered: {stop_loss.get('details', 'N/A')}")
-    if take_profit and take_profit.get("triggered", False):
-        alerts.append(f"Take-profit triggered: {take_profit.get('details', 'N/A')}")
-    if drawdown_indicators and drawdown_indicators.get("critical", False):
-        alerts.append(f"Critical drawdown indicators appeared: {drawdown_indicators.get('details', 'N/A')}")
+    # Check for triggered stop-loss or take-profit
+    if risk_parameters.get('stop_loss_triggered'):
+        alert_msg = "CRITICAL ALERT: Stop-loss triggered!"
+        critical_alerts.append(alert_msg)
+        log_message(alert_msg, CRITICAL_ALERTS_FILE)
 
-    if alerts:
-        for alert in alerts:
-            critical_logger.warning(alert)
+    if risk_parameters.get('take_profit_triggered'):
+        alert_msg = "CRITICAL ALERT: Take-profit triggered!"
+        critical_alerts.append(alert_msg)
+        log_message(alert_msg, CRITICAL_ALERTS_FILE)
+
+    # Check for critical drawdown indicators
+    drawdown = risk_parameters.get('drawdown_indicators')
+    if drawdown and drawdown.get('critical'): # Assuming 'critical' is a boolean or a threshold check
+        alert_msg = f"CRITICAL ALERT: Drawdown indicators are critical: {drawdown.get('value', 'N/A')}"
+        critical_alerts.append(alert_msg)
+        log_message(alert_msg, CRITICAL_ALERTS_FILE)
+
+    if critical_alerts:
+        log_message("Critical alerts detected and logged.")
     else:
-        logging.info("No critical alerts triggered.")
-
-def main():
-    data = fetch_trading_data()
-    analyze_data(data)
+        log_message("No critical alerts detected.")
 
 if __name__ == "__main__":
-    main()
+    log_message("Starting trading monitoring task.")
+    trading_data = fetch_and_parse_data()
+    analyze_data(trading_data)
+    log_message("Trading monitoring task finished.")

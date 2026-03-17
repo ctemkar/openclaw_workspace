@@ -1,1 +1,8 @@
-2026-03-16 18:02:25,395 - ERROR - Failed to fetch data from http://localhost:5001/: Expecting value: line 1 column 1 (char 0)
+Monitoring started at Tue Mar 17 20:54:45 +07 2026
+
+Analysis Summary Tue Mar 17 20:54:45 +07 2026:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to localhost port 5001 after 0 ms: Couldn't connect to server
+No critical alerts detected at Tue Mar 17 20:54:45 +07 2026

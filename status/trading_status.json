@@ -1,10 +1,13 @@
 {
-    "last_log": "2026-03-16 18:21:31",
-    "last_message": "Trade cycle finished. Sleeping for 5 minutes.",
-    "pid": 17321,
-    "last_heartbeat": "2026-03-16T18:21:31.360949",
+    "last_log": "2026-03-17 03:57:09",
+    "last_message": "Current price for SOL/USD: 95.87",
+    "pid": 25541,
+    "last_heartbeat": "2026-03-17T03:57:09.284546",
     "trading_status": "error",
-    "error_message": "name 'ccxt' is not defined",
+    "error_message": "name 'update_task_statuses' is not defined",
     "is_running": false,
-    "trading_cycle_complete": "2026-03-16T18:21:31.360689"
+    "trading_cycle_complete": "2026-03-17T03:53:57.974013"
+}"name 'update_task_statuses' is not defined",
+    "is_running": false,
+    "trading_cycle_complete": "2026-03-17T03:57:09.284354"
 }
