@@ -43,6 +43,19 @@ def generate_strategies():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/api/dashboard/tasks')
+def get_dashboard_tasks():
+    """Return dashboard tasks from memory files."""
+    tasks_file = os.path.join(BASE_DIR, "dashboard_tasks.json")
+    if os.path.exists(tasks_file):
+        try:
+            with open(tasks_file, "r") as f:
+                tasks_data = json.load(f)
+            return jsonify(tasks_data)
+        except:
+            pass
+    return jsonify({"last_updated": datetime.now().isoformat(), "total_tasks": 0, "tasks": []})
+
 if __name__ == '__main__':
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('', 0))

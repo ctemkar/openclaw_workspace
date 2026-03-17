@@ -1,0 +1,72 @@
+{
+  "last_updated": "2026-03-18T04:25:06.781188",
+  "total_tasks": 11,
+  "tasks": [
+    {
+      "date": "2026-03-16",
+      "section": "General",
+      "task": "Updated trading_config.json to set trade_size_usd to 10.00.",
+      "source_file": "2026-03-16.md"
+    },
+    {
+      "date": "2026-03-16",
+      "section": "General",
+      "task": "Modified templates/index.html and static/script.js to include UI elements for managing and displaying trade size, and fetching/displaying detailed trade information (including buy/sell prices and timestamps).",
+      "source_file": "2026-03-16.md"
+    },
+    {
+      "date": "2026-03-16",
+      "section": "General",
+      "task": "Updated llm_strategy_generator.py to read trade_size_usd from trading_config.json for strategy generation.",
+      "source_file": "2026-03-16.md"
+    },
+    {
+      "date": "2026-03-16",
+      "section": "General",
+      "task": "Modified crypto_trading_llm.sh to dynamically load trade_size_usd from trading_config.json for real trades.",
+      "source_file": "2026-03-16.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "User reported 500 Internal Server Error for `/api/llm/generate` endpoint.",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "Error was `ModuleNotFoundError: No module named 'random'` even though `random` is a standard Python module.",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "Issue: The Flask app environment might have had problems with the `random` module import.",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "Fixed by replacing `random.choice()` with deterministic logic using `time.time()` timestamp.",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "The function now:",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "Restarted Flask app. `/api/llm/generate` endpoint now works correctly.",
+      "source_file": "2026-03-18.md"
+    },
+    {
+      "date": "2026-03-18",
+      "section": "Fixed 500 Error for LLM Generate Endpoint",
+      "task": "Tested `/api/llm/strategies` endpoint - returns the newly generated strategies.",
+      "source_file": "2026-03-18.md"
+    }
+  ]
+}
