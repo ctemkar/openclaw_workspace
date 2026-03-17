@@ -1,64 +1,87 @@
 === TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 01:55:08 (Asia/Bangkok)
-Dashboard URL: http://localhost:49399/
+Timestamp: 2026-03-18 01:57:45 (Asia/Bangkok)
+Dashboard Status: OFFLINE (Port 5001 not responding)
+Trading Bot Status: RUNNING (PID 79629) with CRITICAL ERRORS
 
 === SYSTEM STATUS ===
-• Trading Bot Status: RUNNING
-• Last Update: 2026-03-18T01:55:08.170277Z
-• Dashboard Port: 49399 (active)
+• Trading Bot Process: ACTIVE (PID 79629)
+• Dashboard Server: OFFLINE (Port 5001 not in use)
+• Last Known Dashboard: Port 49399 (now offline)
+• Bot Heartbeat: Active (process running)
 
-=== MARKET DATA ===
-• BTC/USDT: $39,925.57
-• ETH/USDT: $2,964.05
-• SOL/USDT: $99.03
+=== MARKET DATA (LIVE) ===
+• BTC/USDT: $74,677.46 (Binance API)
+• ETH/USDT: $2,331.29 (Binance API)
+• Note: Previous report prices were outdated
 
-=== ACTIVE STRATEGIES ===
+=== CRITICAL ISSUES DETECTED ===
+1. STRATEGY PARSING ERRORS (CONTINUING)
+   • Error: "'str' object has no attribute 'get'"
+   • Frequency: Every 10 seconds
+   • Duration: Since 01:37:18 (20+ minutes)
+   • Error Count: 150+ errors and counting
+   • Impact: Strategy processing compromised
+
+2. TRADE EXECUTION FAILURES (NEW)
+   • Time: 01:56:36 - BTC Buy order failed
+     - Symbol: BTCUSDT
+     - Price: $75,008.11
+     - Quantity: 0.00013465 BTC
+     - Reason: "Insufficient funds"
+   
+   • Time: 01:56:37 - ETH Sell order failed  
+     - Symbol: ETHUSDT
+     - Price: $2,311.51
+     - Quantity: 0.004282 ETH
+     - Reason: "Insufficient funds"
+
+=== ACTIVE STRATEGIES (FROM LAST REPORT) ===
 1. GeneratedStrategy_ETH_SELL_Gemini
    • Symbol: ETH/USDT
-   • LLM Provider: Gemini (gemini-pro)
-   • Risk Parameters:
-     - Stop Loss: 1.5%
-     - Take Profit: 2.5%
+   • LLM Provider: Gemini
+   • Risk: Stop Loss 1.5%, Take Profit 2.5%
    • Signal: SELL
 
 2. GeneratedStrategy_BTC_BUY_Qwen
    • Symbol: BTC/USDT
-   • LLM Provider: Qwen (qwen-turbo)
-   • Risk Parameters:
-     - Stop Loss: 1.0%
-     - Take Profit: 2.0%
+   • LLM Provider: Qwen
+   • Risk: Stop Loss 1.0%, Take Profit 2.0%
    • Signal: BUY
 
 3. GeneratedStrategy_SOL_SELL_Deepseek
    • Symbol: SOL/USDT
-   • LLM Provider: Deepseek (deepseek-coder)
-   • Risk Parameters:
-     - Stop Loss: 0.8%
-     - Take Profit: 1.5%
+   • LLM Provider: Deepseek
+   • Risk: Stop Loss 0.8%, Take Profit 1.5%
    • Signal: SELL
 
 === TRADING ACTIVITY ===
-• Active Trades: 0 (No trades currently in progress)
-• Last Trade Activity: No recent trades detected
-
-=== BOT LOG ANALYSIS ===
-• Bot is running with periodic heartbeats
-• CRITICAL ISSUE DETECTED: Strategy errors occurring repeatedly
-• Error Pattern: "'str' object has no attribute 'get'" - suggests data parsing issue
-• Error Frequency: Every 10 seconds since 01:37:18
-• Total Errors in last 20 minutes: ~120+ errors
+• Active Trades: 0 (No open positions)
+• Recent Trade Attempts: 2 FAILED attempts
+• Completed Trades: 0 (empty completed_trades.json)
+• Capital Status: INSUFFICIENT FUNDS (critical)
 
 === RISK ASSESSMENT ===
-• No active positions → No immediate stop-loss/take-profit triggers
-• Market volatility: Normal (no extreme price movements detected)
-• Strategy errors pose operational risk
-• No drawdown indicators (no active trades)
+• CRITICAL: Insufficient funds for trade execution
+• HIGH: Persistent strategy parsing errors
+• MEDIUM: Dashboard offline (reduced monitoring capability)
+• LOW: No active positions (mitigates immediate loss risk)
+
+=== STOP-LOSS/TAKE-PROFIT STATUS ===
+• No active positions → No SL/TP triggers
+• However: Trade execution failures prevent new positions
+• Market volatility: Prices differ significantly from previous report
+
+=== DRAWDOWN INDICATORS ===
+• No active trades → No drawdown
+• Capital issue prevents new positions
+• Operational risk: HIGH (multiple system failures)
 
 === RECOMMENDATIONS ===
-1. IMMEDIATE: Investigate strategy parsing errors
-2. Check strategy data format and API responses
-3. Monitor for any trade execution despite errors
-4. Consider restarting bot if errors persist
+1. IMMEDIATE: Check exchange account balance
+2. IMMEDIATE: Investigate strategy data format errors
+3. Restart dashboard server for monitoring
+4. Review API credentials and funding
+5. Consider pausing bot until funds and errors resolved
 
 === NEXT CHECK ===
 Scheduled for next cron execution

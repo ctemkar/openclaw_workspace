@@ -1,36 +1,55 @@
-=== TRADING DASHBOARD MONITOR - CRON JOB SUMMARY ===
-Execution Time: 2026-03-18 01:48:21 (Asia/Bangkok)
+=== CRON JOB EXECUTION SUMMARY ===
+Job ID: trading_dashboard_monitor
+Execution Time: 2026-03-18 01:57:45 (Asia/Bangkok)
 
-📊 SYSTEM STATUS:
-• Dashboard: ✅ RUNNING (port 64677)
-• Trading Bot: ✅ RUNNING (PID 79629)
-• Last Update: 2026-03-18T01:48:20.934522Z
+=== EXECUTION RESULTS ===
+• Dashboard Check: FAILED (Port 5001 not responding)
+• Bot Status: DETECTED (PID 79629 running)
+• Log Analysis: COMPLETED
+• Market Data: FETCHED (Live prices from Binance)
+• Alert Generation: COMPLETED
 
-💰 TRADING CONFIGURATION:
-• Capital: $10,000.00
-• Stop Loss: 1.0% (threshold: $9,900.00)
-• Take Profit: 2.0% (threshold: $10,200.00)
+=== KEY FINDINGS ===
+1. CRITICAL: Trade execution failures due to insufficient funds
+   - BTC Buy order failed: $75,008.11 for 0.00013465 BTC
+   - ETH Sell order failed: $2,311.51 for 0.004282 ETH
+   - Both failed with "insufficient funds" error
 
-📈 MARKET PRICES:
-• BTC/USDT: $40,038.73
-• ETH/USDT: $2,989.61
-• SOL/USDT: $99.62
+2. CRITICAL: Persistent strategy parsing errors
+   - "'str' object has no attribute 'get'" error
+   - Occurring every 10 seconds for 20+ minutes
+   - 150+ errors logged
 
-🚨 CRITICAL ALERTS:
-• STRATEGY ERRORS DETECTED: 50 errors in recent logs
-• Error Pattern: "'str' object has no attribute 'get'"
-• Status: CRITICAL - Trading bot has persistent strategy errors
+3. WARNING: Dashboard server offline
+   - Port 5001 not in use
+   - Previous dashboard (port 49399) also offline
+   - Reduced monitoring capability
 
-⚠️ RECOMMENDATIONS:
-1. Investigate and fix the strategy implementation error
-2. Check the trading bot's data parsing logic
-3. Verify that market data is being received correctly
-4. Consider pausing trading until errors are resolved
+=== DATA EXTRACTED ===
+• Live Market Prices:
+  - BTC/USDT: $74,677.46
+  - ETH/USDT: $2,331.29
 
-📝 LOG STATUS:
-• Monitoring Log: Updated successfully (trading_monitoring.log)
-• Critical Alerts: 2 new warnings logged (critical_alerts.log)
-• Total Strategy Errors: 50 (increasing)
+• Bot Status:
+  - Process: Active (PID 79629)
+  - Errors: Continuous strategy parsing failures
+  - Trade Attempts: 2 failed attempts at 01:56:36-37
 
-🔧 NEXT STEPS:
-The trading bot is running but encountering persistent strategy errors. Immediate investigation is recommended to prevent potential trading losses.
+• Risk Parameters:
+  - No active positions
+  - No stop-loss/take-profit triggers
+  - No drawdown indicators
+
+=== FILES UPDATED ===
+1. trading_monitoring.log - Updated with latest analysis
+2. critical_alerts.log - Updated with new trade failure alerts
+3. cron_summary.txt - This execution summary
+
+=== RECOMMENDATIONS FOR NEXT EXECUTION ===
+1. Attempt to restart dashboard if still offline
+2. Check if strategy errors persist
+3. Monitor for any new trade attempts
+4. Verify if funding issue resolved
+
+=== NEXT SCHEDULED CHECK ===
+As per cron schedule configuration
