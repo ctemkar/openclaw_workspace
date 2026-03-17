@@ -1,0 +1,13 @@
+Fetched content will be logged here.--- Wed Mar 18 01:34:51 +07 2026 ---
+Error: Failed to fetch data from http://localhost:5001/
+--- Wed Mar 18 01:34:59 +07 2026 ---
+Error: Failed to fetch data from http://localhost:5001/
+--- Wed Mar 18 01:37:12 +07 2026 ---
+Error: Failed to fetch data from http://localhost:5001/
+--- Wed Mar 18 01:37:18 +07 2026 ---
+Error: Failed to fetch data from http://localhost:5001/
+2026-03-18 01:38:54,697 - ERROR - Failed to fetch data from http://localhost:5001/: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-03-18 01:40:24,799 - WARNING - BOT ERRORS DETECTED: 19 errors in recent logs.
+2026-03-18 01:40:24,799 - INFO - Bot Status: ACTIVE, Last Activity: 2026-03-18 01:40:19
+2026-03-18 01:40:24,799 - INFO - Recent Activity - Heartbeats: 30, Errors: 19, Scans: 0
+2026-03-18 01:40:24,799 - INFO - Total Trades: 0

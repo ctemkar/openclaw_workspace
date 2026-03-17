@@ -36754,3 +36754,6 @@ Virtual environment activated. Using Python from: /Users/chetantemkar/.openclaw/
 Checking for ccxt library (using Python executable: /Users/chetantemkar/.openclaw/workspace/app/venv/bin/python)...
 ✅ ccxt library is installed.
 Executing Python live trading script using /Users/chetantemkar/.openclaw/workspace/app/venv/bin/python...
+/Users/chetantemkar/.openclaw/workspace/app/crypto_trading_llm.sh: line 55: 69003 Terminated: 15          $PYTHON_CMD "$PYTHON_SCRIPT"
+
+✅ Crypto Trading LLM Bot execution finished.

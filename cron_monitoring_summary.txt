@@ -1,0 +1,83 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Execution Time: 2026-03-18 01:40:38 (Asia/Bangkok)
+Cron Job ID: e3aabf89-c325-4361-b9ba-c9331090a235
+
+EXECUTION STATUS
+----------------
+✓ Monitoring script executed successfully
+✓ Trading data analyzed from available sources
+✓ Critical alerts checked and logged
+✓ Performance analysis completed
+
+DATA SOURCES ANALYZED
+---------------------
+1. trading_bot_clean.log - ✓ Available (102 entries)
+2. completed_trades.json - ✓ Available (0 trades)
+3. trading_summary.txt - ✓ Available (52 bytes)
+4. trading_monitoring.log - ✓ Updated with new analysis
+5. critical_alerts.log - ✓ Updated with new alerts
+
+TRADING BOT STATUS
+------------------
+• Status: ACTIVE
+• Last Activity: 2026-03-18 01:40:19
+• Total Log Entries: 102
+• Recent Heartbeats: 30
+• Recent Market Scans: 0
+• Recent Errors: 19
+• Bot Starts: 1
+
+TRADING ACTIVITY
+----------------
+• Total Completed Trades: 0
+• No trades executed yet
+• Trading bot is in monitoring/waiting mode
+
+CRITICAL ALERTS DETECTED
+------------------------
+⚠️  BOT ERRORS DETECTED: 19 errors in recent logs.
+   - The bot is experiencing strategy errors ("'str' object has no attribute 'get'")
+   - This indicates a potential configuration or data parsing issue
+   - No stop-loss or take-profit triggers detected
+   - No critical drawdown indicators detected
+
+DASHBOARD STATUS
+----------------
+✗ Dashboard at http://localhost:5001/ is NOT AVAILABLE
+   - Connection refused (port 5001 not listening)
+   - This is preventing real-time dashboard monitoring
+   - Alternative monitoring via log analysis is active
+
+RISK PARAMETERS ANALYSIS
+------------------------
+• Capital: Not available (dashboard offline)
+• Stop Loss: No triggers detected
+• Take Profit: No triggers detected
+• Drawdown: No critical levels detected
+• Risk Level: LOW (no active trades, bot monitoring only)
+
+RECOMMENDATIONS
+---------------
+1. Investigate bot strategy errors to prevent trading failures
+2. Start dashboard service on port 5001 for real-time monitoring
+3. Review trading bot configuration and strategy files
+4. Consider implementing simulated trades for testing
+
+FILES UPDATED
+-------------
+1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+   - Added comprehensive analysis entries
+   - Logged bot status and error counts
+
+2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+   - Added warning for bot errors detected
+   - Timestamped alert for monitoring purposes
+
+NEXT SCHEDULED CHECK
+--------------------
+Based on cron schedule, next monitoring check will run according to configured interval.
+
+SUMMARY
+-------
+The trading system is operational but experiencing configuration issues. The bot is active and monitoring markets but has strategy parsing errors. No trades have been executed, so risk exposure is minimal. Dashboard service needs to be started for full monitoring capabilities.
