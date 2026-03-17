@@ -26,13 +26,46 @@ critical_logger.setLevel(logging.WARNING)
 
 def fetch_data():
     try:
-        # Fetch from available API endpoints
-        base_url = DATA_URL.rstrip('/')
+        # Try multiple ports - first check .active_port, then try common ports
+        ports_to_try = []
         
-        # Get trading status (only available endpoint)
-        status_response = requests.get(f"{base_url}/api/status/all")
-        status_response.raise_for_status()
-        status_data = status_response.json()
+        # Read active port from file
+        try:
+            with open('.active_port', 'r') as f:
+                active_port = f.read().strip()
+                if active_port:
+                    ports_to_try.append(int(active_port))
+        except:
+            pass
+        
+        # Add common ports
+        ports_to_try.extend([61804, 5000, 5001, 8080, 8000])
+        
+        # Remove duplicates
+        ports_to_try = list(dict.fromkeys(ports_to_try))
+        
+        dashboard_url = None
+        status_data = None
+        
+        # Try each port
+        for port in ports_to_try:
+            try:
+                test_url = f"http://localhost:{port}/api/status/all"
+                response = requests.get(test_url, timeout=5)
+                if response.status_code == 200:
+                    # Try to parse as JSON
+                    data = response.json()
+                    if 'status' in data:
+                        dashboard_url = f"http://localhost:{port}"
+                        status_data = data
+                        logging.info(f"Found dashboard on port {port}")
+                        break
+            except:
+                continue
+        
+        if not dashboard_url:
+            logging.error("Could not find dashboard on any port")
+            return None
         
         # Read trading logs directly from file since API endpoint doesn't exist
         trading_logs = []

@@ -9,7 +9,7 @@ try:
     with open(".active_port", "r") as f:
         PORT = f.read().strip()
 except:
-    PORT = "5001"  # Fallback
+    PORT = "54174"  # Fallback
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

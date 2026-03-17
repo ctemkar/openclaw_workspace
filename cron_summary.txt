@@ -1,29 +1,54 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Time: 2026-03-18 04:51:46 (Asia/Bangkok)
+=== TRADING DASHBOARD MONITOR CRON EXECUTION SUMMARY ===
+Execution Time: 2026-03-18 05:17:32 (Asia/Bangkok) / 2026-03-17 22:17 UTC
 
-STATUS OVERVIEW:
-✅ Dashboard is running on port 61804
-✅ Trading bot process is active (PID: 2917)
-✅ Position: 0.00053507 BTC (4 trades)
-✅ Current P&L: +$0.01 (+0.02%)
+1. DASHBOARD STATUS:
+   - Dashboard URL (http://localhost:5001/): NOT RESPONDING
+   - Dashboard script executed successfully
+   - Trading bot process (PID 2917): RUNNING
 
-RISK ASSESSMENT:
-✅ No stop-loss or take-profit triggers
-✅ Distance to stop-loss: 1.02% (safe)
-✅ Distance to take-profit: 1.98% (progressing)
+2. MARKET DATA:
+   - BTC/USD: $74,628.00 (estimated from logs)
+   - ETH/USD: $2,316.53 (estimated from logs)
+   - Market trend: Slightly bearish (BTC down ~0.2% from buy prices)
 
-CRITICAL ISSUES DETECTED:
-⚠️  EXCESSIVE STRATEGY ERRORS: 93 errors in recent logs
-⚠️  INSUFFICIENT FUNDS ERRORS: 2 trade failures
+3. ACTIVE TRADES ANALYSIS:
+   - Total active trades: 4 BTC positions
+   - Total investment: $298,971.70
+   - Current portfolio value: $298,512.00
+   - Total loss: -$459.70 (-0.15%)
+   - Individual trade losses range: -0.10% to -0.23%
 
-RECOMMENDED ACTIONS:
-1. Investigate strategy errors - appears to be a persistent bug
-2. Check account balance - insufficient funds errors indicate liquidity issues
-3. Monitor position closely - currently small but profitable
+4. RISK PARAMETERS:
+   - Capital: $10,000.00
+   - Stop Loss threshold: 1.00% (NOT TRIGGERED)
+   - Take Profit threshold: 2.00% (NOT TRIGGERED)
+   - Current max individual loss: -0.23%
+   - Current portfolio loss: -0.15%
 
-NEXT CHECK: In 5 minutes (as per cron schedule)
+5. ALERT STATUS:
+   ✅ NO CRITICAL ALERTS
+   - All trades within safe limits
+   - No stop-loss triggers
+   - No take-profit triggers
+   - Drawdown: Minimal (-0.15%)
 
-Logs updated:
-- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+6. SYSTEM HEALTH ISSUES:
+   ⚠️  STRATEGY ERRORS DETECTED
+   - Error: "str object has no attribute get" in trading logic
+   - Last trade: 04:45:54 (1.5 hours ago)
+   - Dashboard server not running on port 5001
+   - 15+ errors detected in recent logs
+
+7. LOG UPDATES:
+   - Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+   - Critical alerts log checked: No new critical alerts added
+   - Analysis timestamp: 2026-03-18 05:20:04
+
+8. RECOMMENDATIONS:
+   - Investigate strategy errors: "str object has no attribute get"
+   - Restart dashboard server on port 5001
+   - Monitor for increased drawdown approaching 1% threshold
+   - Verify API connections and data feeds
+
+=== END OF SUMMARY ===
+Next scheduled check: Based on cron configuration

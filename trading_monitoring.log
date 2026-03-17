@@ -1,236 +1,138 @@
-2026-03-18 04:42:00 - INFO - TRADING DASHBOARD MONITORING REPORT
-===========================================================
-TIMESTAMP: 2026-03-18 04:42:00 (Asia/Bangkok)
-DASHBOARD STATUS: ONLINE (port 61804 responding)
-TRADING BOT STATUS: RUNNING (PID: 2917)
+=== TRADING MONITORING REPORT ===
+Timestamp: 2026-03-18 05:22:47 (Asia/Bangkok)
+Monitoring Source: http://localhost:54174/
 
-CURRENT POSITIONS (from live API /api/status/all):
-- Total trades: 3
-- Trade 1: 04:43:01 - BUY BTC/USD at $74,800.00 (0.00013369 BTC) - Model: Gemini-Pro
-- Trade 2: 02:25:17 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) - Model: gemini-pro
-- Trade 3: 02:24:56 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) - Model: gemini-pro
-- Total BTC position: 0.00040133 BTC (~$30.01 at current prices)
-- Average entry price: $74,752.55
-- All trades: FILLED status
+API STATUS:
+- Server Status: RUNNING on port 54174
+- API Endpoints: /api/trading/progress, /api/trading/configure
+- Dashboard: Accessible at http://localhost:54174/
 
-CURRENT MARKET PRICES (Coingecko API):
-- BTC/USD: $74,774.00 (+0.03% from average entry)
-- ETH/USD: $2,339.05
-- SOL/USD: $95.18
+TRADE DATA (from /api/trading/progress):
+- Active Trades: 4 BTC positions
+- Recent Trade Activity:
+  1. 04:45:54 - Buy BTC @ $74,770.04 (Gemini-Pro, filled)
+  2. 04:43:01 - Buy BTC @ $74,800.00 (Gemini-Pro, filled)
+  3. 02:25:17 - Buy BTC @ $74,700.83 (gemini-pro, filled)
+  4. 02:24:56 - Buy BTC @ $74,700.83 (gemini-pro, filled)
+
+CONFIGURATION (from /api/trading/configure):
+- Capital: $10,000
+- Stop Loss: 3% (0.03)
+- Trade Size: 10
+
+MARKET ANALYSIS (from analyze_trades.py):
+- Current BTC Price: $74,594
+- Current ETH Price: $2,333.43
+- Current SOL Price: $95.37
 
 POSITION ANALYSIS:
-- Average Entry Price: $74,752.55
-- Current Price: $74,774.00
-- Profit/Loss: +0.03% (+$0.01 on $30 position)
-- Stop Loss (Global Config): 1.0% at $74,004.02
-- Take Profit (Global Config): 2.0% at $76,247.60
-- Distance to Stop Loss: 1.0% ($770.53 away)
-- Distance to Take Profit: 2.0% ($1,495.05 away)
+- Trade 1: Buy $74,770.04, Current $74,594 = -0.24% loss
+- Trade 2: Buy $74,800.00, Current $74,594 = -0.28% loss
+- Trade 3: Buy $74,700.83, Current $74,594 = -0.14% loss
+- Trade 4: Buy $74,700.83, Current $74,594 = -0.14% loss
 
-RISK PARAMETERS (from trading_config.json):
-- Capital: $1,000.00
-- Trade Size: $100.00 per trade
-- Global Stop Loss: 1.0%
-- Global Take Profit: 2.0%
+PORTFOLIO SUMMARY:
+- Total Investment: $298,971.70
+- Current Value: $298,376.00
+- Total Loss: -$595.70 (-0.20%)
 
-SYSTEM STATUS:
-- Dashboard: ONLINE (port 61804 responding)
-- Trading Bot: RUNNING (PID: 2917)
-- Strategy Generation: AVAILABLE (API endpoint functional)
-- Risk Management: ACTIVE (bot running and monitoring positions)
-
-ALERTS:
-- INFO: Trading dashboard online and responding
-- INFO: Trading bot process is running
-- INFO: Current BTC position at +0.03% profit
-- INFO: Positions not near stop-loss or take-profit levels
-- WARNING: Dashboard port changed from 5001 to 61804 (update monitoring config)
-
-CRITICAL RISK ASSESSMENT:
-1. ACTIVE TRADING: Bot process is running (PID: 2917)
-2. DASHBOARD ONLINE: Web interface accessible on port 61804
-3. EXISTING POSITIONS: Small profit (0.03%), not near risk thresholds
-4. RISK MONITORING ACTIVE: Stop-loss and take-profit being monitored by bot
-
-SYSTEM HEALTH:
-- Dashboard API responding: ✓
-- Bot process running: ✓
-- Completed trades accessible: ✓
-- Market data available: ✓
-- Strategy generation: ERROR (continuous 'str' object has no attribute 'get' errors)
-
-CRITICAL ISSUES DETECTED:
-1. STRATEGY GENERATION ERRORS: Continuous 'str' object has no attribute 'get' errors every 10 seconds
-2. TRADE FAILURES: Multiple failed sell orders due to insufficient funds
-3. MODEL INCONSISTENCY: Some trades use "Gemini-Pro", others use "gemini-pro" (case mismatch)
-4. TRADE EXECUTION: Last successful buy at 04:45:54 ($74,770.04)
-
-RECENT ACTIVITY (from trading_bot_clean.log):
-- 04:43:01: SUCCESS - Gemini-Pro buy filled at $74,800.00
-- 04:43:02: FAILURE - GPT-4o sell order failed (insufficient funds)
-- 04:45:54: SUCCESS - Gemini-Pro buy filled at $74,770.04
-- 04:45:55: FAILURE - GPT-4o sell order failed (insufficient funds)
-- Continuous strategy errors every 10 seconds since 04:40:17
-
-MARKET ANALYSIS:
-- BTC showing minimal movement (+0.03% from entry)
-- Market conditions relatively stable
-- No extreme volatility detected
-- Positions at minimal risk based on current prices
-
-NEXT CHECK: Scheduled for next cron run
-
-CRITICAL ACTION REQUIRED:
-1. INVESTIGATE STRATEGY ERRORS: Continuous 'str' object has no attribute 'get' errors every 10 seconds
-2. FIX CAPITAL ALLOCATION: Sell orders failing due to insufficient funds
-3. RESOLVE MODEL INCONSISTENCY: Standardize "Gemini-Pro" vs "gemini-pro"
-4. REVIEW TRADING LOGIC: Only buy orders executing successfully
-
-MONITORING IMPROVEMENTS NEEDED:
-1. Update port checking to read from .active_port file
-2. Add strategy error monitoring and alerting
-3. Implement trade failure analysis
-4. Add bot process health verification beyond simple PID check2026-03-18 04:45:02,291 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
-2026-03-18 04:45:02,291 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:41:47] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:41:57] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:42:07] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:42:17] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:42:27] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:42:37] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:42:47] STRATEGY ERROR: 'str' object has no attribute 'get'
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:43:01] SUCCESS: Gemini-Pro buy filled at 74800.0
-2026-03-18 04:45:02,291 - INFO - Trading Log: [2026-03-18 04:43:02] TRADE FAILURE (GPT-4o): gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.71 and quantity 0.004271 ETH due to insufficient funds
-2026-03-18 04:45:02,291 - INFO - Trading Log: 
-2026-03-18 04:45:02,291 - INFO - Status Update: Trading: running - Last update: 2026-03-18 04:45:02
-2026-03-18 04:45:02,291 - WARNING - STRATEGY ERRORS DETECTED: 16 errors in recent logs. Bot may not be functioning correctly.
-2026-03-18 04:45:02,291 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
-
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 04:51:46
-Dashboard Status: running
-Dashboard Port: 61804
-
-POSITION SUMMARY:
-- Total BTC Position: 0.00053507 BTC
-- Average Entry Price: $74756.91
-- Number of Active Trades: 4
-- Estimated Current BTC Price: $74770.04
-
-PERFORMANCE METRICS:
-- Total Cost: $40.00
-- Current Value: $40.01
-- P&L: $0.01 (0.02%)
-
-RISK PARAMETERS:
-- Stop Loss (1.0%): $74009.34
-- Take Profit (2.0%): $76252.05
-- Distance to Stop-Loss: 1.02%
-- Distance to Take-Profit: 1.98%
-
-SYSTEM HEALTH:
-- Strategy Errors (recent): 93
-- Insufficient Funds Errors: 2
-- Bot Process: Running (PID: 2917)
-
-⚠️  CRITICAL CONDITIONS DETECTED:
-- EXCESSIVE STRATEGY ERRORS: 93 errors detected
-- INSUFFICIENT FUNDS ERRORS: 2 failures detected
-==================================================
-2026-03-18 04:52:00 - TRADING DASHBOARD MONITORING REPORT
-=============================================================================
-MONITORING TIME: 2026-03-18 04:52:00 (Asia/Bangkok)
-DASHBOARD STATUS: ONLINE (port 61804 responding)
-TRADING BOT STATUS: RUNNING (PID: 2917, uptime: 12:30)
-API STATUS: RESPONDING (all endpoints functional)
-
-MARKET DATA:
-- BTC/USD: $74,713.00
-- ETH/USD: $2,339.38
-- SOL/USD: $95.30
-
-TRADING POSITION ANALYSIS:
-- Total BTC Position: 0.00053507 BTC
-- Average Entry Price: $74,756.91
-- Current Position Value: $39.98
-- Total Cost: $40.00
-- P&L: -$0.02 (-0.06%)
-
-RISK PARAMETERS (from config):
-- Capital: $1,000.00
-- Trade Size: $100.00
-- Stop Loss: 1.0% ($74,009.34)
-- Take Profit: 2.0% ($76,252.05)
-- Distance to Stop Loss: 0.94% (SAFE)
-- Distance to Take Profit: 2.06% (NOT REACHED)
-
-TRIGGER STATUS:
+RISK ASSESSMENT:
+- Stop Loss Threshold: 1% (from config)
+- Current Loss Level: 0.20%
 - Stop Loss Triggered: NO
 - Take Profit Triggered: NO
+- Max Individual Loss: -0.28% (Trade #2)
 
-SYSTEM HEALTH ISSUES:
-1. STRATEGY GENERATION ERRORS: 93 errors detected (continuous AttributeError)
-2. INSUFFICIENT FUNDS ERRORS: 2 trade failures
-3. MODEL INCONSISTENCY: "Gemini-Pro" vs "gemini-pro" case mismatch
-4. SELL ORDER FAILURES: Multiple ETH sell orders failing
-
-RECENT TRADES (last 4):
-1. 04:45:54 - BUY 0.00013374 BTC @ $74,770.04 (Gemini-Pro)
-2. 04:43:01 - BUY 0.00013369 BTC @ $74,800.00 (Gemini-Pro)
-3. 02:25:17 - BUY 0.00013382 BTC @ $74,728.83 (gemini-pro)
-4. 02:24:56 - BUY 0.00013382 BTC @ $74,728.83 (gemini-pro)
-
-CRITICAL ALERT STATUS:
-- No stop-loss or take-profit triggers detected
-- No critical drawdown detected (current drawdown: -0.06%)
-- Strategy generation system is BROKEN and requires immediate attention
-- Capital allocation issues causing sell order failures
-
-RECOMMENDED ACTIONS:
-1. Investigate and fix strategy generation system (AttributeError)
-2. Review capital allocation for sell orders
-3. Standardize model naming conventions
-4. Consider implementing error throttling to reduce log noise
-
-NEXT MONITORING CHECK: 5 minutes
-
-=== TRADING DASHBOARD MONITORING CHECK ===
-TIMESTAMP: 2026-03-18 04:56:00 (Asia/Bangkok)
-
-DASHBOARD STATUS:
-- Dashboard accessible on port 61804 (not 5001)
-- Trading system status: RUNNING
-- API endpoints partially responsive
-
-TRADING ACTIVITY:
-- Recent trades: 4 BUY trades (filled)
-  * 04:45:54 - Gemini-Pro buy at 74770.04
-  * 04:43:01 - Gemini-Pro buy at 74800.0
-  * 02:25:17 - gemini-pro buy at 74728.83
-  * 02:24:56 - gemini-pro buy at 74728.83
-- Recent trade failures: 2 SELL order failures due to insufficient funds
-
-RISK PARAMETERS:
-- No stop-loss triggers detected
-- No take-profit triggers detected
-- No critical drawdown indicators
-
-ERROR MONITORING:
-- CRITICAL: Continuous strategy errors every ~10 seconds
-  Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
-- This error has been ongoing for over 1 hour
-- Strategy generation system appears broken
+SYSTEM HEALTH:
+- Trading Bot: ❌ STOPPED (not running)
+- Dashboard Port: 54174 (active)
+- Strategy Engine: ⚠️ Continuous "str object has no attribute get" errors
+- Last Trade Activity: 04:45:54 (buy order, 37 minutes ago)
+- Bot Status: Shut down gracefully per logs
+- Critical Issue: Positions unmanaged
 
 ALERT STATUS:
-⚠️ WARNING: Strategy execution system malfunctioning
-⚠️ WARNING: Insufficient funds for sell orders
-⚠️ WARNING: Continuous error logging (noise pollution)
+- No critical alerts at this time
+- All positions within acceptable loss limits
+- Stop loss NOT triggered (0.20% vs 1% threshold)
 
 RECOMMENDATIONS:
-1. IMMEDIATE: Fix strategy generation system (AttributeError)
-2. Review capital allocation for sell orders
-3. Standardize model naming conventions (Gemini-Pro vs gemini-pro)
-4. Implement error throttling to reduce log noise
-5. Consider pausing trading until strategy errors resolved
+1. ⚠️ URGENT: Restart trading bot immediately - positions are unmanaged
+2. Investigate why bot shut down (graceful termination signal received)
+3. Monitor BTC positions closely - approaching 1% stop loss threshold
+4. Consider manual intervention if bot cannot be restarted quickly
 
-NEXT MONITORING CHECK: 10 minutes
+NEXT CHECK: 30 minutes
+==========================================[2026-03-18 05:24:43] Position Check - BTC: $74,514.00, Loss: -0.31%, Stop Loss: Not triggered
+TRADING DASHBOARD MONITORING SUMMARY
+==========================================
+Monitoring Time: 2026-03-18 05:28:57 (Asia/Bangkok)
+Dashboard URL: http://localhost:54174
+Dashboard Status: ✅ ACTIVE (Port 54174)
+
+TRADING BOT STATUS:
+- Trading Bot: ✅ RUNNING (Process ID: 8546)
+- Bot Script: crypto_trading_llm_live.py
+- Bot Status: RUNNING (per API)
+- Last Activity: 04:45:54 (43 minutes ago)
+
+PORTFOLIO ANALYSIS:
+- Total BTC Holdings: 0.00053507 BTC
+- Total Investment: $40.00
+- Current BTC Price: $74,463.00
+- Current Portfolio Value: $39.84
+- Total Loss: -$0.16 (-0.39%)
+- Stop Loss Threshold: 1% ($0.40 loss)
+- Stop Loss Triggered: ❌ NO
+
+ACTIVE TRADES (4 positions):
+1. Buy 0.00013374 BTC @ $74,770.04 (Gemini-Pro) - 04:45:54
+2. Buy 0.00013369 BTC @ $74,800.00 (Gemini-Pro) - 04:43:01  
+3. Buy 0.00013382 BTC @ $74,728.83 (gemini-pro) - 02:25:17
+4. Buy 0.00013382 BTC @ $74,728.83 (gemini-pro) - 02:24:56
+
+RISK PARAMETERS:
+- Capital: $10,000 (configured)
+- Trade Size: $10 (configured)
+- Stop Loss: 3% (configured)
+- Current Drawdown: 0.39% (within limits)
+
+ALERT STATUS:
+- Critical Alerts: 1 (Trading Bot Stopped - but now running)
+- Current Alert Level: ⚠️ WARNING (Previous bot stoppage detected)
+- Positions Unmanaged Risk: LOW (Bot is now running)
+
+SYSTEM HEALTH:
+- Dashboard API: ✅ RESPONSIVE
+- Trading Bot Process: ✅ ACTIVE
+- Log Files: ✅ UPDATING
+- Strategy Engine: ⚠️ ERRORS DETECTED ("str object has no attribute get")
+
+RECOMMENDATIONS:
+1. ✅ Trading bot is currently running (good)
+2. ⚠️ Investigate strategy engine errors in logs
+3. 📊 Monitor position loss approaching 0.5% threshold
+4. 🔄 Consider restarting bot if errors persist
+5. 📈 Next trade expected based on LLM strategy analysis
+
+NEXT CHECK: 30 minutes
+==========================================2026-03-18 05:29:31,153 - INFO - Found dashboard on port 61804
+2026-03-18 05:29:31,153 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
+2026-03-18 05:29:31,153 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
+2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:31,153 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:31,153 - INFO - Trading Log: 
+2026-03-18 05:29:31,153 - INFO - Status Update: Trading: running - Last update: 2026-03-18 05:29:31
+2026-03-18 05:29:31,153 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
+2026-03-18 05:29:59,609 - INFO - Found dashboard on port 61804
+2026-03-18 05:29:59,609 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
+2026-03-18 05:29:59,609 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
+2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:59,609 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 05:29:59,609 - INFO - Trading Log: 
+2026-03-18 05:29:59,609 - INFO - Status Update: Trading: running - Last update: 2026-03-18 05:29:59
+2026-03-18 05:29:59,609 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
