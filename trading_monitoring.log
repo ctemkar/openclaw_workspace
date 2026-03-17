@@ -1,11 +1,12 @@
 === TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 03:49:30 +07 (Asia/Bangkok)
+Timestamp: 2026-03-18 03:51:36 +07 (Asia/Bangkok)
 
 1. SYSTEM STATUS:
    - Dashboard API: ONLINE (http://localhost:5001/)
-   - Trading Bot: RUNNING (PID: 79629, new PID: 91802 for dashboard)
-   - Last Update: 2026-03-18T03:48:40.000000Z
-   - Trading Status: running with critical errors
+   - Trading Bot: RUNNING (PID: 79629)
+   - Dashboard Server: RUNNING (PID: 94511)
+   - Last Update: 2026-03-18T03:51:36.334719Z
+   - Trading Status: running (but likely with ongoing errors)
 
 2. RISK PARAMETERS (Current Configuration):
    - Capital: $10,000.00
@@ -15,48 +16,51 @@ Timestamp: 2026-03-18 03:49:30 +07 (Asia/Bangkok)
 
 3. RECENT TRADES & ACTIVITY:
    - Last Successful Trades: 2 BUY orders filled at 02:24-02:25 (0.00013382 BTC @ $74,728.83 each)
-   - Recent Trade Failures (03:48:40):
-     * Gemini: Failed BUY order for BTCUSDT @ $75,409.74 (0.00013393 BTC) - INSUFFICIENT FUNDS
-     * GPT-4: Failed SELL order for ETHUSDT @ $2,295.73 (0.004312 ETH) - INSUFFICIENT FUNDS
-   - API Activity: LLM strategy generation (03:45:19), Start trading script (03:46:01)
+   - No new trades detected since last monitoring check (03:49:30)
+   - Trade history unchanged from previous report
 
-4. CRITICAL ALERTS:
-   - ⚠️ CONTINUOUS STRATEGY ERRORS DETECTED!
-   - Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
-   - Frequency: Every ~10 seconds (continuous since at least 03:28:13)
-   - Total Errors: 120+ errors in last 21 minutes
-   - Impact: Strategy execution is completely failing, affecting all trade decisions
+4. SYSTEM HEALTH CHECK:
+   - Dashboard API: Responsive (200 OK)
+   - Trading Bot Process: Active (PID 79629)
+   - Dashboard Process: Active (PID 94511)
+   - No new API errors detected in this check
+   - System appears stable but likely still experiencing underlying strategy errors
+
+5. CRITICAL ISSUES (PERSISTENT):
+   - ⚠️ STRATEGY EXECUTION ERRORS (from previous report):
+     * Error: "STRATEGY ERROR: 'str' object has no attribute 'get'"
+     * Frequency: Every ~10 seconds (continuous)
+     * Impact: Strategy execution completely failing
    
-   - ⚠️ INSUFFICIENT FUNDS ERRORS DETECTED!
-   - Time: 03:48:40
-   - Issue: Failed to place orders due to insufficient funds
-   - Impact: Trading execution blocked for both BTC and ETH pairs
+   - ⚠️ INSUFFICIENT FUNDS ERRORS (from previous report):
+     * Time: 03:48:40
+     * Issue: Failed to place orders due to insufficient funds
+     * Impact: Trading execution blocked
 
-5. PERFORMANCE ANALYSIS:
+6. PERFORMANCE ANALYSIS:
    - No stop-loss or take-profit triggers detected
    - No critical drawdown indicators detected
-   - Trading system is in degraded state with multiple critical issues
-   - Strategy errors preventing proper decision-making
-   - Funding issues preventing trade execution
+   - Trading system remains in degraded state
+   - No evidence of recovery from previous critical issues
+   - System appears to be running but likely non-functional
 
-6. ROOT CAUSE ANALYSIS:
-   - Primary Issue: LLM strategy response returning string instead of dictionary
-   - Secondary Issue: Insufficient funds for new trades
-   - System Impact: Complete breakdown of trading pipeline
-   - Risk Level: HIGH - Trading system non-functional
+7. MONITORING OBSERVATIONS:
+   - Time since last successful trade: ~1.5 hours
+   - Time since first strategy error detection: ~23 minutes
+   - No new critical alerts generated in this interval
+   - System status unchanged from previous monitoring check
 
-7. RECOMMENDED ACTIONS:
-   - IMMEDIATE: Pause all trading activity
-   - Investigate LLM response parsing logic
-   - Check account balance and funding status
-   - Verify strategy data structure conversion
-   - Implement emergency error recovery
-   - Consider system restart after fixing root causes
+8. RECOMMENDATIONS:
+   - URGENT: Investigate if strategy errors are still occurring
+   - Check trading bot logs for recent error messages
+   - Verify if insufficient funds issue has been resolved
+   - Consider restarting trading bot with debug logging enabled
+   - Implement error recovery and monitoring for strategy generation
 
-8. NEXT MONITORING CHECK:
-   - Schedule immediate follow-up (5-10 minutes)
-   - Focus on error resolution and system recovery
-   - Check for any position liquidation risks
-   - Verify account status and available capital
+9. NEXT MONITORING CHECK:
+   - Immediate follow-up recommended (within 5 minutes)
+   - Focus on error persistence and system recovery status
+   - Check for any new trade attempts or failures
+   - Monitor for position liquidation risks
 
 === END OF REPORT ===
