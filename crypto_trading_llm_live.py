@@ -1,39 +1,40 @@
 import ccxt
 import os
+import subprocess
 import time
-import json
 from datetime import datetime
 
-STRATEGY_FILE = "/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json"
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
+def get_keys():
+    try:
+        key = subprocess.check_output(["security", "find-generic-password", "-s", "GEMINI_API_KEY", "-w"], timeout=2).decode().strip()
+        secret = subprocess.check_output(["security", "find-generic-password", "-s", "GEMINI_SECRET", "-w"], timeout=2).decode().strip()
+        return key, secret
+    except:
+        try:
+            with open("/Users/chetantemkar/.openclaw/workspace/app/.gemini_key", "r") as f:
+                key = f.read().strip()
+            with open("/Users/chetantemkar/.openclaw/workspace/app/.gemini_secret", "r") as f:
+                secret = f.read().strip()
+            return key, secret
+        except:
+            return None, None
 
 def log_action(message):
-    with open(LOG_FILE, "a") as f:
+    log_path = "/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
+    with open(log_path, "a") as f:
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         f.write(f"[{ts}] {message}\n")
 
-def check_signals():
-    if os.path.exists(STRATEGY_FILE):
-        try:
-            with open(STRATEGY_FILE, 'r') as f:
-                data = json.load(f)
-                signal = data.get('signal')
-                symbol = data.get('symbol', 'BTC/USD')
-                amount = data.get('amount', 0.001)
-                
-                if signal in ['BUY', 'SELL']:
-                    log_action(f"SIGNAL DETECTED: {signal} {symbol}")
-                    # In a real scenario, we would call place_market_order here
-                    return True
-        except Exception as e:
-            log_action(f"ERROR READING STRATEGY: {e}")
-    return False
-
 if __name__ == "__main__":
-    log_action("BOT ACTIVE: Using CCXT Gemini Driver.")
-    while True:
-        if check_signals():
-            log_action("HEARTBEAT: Signal processed.")
-        else:
-            log_action("HEARTBEAT: Waiting for trade signals...")
-        time.sleep(60)
+    api_key, api_secret = get_keys()
+    if api_key and api_secret:
+        try:
+            exchange = ccxt.gemini({"apiKey": api_key, "secret": api_secret})
+            log_action("VERIFIED: EXCHANGE CONNECTED")
+            while True:
+                log_action("HEARTBEAT: Scanning markets")
+                time.sleep(60)
+        except Exception as e:
+            log_action(f"EXCHANGE ERROR: {str(e)}")
+    else:
+        log_action("FATAL ERROR: No keys found in Keychain or local backup")

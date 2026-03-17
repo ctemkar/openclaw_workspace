@@ -1,1 +1,1 @@
- 1. Fetch data from http://localhost:5001/. 2. Parse trading logs, status updates, and risk parameters (capital, stop loss, take profit). 3. Log extracted data to /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log. 4. Alert if any stop-loss or take-profit is triggered, or if drawdown indicators appear critical. 5. Save critical data to /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log.
+# Critical Trading Alerts\n# Date: 2026-03-17\n\n# Critical Alerts Log:\n# - [Timestamp]: [Details of critical alert]\n
