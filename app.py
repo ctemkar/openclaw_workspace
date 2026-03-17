@@ -26,7 +26,7 @@ COMPLETED_TRADES_FILE = "/Users/chetantemkar/.openclaw/workspace/app/completed_t
 def log_action(message):
     with open(LOG_FILE, "a") as f:
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        f.f.write(f"[{ts}] {message}\n")
+        f.write(f"[{ts}] {message}\n")
 
 def update_task_statuses():
     while True:
@@ -63,7 +63,29 @@ def get_trading_progress():
 
 @api_bp.route('/llm/strategies')
 def get_llm_strategies():
-    return jsonify(MOCK_LLM_STRATEGIES) # Returning mock strategies
+    strategies = []
+    if os.path.exists(STRATEGY_FILE):
+        try:
+            with open(STRATEGY_FILE, "r") as f:
+                data = json.load(f)
+                # Convert the strategy dictionary to a list format for the dashboard
+                for model_name, strategy_data in data.items():
+                    strategy = {
+                        "strategy_name": f"{model_name} Strategy",
+                        "symbol": strategy_data.get("symbol", "Unknown"),
+                        "llm_provider": model_name.split("-")[0] if "-" in model_name else model_name,
+                        "model": model_name,
+                        "description": f"{strategy_data.get('signal', 'UNKNOWN')} signal for {strategy_data.get('symbol', 'Unknown')}",
+                        "profit_rationale": "Based on LLM analysis",
+                        "risk_parameters": {"stop_loss_pct": 0.01, "take_profit_pct": 0.02},
+                        "buy_signal_details": strategy_data.get("signal") if strategy_data.get("signal") == "BUY" else "",
+                        "sell_signal_details": strategy_data.get("signal") if strategy_data.get("signal") == "SELL" else ""
+                    }
+                    strategies.append(strategy)
+        except json.JSONDecodeError:
+            log_action("ERROR decoding llm_strategies.json")
+            strategies = []
+    return jsonify(strategies)
 
 @api_bp.route('/trading/configure', methods=['GET', 'POST', 'PUT'])
 def configure_trading():
@@ -154,7 +176,7 @@ def generate_llm_strategies():
 
 @app.route('/')
 def home():
-    return send_from_directory('static', 'index.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

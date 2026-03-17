@@ -1,85 +1,3 @@
-[2026-03-18 01:25:44] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:25:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:25:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:14] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:26:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:44] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:26:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:14] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:27:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:44] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:27:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:14] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:28:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:44] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:28:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:14] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:29:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:44] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:29:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:14] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:30:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:45] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:30:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:15] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:31:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:45] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:31:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:15] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:32:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:45] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:46] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:32:55] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:33:15] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:33:16] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:33:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:33:25] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:33:45] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:33:47] HEARTBEAT: Waiting for trade signals...
-[2026-03-18 01:34:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:35:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:36:17] HEARTBEAT: Scanning markets
-[2026-03-18 01:37:18] BOT STARTING: Monitoring for Model Strategies
-[2026-03-18 01:37:18] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:37:28] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:37:38] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:37:48] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:37:58] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:08] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:18] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:28] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:38] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:48] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:38:58] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:08] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:18] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:28] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:38] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:48] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:39:59] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:40:09] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:40:19] STRATEGY ERROR: 'str' object has no attribute 'get'
-[2026-03-18 01:40:29] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 01:40:39] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 01:40:49] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 01:40:59] STRATEGY ERROR: 'str' object has no attribute 'get'
@@ -101,3 +19,85 @@
 [2026-03-18 01:43:39] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 01:43:49] STRATEGY ERROR: 'str' object has no attribute 'get'
 [2026-03-18 01:43:59] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:44:09] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:44:19] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:44:29] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:44:40] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:44:50] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:00] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:10] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:20] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:30] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:40] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:45:50] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:00] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:10] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:20] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:30] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:40] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:46:50] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:00] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:10] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:20] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:30] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:40] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:47:50] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:00] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:10] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:20] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:30] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:40] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:48:50] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:00] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:10] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:20] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:49:51] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:01] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:11] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:21] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:50:51] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:01] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:11] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:21] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:51:51] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:01] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:11] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:21] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:52:51] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:01] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:03] API: Received request to start trading script.
+[2026-03-18 01:53:11] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:21] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:31] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:41] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:53:54] API: Received request to generate LLM strategies.
+[2026-03-18 01:54:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:03] API: Received request to generate LLM strategies.
+[2026-03-18 01:54:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:32] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:42] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:54:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:32] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:42] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:55:52] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:02] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:12] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:22] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:56:36] TRADE FAILURE (Gemini): gemini Failed to place buy order on symbol 'BTCUSDT' for price 75,008.11 USDT and quantity 0.00013465 BTC due to insufficient funds
+[2026-03-18 01:56:37] TRADE FAILURE (GPT-4): gemini Failed to place sell order on symbol 'ETHUSDT' for price 2,311.51 USDT and quantity 0.004282 ETH due to insufficient funds
+[2026-03-18 01:57:17] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:27] STRATEGY ERROR: 'str' object has no attribute 'get'
+[2026-03-18 01:57:37] STRATEGY ERROR: 'str' object has no attribute 'get'
