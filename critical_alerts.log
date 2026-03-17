@@ -1,21 +1,10 @@
-[2026-03-18 05:23:00] CRITICAL - TRADING BOT STOPPED
-[2026-03-18 05:23:00] CRITICAL - Trading bot process is not running
-[2026-03-18 05:23:00] CRITICAL - Last log entry shows: "Received termination signal, shutting down gracefully..."
-[2026-03-18 05:23:00] CRITICAL - Active positions remain open (4 BTC trades)
-[2026-03-18 05:23:00] CRITICAL - No active trading bot to manage positions or execute stop losses
-[2026-03-18 05:23:00] CRITICAL - Immediate action required: Restart trading bot or manually manage positions
-[2026-03-18 05:23:00] CRITICAL - Current portfolio status:
-  - Total Investment: $298,971.70
-  - Current Value: $298,376.00  
-  - Total Loss: -$595.70 (-0.20%)
-  - Stop Loss Threshold: 1% (NOT triggered yet)
-[2026-03-18 05:23:00] CRITICAL - 🚨 TRADING SYSTEM OFFLINE - POSITIONS UNMANAGED
-[2026-03-18 05:29:48] Position Check - BTC: $74463.00, Loss: -0.39%, Stop Loss: Not triggered
-[2026-03-18 05:34:01] WARNING - TRADING BOT IN RESTART LOOP
-[2026-03-18 05:34:01] WARNING - Bot process (PID 8546) is running but showing restart behavior
-[2026-03-18 05:34:01] WARNING - Multiple "BOT STARTING" entries in logs (05:18:45, 05:19:50, 05:20:08, 05:21:00)
-[2026-03-18 05:34:01] WARNING - No new trades executed in last 48 minutes
-[2026-03-18 05:34:01] WARNING - API shows bot as "RUNNING" but may not be trading
-[2026-03-18 05:34:01] WARNING - Positions require monitoring: 4 BTC trades, -0.20% loss
-[2026-03-18 05:34:01] WARNING - Stop loss threshold: 1% (NOT triggered yet)
-[2026-03-18 05:34:01] WARNING - Immediate investigation needed for bot stability
+[2026-03-18 05:58:45] WARNING - LOSS APPROACHING STOP LOSS THRESHOLD
+[2026-03-18 05:58:45] WARNING - Current portfolio loss: -0.65%
+[2026-03-18 05:58:45] WARNING - Distance to 1% stop loss: 0.35%
+[2026-03-18 05:58:45] WARNING - Distance to 3% stop loss: 2.35%
+[2026-03-18 05:58:45] WARNING - Loss trend: Increasing (was -0.31% at 05:23)
+[2026-03-18 05:58:45] WARNING - BTC price decline: $74,594 → $74,258 (-0.45%)
+[2026-03-18 05:58:45] WARNING - Stop loss threshold confusion: API shows 3%, analyze script uses 1%
+[2026-03-18 05:58:45] WARNING - Trading bot status: Running but received termination signal
+[2026-03-18 05:58:45] WARNING - Recommendation: Clarify stop loss threshold and monitor closely
+[2026-03-18 05:58:45] WARNING - Next check: 15 minutes (or if loss reaches 0.85%)
