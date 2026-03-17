@@ -1,38 +1,82 @@
-2026-03-18 04:19:43 - INFO - TRADING DASHBOARD MONITORING REPORT
+2026-03-18 04:27:00 - INFO - TRADING DASHBOARD MONITORING REPORT
 ===========================================================
-TIMESTAMP: 2026-03-18 04:19:43 (Asia/Bangkok)
-DASHBOARD STATUS: Online on port 54213
-TRADING BOT STATUS: Running with errors (strategy parsing failure)
+TIMESTAMP: 2026-03-18 04:27:00 (Asia/Bangkok)
+DASHBOARD STATUS: Online on port 59137
+TRADING BOT STATUS: NOT RUNNING (process not detected)
 
-CURRENT TRADES:
+CURRENT POSITIONS:
 - Total trades recorded: 2
-- Last trade: 02:25:17 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) via gemini-pro
-- Previous trade: 02:24:56 - BUY BTC/USD at $74,728.83 (0.00013382 BTC) via gemini-pro
-- Both trades show "filled" status
+- Both trades: BUY BTC/USD at $74,728.83 (0.00013382 BTC each)
+- Total BTC position: 0.00026763 BTC (~$19.98 at current prices)
+- Trade 1: 02:25:17 - BUY via gemini-pro (filled)
+- Trade 2: 02:24:56 - BUY via gemini-pro (filled)
 
-TRADING PARAMETERS:
-- Trade Size: $10.00 per trade
-- Exchange: Gemini
-- Strategy Source: llm_strategies.json
-- Current Strategy File: Contains initialization message only
+CURRENT MARKET PRICES (Coingecko API):
+- BTC/USD: $74,625.00 (-0.14% from entry)
+- ETH/USD: $2,338.28
+- SOL/USD: $95.18
 
-RISK ASSESSMENT:
-- No stop-loss or take-profit parameters configured in current bot
-- All trades are market orders with 1% slippage buffer
-- No position sizing or risk management rules detected
-- Total exposure: ~$20.00 across 2 trades
+POSITION ANALYSIS:
+- Entry Price: $74,728.83
+- Current Price: $74,625.00
+- Drawdown: 0.14% (-$103.83 per BTC)
+- Current Loss: ~$0.28 on $20 position
+- Stop Loss (Strategy): 5.0% at $70,992.39
+- Take Profit (Strategy): 10.0% at $82,201.71
+- Stop Loss (Global Config): 1.0% at $73,981.54
+- Take Profit (Global Config): 2.0% at $76,223.41
+
+RISK PARAMETERS (from trading_config.json):
+- Capital: $1,000.00
+- Trade Size: $100.00 per trade
+- Global Stop Loss: 1.0%
+- Global Take Profit: 2.0%
+
+STRATEGY STATUS:
+- Current strategy file (llm_strategies.json): MALFORMED - contains string instead of dictionary
+- Bot is using backup: llm_strategies_20260316_001850.json
+- Strategy contains 5 models with different risk parameters
+- Last strategy update: 2026-03-16 00:18:50
+
+SYSTEM STATUS:
+- Dashboard: RUNNING (port 59137)
+- Trading Bot: NOT RUNNING (process not detected)
+- Strategy Generation: BROKEN (malformed JSON)
+- Risk Management: ACTIVE (global 1% stop-loss, 2% take-profit)
 
 ALERTS:
-- CRITICAL: Trading bot cannot parse strategy file (JSON format error)
-- WARNING: No active risk management parameters (stop-loss, take-profit)
-- WARNING: Strategy file contains only initialization message (string instead of dict)
-- WARNING: Both recent trades are BUY signals at same price level
+- CRITICAL: Trading bot process is not running
+- CRITICAL: Strategy generation system broken (llm_strategies.json malformed)
+- WARNING: Current BTC position at 0.14% drawdown
+- WARNING: Global stop-loss (1%) would trigger at $73,981.54 (1.0% below entry)
+- INFO: Strategy stop-loss (5%) at $70,992.39 (5.0% below entry)
 
-RECOMMENDATIONS:
-1. Fix llm_strategies.json format - should be dictionary, not string
-2. Implement proper risk management parameters
-3. Verify LLM strategy generation API is working correctly
-4. Consider diversifying trade signals beyond gemini-pro model
-5. Add error handling for malformed strategy files
+CRITICAL RISK ASSESSMENT:
+1. NO ACTIVE TRADING: Bot process is not running
+2. STRATEGY GENERATION BROKEN: Cannot generate new strategies
+3. EXISTING POSITIONS: Small drawdown (0.14%), not near stop-loss
+4. NO NEW TRADES: Bot inactivity prevents new positions
 
-NEXT CHECK: Scheduled for next cron run
+IMMEDIATE ACTIONS REQUIRED:
+1. RESTART TRADING BOT: Process is not running
+2. FIX STRATEGY GENERATION: llm_strategies.json needs proper dictionary format
+3. MONITOR EXISTING POSITIONS: Watch for stop-loss triggers
+4. VERIFY API CONNECTIONS: Ensure price feeds and exchange connectivity
+
+NEXT CHECK: Scheduled for next cron run2026-03-18 04:31:53,069 - ERROR - Failed to fetch data from dashboard: 404 Client Error: NOT FOUND for url: http://localhost:60001/api/trading/logs
+2026-03-18 04:33:03,505 - INFO - Fetched data: Capital=$1000.0, StopLoss=1.0%, TakeProfit=2.0%, TradeSize=$100.0
+2026-03-18 04:33:03,505 - INFO - Bot Status: stopped
+2026-03-18 04:33:03,505 - INFO - Completed Trades: 2
+2026-03-18 04:33:03,505 - INFO - Trading Log: Current price for BTC/USD: 74009.70
+2026-03-18 04:33:03,505 - INFO - Trading Log: Buy conditions not met for 'Gemini_Momentum_Strategy' on BTC/USD or insufficient funds for trade size 10.00$. Current price condition not met: 74009.7 > 73269.603.
+2026-03-18 04:33:03,505 - INFO - Trading Log: Executing trade logic for ETH/USD using strategy: 'Claude_Sentiment_Strategy'...
+2026-03-18 04:33:03,505 - INFO - Trading Log: Current price for ETH/USD: 2267.06
+2026-03-18 04:33:03,505 - INFO - Trading Log: Buy conditions not met for 'Claude_Sentiment_Strategy' on ETH/USD or insufficient funds for trade size 10.00$. Current price condition not met: 2267.06 > 2244.3894.
+2026-03-18 04:33:03,505 - INFO - Trading Log: Executing trade logic for SOL/USD using strategy: 'OpenAI_Volatility_Strategy'...
+2026-03-18 04:33:03,505 - INFO - Trading Log: Current price for SOL/USD: 94.10
+2026-03-18 04:33:03,505 - INFO - Trading Log: Buy conditions not met for 'OpenAI_Volatility_Strategy' on SOL/USD or insufficient funds for trade size 10.00$. Current price condition not met: 94.1 > 93.15899999999999.
+2026-03-18 04:33:03,505 - INFO - Trading Log: Trade cycle finished. Sleeping for 5 minutes.
+2026-03-18 04:33:03,505 - INFO - Trading Log: Received termination signal, shutting down gracefully...
+2026-03-18 04:33:03,505 - WARNING - TRADING BOT IS STOPPED. No active trading processes detected.
+2026-03-18 04:33:03,505 - INFO - Stop loss threshold: $990.00, Take profit threshold: $1020.00
+2026-03-18 04:38:48,085 - ERROR - Failed to fetch data from dashboard: 404 Client Error: NOT FOUND for url: http://localhost:61804/api/trading/logs

@@ -1,32 +1,48 @@
-2026-03-18 04:19:43 - CRITICAL - TRADING BOT ERROR - STRATEGY PARSING FAILURE
+2026-03-18 04:27:00 - CRITICAL - TRADING BOT PROCESS NOT RUNNING
 =============================================================================
-ALERT: Trading bot is running but cannot parse strategy file
-IMPACT: No new trades will be executed despite bot being active
-TIME DETECTED: 2026-03-18 04:19:43 (Asia/Bangkok)
+ALERT: Trading bot process is not detected on the system
+IMPACT: No new trades will be executed, existing positions not monitored
+TIME DETECTED: 2026-03-18 04:27:00 (Asia/Bangkok)
 
 DETAILS:
-- Dashboard is online (port 54213)
-- Last trades recorded at 02:25:17 and 02:24:56
-- Bot process IS running but encountering errors
-- Error: 'str' object has no attribute 'get' (JSON parsing issue)
-- Strategy file contains: {"strategy": "initialize", "message": "Waiting for AI signals..."}
-- Bot expects dictionary of models but receives string
+- Dashboard is online (port 59137)
+- Last trades executed at 02:25:17 and 02:24:56
+- Bot process NOT detected via process monitoring
+- Progress monitor shows: "BOT: [WARN] NOT DETECTED"
+- No active Python trading bot processes found
+
+EXISTING POSITIONS:
+- 2 BTC buy positions at $74,728.83 each
+- Current BTC price: $74,625.00
+- Drawdown: 0.14% (-$0.28 on $20 position)
+- Stop-loss levels:
+  * Global (1%): $73,981.54 (0.99% away from current)
+  * Strategy (5%): $70,992.39 (4.86% away from current)
 
 ROOT CAUSE:
-- llm_strategies.json contains a string instead of proper JSON dictionary
-- Bot tries to call .get() on string, causing AttributeError
-- This prevents any new trades from being executed
+- Bot may have terminated due to errors or system issues
+- Last log entry shows "Received termination signal, shutting down gracefully..."
+- Strategy file format issue may have caused bot to exit
+- No automatic restart mechanism detected
 
 IMMEDIATE ACTION REQUIRED:
-1. Fix llm_strategies.json format - should be dictionary, not string
-2. Verify LLM strategy generation is producing correct format
-3. Check if strategy generation API endpoint is working
-4. Consider implementing error recovery for malformed strategy files
+1. RESTART TRADING BOT: Manual intervention needed to restart bot process
+2. VERIFY STRATEGY FILES: Ensure llm_strategies.json has correct format
+3. IMPLEMENT PROCESS MONITORING: Add auto-restart for bot crashes
+4. CHECK SYSTEM RESOURCES: Ensure sufficient memory/CPU for bot operation
 
 ADDITIONAL RISK FACTORS:
-- No stop-loss protection active
-- No take-profit targets set
-- Strategy generation system appears broken
-- All recent trades are BUY signals at same price level
+- Existing positions not actively monitored for stop-loss triggers
+- No new trading opportunities being evaluated
+- Market conditions changing without bot response
+- Potential missed profit opportunities
 
-FOLLOW-UP: Monitor next cron cycle for strategy file correction
+FOLLOW-UP:
+- Monitor for bot process restart
+- Check logs for termination reason
+- Verify strategy generation system
+- Consider implementing supervisor/process manager
+
+PREVIOUS ALERTS STILL ACTIVE:
+- Strategy generation system broken (llm_strategies.json malformed)
+- Bot was running with errors (strategy parsing failure)2026-03-18 04:33:03,505 - WARNING - TRADING BOT IS STOPPED. No active trading processes detected.

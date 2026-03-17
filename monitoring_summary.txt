@@ -1,73 +1,38 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-18 03:29:56 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+TIMESTAMP: 2026-03-18 04:27:00 (Asia/Bangkok)
 
-=== EXECUTIVE SUMMARY ===
-❌ CRITICAL ALERTS DETECTED: 3
-⚠️  Trading system has severe issues requiring immediate attention
+SYSTEM STATUS:
+✅ Dashboard: RUNNING (port 59137)
+❌ Trading Bot: NOT RUNNING (critical)
+⚠️ Strategy Generation: BROKEN (malformed JSON)
+✅ Risk Parameters: CONFIGURED
 
-=== KEY FINDINGS ===
+POSITIONS:
+- Total Trades: 2
+- Asset: BTC/USD
+- Entry Price: $74,728.83
+- Current Price: $74,625.00
+- Drawdown: 0.14%
+- Position Size: ~$20.00
+- Current P&L: -$0.28
 
-1. STOP-LOSS TRIGGERS (CRITICAL)
-   - Both active trades have triggered stop-loss conditions
-   - Trade 1 (02:24:56): P&L -44.67% (threshold: -1.0%)
-   - Trade 2 (02:25:17): P&L -44.67% (threshold: -1.0%)
-   - Action Required: Execute stop-loss orders immediately
+RISK LEVELS:
+- Global Stop-Loss: 1.0% ($73,981.54)
+- Strategy Stop-Loss: 5.0% ($70,992.39)
+- Global Take-Profit: 2.0% ($76,223.41)
+- Strategy Take-Profit: 10.0% ($82,201.71)
 
-2. CRITICAL DRAWDOWN (CRITICAL)
-   - Total portfolio loss: -44.67%
-   - Exceeds critical threshold of 5% by 39.67%
-   - Action Required: Emergency portfolio review and risk management
+ALERTS:
+🔴 CRITICAL: Trading bot process not running
+🔴 CRITICAL: Strategy generation system broken
+🟡 WARNING: Small drawdown (0.14%) on positions
+🟢 INFO: No stop-loss or take-profit triggers
 
-3. SYSTEM STATUS
-   - Dashboard: Running but with outdated data
-   - BTC Price Discrepancy: API shows $41,346.80 vs previous $74,512.00
-   - This suggests potential data source issues
+RECOMMENDATIONS:
+1. IMMEDIATE: Restart trading bot process
+2. HIGH: Fix llm_strategies.json format
+3. MEDIUM: Implement process monitoring/auto-restart
+4. LOW: Review strategy risk parameters
 
-=== TRADE ANALYSIS ===
-Active Trades: 2
-Total Investment: $20.00
-Current Value: $11.07
-Total Loss: $-8.93 (-44.67%)
-
-=== CONFIGURATION STATUS ===
-Capital: $10,000.00
-Stop Loss: 1.0% (NOT BEING ENFORCED)
-Take Profit: 2.0%
-Trade Size: $10.00
-
-=== MARKET DATA ===
-BTC/USDT: $41,346.80
-ETH/USDT: $2,902.12
-SOL/USDT: $102.39
-
-=== RECOMMENDATIONS ===
-
-IMMEDIATE ACTIONS (CRITICAL):
-1. Execute stop-loss orders for both trades immediately
-2. Pause all trading activity
-3. Investigate data source discrepancies (BTC price difference)
-4. Review why stop-loss triggers weren't executed automatically
-
-SHORT-TERM ACTIONS:
-1. Audit trading strategy implementation
-2. Fix strategy execution errors (continuous 'str' object errors)
-3. Implement proper risk management safeguards
-4. Verify exchange connectivity and order execution
-
-LONG-TERM ACTIONS:
-1. Add circuit breakers for extreme drawdowns
-2. Implement multi-source price verification
-3. Add automated alerting for strategy failures
-4. Regular stress testing of risk parameters
-
-=== MONITORING COMPLETED ===
-- Data fetched from http://localhost:5001/
-- Trading logs parsed and analyzed
-- Risk parameters checked
-- Critical alerts logged to critical_alerts.log
-- Monitoring data logged to trading_monitoring.log
-
-=== NEXT STEPS ===
-1. User should review critical_alerts.log for details
-2. Immediate intervention required to prevent further losses
-3. Consider system restart after addressing critical issues
+NEXT CHECK: Awaiting bot restart and strategy fix
