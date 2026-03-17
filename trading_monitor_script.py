@@ -2,69 +2,108 @@ import requests
 import json
 from datetime import datetime
 
-LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
-CRITICAL_ALERTS_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
-DATA_URL = 'http://localhost:5001/'
+URL = "http://localhost:5001/"
+TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 
-def log_message(message, log_file=LOG_FILE):
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    with open(log_file, 'a') as f:
-        f.write(f"[{timestamp}] {message}\\n")
+# Define thresholds (these are example values and might need adjustment)
+CRITICAL_DRAWDOWN_THRESHOLD = 0.10  # 10%
+# Note: Detecting if stop-loss/take-profit are *triggered* would require specific
+# data in the API response (e.g., a 'status' field on orders).
+# For now, we'll just log the presence of such orders as a potential alert.
+STOP_LOSS_ORDER_PRESENT = False 
+TAKE_PROFIT_ORDER_PRESENT = False
 
-def fetch_and_parse_data():
+def fetch_data(url):
     try:
-        response = requests.get(DATA_URL)
+        response = requests.get(url, timeout=10)
         response.raise_for_status()  # Raise an exception for bad status codes
-        data = response.json()
-        log_message("Successfully fetched data.")
-        return data
-    except requests.exceptions.RequestException as e:
-        log_message(f"Error fetching data from {DATA_URL}: {e}")
-        return None
+        return response.json()
+    except requests.exceptions.ConnectionError:
+        return {"error": "Could not connect to the trading dashboard."}
     except json.JSONDecodeError:
-        log_message(f"Error decoding JSON response from {DATA_URL}")
-        return None
+        return {"error": "Invalid JSON response from the trading dashboard."}
+    except requests.exceptions.RequestException as e:
+        return {"error": f"An error occurred: {e}"}
 
-def analyze_data(data):
-    if not data:
-        return
+def log_data(data, log_path):
+    try:
+        with open(log_path, "a") as f:
+            timestamp = datetime.now().isoformat()
+            f.write(f"--- Log entry at: {timestamp} ---\n")
+            json.dump(data, f, indent=2)
+            f.write("\n\n")
+    except IOError as e:
+        print(f"Error writing to log file {log_path}: {e}")
 
-    # Log all extracted data
-    log_message(f"Trading Logs: {data.get('trading_logs', 'N/A')}")
-    log_message(f"Status Updates: {data.get('status_updates', 'N/A')}")
-    log_message(f"Capital: {data.get('risk_parameters', {}).get('capital', 'N/A')}")
-    log_message(f"Stop Loss: {data.get('risk_parameters', {}).get('stop_loss', 'N/A')}")
-    log_message(f"Take Profit: {data.get('risk_parameters', {}).get('take_profit', 'N/A')}")
-    log_message(f"Drawdown Indicators: {data.get('risk_parameters', {}).get('drawdown_indicators', 'N/A')}")
+def log_alert(alert_message, log_path):
+    try:
+        with open(log_path, "a") as f:
+            timestamp = datetime.now().isoformat()
+            f.write(f"ALERT at {timestamp}: {alert_message}\n")
+    except IOError as e:
+        print(f"Error writing to alert log file {log_path}: {e}")
 
-    critical_alerts = []
-    risk_parameters = data.get('risk_parameters', {})
+def analyze_and_summarize(data):
+    summary_lines = []
+    alert_messages = []
 
-    # Check for triggered stop-loss or take-profit
-    if risk_parameters.get('stop_loss_triggered'):
-        alert_msg = "CRITICAL ALERT: Stop-loss triggered!"
-        critical_alerts.append(alert_msg)
-        log_message(alert_msg, CRITICAL_ALERTS_FILE)
+    if "error" in data:
+        alert_messages.append(f"Monitoring failed: {data['error']}")
+        summary_lines.append(f"Monitoring failed: {data['error']}")
+        return "\n".join(summary_lines), "\n".join(alert_messages)
 
-    if risk_parameters.get('take_profit_triggered'):
-        alert_msg = "CRITICAL ALERT: Take-profit triggered!"
-        critical_alerts.append(alert_msg)
-        log_message(alert_msg, CRITICAL_ALERTS_FILE)
+    # Log all fetched data to the general monitoring log
+    log_data(data, TRADING_LOG_PATH)
 
-    # Check for critical drawdown indicators
-    drawdown = risk_parameters.get('drawdown_indicators')
-    if drawdown and drawdown.get('critical'): # Assuming 'critical' is a boolean or a threshold check
-        alert_msg = f"CRITICAL ALERT: Drawdown indicators are critical: {drawdown.get('value', 'N/A')}"
-        critical_alerts.append(alert_msg)
-        log_message(alert_msg, CRITICAL_ALERTS_FILE)
+    # Extract and check for critical drawdown
+    current_drawdown = data.get("current_drawdown", 0)
+    if current_drawdown > CRITICAL_DRAWDOWN_THRESHOLD:
+        alert_msg = f"CRITICAL DRAWDOWN DETECTED: {current_drawdown*100:.2f}% (Threshold: {CRITICAL_DRAWDOWN_THRESHOLD*100:.2f}%)"
+        alert_messages.append(alert_msg)
+        summary_lines.append(alert_msg)
 
-    if critical_alerts:
-        log_message("Critical alerts detected and logged.")
-    else:
-        log_message("No critical alerts detected.")
+    # Check for presence of stop-loss/take-profit orders
+    open_orders = data.get("open_orders", [])
+    has_stop_loss = any(order.get("type") == "stop-loss" for order in open_orders)
+    has_take_profit = any(order.get("type") == "take-profit" for order in open_orders)
+
+    if has_stop_loss:
+        alert_msg = "Stop-loss order is active."
+        alert_messages.append(alert_msg)
+        summary_lines.append(alert_msg)
+        
+    if has_take_profit:
+        alert_msg = "Take-profit order is active."
+        alert_messages.append(alert_msg)
+        summary_lines.append(alert_msg)
+
+    # Log any identified alerts to the critical alerts log
+    for alert in alert_messages:
+        log_alert(alert, CRITICAL_ALERTS_PATH)
+
+    # Construct the plain text summary
+    summary_lines.append(f"Trading Dashboard Monitored at {datetime.now().isoformat()}")
+    summary_lines.append(f"Trading Logs Processed: {len(data.get('trading_logs', []))}")
+    summary_lines.append(f"Status Updates Found: {len(data.get('status_updates', []))}")
+    
+    risk_params = data.get("risk_parameters")
+    if risk_params:
+        summary_lines.append(f"Current Risk Parameters: {risk_params}")
+
+    if not alert_messages:
+        summary_lines.append("No critical alerts detected.")
+
+    return "\n".join(summary_lines)
 
 if __name__ == "__main__":
-    log_message("Starting trading monitoring task.")
-    trading_data = fetch_and_parse_data()
-    analyze_data(trading_data)
-    log_message("Trading monitoring task finished.")
+    print("Starting trading dashboard monitoring script...")
+    dashboard_data = fetch_data(URL)
+    report_summary = analyze_and_summarize(dashboard_data)
+    print("Monitoring complete. Summary generated.")
+    # The summary is *returned* here, which is what the 'agentTurn' task should capture.
+    # The cron tool, when configured with announce delivery, will automatically send this summary.
+    # We explicitly print it for potential direct execution/debugging visibility.
+    print("\n--- Summary ---")
+    print(report_summary)
+    print("---------------")
