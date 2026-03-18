@@ -50,7 +50,8 @@ def fetch_data():
         # Try each port
         for port in ports_to_try:
             try:
-                test_url = f"http://localhost:{port}/api/status/all"
+                # Try the trading progress endpoint first
+                test_url = f"http://localhost:{port}/api/trading/progress"
                 response = requests.get(test_url, timeout=5)
                 if response.status_code == 200:
                     # Try to parse as JSON

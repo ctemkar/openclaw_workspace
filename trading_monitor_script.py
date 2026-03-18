@@ -1,78 +1,58 @@
-
-import os
 import requests
 import json
-
-    PORT = "5001"  # Fallback
-except:
-        PORT = f.read().strip()
-    with open(".active_port", "r") as f:
-try:
-# Read current port from .active_port file
-
 from datetime import datetime
 
 TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-SOURCE_URL = f"http://localhost:{PORT}/"
+CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_DASHBOARD_URL = "http://localhost:5001/"
 
-def fetch_and_analyze_trading_data():
+def log_message(message, file_path):
+    timestamp = datetime.now().isoformat()
+    with open(file_path, "a") as f:
+        f.write(f"[{timestamp}] {message}\n")
+
+def fetch_and_parse_trading_data():
     try:
-        response = requests.get(SOURCE_URL)
+        response = requests.get(TRADING_DASHBOARD_URL)
         response.raise_for_status()  # Raise an exception for bad status codes
         data = response.json()
-
-        log_data(data)
-        analyze_and_alert(data)
-
+        return data
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from {SOURCE_URL}: {e}")
+        log_message(f"Error fetching data from {TRADING_DASHBOARD_URL}: {e}", TRADING_LOG_FILE)
+        return None
     except json.JSONDecodeError:
-        print(f"Error decoding JSON from {SOURCE_URL}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        log_message(f"Error decoding JSON response from {TRADING_DASHBOARD_URL}", TRADING_LOG_FILE)
+        return None
 
-def log_data(data):
-    timestamp = datetime.now().isoformat()
-    with open(TRADING_LOG_FILE, "a") as f:
-        f.write(f"--- {timestamp} ---\n")
-        json.dump(data, f, indent=2)
-        f.write("\n")
+def analyze_data(data):
+    if not data:
+        return
 
-def analyze_and_alert(data):
-    # Placeholder for actual analysis logic
-    # This is where you would parse trading logs, status updates,
-    # risk parameters, and implement alerting for stop-loss/take-profit triggers
-    # and critical drawdown indicators.
+    # Log extracted data
+    log_message(f"Trading Data: {json.dumps(data)}", TRADING_LOG_FILE)
 
-    stop_loss_triggered = data.get("stop_loss_triggered", False)
-    take_profit_triggered = data.get("take_profit_triggered", False)
-    critical_drawdown = data.get("critical_drawdown", False)
-    capital = data.get("capital", None)
-    stop_loss = data.get("stop_loss", None)
-    take_profit = data.get("take_profit", None)
+    # Placeholder for alert logic
+    # In a real scenario, you'd parse specific fields from 'data'
+    # For example: data['status_updates'], data['risk_parameters']['stop_loss_triggered'], data['drawdown_indicators']['critical']
 
-    alerts = []
+    stop_loss_triggered = data.get('stop_loss_triggered', False) # Example field
+    take_profit_triggered = data.get('take_profit_triggered', False) # Example field
+    critical_drawdown = data.get('critical_drawdown', False) # Example field
+
+    critical_events = []
     if stop_loss_triggered:
-        alerts.append(f"STOP-LOSS TRIGGERED at {datetime.now().isoformat()}")
+        critical_events.append("STOP LOSS TRIGGERED")
     if take_profit_triggered:
-        alerts.append(f"TAKE-PROFIT TRIGGERED at {datetime.now().isoformat()}")
+        critical_events.append("TAKE PROFIT TRIGGERED")
     if critical_drawdown:
-        alerts.append(f"CRITICAL DRAWDOWN DETECTED at {datetime.now().isoformat()}")
+        critical_events.append("CRITICAL DRAWDOWN INDICATORS")
 
-    if alerts:
-        with open(CRITICAL_ALERT_FILE, "a") as f:
-            for alert in alerts:
-                f.write(f"{alert}\n")
-        print(f"Critical alerts triggered: {', '.join(alerts)}")
+    if critical_events:
+        alert_message = " ".join(critical_events) + "!"
+        log_message(alert_message, CRITICAL_ALERT_LOG_FILE)
+        log_message(alert_message, TRADING_LOG_FILE) # Also log critical alerts to general log
 
-    # Log risk parameters
-    if capital is not None:
-        print(f"Current Capital: {capital}")
-    if stop_loss is not None:
-        print(f"Stop Loss Level: {stop_loss}")
-    if take_profit is not None:
-        print(f"Take Profit Level: {take_profit}")
-
+# Main execution block
 if __name__ == "__main__":
-    fetch_and_analyze_trading_data()
+    trading_data = fetch_and_parse_trading_data()
+    analyze_data(trading_data)
