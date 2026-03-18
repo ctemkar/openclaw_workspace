@@ -1,17 +1,87 @@
-[2026-03-19 01:25:58] ✅ TRADING SYSTEM STATUS - NO CRITICAL ALERTS
-[2026-03-19 01:25:58] Dashboard Status: Conservative Crypto Trading System ONLINE
-[2026-03-19 01:25:58] System Port: 5001
-[2026-03-19 01:25:58] Capital: $1,000.00 (full amount available)
-[2026-03-19 01:25:58] Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%
-[2026-03-19 01:25:58] Today's Trades: 2/2 executed (MAXIMUM DAILY LIMIT REACHED)
-[2026-03-19 01:25:58] Open Positions: 2 trades active (BTC/USD, ETH/USD)
-[2026-03-19 01:25:58] Position Status:
-  - BTC/USD: Bought at $71,386.00, Current: ~$73,272.19 (+2.64% from entry)
-  - ETH/USD: Bought at $2,193.60, Current: ~$2,283.55 (+4.10% from entry)
-[2026-03-19 01:25:58] Stop-loss Status: ✅ NOT TRIGGERED (all positions significantly above stop-loss levels)
-[2026-03-19 01:25:58] Take-profit Status: ✅ NOT TRIGGERED (all positions below take-profit levels)
-[2026-03-19 01:25:58] Market Conditions: Both positions showing positive returns, market appears stable
-[2026-03-19 01:25:58] ⚠️ NOTE: Maximum daily trades (2/2) have been executed - no new trades possible until next day
-[2026-03-19 01:25:58] ⚠️ NOTE: Next analysis scheduled for ~01:33 (hourly schedule)
-[2026-03-19 01:25:58] ✅ SYSTEM OPERATING NORMALLY - NO ACTION REQUIRED[2026-03-19 01:30:07] ✅ MONITORING CHECK COMPLETED - NO CRITICAL ALERTS
-[2026-03-19 01:30:07] System Status: All positions stable, no stop-loss/take-profit triggers
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 01:53:35 (Asia/Bangkok)
+
+🚨 CRITICAL ALERT: ETH/USD STOP-LOSS TRIGGERED 🚨
+
+=== ALERT DETAILS ===
+Asset: ETH/USD
+Trade Time: 10:21:22
+Trade Price: $2331.78
+Current Price: $2202.81
+Loss Percentage: -5.53%
+Stop-loss Threshold: 5% ($2215.19)
+Status: STOP-LOSS TRIGGERED
+
+=== POSITION ANALYSIS ===
+Trade Details:
+- Side: BUY
+- Amount: 0.00428857 ETH
+- Model: LLM_Analysis_ETH/USD
+- Status: filled
+
+Current Market Conditions:
+- ETH/USD Price: $2202.81
+- 24h Change: N/A
+- SMA 10: $2248.35
+- SMA 20: $2287.24
+- Support: $2167.99
+- Resistance: $2332.66
+- Signal: BUY (Confidence: 70%)
+
+=== RISK ASSESSMENT ===
+1. Immediate Loss: -5.53% (exceeds 5% stop-loss)
+2. Distance to Support: $34.82 (1.61% above $2167.99 support)
+3. Market Trend: Below both SMA 10 and SMA 20, indicating bearish momentum
+4. Daily Trade Limit: 2/2 trades used - system cannot execute new trades
+
+=== ADDITIONAL WARNINGS ===
+⚠️ BTC/USD POSITION AT RISK: -3.37% (approaching 5% stop-loss)
+- Trade Price: $74335.92 (10:21:21)
+- Current Price: $71832.76
+- Stop-loss Threshold: $70619.12
+- Distance to stop-loss: $1213.64 (1.69% above threshold)
+
+⚠️ DAILY TRADE LIMIT REACHED: 2/2 trades executed today
+⚠️ TRADING SYSTEM PAUSED: Cannot execute new trades until limit resets
+
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review ETH/USD position and consider exit strategy
+2. MONITOR: BTC/USD position approaching stop-loss threshold
+3. CONSIDER: Manual intervention if automated system is paused
+4. REVIEW: Trading strategy parameters and risk management
+
+=== SYSTEM STATUS ===
+- Server: Running normally
+- Last Analysis: 2026-03-19T01:33:12.545570
+- Next Analysis: ~02:33:12
+- Capital Available: $1000.00
+- Trading Status: Paused (daily limit reached)
+
+=== ALERT PRIORITY: HIGH ===
+This alert requires immediate attention. The ETH/USD position has exceeded the configured 5% stop-loss threshold, and BTC/USD is approaching its stop-loss.
+
+=== END OF CRITICAL ALERTS ===
+
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 01:58:40 (Asia/Bangkok)
+
+🚨 CRITICAL ALERT: Daily trade limit reached: 2/2
+
+🚨 CRITICAL ALERT: ETH/USD stop-loss triggered: -5.27% loss (Trade: $2,325.28, Current: $2,202.81)
+
+=== ETH/USD POSITION DETAILS ===
+Trade Price: $2,325.28
+Current Price: $2,202.81
+Loss: -5.27%
+Stop-loss Threshold: $2,209.02
+
+=== RECOMMENDED ACTIONS ===
+1. Review positions immediately
+2. Consider exit strategies for triggered stop-losses
+3. Check if automated system has executed stop-loss orders
+4. Review trading strategy parameters
+
+=== ALERT PRIORITY: HIGH ===
+These alerts require immediate attention.
+
+=== END OF CRITICAL ALERTS ===

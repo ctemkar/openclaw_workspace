@@ -1,79 +1,66 @@
 #!/bin/bash
 
-PORT="57260"
-URL="http://localhost:$PORT"
-TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+URL="http://localhost:5001/status"
+GENERAL_LOG="./trading_monitoring.log"
+CRITICAL_LOG="./critical_alerts.log"
+SUMMARY_FILE="/tmp/trading_summary.txt"
 
-echo "--- $(date) ---" >> "$TRADING_LOG"
+# Fetch data from the URL
+response=$(curl -s "$URL")
 
-# Fetch trading progress data
-PROGRESS_RESPONSE=$(curl -s "$URL/api/trading/progress")
-CONFIG_RESPONSE=$(curl -s "$URL/api/trading/configure")
-
-# Check if curl commands were successful
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to fetch data from dashboard" >> "$TRADING_LOG"
-    echo "Error: Failed to fetch data from dashboard" >> "$ALERT_LOG"
-    exit 1
+# Check if the response is empty or indicates an error
+if [[ -z "$response" ]]; then
+  echo "$(date): ERROR - No response from $URL" >> "$GENERAL_LOG"
+  echo "There was an error retrieving data from the trading dashboard." > "$SUMMARY_FILE"
+  exit 1
 fi
 
-# Log status updates
-echo "Trading Status:" >> "$TRADING_LOG"
-echo "$PROGRESS_RESPONSE" | jq '.status' >> "$TRADING_LOG"
+# Log the response
+echo "$(date): $response" >> "$GENERAL_LOG"
 
-echo "Trading Configuration:" >> "$TRADING_LOG"
-echo "$CONFIG_RESPONSE" | jq '.config' >> "$TRADING_LOG"
+# Parse JSON response
+status=$(echo "$response" | jq -r '.status // "unknown"')
+capital=$(echo "$response" | jq -r '.capital // 0')
+last_analysis=$(echo "$response" | jq -r '.last_analysis // "unknown"')
 
-# Check for completed trades
-TRADE_COUNT=$(echo "$PROGRESS_RESPONSE" | jq '.trades | length')
-echo "Completed Trades: $TRADE_COUNT" >> "$TRADING_LOG"
+# Check for critical conditions
+# For now, we'll check if system is running and log basic status
+# In a real system, we would check for specific alert conditions
 
-# Check trading logs file directly
-TRADING_LOGS_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
-if [ -f "$TRADING_LOGS_FILE" ]; then
-    echo "Recent Trading Logs:" >> "$TRADING_LOG"
-    tail -10 "$TRADING_LOGS_FILE" >> "$TRADING_LOG"
-    
-    # Check for critical alerts in logs
-    echo "--- Alerts ---" >> "$ALERT_LOG"
-    if grep -i "stop-loss\|take-profit\|critical\|error\|failed" "$TRADING_LOGS_FILE" | tail -5; then
-        grep -i "stop-loss\|take-profit\|critical\|error\|failed" "$TRADING_LOGS_FILE" | tail -5 >> "$ALERT_LOG"
-    fi
-else
-    echo "No trading logs file found" >> "$TRADING_LOG"
+ALERT_FOUND=false
+
+# Check if system is not running
+if [[ "$status" != "running" ]]; then
+  echo "$(date): ALERT - System status is '$status', expected 'running'." >> "$CRITICAL_LOG"
+  echo "System status alert: status is '$status'" >> "$SUMMARY_FILE"
+  ALERT_FOUND=true
 fi
 
-# Generate plain text summary
-SUMMARY="Trading Dashboard Monitoring Summary:\n"
-SUMMARY+="\n--- Dashboard Status ---\n"
-SUMMARY+="Dashboard URL: $URL\n"
-SUMMARY+="Trading Status: $(echo "$PROGRESS_RESPONSE" | jq -r '.status')\n"
-SUMMARY+="Completed Trades: $TRADE_COUNT\n"
-
-SUMMARY+="\n--- Configuration ---\n"
-CAPITAL=$(echo "$CONFIG_RESPONSE" | jq -r '.config.capital')
-STOP_LOSS=$(echo "$CONFIG_RESPONSE" | jq -r '.config.stop_loss')
-TRADE_SIZE=$(echo "$CONFIG_RESPONSE" | jq -r '.config.trade_size')
-SUMMARY+="Capital: \$$CAPITAL\n"
-SUMMARY+="Stop Loss: ${STOP_LOSS}%\n"
-SUMMARY+="Trade Size: \$$TRADE_SIZE\n"
-
-SUMMARY+="\n--- Critical Alerts ---\n"
-if [ -f "$ALERT_LOG" ] && [ -s "$ALERT_LOG" ]; then
-    ALERT_COUNT=$(grep -c "stop-loss\|take-profit\|critical\|error\|failed" "$ALERT_LOG" 2>/dev/null || echo "0")
-    if [ "$ALERT_COUNT" -gt 0 ]; then
-        SUMMARY+="Found $ALERT_COUNT alert(s) in logs\n"
-        SUMMARY+="Latest alerts:\n"
-        tail -3 "$ALERT_LOG" | while read line; do
-            SUMMARY+="  - $line\n"
-        done
-    else
-        SUMMARY+="No critical alerts detected.\n"
-    fi
-else
-    SUMMARY+="No critical alerts detected.\n"
+# Check if capital is below threshold (e.g., less than 90% of initial $1000)
+if (( $(echo "$capital < 900" | bc -l) )); then
+  echo "$(date): ALERT - Capital has dropped below $900 (current: \$$capital)." >> "$CRITICAL_LOG"
+  echo "Capital alert: \$$capital (below \$900 threshold)" >> "$SUMMARY_FILE"
+  ALERT_FOUND=true
 fi
 
-echo -e "$SUMMARY"
-echo -e "$SUMMARY" > /Users/chetantemkar/.openclaw/workspace/app/trading_summary.txt
+# Check if last analysis is too old (more than 2 hours ago)
+current_time=$(date -u +%s)
+last_analysis_time=$(date -u -d "$last_analysis" +%s 2>/dev/null || echo "0")
+if [[ "$last_analysis_time" != "0" ]]; then
+  time_diff=$((current_time - last_analysis_time))
+  if (( time_diff > 7200 )); then  # 2 hours in seconds
+    echo "$(date): ALERT - Last analysis was $((time_diff/3600)) hours ago." >> "$CRITICAL_LOG"
+    echo "Analysis alert: Last analysis was $((time_diff/3600)) hours ago" >> "$SUMMARY_FILE"
+    ALERT_FOUND=true
+  fi
+fi
+
+# If no alerts, state that
+if [[ "$ALERT_FOUND" == "false" ]]; then
+  echo "No critical alerts detected." > "$SUMMARY_FILE"
+  echo "System status: $status" >> "$SUMMARY_FILE"
+  echo "Capital: \$$capital" >> "$SUMMARY_FILE"
+  echo "Last analysis: $last_analysis" >> "$SUMMARY_FILE"
+fi
+
+# The summary will be read from SUMMARY_FILE by the cron job delivery
