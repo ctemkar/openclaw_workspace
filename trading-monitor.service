@@ -1,0 +1,17 @@
+[Unit]
+Description=Trading Monitor Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=chetantemkar
+WorkingDirectory=/Users/chetantemkar/.openclaw/workspace/app
+ExecStart=/usr/bin/python3 /Users/chetantemkar/.openclaw/workspace/app/trading_monitor.py --continuous
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -2,13 +2,15 @@ from flask import Flask, jsonify, render_template, request
 import socket, os, json, psutil
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 BASE_DIR = "/Users/chetantemkar/.openclaw/workspace/app"
 
 def get_bot_status():
-    found = any("crypto_trading_llm_live.py" in " ".join(p.cmdline()) 
-                for p in psutil.process_iter(['cmdline']) if p.info.get('cmdline'))
-    return "RUNNING" if found else "STOPPED"
+    try:
+        found = any("crypto_trading_llm_live.py" in " ".join(p.cmdline()) 
+                    for p in psutil.process_iter(['cmdline']) if p.info.get('cmdline'))
+        return "RUNNING" if found else "STOPPED"
+    except: return "UNKNOWN"
 
 @app.route('/')
 def home():
@@ -16,10 +18,7 @@ def home():
 
 @app.route('/api/trading/configure', methods=['GET', 'POST'])
 def trading_config():
-    return jsonify({
-        "status": "success",
-        "config": {"capital": 100.0, "trade_size": 10.0, "stop_loss": 0.03, "take_profit": 0.06}
-    })
+    return jsonify({"status": "success", "config": {"capital": 100.0, "trade_size": 10.0, "stop_loss": 0.03, "take_profit": 0.06}})
 
 @app.route('/api/status/all')
 @app.route('/api/trading/progress')
@@ -30,11 +29,7 @@ def status_all():
         try:
             with open(trades_path, "r") as f: trades = json.load(f)
         except: pass
-    return jsonify({
-        "status": get_bot_status(),
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "trades": trades
-    })
+    return jsonify({"status": get_bot_status(), "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "trades": trades})
 
 @app.route('/api/llm/strategies', methods=['GET'])
 def get_strategies():
@@ -51,7 +46,7 @@ def generate():
         path = os.path.join(BASE_DIR, "llm_strategies.json")
         data = {"Gemini-Pro": {"symbol": "BTC/USD", "signal": "BUY"}, "GPT-4o": {"symbol": "ETH/USD", "signal": "SELL"}}
         with open(path, "w") as f: json.dump(data, f)
-        return jsonify({"status": "success", "message": "Strategies generated"})
+        return jsonify({"status": "success"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 

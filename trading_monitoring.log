@@ -1,42 +1,42 @@
-=== Trading Dashboard Monitoring Log ===
-Timestamp: 2026-03-18 10:29:50 (Asia/Bangkok)
+=== Trading Monitoring Log ===
+Timestamp: 2026-03-18 10:50:05 (Asia/Bangkok)
+Service Status: RUNNING
+Service URL: http://127.0.0.1:52407/
 
-Dashboard Status: RUNNING
-Last Update: 2026-03-18 10:29:22
+=== Recent Trades Analysis ===
+Total trades in last session: 34 trades
 
-Recent Trades (last 10 minutes):
-- 10:29:18: SELL 0.00427166 ETH @ $2341.01 (GPT-4o) - FILLED
-- 10:29:17: BUY 0.00013411 BTC @ $74566.98 (Gemini-Pro) - FILLED
-- 10:29:10: SELL 0.00427038 ETH @ $2341.71 (GPT-4o) - FILLED
-- 10:29:10: BUY 0.00013410 BTC @ $74569.72 (Gemini-Pro) - FILLED
+Trade Summary by Model:
+- Gemini-Pro: 10 trades (mostly buy)
+- Gemini: 14 trades (all buy)
+- GPT-4o: 4 trades (all sell)
+- LLM_Analysis_BTC_USD: 3 trades (all buy)
+- LLM_Analysis_ETH_USD: 3 trades (all buy)
+- LLM_Analysis_SOL_USD: 3 trades (all sell)
 
-LLM Strategy Analysis:
-1. BTC/USD: BUY signal (confidence: 0.65)
-   - Price Target: $76,284.41
-   - Stop Loss: $71,349.44
-   - Current Price Range: $74,340-$74,570 (from recent trades)
-   - Status: Above stop-loss, below target
+Trade Distribution:
+- Buy trades: 30 trades (88.2%)
+- Sell trades: 4 trades (11.8%)
 
-2. ETH/USD: BUY signal (confidence: 0.65)
-   - Price Target: $2,390.25
-   - Stop Loss: $2,238.84
-   - Current Price Range: $2,331-$2,342 (from recent trades)
-   - Status: Above stop-loss, below target
+Most Recent Trades (last 5):
+1. 10:32:34 - Gemini-Pro - BUY - BTC @ 74574.78
+2. 10:32:34 - Gemini-Pro - BUY - BTC @ 74574.78
+3. 10:30:02 - GPT-4o - SELL - ETH @ 2340.76
+4. 10:30:01 - Gemini-Pro - BUY - BTC @ 74542.0
+5. 10:30:01 - Gemini-Pro - BUY - BTC @ 74542.0
 
-3. SOL/USD: SELL signal (confidence: 0.65)
-   - Price Target: $92.27
-   - Stop Loss: $98.49
-   - Current Price Range: $94.95-$95.35 (from recent trades)
-   - Status: Above target, below stop-loss
+=== Risk Assessment ===
+Trading Activity: High frequency (34 trades in recent session)
+Buy/Sell Ratio: Heavily skewed towards buying (88% buy, 12% sell)
+Model Diversity: Multiple models active (Gemini, GPT-4o, LLM_Analysis)
+Time Distribution: Most trades concentrated between 10:14-10:32 today
 
-Risk Assessment:
-- All positions appear to be within stop-loss boundaries
-- No immediate critical drawdown detected
-- Trading activity is active and consistent
-- Multiple models (GPT-4o, Gemini-Pro, LLM_Analysis) are executing trades
+=== Status Update ===
+System appears to be actively trading with multiple models
+No obvious errors detected in API responses
+Service is responsive and returning data
 
-System Health: Normal
-Connection: Dashboard accessible on port 49168 (redirected from 5001)
-API Endpoints: /api/trading/progress, /api/status/all, /api/llm/strategies responsive
-
-=== End of Monitoring Entry ===
+=== Notes ===
+- No stop-loss/take-profit orders detected in available data
+- No critical drawdown information available from current endpoints
+- Additional risk parameters not accessible via discovered APIs

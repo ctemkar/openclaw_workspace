@@ -1,29 +1,44 @@
 === Critical Alerts Log ===
-Timestamp: 2026-03-18 10:29:50 (Asia/Bangkok)
+Timestamp: 2026-03-18 10:50:15 (Asia/Bangkok)
 
-Alert Status: NO NEW CRITICAL ALERTS
+=== ALERT: High Trading Concentration Detected ===
+Severity: MEDIUM
+Issue: Unbalanced buy/sell ratio and high trading frequency
+Details:
+- Total trades in session: 34
+- Buy trades: 28 (82.4%)
+- Sell trades: 6 (17.6%)
+- Buy/Sell ratio: 4.7:1 (excessive buying concentration)
+- Trading frequency: 30 trades in the 10:00 hour alone
 
-Recent Checks:
-1. Stop-Loss Triggers: None detected
-   - BTC/USD: Current ~$74,450 vs Stop-Loss $71,349.44 (safe)
-   - ETH/USD: Current ~$2,336 vs Stop-Loss $2,238.84 (safe)
-   - SOL/USD: Current ~$95.15 vs Stop-Loss $98.49 (safe for SELL position)
+Risk Assessment:
+- Portfolio may be overexposed to long positions
+- Lack of selling activity could indicate holding strategy or lack of profit-taking
+- High frequency trading may increase transaction costs
 
-2. Take-Profit Triggers: None detected
-   - BTC/USD: Target $76,284.41 not reached
-   - ETH/USD: Target $2,390.25 not reached
-   - SOL/USD: Target $92.27 not reached (SELL position)
+Recommended Actions:
+1. Review trading strategy parameters
+2. Consider implementing position sizing limits
+3. Monitor for potential overexposure
+4. Check if stop-loss orders are properly configured
 
-3. Critical Drawdown: None detected
-   - All positions within acceptable risk parameters
-   - No significant price deviations from expected ranges
+=== ALERT: Limited Risk Parameter Visibility ===
+Severity: LOW
+Issue: Unable to access stop-loss, take-profit, or drawdown data
+Details:
+- API endpoints for risk parameters not discovered
+- Cannot verify if risk management controls are active
+- Limited visibility into portfolio risk metrics
 
-4. System Issues: None detected
-   - Dashboard running normally
-   - API endpoints responsive
-   - Trades executing successfully
+Recommended Actions:
+1. Investigate available risk management API endpoints
+2. Implement monitoring for critical risk parameters
+3. Consider adding logging for stop-loss/take-profit triggers
 
-Monitoring Status: All systems normal
-Next Check: Scheduled monitoring will continue
+=== System Status ===
+- Trading service: ACTIVE
+- API responsiveness: GOOD
+- Data availability: LIMITED (trade data available, risk data not accessible)
 
-=== End of Alert Entry ===
+=== Next Monitoring Check ===
+Scheduled for: 2026-03-18 10:51:00

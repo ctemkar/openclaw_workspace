@@ -1,63 +1,65 @@
-TRADING DASHBOARD MONITORING EXECUTION SUMMARY
-=======================================================
-Execution Time: 2026-03-18 10:04:43 (Asia/Bangkok)
-Monitoring Task: trading_dashboard_monitor (cron:77cd7689-f4c0-4ff8-81be-f4c5cf8f6911)
+TRADING MONITORING SUMMARY
+===========================
+Timestamp: 2026-03-18 10:50:20 (Asia/Bangkok)
 
-EXECUTION RESULTS:
-==================
+SERVICE STATUS
+--------------
+• Status: RUNNING
+• URL: http://127.0.0.1:52407/
+• Responsive: YES
+• Last check: 2026-03-18 10:50:05
 
-1. DASHBOARD STATUS:
-   - Dashboard URL: http://127.0.0.1:59745 (active)
-   - Trading Bot: Running (PID: 72293)
-   - API Endpoints: Accessible
-   - Last Health Check: 10:00 AM - PASSED
+TRADING ACTIVITY
+----------------
+• Total trades: 34
+• Recent activity: 30 trades in last hour (10:00-11:00)
+• Buy/Sell ratio: 28 buys / 6 sells (4.7:1)
+• Trading models: 7 different models active
 
-2. PORTFOLIO ANALYSIS:
-   - BTC Holdings: 0.00053507 BTC
-   - Current BTC Price: $74,358.00
-   - Portfolio Value: $39.79
-   - Total Investment: $40.00
-   - Current P&L: -$0.21 (-0.53%)
-   - Average Entry Price: $74,756.91
+MODEL DISTRIBUTION
+------------------
+1. Gemini: 12 trades
+2. Gemini-Pro: 8 trades
+3. GPT-4o: 3 trades
+4. LLM_Analysis_SOL_USD: 3 trades
+5. LLM_Analysis_ETH_USD: 3 trades
+6. LLM_Analysis_BTC_USD: 3 trades
+7. gemini-pro: 2 trades
 
-3. RISK ASSESSMENT:
-   - Stop Loss: -1.0% ($74,009.34)
-   - Take Profit: +2.0% ($76,252.05)
-   - Critical Drawdown: -5.0% ($71,019.07)
-   - Current Price vs Entry: -0.53% (slightly below entry)
+CRITICAL FINDINGS
+-----------------
+⚠️ MEDIUM RISK: High buy concentration detected
+   - 82% of trades are buys, only 18% sells
+   - Portfolio may be overexposed to long positions
+   - Could indicate lack of profit-taking strategy
 
-4. DISTANCE TO TRIGGERS:
-   - Stop Loss Distance: 0.47% (BTC needs to drop 0.47% to trigger)
-   - Take Profit Distance: 2.53% (BTC needs to rise 2.53% to trigger)
-   - Critical Drawdown Distance: 4.47% (safe from critical drawdown)
+⚠️ MEDIUM RISK: High trading frequency
+   - 30 trades in single hour
+   - May increase transaction costs
+   - Could indicate aggressive trading strategy
 
-5. ALERTS STATUS:
-   - No critical alerts triggered
-   - Last warning alert: 09:56 AM (portfolio slightly underwater -0.50%)
-   - All risk parameters within safe limits
+⚠️ LOW RISK: Limited risk parameter visibility
+   - Unable to access stop-loss/take-profit data
+   - Cannot verify risk management controls
+   - Drawdown information not available
 
-6. SYSTEM HEALTH:
-   - Trading processes: Active (crypto_trading_llm_live.py running)
-   - Dashboard server: Active (port 59745)
-   - Log files: Updated successfully
-   - Monitoring logs: Appended to trading_monitoring.log
+RECOMMENDATIONS
+---------------
+1. Review trading strategy for buy/sell balance
+2. Implement position sizing limits if not present
+3. Investigate available risk management APIs
+4. Monitor for potential overexposure
+5. Consider adding alerts for unusual trading patterns
 
-7. RECOMMENDATIONS:
-   - Current Position: HOLD (no immediate action needed)
-   - Risk Level: LOW (portfolio slightly underwater but safe from triggers)
-   - Capital Utilization: 4.0% (room for additional trades if strategy permits)
-   - Market Sentiment: Neutral (BTC trading at $74,358, -0.53% from entry)
+DATA LOGGING
+------------
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Alerts log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Both logs updated with current analysis
 
-8. NEXT ACTIONS:
-   - Continue monitoring BTC price movement
-   - Watch for potential stop-loss trigger if BTC drops to $74,009
-   - Watch for take-profit trigger if BTC rises to $76,252
-   - Next scheduled check: 11:04 AM
-
-9. LOGS UPDATED:
-   - trading_monitoring.log: Appended with latest monitoring data
-   - critical_alerts.log: No new critical alerts added
-   - Portfolio analysis script: Created/updated
-
-MONITORING COMPLETE: All systems operational, no immediate intervention required.
-=======================================================
+NEXT STEPS
+----------
+• Schedule regular monitoring (recommended: every 5-10 minutes)
+• Expand API discovery for risk parameters
+• Implement alerting for critical conditions
+• Consider adding Telegram/email notifications for high-severity alerts

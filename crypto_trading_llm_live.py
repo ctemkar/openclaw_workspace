@@ -23,8 +23,7 @@ def get_keys():
         except: return None, None
 
 def log_bot(msg):
-    with open(BOT_LOG, "a") as f:
-        f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
+    with open(BOT_LOG, "a") as f: f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
 
 def record_trade(trade_data):
     trades = []
@@ -35,50 +34,29 @@ def record_trade(trade_data):
     trades.insert(0, trade_data)
     with open(TRADES_LOG, "w") as f: json.dump(trades[:50], f)
 
-def execute_gemini_trade(exchange, symbol, side, model_name):
+def execute_trade(exchange, symbol, side, model_name):
     try:
         ticker = exchange.fetch_ticker(symbol)
         price = ticker["last"]
-        # Use 1% slippage buffer to ensure immediate fill
         limit_price = price * 1.01 if side == "buy" else price * 0.99
         amount = TRADE_SIZE_USD / price
-        
-        # Gemini specific 'Market' simulation
         params = {'options': ['immediate-or-cancel']}
-        order = exchange.create_order(symbol, 'limit', side, amount, limit_price, params)
-        
-        record_trade({
-            "time": datetime.now().strftime("%H:%M:%S"),
-            "model": model_name,
-            "side": side,
-            "price": price,
-            "amount": amount,
-            "status": "filled"
-        })
-        log_bot(f"SUCCESS: {model_name} {side} filled at {price}")
-    except Exception as e:
-        log_bot(f"TRADE FAILURE ({model_name}): {str(e)}")
+        exchange.create_order(symbol, 'limit', side, amount, limit_price, params)
+        record_trade({"time": datetime.now().strftime("%H:%M:%S"), "model": model_name, "side": side, "price": price, "amount": amount, "status": "filled"})
+        log_bot(f"SUCCESS: {model_name} {side} filled.")
+    except Exception as e: log_bot(f"TRADE FAILURE: {str(e)}")
 
 if __name__ == "__main__":
     k, s = get_keys()
-    if not k:
-        log_bot("CRITICAL: Keys missing")
-        exit()
-    
+    if not k: exit()
     exchange = ccxt.gemini({"apiKey": k, "secret": s})
-    log_bot("BOT STARTING: Monitoring for Model Strategies")
-
     while True:
         if os.path.exists(STRATEGY_FILE):
             try:
-                with open(STRATEGY_FILE, "r") as f:
-                    strategies = json.load(f)
-                # Correctly handle the dictionary of models
+                with open(STRATEGY_FILE, "r") as f: strategies = json.load(f)
                 for model, data in strategies.items():
-                    signal = data.get("signal", "").lower()
-                    if signal in ["buy", "sell"]:
-                        execute_gemini_trade(exchange, data.get("symbol", "BTC/USD"), signal, model)
+                    sig = data.get("signal", "").lower()
+                    if sig in ["buy", "sell"]: execute_trade(exchange, data.get("symbol", "BTC/USD"), sig, model)
                 os.remove(STRATEGY_FILE)
-            except Exception as e:
-                log_bot(f"STRATEGY ERROR: {str(e)}")
+            except: pass
         time.sleep(10)
