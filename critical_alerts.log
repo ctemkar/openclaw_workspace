@@ -1,44 +1,61 @@
-=== CRITICAL TRADING ALERT UPDATE ===
-Timestamp: 2026-03-19 04:55:44 (Asia/Bangkok) / 2026-03-18 21:55 UTC
-Alert Type: STOP-LOSS TRIGGERED (CONTINUING)
-Severity: HIGH
+=== CRITICAL TRADING ALERTS LOG ===
+Timestamp: 2026-03-19 05:09:34 (Asia/Bangkok)
 
-ALERT STATUS UPDATE:
-- Previous alert timestamp: 2026-03-19 04:51:58
-- Current monitoring timestamp: 2026-03-19 04:55:44
-- Alert condition: STILL ACTIVE
+🚨 CRITICAL ALERT: STOP-LOSS CONDITIONS PERSIST 🚨
 
 ALERT DETAILS:
-- Asset: ETH/USD (Ethereum)
-- Trade Entry Price: $2325.28
-- Current Price: $2202.61
-- Position Size: 0.086 ETH
-- Loss Percentage: -5.28% (above 5% stop-loss threshold)
-- Loss Amount: $-10.56 (0.086 ETH × $122.67)
-- Stop-Loss Threshold: 5.0%
-- Time in alert state: ~8 minutes
+1. ETH/USD POSITIONS AT CRITICAL LOSS LEVELS:
+   - Entry prices: $2331.78, $2325.28, $2193.60
+   - Current price: $2202.61
+   - Loss on highest entries: ~5.5% (EXCEEDS 5% STOP-LOSS)
+   - Loss on lowest entry: ~0.4% (within limits)
+   - STOP-LOSS THRESHOLD: 5.0%
+   - STATUS: STOP-LOSS TRIGGERED FOR HIGH-ENTRY POSITIONS
 
-MARKET CONTEXT UPDATE:
-- ETH Current Price: $2202.61
-- ETH Support Level: $2154.55
-- ETH Resistance Level: $2318.32
-- Market Signal: SELL (Confidence: 65%)
-- Reason: Bearish trend: Price $2202.61 below SMAs (10: $2206.82, 20: $2266.19)
-- Daily Trade Limit: REACHED (2/2 trades)
-- Recent Analysis: Completed at 04:55:37
+2. BTC/USD POSITIONS APPROACHING STOP-LOSS:
+   - Entry prices: $74300-$74335 range (high entries)
+   - Lower entry: $71386.00
+   - Current price: $71333.47
+   - Loss on high entries: ~4.0%
+   - Loss on lower entry: ~0.07%
+   - STOP-LOSS THRESHOLD: 5.0%
+   - STATUS: HIGH-ENTRY POSITIONS APPROACHING STOP-LOSS (1% away)
 
-PORTFOLIO STATUS UPDATE:
-- Total Investment: $800.04
-- Current Portfolio Value: $782.66
-- Portfolio Loss: -2.17% ($-17.38)
-- Available Capital: $1000.00
-- Portfolio drawdown: -2.17% (still below critical threshold of -5%)
+CURRENT MARKET ANALYSIS:
+- BTC/USD: $71333.47 (BUY signal, 70% confidence)
+- ETH/USD: $2202.61 (SELL signal, 65% confidence)
+- ETH price below both SMAs (bearish trend)
+- BTC near support level ($70501.79)
 
-RECOMMENDED ACTION:
-1. The stop-loss condition for ETH/USD Trade 1 is STILL ACTIVE
-2. Immediate review and action REQUIRED - position is at -5.28% loss
-3. Consider manual intervention to close position or adjust stop-loss
-4. System is at daily trade limit (2/2) - cannot execute automatic trades
-5. Market signal remains BEARISH for ETH/USD
+TRADE LIMIT STATUS:
+- Daily trades: 2/2 (LIMIT REACHED)
+- Trading system: PAUSED for new entries
+- Last analysis: 2026-03-19T04:55:37 (14 minutes ago)
 
-=== END CRITICAL ALERT UPDATE ===
+RISK ASSESSMENT:
+⚠️ HIGH RISK: ETH positions with high entry prices exceed stop-loss threshold
+⚠️ MEDIUM RISK: BTC high-entry positions approaching stop-loss
+⚠️ HIGH RISK: Daily trade limit reached - cannot enter new positions
+⚠️ MEDIUM RISK: ETH showing bearish technical signals
+
+IMMEDIATE ACTIONS REQUIRED:
+1. MANUAL INTERVENTION: Close ETH positions entered at $2331.78 and $2325.28
+2. Monitor BTC positions for potential stop-loss triggers
+3. Review why automatic stop-loss execution didn't trigger
+4. Verify P&L reporting (shows $0.00 despite significant paper losses)
+
+SYSTEM INTEGRITY CHECK:
+✅ Dashboard accessible: Yes
+✅ Capital tracking: $1000.00
+✅ Trade logging: Active (10 trades recorded)
+❌ Stop-loss enforcement: FAILING (positions exceeding threshold not closed)
+❌ P&L calculation: POTENTIALLY INACCURATE
+
+RECOMMENDATIONS:
+1. Implement immediate stop-loss execution for ETH high-entry positions
+2. Consider reducing position sizes for future trades
+3. Review trading strategy given current bearish ETH signals
+4. Add real-time stop-loss monitoring with automatic execution
+5. Verify trade execution logs for any missed stop-loss triggers
+
+=== END OF ALERTS LOG ===
