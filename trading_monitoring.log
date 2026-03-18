@@ -1,72 +1,215 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-19 02:48:25 (Asia/Bangkok)
-Dashboard Status: RUNNING
+=== TRADING DASHBOARD MONITORING ANALYSIS ===
+Timestamp: 2026-03-19 03:21:54 (Asia/Bangkok)
+Dashboard Status: ACTIVE
 
-SYSTEM STATUS:
-- Capital: $1000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
-- Trading pairs: BTC/USD, ETH/USD
-- Last analysis: 2026-03-19T02:33:24.997093
-- Analysis scheduled: hourly
-- System status: running
+=== POSITION ANALYSIS ===
 
-TRADING ACTIVITY:
-- Today's trades executed: 2/2 (max daily limit reached)
-- Total trades in history: 10
-- Recent trades (last 5):
-  1. ETH/USD BUY 0.00428857 @ $2331.78 (LLM_Analysis_ETH_USD) - 10:21:22
-  2. BTC/USD BUY 0.00013452 @ $74335.92 (LLM_Analysis_BTC/USD) - 10:21:21
-  3. BTC/USD BUY 0.00013458 @ $74308.00 (Gemini) - 10:20:26
-  4. BTC/USD BUY 0.00013457 @ $74308.79 (Gemini) - 10:18:29
-  5. BTC/USD BUY 0.00013453 @ $74332.65 (Gemini) - 10:14:36
+BTC/USD POSITION:
+  Total BTC: 0.005771
+  Average Entry: $72,776.83
+  Total Cost: $420.02
+  Current Price: $70,614.00
+  Current Value: $407.51
+  P&L: $-12.51 (-2.98%)
+  5% Stop-Loss: $69,137.99
+  10% Take-Profit: $80,054.51
+  Distance to Stop-Loss: 2.1%
+  Distance to Take-Profit: 13.4%
 
-CURRENT MARKET ANALYSIS (from last analysis):
-- BTC/USD: $71226.91
-  - Signal: BUY (70% confidence)
-  - Support: $70896.70
-  - Resistance: $74299.16
-  - Status: Skipped (max daily trades reached)
+ETH/USD POSITION:
+  Total ETH: 0.185777
+  Average Entry: $2,260.85
+  Total Cost: $420.03
+  Current Price: $2,166.65
+  Current Value: $402.52
+  P&L: $-17.51 (-4.17%)
+  5% Stop-Loss: $2,147.81
+  10% Take-Profit: $2,486.94
+  Distance to Stop-Loss: 0.9%
+  Distance to Take-Profit: 14.8%
 
-- ETH/USD: $2191.67
-  - Signal: BUY (70% confidence)
-  - Support: $2167.99
-  - Resistance: $2332.66
-  - Status: Skipped (max daily trades reached)
+=== SYSTEM STATUS ===
+Trading Dashboard: Running on port 5001
+Last Analysis: 2026-03-19 03:12:48
+Risk Parameters: 5% Stop-Loss, 10% Take-Profit
+Daily Trade Limit: 2/2 trades used (LIMIT REACHED)
+Total Capital: $1,000.00
+Deployed Capital: $840.05 (84.0%)
+Available Capital: $159.95 (16.0%)
+Total Positions: 2 (BTC & ETH)
 
-POSITION ANALYSIS:
-- BTC/USD Position: -4.19% drawdown (Stop-loss: -5.0%)
-  - Last trade: $74,335.92
-  - Current: $71,226.91
-  - Status: WARNING - Approaching stop-loss (0.81% from trigger)
+=== ALERT STATUS ===
+🚨 CRITICAL WARNING: ETH position at -4.17% loss, only 0.9% above stop-loss level
+⚠️ WARNING: BTC position at -2.98% loss, 2.1% above stop-loss level
+❌ Daily trade limit reached (2/2 trades used) - NO NEW TRADES POSSIBLE
+✅ No stop-loss or take-profit triggers activated yet
 
-- ETH/USD Position: -6.01% drawdown (Stop-loss: -5.0%)
-  - Last trade: $2,331.78
-  - Current: $2,191.67
-  - Status: CRITICAL - STOP-LOSS TRIGGERED (1.01% beyond limit)
+=== RISK ASSESSMENT ===
+1. ETH/USD: CRITICAL RISK - Only 0.9% buffer to stop-loss trigger
+2. BTC/USD: HIGH RISK - 2.1% buffer to stop-loss trigger
+3. Capital Utilization: 84.0% deployed - Very high exposure
+4. Daily Trading Activity: Limit reached - Trading paused until reset
+5. Overall Portfolio Risk: VERY HIGH - Both positions at significant losses, ETH near stop-loss
 
-RISK ASSESSMENT:
-🚨 CRITICAL ALERT: ETH/USD position has triggered stop-loss threshold (-6.01% vs -5.0% limit)
-⚠️ WARNING: BTC/USD position approaching stop-loss (-4.19%)
-- Daily trade limit reached (2/2) - cannot open new positions
-- No SELL orders detected in trade history
-- Automated stop-loss execution appears non-functional
-- System requires immediate manual intervention
+=== MARKET ANALYSIS ===
+BTC/USD: $70,614.00 (below support level of $70,896.70)
+ETH/USD: $2,166.65 (below support level of $2,167.99)
+Market Condition: BEARISH - Both assets trading below support levels
+Technical Signals: BUY signals for both assets but trades limited
 
-SYSTEM HEALTH CHECK:
-✅ Dashboard accessible: Yes (HTTP 200)
-✅ Status endpoint responding: Yes
-✅ Trades endpoint responding: Yes
-❌ Strategy configuration: Missing (no strategy file found)
-❌ Automated stop-loss: Suspected malfunction
-❌ Position management: Critical issues detected
+=== CRITICAL MONITORING POINTS ===
+1. ETH STOP-LOSS TRIGGER: Will activate at $2,147.81 (current: $2,166.65)
+   - Buffer: $18.84 (0.9%)
+   - Critical threshold: Alert if price drops below $2,155
+   
+2. BTC STOP-LOSS TRIGGER: Will activate at $69,137.99 (current: $70,614.00)
+   - Buffer: $1,476.01 (2.1%)
+   - Critical threshold: Alert if price drops below $70,000
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Manual exit of ETH/USD position (stop-loss triggered)
-2. URGENT: Monitor BTC/USD position for potential stop-loss trigger
-3. INVESTIGATE: Automated stop-loss execution system
-4. REVIEW: System configuration and risk management logic
-5. CONSIDER: Pausing system until stop-loss functionality verified
+3. PORTFOLIO DRAWDOWN: -$30.02 (-3.57% on deployed capital)
+   - Acceptable range: -5% to +10%
+   - Current status: Within parameters but approaching lower bound
 
-=== END OF MONITORING ENTRY ===
+=== RECOMMENDATIONS ===
+1. 🚨 IMMEDIATE ACTION REQUIRED: ETH position at critical risk - consider manual intervention or adjusting stop-loss
+2. Set price alerts for ETH at $2,150 and BTC at $70,000
+3. Consider adjusting ETH stop-loss to 4% if volatility persists
+4. No new trades possible today - system will auto-reset at midnight
+5. Next analysis scheduled for 04:12 local time
+6. Consider reducing position size if market continues downward trend
+
+=== TRADING PERFORMANCE ===
+Total Trades Today: 2/2 (LIMIT REACHED)
+Total Positions: 2 (BTC & ETH)
+Overall P&L: -$30.02 (-3.57% on deployed capital)
+Portfolio Value: $810.03 (81.0% of total capital)
+Drawdown: -3.57% (approaching risk limit of -5%)
+
+=== POSITION DETAILS ===
+BTC Trade 1: 0.002802 BTC @ $71,386.00 (00:33:00)
+BTC Trade 2: 0.002699 BTC @ $74,094.64 (13:39:48)
+BTC Trade 3: 0.000135 BTC @ $74,335.92 (10:21:21) [LLM Analysis]
+BTC Trade 4: 0.000135 BTC @ $74,308.00 (10:20:26) [Gemini]
+BTC Trade 5: 0.000135 BTC @ $74,308.79 (10:18:29) [Gemini]
+BTC Trade 6: 0.000135 BTC @ $74,332.65 (10:14:36) [Gemini]
+BTC Trade 7: 0.000135 BTC @ $74,319.47 (10:14:33) [Gemini]
+
+ETH Trade 1: 0.0912 ETH @ $2,193.60 (00:33:02)
+ETH Trade 2: 0.0860 ETH @ $2,325.28 (13:39:49)
+ETH Trade 3: 0.004289 ETH @ $2,331.78 (10:21:22) [LLM Analysis]
+
+=== NEXT MONITORING CYCLE ===
+Scheduled for: 03:30 local time
+Critical actions: Alert if ETH drops below $2,155 or BTC below $70,000
+Emergency protocol: Manual intervention recommended if ETH loss exceeds 4.5%=== Trading Dashboard Monitoring Log ===
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-19T03:25:18.641619
+Capital: $1000.00
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Status: running
+Last analysis: 2026-03-19T03:12:48.965218
+
+=== PERFORMANCE ANALYSIS ===
+Total trades: 10
+Current BTC/USD price: $70614.00
+Current ETH/USD price: $2166.65
+
+🚨 CRITICAL ALERTS DETECTED:
+  • STOP-LOSS TRIGGERED: ETH/USD at 2331.78, current 2166.65 (-7.1% loss)
+  • STOP-LOSS TRIGGERED: BTC/USD at 74335.92, current 70614.00 (-5.0% loss)
+  • STOP-LOSS TRIGGERED: BTC/USD at 74332.65, current 70614.00 (-5.0% loss)
+
+=== RISK PARAMETERS STATUS ===
+Max trades/day: 2
+
+
+=== Trading Dashboard Monitoring Log - 2026-03-19 03:25:38 ===
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-19T03:25:38.117971
+Capital: $1000.00
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Status: running
+Last analysis: 2026-03-19T03:12:48.965218
+
+=== PERFORMANCE ANALYSIS ===
+Total trades: 10
+Current BTC/USD price: $70614.00
+Current ETH/USD price: $2166.65
+
+🚨 CRITICAL ALERTS DETECTED:
+  • STOP-LOSS TRIGGERED: ETH/USD at 2331.78, current 2166.65 (-7.1% loss)
+  • STOP-LOSS TRIGGERED: BTC/USD at 74335.92, current 70614.00 (-5.0% loss)
+  • STOP-LOSS TRIGGERED: BTC/USD at 74332.65, current 70614.00 (-5.0% loss)
+
+=== RISK PARAMETERS STATUS ===
+Max trades/day: 2
+Trades executed today: 2/2 (from summary)
+System operating within normal parameters
+
+--- CRITICAL ALERTS FOR LOGGING ---
+STOP-LOSS TRIGGERED: ETH/USD at 2331.78, current 2166.65 (-7.1% loss)
+=== TRADING DASHBOARD MONITORING ANALYSIS ===
+Timestamp: 2026-03-19 03:31:11 (Asia/Bangkok)
+Dashboard Status: ACTIVE
+
+=== POSITION ANALYSIS ===
+
+BTC/USD POSITION:
+  Total BTC: 0.005636
+  Average Entry: $72753.66
+  Total Cost: $410.01
+  Current Price: $70614.00
+  Current Value: $397.95
+  P&L: $-12.06 (-2.94%)
+  5% Stop-Loss: $69115.97
+  10% Take-Profit: $80029.02
+  Distance to Stop-Loss: 2.2%
+  Distance to Take-Profit: 13.3%
+
+ETH/USD POSITION:
+  Total ETH: 0.181489
+  Average Entry: $2259.26
+  Total Cost: $410.03
+  Current Price: $2166.65
+  Current Value: $393.22
+  P&L: $-16.81 (-4.10%)
+  5% Stop-Loss: $2146.30
+  10% Take-Profit: $2485.19
+  Distance to Stop-Loss: 0.9%
+  Distance to Take-Profit: 14.7%
+
+=== SYSTEM STATUS ===
+Trading Dashboard: Running on port 5001
+Last Analysis: 2026-03-19 03:12:48
+Risk Parameters: 5% Stop-Loss, 10% Take-Profit
+Daily Trade Limit: 2/2 trades used (LIMIT REACHED)
+Total Capital: $1,000.00
+Deployed Capital: $820.04 (82.0%)
+Available Capital: $179.96 (18.0%)
+Total Positions: 2 (BTC & ETH)
+
+=== ALERT STATUS ===
+🚨 CRITICAL WARNING: ETH position at -4.10% loss, only 0.9% above stop-loss level
+⚠️ WARNING: BTC position at -2.94% loss, 2.2% above stop-loss level
+❌ Daily trade limit reached (2/2 trades used) - NO NEW TRADES POSSIBLE
+✅ No stop-loss or take-profit triggers activated yet
+
+=== RISK ASSESSMENT ===
+1. ETH/USD: CRITICAL RISK - Only 0.9% buffer to stop-loss trigger
+2. BTC/USD: HIGH RISK - 2.2% buffer to stop-loss trigger
+3. Capital Utilization: 82.0% deployed - High exposure
+4. Market Conditions: Bearish - Both assets below support levels
+5. Action Required: EMERGENCY MONITORING REQUIRED - ETH at breaking point
+
+=== RECOMMENDATIONS ===
+1. 🚨 IMMEDIATE ACTION: Monitor ETH position closely - stop-loss imminent
+2. Set price alert for ETH at $2146.30 (stop-loss level)
+3. Set price alert for BTC at $69115.97 (stop-loss level)
+4. Consider reducing position sizes if market continues downward
+5. No new trades possible today - focus on risk management
+
+=== END OF ANALYSIS ===
+
+
