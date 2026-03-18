@@ -1,199 +1,108 @@
-=== TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 18:12:41 (Asia/Bangkok)
-Dashboard Status: Running on port 5001
-Trading Server Status: RUNNING (port 5001 active)
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 18:53:12 (Asia/Bangkok)
+Dashboard Status: ACTIVE (PORT 5001) / STOPPED (PORT 5080)
 
-=== SYSTEM STATUS ===
-Status: running
-Last Analysis: 2026-03-18T18:00:06.659594 (12 minutes ago)
-Analysis Completed: 2026-03-18T18:00:06.659594 (recent)
-Next Analysis: hourly
-Capital: $1,000.00
-Trading Pairs: BTC/USD, ETH/USD
+🚨🚨🚨 DUAL SYSTEM DETECTED 🚨🚨🚨
+- Port 5001: Active trading dashboard with live data
+- Port 5080: Flask dashboard showing trading script as STOPPED
+- Two separate systems may be operating independently
 
-=== RISK PARAMETERS ===
-Stop-loss: 5.0%
-Take-profit: 10.0%
-Max trades/day: 2
-Today's trades: 2/2 (LIMIT REACHED)
+PORT 5001 SYSTEM STATUS:
+- Status: running
+- Capital: $1000.00 (⚠️ POTENTIALLY INACCURATE)
+- Last analysis: 2026-03-18T18:28:38.029398
+- Analysis scheduled: hourly
 
-=== CURRENT MARKET ANALYSIS ===
-BTC/USD: $73,944.11
-  - SMA 10: $74,118.78
-  - SMA 20: $74,226.51
-  - Support: $73,746.71
-  - Resistance: $74,683.70
-  - Signal: BUY (Confidence: 70%)
-  - Status: Skipped (max daily trades reached)
+PORT 5080 SYSTEM STATUS:
+- Status: STOPPED (according to Flask dashboard)
+- LLM Status: READY
+- Last update: 18:53:02
 
-ETH/USD: $2,313.15
-  - SMA 10: $2,325.56
-  - SMA 20: $2,326.57
-  - Support: $2,309.06
-  - Resistance: $2,350.29
-  - Signal: BUY (Confidence: 70%)
-  - Status: Skipped (max daily trades reached)
+RISK PARAMETERS:
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades per day: 2
+- Trading pairs: BTC/USD, ETH/USD
 
-=== OPEN POSITIONS ANALYSIS ===
-From trades log (most recent open positions):
+TRADING SUMMARY:
+- Today's trades executed: 2/2 (MAX DAILY LIMIT REACHED)
+- Total trades: 12
+- Total P&L: $0.00 (⚠️ POTENTIALLY INACCURATE)
+- Available capital: $1000.00 (⚠️ POTENTIALLY INACCURATE)
 
-1. BTC/USD BUY @ $74,094.64 (13:39:48)
-   - Quantity: 0.002699 BTC
-   - Current Price: $73,944.11 (from analysis)
-   - Position Value: $199.57 (0.002699 * $73,944.11)
-   - Entry Value: $200.00 (0.002699 * $74,094.64)
-   - Current P&L: -$0.43 (-0.21%)
-   - Stop-loss: $70,389.91 (-5.0%)
-   - Take-profit: $81,504.10 (+10.0%)
-   - Distance to SL: -5.00% (safe)
-   - Distance to TP: +10.21%
-
-2. ETH/USD BUY @ $2,325.28 (13:39:49)
-   - Quantity: 0.086 ETH
-   - Current Price: $2,313.15 (from analysis)
-   - Position Value: $198.93 (0.086 * $2,313.15)
-   - Entry Value: $200.00 (0.086 * $2,325.28)
-   - Current P&L: -$1.07 (-0.54%)
-   - Stop-loss: $2,209.02 (-5.0%)
-   - Take-profit: $2,557.81 (+10.0%)
-   - Distance to SL: -5.00% (safe)
-   - Distance to TP: +10.57%
-
-=== TRADING ACTIVITY ===
-Total trades recorded: 12
-Recent trades (last 6):
-- 15:05:29 - BTC/USD buy @ $73,990.75 (Gemini-Pro)
-- 15:05:28 - BTC/USD buy @ $73,950.01 (Gemini-Pro)
-- 10:21:28 - BTC/USD buy @ $74,334.94 (Gemini)
-- 10:21:23 - SOL/USD sell @ $94.952 (LLM_Analysis_SOL_USD)
-- 10:21:22 - ETH/USD buy @ $2,331.78 (LLM_Analysis_ETH_USD)
-- 10:21:21 - BTC/USD buy @ $74,335.92 (LLM_Analysis_BTC_USD)
-
-=== PORTFOLIO SUMMARY ===
-Total Capital: $1,000.00
-Open Positions: 2
-Estimated Exposure: $400.00 (from 2 open positions)
-Current Portfolio Value: $398.50 (sum of position values)
-Total P&L: -$1.50 (-0.38% on exposure, -0.15% on total capital)
-Daily Trades: 2/2 (limit reached)
-
-=== RISK ASSESSMENT ===
-Risk Status: LOW
-⚠️ Both positions slightly negative (-0.21% BTC, -0.54% ETH)
-✅ Far from stop-loss levels (5.0% buffer)
-✅ No critical drawdown indicators
-✅ System operational
-⚠️ Max daily trades reached (no new trades possible today)
-⚠️ No strategy file found (using default parameters)
-
-Stop-loss Protection: ACTIVE (5% on all positions)
-Take-profit Targets: SET (10% on all positions)
-
-=== ALERT STATUS ===
-🟢 NO CRITICAL ALERTS
-- No stop-loss triggers
-- No take-profit triggers
-- No system failures
-- All positions within safe parameters
-
-=== CRITICAL LEVELS TO WATCH ===
+CURRENT MARKET ANALYSIS:
 BTC/USD:
-  - Current Price: $73,944.11
-  - Stop-loss trigger: $70,389.91 (needs -4.81% drop)
-  - Take-profit trigger: $81,504.10 (needs +10.21% gain)
-  - Critical support: $73,746.71 (current: $73,944.11, +0.27% above support)
-  - Risk Level: LOW (0.27% above support)
+- Price: $73,795.60
+- Signal: BUY (Confidence: 70%)
+- Support: $73,746.71
+- Resistance: $74,683.70
+- Status: Skipped - Max daily trades reached
 
 ETH/USD:
-  - Current Price: $2,313.15
-  - Stop-loss trigger: $2,209.02 (needs -4.50% drop)
-  - Take-profit trigger: $2,557.81 (needs +10.57% gain)
-  - Critical support: $2,309.06 (current: $2,313.15, +0.18% above support)
-  - Risk Level: LOW (0.18% above support)
+- Price: $2,307.89
+- Signal: BUY (Confidence: 70%)
+- Support: $2,309.06
+- Resistance: $2,350.29
+- Status: Skipped - Max daily trades reached
 
-=== PRICE MOVEMENT ANALYSIS ===
-Since last check (18:09):
-- BTC/USD: Stable at $73,944.11 (no change)
-- ETH/USD: Stable at $2,313.15 (no change)
-- Both assets stable since last analysis
-- Still trading above support levels
-- No significant volatility detected
+RECENT TRADES (from trading_bot_clean.log):
+1. 10:14:33 - Gemini buy filled at 74319.47 (BTC)
+2. 10:14:37 - Gemini buy filled at 74332.65 (BTC)
+3. 10:18:29 - Gemini buy filled at 74308.79 (BTC)
+4. 10:20:26 - Gemini buy filled at 74308.0 (BTC)
+5. 10:21:21 - LLM_Analysis_BTC_USD buy filled at 74335.92 (BTC)
+6. 10:21:22 - LLM_Analysis_ETH_USD buy filled at 2331.78 (ETH)
+7. 10:21:23 - LLM_Analysis_SOL_USD sell filled at 94.952 (SOL)
+8. 10:21:28 - Gemini buy filled at 74334.94 (BTC)
+9. 10:21:34 - Gemini buy filled at 74325.97 (BTC)
+10. 10:21:59 - Gemini buy filled at 74332.4 (BTC)
 
-=== DRAWDOWN ANALYSIS ===
-Maximum Drawdown Potential:
-- BTC/USD: Current position could lose $9.57 before stop-loss (-4.81%)
-- ETH/USD: Current position could lose $8.93 before stop-loss (-4.50%)
-- Total potential loss before stops: $18.50 (4.63% of exposure)
-- Acceptable risk level: Within 5% stop-loss parameters
+🚨🚨🚨 CRITICAL DATA DISCREPANCY ALERT 🚨🚨🚨
+- Dashboard shows: $0.00 P&L, $1,000.00 capital
+- Alert logs show: -$9,548.70 losses from previous session
+- Trading bot logs show: Multiple successful trades earlier today (10:14-11:19)
+- System appears to have been reset without proper loss accounting
+- Previous stop-loss triggered at 18:36:28 (-2.04% loss)
+- Multiple system outages reported earlier today (total ~9.5+ hours offline)
 
-=== RECOMMENDATIONS ===
-1. MONITOR market for moves toward critical support levels
-2. WAIT for daily trade limit reset before new positions
-3. CREATE strategy file for /strategy endpoint (currently missing)
-4. CONSIDER adjusting position sizes if volatility increases
-5. WATCH for any system alerts or failures
-6. CHECK for any server downtime or connectivity issues
+🚨 NEW FINDINGS FROM TRADING BOT LOGS:
+1. Multiple "insufficient funds" errors for ETH sell orders (10:30:02, 10:32:35, 10:55:41, 11:13:19)
+2. Strategy errors: Missing llm_strategies.json file
+3. Multiple bot restarts throughout the day (5:18, 5:19, 5:20, 5:21, 7:57, 8:13)
+4. Active trading between 10:14-11:19 with multiple filled orders
 
-=== NEXT CHECK ===
-Scheduled for: 2026-03-18 19:12:41 (in 1 hour)
+ALERT STATUS:
+- ⚠️ DATA INTEGRITY COMPROMISED - System operating with reset data
+- ⚠️ Actual capital unknown - Dashboard may show incorrect balance
+- ⚠️ Loss history appears to have been cleared
+- ⚠️ Trading bot shows "insufficient funds" errors for ETH sells
+- No current stop-loss triggers detected (based on reset data)
+- No take-profit triggers detected
+- Max daily trade limit reached (2/2)
+
+DRAWDOWN ANALYSIS:
+- ⚠️ EXTREME RISK - Trading with unclear P&L history
+- ⚠️ "Insufficient funds" errors suggest actual capital may be lower than shown
+- Previous session showed significant losses (-$9,548.70)
+- Risk management compromised due to data discrepancy
+- Multiple system restarts indicate instability
+
+🚨🚨🚨 CRITICAL ISSUES SUMMARY 🚨🚨🚨
+1. DATA DISCREPANCY: Port 5001 shows $0.00 P&L, but alert logs show -$9,548.70 losses
+2. DUAL SYSTEMS: Two separate dashboards (port 5001 active, port 5080 stopped)
+3. INSUFFICIENT FUNDS: Trading bot logs show failed ETH sell orders due to lack of funds
+4. SYSTEM INSTABILITY: Multiple restarts and outages throughout the day (~9.5+ hours total)
+5. MISSING FILES: llm_strategies.json file missing causing strategy errors
+6. DATA INTEGRITY: Loss history appears to have been cleared/reset
+
+🚨🚨🚨 URGENT RECOMMENDATIONS 🚨🚨🚨
+1. IMMEDIATELY VERIFY actual exchange account balance and P&L
+2. PAUSE ALL TRADING until data integrity is verified
+3. INVESTIGATE dual system configuration (ports 5001 vs 5080)
+4. RECONCILE dashboard data with actual trading account
+5. FIX "insufficient funds" errors and missing llm_strategies.json
+6. INVESTIGATE system reset and loss history clearing
+7. CONSIDER complete system shutdown until stability is confirmed
+8. AUDIT all trading scripts and ensure only one system is active
 
 === END OF REPORT ===
-
-2026-03-18 18:12:41,642 - INFO - Dashboard monitoring completed successfully
-2026-03-18 18:12:41,642 - INFO - System status: running, Last analysis: 2026-03-18T18:00:06.659594
-2026-03-18 18:12:41,642 - INFO - Capital: $1000.00, Stop-loss: 5.0%, Take-profit: 10.0%
-2026-03-18 18:12:41,642 - INFO - Today's trades: 2/2 (max daily trades reached)
-2026-03-18 18:12:41,642 - INFO - BTC/USD: $73,944.11 (BUY signal, confidence: 70%)
-2026-03-18 18:12:41,642 - INFO - ETH/USD: $2,313.15 (BUY signal, confidence: 70%)
-2026-03-18 18:12:41,642 - INFO - Open positions: 2 (BTC/USD -$0.43, ETH/USD -$1.07)
-2026-03-18 18:12:41,642 - INFO - Total P&L: -$1.50 (-0.38% on exposure)
-2026-03-18 18:12:41,642 - INFO - No critical alerts detected=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 18:15:20 UTC (2026-03-18 18:15:20 Asia/Bangkok)
-Dashboard Status: running
-Last Analysis: 2026-03-18T18:00:06.659594
-
-=== RISK PARAMETERS ===
-Capital: $1000.00
-Stop-loss: 5.0%
-Take-profit: 10.0%
-Max trades per day: 2
-Trading pairs: BTC/USD, ETH/USD
-
-=== CURRENT MARKET ANALYSIS ===
-BTC/USD:
-  Current Price: $73944.11
-  Signal: BUY (Confidence: 70%)
-  Support: $73746.71
-  Resistance: $74683.70
-  Status: Max daily trades reached (2/2)
-
-ETH/USD:
-  Current Price: $2313.15
-  Signal: BUY (Confidence: 70%)
-  Support: $2309.06
-  Resistance: $2350.29
-  Status: Max daily trades reached (2/2)
-
-=== RECENT TRADES ===
-Total trades: 12
-Today's trades executed: 2/2
-Most recent trades:
-  1. 15:05:29 - BUY 0.00013515 BTC @ $73990.75 (Gemini-Pro)
-  2. 15:05:28 - BUY 0.00013523 BTC @ $73950.01 (Gemini-Pro)
-  3. 10:21:28 - BUY 0.00013453 BTC @ $74334.94 (Gemini)
-
-=== PERFORMANCE METRICS ===
-Total P&L: $0.00
-Available capital: $1000.00
-Drawdown analysis: No significant drawdown detected
-Stop-loss triggers: None detected
-Take-profit triggers: None detected
-
-=== ALERT STATUS ===
-No critical alerts at this time.
-System operating within normal parameters.
-
-=== RECOMMENDATIONS ===
-1. Monitor BTC/USD position near support ($73746.71)
-2. Monitor ETH/USD position near support ($2309.06)
-3. Max daily trades reached - no new trades until reset

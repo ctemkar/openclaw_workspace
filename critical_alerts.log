@@ -1,101 +1,11 @@
-=== Critical Alerts Log ===
-Timestamp: 2026-03-18 18:12:45 (Asia/Bangkok)
-
-🟢 SYSTEM STATUS: NORMAL - No Critical Alerts
-
-System Components Status:
-✅ TRADING SERVER: RUNNING (port 5001 active)
-✅ DASHBOARD: OPERATIONAL (serving data on port 5001)
-✅ MARKET DATA: AVAILABLE (dashboard analysis functional)
-✅ ANALYSIS: Last run at 2026-03-18T18:00:06 (12 minutes ago)
-⚠️ STRATEGY: No strategy file found (endpoint returns error)
-
-Open Positions Status:
-1. BTC/USD BUY @ $74,094.64 (13:39:48)
-   - Current: $73,944.11 (-0.21%)
-   - Position Value: $199.57
-   - Entry Value: $200.00
-   - P&L: -$0.43 (-0.21%)
-   - Stop-loss: $70,389.91 (-5.0%)
-   - Buffer to SL: 4.81% (SAFE - needs -4.81% drop to trigger)
-   - Take-profit: $81,504.10 (+10.0%)
-   - Progress to TP: -0.21% (needs +10.21% gain to trigger)
-
-2. ETH/USD BUY @ $2,325.28 (13:39:49)
-   - Current: $2,313.15 (-0.54%)
-   - Position Value: $198.93
-   - Entry Value: $200.00
-   - P&L: -$1.07 (-0.54%)
-   - Stop-loss: $2,209.02 (-5.0%)
-   - Buffer to SL: 4.50% (SAFE - needs -4.50% drop to trigger)
-   - Take-profit: $2,557.81 (+10.0%)
-   - Progress to TP: -0.54% (needs +10.57% gain to trigger)
-
-Risk Assessment:
-⚠️ LOW RISK: Both positions slightly negative (-$1.50 total)
-🟢 LOW RISK: Far from stop-loss triggers (>4.5% buffer)
-🟢 LOW RISK: No drawdown indicators
-🟢 LOW RISK: System components operational
-⚠️ MEDIUM RISK: Max daily trades reached (2/2) - no new trades possible today
-⚠️ MEDIUM RISK: No strategy file found - using default parameters
-
-Trading Limits:
-- Daily trades: 2/2 (LIMIT REACHED - no new trades today)
-- Capital: $1,000.00 (full amount available)
-- Exposure: $400.00 (40% of capital in positions)
-- Current Portfolio Value: $398.50 (-0.38% on exposure)
-- Stop-loss: 5.0% (active on all positions)
-- Take-profit: 10.0% (active on all positions)
-
-Market Conditions (from latest analysis):
-- BTC/USD: $73,944.11
-  - Signal: BUY (70% confidence)
-  - Support: $73,746.71 (current: +0.27% above support)
-  - Resistance: $74,683.70 (current: +1.00% to resistance)
-  - Status: Skipped (max daily trades reached)
-
-- ETH/USD: $2,313.15
-  - Signal: BUY (70% confidence)
-  - Support: $2,309.06 (current: +0.18% above support)
-  - Resistance: $2,350.29 (current: +1.61% to resistance)
-  - Status: Skipped (max daily trades reached)
-
-Critical Levels Monitoring:
-BTC/USD:
-  - Stop-loss trigger: $70,389.91 (current: $73,944.11, -4.81% needed)
-  - Take-profit trigger: $81,504.10 (current: $73,944.11, +10.21% needed)
-  - Critical support: $73,746.71 (current: +0.27%)
-
-ETH/USD:
-  - Stop-loss trigger: $2,209.02 (current: $2,313.15, -4.50% needed)
-  - Take-profit trigger: $2,557.81 (current: $2,313.15, +10.57% needed)
-  - Critical support: $2,309.06 (current: +0.18%)
-
-Price Movement Analysis:
-- BTC/USD: Stable at $73,944.11 (no change since last analysis)
-- ETH/USD: Stable at $2,313.15 (no change since last analysis)
-- Both assets stable with no significant movement
-- Still trading above support levels
-- Market conditions: CALM with minimal volatility
-
-Drawdown Analysis:
-- Maximum potential loss before stops: $18.50 (4.63% of exposure)
-- Current unrealized loss: $1.50 (-0.38% on exposure)
-- Risk/Reward ratio: 1:2 (5% stop-loss vs 10% take-profit)
-- Position sizing: $200 per position (20% of capital each)
-
-=== NO IMMEDIATE ACTION REQUIRED ===
-All systems operational. Positions within safe parameters.
-No stop-loss or take-profit triggers detected.
-No critical drawdown indicators.
-
-⚠️ RECOMMENDATIONS:
-1. Create a strategy file for /strategy endpoint to avoid "No strategy file found" error
-2. Monitor for daily trade limit reset (tomorrow)
-3. Continue hourly monitoring for risk alerts
-4. Consider reviewing position sizing strategy
-5. Check server connectivity if dashboard becomes unresponsive
-
-System monitoring active. Next check in 1 hour.
-
-=== End of Status Update ===
+[2026-03-18 18:53:12] 🚨🚨🚨 DUAL TRADING SYSTEM DETECTED! 🚨🚨🚨
+[2026-03-18 18:53:12] CRITICAL - TWO SEPARATE DASHBOARDS FOUND:
+[2026-03-18 18:53:12] CRITICAL - Port 5001: Active trading dashboard showing live data
+[2026-03-18 18:53:12] CRITICAL - Port 5080: Flask dashboard showing trading script as STOPPED
+[2026-03-18 18:53:12] CRITICAL - ⚠️ TWO SYSTEMS MAY BE OPERATING INDEPENDENTLY
+[2026-03-18 18:53:12] CRITICAL - ⚠️ PORT 5080 STATUS: STOPPED, LLM Status: READY (18:53:02)
+[2026-03-18 18:53:12] CRITICAL - ⚠️ PORT 5001 STATUS: RUNNING, Capital: $1,000.00 (potentially inaccurate)
+[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: INVESTIGATE DUAL SYSTEM CONFIGURATION
+[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: DETERMINE WHICH SYSTEM IS ACTUALLY TRADING
+[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: ENSURE ONLY ONE TRADING SYSTEM IS ACTIVE
+[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: RISK OF DUPLICATE OR CONFLICTING TRADES

@@ -1,66 +1,63 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 10:26:19 (Asia/Bangkok)
-Monitoring Period: 10:24 AM - 10:26 AM
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-18 18:42:06 (Asia/Bangkok)
 
-=== DASHBOARD STATUS ===
-✅ Dashboard: ACTIVE (Port 5001 → Redirects to 64483)
-✅ Trading Bot: RUNNING (Multiple instances detected)
-✅ LLM Analysis: ACTIVE (Generating strategies)
+SYSTEM STATUS:
+✅ Dashboard: Running on port 5001
+✅ Last Analysis: 2026-03-18T18:28:38 (13 minutes ago)
+✅ Analysis Schedule: Hourly
+✅ System Status: Running
+✅ Trading Pairs: BTC/USD, ETH/USD
 
-=== MARKET DATA (Current) ===
-• BTC/USD: $74,496 (+0.26% from last check)
-• ETH/USD: $2,338.56 (+0.29% from last check)
-• SOL/USD: $95.11 (+0.17% from last check)
+TRADING CONFIGURATION:
+- Capital: $1,000.00
+- Stop Loss: 5.0%
+- Take Profit: 10.0%
+- Max Trades/Day: 2
+- Current Daily Trades: 2/2 (LIMIT REACHED)
 
-=== PORTFOLIO STATUS ===
-• BTC Holdings: 0.00228399 BTC
-• Average Entry Price: $74,431.25
-• Current BTC Value: $170.08
-• BTC Investment: $170.00
-• Unrealized P&L: +$0.08 (+0.05%)
-• Total Trades Executed: 19
+MARKET ANALYSIS:
+BTC/USD: $73,795.60 (BUY signal, 70% confidence)
+  - SMA 10: $74,118.78 | SMA 20: $74,226.51
+  - Support: $73,746.71 | Resistance: $74,683.70
+  - Status: ⏸️ Skipped - Max daily trades reached
 
-=== RISK PARAMETERS ===
-• Stop Loss: $73,686.93 (1.0% below entry)
-• Take Profit: $75,919.87 (2.0% above entry)
-• Current Price vs Stop Loss: 1.09% ABOVE (Safe)
-• Current Price vs Take Profit: 0.10% BELOW (Approaching)
+ETH/USD: $2,307.89 (BUY signal, 70% confidence)
+  - SMA 10: $2,325.56 | SMA 20: $2,326.57
+  - Support: $2,309.06 | Resistance: $2,350.29
+  - Status: ⏸️ Skipped - Max daily trades reached
 
-=== RECENT TRADING ACTIVITY ===
-Recent successful trades (last 10 minutes):
-1. 10:24:23 - LLM_Analysis_BTC_USD - BUY @ $74,502.32
-2. 10:24:23 - LLM_Analysis_ETH_USD - BUY @ $2,338.60
-3. 10:24:24 - LLM_Analysis_SOL_USD - SELL @ $95.354
-4. 10:22:36 - Gemini - BUY @ $74,350.00
-5. 10:22:30 - Gemini - BUY @ $74,349.96
+TRADING ACTIVITY:
+- Total trades in system: 12
+- Today's trades executed: 2/2
+- Recent trades (last 2):
+  1. 13:39:48 - BTC/USD BUY at $74,094.64 (0.002699 BTC)
+  2. 13:39:49 - ETH/USD BUY at $2,325.28 (0.086 ETH)
 
-LLM Strategy Generation (last 10 minutes):
-• 10:24:18 - Generated 3 strategies (BTC: BUY, ETH: BUY, SOL: SELL)
-• All strategies with 65% confidence level
+PERFORMANCE METRICS:
+- Today's trades executed: 2/2
+- Total trades: 2
+- Total P&L: $0.00
+- Available capital: $1,000.00
 
-=== CRITICAL ALERTS ===
-🚨 STRATEGY ERRORS DETECTED:
-• Error: "No such file or directory: '/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json'"
-• Impact: Bot may not be loading LLM strategies correctly
-• Last occurrence: 10:14:37
+🚨 CRITICAL ALERTS:
+1. DATA DISCREPANCY: Dashboard shows $0.00 P&L, but alert logs show -$9,548.70 losses
+2. SYSTEM RESET DETECTED: Trading system appears to have been reset without proper loss accounting
+3. PREVIOUS STOP-LOSS TRIGGERED: At 18:36:28 with -2.04% loss (exceeding -1.0% threshold)
+4. SYSTEM OUTAGES: Multiple major outages today (total ~9.5+ hours)
+5. LOSS ACCUMULATION: Previous losses increased during outages
 
-⚠️ RISK STATUS:
-• BTC price approaching take-profit threshold (0.10% away)
-• No stop-loss triggers detected
-• Portfolio in slight profit (+0.05%)
+RISK ASSESSMENT:
+⚠️ HIGH RISK - Data integrity compromised
+⚠️ MEDIUM RISK - System stability issues (previous outages)
+⚠️ LOW RISK - Current trading limits being respected
+⚠️ HIGH RISK - Loss history may have been cleared
 
-=== RECOMMENDATIONS ===
-1. IMMEDIATE: Fix missing llm_strategies.json file to resolve strategy errors
-2. MONITOR: BTC price approaching take-profit at $75,919.87
-3. CONSIDER: Adjust take-profit level if bullish momentum continues
-4. VERIFY: All trading bot instances are functioning correctly
+RECOMMENDED ACTIONS:
+1. ⚠️ URGENT: Investigate data discrepancy between dashboard and alert logs
+2. ⚠️ URGENT: Verify if trading system was reset or data cleared
+3. Monitor for next scheduled analysis at ~19:28
+4. Consider system audit to verify actual P&L
+5. Review system stability and outage patterns
 
-=== NEXT CHECK ===
-Scheduled for: 10:30 AM (4 minutes from now)
-
-=== SYSTEM HEALTH ===
-• Dashboard: ✅ Healthy
-• Trading Bot: ⚠️ Warning (Strategy errors)
-• LLM Analysis: ✅ Healthy
-• Market Data: ✅ Current
-• Logging: ✅ Active
+NEXT SCHEDULED ANALYSIS: ~19:28 (in ~46 minutes)

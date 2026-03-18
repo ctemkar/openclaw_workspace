@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-03-18T18:30:47+07:00",
+  "dashboard_status": {
+    "url": "http://localhost:5001/",
+    "reachable": true,
+    "trading_api_url": "http://localhost:5080/",
+    "trading_api_reachable": true
+  },
+  "trading_data": {
+    "total_trades": 12,
+    "trades_by_model": {
+      "Gemini-Pro": 2,
+      "Gemini": 5,
+      "LLM_Analysis_SOL_USD": 1,
+      "LLM_Analysis_ETH_USD": 1,
+      "LLM_Analysis_BTC_USD": 1,
+      "unknown": 2
+    },
+    "trades_by_asset": {
+      "BTC": 2,
+      "ETH": 2,
+      "SOL": 1
+    },
+    "price_analysis": {
+      "btc_avg_price": 74215.28,
+      "btc_price_range": [74094.64, 74335.92],
+      "eth_avg_price": 2328.53,
+      "eth_price_range": [2325.28, 2331.78]
+    }
+  },
+  "strategy_analysis": {
+    "capital": 1000.00,
+    "stop_loss_percent": 5.0,
+    "take_profit_percent": 10.0,
+    "max_trades_per_day": 2,
+    "symbols": ["BTC/USD", "ETH/USD"],
+    "today_trades_executed": 2,
+    "today_trades_limit": 2,
+    "total_trades": 2,
+    "total_pnl": 0.00,
+    "available_capital": 1000.00
+  },
+  "risk_assessment": {
+    "dashboard_parameters": {
+      "stop_loss": 5.0,
+      "take_profit": 10.0
+    },
+    "trading_api_parameters": {
+      "stop_loss": 1.0,
+      "take_profit": 2.0
+    },
+    "current_conditions": {
+      "btc_entry_price": 74335.92,
+      "btc_current_price": 74094.64,
+      "btc_drawdown_percent": 0.32,
+      "btc_stop_loss_price": 70619.12,
+      "btc_take_profit_price": 81769.51,
+      "stop_loss_triggered": false,
+      "take_profit_triggered": false,
+      "drawdown_critical": false,
+      "max_daily_trades_reached": true
+    }
+  },
+  "alerts": {
+    "critical_alerts": [],
+    "warnings": ["Max daily trades reached (2/2)"],
+    "info": ["BTC drawdown at 0.32% (safe)", "ETH drawdown minimal", "Trading system operational"]
+  }
+}
