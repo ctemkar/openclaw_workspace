@@ -1,352 +1,70 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 19:41:06 (Asia/Bangkok)
-Dashboard Status: ✅ ONLINE (http://localhost:5001/)
+=== Trading Monitoring Update: Wed Mar 18 20:07:24 +07 2026 ===
 
-SYSTEM STATUS:
-- Dashboard Server: ✅ RUNNING
-- Last Analysis: 2026-03-18T19:28:50.848289
-- Analysis Schedule: hourly
-- Capital: $1,000.00
-- Status: running
+**SYSTEM STATUS CHECK:**
+✅ Trading Dashboard: http://localhost:5001/ - RUNNING (200 OK)
+System Name: Conservative Crypto Trading System
+Status: running
+Capital: $1,000.00
+Last Analysis: 2026-03-18T19:28:50.848289 (approx 39 minutes ago)
+Next Analysis: Scheduled hourly
 
-RISK PARAMETERS:
+**RISK PARAMETERS:**
 - Stop-loss: 5.0%
 - Take-profit: 10.0%
 - Max trades/day: 2
-- Trading Pairs: BTC/USD, ETH/USD
+- Trading pairs: BTC/USD, ETH/USD
 
-TRADING ACTIVITY:
-- Total trades recorded: 12
-- Today's trades executed: 2/2 (max reached)
-- Recent trades (last 2):
-  1. BTC/USD BUY at $74,094.64 (13:39:48) - Near support level
-  2. ETH/USD BUY at $2,325.28 (13:39:49) - Near support level
+**TRADING ACTIVITY:**
+Total trades executed: 12 trades in history
+Today's trades: 2/2 (max daily limit reached)
+Recent trades (last 2):
+1. BTC/USD BUY @ $74,094.64 (13:39:48) - Near support level
+2. ETH/USD BUY @ $2,325.28 (13:39:49) - Near support level
 
-CURRENT MARKET ANALYSIS (from last run):
-- BTC/USD: $72,837.94
-  - Signal: BUY (70% confidence)
-  - Support: $72,842.90
-  - Resistance: $74,683.70
-  - Status: ⏸️ Skipping (max daily trades reached)
+**MARKET ANALYSIS (from /summary):**
+BTC/USD Analysis:
+- Current Price: $72,837.94
+- SMA 10: $74,003.23
+- SMA 20: $74,177.14
+- Support: $72,842.90
+- Resistance: $74,683.70
+- Signal: BUY (Confidence: 70%)
+- Status: ⏸️ Skipping - Max daily trades reached
 
-- ETH/USD: $2,260.75
-  - Signal: BUY (70% confidence)
-  - Support: $2,264.58
-  - Resistance: $2,350.29
-  - Status: ⏸️ Skipping (max daily trades reached)
+ETH/USD Analysis:
+- Current Price: $2,260.75
+- SMA 10: $2,319.97
+- SMA 20: $2,324.28
+- Support: $2,264.58
+- Resistance: $2,350.29
+- Signal: BUY (Confidence: 70%)
+- Status: ⏸️ Skipping - Max daily trades reached
 
-PERFORMANCE SUMMARY:
-- Total P&L: $0.00
+**PERFORMANCE METRICS:**
+- Total P&L: $0.00 (no closed positions showing profit/loss)
 - Available capital: $1,000.00
-- Today's trades: 2/2 executed
+- All trades status: "filled" (no pending orders)
 
-⚠️ ALERT STATUS:
-- Stop-loss orders: NOT TRIGGERED (current system)
-- Take-profit orders: NOT TRIGGERED
-- Max daily trades: REACHED (2/2)
-- System health: ✅ Normal
+**PROCESS STATUS:**
+Active Python processes related to trading:
+1. trading_server.py (PID: 53049) - Main server on port 5001
+2. app.py (PID: 51479) - Possibly related application
+3. crypto_trading_llm_live.py (PID: 62182) - Live trading script
+4. crypto_trading_llm_live.py (PID: 59845) - Additional instance
 
-⚠️ CONFLICTING DATA DETECTED:
-The dashboard shows a $1,000 capital system with 2 trades today, but previous logs indicate a much larger system ($298K+) with significant losses. This appears to be a different trading system or a test environment.
+**ALERT CHECK:**
+- No stop-loss triggers detected
+- No take-profit triggers detected
+- No critical drawdown alerts
+- All trades within risk parameters
+- Max daily trades limit reached (normal operation)
 
-RECOMMENDATIONS:
-1. Verify which trading system is active
-2. Confirm capital allocation matches expectations
-3. Monitor for any stop-loss triggers on the $1,000 system
-4. Next analysis scheduled in ~48 minutes
+**SYSTEM INTEGRITY:**
+✅ All endpoints responding:
+- /status - OK
+- /trades - OK (12 trades)
+- /summary - OK
+- /analysis - Available
+- /strategy - Returns error (no strategy file found)
 
-============================================= TRADING MONITORING CHECK: 2026-03-18 19:45:23 +07 ===
-Dashboard URL: http://localhost:5001
-Active Port: 5001
-
---- DASHBOARD STATUS ---
-{
-    "analysis_scheduled": "hourly",
-    "capital": 1000.0,
-    "last_analysis": "2026-03-18T19:28:50.848289",
-    "port": 5001,
-    "risk_parameters": {
-        "max_trades_per_day": 2,
-        "stop_loss": 0.05,
-        "take_profit": 0.1
-    },
-    "status": "running",
-    "timestamp": "2026-03-18T19:45:23.905663",
-    "trading_pairs": [
-        "BTC/USD",
-        "ETH/USD"
-    ]
-}
-
---- RECENT TRADES ---
-{
-    "count": 12,
-    "timestamp": "2026-03-18T19:45:23.936149",
-    "trades": [
-        {
-            "amount": 0.00013515202913877747,
-            "model": "Gemini-Pro",
-            "price": 73990.75,
-            "side": "buy",
-            "status": "filled",
-            "time": "15:05:29"
-        },
-        {
-            "amount": 0.00013522648610865638,
-            "model": "Gemini-Pro",
-            "price": 73950.01,
-            "side": "buy",
-            "status": "filled",
-            "time": "15:05:28"
-        },
-        {
-            "amount": 0.00013452624028485123,
-            "model": "Gemini",
-            "price": 74334.94,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:21:28"
-        },
-        {
-            "amount": 0.10531637037661135,
-            "model": "LLM_Analysis_SOL_USD",
-            "price": 94.952,
-            "side": "sell",
-            "status": "filled",
-            "time": "10:21:23"
-        },
-        {
-            "amount": 0.00428856924752764,
-            "model": "LLM_Analysis_ETH_USD",
-            "price": 2331.78,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:21:22"
-        },
-        {
-            "amount": 0.0001345244667719186,
-            "model": "LLM_Analysis_BTC_USD",
-            "price": 74335.92,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:21:21"
-        },
-        {
-            "amount": 0.0001345750121117511,
-            "model": "Gemini",
-            "price": 74308.0,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:20:26"
-        },
-        {
-            "amount": 0.00013457358140268468,
-            "model": "Gemini",
-            "price": 74308.79,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:18:29"
-        },
-        {
-            "amount": 0.00013453038469636157,
-            "model": "Gemini",
-            "price": 74332.65,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:14:36"
-        },
-        {
-            "amount": 0.00013455424265000813,
-            "model": "Gemini",
-            "price": 74319.47,
-            "side": "buy",
-            "status": "filled",
-            "time": "10:14:33"
-        },
-        {
-            "price": 74094.64,
-            "quantity": 0.002699,
-            "reason": "Near support level: $73556.12 (current: $74094.64)",
-            "side": "BUY",
-            "symbol": "BTC/USD",
-            "time": "13:39:48"
-        },
-        {
-            "price": 2325.28,
-            "quantity": 0.086,
-            "reason": "Near support level: $2308.08 (current: $2325.28)",
-            "side": "BUY",
-            "symbol": "ETH/USD",
-            "time": "13:39:49"
-        }
-    ]
-}
-
---- MARKET PRICES ---
-{
-  "BTC": 72411.57,
-  "ETH": 2240.76,
-  "SOL": 90.51,
-  "timestamp": "2026-03-18 19:45:30 +07"
-}
-
---- LARGE SYSTEM POSITION ANALYSIS ---
-Found 4 potential large trades:
-  - {'time': '10:21:23', 'model': 'LLM_Analysis_SOL_USD', 'side': 'sell', 'price': 94.952, 'amount': 0.10531637037661135, 'status': 'filled'}
-  - {'time': '10:21:22', 'model': 'LLM_Analysis_ETH_USD', 'side': 'buy', 'price': 2331.78, 'amount': 0.00428856924752764, 'status': 'filled'}
-  - {'symbol': 'BTC/USD', 'side': 'BUY', 'price': 74094.64, 'quantity': 0.002699, 'time': '13:39:48', 'reason': 'Near support level: $73556.12 (current: $74094.64)'}
-  - {'symbol': 'ETH/USD', 'side': 'BUY', 'price': 2325.28, 'quantity': 0.086, 'time': '13:39:49', 'reason': 'Near support level: $2308.08 (current: $2325.28)'}
-
---- CRITICAL ALERTS CHECK ---
-[2026-03-18 19:41:06] ⚠️ MONITORING ALERT: Multiple trading systems detected
-[2026-03-18 19:41:06] ALERT: Active dashboard system ($1,000 capital) shows normal operation
-[2026-03-18 19:41:06] ALERT: Previous logs indicate larger system (~$298K) with significant losses
-[2026-03-18 19:41:06] ALERT: Conflicting data - verify which system is actively trading
-[2026-03-18 19:41:06] ALERT: No stop-loss/take-profit triggers for active $1,000 system
-[2026-03-18 19:41:06] ALERT: Previous critical alerts about larger system may still be relevant
-[2026-03-18 19:41:06] RECOMMENDATION: Investigate status of larger trading system
-[2026-03-18 19:41:06] RECOMMENDATION: Confirm capital allocation across all systems
---- BOT STATUS ---
-chetantemkar     62182   0.0  0.3 435328752  84512   ??  SN    7:39PM   0:00.18 /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python crypto_trading_llm_live.py
-chetantemkar     59845   0.0  0.3 435330784  87408   ??  SN    6:34PM   0:00.30 /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python ./crypto_trading_llm_live.py
-
---- RECENT LOGS ---
-Click to open Dashboard:
-http://127.0.0.1:5001
-
-STATUS: [OK] API is UP
-BOT: [OK] RUNNING
- rename trading_summary_20260318_0918.txt => reports/weekly/trading_summary_20260318_0918.txt (100%)
- rename trading_summary_20260318_1104.txt => reports/weekly/trading_summary_20260318_1104.txt (100%)
- create mode 100644 trading_data_processing_summary.md
- create mode 100644 trading_summary_latest.txt
-fatal: could not read Username for 'https://github.com': Device not configured
-
-=== END OF MONITORING CHECK ===
-
-=== TRADING MONITORING CHECK: 2026-03-18 19:49:13 (Asia/Bangkok) ===
-Dashboard: http://localhost:5001/
-
---- SYSTEM STATUS ---
-{
-  "analysis_scheduled": "hourly",
-  "capital": 1000.0,
-  "last_analysis": "2026-03-18T19:28:50.848289",
-  "port": 5001,
-  "risk_parameters": {
-    "max_trades_per_day": 2,
-    "stop_loss": 0.05,
-    "take_profit": 0.1
-  },
-  "status": "running",
-  "timestamp": "2026-03-18T19:49:13.895918",
-  "trading_pairs": [
-    "BTC/USD",
-    "ETH/USD"
-  ]
-}
-
---- RECENT TRADES ---
-Total trades: 12
-[
-  {
-    "amount": 0.00013515202913877747,
-    "model": "Gemini-Pro",
-    "price": 73990.75,
-    "side": "buy",
-    "status": "filled",
-    "time": "15:05:29"
-  },
-  {
-    "amount": 0.00013522648610865638,
-    "model": "Gemini-Pro",
-    "price": 73950.01,
-    "side": "buy",
-    "status": "filled",
-    "time": "15:05:28"
-  },
-  {
-    "amount": 0.00013452624028485123,
-    "model": "Gemini",
-    "price": 74334.94,
-    "side": "buy",
-    "status": "filled",
-    "time": "10:21:28"
-  },
-  {
-    "amount": 0.10531637037661135,
-    "model": "LLM_Analysis_SOL_USD",
-    "price": 94.952,
-    "side": "sell",
-    "status": "filled",
-    "time": "10:21:23"
-  },
-  {
-    "amount": 0.00428856924752764,
-    "model": "LLM_Analysis_ETH_USD",
-    "price": 2331.78,
-    "side": "buy",
-    "status": "filled",
-    "time": "10:21:22"
-  }
-]
-
---- TRADING SUMMARY ---
-<pre>TRADING ANALYSIS REPORT
-Generated: 2026-03-18 19:28:50.848203
-==================================================
-
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
-
-🔍 Analyzing BTC/USD...
-   Price: $72837.94
-   24h Change: N/A
-   SMA 10: $74003.23
-   SMA 20: $74177.14
-   Support: $72842.90
-   Resistance: $74683.70
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $72842.90 (current: $72837.94)
-   ⏸️ Skipping: Max daily trades reached
-
-🔍 Analyzing ETH/USD...
-   Price: $2260.75
-   24h Change: N/A
-   SMA 10: $2319.97
-   SMA 20: $2324.28
-   Support: $2264.58
-   Resistance: $2350.29
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2264.58 (current: $2260.75)
-   ⏸️ Skipping: Max daily trades reached
-
-📈 Trading Summary:
-   Today's trades executed: 2/2
-   Total trades: 2
-   Total P&L: $0.00
-   Available capital: $1000.00
-
-✅ Analysis complete. Next run in 1 hour.
-</pre>
-
---- POSITION ANALYSIS ---
-BTC Position: 0.00283352 BTC
-  Invested: $209.98
-  Current Value: $206.39
-  P&L: $-3.59 (-1.71%)
-ETH Position: 0.09028857 ETH
-  Invested: $209.97
-  Current Value: $204.12
-  P&L: $-5.85 (-2.79%)
-
---- CRITICAL ALERTS CHECK ---
-[CURRENT_TIME] BTC Status - Loss: 1.71%, below 5.00% threshold
-[CURRENT_TIME] ETH Status - Loss: 2.79%, below 5.00% threshold
-[CURRENT_TIME] ⚠️ WARNING - Max daily trades reached (12/2)
-
-=== END OF MONITORING CHECK ===
+=== Monitoring complete at Wed Mar 18 20:07:24 +07 2026 ===
