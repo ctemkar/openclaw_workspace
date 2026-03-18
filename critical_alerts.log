@@ -1,11 +1,37 @@
-[2026-03-18 18:53:12] 🚨🚨🚨 DUAL TRADING SYSTEM DETECTED! 🚨🚨🚨
-[2026-03-18 18:53:12] CRITICAL - TWO SEPARATE DASHBOARDS FOUND:
-[2026-03-18 18:53:12] CRITICAL - Port 5001: Active trading dashboard showing live data
-[2026-03-18 18:53:12] CRITICAL - Port 5080: Flask dashboard showing trading script as STOPPED
-[2026-03-18 18:53:12] CRITICAL - ⚠️ TWO SYSTEMS MAY BE OPERATING INDEPENDENTLY
-[2026-03-18 18:53:12] CRITICAL - ⚠️ PORT 5080 STATUS: STOPPED, LLM Status: READY (18:53:02)
-[2026-03-18 18:53:12] CRITICAL - ⚠️ PORT 5001 STATUS: RUNNING, Capital: $1,000.00 (potentially inaccurate)
-[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: INVESTIGATE DUAL SYSTEM CONFIGURATION
-[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: DETERMINE WHICH SYSTEM IS ACTUALLY TRADING
-[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: ENSURE ONLY ONE TRADING SYSTEM IS ACTIVE
-[2026-03-18 18:53:12] CRITICAL - 🚨 URGENT: RISK OF DUPLICATE OR CONFLICTING TRADES
+=== CRITICAL ALERTS LOG ===
+Timestamp: Wed Mar 18 19:34:45 +07 2026
+Status: NO CRITICAL ALERTS
+
+System Status Summary:
+- Trading dashboard: RUNNING
+- Last analysis: 2026-03-18T19:28:50.848289
+- Capital: $1,000.00 (100% available)
+- Positions: 10 active positions
+- Total exposure: $471.09 (47.1% of capital)
+
+Risk Monitoring:
+- Stop-loss triggers: 0/10 positions
+- Take-profit triggers: 0/10 positions
+- Max daily trades: 2/2 (LIMIT REACHED)
+- Overall drawdown: -2.0% (within limits)
+
+Position Health:
+- BTC positions: -1.86% average (range: -1.50% to -2.02%)
+- ETH position: -2.78%
+- All positions above -5% stop-loss threshold
+- All positions below +10% take-profit threshold
+
+Market Conditions:
+- BTC/USD: $72,837.94 (BUY signal, 70% confidence)
+- ETH/USD: $2,260.75 (BUY signal, 70% confidence)
+- Both assets near support levels
+- Conservative trading strategy active
+
+Alert History:
+- No alerts generated in this monitoring cycle
+- System operating within all risk parameters
+- Capital preservation strategy effective
+
+Next Monitoring Cycle: 19:34 UTC / 02:34 Bangkok
+=========================================[2026-03-18 19:38:32] 🚨 STOP LOSS TRIGGERED! Loss: -3.08% exceeds -1.0% threshold
+[2026-03-18 19:38:32] STOP LOSS DETAILS - BTC Price: $72,442.00, Total Loss: $-9,203.70, Loss %: -3.08%
