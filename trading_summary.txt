@@ -1,16 +1,15 @@
 Trading Dashboard Monitoring Summary:
 
---- Dashboard Status ---
-Dashboard URL: http://localhost:57260
-Trading Status: RUNNING
-Completed Trades: 4
-
---- Configuration ---
-Capital: $10000
-Stop Loss: 0.03%
-Trade Size: $10
+--- Logged Data ---
+Status: "RUNNING"
+Total Trades: 4
+Configuration: {
+  "capital": 10000,
+  "stop_loss": 0.03,
+  "trade_size": 10
+}
 
 --- Critical Alerts ---
-Found 12 alert(s) in logs
-Latest alerts:
+Last trade at: 04:45:54
+ALERT: Last trade was more than 2 hours ago!
 

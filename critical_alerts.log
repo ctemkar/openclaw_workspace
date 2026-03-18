@@ -1,67 +1,24 @@
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-18 09:18 AM (Asia/Bangkok) / 2026-03-18 02:18 UTC
+[2026-03-18 09:56:00] WARNING - Portfolio Performance Alert
+======================================================
 
-**NO CRITICAL ALERTS DETECTED**
+ALERT LEVEL: WARNING (Non-critical)
 
-**ALERT STATUS SUMMARY:**
-- Stop Loss: NOT TRIGGERED (current -0.62% vs -3.0% threshold)
-- Take Profit: NOT TRIGGERED (current -0.62% vs +2.0% threshold)
-- Critical Drawdown: NOT DETECTED (current -0.62% vs -5.0% threshold)
-- System Errors: NONE detected
+CONDITION:
+- Portfolio is slightly underwater: -0.50% ($0.20 loss)
+- BTC price ($74,383) is below average entry price ($74,756.91)
+- Distance to stop-loss trigger: 2.50%
+- Distance to take-profit trigger: 2.50%
 
-**PORTFOLIO STATUS:**
-- Total BTC Holdings: 0.00053507 BTC
-- Total Investment: $40.00
-- Current Portfolio Value: $39.75
-- Current P&L: -$0.25 (-0.62%)
-- Average Entry Price: $74,756.91
-- Current BTC Price: $74,293.00
+CURRENT STATUS:
+- BTC Holdings: 0.00053507 BTC
+- Portfolio Value: $39.80
+- Investment: $40.00
+- P&L: -$0.20 (-0.50%)
 
-**MARKET CONDITIONS:**
-- BTC/USD: $74,293.00
-- ETH/USD: $2,267.06 (last checked)
-- SOL/USD: $94.10 (last checked)
-- Market Trend: SLIGHTLY BEARISH (-0.62% from entry)
+RECOMMENDED ACTION:
+- Monitor BTC price movement closely
+- No immediate action required as distance to stop-loss is sufficient
+- Consider adjusting entry strategy if trend continues
 
-**RISK ASSESSMENT:**
-- Distance to Stop Loss: 2.38%
-- Distance to Take Profit: 2.62%
-- Distance to Critical Drawdown: 4.38%
-- Risk Level: LOW
-
-**TRADING SYSTEM STATUS:**
-- Trading Bot: SHUTTING DOWN (received termination signal)
-- Dashboard Service: RUNNING on port 59745
-- Gateway: ACTIVE on port 5001 (redirects to 59745)
-- Last Trade Cycle: 09:14 AM (completed)
-- Total Trades: 4 BUY orders executed
-
-**ALERT CONDITIONS MONITORED:**
-1. Stop Loss Trigger: Will activate if loss exceeds -3.0%
-2. Take Profit Trigger: Will activate if profit exceeds +2.0%
-3. Critical Drawdown: Will activate if loss exceeds -5.0%
-4. System Failure: Will activate if trading processes stop unexpectedly
-
-**CURRENT ALERT STATUS:**
-✅ All systems operational
-✅ All risk parameters within limits
-✅ Dashboard accessible
-⚠️ Trading bot shutting down (monitor for restart)
-
-**IMMEDIATE ACTIONS REQUIRED:**
-- None at this time
-
-**RECOMMENDED MONITORING:**
-1. Check if trading bot restarts automatically
-2. Monitor BTC price for significant movements
-3. Review trading logs for any error messages
-4. Verify dashboard remains accessible
-
-**NEXT ALERT CHECK:**
-- Will trigger if drawdown exceeds -3.0% (stop loss)
-- Will trigger if profit exceeds +2.0% (take profit)
-- Will trigger if drawdown exceeds -5.0% (critical)
-- Will trigger if trading processes stop unexpectedly
-- Dashboard accessible at: http://localhost:5001/
-
-=== ALERT CHECK COMPLETE ===
+NEXT CHECK: 10:00 AM
+======================================================

@@ -1,88 +1,49 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-18 09:18 AM (Asia/Bangkok) / 2026-03-18 02:18 UTC
+[2026-03-18 09:56:00] TRADING DASHBOARD MONITORING REPORT
+======================================================
 
-**DASHBOARD STATUS:**
-- Dashboard URL: http://localhost:5001/ (redirects to http://localhost:59745/)
-- Active Port: 59745
-- Dashboard Status: RUNNING
-- Gateway Status: ACTIVE (port 5001)
+SYSTEM STATUS:
+- Trading Dashboard: Running on port 59745 (redirected from 5001)
+- Trading Script: Running (PID: 72293, 67305)
+- Dashboard Accessible: Yes
 
-**TRADING SYSTEM STATUS:**
-- Trading Bot Status: SHUTTING DOWN (received termination signal)
-- Last Active: 09:14 AM (Asia/Bangkok)
-- Total Trades Executed: 4 BUY orders
-- Trading Strategy: LLM-based strategies (Gemini, Claude, OpenAI)
-
-**PORTFOLIO ANALYSIS:**
-- Total BTC Holdings: 0.00053507 BTC
-- Total Investment: $40.00
-- Current Portfolio Value: $39.75
-- Current P&L: -$0.25 (-0.62%)
+PORTFOLIO ANALYSIS:
+- BTC Holdings: 0.00053507 BTC
+- Current BTC Price: $74,383.00
+- Current Portfolio Value: $39.80
+- Investment: $40.00
+- Current P&L: -$0.20 (-0.50%)
 - Average Entry Price: $74,756.91
-- Current BTC Price: $74,293.00
+- Current BTC Price vs Entry: -0.50% (below entry)
 
-**MARKET DATA:**
-- BTC/USD: $74,293.00 (-0.62% from entry)
-- ETH/USD: $2,267.06 (last checked)
-- SOL/USD: $94.10 (last checked)
-- Market Trend: Slightly bearish
+RISK PARAMETERS:
+- Stop Loss: -3.00% (currently at -0.50%, distance: 2.50%)
+- Take Profit: +2.00% (currently at -0.50%, distance: 2.50%)
+- Critical Drawdown: -5.00% (distance: 4.50%)
 
-**TRADING LOGS SUMMARY:**
-- Last trade cycle completed at 09:14 AM
-- All buy conditions not met for current strategies
-- Strategies being monitored:
-  * BTC/USD: Gemini_Momentum_Strategy
-  * ETH/USD: Claude_Sentiment_Strategy
-  * SOL/USD: OpenAI_Volatility_Strategy
-- Trade size: $10.00 per trade
-- Capital allocation: $10,000 (configured)
+TRADING ACTIVITY:
+- Total Trades Today: 4 BUY orders
+- Last Trade: 04:45 AM (Asia/Bangkok)
+- Trade Size: $10.00 per trade
+- Recent Trade Cycles: Completed at 09:09, 09:04, 09:00 AM (no buys)
+- Current Market Sentiment: NEUTRAL (confidence: 50.0%)
+- Recommendation: HOLD
 
-**RISK PARAMETERS:**
-- Stop Loss: -3.0% (current: -0.62%, distance: -2.38%)
-- Take Profit: +2.0% (current: -0.62%, distance: 2.62%)
-- Critical Drawdown: -5.0% (current: -0.62%, distance: -4.38%)
-- Risk Level: LOW
-
-**SYSTEM PROCESSES:**
-- Dashboard Process: PID 95804 (gateway_5001.py)
-- Trading Bot Process: PID 72293 (crypto_trading_llm_live.py)
-- Additional Process: PID 67305 (crypto_trading_llm_live.py)
-
-**RECENT ACTIVITY:**
-- 09:14 AM: Trade cycle completed, bot received termination signal
-- 09:09 AM: Trade cycle completed, all buy conditions not met
-- 09:04 AM: Trade cycle completed, all buy conditions not met
-- 09:00 AM: Trade cycle completed, all buy conditions not met
-
-**ALERT STATUS:**
-- No stop-loss orders triggered
-- No take-profit orders triggered
-- No critical drawdown detected
-- No system errors detected
-
-**RECOMMENDATIONS:**
-1. Monitor BTC price movement for potential recovery
-2. Consider adjusting strategy thresholds if market conditions change
-3. Review trading bot shutdown reason
-4. Check available capital for new trades
-
-**NEXT MONITORING CHECK:**
-- Will check for any new trades or alerts
-- Will monitor portfolio performance against risk thresholds
-- Will verify dashboard accessibility
-
-=== MONITORING COMPLETE ===TRADING DASHBOARD MONITOR - 2026-03-18 09:25:38
-BTC Price: $74,249
-Total BTC Holdings: 0.000535 BTC
-Total Investment: $40.00
-Current Value: $39.73
-P&L: $-0.27 (-0.68%)
-Stop Loss (3%): $38.80
-Take Profit (2%): $40.80
-Critical Drawdown (5%): $38.00
+MARKET DATA:
+- BTC/USD: $74,383.00
+- ETH/USD: $2,333.73
+- SOL/USD: $95.02
 
 ALERT STATUS:
-Stop Loss Triggered: NO
-Take Profit Triggered: NO
-Critical Drawdown: NO
-================================================================================
+✅ No stop-loss orders triggered
+✅ No take-profit orders triggered
+✅ No critical drawdown indicators
+⚠️ Portfolio is slightly underwater (-0.50%)
+⚠️ BTC price below average entry price
+
+RECOMMENDATIONS:
+1. Monitor BTC price movement - currently below entry
+2. Watch for potential stop-loss trigger if BTC drops to $72,512
+3. Watch for take-profit trigger if BTC rises to $76,252
+4. Continue HOLD strategy per current market sentiment
+
+NEXT CHECK: 10:00 AM
