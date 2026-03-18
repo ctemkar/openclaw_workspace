@@ -1,1 +1,82 @@
-[{"time": "15:05:29", "model": "Gemini-Pro", "side": "buy", "price": 73990.75, "amount": 0.00013515202913877747, "status": "filled"}, {"time": "15:05:28", "model": "Gemini-Pro", "side": "buy", "price": 73950.01, "amount": 0.00013522648610865638, "status": "filled"}, {"time": "10:21:28", "model": "Gemini", "side": "buy", "price": 74334.94, "amount": 0.00013452624028485123, "status": "filled"}, {"time": "10:21:23", "model": "LLM_Analysis_SOL_USD", "side": "sell", "price": 94.952, "amount": 0.10531637037661135, "status": "filled"}, {"time": "10:21:22", "model": "LLM_Analysis_ETH_USD", "side": "buy", "price": 2331.78, "amount": 0.00428856924752764, "status": "filled"}, {"time": "10:21:21", "model": "LLM_Analysis_BTC_USD", "side": "buy", "price": 74335.92, "amount": 0.0001345244667719186, "status": "filled"}, {"time": "10:20:26", "model": "Gemini", "side": "buy", "price": 74308.0, "amount": 0.0001345750121117511, "status": "filled"}, {"time": "10:18:29", "model": "Gemini", "side": "buy", "price": 74308.79, "amount": 0.00013457358140268468, "status": "filled"}, {"time": "10:14:36", "model": "Gemini", "side": "buy", "price": 74332.65, "amount": 0.00013453038469636157, "status": "filled"}, {"time": "10:14:33", "model": "Gemini", "side": "buy", "price": 74319.47, "amount": 0.00013455424265000813, "status": "filled"}, {"symbol": "BTC/USD", "side": "BUY", "price": 74094.64, "quantity": 0.002699, "time": "13:39:48", "reason": "Near support level: $73556.12 (current: $74094.64)"}, {"symbol": "ETH/USD", "side": "BUY", "price": 2325.28, "quantity": 0.086, "time": "13:39:49", "reason": "Near support level: $2308.08 (current: $2325.28)"}]
+[
+  {
+    "time": "10:21:22",
+    "model": "LLM_Analysis_ETH_USD",
+    "side": "buy",
+    "price": 2331.78,
+    "amount": 0.00428856924752764,
+    "status": "filled"
+  },
+  {
+    "time": "10:21:21",
+    "model": "LLM_Analysis_BTC_USD",
+    "side": "buy",
+    "price": 74335.92,
+    "amount": 0.0001345244667719186,
+    "status": "filled"
+  },
+  {
+    "time": "10:20:26",
+    "model": "Gemini",
+    "side": "buy",
+    "price": 74308.0,
+    "amount": 0.0001345750121117511,
+    "status": "filled"
+  },
+  {
+    "time": "10:18:29",
+    "model": "Gemini",
+    "side": "buy",
+    "price": 74308.79,
+    "amount": 0.00013457358140268468,
+    "status": "filled"
+  },
+  {
+    "time": "10:14:36",
+    "model": "Gemini",
+    "side": "buy",
+    "price": 74332.65,
+    "amount": 0.00013453038469636157,
+    "status": "filled"
+  },
+  {
+    "time": "10:14:33",
+    "model": "Gemini",
+    "side": "buy",
+    "price": 74319.47,
+    "amount": 0.00013455424265000813,
+    "status": "filled"
+  },
+  {
+    "symbol": "BTC/USD",
+    "side": "BUY",
+    "price": 74094.64,
+    "quantity": 0.002699,
+    "time": "13:39:48",
+    "reason": "Near support level: $73556.12 (current: $74094.64)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2325.28,
+    "quantity": 0.086,
+    "time": "13:39:49",
+    "reason": "Near support level: $2308.08 (current: $2325.28)"
+  },
+  {
+    "symbol": "BTC/USD",
+    "side": "BUY",
+    "price": 71386.0,
+    "quantity": 0.002802,
+    "time": "00:33:00",
+    "reason": "Near support level: $70896.70 (current: $71386.00)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2193.6,
+    "quantity": 0.0912,
+    "time": "00:33:02",
+    "reason": "Near support level: $2167.99 (current: $2193.60)"
+  }
+]

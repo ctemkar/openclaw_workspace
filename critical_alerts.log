@@ -1,25 +1,68 @@
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-19 00:00:48 (Asia/Bangkok)
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-19 00:23:15 (GMT+7)
+Alert Level: HIGH
 
-ALERT STATUS: NO CRITICAL ALERTS DETECTED
+=== ALERT 1: STOP-LOSS THRESHOLD EXCEEDED ===
+Asset: ETH/USD
+Position Details:
+  - Buy Price: $2,331.78 (from trade at 10:21:22)
+  - Current Price: $2,177.16
+  - Drawdown: 6.64%
+  - Stop-loss Threshold: 5.0%
 
-System Status Check:
-- Trading system: Running normally
-- Capital: $1000.00 (100% available)
-- Daily trade limit: 2/2 trades used
-- Stop-loss threshold: 5.0% (not triggered)
-- Take-profit threshold: 10.0% (not triggered)
+Analysis:
+  The ETH/USD position has exceeded the configured 5% stop-loss threshold.
+  Current drawdown of 6.64% indicates significant loss beyond risk parameters.
+  This position should be reviewed immediately for potential liquidation.
 
-Position Analysis:
-- No open positions at critical drawdown levels
-- All recent trades: Filled successfully
-- No failed or rejected trades detected
+Impact:
+  - Capital at risk: Position size 0.00429 ETH (~$9.35 at purchase)
+  - Actual loss: ~$0.62 (6.64% of position)
+  - Exceeds risk tolerance by 1.64 percentage points
 
-Risk Assessment:
-- Current risk level: LOW
-- Capital preservation: 100%
-- Trade execution: Normal
-- Market conditions: Stable
+Recommended Action:
+  1. Execute stop-loss immediately if system supports automatic triggers
+  2. Review trading strategy for ETH/USD pair
+  3. Consider adjusting position sizing or stop-loss levels
+  4. Monitor for potential recovery vs. cutting losses
 
-Next Check: Monitor for any price movements beyond stop-loss/take-profit thresholds
-=== END OF ALERTS LOG ===
+=== ALERT 2: DAILY TRADE LIMIT REACHED ===
+Status: Today's trades executed: 2/2
+Impact: System cannot execute new trades until daily reset
+Risk: Unable to take advantage of new opportunities or manage existing positions
+
+=== ALERT 3: BTC/USD POSITION APPROACHING STOP-LOSS ===
+Asset: BTC/USD
+Position Details:
+  - Average Buy Price: ~$74,000+ (based on recent trades)
+  - Current Price: $71,242.59
+  - Drawdown: ~3.7%
+  - Stop-loss Threshold: 5.0%
+  - Distance to stop-loss: 1.3 percentage points
+
+Analysis:
+  BTC/USD position is approaching stop-loss threshold.
+  At current rate, could trigger stop-loss if price declines further.
+  Requires close monitoring.
+
+=== SYSTEM STATUS SUMMARY ===
+- Capital: $1,000.00
+- Available capital: $1,000.00 (appears to be all capital)
+- Total P&L: $0.00 (likely unrealized losses not reflected)
+- System status: running
+- Next analysis: scheduled hourly
+
+=== URGENT ACTIONS REQUIRED ===
+1. IMMEDIATE: Address ETH/USD stop-loss breach
+2. MONITOR: BTC/USD position approaching stop-loss
+3. REVIEW: Daily trade limit constraints
+4. VERIFY: Actual vs. reported P&L (system shows $0.00 but positions are underwater)
+
+=== ALERT GENERATION COMPLETE ===
+Next check recommended: Within 15 minutes for critical positions
+Alert escalation: Consider manual intervention for ETH/USD position{"timestamp": "2026-03-19T00:24:18.009164", "alert": "Stop-loss order triggered", "type": "CRITICAL"}
+{"timestamp": "2026-03-19T00:24:18.009164", "alert": "Take-profit order triggered", "type": "CRITICAL"}
+{"timestamp": "2026-03-19T00:26:32.260739", "alert": "Stop-loss order triggered", "type": "CRITICAL"}
+{"timestamp": "2026-03-19T00:26:32.260739", "alert": "Take-profit order triggered", "type": "CRITICAL"}
+{"timestamp": "2026-03-19T00:33:12.344956", "alert": "Stop-loss order triggered", "type": "CRITICAL"}
+{"timestamp": "2026-03-19T00:33:12.344956", "alert": "Take-profit order triggered", "type": "CRITICAL"}

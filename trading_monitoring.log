@@ -1,52 +1,75 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-19 00:00:48 (Asia/Bangkok)
-Dashboard Status: http://localhost:5001/
+=== TRADING MONITORING LOG ===
+Timestamp: 2026-03-19 00:23:10 (GMT+7)
+Data fetched from: http://localhost:5001/
 
-SYSTEM STATUS:
-- Status: running
-- Capital: $1000.00
-- Last analysis: 2026-03-18T23:32:51.115471
-- Analysis scheduled: hourly
-- Port: 5001
-- Trading pairs: BTC/USD, ETH/USD
+=== SYSTEM STATUS ===
+Status: running
+Capital: $1000.00
+Last Analysis: 2026-03-18T23:32:51.115471
+Analysis Schedule: hourly
+Port: 5001
+Trading Pairs: BTC/USD, ETH/USD
 
-RISK PARAMETERS:
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades per day: 2
+=== RISK PARAMETERS ===
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Max trades per day: 2
 
-TRADES SUMMARY:
-- Total trades: 12
-- Today's trades executed: 2/2
-- Total P&L: $0.00
-- Available capital: $1000.00
+=== TRADES SUMMARY ===
+Total trades: 12
+Today's trades executed: 2/2
+Total P&L: $0.00
+Available capital: $1000.00
 
-RECENT TRADES (last 5):
+=== RECENT TRADES (Last 5) ===
 1. Time: 15:05:29 | Side: buy | Amount: 0.00013515 BTC | Price: $73,990.75 | Model: Gemini-Pro | Status: filled
 2. Time: 15:05:28 | Side: buy | Amount: 0.00013523 BTC | Price: $73,950.01 | Model: Gemini-Pro | Status: filled
 3. Time: 10:21:28 | Side: buy | Amount: 0.00013453 BTC | Price: $74,334.94 | Model: Gemini | Status: filled
 4. Time: 10:21:23 | Side: sell | Amount: 0.10532 SOL | Price: $94.95 | Model: LLM_Analysis_SOL_USD | Status: filled
 5. Time: 10:21:22 | Side: buy | Amount: 0.00429 ETH | Price: $2,331.78 | Model: LLM_Analysis_ETH_USD | Status: filled
 
-MARKET ANALYSIS:
+=== MARKET ANALYSIS ===
 BTC/USD:
-- Current price: $71,242.59
-- Support: $70,896.70
-- Resistance: $74,299.16
-- Signal: BUY (Confidence: 70%)
-- Status: Max daily trades reached
+  Current Price: $71,242.59
+  SMA 10: $73,015.97
+  SMA 20: $73,638.44
+  Support: $70,896.70
+  Resistance: $74,299.16
+  Signal: BUY (Confidence: 70%)
+  Status: Max daily trades reached
 
 ETH/USD:
-- Current price: $2,177.16
-- Support: $2,171.22
-- Resistance: $2,332.66
-- Signal: BUY (Confidence: 70%)
-- Status: Max daily trades reached
+  Current Price: $2,177.16
+  SMA 10: $2,274.01
+  SMA 20: $2,301.28
+  Support: $2,171.22
+  Resistance: $2,332.66
+  Signal: BUY (Confidence: 70%)
+  Status: Max daily trades reached
 
-ALERT STATUS:
-- No stop-loss orders triggered
-- No take-profit orders triggered
-- No critical drawdown detected
-- Daily trade limit reached (2/2 trades)
+=== ALERT ANALYSIS ===
+Stop-loss trigger check:
+  - BTC/USD: Current price ($71,242.59) vs recent buys (avg ~$74,000+)
+    Potential drawdown: ~3.7% (below 5% stop-loss threshold)
+  - ETH/USD: Current price ($2,177.16) vs recent buy ($2,331.78)
+    Potential drawdown: ~6.6% (ABOVE 5% stop-loss threshold - WARNING!)
 
-=== END OF MONITORING LOG ===
+Take-profit trigger check:
+  - No positions appear to be in significant profit (>10%)
+  - All recent trades show drawdown or minimal profit
+
+Critical indicators:
+  1. ETH/USD position shows ~6.6% drawdown, exceeding 5% stop-loss threshold
+  2. BTC/USD position shows ~3.7% drawdown, within limits
+  3. Daily trade limit reached (2/2 trades)
+  4. System appears to be holding losing positions
+
+=== RECOMMENDATIONS ===
+1. Review ETH/USD position for potential stop-loss execution
+2. Consider adjusting stop-loss levels if strategy allows
+3. Monitor BTC/USD position closely as it approaches stop-loss
+4. System is at daily trade limit - no new trades possible until reset
+
+=== END OF LOG ==={"timestamp": "2026-03-19T00:24:18.009164", "status": {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-18T23:32:51.115471", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-19T00:24:18.013393", "trading_pairs": ["BTC/USD", "ETH/USD"]}, "summary_metrics": {"pnl": 0.0, "available_capital": 1000.0, "trades_today": 2, "max_trades_today": 2, "total_trades": 2, "stop_loss_triggered": true, "take_profit_triggered": true, "drawdown_warning": true}, "summary_preview": "<pre>TRADING ANALYSIS REPORT\nGenerated: 2026-03-18 23:32:51.115431\n==================================================\n\n============================================================\nCONSERVATIVE CRYPTO TRADING ANALYSIS\nCapital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%\nMax trades/day: 2 | Symbols: BTC/USD, ETH/USD\n============================================================\n\ud83d\udcca Today's trades: 2/2\n\n\ud83d\udd0d Analyzing BTC/USD...\n   Price: $71242.59\n   24h Change: N/A\n   SMA 10: $73015.97\n   SMA 20: $7..."}
+{"timestamp": "2026-03-19T00:26:32.260739", "status": {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-18T23:32:51.115471", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-19T00:26:32.265003", "trading_pairs": ["BTC/USD", "ETH/USD"]}, "summary_metrics": {"pnl": 0.0, "available_capital": 1000.0, "trades_today": 2, "max_trades_today": 2, "total_trades": 2, "stop_loss_triggered": true, "take_profit_triggered": true, "drawdown_warning": true}, "summary_preview": "<pre>TRADING ANALYSIS REPORT\nGenerated: 2026-03-18 23:32:51.115431\n==================================================\n\n============================================================\nCONSERVATIVE CRYPTO TRADING ANALYSIS\nCapital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%\nMax trades/day: 2 | Symbols: BTC/USD, ETH/USD\n============================================================\n\ud83d\udcca Today's trades: 2/2\n\n\ud83d\udd0d Analyzing BTC/USD...\n   Price: $71242.59\n   24h Change: N/A\n   SMA 10: $73015.97\n   SMA 20: $7..."}
+{"timestamp": "2026-03-19T00:33:12.344956", "status": {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-19T00:33:02.095091", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-19T00:33:12.349451", "trading_pairs": ["BTC/USD", "ETH/USD"]}, "summary_metrics": {"pnl": 0.0, "available_capital": 1000.0, "trades_today": 0, "max_trades_today": 2, "total_trades": 4, "stop_loss_triggered": true, "take_profit_triggered": true, "drawdown_warning": true}, "summary_preview": "<pre>TRADING ANALYSIS REPORT\nGenerated: 2026-03-19 00:33:02.095036\n==================================================\n\n============================================================\nCONSERVATIVE CRYPTO TRADING ANALYSIS\nCapital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%\nMax trades/day: 2 | Symbols: BTC/USD, ETH/USD\n============================================================\n\ud83d\udcca Today's trades: 0/2\n\n\ud83d\udd0d Analyzing BTC/USD...\n   Price: $71386.00\n   24h Change: N/A\n   SMA 10: $72756.19\n   SMA 20: $7..."}

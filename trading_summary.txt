@@ -1,5 +1,5 @@
 TRADING ANALYSIS REPORT
-Generated: 2026-03-18 23:32:51.115431
+Generated: 2026-03-19 00:33:02.095036
 ==================================================
 
 ============================================================
@@ -7,33 +7,47 @@ CONSERVATIVE CRYPTO TRADING ANALYSIS
 Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
 Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
 ============================================================
-📊 Today's trades: 2/2
+📊 Today's trades: 0/2
 
 🔍 Analyzing BTC/USD...
-   Price: $71242.59
+   Price: $71386.00
    24h Change: N/A
-   SMA 10: $73015.97
-   SMA 20: $73638.44
+   SMA 10: $72756.19
+   SMA 20: $73479.04
    Support: $70896.70
    Resistance: $74299.16
    Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $70896.70 (current: $71242.59)
-   ⏸️ Skipping: Max daily trades reached
+   Reasons: Near support level: $70896.70 (current: $71386.00)
+   📊 Position size: 0.002802 BTC/USD ($200.02)
+   🚀 Ready to execute BUY order...
+🔔 Attempting BUY 0.002802 BTC/USD at ~$71386.00
+📝 Would place limit BUY order for 0.002802 BTC/USD at $71029.07
+✅ Trade logged: BTCUSD_1773855180
+   Stop-loss: $67816.70 (5.0%)
+   Take-profit: $78524.60 (10.0%)
+   ✅ Trade executed successfully
 
 🔍 Analyzing ETH/USD...
-   Price: $2177.16
+   Price: $2193.60
    24h Change: N/A
-   SMA 10: $2274.01
-   SMA 20: $2301.28
-   Support: $2171.22
+   SMA 10: $2259.69
+   SMA 20: $2293.98
+   Support: $2167.99
    Resistance: $2332.66
    Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2171.22 (current: $2177.16)
-   ⏸️ Skipping: Max daily trades reached
+   Reasons: Near support level: $2167.99 (current: $2193.60)
+   📊 Position size: 0.0912 ETH/USD ($200.06)
+   🚀 Ready to execute BUY order...
+🔔 Attempting BUY 0.0912 ETH/USD at ~$2193.60
+📝 Would place limit BUY order for 0.0912 ETH/USD at $2182.63
+✅ Trade logged: ETHUSD_1773855182
+   Stop-loss: $2083.92 (5.0%)
+   Take-profit: $2412.96 (10.0%)
+   ✅ Trade executed successfully
 
 📈 Trading Summary:
    Today's trades executed: 2/2
-   Total trades: 2
+   Total trades: 4
    Total P&L: $0.00
    Available capital: $1000.00
 
