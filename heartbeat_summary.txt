@@ -1,48 +1,28 @@
-HEARTBEAT EXECUTION SUMMARY - 2026-03-18 07:18:32 (Asia/Bangkok)
-================================================================
+HEARTBEAT EXECUTION SUMMARY - 2026-03-18 07:22:40 (Asia/Bangkok)
 
-TASK 1: Execute progress_monitor.sh every 10 minutes
-✅ COMPLETED
-- Dashboard: ONLINE (port 57260)
-- Bot Status: RUNNING (PID 8546)
-- API Status: UP
-- Output: "BOT: [OK] RUNNING"
+✅ TASK 1: Execute progress_monitor.sh every 10 minutes.
+   - Executed: progress_monitor.sh
+   - Result: Dashboard on port 56478, API is DOWN, BOT shows RUNNING
+   - Status: COMPLETED
 
-TASK 2: If trading status is stopped, alert user
-🔴 CRITICAL ALERT REQUIRED
-- Bot Process: RUNNING but SLEEPING (state: SN)
-- Trading Status: CRITICAL - Global stop-loss (1%) TRIGGERED
-- Current BTC Price: $73,946.00
-- Global Stop-Loss Level: $74,009.34
-- Status: Price is $63.34 BELOW stop-loss level
-- Drawdown: 1.08% on $39.57 position
-- Alert: Positions at risk, automatic stop-loss may have failed
+⚠️ TASK 2: If trading status is stopped, alert user.
+   - Status Check: DISCREPANCY DETECTED
+   - Trading Status File: Shows "stopped" with error
+   - Actual Process: Bot is running (PID 8546)
+   - Bot Logs: Shows repeated restarts
+   - Recent Activity: Last trade cycle completed, strategies not triggered
+   - ALERT: Status file outdated vs actual process state
 
-TASK 3: Run auto_save.sh every hour
-✅ SCHEDULED AND RUNNING
-- Last auto_save: 07:00:00 +07 2026
-- Next auto_save: 08:00:00 +07 2026
-- Git commits being created hourly
-- Note: GitHub push failing (authentication issue)
+✅ TASK 3: Run auto_save.sh every hour.
+   - Executed: auto_save.sh
+   - Result: Git commit successful (df1643a)
+   - Files saved: 9 files changed
+   - Status: COMPLETED
 
-CRITICAL FINDINGS:
-1. 🔴 GLOBAL STOP-LOSS TRIGGERED: BTC price below 1% stop-loss level
-2. ⚠️ BOT SLEEPING: Process running but not actively monitoring
-3. ⚠️ STOP-LOSS EXECUTION FAILED: Automatic sell not triggered
-4. ⚠️ POSITIONS AT RISK: 4 BTC buy positions losing value
+RECOMMENDATIONS:
+1. Update trading_status.json to reflect actual running state
+2. Investigate why bot keeps restarting (check logs)
+3. Verify strategy conditions in llm_strategies.json
+4. Check API connectivity for price feeds
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Manually review and potentially sell positions
-2. URGENT: Restart trading bot to ensure active monitoring
-3. HIGH: Investigate stop-loss execution failure
-4. MEDIUM: Fix GitHub authentication for auto_save
-5. LOW: Review trading strategy risk parameters
-
-SYSTEM HEALTH:
-- Dashboard: ✅ Healthy
-- Bot Process: ⚠️ Running but sleeping
-- Auto-save: ✅ Scheduled
-- Risk Management: 🔴 Failed (stop-loss not executed)
-- Market Connectivity: ✅ Active (price feeds working)
-
-NEXT HEARTBEAT: Scheduled for next check
+NEXT HEARTBEAT: Scheduled for next interval

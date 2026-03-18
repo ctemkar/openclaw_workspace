@@ -1,73 +1,125 @@
-2026-03-18 07:18:32 - CRITICAL - GLOBAL STOP-LOSS TRIGGERED
-===========================================================
-TIMESTAMP: 2026-03-18 07:18:32 (Asia/Bangkok)
-DASHBOARD STATUS: Online on port 57260
-TRADING BOT STATUS: RUNNING (but sleeping, PID 8546)
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 07:43:30 (Asia/Bangkok)
 
-CURRENT POSITIONS:
-- Total trades: 4 BTC buy positions
-- Weighted Average Entry: $74,756.91
-- Total BTC: 0.00053507 BTC
-- Position Value: $39.57
+--- DASHBOARD STATUS ---
+Dashboard URL: http://localhost:57696
+Trading Script Status: STOPPED
+LLM Generator Status: Unknown
+Active Port: 57696
 
-CURRENT MARKET PRICE:
-- BTC/USD: $73,946.00
+--- TRADING PERFORMANCE ---
+Total Completed Trades: 4
+Recent Trades:
+1. Time: 04:45:54, Model: Gemini-Pro, Side: BUY, Price: $74,770.04, Amount: 0.00013374 BTC, Status: FILLED
+2. Time: 04:43:01, Model: Gemini-Pro, Side: BUY, Price: $74,800.00, Amount: 0.00013369 BTC, Status: FILLED
+3. Time: 02:25:17, Model: gemini-pro, Side: BUY, Price: $74,728.83, Amount: 0.00013382 BTC, Status: FILLED
+4. Time: 02:24:56, Model: gemini-pro, Side: BUY, Price: $74,728.83, Amount: 0.00013382 BTC, Status: FILLED
 
-CRITICAL ALERT:
-- Current Drawdown: 1.08%
-- Global Stop-Loss (1%): $74,009.34
-- Current Price: $73,946.00
-- STATUS: 🔴 GLOBAL STOP-LOSS TRIGGERED!
+--- MARKET DATA (from conservative_trading.log) ---
+BTC/USD Current Price: ~$73,633.00
+ETH/USD Current Price: ~$2,309.81
+Market Sentiment: NEUTRAL for both BTC and ETH
+Recommendation: HOLD for both assets
 
-POSITION DETAILS:
-1. 04:45:54 - BUY at $74,770.04 (0.00013374 BTC)
-2. 04:43:01 - BUY at $74,800.00 (0.00013369 BTC)
-3. 02:25:17 - BUY at $74,728.83 (0.00013382 BTC)
-4. 02:24:56 - BUY at $74,728.83 (0.00013382 BTC)
+--- RISK PARAMETERS ANALYSIS ---
+Configuration from dashboard:
+- Capital: $10,000 (default)
+- Stop Loss: 0.03% (default)
+- Trade Size: $10 (default)
 
-RISK ANALYSIS:
-- Total P&L: -$0.43 (1.08% loss)
-- Strategy Stop-Loss (5%): $71,019.07 (not triggered)
-- Distance to Strategy Stop: $2,926.93 above
+Risk Assessment:
+1. Trading script is STOPPED - No active trading
+2. All recent trades are BUY positions (4 buys, 0 sells)
+3. Average buy price: ~$74,756.93
+4. Current BTC price: ~$73,633.00 (approx -1.5% from average buy)
+5. No stop-loss or take-profit triggers detected
+6. Drawdown from average buy: ~1.5% (within normal range)
 
-BOT STATUS:
-- Process: Running (PID 8546)
-- State: Sleeping (SN)
-- Last Activity: Received termination signal in logs
-- Progress Monitor: Reports "BOT: [OK] RUNNING"
+--- ALERT STATUS ---
+No critical alerts detected in current monitoring.
+No stop-loss or take-profit triggers.
+No critical drawdown indicators.
 
-IMMEDIATE ACTION REQUIRED:
-1. EXECUTE STOP-LOSS: Sell positions to limit losses
-2. REVIEW BOT LOGIC: Check why stop-loss wasn't executed automatically
-3. VERIFY MARKET CONDITIONS: BTC down 1.08% from entry
-4. MONITOR BOT ACTIVITY: Ensure it wakes up and processes stop-loss
+--- RECOMMENDATIONS ---
+1. Trading script is stopped - consider restarting if market conditions improve
+2. Monitor BTC price movement relative to average buy price (-1.5%)
+3. Consider setting stop-loss at 0.03% as configured
+4. Current market sentiment is NEUTRAL - conservative approach recommended
 
-SYSTEM STATUS:
-✅ Dashboard: Online
-⚠️ Trading Bot: Running but sleeping
-⚠️ Stop-Loss: TRIGGERED but not executed
-🔴 Risk Management: FAILED (automatic stop-loss not executed)
+=== END OF REPORT ===2026-03-18 07:45:44,845 - ERROR - Could not find dashboard on any port
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 07:46:47 (Asia/Bangkok)
 
-NEXT STEPS:
-- Manual intervention may be required to sell positions
-- Investigate bot's stop-loss execution logic
-- Review trading configuration for stop-loss settings
-- Consider reducing position size or adjusting risk parameters--- Wed Mar 18 07:21:18 +07 2026 ---
-Status updates and risk parameters:
+--- DASHBOARD STATUS ---
+Dashboard URL: http://localhost:57696
+Trading Script Status: STOPPED
+LLM Generator Status: Unknown
+Active Port: 57696
+
+--- TRADING PERFORMANCE ---
+Total Completed Trades: 4
+Recent Trades:
+1. Time: 04:45:54, Model: Gemini-Pro, Side: BUY, Price: $74,770.04, Amount: 0.00013374 BTC, Status: FILLED
+2. Time: 04:43:01, Model: Gemini-Pro, Side: BUY, Price: $74,800.00, Amount: 0.00013369 BTC, Status: FILLED
+3. Time: 02:25:17, Model: gemini-pro, Side: BUY, Price: $74,728.83, Amount: 0.00013382 BTC, Status: FILLED
+4. Time: 02:24:56, Model: gemini-pro, Side: BUY, Price: $74,728.83, Amount: 0.00013382 BTC, Status: FILLED
+
+--- MARKET DATA ---
+BTC/USD Current Price: $73,633.00
+ETH/USD Current Price: $2,309.81
+Market Sentiment: NEUTRAL for both BTC and ETH
+Recommendation: HOLD for both assets
+
+--- RISK PARAMETERS ANALYSIS ---
+Configuration from dashboard:
+- Capital: $10,000 (default)
+- Stop Loss: 0.03% (default)
+- Trade Size: $10 (default)
+
+--- POSITION ANALYSIS ---
+Total BTC Position: 0.00053507 BTC
+Average Buy Price: $74,756.93
+Total Investment: $40.00
+Current Position Value: $39.40
+Drawdown: -1.50%
+
+--- RISK ASSESSMENT ---
+⚠️ CRITICAL ALERT: STOP-LOSS TRIGGERED
+- Configured stop-loss: -0.03%
+- Current drawdown: -1.50%
+- Drawdown exceeds stop-loss by: 1.47%
+
+Risk Factors:
+1. Trading script is STOPPED - No active trading
+2. All positions are BUY (4 buys, 0 sells) - No diversification
+3. Position is in drawdown (-1.50%)
+4. Market sentiment is NEUTRAL - No strong directional bias
+
+--- ALERT STATUS ---
+🔴 CRITICAL: Stop-loss triggered (drawdown -1.50% exceeds 0.03% threshold)
+🟡 WARNING: Trading script is stopped
+🟡 WARNING: All positions are buys with no sells
+
+--- RECOMMENDATIONS ---
+1. IMMEDIATE ACTION: Stop-loss triggered - consider risk management actions
+2. Trading script is stopped - review and potentially restart
+3. Consider setting take-profit levels for future trades
+4. Review stop-loss configuration (0.03% may be too tight for crypto volatility)
+5. Monitor BTC price movement toward support levels ($73,424.02, $71,955.54)
+
+=== END OF REPORT ===[CRON MONITOR] 2026-03-18 07:55:38
+Dashboard Status: STOPPED
+Current BTC Price: $73,844.00
+Position Analysis:
+  Total BTC: 0.00053507
+  Total Invested: $40.00
+  Avg Buy Price: $74756.91
+  Current Value: $39.51
+  P&L: $-0.49 (-1.22%)
 Risk Parameters:
-Trading Logs:
---- Wed Mar 18 07:22:15 +07 2026 ---
-Trading Status:
-"RUNNING"
-Trading Configuration:
-{
-  "capital": 10000,
-  "stop_loss": 0.03,
-  "trade_size": 10
-}
-Completed Trades: 4
-Recent Trading Logs:
-[2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
-[2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
-[2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
-[2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
+  Stop Loss: -3.0% ($72514.21)
+  Take Profit: 10.0% ($82232.60)
+  Distance to Stop Loss: 1.80%
+  Distance to Take Profit: 11.36%
+Alerts: ✅ No critical alerts
+============================================================

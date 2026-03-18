@@ -1,151 +1,230 @@
-# Filename: monitor_trading.py
-import requests
-import json
-import datetime
+#!/usr/bin/env python3
 import os
+import json
+import logging
+from datetime import datetime, timedelta
+import requests
 
-# --- Configuration ---
+# Setup logging
+LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 
-    PORT = "5001"  # Fallback
-except:
-        PORT = f.read().strip()
-    with open(".active_port", "r") as f:
-try:
-# Read current port from .active_port file
+# Configure main logger
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
-URL = f"http://localhost:{PORT}/"
-TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-# Define your critical drawdown threshold here.
-# This value should be set based on your risk management strategy.
-# Example: A capital of 5000 or less is considered critical.
-CRITICAL_DRAWDOWN_THRESHOLD = 10000 # PLEASE DEFINE THIS BASED ON YOUR NEEDS
+# Configure critical alert logger
+critical_alert_logger = logging.getLogger('critical_alert_logger')
+critical_alert_logger.setLevel(logging.CRITICAL)
+critical_alert_handler = logging.FileHandler(CRITICAL_ALERT_LOG_FILE)
+critical_alert_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+critical_alert_logger.addHandler(critical_alert_handler)
 
-# --- Helper function to ensure directory exists ---
-def ensure_log_dir(file_path):
-    log_dir = os.path.dirname(file_path)
-    if log_dir and not os.path.exists(log_dir):
-        try:
-            os.makedirs(log_dir)
-            print(f"Created directory: {log_dir}")
-        except OSError as e:
-            print(f"Error creating directory {log_dir}: {e}")
-
-# --- Main function to fetch, parse, log, and alert ---
-def monitor_trading_dashboard():
+def load_json_file(filepath):
+    """Load JSON file safely."""
     try:
-        print(f"Fetching data from: {URL}")
-        response = requests.get(URL, timeout=15) # Increased timeout slightly
-        response.raise_for_status() # Raise an exception for bad status codes (4xx or 5xx)
-    except requests.exceptions.Timeout:
-        print(f"Error: Request to {URL} timed out after 15 seconds.")
-        return
-    except requests.exceptions.ConnectionError as e:
-        print(f"Error: Could not connect to {URL}. Ensure the service is running. Details: {e}")
-        return
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from {URL}: {e}")
-        return
-
-    try:
-        data = response.json() # Assuming JSON response
-    except json.JSONDecodeError:
-        print(f"Error: Response from {URL} is not valid JSON. Content snippet: {response.text[:200]}...") # Log snippet of response
-        return
-
-    # --- Data Extraction ---
-    # IMPORTANT: Adapt these keys based on the actual JSON structure from your endpoint.
-    # If the structure is different, you'll need to modify this section.
-    try:
-        trading_logs_data = data.get("trading_logs", [])
-        status_updates_data = data.get("status_updates", [])
-        risk_params = data.get("risk_parameters", {})
-        
-        capital = risk_params.get("capital")
-        stop_loss_info = risk_params.get("stop_loss", {}) 
-        take_profit_info = risk_params.get("take_profit", {})
-
-        # Ensure stop_loss/take_profit are dicts to safely access 'triggered'
-        if not isinstance(stop_loss_info, dict): stop_loss_info = {}
-        if not isinstance(take_profit_info, dict): take_profit_info = {}
-
-        stop_loss_triggered = stop_loss_info.get("triggered", False)
-        take_profit_triggered = take_profit_info.get("triggered", False)
-
+        with open(filepath, 'r') as f:
+            return json.load(f)
     except Exception as e:
-        print(f"Error parsing data structure: {e}. Raw data might be: {data}")
-        return
+        logging.error(f"Failed to load {filepath}: {e}")
+        return None
 
-    # --- Logging to trading_monitoring.log ---
-    log_entry = {
-        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
-        "capital": capital,
-        "stop_loss_triggered": stop_loss_triggered,
-        "take_profit_triggered": take_profit_triggered,
-        # Log counts or summaries if logs/updates are very large
-        "trading_logs_count": len(trading_logs_data), 
-        "status_updates_count": len(status_updates_data) 
-    }
+def analyze_trading_status():
+    """Analyze trading status from status files."""
+    summary = []
     
-    ensure_log_dir(TRADING_LOG_PATH)
+    # Check trading status
+    status = load_json_file("./status/trading_status.json")
+    if status:
+        summary.append(f"Trading Status: {status.get('trading_status', 'unknown')}")
+        summary.append(f"Is Running: {status.get('is_running', False)}")
+        
+        if status.get('trading_status') == 'error':
+            error_msg = status.get('error_message', 'Unknown error')
+            alert = f"CRITICAL: Trading bot error - {error_msg}"
+            summary.append(f"ERROR: {error_msg}")
+            critical_alert_logger.critical(alert)
+        
+        # Check last heartbeat
+        last_heartbeat = status.get('last_heartbeat')
+        if last_heartbeat:
+            try:
+                heartbeat_time = datetime.fromisoformat(last_heartbeat.replace('Z', '+00:00'))
+                time_diff = datetime.now() - heartbeat_time
+                if time_diff > timedelta(minutes=5):
+                    alert = f"CRITICAL: Trading bot heartbeat stale ({time_diff.total_seconds()/60:.1f} minutes)"
+                    summary.append(f"WARNING: Stale heartbeat ({time_diff.total_seconds()/60:.1f} minutes)")
+                    critical_alert_logger.critical(alert)
+            except Exception as e:
+                logging.error(f"Error parsing heartbeat time: {e}")
+    
+    return summary
+
+def analyze_trades():
+    """Analyze completed trades."""
+    summary = []
+    
+    trades = load_json_file("./completed_trades.json")
+    if trades:
+        total_trades = len(trades)
+        buy_trades = sum(1 for t in trades if t.get('side') == 'buy')
+        sell_trades = sum(1 for t in trades if t.get('side') == 'sell')
+        
+        summary.append(f"Total Completed Trades: {total_trades}")
+        summary.append(f"Buy Trades: {buy_trades}, Sell Trades: {sell_trades}")
+        
+        # Check for recent trades
+        recent_trades = []
+        for trade in trades:
+            if 'time' in trade:
+                # Simple time check - if trade time looks recent
+                try:
+                    trade_time = datetime.strptime(trade['time'], "%H:%M:%S")
+                    now = datetime.now()
+                    # Assume today's trades
+                    trade_datetime = datetime.combine(now.date(), trade_time.time())
+                    if (now - trade_datetime) < timedelta(hours=24):
+                        recent_trades.append(trade)
+                except:
+                    pass
+        
+        summary.append(f"Recent Trades (last 24h): {len(recent_trades)}")
+        
+        if len(recent_trades) == 0:
+            summary.append("WARNING: No recent trades detected")
+    
+    return summary
+
+def analyze_config():
+    """Analyze trading configuration."""
+    summary = []
+    
+    config = load_json_file("./trading_config.json")
+    if config:
+        capital = config.get('capital', 0)
+        trade_size = config.get('trade_size_usd', 0)
+        stop_loss = config.get('stop_loss_pct', 0)
+        take_profit = config.get('take_profit_pct', 0)
+        
+        summary.append(f"Capital: ${capital:.2f}")
+        summary.append(f"Trade Size: ${trade_size:.2f}")
+        summary.append(f"Stop Loss: {stop_loss*100:.1f}%")
+        summary.append(f"Take Profit: {take_profit*100:.1f}%")
+        
+        # Check for risky configuration
+        if trade_size > capital * 0.5:
+            alert = f"CRITICAL: Trade size (${trade_size:.2f}) exceeds 50% of capital (${capital:.2f})"
+            summary.append(f"WARNING: Large trade size relative to capital")
+            critical_alert_logger.critical(alert)
+    
+    return summary
+
+def analyze_strategies():
+    """Analyze LLM strategies."""
+    summary = []
+    
+    # Find latest strategy file
+    strategy_files = [f for f in os.listdir('.') if f.startswith('llm_strategies_') and f.endswith('.json')]
+    if not strategy_files:
+        summary.append("No strategy files found")
+        return summary
+    
+    latest_file = max(strategy_files)
+    strategies = load_json_file(latest_file)
+    
+    if strategies:
+        summary.append(f"Active Strategies: {len(strategies)}")
+        
+        total_investment = sum(s.get('investment_usd', 0) for s in strategies)
+        summary.append(f"Total Strategy Investment: ${total_investment:.2f}")
+        
+        # Check for high-risk strategies
+        high_risk_strategies = []
+        for strategy in strategies:
+            risk_params = strategy.get('risk_parameters', {})
+            stop_loss = risk_params.get('stop_loss_pct', 0)
+            take_profit = risk_params.get('take_profit_pct', 0)
+            
+            if stop_loss > 0.1:  # > 10% stop loss
+                high_risk_strategies.append(strategy['strategy_name'])
+        
+        if high_risk_strategies:
+            alert = f"CRITICAL: High-risk strategies detected: {', '.join(high_risk_strategies)}"
+            summary.append(f"WARNING: High-risk strategies: {', '.join(high_risk_strategies)}")
+            critical_alert_logger.critical(alert)
+    
+    return summary
+
+def check_dashboard():
+    """Check if dashboard is accessible."""
+    summary = []
+    
     try:
-        with open(TRADING_LOG_PATH, "a") as f:
-            json.dump(log_entry, f)
-            f.write("\n")
-        print(f"Successfully logged monitoring data to {TRADING_LOG_PATH}")
-    except IOError as e:
-        print(f"Error writing to {TRADING_LOG_PATH}: {e}")
+        # Read port from .active_port
+        with open(".active_port", "r") as f:
+            port = f.read().strip()
+        
+        url = f"http://localhost:{port}/"
+        response = requests.get(url, timeout=5)
+        
+        if response.status_code == 200:
+            summary.append(f"Dashboard accessible on port {port}")
+        else:
+            summary.append(f"Dashboard returned status {response.status_code}")
+            logging.warning(f"Dashboard check failed: HTTP {response.status_code}")
+    except Exception as e:
+        summary.append(f"Dashboard check failed: {str(e)}")
+        logging.error(f"Dashboard check error: {e}")
+    
+    return summary
 
-    # --- Alerting Logic ---
-    alerts = []
-    critical_data_for_alert = {}
-
-    if stop_loss_triggered:
-        alert_msg = f"ALERT: Stop-loss triggered."
-        alerts.append({"type": "stop_loss_triggered", "message": alert_msg, "details": stop_loss_info})
-        critical_data_for_alert.update(stop_loss_info)
-        print(alert_msg)
-
-    if take_profit_triggered:
-        alert_msg = f"ALERT: Take-profit triggered."
-        alerts.append({"type": "take_profit_triggered", "message": alert_msg, "details": take_profit_info})
-        critical_data_for_alert.update(take_profit_info)
-        print(alert_msg)
-
-    # --- Critical Drawdown Alert ---
-    # IMPORTANT: Review and define your critical drawdown logic here and set CRITICAL_DRAWDOWN_THRESHOLD.
-    # This script checks if 'capital' falls below CRITICAL_DRAWDOWN_THRESHOLD.
-    if capital is not None:
-        try:
-            capital_float = float(capital) 
-            if capital_float < CRITICAL_DRAWDOWN_THRESHOLD:
-                alert_msg = f"CRITICAL DRAWDOWN ALERT: Capital ({capital_float}) is below threshold ({CRITICAL_DRAWDOWN_THRESHOLD})."
-                alerts.append({"type": "critical_drawdown", "message": alert_msg, "value": capital_float, "threshold": CRITICAL_DRAWDOWN_THRESHOLD})
-                critical_data_for_alert.update({"capital": capital_float, "drawdown_threshold": CRITICAL_DRAWDOWN_THRESHOLD})
-                print(alert_msg)
-        except (ValueError, TypeError):
-            print(f"Warning: Could not convert capital value '{capital}' to a number for drawdown check.")
-
-    # --- Logging Critical Alerts ---
-    if alerts:
-        alert_log_entry = {
-            "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
-            "alerts": alerts,
-            "critical_data_captured": critical_data_for_alert # Captures data associated with triggered alerts
-        }
-        ensure_log_dir(CRITICAL_ALERT_LOG_PATH)
-        try:
-            with open(CRITICAL_ALERT_LOG_PATH, "a") as f:
-                json.dump(alert_log_entry, f)
-                f.write("\n")
-            print(f"Successfully logged critical alerts to {CRITICAL_ALERT_LOG_PATH}")
-        except IOError as e:
-            print(f"Error writing critical alerts to {CRITICAL_ALERT_LOG_PATH}: {e}")
-    else:
-        print("No critical alerts triggered at this time.")
+def main():
+    """Main monitoring function."""
+    print(f"Trading Dashboard Monitor - {datetime.now().isoformat()}")
+    print("=" * 50)
+    
+    all_summary = []
+    
+    # Run all analyses
+    print("\n1. Trading Status Analysis:")
+    status_summary = analyze_trading_status()
+    for line in status_summary:
+        print(f"   {line}")
+        all_summary.append(line)
+    
+    print("\n2. Trade Analysis:")
+    trade_summary = analyze_trades()
+    for line in trade_summary:
+        print(f"   {line}")
+        all_summary.append(line)
+    
+    print("\n3. Configuration Analysis:")
+    config_summary = analyze_config()
+    for line in config_summary:
+        print(f"   {line}")
+        all_summary.append(line)
+    
+    print("\n4. Strategy Analysis:")
+    strategy_summary = analyze_strategies()
+    for line in strategy_summary:
+        print(f"   {line}")
+        all_summary.append(line)
+    
+    print("\n5. Dashboard Status:")
+    dashboard_summary = check_dashboard()
+    for line in dashboard_summary:
+        print(f"   {line}")
+        all_summary.append(line)
+    
+    print("\n" + "=" * 50)
+    print("Monitoring complete.")
+    
+    # Log all summary lines
+    for line in all_summary:
+        logging.info(line)
 
 if __name__ == "__main__":
-    # This script is designed to be run periodically.
-    # To automate it, use your system's task scheduler (e.g., cron on Linux/macOS, Task Scheduler on Windows).
-    monitor_trading_dashboard()
-
+    main()
