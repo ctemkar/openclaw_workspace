@@ -7,4 +7,23 @@
 [2026-03-18 20:07:24] ⚠️ MULTIPLE TRADING SYSTEMS: Previous alerts about larger system (~$298K) still unverified
 [2026-03-18 20:07:24] RECOMMENDATION: Verify status of larger trading system mentioned in previous alerts
 [2026-03-18 20:07:24] RECOMMENDATION: Monitor for any stop-loss triggers on current $1,000 system
-[2026-03-18 20:07:24] RECOMMENDATION: Next analysis scheduled in ~21 minutes (hourly from 19:28)
+[2026-03-18 20:07:24] RECOMMENDATION: Next analysis scheduled in ~21 minutes (hourly from 19:28)--- Alerts ---
+No trades recorded
+--- Alerts ---
+System Status: running
+Capital: $1000.0
+Stop-loss: 5.00%
+Take-profit: 10.0%
+Active Trades: 12
+Last Trade Time: 15:05:29
+Alert: Last trade was more than 2 hours ago at 15:05:29
+--- Wed Mar 18 20:10:49 +07 2026 ---
+CRITICAL: Trading status is ''
+[2026-03-18 20:10:55] 🚨 STOP LOSS TRIGGERED! Loss: -3.17% exceeds -1.0% threshold
+[2026-03-18 20:10:55] STOP LOSS DETAILS - BTC Price: $72,376.00, Total Loss: $-9,467.70, Loss %: -3.17%
+[2026-03-18 20:18:50] ✅ NO STOP-LOSS TRIGGERS: BTC: -2.29%, ETH: -3.89% (both above -5% threshold)
+[2026-03-18 20:18:50] ✅ NO TAKE-PROFIT TRIGGERS: Both positions below +10% profit target
+[2026-03-18 20:18:50] ⚠️ DAILY TRADE LIMIT REACHED: 2/2 trades executed today (normal operation)
+[2026-03-18 20:18:50] ⚠️ POSITIONS IN DRAWDOWN: BTC: -2.29%, ETH: -3.89%, Total: -3.06% (monitoring required)
+[2026-03-18 20:18:50] RECOMMENDATION: Monitor positions closely - ETH approaching stop-loss threshold (-3.89% vs -5%)
+[2026-03-18 20:18:50] RECOMMENDATION: Next analysis scheduled in ~52 minutes (hourly from 20:10)

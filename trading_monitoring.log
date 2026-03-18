@@ -67,4 +67,287 @@ Active Python processes related to trading:
 - /analysis - Available
 - /strategy - Returns error (no strategy file found)
 
-=== Monitoring complete at Wed Mar 18 20:07:24 +07 2026 ===
+=== Monitoring complete at Wed Mar 18 20:07:24 +07 2026 ===--- Wed Mar 18 20:09:02 +07 2026 ---
+Status:
+Recent Trades:
+Configuration:
+--- Wed Mar 18 20:10:25 +07 2026 ---
+Status:
+{
+  "analysis_scheduled": "hourly",
+  "capital": 1000.0,
+  "last_analysis": "2026-03-18T20:09:02.297590",
+  "port": 5001,
+  "risk_parameters": {
+    "max_trades_per_day": 2,
+    "stop_loss": 0.05,
+    "take_profit": 0.1
+  },
+  "status": "running",
+  "timestamp": "2026-03-18T20:10:25.974899",
+  "trading_pairs": [
+    "BTC/USD",
+    "ETH/USD"
+  ]
+}
+Recent Trades:
+{
+  "count": 12,
+  "timestamp": "2026-03-18T20:10:25.981860",
+  "trades": [
+    {
+      "amount": 0.00013515202913877747,
+      "model": "Gemini-Pro",
+      "price": 73990.75,
+      "side": "buy",
+      "status": "filled",
+      "time": "15:05:29"
+    },
+    {
+      "amount": 0.00013522648610865638,
+      "model": "Gemini-Pro",
+      "price": 73950.01,
+      "side": "buy",
+      "status": "filled",
+      "time": "15:05:28"
+    },
+    {
+      "amount": 0.00013452624028485123,
+      "model": "Gemini",
+      "price": 74334.94,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:21:28"
+    },
+    {
+      "amount": 0.10531637037661135,
+      "model": "LLM_Analysis_SOL_USD",
+      "price": 94.952,
+      "side": "sell",
+      "status": "filled",
+      "time": "10:21:23"
+    },
+    {
+      "amount": 0.00428856924752764,
+      "model": "LLM_Analysis_ETH_USD",
+      "price": 2331.78,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:21:22"
+    },
+    {
+      "amount": 0.0001345244667719186,
+      "model": "LLM_Analysis_BTC_USD",
+      "price": 74335.92,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:21:21"
+    },
+    {
+      "amount": 0.0001345750121117511,
+      "model": "Gemini",
+      "price": 74308.0,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:20:26"
+    },
+    {
+      "amount": 0.00013457358140268468,
+      "model": "Gemini",
+      "price": 74308.79,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:18:29"
+    },
+    {
+      "amount": 0.00013453038469636157,
+      "model": "Gemini",
+      "price": 74332.65,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:14:36"
+    },
+    {
+      "amount": 0.00013455424265000813,
+      "model": "Gemini",
+      "price": 74319.47,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:14:33"
+    },
+    {
+      "price": 74094.64,
+      "quantity": 0.002699,
+      "reason": "Near support level: $73556.12 (current: $74094.64)",
+      "side": "BUY",
+      "symbol": "BTC/USD",
+      "time": "13:39:48"
+    },
+    {
+      "price": 2325.28,
+      "quantity": 0.086,
+      "reason": "Near support level: $2308.08 (current: $2325.28)",
+      "side": "BUY",
+      "symbol": "ETH/USD",
+      "time": "13:39:49"
+    }
+  ]
+}
+Summary:
+<pre>Trading Dashboard Monitoring Summary:
+
+--- Logged Data ---
+Status: 
+Total Trades: 
+Configuration: 
+
+--- Critical Alerts ---
+
+</pre>
+--- Wed Mar 18 20:10:49 +07 2026 ---
+Status: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+Recent Logs:
+
+
+Summary generated at Wed Mar 18 20:10:49 +07 2026
+[2026-03-18 20:10:55] Position Check - BTC: $72,376.00, Loss: -3.17%, Stop Loss: TRIGGERED
+=== MONITORING CHECK: 2026-03-18 20:16:00 ===
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 20:14:55
+
+SYSTEM STATUS:
+  Status: running
+  Capital: $1000.00
+  Last Analysis: 2026-03-18T20:10:49.587335
+  Risk Parameters:
+    Stop-loss: 5.0%
+    Take-profit: 10.0%
+    Max trades/day: 2
+  Trading Pairs: BTC/USD, ETH/USD
+
+TRADING ACTIVITY:
+  Total Trades: 12
+
+  Recent Trades (last 5):
+    1. BUY 0.000135 @ $73990.75
+       Time: 15:05:29
+       Model: Gemini-Pro
+
+    2. BUY 0.000135 @ $73950.01
+       Time: 15:05:28
+       Model: Gemini-Pro
+
+    3. BUY 0.000135 @ $74334.94
+       Time: 10:21:28
+       Model: Gemini
+
+    4. SELL 0.105316 @ $94.95
+       Time: 10:21:23
+       Model: LLM_Analysis_SOL_USD
+
+    5. BUY 0.004289 @ $2331.78
+       Time: 10:21:22
+       Model: LLM_Analysis_ETH_USD
+
+
+ALERT ANALYSIS:
+CRITICAL ALERTS:
+  ⚠️  SELL TRADE DETECTED: 0.105316 @ $94.95 (Model: LLM_Analysis_SOL_USD)
+
+WARNINGS:
+  ⚠️  High trading frequency: 12 trades detected
+
+RISK PARAMETERS:
+  Stop-loss: 5.0%
+  Take-profit: 10.0%
+  Max trades/day: 2
+
+---
+
+=== Trading Monitoring Update: Wed Mar 18 20:18:50 +07 2026 ===
+
+**SYSTEM STATUS CHECK:**
+✅ Trading Dashboard: http://localhost:5001/ - RUNNING (200 OK)
+System Name: Conservative Crypto Trading System
+Status: running
+Capital: $1,000.00
+Last Analysis: 2026-03-18T20:10:49.587335 (approx 8 minutes ago)
+Next Analysis: Scheduled hourly
+
+**RISK PARAMETERS:**
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades/day: 2
+- Trading pairs: BTC/USD, ETH/USD
+
+**CURRENT MARKET PRICES:**
+- BTC/USD: $72,388.00
+- ETH/USD: $2,234.92
+
+**POSITION ANALYSIS:**
+
+BTC Positions:
+  Total BTC: 0.002969
+  Average Price: $74,083.32
+  Current Value: $214.95
+  P&L: $-5.03 (-2.29%)
+  ✅ Within risk parameters: -2.29% (Stop-loss: -5%, Take-profit: +10%)
+
+ETH Positions:
+  Total ETH: 0.086
+  Average Price: $2,325.28
+  Current Value: $192.20
+  P&L: $-7.77 (-3.89%)
+  ✅ Within risk parameters: -3.89% (Stop-loss: -5%, Take-profit: +10%)
+
+**TOTAL PORTFOLIO:**
+- Total Invested: ~$420.00 (from recent trades)
+- Current Value: ~$407.15
+- Total P&L: ~$-12.85 (-3.06%)
+- Available Capital: ~$580.00
+
+**TRADING ACTIVITY:**
+Total trades executed: 12 trades in history
+Today's trades: 2/2 (max daily limit reached)
+Recent trades (last 2):
+1. BTC/USD BUY @ $74,094.64 (13:39:48) - Near support level
+2. ETH/USD BUY @ $2,325.28 (13:39:49) - Near support level
+
+**ALERT CHECK:**
+- ✅ No stop-loss triggers detected (both positions above -5% threshold)
+- ✅ No take-profit triggers detected (both positions below +10% threshold)
+- ✅ No critical drawdown alerts
+- ✅ All trades within risk parameters
+- ⚠️ Max daily trades limit reached (normal operation)
+
+**DRAWDOWN ANALYSIS:**
+- BTC Drawdown: -2.29% (safe, threshold: -5%)
+- ETH Drawdown: -3.89% (safe, threshold: -5%)
+- Total Portfolio Drawdown: -3.06% (safe)
+
+**SYSTEM INTEGRITY:**
+✅ All endpoints responding:
+- /status - OK (system running)
+- /trades - OK (12 trades)
+- /summary - OK
+- /analysis - Available
+- /strategy - Returns error (no strategy file found)
+
+**PROCESS STATUS:**
+Active Python processes related to trading:
+1. trading_server.py (PID: 53049) - Main server on port 5001
+2. app.py (PID: 51479) - Possibly related application
+3. crypto_trading_llm_live.py (PID: 62182) - Live trading script
+4. crypto_trading_llm_live.py (PID: 59845) - Additional instance
+
+**RECOMMENDATIONS:**
+1. Monitor positions closely as both are in drawdown (BTC: -2.29%, ETH: -3.89%)
+2. Next analysis scheduled in ~52 minutes (hourly from 20:10)
+3. No action needed unless positions approach -5% stop-loss threshold
+4. Consider adjusting risk parameters if drawdown continues
+
+=== Monitoring complete at Wed Mar 18 20:18:50 +07 2026 ===
