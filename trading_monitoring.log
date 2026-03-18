@@ -1,87 +1,124 @@
-=== TRADING DASHBOARD MONITORING UPDATE ===
-Timestamp: 2026-03-18 22:41:45 (Asia/Bangkok)
-Dashboard Status: Running
-Last Analysis: 2026-03-18T22:31:27.799721
+=== TRADING MONITORING REPORT ===
+Timestamp: 2026-03-18 22:55:16 (Asia/Bangkok)
+Dashboard Status: Running on port 5001
+Trading Server Status: RUNNING (port 5001 active)
 
-=== MARKET DATA ===
-BTC/USD: $71,275.39 (BUY signal, 70% confidence)
-  - SMA 10: $73,262.83, SMA 20: $73,790.62
-  - Support: $71,161.67, Resistance: $74,329.16
-
-ETH/USD: $2,182.66 (BUY signal, 70% confidence)
-  - SMA 10: $2,286.81, SMA 20: $2,307.96
-  - Support: $2,188.80, Resistance: $2,332.66
-
-=== TRADING ACTIVITY ===
-Today's trades executed: 2/2 (max daily limit reached)
-Total trades: 12
-Available capital: $1,000.00
-Total P&L: $0.00
-Last BTC buy: 15:05:29 at $73,990.75 (Gemini-Pro)
-Last ETH buy: 10:21:22 at $2,331.78 (LLM_Analysis_ETH_USD)
+=== SYSTEM STATUS ===
+Status: running
+Last Analysis: 2026-03-18T22:31:27.799721 (24 minutes ago)
+Next Analysis: hourly
+Capital: $1,000.00
+Trading Pairs: BTC/USD, ETH/USD
 
 === RISK PARAMETERS ===
 Stop-loss: 5.0%
 Take-profit: 10.0%
-Max trades per day: 2
-Trading pairs: BTC/USD, ETH/USD
+Max trades/day: 2
+Today's trades: 2/2 (LIMIT REACHED)
 
-=== DRAWDOWN ANALYSIS ===
-BTC/USD:
-  - Recent buy price: $73,990.75 (15:05:29)
-  - Current price: $71,275.39
-  - Current drawdown: -3.67%
-  - Stop-loss trigger: $70,291.21
-  - Status: Within limits (3.67% drawdown, 1.33% above stop-loss)
+=== CURRENT MARKET ANALYSIS ===
+⚠️ SIGNIFICANT PRICE DROPS DETECTED ⚠️
 
-ETH/USD:
-  - Recent buy price: $2,331.78 (10:21:22)
-  - Current price: $2,182.66
-  - Current drawdown: -6.40%
-  - Stop-loss trigger: $2,215.19
-  - Status: ⚠️ STOP-LOSS TRIGGERED (Current price $32.53 below stop-loss)
+BTC/USD: $71,275.39 (DOWN 3.88% from previous $74,154.09)
+  - SMA 10: $73,262.83
+  - SMA 20: $73,790.62
+  - Support: $71,161.67
+  - Resistance: $74,329.16
+  - Signal: BUY (Confidence: 70%)
+  - Status: Skipped (max daily trades reached)
 
-=== SYSTEM STATUS ===
-Max daily trades reached: 2/2
-Dashboard operational: Yes
-Last analysis timestamp: 2026-03-18T22:31:27.799721
-Next scheduled analysis: Hourly
+ETH/USD: $2,182.66 (DOWN 6.37% from previous $2,331.12)
+  - SMA 10: $2,286.81
+  - SMA 20: $2,307.96
+  - Support: $2,188.80
+  - Resistance: $2,332.66
+  - Signal: BUY (Confidence: 70%)
+  - Status: Skipped (max daily trades reached)
+
+=== OPEN POSITIONS ANALYSIS ===
+🚨 CRITICAL ALERT: ETH POSITION BELOW STOP-LOSS 🚨
+
+1. BTC/USD BUY @ $74,094.64 (13:39:48)
+   - Quantity: 0.002699 BTC
+   - Current Price: $71,275.39
+   - Current P&L: -$7.61 (-3.80%)
+   - Stop-loss: $70,389.91 (-5.0%)
+   - Distance to SL: 1.26% (needs -$885.48 drop to trigger)
+   - Take-profit: $81,504.10 (+10.0%)
+   - Status: AT RISK (-3.80%, close to 5% stop-loss)
+
+2. ETH/USD BUY @ $2,325.28 (13:39:49) 🚨
+   - Quantity: 0.086 ETH
+   - Current Price: $2,182.66
+   - Current P&L: -$12.27 (-6.13%)
+   - Stop-loss: $2,209.02 (-5.0%)
+   - STATUS: STOP-LOSS TRIGGERED (-6.13% < -5.0%)
+   - Take-profit: $2,557.81 (+10.0%)
+   - Status: CRITICAL - Position below stop-loss threshold
+
+=== TRADING ACTIVITY ===
+Total trades recorded: 12
+Recent trades (last 6):
+- 15:05:29 - BTC/USD buy @ $73,990.75 (Gemini-Pro)
+- 15:05:28 - BTC/USD buy @ $73,950.01 (Gemini-Pro)
+- 10:21:28 - BTC/USD buy @ $74,334.94 (Gemini)
+- 10:21:23 - SOL/USD sell @ $94.952 (LLM_Analysis_SOL_USD)
+- 10:21:22 - ETH/USD buy @ $2,331.78 (LLM_Analysis_ETH_USD)
+- 10:21:21 - BTC/USD buy @ $74,335.92 (LLM_Analysis_BTC_USD)
+
+=== PORTFOLIO SUMMARY ===
+Total Capital: $1,000.00
+Estimated Exposure: $399.96 (from 2 open positions)
+Estimated Portfolio Value: $980.13
+Total P&L: -$19.87 (-4.97% on exposure, -1.99% on total capital)
+Daily Trades: 2/2 (limit reached)
+
+=== RISK ASSESSMENT ===
+Risk Status: CRITICAL
+🚨 ETH position below stop-loss (-6.13% < -5.0%)
+⚠️ BTC position at risk (-3.80%, close to 5% stop-loss)
+⚠️ Significant market downturn detected
+✅ System operational
+⚠️ Max daily trades reached (no new trades possible today)
+
+Stop-loss Protection: ETH TRIGGERED, BTC ACTIVE
+Take-profit Targets: Not relevant (positions in loss)
 
 === ALERT STATUS ===
-🚨 CRITICAL: ETH/USD stop-loss triggered!
-  - Buy price: $2,331.78 (10:21:22)
-  - Current price: $2,182.66
-  - Drawdown: -6.40% (exceeds 5% stop-loss threshold by 1.40%)
-  - Stop-loss level: $2,215.19
-  - Distance below stop-loss: -$32.53
-  - Time since trigger: ~12 hours
-  - Action required: Manual intervention needed (system blocked by daily trade limit)
+🚨 CRITICAL ALERT: ETH STOP-LOSS TRIGGERED
+- ETH/USD position at -6.13% (below 5% stop-loss)
+- BTC/USD position at -3.80% (approaching stop-loss)
+- Significant market downturn
+- System operational but positions at risk
 
-BTC/USD: APPROACHING STOP-LOSS (3.67% drawdown, only 1.33% above stop-loss)
+=== CRITICAL LEVELS TO WATCH ===
+BTC/USD:
+  - Stop-loss trigger: $70,389.91 (current: $71,275.39, 1.26% above)
+  - Take-profit trigger: $81,504.10 (current: $71,275.39, 14.35% needed)
+  - Critical support: $71,161.67 (current: $71,275.39, 0.16% above support)
 
-=== RECOMMENDATIONS ===
-1. IMMEDIATE MANUAL INTERVENTION REQUIRED for ETH/USD position
-2. Execute manual sell order to limit further losses
-3. Monitor BTC/USD position closely - approaching stop-loss
-4. Review and adjust system parameters:
-   - Implement emergency override for stop-loss execution
-   - Adjust daily trade limits for risk management
-   - Review stop-loss execution logic
-5. Consider stopping all trading until risk controls are fixed
+ETH/USD: 🚨
+  - Stop-loss trigger: $2,209.02 (current: $2,182.66, STOP-LOSS ALREADY TRIGGERED)
+  - Take-profit trigger: $2,557.81 (current: $2,182.66, 17.18% needed)
+  - Critical support: $2,188.80 (current: $2,182.66, 0.28% below support)
 
-=== LATEST TRADES ===
-Recent trades (last 5):
-1. 15:05:29 - BTC/USD BUY $73,990.75 (0.00013515) - Gemini-Pro
-2. 15:05:28 - BTC/USD BUY $73,950.01 (0.00013523) - Gemini-Pro
-3. 10:21:28 - BTC/USD BUY $74,334.94 (0.00013453) - Gemini
-4. 10:21:23 - SOL/USD SELL $94.952 (0.105316) - LLM_Analysis_SOL_USD
-5. 10:21:22 - ETH/USD BUY $2,331.78 (0.00428857) - LLM_Analysis_ETH_USD
+=== PRICE MOVEMENT ANALYSIS ===
+Since last check (22:52):
+- BTC/USD: $71,275.39 (no change)
+- ETH/USD: $2,182.66 (no change)
+- Both assets remain at depressed levels
+- ETH trading BELOW critical support level
+- BTC trading just ABOVE critical support level
 
-=== SYSTEM HEALTH ===
-Port: 5001 (active)
-Analysis scheduled: Hourly
-Trading pairs configured: 2
-Risk parameters: Active
-Capital utilization: $1,000.00 allocated
+=== URGENT RECOMMENDATIONS ===
+1. 🚨 MANUAL INTERVENTION REQUIRED for ETH position (stop-loss triggered)
+2. CLOSELY MONITOR BTC position (approaching stop-loss)
+3. REVIEW market conditions for continued downturn
+4. CONSIDER manual position adjustments if system not auto-closing
+5. CHECK if stop-loss orders are being executed automatically
 
---- Monitoring at Wed Mar 18 22:41:45 +07 2026 ---
+=== NEXT CHECK ===
+Scheduled for: 2026-03-18 23:55:16 (in 1 hour)
+⚠️ URGENT: Monitor continuously for further deterioration
+
+=== END OF REPORT ===

@@ -1,47 +1,91 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=======================================
-Timestamp: 2026-03-18 21:31:45 (Asia/Bangkok)
+=== TRADING DASHBOARD MONITOR SUMMARY ===
+Timestamp: 2026-03-18 22:55:16 (Asia/Bangkok)
 
-EXECUTIVE SUMMARY:
-✅ Dashboard server RESTORED after initial outage
-⚠️ ETH/USD at CRITICAL stop-loss threshold (4.88% down, 5% trigger)
-⚠️ BTC/USD showing significant drawdown (3.08% down)
-⚠️ Daily trade limit reached (2/2) - missed BUY signals
-⚠️ Both assets trading below support levels
+=== EXECUTIVE SUMMARY ===
+🚨 CRITICAL ALERT: ETH position has triggered stop-loss (-6.13% < -5.0%)
+⚠️ HIGH RISK: BTC position approaching stop-loss (-3.80%, 1.26% from trigger)
+⚠️ MARKET DOWNTURN: Significant price drops across both assets
+⚠️ SYSTEM LIMITATION: Daily trade limit reached (2/2 trades)
 
-SYSTEM STATUS:
-- Trading Dashboard: ACTIVE (http://localhost:5001)
-- Trading Script: ACTIVE (PID: 67306)
-- Trading Server: ACTIVE (PID: 67812)
-- Monitoring: ACTIVE (cron job running)
+=== KEY FINDINGS ===
 
-CRITICAL FINDINGS:
-1. ETH STOP-LOSS IMMINENT: Only ~$3.15 above 5% trigger level
-2. BTC DRAWDOWN: 3.08% down from recent buy, approaching critical
-3. TRADE LIMITS: 2/2 trades used today, BUY signals being ignored
-4. SUPPORT BREAKS: Both BTC and ETH below key support levels
+1. 🚨 STOP-LOSS TRIGGERED:
+   - ETH/USD: Entry $2,325.28 → Current $2,182.66 (-6.13%)
+   - Stop-loss set at 5.0% ($2,209.02) - ALREADY TRIGGERED
+   - Position size: 0.086 ETH, Loss: -$12.27
 
-MARKET DATA:
-- BTC/USD: $71,718.19 (Support: $72,009.20, Resistance: $74,521.09)
-- ETH/USD: $2,218.34 (Support: $2,225.00, Resistance: $2,341.58)
-- Both showing BUY signals (70% confidence) but skipped due to trade limits
+2. ⚠️ POSITION AT RISK:
+   - BTC/USD: Entry $74,094.64 → Current $71,275.39 (-3.80%)
+   - Stop-loss set at 5.0% ($70,389.91)
+   - Distance to stop-loss: 1.26% ($885.48 drop needed)
+   - Position size: 0.002699 BTC, Loss: -$7.61
 
-ACTIONS TAKEN:
-1. Restarted trading dashboard server (was offline)
-2. Updated monitoring logs with current system data
-3. Identified critical risk levels
-4. Documented all findings in logs
+3. 📉 MARKET CONDITIONS:
+   - BTC/USD: $71,275.39 (DOWN 3.88% from previous)
+   - ETH/USD: $2,182.66 (DOWN 6.37% from previous)
+   - Both assets trading near critical support levels
+   - ETH trading BELOW support ($2,182.66 < $2,188.80)
 
-RECOMMENDATIONS:
-1. IMMEDIATE: Monitor ETH price for stop-loss trigger (~$2,215.19)
-2. CONSIDER: Manual intervention if stop-loss triggers
-3. REVIEW: Daily trade limits during high volatility
-4. MONITOR: BTC for further weakness
-5. CONSIDER: Adjusting risk parameters for current market conditions
+4. 💼 PORTFOLIO STATUS:
+   - Total Capital: $1,000.00
+   - Current Exposure: $399.96
+   - Estimated Portfolio Value: $980.13
+   - Total Loss: -$19.87 (-1.99% on total capital)
+   - Daily Trades: 2/2 (LIMIT REACHED)
 
-NEXT SCHEDULED MONITORING: ~22:31 (hourly)
+5. ⚙️ SYSTEM STATUS:
+   - Trading Server: RUNNING (port 5001)
+   - Last Analysis: 2026-03-18T22:31:27 (24 minutes ago)
+   - Next Analysis: Hourly (23:31)
+   - Strategy File: NOT FOUND (using default parameters)
 
-Logs Updated:
-- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-- /Users/chetantemkar/.openclaw/workspace/app/trading_monitor_summary.txt
+=== URGENT ACTIONS REQUIRED ===
+
+🚨 IMMEDIATE (HIGH PRIORITY):
+1. Verify if stop-loss orders are being executed automatically
+2. Manually close ETH position if system not auto-closing
+3. Monitor BTC position continuously for stop-loss trigger
+
+⚠️ SHORT-TERM (MEDIUM PRIORITY):
+1. Review market conditions for continued downturn
+2. Consider manual position adjustments
+3. Check system logs for execution errors
+
+🔧 SYSTEM IMPROVEMENTS (LONG-TERM):
+1. Implement proper stop-loss execution monitoring
+2. Add real-time alerting for triggered stop-losses
+3. Create strategy file with proper risk parameters
+4. Increase monitoring frequency during market stress
+
+=== RISK ASSESSMENT ===
+
+🛑 CRITICAL RISK: ETH position below stop-loss threshold
+⚠️ HIGH RISK: BTC position approaching stop-loss
+⚠️ HIGH RISK: Market in significant downturn
+⚠️ MEDIUM RISK: Daily trade limit prevents new positions
+✅ LOW RISK: System operational
+
+=== RECOMMENDATIONS ===
+
+1. 🚨 MANUAL INTERVENTION: Check ETH position closure immediately
+2. 📊 INCREASE MONITORING: Monitor every 15 minutes during market stress
+3. ⚙️ SYSTEM AUDIT: Review trading execution logic for stop-loss handling
+4. 📈 STRATEGY REVIEW: Consider tighter stop-losses during high volatility
+5. 🔄 POSITION MANAGEMENT: Consider reducing position sizes if downturn continues
+
+=== NEXT STEPS ===
+
+1. Immediate: Verify ETH position status
+2. Continuous: Monitor BTC position (next check: 22:55)
+3. Scheduled: Next automated analysis at 23:31
+4. Review: Trading strategy and risk parameters
+
+=== MONITORING SCHEDULE ===
+- Next automated check: 2026-03-18 23:55:16 (1 hour)
+- Recommended manual checks: Every 15 minutes
+- Critical threshold monitoring: Continuous
+
+=== ALERT STATUS: CRITICAL ===
+This situation requires immediate attention. The ETH position has exceeded its stop-loss threshold and manual intervention may be required to prevent further losses.
+
+=== END OF SUMMARY ===
