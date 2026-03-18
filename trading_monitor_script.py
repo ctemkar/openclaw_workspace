@@ -4,7 +4,7 @@ from datetime import datetime
 
 TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TRADING_DASHBOARD_URL = "http://localhost:5001/"
+TRADING_DASHBOARD_URL = "http://localhost:5001/status"
 
 def log_message(message, file_path):
     timestamp = datetime.now().isoformat()

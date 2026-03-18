@@ -1,99 +1,113 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-18 20:46:35
-System Status: running
-Last Analysis: 2026-03-18T20:46:25.626749
+<html>
+    <head><title>Conservative Crypto Trading System</title></head>
+    <body>
+        <h1>Conservative Crypto Trading System</h1>
+        <p>Real trading with $1,000 capital on Gemini</p>
+        
+        <h2>Endpoints:</h2>
+        <ul>
+            <li><a href="/status">/status</a> - System status</li>
+            <li><a href="/analysis">/analysis</a> - Run analysis now</li>
+            <li><a href="/trades">/trades</a> - Recent trades</li>
+            <li><a href="/strategy">/strategy</a> - Current strategy</li>
+            <li><a href="/summary">/summary</a> - Trading summary</li>
+        </ul>
+        
+        <h2>Configuration:</h2>
+        <ul>
+            <li>Capital: $1,000</li>
+            <li>Stop-loss: 5%</li>
+            <li>Take-profit: 10%</li>
+            <li>Max trades/day: 2</li>
+            <li>Pairs: BTC/USD, ETH/USD</li>
+        </ul>
+    </body>
+    </html>
+[2026-03-18T21:40:37.416621] Error fetching data from http://localhost:5001/: Expecting value: line 2 column 5 (char 5)
+[2026-03-18T21:41:02.935501] Error fetching data from http://localhost:5001/: Expecting value: line 2 column 5 (char 5)
+[2026-03-18T21:41:28.737878] Trading Data: {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-18T21:39:48.333642", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-18T21:41:28.737371", "trading_pairs": ["BTC/USD", "ETH/USD"]}
+[2026-03-18T21:42:03.985517] Trading Data: {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-18T21:39:48.333642", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-18T21:42:03.985517", "trading_pairs": ["BTC/USD", "ETH/USD"]}
+[2026-03-18T21:42:08.227230] Recent Trades: 12 trades total, latest: {"amount":0.00013515202913877747,"model":"Gemini-Pro","price":73990.75,"side":"buy","status":"filled","time":"15:05:29"}
+[2026-03-18T21:42:29.847842] Strategy Status: {"error":"No strategy file found","timestamp":"2026-03-18T21:42:29.847842"}
+[2026-03-18T21:42:37.000000] === TRADING MONITORING ANALYSIS ===
+Timestamp: 2026-03-18 21:42:37 (Asia/Bangkok)
 
-CAPITAL & RISK PARAMETERS:
-- Capital: $1000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
+SYSTEM STATUS:
+✅ Dashboard Active: http://localhost:5001/
+✅ System Running: Status confirmed
+✅ Last Analysis: 2026-03-18T21:39:48.333642 (3 minutes ago)
+✅ Next Analysis: ~22:39 (hourly schedule)
+✅ Capital: $1,000.00
+✅ Risk Parameters: Stop-loss 5%, Take-profit 10%, Max 2 trades/day
 
-CURRENT PRICES:
-- BTC/USD: $72240.33
-- ETH/USD: $2235.31
+TRADING ACTIVITY:
+📊 Total Trades: 12 trades in history
+📊 Today's Trades: 2/2 (maximum reached)
+📊 Recent Buy: BTC at $73,990.75 (15:05:29)
+📊 Recent Buy: ETH at $2,331.78 (10:21:22)
+📊 Recent Sell: SOL at $94.952 (10:21:23)
+
+CURRENT MARKET ANALYSIS (from summary):
+🔍 BTC/USD: $71,700.00
+   - Below support: $72,009.20 (0.43% below)
+   - SMA 10: $73,563.27
+   - SMA 20: $73,966.31
+   - Signal: BUY (70% confidence) - "Near support level"
+   - Status: SKIPPED (max daily trades reached)
+
+🔍 ETH/USD: $2,220.96
+   - Below support: $2,225.00 (0.18% below)
+   - SMA 10: $2,300.56
+   - SMA 20: $2,315.03
+   - Signal: BUY (70% confidence) - "Near support level"
+   - Status: SKIPPED (max daily trades reached)
+
+RISK ASSESSMENT:
+⚠️ ETH/USD Drawdown Analysis:
+   - Recent buy: ~$2,331.78
+   - Current price: ~$2,220.96
+   - Drawdown: ~4.75% (from recent buy)
+   - Stop-loss trigger: 5% at ~$2,215.19
+   - Distance to stop-loss: ~$5.77 ABOVE THRESHOLD
+   - RISK LEVEL: HIGH - Imminent stop-loss trigger
+
+⚠️ BTC/USD Drawdown Analysis:
+   - Recent buy: ~$73,990.75
+   - Current price: ~$71,700.00
+   - Drawdown: ~3.10% (from recent buy)
+   - Stop-loss trigger: 5% at ~$70,291.21
+   - Distance to stop-loss: ~$1,408.79 ABOVE THRESHOLD
+   - RISK LEVEL: MODERATE - Approaching critical levels
+
+⚠️ TRADING LIMITATIONS:
+   - Daily trade limit reached (2/2)
+   - BUY signals being ignored for both BTC and ETH
+   - Market opportunities potentially missed
+
+⚠️ TECHNICAL WEAKNESS:
+   - Both assets below key support levels
+   - Bearish price action confirmed
+   - Below both SMA 10 and SMA 20
 
 PERFORMANCE METRICS:
-- Today's trades: 2/2
-- Total trades: 2
-- Total P&L: $0.00
-- BTC Change from recent low: -2.31%
-- ETH Change from recent low: -3.87%
+📈 Total P&L: $0.00 (no closed positions showing profit/loss)
+📈 Available Capital: $1,000.00
+📈 Trade Distribution: 11 buys, 1 sell (accumulation phase)
+📈 Position Status: Mostly accumulated positions
 
-TECHNICAL INDICATORS:
-- BTC Support: $72313.99
-- ETH Support: $2237.00
-- BTC SMA10: $73806.18
-- ETH SMA10: $2311.25
-- BTC Below SMA10: -2.12%
-- ETH Below SMA10: -3.29%
+ALERT STATUS:
+🔴 CRITICAL: ETH stop-loss imminent (~$5.77 from trigger)
+🟡 WARNING: BTC approaching stop-loss (3.10% drawdown)
+🟡 WARNING: Daily trade limit restricting new entries
+🟡 WARNING: Both assets below support levels
+🟢 NORMAL: System operational, capital available
 
-CRITICAL ALERTS: 3
-===================================================== Trading Dashboard Monitor - Wed Mar 18 20:52:04 +07 2026 ===
-Status: {"analysis_scheduled":"hourly","capital":1000.0,"last_analysis":"2026-03-18T20:46:25.626681","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-18T20:52:09.354189","trading_pairs":["BTC/USD","ETH/USD"]}
-Trades Summary: {"count":12,"recent_trades":[{"amount":0.00013515202913877747,"model":"Gemini-Pro","price":73990.75,"side":"buy","status":"filled","time":"15:05:29"},{"amount":0.00013522648610865638,"model":"Gemini-Pro","price":73950.01,"side":"buy","status":"filled","time":"15:05:28"}]}
-Analysis Summary: <pre>TRADING ANALYSIS REPORT
-Generated: 2026-03-18 20:46:25.626629
-==================================================
+RECOMMENDED ACTIONS:
+1. MANUALLY MONITOR ETH price - stop-loss may trigger at ~$2,215.19
+2. PREPARE for potential position closure if stop-loss triggers
+3. REVIEW daily trade limit policy during high volatility
+4. CONSIDER manual intervention if stop-loss triggers
+5. MONITOR BTC for further weakness toward $70,291.21
 
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
-
-🔍 Analyzing BTC/USD...
-   Price: $72240.33
-   24h Change: N/A
-   SMA 10: $73806.18
-   SMA 20: $74089.64
-   Support: $72313.99
-   Resistance: $74683.70
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $72313.99 (current: $72240.33)
-   ⏸️ Skipping: Max daily trades reached
-
-🔍 Analyzing ETH/USD...
-   Price: $2235.31
-   24h Change: N/A
-   SMA 10: $2311.25
-   SMA 20: $2320.33
-   Support: $2237.00
-   Resistance: $2350.29
-   Signal: BUY (Confidence: 70%)
-
-=== Trading Dashboard Monitor - Wed Mar 18 21:03:11 +07 2026 ===
-Timestamp: 2026-03-18 21:02:00 (UTC)
-System Status: running
-Capital: .00
-Risk Parameters: Stop-loss: 5%, Take-profit: 10%, Max trades/day: 2
-Today's trades: 2/2 (max reached)
-Current P&L: /bin/zsh.00
-BTC/USD Price: .33 | Signal: BUY (70% confidence)
-ETH/USD Price: .31 | Signal: BUY (70% confidence)
-Last analysis: 2026-03-18T20:46:25.626681
-Analysis scheduled: hourly
-==========================================
-⚠️ WARNING: Prices declining - BTC down ~2.4%, ETH down ~4% from recent buys
-⚠️ ETH approaching stop-loss threshold (4% down, stop-loss at 5%)
-[2026-03-18T21:14:43.977304] Starting trading dashboard monitor...
-[2026-03-18T21:14:43.982586] Error fetching data: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /summary (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))
-[2026-03-18T21:14:43.982659] Trading dashboard monitor finished.
-
-=== Trading Dashboard Monitor - Wed Mar 18 21:16:06  2026 ===
-Timestamp: 2026-03-18 21:16:06
-System Status: unknown
-Capital: $1000.00
-Risk Parameters: Stop-loss: 5%, Take-profit: 10%, Max trades/day: 2
-Today's trades: 0/2 (max: 2)
-Current P&L: $0.00
-BTC/USD Price: N/A | Signal: N/A
-ETH/USD Price: N/A | Signal: N/A
-BTC Drawdown: -2.38%
-ETH Drawdown: -4.06%
-Last analysis: N/A
-Analysis scheduled: unknown
-
-✅ No critical alerts at this time
-==================================================
+NEXT MONITORING CHECK: 22:42 (1 hour from now)
+=====================================================

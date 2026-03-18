@@ -1,45 +1,82 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-18 20:46:35
+Timestamp: 2026-03-18 21:42:37 (Asia/Bangkok)
 
-ALERT 1: BTC BELOW SUPPORT
-- Current Price: $72240.33
-- Support Level: $72313.99
-- Deviation: -$73.66 (-0.10%)
-- Significance: Price trading below identified support level
+🚨🚨🚨 CRITICAL ALERT: ETH/USD AT IMMINENT STOP-LOSS TRIGGER 🚨🚨🚨
+- Current ETH price: ~$2,220.96
+- Recent buy price: ~$2,331.78 (from 10:21:22 trade)
+- Current drawdown: ~4.75% (from recent buy)
+- Stop-loss threshold: 5.0%
+- Stop-loss trigger price: ~$2,215.19
+- Distance to stop-loss: ONLY ~$5.77 ABOVE THRESHOLD
+- URGENCY: EXTREME - Stop-loss may trigger within minutes
+- Current position: Below support level ($2,225.00)
+- Trading system signal: BUY (but trades limited to 2/2 daily)
 
-ALERT 2: ETH BELOW SUPPORT  
-- Current Price: $2235.31
-- Support Level: $2237.00
-- Deviation: -$1.69 (-0.08%)
-- Significance: Price trading below identified support level
+⚠️ WARNING: BTC/USD SHOWING SIGNIFICANT DRAWDOWN
+- Current BTC price: ~$71,700.00
+- Recent buy price: ~$73,990.75 (from 15:05:29 trade)
+- Current drawdown: ~3.10% (from recent buy)
+- Stop-loss threshold: 5.0%
+- Stop-loss trigger price: ~$70,291.21
+- Distance to stop-loss: ~$1,408.79 ABOVE THRESHOLD
+- Significance: HIGH RISK - Approaching critical levels
+- Current position: Below support level ($72,009.20)
+- Trading system signal: BUY (but trades limited to 2/2 daily)
 
-ALERT 3: ETH SIGNIFICANTLY BELOW SMA10
-- Current Price: $2235.31
-- SMA10: $2311.25
-- Deviation: -3.29%
-- Significance: Price more than 3% below 10-period simple moving average
+⚠️ WARNING: DAILY TRADE LIMIT REACHED - MARKET OPPORTUNITIES MISSED
+- Today's trades: 2/2 (maximum reached)
+- No new trades possible until reset
+- Both BTC and ETH showing BUY signals (70% confidence)
+- System status: BUY signals being SKIPPED due to daily limit
+- Risk: Missing potential entry points during market weakness
 
-RISK ASSESSMENT:
-- No stop-loss triggers detected (threshold: -5.0%)
-- No take-profit triggers detected (threshold: +10.0%)
-- Both assets trading below support levels
-- ETH showing technical weakness below SMA10
-- System operating within daily trade limits (2/2 trades used)
+⚠️ WARNING: BOTH ASSETS BELOW KEY SUPPORT LEVELS
+- BTC/USD: Below $72,009.20 support (current: ~$71,700.00) - 0.43% below
+- ETH/USD: Below $2,225.00 support (current: ~$2,220.96) - 0.18% below
+- Technical weakness confirmed for both assets
+- Bearish price action indicating continued pressure
 
-RECOMMENDED ACTIONS:
-1. Monitor BTC/USD for potential breakdown below $72240
-2. Watch ETH/USD for continued weakness below $2235
-3. Consider tightening stop-losses if volatility increases
-4. No new trades available today (daily limit reached)
+⚠️ WARNING: TRADING SYSTEM SHOWING CONTRARIAN BUY SIGNALS
+- BTC: BUY signal (70% confidence) - "Near support level"
+- ETH: BUY signal (70% confidence) - "Near support level"
+- Contrarian indicator: System sees current levels as buying opportunities
+- Limitation: Cannot act due to daily trade limit
 
-===================================================== Critical Trading Alert Analysis - Wed Mar 18 20:52:44 +07 2026 ===
-ALERT: ETH APPROACHING STOP-LOSS THRESHOLD
-=== CRITICAL ALERT - Wed Mar 18 21:06:56 +07 2026 ===
-Timestamp: 2026-03-18 21:02:00 (UTC)
-⚠️ WARNING: ETH/USD approaching stop-loss threshold
-Current ETH price: .31
-Recent ETH buy prices: ~-2331
-Current drawdown: ~4% (stop-loss at 5%)
-Monitor closely - stop-loss may trigger if price drops to ~
-BTC also down ~2.4% from recent buys
-==========================================
+🚨 IMMEDIATE RISK ASSESSMENT:
+- EXTREME RISK: ETH imminent stop-loss trigger (~$5.77 away from 5% drawdown)
+- HIGH RISK: BTC significant drawdown (3.10%, approaching 5% stop-loss)
+- HIGH RISK: Missed trading opportunities (BUY signals ignored due to limit)
+- MODERATE RISK: Both assets below support levels (technical weakness)
+- LIMITED flexibility: Daily trade limit reached (2/2)
+
+📊 PORTFOLIO STATUS:
+- Total trades: 12 (11 buys, 1 sell)
+- Today's trades: 2/2 (limit reached)
+- Total P&L: $0.00 (no closed positions showing profit/loss)
+- Available capital: $1,000.00
+- Positions: Mostly accumulated (buy-heavy)
+
+🚨🚨 IMMEDIATE ACTIONS REQUIRED:
+1. CRITICAL: MANUALLY MONITOR ETH/USD price - stop-loss may trigger at ~$2,215.19
+2. PREPARE for potential stop-loss execution and position closure
+3. MONITOR BTC for further weakness toward $70,291.21 stop-loss level
+4. CONSIDER manual override for trade limits if stop-loss triggers
+5. REVIEW daily trade limit policy during high-volatility periods
+
+🔄 LONG-TERM RECOMMENDATIONS:
+1. Consider adjusting daily trade limits based on market volatility
+2. Implement dynamic stop-loss/take-profit thresholds
+3. Add price alert system for critical thresholds
+4. Review support/resistance calculation methodology
+5. Consider implementing trailing stop-loss for profitable positions
+6. Add position sizing based on volatility metrics
+
+✅ SYSTEM HEALTH CHECK:
+- Trading Dashboard: ✅ ACTIVE (http://localhost:5001)
+- Monitoring: ✅ ACTIVE (cron job running)
+- Analysis Schedule: ✅ HOURLY (next ~22:39)
+- Trade Execution: ⚠️ LIMITED (2/2 daily trades used)
+- Capital Availability: ✅ $1,000.00 available
+
+⏰ NEXT MONITORING CHECK: 22:42 (1 hour from now)
+=====================================================
