@@ -1,44 +1,72 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-18 18:30:47 (Asia/Bangkok)
+TRADING DASHBOARD MONITOR - CRON EXECUTION SUMMARY
+====================================================
+Execution Time: Thursday, March 19th, 2026 — 2:38 AM (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor (60ae3abf-279d-47bf-a701-af97ecda8ab6)
 
 SYSTEM STATUS:
-✅ Dashboard operational (port 5001)
-✅ Trading API operational (port 5080)
-✅ Both systems reachable and responsive
+✅ Dashboard operational at http://localhost:5001/
+✅ System status: RUNNING
+✅ Capital: $1,000.00
+✅ Risk parameters: Stop-loss 5%, Take-profit 10%
+✅ Max daily trades: 2/2 (LIMIT REACHED)
+✅ Last analysis: 2026-03-19 02:33:24
+✅ Next analysis: Scheduled hourly
 
-TRADING PERFORMANCE:
-• Total trades recorded: 12
-• BTC trades: 2 (current price: $74,094.64)
-• ETH trades: 2 (current price: $2,325.28)
-• SOL trades: 1
-• Today's trades executed: 2/2 (limit reached)
+CURRENT POSITIONS:
+💰 BTC/USD Position:
+   - Current price: $71,226.91
+   - Average entry: $72,714.96
+   - Position size: 0.005501 BTC
+   - Current value: $391.82
+   - P&L: -$8.19 (-2.05%)
+   - Status: MONITORING (within normal range)
 
-RISK PARAMETERS:
-• Capital: $1,000.00
-• Stop loss: 5.0%
-• Take profit: 10.0%
-• Available capital: $1,000.00
+💰 ETH/USD Position:
+   - Current price: $2,191.67
+   - Average entry: $2,257.51
+   - Position size: 0.177200 ETH
+   - Current value: $388.36
+   - P&L: -$11.67 (-2.92%)
+   - Status: ⚠️ WARNING - Position ETHUSD_1773815989 at STOP-LOSS level!
+   - Stop-loss price: $2,209.02 (current: $2,191.67)
+
+TRADING ACTIVITY:
+📊 Total trades in history: 4
+📊 Today's trades executed: 2/2 (max limit reached)
+📊 All positions: OPEN (no exits executed)
+📊 All trades: BUY orders
 
 RISK ASSESSMENT:
-• BTC drawdown: 0.32% (safe, well below 5% stop loss)
-• No stop-loss triggers detected
-• No take-profit triggers detected
-• Max daily trades limit reached (2/2)
+⚠️  ETH position at -2.92% loss (STOP-LOSS LEVEL REACHED!)
+⚠️  Daily trade limit reached - no new positions possible
+⚠️  One ETH position has triggered stop-loss condition
+✅ BTC position within normal range (-2.05%)
+✅ No take-profit orders triggered (threshold: +10%)
+✅ Capital remains at $1,000.00
 
-ALERTS:
-⚠️ WARNING: Max daily trades limit reached - trading paused until reset
-ℹ️ INFO: BTC position shows minimal drawdown (0.32%)
-ℹ️ INFO: ETH position stable
-ℹ️ INFO: Trading systems operational
-
-CRITICAL CONDITIONS: NONE
-No stop-loss or take-profit triggers detected. No critical drawdown indicators.
+ALERT STATUS:
+🔔 CRITICAL ALERT: ETH position at stop-loss level!
+🔔 Warning: Daily trade limit reached (2/2)
+🔔 Info: System operational, dashboard responding
 
 RECOMMENDATIONS:
-1. Monitor for market conditions to reset daily trade limit
-2. Consider adjusting daily trade limit if market volatility increases
-3. Continue monitoring for any significant price movements
-4. Verify trading API is ready for next trading session
+1. IMMEDIATE ACTION REQUIRED: ETH position has hit stop-loss level
+2. Review trading strategy given current market conditions
+3. Consider manual intervention for ETH position
+4. Monitor BTC position closely
+5. Next monitoring check recommended in 30 minutes
 
-NEXT CHECK: Scheduled for next monitoring cycle
-=========================================
+FILES UPDATED BY MONITOR:
+✓ trading_monitoring.log - Full monitoring data recorded
+✓ critical_alerts.log - Alert status logged
+✓ monitoring_summary.txt - Previous summary (02:07 AM)
+✓ trading_summary.txt - Latest trading analysis (02:33 AM)
+
+NEXT STEPS:
+- The trading monitor script runs successfully
+- Dashboard is operational and responding
+- Critical alert detected requires attention
+- Cron job execution confirmed successful
+
+====================================================
+MONITORING COMPLETE - CRITICAL ALERT REQUIRES ATTENTION
