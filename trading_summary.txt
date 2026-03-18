@@ -1,27 +1,40 @@
-TRADING DASHBOARD MONITORING REPORT
-=====================================
-Timestamp: Wed Mar 18 20:10:49 +07 2026
+TRADING ANALYSIS REPORT
+Generated: 2026-03-18 20:46:25.626629
+==================================================
 
-SYSTEM STATUS
--------------
-Trading Status: 
-Last Update: 
+============================================================
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
+Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
+============================================================
+📊 Today's trades: 2/2
 
-TRADING ACTIVITY
-----------------
-Total Trades: 
+🔍 Analyzing BTC/USD...
+   Price: $72240.33
+   24h Change: N/A
+   SMA 10: $73806.18
+   SMA 20: $74089.64
+   Support: $72313.99
+   Resistance: $74683.70
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $72313.99 (current: $72240.33)
+   ⏸️ Skipping: Max daily trades reached
 
-ERROR MONITORING
-----------------
-Strategy Errors (last hour): 0
-API Errors (last hour): 0
+🔍 Analyzing ETH/USD...
+   Price: $2235.31
+   24h Change: N/A
+   SMA 10: $2311.25
+   SMA 20: $2320.33
+   Support: $2237.00
+   Resistance: $2350.29
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $2237.00 (current: $2235.31)
+   ⏸️ Skipping: Max daily trades reached
 
-ALERT STATUS
-------------
-✓ No new critical alerts
+📈 Trading Summary:
+   Today's trades executed: 2/2
+   Total trades: 2
+   Total P&L: $0.00
+   Available capital: $1000.00
 
-RECOMMENDED ACTIONS
-------------------
-2. RESTART TRADING: System is not running
-✓ System operational
-
+✅ Analysis complete. Next run in 1 hour.
