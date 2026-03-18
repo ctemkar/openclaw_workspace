@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="http://localhost:5001/"
+URL="http://localhost:57260/"
 TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 

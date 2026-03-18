@@ -1,31 +1,16 @@
-TRADING DASHBOARD MONITORING REPORT
-=====================================
-Timestamp: Wed Mar 18 04:04:56 +07 2026
+Trading Dashboard Monitoring Summary:
 
-SYSTEM STATUS
--------------
-Trading Status: running
-Last Update: 2026-03-18T04:04:51.247824Z
+--- Dashboard Status ---
+Dashboard URL: http://localhost:57260
+Trading Status: RUNNING
+Completed Trades: 4
 
-TRADING ACTIVITY
-----------------
-Total Trades: 2
-Buy Trades: 2
-Sell Trades: 0
-Latest Trade: buy (filled)
+--- Configuration ---
+Capital: $10000
+Stop Loss: 0.03%
+Trade Size: $10
 
-ERROR MONITORING
-----------------
-Strategy Errors (last hour): 48
-API Errors (last hour): 0
-Most Recent Error: [2026-03-18 04:04:54] STRATEGY ERROR: 'str' object has no at...
-
-ALERT STATUS
-------------
-✓ No new critical alerts
-
-RECOMMENDED ACTIONS
-------------------
-1. INVESTIGATE STRATEGY ERRORS: Continuous errors detected
-✓ System operational
+--- Critical Alerts ---
+Found 12 alert(s) in logs
+Latest alerts:
 

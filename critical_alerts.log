@@ -1,117 +1,57 @@
---- CRITICAL ALERT: 2026-03-18 07:00:00 +07 ---
+2026-03-18 07:18:32 - CRITICAL - GLOBAL STOP-LOSS TRIGGERED - IMMEDIATE ACTION REQUIRED
+=============================================================================
+ALERT: BTC price ($73,946) has fallen below global 1% stop-loss level ($74,009.34)
+IMPACT: Positions are at 1.08% loss, automatic stop-loss execution may have failed
+TIME DETECTED: 2026-03-18 07:18:32 (Asia/Bangkok)
 
-🚨🚨🚨 STOP LOSS THRESHOLD EXCEEDED 🚨🚨🚨
+CRITICAL DETAILS:
+- Current BTC Price: $73,946.00
+- Global Stop-Loss Level (1%): $74,009.34
+- Price Below Stop-Loss By: $63.34 (0.086%)
+- Current Drawdown: 1.08%
+- Total Position Value: $39.57
+- Total Loss: $0.43
 
-HIGH PRIORITY ISSUES DETECTED:
+POSITIONS AT RISK:
+1. 04:45:54 - BUY $74,770.04 (0.00013374 BTC) - Down 1.10%
+2. 04:43:01 - BUY $74,800.00 (0.00013369 BTC) - Down 1.14%
+3. 02:25:17 - BUY $74,728.83 (0.00013382 BTC) - Down 1.05%
+4. 02:24:56 - BUY $74,728.83 (0.00013382 BTC) - Down 1.05%
 
-1. **STOP LOSS TRIGGERED - IMMEDIATE ACTION REQUIRED**
-   - Portfolio loss: 1.09% (exceeds 1.0% threshold)
-   - Current P&L: -$0.44 on $40.00 investment
-   - Positions unprotected against further losses
-   - Risk of continued drawdown in volatile market
-
-2. **TRADING BOT INACTIVE/STUCK**
-   - Bot process is in SLEEP state (PID: 8546, status: SN)
-   - No trading activity detected since 05:21:00
-   - Bot may be stuck due to previous errors or monitoring loop
-
-3. **DASHBOARD STATUS UPDATE**
-   - Dashboard RESTARTED on port 56992 (was offline)
-   - Monitoring interface now AVAILABLE
-   - Real-time monitoring restored
-
-4. **PORTFOLIO AT RISK**
-   - 4 open BUY positions (all BTC)
-   - No stop-loss orders in place
-   - No take-profit orders detected
-   - Positions vulnerable to market volatility
-
-5. **MARKET CONDITIONS**
-   - BTC: $73,940.00 (down from previous levels)
-   - ETH: $2,318.38
-   - SOL: $94.70
-   - Market showing volatility
-
-PORTFOLIO DETAILS:
-- Total BTC Holdings: 0.00053507 BTC
-- Investment: $40.00
-- Current Value: $39.56
-- Loss: $0.44 (-1.09%)
-- Stop Loss Threshold: 1.0% (EXCEEDED)
-
-CRITICAL ACTIONS REQUIRED:
-1. **IMMEDIATE**: Implement stop-loss protection for existing positions
-2. **IMMEDIATE**: Check and restart trading bot if stuck
-3. **IMMEDIATE**: Review market conditions and trading strategy
-4. **HIGH**: Verify exchange connectivity and API configuration
-5. **MEDIUM**: Monitor dashboard for real-time updates
-
-POTENTIAL IMPACT:
-- Continued losses if market moves further against positions
-- Missed trading opportunities due to inactive bot
-- Capital erosion without protective measures
-- Inability to execute defensive trades
-
-⚠️ **URGENT**: Portfolio exceeds stop-loss threshold. Manual intervention recommended to prevent further losses.
-
---- End of critical alert ---🚨 CRITICAL ALERT: PORTFOLIO AT STOP LOSS THRESHOLD
-===================================================
-Alert Time: 2026-03-18 07:10:27 (Asia/Bangkok)
-Alert Source: trading_dashboard_monitor (cron:54b9044a-5d4c-4e8f-ae34-905bff27ab5c)
-
-ALERT DETAILS:
-• Portfolio P&L: -1.00% (AT STOP LOSS THRESHOLD)
-• Stop Loss Setting: -1.00%
-• Current Value: $39.60 (from $40.00 investment)
-• BTC Holdings: 0.00053507 BTC
-• Current BTC Price: $74,013.00
-
-POSITION ANALYSIS:
-• Investment: $40.00
-• Current Value: $39.60
-• Loss: $0.40
-• Percentage Loss: -1.00%
-
-MARKET CONTEXT:
-• BTC has risen from ~$71,500 to $74,013 since last bot checks
-• Bot's buy conditions set thresholds below current market prices
-• No recent trades due to price conditions not being met
+BOT STATUS CONCERN:
+- Bot process is running (PID 8546) but in sleeping state (SN)
+- Trading log shows "Received termination signal, shutting down gracefully..."
+- Bot may not be actively monitoring positions for stop-loss triggers
+- Automatic stop-loss execution appears to have failed
 
 RISK ASSESSMENT:
-• Immediate Risk: HIGH (at stop loss threshold)
-• Position Risk: LOW (small $40 position)
-• Market Risk: MEDIUM (BTC volatility)
-• Action Required: MONITOR OR INTERVENE
+🔴 HIGH: Stop-loss triggered but positions not sold
+🔴 HIGH: Bot may not be actively monitoring
+🟡 MEDIUM: Small position size ($39.57 total)
+🟢 LOW: Strategy stop-loss (5%) still has buffer
 
-RECOMMENDED ACTIONS:
-1. CLOSE POSITION: Consider selling to limit further losses
-2. ADJUST STOP LOSS: Review if -1% is appropriate for small position
-3. REVIEW STRATEGY: Current buy thresholds may be too conservative
-4. MONITOR CLOSELY: Watch for further price movements
+IMMEDIATE ACTIONS:
+1. MANUAL INTERVENTION: Consider manually selling positions to limit losses
+2. BOT RESTART: Restart trading bot to ensure active monitoring
+3. LOG REVIEW: Check why stop-loss wasn't executed automatically
+4. CONFIG VERIFICATION: Review trading_config.json stop-loss settings
 
-ALERT STATUS: ACTIVE - REQUIRES ATTENTION
+ROOT CAUSE INVESTIGATION:
+- Bot sleeping state may prevent real-time monitoring
+- Stop-loss execution logic may have bugs
+- Market data feed may be delayed or inaccurate
+- Bot may be waiting for next trade cycle (5-minute intervals)
 
---- CRITICAL ALERT: 2026-03-18 07:11:29 +0700 ---
+FOLLOW-UP ACTIONS:
+1. Implement more frequent price checks during drawdown periods
+2. Add emergency stop-loss execution outside normal trade cycles
+3. Consider implementing a separate stop-loss monitoring service
+4. Review and test stop-loss execution logic thoroughly
 
-🚨🚨🚨 TRADING SYSTEM COMPLETELY OFFLINE 🚨🚨🚨
+PREVIOUS ALERTS:
+- Trading bot process was not running (RESOLVED - bot now running)
+- Strategy generation system broken (llm_strategies.json malformed)
+- Bot was running with errors (strategy parsing failure)
 
-CRITICAL ISSUES DETECTED:
-1. **TRADING SERVICE OFFLINE**
-   - Port 5001: No service running
-   - Dashboard port 56992: Also offline
-   - Complete system failure detected
-
-2. **PREVIOUS ALERT STILL ACTIVE**
-   - Stop loss threshold exceeded (1.09% loss)
-   - Trading bot inactive/stuck
-   - Positions unprotected
-
-IMMEDIATE ACTIONS REQUIRED:
-1. **RESTART TRADING SYSTEM** - Investigate and restart trading service
-2. **MANUAL POSITION REVIEW** - Check exchange for current positions
-3. **IMPLEMENT PROTECTIONS** - Set stop-loss orders manually if needed
-4. **INVESTIGATE ROOT CAUSE** - Determine why system went offline
-
-⚠️ **URGENT**: Trading system completely offline. Manual intervention required to prevent further losses and restore operations.
-
---- End of critical alert ---
+URGENCY: HIGH - Positions are losing value and stop-loss has been triggered without execution.--- Alerts ---
+--- Alerts ---
