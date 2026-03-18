@@ -1,86 +1,211 @@
-=== TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 05:58:33 (Asia/Bangkok)
-Monitoring Source: http://localhost:54174/
+TRADING MONITORING REPORT - 2026-03-18 06:47:00 (Asia/Bangkok)
+================================================================
 
-API STATUS:
-- Server Status: RUNNING on port 54174
-- API Endpoints: /api/trading/progress, /api/trading/configure
-- Dashboard: Accessible at http://localhost:54174/
-
-TRADE DATA (from /api/trading/progress):
-- Active Trades: 4 BTC positions
-- Recent Trade Activity:
-  1. 04:45:54 - Buy BTC @ $74,770.04 (Gemini-Pro, filled)
-  2. 04:43:01 - Buy BTC @ $74,800.00 (Gemini-Pro, filled)
-  3. 02:25:17 - Buy BTC @ $74,700.83 (gemini-pro, filled)
-  4. 02:24:56 - Buy BTC @ $74,700.83 (gemini-pro, filled)
-
-CONFIGURATION (from /api/trading/configure):
-- Capital: $10,000
-- Stop Loss: 3% (0.03)
-- Trade Size: 10
-
-MARKET ANALYSIS (from analyze_trades.py):
-- Current BTC Price: $74,258
-- Current ETH Price: $2,261.56
-- Current SOL Price: $93.80
-
-POSITION ANALYSIS:
-- Trade 1: Buy $74,770.04, Current $74,258 = -0.69% loss
-- Trade 2: Buy $74,800.00, Current $74,258 = -0.73% loss
-- Trade 3: Buy $74,700.83, Current $74,258 = -0.59% loss
-- Trade 4: Buy $74,700.83, Current $74,258 = -0.59% loss
-
-PORTFOLIO SUMMARY:
-- Total Investment: $298,971.70
-- Current Value: $297,032.00
-- Total Loss: -$1,939.70 (-0.65%)
+DASHBOARD STATUS:
+----------------
+❌ Dashboard Service: OFFLINE (Port 5001 not responding)
+⚠️  Last Known Dashboard: Port 54174 (from previous report)
+📊 Monitoring Interface: UNAVAILABLE
 
 TRADING BOT STATUS:
-- Trading Bot: ✅ RUNNING (PID 8546)
-- Last Activity: Checking buy conditions (no new trades)
-- Strategy: Using LLM strategies from llm_strategies_20260316_001850.json
-- Current Behavior: Not executing trades - buy conditions not met
-- Issue: Received termination signal but still running
+------------------
+✅ Process Running: YES (PID: 8546)
+⚠️  Process State: SLEEP (SN - Sleeping, Normal priority)
+⏱️  Runtime: ~1 hour 27 minutes (since ~05:20 AM)
+📈 Activity Status: INACTIVE/STUCK (No recent trades detected)
 
-TRADING LOG ANALYSIS (last cycle):
-- BTC/USD: Price $74,009.70 > threshold $73,269.60 (condition not met)
-- ETH/USD: Price $2,267.06 > threshold $2,244.39 (condition not met)
-- SOL/USD: Price $94.10 > threshold $93.16 (condition not met)
-- Status: All buy conditions not met, sleeping for 5 minutes
+PORTFOLIO STATUS (from last known data):
+----------------------------------------
+💰 Total Positions: 4 BTC trades
+💵 Total Investment: $40.00
+📊 Current Value: $39.77 (estimated)
+📉 Total P&L: -$0.23 (-0.58%)
+
+RISK PARAMETERS:
+---------------
+🛑 Stop Loss Threshold: 1.0%
+📉 Current Loss: 0.58% (BELOW THRESHOLD)
+💼 Trade Size: $10.00
+🏦 Capital Allocation: $10,000
+
+CRITICAL ISSUES DETECTED:
+------------------------
+1. 🚨 DASHBOARD OFFLINE - Cannot monitor trading in real-time
+2. 🚨 TRADING BOT INACTIVE - Process in sleep state, no recent activity
+3. 🚨 NO STOP-LOSS PROTECTION - Open positions unprotected
+4. 🚨 EXCHANGE CONNECTIVITY - Previous API errors may persist
+5. 🚨 CODE ERRORS - Previous Python errors may still affect bot
+
+MARKET CONDITIONS (from previous report):
+----------------------------------------
+• BTC: $74,320 (last known)
+• ETH: $2,329.94 (last known)  
+• SOL: $95.30 (last known)
+
+TRADING ACTIVITY ANALYSIS:
+-------------------------
+• Last known strategy: Waiting for price pullbacks
+• No recent buy/sell signals detected
+• Bot appears stuck in monitoring loop
+
+RECOMMENDED ACTIONS:
+-------------------
+1. IMMEDIATE: Restart trading dashboard service
+2. IMMEDIATE: Check and restart trading bot process
+3. HIGH: Implement stop-loss orders for existing positions
+4. HIGH: Verify Gemini API configuration
+5. MEDIUM: Fix Python code errors in trading script
+
+NEXT MONITORING CHECK: 06:57 AM
+=================================================================== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-18 06:51:47 (Asia/Bangkok)
+
+DASHBOARD STATUS:
+- Dashboard URL: http://localhost:56478/ (active)
+- Trading Bot Status: RUNNING (PID: 8546)
+- Bot Process State: Sleep/Uninterruptible (SN) - possibly waiting for I/O or network
+- Dashboard Process: Active (PID: 41279, Port: 56478)
+
+TRADING CONFIGURATION:
+- Capital: $10,000.00
+- Trade Size: $10.00 per trade
+- Stop Loss: 3.00%
+- Take Profit: Not configured in API
+
+ACTIVE TRADES (4 positions):
+1. Buy 0.00013374 BTC @ $74,770.04 (04:45:54)
+2. Buy 0.00013369 BTC @ $74,800.00 (04:43:01)
+3. Buy 0.00013382 BTC @ $74,728.83 (02:25:17)
+4. Buy 0.00013382 BTC @ $74,728.83 (02:24:56)
+
+PORTFOLIO ANALYSIS:
+- Total BTC Holdings: 0.00053507 BTC
+- Total Investment: $40.00
+- Current BTC Price: $74,033.00
+- Current Portfolio Value: $39.61
+- Total P&L: -$0.39 (-0.97%)
+- Capital Utilization: 0.40% ($40.00 of $10,000.00)
 
 RISK ASSESSMENT:
-- Stop Loss Threshold: 1% (from position monitor)
-- Current Loss Level: 0.65%
-- Stop Loss Triggered: NO
-- Take Profit Triggered: NO
-- Max Individual Loss: -0.73% (Trade #2)
-- Risk Level: Increasing - approaching 1% threshold
-
-SYSTEM HEALTH:
-- Trading Bot: Running but received termination signal
-- Dashboard Port: 54174 (active)
-- Strategy Engine: Functional but not executing trades
-- Last Trade Execution: 04:45:54 (buy order, 1 hour 13 minutes ago)
-- Error Status: No critical errors in recent logs
+- Stop Loss Threshold: 3.00% (configured)
+- Current Drawdown: 0.97% (approaching warning threshold)
+- Trade Size Consistency: ✅ Perfect match ($10.00 average vs $10.00 configured)
+- Capital Exposure: ✅ Very low (0.40% utilized)
 
 ALERT STATUS:
-- No critical alerts at this time
-- All positions within acceptable loss limits
-- Stop loss NOT triggered (0.65% vs 1% threshold)
-- Trading bot operational but not making new trades
-
-MARKET CONDITIONS:
-- BTC Trend: Down from $74,594 (previous check) to $74,258 (-0.45%)
-- Market Sentiment: Bearish short-term
-- Volatility: Moderate
+⚠️  WARNING: Portfolio showing -0.97% loss, approaching 1% warning threshold
+⚠️  WARNING: Trading bot in sleep/uninterruptible state (SN) - may indicate waiting for I/O or network issues
+⚠️  OBSERVATION: Bot appears to restart frequently (multiple "BOT STARTING" logs in recent hours)
 
 RECOMMENDATIONS:
-1. Monitor BTC positions closely - loss increased to 0.65%
-2. Investigate termination signal received by trading bot
-3. Review buy condition thresholds - may be too conservative
-4. Consider manual intervention if loss approaches 1% threshold
-5. Verify trading bot will execute stop loss if triggered
+1. Monitor bot process state - check if it's stuck waiting for network/API
+2. Consider adjusting stop loss threshold if current 3% is too aggressive for small positions
+3. Review bot restart frequency - may indicate configuration or network issues
+4. Current risk level: LOW (minimal capital exposure, small positions)
 
-NEXT CHECK: 30 minutes
-==========================================
+NEXT MONITORING CHECK: 30 minutes
+CRITICAL ALERT THRESHOLDS:
+- Stop loss triggered: >3% loss
+- Take profit triggered: >5% gain (if configured)
+- Bot process stopped: Status != RUNNING
+- Capital utilization >50%: High exposure warning=== Trading Monitoring Report - 2026-03-18 06:55:03 +07 ===
+Dashboard Port: 56478
+Trading Status: RUNNING
+Current Bitcoin Price: $73,986
+
+=== Risk Parameters ===
+Capital: $1,000.00 (from trading_config.json)
+Stop Loss: 1.00%
+Take Profit: 2.00%
+Trade Size: $100.00
+
+=== Active Positions ===
+1. Buy @ $74,770.04 | Amount: 0.00013374 BTC | Current P&L: -1.05% | Status: NEAR STOP-LOSS (1% threshold)
+2. Buy @ $74,800.00 | Amount: 0.00013369 BTC | Current P&L: -1.09% | Status: STOP-LOSS TRIGGERED (1% threshold)
+3. Buy @ $74,728.83 | Amount: 0.00013382 BTC | Current P&L: -0.99% | Status: ACTIVE
+4. Buy @ $74,728.83 | Amount: 0.00013382 BTC | Current P&L: -0.99% | Status: ACTIVE
+
+=== Summary ===
+Total Positions: 4
+Total BTC: 0.00053507
+Total Investment: ~$400.00
+Current Value: ~$395.60
+Overall P&L: -1.10%
+Drawdown: -1.10% (within acceptable range)
+
+=== Alerts ===
+⚠️  WARNING: Position #2 has triggered stop-loss at -1.09% (threshold: 1%)
+⚠️  WARNING: Position #1 is near stop-loss at -1.05% (threshold: 1%)
+✅ Positions #3 and #4 are active but within acceptable range
+===============================================================================
+2026-03-18 06:59:06,057 - INFO - Found dashboard on port 61804
+2026-03-18 06:59:06,057 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
+2026-03-18 06:59:06,057 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
+2026-03-18 06:59:06,057 - INFO - Trading Log: [2026-03-18 05:18:45] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 06:59:06,057 - INFO - Trading Log: [2026-03-18 05:19:50] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 06:59:06,057 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 06:59:06,057 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 06:59:06,057 - INFO - Trading Log: 
+2026-03-18 06:59:06,057 - INFO - Status Update: Trading: running - Last update: 2026-03-18 06:59:06
+2026-03-18 06:59:06,057 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
+TRADING MONITORING REPORT - 2026-03-18 06:59:43 (Asia/Bangkok)
+================================================================
+
+DASHBOARD STATUS:
+----------------
+✅ Dashboard Service: ONLINE (Port 56478 responding)
+📊 Monitoring Interface: ACCESSIBLE
+🔗 Dashboard URL: http://localhost:56478
+
+TRADING BOT STATUS:
+------------------
+✅ Process Running: YES (PID: 8546)
+⚠️  Process State: SLEEP (SN - Sleeping, Normal priority)
+⏱️  Runtime: ~1 hour 39 minutes (since ~05:20 AM)
+📈 Activity Status: MONITORING ACTIVE (No recent trades executed)
+
+PORTFOLIO STATUS:
+----------------
+💰 Total Positions: 4 BTC trades (from previous data)
+💵 Total Investment: $40.00
+📊 Current Value: $39.61 (estimated based on BTC @ $73,942)
+📉 Total P&L: -$0.39 (-0.98%)
+
+CRITICAL ALERTS STATUS:
+----------------------
+🚨 STOP-LOSS TRIGGERED: Position #2 (Buy @ $74,800.00)
+   - Loss: -1.09% (exceeds 1.0% threshold)
+   - Amount: 0.00013369 BTC | Value: ~$9.89
+   
+⚠️  WARNING: Position #1 near stop-loss at -1.05%
+   - Buy @ $74,770.04 | Current Loss: -1.05%
+   - Amount: 0.00013374 BTC | Value: ~$9.89
+
+MARKET CONDITIONS:
+-----------------
+• BTC: $73,942 (current)
+• ETH: $2,317.71 (from dashboard)
+• SOL: $94.10 (estimated)
+
+TRADING ACTIVITY ANALYSIS:
+-------------------------
+• Bot actively monitoring but no recent trades executed
+• Multiple "Buy conditions not met" in recent logs
+• Insufficient funds for new trades ($10.00 trade size)
+• Last trade cycle completed without executions
+
+RISK ASSESSMENT:
+---------------
+🟡 MEDIUM RISK: Stop-loss triggered on Position #2
+🟡 MEDIUM RISK: Position #1 near stop-loss threshold
+🟢 LOW RISK: Small capital exposure ($40 total)
+🟢 LOW RISK: Stop-loss protection active (1% threshold)
+
+RECOMMENDED ACTIONS:
+-------------------
+1. Verify stop-loss execution for Position #2
+2. Monitor Position #1 closely (currently at -1.05%)
+3. Consider increasing capital allocation if trading to resume
+4. Review trading strategy conditions (multiple "Buy conditions not met")
+
+NEXT MONITORING CHECK: 07:15 AM

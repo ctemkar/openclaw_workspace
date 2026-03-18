@@ -1,10 +1,118 @@
-[2026-03-18 05:58:45] WARNING - LOSS APPROACHING STOP LOSS THRESHOLD
-[2026-03-18 05:58:45] WARNING - Current portfolio loss: -0.65%
-[2026-03-18 05:58:45] WARNING - Distance to 1% stop loss: 0.35%
-[2026-03-18 05:58:45] WARNING - Distance to 3% stop loss: 2.35%
-[2026-03-18 05:58:45] WARNING - Loss trend: Increasing (was -0.31% at 05:23)
-[2026-03-18 05:58:45] WARNING - BTC price decline: $74,594 → $74,258 (-0.45%)
-[2026-03-18 05:58:45] WARNING - Stop loss threshold confusion: API shows 3%, analyze script uses 1%
-[2026-03-18 05:58:45] WARNING - Trading bot status: Running but received termination signal
-[2026-03-18 05:58:45] WARNING - Recommendation: Clarify stop loss threshold and monitor closely
-[2026-03-18 05:58:45] WARNING - Next check: 15 minutes (or if loss reaches 0.85%)
+--- CRITICAL ALERT: 2026-03-18 06:45:23 +07 ---
+
+HIGH PRIORITY ISSUES DETECTED:
+
+1. TRADING DASHBOARD OFFLINE
+   - Dashboard service not running on port 5001
+   - No monitoring interface available
+   - Cannot view real-time trading status
+
+2. TRADING BOT INACTIVE/STUCK
+   - Bot process is in SLEEP state (PID: 8546, status: SN)
+   - No recent trading activity detected
+   - Bot may be stuck due to previous errors
+
+3. EXCHANGE CONNECTIVITY ISSUES
+   - Previous errors: "missing required field 'side'" for BTC, SOL, ETH orders
+   - Gemini API may have configuration issues
+   - This prevents new trades from being executed
+
+4. CODE ERRORS PERSIST
+   - Previous NameError: 'update_task_statuses' is not defined
+   - Previous NameError: 'cleanup_managed_processes' is not defined
+   - These Python code errors may still be present
+
+5. RISK EXPOSURE WITHOUT PROTECTION
+   - 4 open BUY positions (all BTC)
+   - No stop-loss orders detected
+   - No take-profit orders detected
+   - Positions unprotected against market volatility
+   - No active monitoring due to dashboard offline
+
+CRITICAL ACTIONS REQUIRED:
+1. IMMEDIATE: Restart trading dashboard service
+2. IMMEDIATE: Check and restart trading bot if stuck
+3. HIGH: Verify Gemini API credentials and configuration
+4. HIGH: Implement stop-loss protection for existing positions
+5. MEDIUM: Fix Python code errors in trading script
+
+POTENTIAL IMPACT:
+- Unable to monitor trading performance
+- Positions may be at risk without stop-loss
+- Missed trading opportunities due to inactive bot
+- Potential capital loss if market moves against positions
+
+--- End of critical alert ---
+
+--- CRITICAL ALERT UPDATE: 2026-03-18 06:47:00 +07 ---
+
+MONITORING CONFIRMATION:
+- Dashboard still OFFLINE on port 5001
+- Trading bot still INACTIVE (PID: 8546, status: SN)
+- No improvement since last alert (2 minutes ago)
+
+POSITION STATUS UPDATE:
+- 4 BTC positions still open
+- Estimated loss: 0.58% (approaching 1.0% stop-loss threshold)
+- Positions remain UNPROTECTED (no stop-loss orders)
+
+URGENT ACTION REQUIRED:
+1. RESTART DASHBOARD: Service needed for monitoring
+2. RESTART TRADING BOT: Process appears stuck
+3. MANUAL INTERVENTION: Consider closing positions if loss approaches 1%
+
+RISK ASSESSMENT:
+- Immediate risk: MEDIUM (positions at 0.58% loss)
+- Monitoring risk: HIGH (no dashboard visibility)
+- Execution risk: HIGH (bot inactive, API issues may persist)
+
+--- End of critical alert update ---=== TRADING SYSTEM WARNING ALERT ===
+Timestamp: 2026-03-18 06:51:47
+
+ALERT LEVEL: WARNING (Non-critical but requires attention)
+
+ISSUES DETECTED:
+
+1. BOT PROCESS STATE ANOMALY
+   - Trading bot process (PID: 8546) is in sleep/uninterruptible state (SN)
+   - This typically indicates the process is waiting for I/O operations or network responses
+   - May be stuck waiting for API responses or file operations
+
+2. PORTFOLIO PERFORMANCE
+   - Current P&L: -0.97% (loss of $0.39 on $40 investment)
+   - Approaching 1% warning threshold
+   - Stop loss configured at 3% - still within safe range
+
+3. BOT RESTART FREQUENCY
+   - Multiple "BOT STARTING" entries in recent log (05:18-05:21)
+   - May indicate configuration issues or network connectivity problems
+
+RECOMMENDED ACTIONS:
+1. Check bot process status: `ps -p 8546 -o pid,stat,time,command`
+2. Verify network connectivity for trading APIs
+3. Review bot logs for error messages: `tail -50 trading_bot_clean.log`
+4. Monitor portfolio closely - stop loss at 3% still active
+
+NEXT STEPS:
+- If bot remains in sleep state for >15 minutes, consider restart
+- If portfolio loss exceeds 2%, prepare for potential stop loss execution
+- Schedule follow-up check in 15 minutes
+
+CURRENT RISK LEVEL: LOW
+- Minimal capital exposure (0.40% utilized)
+- Small position sizes ($10 per trade)
+- Stop loss protection active (3%)🚨 CRITICAL ALERT - 2026-03-18 06:56:55 +07 🚨
+STOP-LOSS TRIGGERED: Position #2 (Buy @ $74,800.00)
+Current Loss: -1.09% | Stop-Loss Threshold: 1.00%
+Amount: 0.00013369 BTC | Value: ~$9.89
+
+⚠️  WARNING: Position #1 is near stop-loss at -1.05%
+Buy @ $74,770.04 | Current Loss: -1.05%
+Amount: 0.00013374 BTC | Value: ~$9.89
+
+=== Market Context ===
+Current Bitcoin Price: $73,986
+Price Change Since Purchases: -1.0% to -1.1%
+Trading System Status: RUNNING
+Dashboard: http://localhost:56478
+===============================================================================

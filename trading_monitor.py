@@ -1,112 +1,144 @@
 import requests
 import json
+import datetime
 import os
 
-    PORT = "5001"  # Fallback
-except:
-        PORT = f.read().strip()
-    with open(".active_port", "r") as f:
-try:
-# Read current port from .active_port file
+TRADING_LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
+CRITICAL_ALERT_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
+BASE_URL = 'http://localhost:56478'
 
-from datetime import datetime
+def fetch_trading_data():
+    print('Fetching trading data from dashboard...')
+    endpoints = ['/api/trading/progress']
+    
+    all_data = {}
+    for endpoint in endpoints:
+        try:
+            url = BASE_URL + endpoint
+            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+            response = requests.get(url, timeout=10, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+            all_data[endpoint] = data
+            print(f'Successfully fetched data from {endpoint}')
+        except requests.exceptions.RequestException as e:
+            print(f'Error fetching data from {endpoint}: {e}')
+            all_data[endpoint] = None
+        except json.JSONDecodeError:
+            print(f'Response from {endpoint} is not JSON')
+            all_data[endpoint] = {'error': 'Invalid JSON response'}
+    
+    return all_data
 
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL = f"http://localhost:{PORT}/"
+def ensure_log_directory_exists():
+    log_dir = os.path.dirname(TRADING_LOG_FILE)
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+        print(f'Created directory: {log_dir}')
 
-def fetch_data(url):
+def log_data_to_file(file_path, content):
+    timestamp = datetime.datetime.now().isoformat()
     try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching data: {e}")
-        return None
+        with open(file_path, 'a') as f:
+            f.write(f'[{timestamp}]\n')
+            if isinstance(content, dict):
+                json.dump(content, f, indent=2)
+                f.write('\n')
+            else:
+                f.write(str(content) + '\n')
+            f.write('---\n')
+        print(f'Logged data to {file_path}')
+    except Exception as e:
+        print(f'Error writing to log file {file_path}: {e}')
 
-def parse_and_log(data):
+def analyze_trading_data(data):
+    summary_parts = []
+    alerts = []
+
     if not data:
-        return
+        summary_parts.append('Failed to fetch trading data.')
+        return '\n'.join(summary_parts), alerts
 
-    log_entry = f"{datetime.now()}: "
-    content_to_log = []
-    critical_alerts = []
+    current_timestamp = datetime.datetime.now().isoformat()
+    summary_parts.append(f'--- Trading Dashboard Analysis - {current_timestamp} ---')
 
-    # Extract and log trading logs
-    trading_logs = data.get('trading_logs', [])
-    if trading_logs:
-        content_to_log.append("Trading Logs:")
-        for log in trading_logs:
-            content_to_log.append(f"  - {log}")
-            # Basic check for any keyword that might indicate a triggered event in logs
-            if any(keyword in str(log).lower() for keyword in ["triggered", "executed", "closed"]):
-                critical_alerts.append(f"Potential trading event in logs: {log}")
-
-    # Extract and log status updates
-    status_updates = data.get('status_updates', {})
-    if status_updates:
-        content_to_log.append("Status Updates:")
-        for key, value in status_updates.items():
-            content_to_log.append(f"  - {key}: {value}")
-
-    # Extract and log risk parameters and check for alerts
-    risk_parameters = data.get('risk_parameters', {})
-    capital = risk_parameters.get('capital')
-    stop_loss = risk_parameters.get('stop_loss')
-    take_profit = risk_parameters.get('take_profit')
-    drawdown_indicators = risk_parameters.get('drawdown_indicators') # Assuming this is a dict or list
-
-    if capital is not None:
-        content_to_log.append(f"Risk Parameters:")
-        content_to_log.append(f"  - Capital: {capital}")
-        # Example: check if capital is below a threshold
-        if isinstance(capital, (int, float)) and capital < 1000: # Example threshold
-            critical_alerts.append(f"Critical Capital Alert: Capital is {capital}")
-
-    if stop_loss is not None:
-        content_to_log.append(f"  - Stop Loss: {stop_loss}")
-        # Placeholder for stop-loss trigger logic - needs more context on how SL is represented
-        if "triggered" in str(stop_loss).lower(): # Example check
-            critical_alerts.append(f"Stop Loss triggered: {stop_loss}")
-
-    if take_profit is not None:
-        content_to_log.append(f"  - Take Profit: {take_profit}")
-        # Placeholder for take-profit trigger logic
-        if "triggered" in str(take_profit).lower(): # Example check
-            critical_alerts.append(f"Take Profit triggered: {take_profit}")
-
-    if drawdown_indicators is not None:
-        content_to_log.append(f"  - Drawdown Indicators: {drawdown_indicators}")
-        # Example: check for critical drawdown
-        if isinstance(drawdown_indicators, (int, float)) and drawdown_indicators > 0.20: # Example threshold for 20% drawdown
-            critical_alerts.append(f"Critical Drawdown Alert: Drawdown is {drawdown_indicators * 100:.2f}%")
-        elif isinstance(drawdown_indicators, dict) and any(val > 0.20 for val in drawdown_indicators.values()):
-            critical_alerts.append(f"Critical Drawdown Alert detected in indicators: {drawdown_indicators}")
-
-
-    # Write to main log file
-    log_content = "\n".join(content_to_log)
-    with open(LOG_FILE, "a") as f:
-        f.write(log_entry + "\n" + log_content + "\n---\n")
-
-    # Write critical alerts to alert file
-    if critical_alerts:
-        alert_entry = f"{datetime.now()}: CRITICAL ALERTS DETECTED\n" + "\n".join(critical_alerts) + "\n---\n"
-        with open(ALERT_FILE, "a") as f:
-            f.write(alert_entry)
-        print("Critical alerts saved.")
-
-# --- Main execution ---
-if __name__ == "__main__":
-    # Ensure log directories exist
-    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-    os.makedirs(os.path.dirname(ALERT_FILE), exist_ok=True)
-
-    print(f"Fetching data from {URL}...")
-    data = fetch_data(URL)
-    if data:
-        print("Data fetched successfully. Parsing and logging...")
-        parse_and_log(data)
-        print("Processing complete.")
+    # Analyze trading progress data
+    progress_data = data.get('/api/trading/progress')
+    if progress_data:
+        summary_parts.append(f'Trading Status: {progress_data.get("status", "N/A")}')
+        
+        trades = progress_data.get('trades', [])
+        summary_parts.append(f'Active Trades: {len(trades)}')
+        
+        if trades:
+            total_investment = 0.0
+            filled_trades = 0
+            buy_trades = 0
+            sell_trades = 0
+            
+            for trade in trades:
+                amount = trade.get('amount', 0)
+                price = trade.get('price', 0)
+                investment = amount * price if amount and price else 0
+                total_investment += investment
+                
+                if trade.get('status') == 'filled':
+                    filled_trades += 1
+                
+                if trade.get('side') == 'buy':
+                    buy_trades += 1
+                elif trade.get('side') == 'sell':
+                    sell_trades += 1
+                
+                # Check for potential issues
+                if trade.get('status') not in ['filled', 'pending']:
+                    alert_msg = f'Unusual trade status: {trade.get("status")} for trade at {trade.get("time", "unknown time")}'
+                    alerts.append(alert_msg)
+                    log_data_to_file(CRITICAL_ALERT_FILE, alert_msg)
+            
+            summary_parts.append(f'Total Investment: ${total_investment:.2f}')
+            summary_parts.append(f'Filled Trades: {filled_trades}/{len(trades)}')
+            summary_parts.append(f'Buy Orders: {buy_trades}, Sell Orders: {sell_trades}')
+            
+            # Log detailed trade data
+            log_data_to_file(TRADING_LOG_FILE, {
+                'trading_progress': progress_data,
+                'summary': {
+                    'total_trades': len(trades),
+                    'filled_trades': filled_trades,
+                    'total_investment': total_investment,
+                    'buy_orders': buy_trades,
+                    'sell_orders': sell_trades
+                }
+            })
+        else:
+            summary_parts.append('No active trades found.')
+            log_data_to_file(TRADING_LOG_FILE, {'trading_progress': progress_data, 'note': 'No active trades'})
     else:
-        print("Failed to fetch data. Skipping processing.")
+        summary_parts.append('No trading progress data available.')
+    
+    # Check for critical conditions
+    trades = progress_data.get('trades', []) if progress_data else []
+    if len(trades) > 10:  # Arbitrary threshold for too many trades
+        alert_msg = f'High number of active trades: {len(trades)}'
+        alerts.append(alert_msg)
+        log_data_to_file(CRITICAL_ALERT_FILE, alert_msg)
+    
+    if not alerts:
+        summary_parts.append('No critical alerts triggered at this time.')
+    else:
+        summary_parts.append(f'Critical Alerts: {len(alerts)} detected')
+
+    return '\n'.join(summary_parts), alerts
+
+# Main execution
+if __name__ == '__main__':
+    ensure_log_directory_exists()
+    trading_data = fetch_trading_data()
+    summary, alerts = analyze_trading_data(trading_data)
+    
+    print(summary)
+    print()
+    print('--- Log Files Updated ---')
+    print(f'Trading log: {TRADING_LOG_FILE}')
+    print(f'Critical alerts: {CRITICAL_ALERT_FILE}')

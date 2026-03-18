@@ -1,0 +1,39 @@
+=== TRADING MONITORING REPORT ===
+Timestamp: 2026-03-18 06:10:00
+Dashboard Status: ACTIVE (port 54174)
+Trading Bot Status: RUNNING (with errors in logs)
+API Status: UP
+
+=== POSITION SUMMARY ===
+Total BTC Position: 0.00053507
+Total USD Invested: $40.00
+Average Entry Price: $74756.91
+Current BTC Price: $74346
+Current Position Value: $39.78
+Unrealized P&L: $-0.22
+P&L Percentage: -0.55%
+
+=== RISK PARAMETERS ===
+Configured Capital: $10,000.00
+Configured Stop Loss: -3.0%
+Configured Take Profit: 6.0%
+Trade Size: $10.00
+Distance to Stop Loss: 2.45%
+Distance to Take Profit: 6.55%
+
+=== RISK ASSESSMENT ===
+Stop Loss Triggered: No
+Warning Level: NORMAL
+Risk Status: ✅ Within acceptable risk limits
+
+=== RECENT ACTIVITY ===
+- Last 4 trades executed (all buys)
+- Trading bot process active but showing errors in logs
+- Dashboard accessible and responsive
+- Market data fetching operational
+
+=== RECOMMENDATIONS ===
+1. Continue monitoring - position within limits
+2. Check trading bot error logs for NameError issues
+3. Verify API connectivity remains stable
+4. Consider adjusting stop loss if market volatility increases
