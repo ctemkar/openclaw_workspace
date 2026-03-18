@@ -1,46 +1,63 @@
 === Trading Dashboard Monitor Report ===
-Timestamp: 2026-03-18 10:08:00 (Asia/Bangkok)
+Timestamp: 2026-03-18 10:14:00 (Asia/Bangkok)
 Dashboard Status: ACTIVE (Port 59745)
 Trading Bot Status: RUNNING (Multiple instances detected)
 
 === MARKET DATA ===
-Current BTC Price: $74,300.00
-Current ETH Price: $2,330.64
-Current SOL Price: $94.98
+Current BTC Price: $74,320.00
+Current ETH Price: $2,331.67
+Current SOL Price: $94.96
 
 === TRADING ACTIVITY ===
-Total Trades Executed: 4
-All trades are BUY orders for BTC/USD:
-1. 04:45:54 - Gemini-Pro - BUY @ $74,770.04 (0.00013374 BTC)
-2. 04:43:01 - Gemini-Pro - BUY @ $74,800.00 (0.00013369 BTC)
-3. 02:25:17 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
-4. 02:24:56 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
+Total Trades Executed: 6
+Recent Trades (since last check):
+1. 10:14:36 - Gemini - BUY @ $74,332.65 (0.00013453 BTC)
+2. 10:14:33 - Gemini - BUY @ $74,319.47 (0.00013455 BTC)
+3. 04:45:54 - Gemini-Pro - BUY @ $74,770.04 (0.00013374 BTC)
+4. 04:43:01 - Gemini-Pro - BUY @ $74,800.00 (0.00013369 BTC)
+5. 02:25:17 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
+6. 02:24:56 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
 
 === PERFORMANCE ANALYSIS ===
-Current BTC Price: $74,300.00
-Average Buy Price: ~$74,756.93
+Current BTC Price: $74,320.00
+Average Buy Price: $74,612.74
 Current Position: All positions are underwater (buy prices > current price)
-Average Loss per Trade: ~$456.93 (0.61% loss)
-Total Position Size: ~0.00053507 BTC (~$39.75 at current price)
-Total Investment: ~$40.00 (4 trades × $10 each)
+Total Position Size: 0.00080415 BTC ($59.76 at current price)
+Total Investment: $60.00 (6 trades × $10 each)
+Current P&L: -$0.24 (-0.39%)
 
 === RISK ASSESSMENT ===
 No stop-loss orders detected in logs
 No take-profit orders detected in logs
-Maximum Drawdown: ~0.61% (within normal range)
-No critical alerts triggered
+Maximum Drawdown: ~0.39% (within normal range)
+Distance to typical stop-loss (2-5%): ~0.39% (safe)
+Distance to typical take-profit (3-10%): ~0.39% (far from target)
+
+=== CRITICAL ALERTS ===
+1. CRITICAL ALERT (10:06:00): Trading Script Runtime Error
+   - NameError: 'update_task_statuses' is not defined
+   - Script may not be executing trades properly
+   - Dashboard remains accessible but trading functionality compromised
+   - URGENCY: HIGH - Trading automation compromised
+
+2. WARNING ALERT (09:56:00): Portfolio Performance Alert
+   - Portfolio is slightly underwater: -0.50% ($0.20 loss)
+   - Distance to stop-loss trigger: 2.50%
+   - Distance to take-profit trigger: 2.50%
+   - No immediate action required
 
 === SYSTEM STATUS ===
 Dashboard Server: Running on port 59745
-Trading Bot: Multiple instances detected (processes 72293, 67305)
+Trading Bot Processes: 72293 (2:02:44 runtime), 67305 (2:17:55 runtime)
 Log Files: All log files accessible and being written to
-API Endpoints: All endpoints responding normally
+API Endpoints: Dashboard responding but API endpoints returning 404 errors
 
 === RECOMMENDATIONS ===
-1. Consider implementing stop-loss orders to limit downside risk
-2. Current positions are slightly underwater but within normal market fluctuations
-3. Monitor for any additional buy signals that could average down positions
-4. Check for any stuck orders or failed trades in the bot logs
+1. CRITICAL: Fix trading script runtime error - missing functions update_task_statuses() and cleanup_managed_processes()
+2. Consider implementing stop-loss orders to limit downside risk
+3. Current positions are slightly underwater but within normal market fluctuations
+4. Monitor for any additional buy signals that could average down positions
+5. Check API endpoint configuration as endpoints are returning 404 errors
 
 === NEXT CHECK ===
 Scheduled for next cron execution

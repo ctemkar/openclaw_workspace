@@ -39,3 +39,12 @@
 127.0.0.1 - - [18/Mar/2026 10:15:36] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
 127.0.0.1 - - [18/Mar/2026 10:15:39] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [18/Mar/2026 10:15:41] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:15:46] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:15:51] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:16:21] "GET /api/trading/progress HTTP/1.1" 200 -
+127.0.0.1 - - [18/Mar/2026 10:16:21] "[33mGET /api/llm/strategies HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:16:22] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:17:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Mar/2026 10:17:21] "GET /api/trading/progress HTTP/1.1" 200 -
+127.0.0.1 - - [18/Mar/2026 10:17:21] "[33mGET /api/llm/strategies HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/Mar/2026 10:17:22] "[33mGET /api/status/all HTTP/1.1[0m" 404 -
