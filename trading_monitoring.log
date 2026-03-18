@@ -154,4 +154,109 @@ MARKET CONDITIONS:
 - Technical signals: BUY signals but trading paused
 
 NEXT MONITORING: In 1 hour (approx 04:55)
-===========================================
+============================================== MONITORING CHECK: 2026-03-19 04:01:01 ===
+Maximum Allowable Drawdown: 5.0%
+Current Drawdown: 3.5%
+Buffer to Maximum: 1.5%
+Risk Level: ⚠️ MEDIUM
+
+CRITICAL FINDINGS:
+==================
+1. 🚨 POSITION #8 (ETH) BELOW STOP-LOSS: This position has triggered the 5% stop-loss but remains open
+2. ⚠️ POSITION #7 (BTC) NEAR STOP-LOSS: Within 0.3% of stop-loss threshold
+3. ⚠️ LOW AVAILABLE CAPITAL: Only $199.96 remaining (20% of total capital)
+4. 🔴 TRADING PAUSED: Max daily trades (2) reached, system auto-paused
+--
+- BTC: $70,614.00 (below support: $70,896.70)
+- ETH: $2,166.65 (below support: $2,167.99)
+- Market Trend: BEARISH
+- Technical Signals: BUY but trading paused
+
+RECOMMENDED ACTIONS:
+====================
+IMMEDIATE (HIGH PRIORITY):
+1. 🚨 MANUALLY CLOSE POSITION #8 (ETH): This position has triggered stop-loss and should be closed immediately
+2. ⚠️ MONITOR POSITION #7 (BTC): Prepare to close if price drops further
+3. 🔍 VERIFY STOP-LOSS ORDERS: Check if stop-loss orders were actually placed on exchange
+--
+NEXT MONITORING:
+================
+Scheduled for: 04:30 local time
+Priority: HIGH (due to stop-loss trigger and near-threshold positions)
+
+ALERT STATUS:
+=============
+🟡 MEDIUM RISK: Portfolio at 3.5% drawdown with 1.5% buffer to maximum
+🟠 WARNING: 1 position below stop-loss, 1 position near stop-loss
+🔴 CRITICAL: Stop-loss execution failure detected
+
+
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-19 04:02:00 (Asia/Bangkok)
+Monitoring Interval: 4:01 AM - 4:02 AM
+
+DASHBOARD STATUS:
+- Dashboard accessible: ✅ YES
+- Status endpoint: ✅ RESPONDING
+- Trades endpoint: ✅ SHOWING 10 POSITIONS
+- Summary endpoint: ✅ SHOWING TRADING PAUSED (2/2 trades today)
+- Strategy endpoint: ❌ NOT FOUND (CONFIGURATION ISSUE)
+
+MARKET CONDITIONS:
+- BTC Price: $71,213.23 (UP 0.85% from previous monitoring)
+- ETH Price: $2,186.36 (UP 0.91% from previous monitoring)
+- Market Trend: RECOVERING from previous lows
+- Trading Status: PAUSED (max daily trades reached: 2/2)
+
+PORTFOLIO ANALYSIS:
+- Total Positions: 10 (7 BTC, 3 ETH)
+- Total Investment: $860.04
+- Total Current Value: $836.45
+- Total P&L: -$23.58 (-2.7%)
+- Available Capital: $139.96
+
+POSITION STATUS:
+1. ETH Position #1: STOP-LOSS TRIGGERED (-6.2% loss)
+2. BTC Position #2: SAFE (-4.2% loss)
+3. BTC Position #3: SAFE (-4.2% loss)
+4. BTC Position #4: SAFE (-4.2% loss)
+5. BTC Position #5: SAFE (-4.2% loss)
+6. BTC Position #6: SAFE (-4.2% loss)
+7. BTC Position #7: SAFE (-3.9% loss)
+8. ETH Position #8: STOP-LOSS TRIGGERED (-6.0% loss)
+9. BTC Position #9: SAFE (-0.2% loss)
+10. ETH Position #10: SAFE (-0.3% loss)
+
+STOP-LOSS ANALYSIS:
+- Positions at/below stop-loss: 2 OUT OF 10 (20% of positions)
+- Positions near stop-loss (4.7%+ loss): 6 OUT OF 10 (60% of positions)
+- Positions safely above stop-loss: 2 OUT OF 10 (20% of positions)
+
+RISK MANAGEMENT STATUS:
+- Maximum Allowable Drawdown (5%): -$43.00
+- Current Drawdown: -$23.58 (2.7%)
+- Buffer to Maximum Drawdown: $19.42
+- Risk Level: ✅ SAFE (Adequate buffer to maximum drawdown)
+
+CRITICAL ISSUES DETECTED:
+1. STOP-LOSS EXECUTION FAILURE: 2 positions (#1 ETH, #8 ETH) are below stop-loss but remain open
+2. STRATEGY CONFIGURATION: Strategy endpoint not found - potential system misconfiguration
+3. TRADING SYSTEM: Shows "Today's trades: 2/2" - AUTO-PAUSED (as expected)
+4. TOTAL P&L DISCREPANCY: Dashboard shows $0.00 P&L but actual P&L is -$23.58
+
+SYSTEM HEALTH CHECK:
+- Dashboard responsiveness: ✅ GOOD
+- Data consistency: ⚠️ WARNING (P&L discrepancy)
+- Stop-loss execution: ❌ FAILING
+- Trading automation: ⏸️ PAUSED (as expected)
+
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Manually close ETH positions #1 and #8 (both below stop-loss)
+2. URGENT: Investigate stop-loss execution failure
+3. IMPORTANT: Fix strategy configuration issue
+4. MONITOR: Continue monitoring BTC positions #2-7 (all near stop-loss levels)
+5. REVIEW: Investigate P&L calculation discrepancy
+
+NEXT MONITORING: 04:03 AM local time
+============================================================
+END OF MONITORING REPORT

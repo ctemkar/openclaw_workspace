@@ -1,39 +1,122 @@
-=== TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 06:10:00
-Dashboard Status: ACTIVE (port 54174)
-Trading Bot Status: RUNNING (with errors in logs)
-API Status: UP
+TRADING DASHBOARD MONITORING REPORT
+====================================
+Timestamp: 2026-03-19 04:00:25 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor
 
-=== POSITION SUMMARY ===
-Total BTC Position: 0.00053507
-Total USD Invested: $40.00
-Average Entry Price: $74756.91
-Current BTC Price: $74346
-Current Position Value: $39.78
-Unrealized P&L: $-0.22
-P&L Percentage: -0.55%
+DASHBOARD STATUS:
+- Dashboard URL: http://localhost:5001/ ✅ ACCESSIBLE
+- Status endpoint: ✅ RESPONDING
+- Trades endpoint: ✅ SHOWING 10 TRADES
+- Summary endpoint: ✅ SHOWING TRADING PAUSED
+- Analysis endpoint: ✅ LAST ANALYSIS AT 03:12:48
 
-=== RISK PARAMETERS ===
-Configured Capital: $10,000.00
-Configured Stop Loss: -3.0%
-Configured Take Profit: 6.0%
-Trade Size: $10.00
-Distance to Stop Loss: 2.45%
-Distance to Take Profit: 6.55%
+SYSTEM CONFIGURATION:
+- Capital: $1,000.00
+- Stop-loss: 5%
+- Take-profit: 10%
+- Max trades/day: 2 (REACHED - AUTO-PAUSED)
+- Current status: Trading paused (max daily trades reached)
 
-=== RISK ASSESSMENT ===
-Stop Loss Triggered: No
-Warning Level: NORMAL
-Risk Status: ✅ Within acceptable risk limits
+PORTFOLIO ANALYSIS:
+===================
+Total Positions: 4 (2 BTC, 2 ETH)
+Active Positions: 4
+Positions at/below stop-loss: 2 (50% of portfolio)
+Total Deployed Capital: $800.04
+Total Current Value: $772.38
+Total P&L: -$27.66 (-3.5%)
+Available Capital: $199.96
 
-=== RECENT ACTIVITY ===
-- Last 4 trades executed (all buys)
-- Trading bot process active but showing errors in logs
-- Dashboard accessible and responsive
-- Market data fetching operational
+POSITION DETAILS:
+=================
 
-=== RECOMMENDATIONS ===
-1. Continue monitoring - position within limits
-2. Check trading bot error logs for NameError issues
-3. Verify API connectivity remains stable
-4. Consider adjusting stop loss if market volatility increases
+BTC POSITIONS:
+1. Position #7: 0.002699 BTC @ $74,094.64
+   Current: $70,614.00
+   P&L: -$9.39 (-4.7%)
+   Stop-loss: $70,389.91
+   Status: ⚠️ NEAR STOP-LOSS (0.3% buffer)
+
+2. Position #9: 0.002802 BTC @ $71,386.00
+   Current: $70,614.00
+   P&L: -$2.16 (-1.1%)
+   Stop-loss: $67,816.70
+   Status: ✅ SAFE
+
+ETH POSITIONS:
+1. Position #8: 0.086 ETH @ $2,325.28
+   Current: $2,166.65
+   P&L: -$13.64 (-6.8%)
+   Stop-loss: $2,209.02
+   Status: 🚨 BELOW STOP-LOSS (TRIGGERED)
+
+2. Position #10: 0.0912 ETH @ $2,193.60
+   Current: $2,166.65
+   P&L: -$2.46 (-1.2%)
+   Stop-loss: $2,083.92
+   Status: ✅ SAFE
+
+RISK ASSESSMENT:
+================
+Maximum Allowable Drawdown: 5.0%
+Current Drawdown: 3.5%
+Buffer to Maximum: 1.5%
+Risk Level: ⚠️ MEDIUM
+
+CRITICAL FINDINGS:
+==================
+1. 🚨 POSITION #8 (ETH) BELOW STOP-LOSS: This position has triggered the 5% stop-loss but remains open
+2. ⚠️ POSITION #7 (BTC) NEAR STOP-LOSS: Within 0.3% of stop-loss threshold
+3. ⚠️ LOW AVAILABLE CAPITAL: Only $199.96 remaining (20% of total capital)
+4. 🔴 TRADING PAUSED: Max daily trades (2) reached, system auto-paused
+
+STOP-LOSS EXECUTION ISSUES:
+===========================
+- Position #8 (ETH) is 1.9% BELOW stop-loss price but remains open
+- No evidence of automatic stop-loss execution in trading logs
+- This suggests potential system failure in stop-loss order placement
+
+MARKET CONDITIONS:
+==================
+- BTC: $70,614.00 (below support: $70,896.70)
+- ETH: $2,166.65 (below support: $2,167.99)
+- Market Trend: BEARISH
+- Technical Signals: BUY but trading paused
+
+RECOMMENDED ACTIONS:
+====================
+IMMEDIATE (HIGH PRIORITY):
+1. 🚨 MANUALLY CLOSE POSITION #8 (ETH): This position has triggered stop-loss and should be closed immediately
+2. ⚠️ MONITOR POSITION #7 (BTC): Prepare to close if price drops further
+3. 🔍 VERIFY STOP-LOSS ORDERS: Check if stop-loss orders were actually placed on exchange
+4. 📊 CHECK EXCHANGE POSITIONS: Verify actual positions vs dashboard display
+
+SHORT-TERM (WITHIN 24 HOURS):
+1. 🔧 REVIEW SYSTEM CONFIGURATION: Ensure stop-loss orders are being placed correctly
+2. 💰 REPLENISH CAPITAL: Consider adding more capital or reducing position sizes
+3. ⚙️ ADJUST RISK PARAMETERS: Consider tighter stop-loss (e.g., 3-4%) given current market volatility
+4. 📈 REVIEW TRADING STRATEGY: Assess performance and adjust entry/exit criteria
+
+SYSTEM HEALTH CHECK:
+====================
+✅ Dashboard operational
+✅ API endpoints responding
+✅ Trading logs accessible
+⚠️ Stop-loss execution questionable
+⚠️ Low available capital
+🔴 Trading paused (by design)
+
+NEXT MONITORING:
+================
+Scheduled for: 04:30 local time
+Priority: HIGH (due to stop-loss trigger and near-threshold positions)
+
+ALERT STATUS:
+=============
+🟡 MEDIUM RISK: Portfolio at 3.5% drawdown with 1.5% buffer to maximum
+🟠 WARNING: 1 position below stop-loss, 1 position near stop-loss
+🔴 CRITICAL: Stop-loss execution failure detected
+
+============================================================
+END OF MONITORING REPORT
+============================================================
