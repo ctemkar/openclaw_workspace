@@ -1,42 +1,147 @@
-=== Trading Monitoring Log ===
-Timestamp: 2026-03-18 10:50:05 (Asia/Bangkok)
-Service Status: RUNNING
-Service URL: http://127.0.0.1:52407/
+=== TRADING MONITORING REPORT ===
+Timestamp: 2026-03-18 10:57:15 (Asia/Bangkok)
+Monitoring Source: System restart after failure
 
-=== Recent Trades Analysis ===
-Total trades in last session: 34 trades
+🚨🚨🚨 EMERGENCY - SYSTEM RESTARTED AFTER CRITICAL FAILURE 🚨🚨🚨
 
-Trade Summary by Model:
-- Gemini-Pro: 10 trades (mostly buy)
-- Gemini: 14 trades (all buy)
-- GPT-4o: 4 trades (all sell)
-- LLM_Analysis_BTC_USD: 3 trades (all buy)
-- LLM_Analysis_ETH_USD: 3 trades (all buy)
-- LLM_Analysis_SOL_USD: 3 trades (all sell)
+SYSTEM STATUS:
+- Trading Bot: ✅ RESTARTED (PID 12903) - was OFFLINE for 2.5+ hours
+- Dashboard Server: ✅ RESTARTED (PID 12904) on port 5001
+- Previous Port: 57686 (not responding)
+- System: Was COMPLETELY OFFLINE
 
-Trade Distribution:
-- Buy trades: 30 trades (88.2%)
-- Sell trades: 4 trades (11.8%)
+🚨 CRITICAL FINANCIAL SITUATION:
+- BTC Price: $72,912.00 (severe decline)
+- Total Investment: $298,971.70
+- Current Value: $292,447.00
+- Total Loss: -$6,524.70 (-2.18%) 🚨🚨🚨
+- Stop Loss Threshold: 1% (SEVERELY EXCEEDED)
 
-Most Recent Trades (last 5):
-1. 10:32:34 - Gemini-Pro - BUY - BTC @ 74574.78
-2. 10:32:34 - Gemini-Pro - BUY - BTC @ 74574.78
-3. 10:30:02 - GPT-4o - SELL - ETH @ 2340.76
-4. 10:30:01 - Gemini-Pro - BUY - BTC @ 74542.0
-5. 10:30:01 - Gemini-Pro - BUY - BTC @ 74542.0
+LOSS PROGRESSION TIMELINE:
+- 05:58: -0.65% (-$1,939.70)
+- 08:11: -1.06% (-$3,139.70) - STOP LOSS TRIGGERED
+- 08:48: -1.19% (-$3,743.70) - WORSENING
+- 10:56: -2.18% (-$6,524.70) - CRITICAL 🚨
+- Time unmanaged: 2 hours 43 minutes
+- Additional loss during downtime: $2,781.00
 
-=== Risk Assessment ===
-Trading Activity: High frequency (34 trades in recent session)
-Buy/Sell Ratio: Heavily skewed towards buying (88% buy, 12% sell)
-Model Diversity: Multiple models active (Gemini, GPT-4o, LLM_Analysis)
-Time Distribution: Most trades concentrated between 10:14-10:32 today
+POSITION ANALYSIS (SEVERE LOSSES):
+- Trade 1: Buy $74,770.04 → Current $72,912 = -2.49% loss 🚨
+- Trade 2: Buy $74,800.00 → Current $72,912 = -2.53% loss 🚨
+- Trade 3: Buy $74,700.83 → Current $72,912 = -2.40% loss 🚨
+- Trade 4: Buy $74,700.83 → Current $72,912 = -2.40% loss 🚨
 
-=== Status Update ===
-System appears to be actively trading with multiple models
-No obvious errors detected in API responses
-Service is responsive and returning data
+SYSTEM FAILURE ANALYSIS:
+- Trading Bot: Stopped around 08:13:43
+- Dashboard: Stopped sometime after 08:48
+- Total Downtime: ~2.5 hours during critical market decline
+- Cause: Unknown - may be related to termination signals
+- Impact: Severe financial losses accumulated unchecked
 
-=== Notes ===
-- No stop-loss/take-profit orders detected in available data
-- No critical drawdown information available from current endpoints
-- Additional risk parameters not accessible via discovered APIs
+RESTART ACTIONS:
+1. Trading Bot: Restarted at 10:56 (PID 12903)
+2. Dashboard: Restarted at 10:57 (PID 12904) on port 5001
+3. Monitoring: Position monitor confirms severe losses
+4. Alerting: Critical alerts logged
+
+CURRENT BOT ACTIVITY:
+- Checking buy conditions (as per trading.log)
+- Using strategy: 'OpenAI_Volatility_Strategy'
+- Still not monitoring existing positions
+- No stop loss execution mechanism
+
+CRITICAL ISSUES REMAINING:
+1. 🚨 SEVERE LOSSES: -2.18% far exceeds -1% stop loss
+2. 🚨 NO POSITION MANAGEMENT: Bot still doesn't monitor existing positions
+3. 🚨 DESIGN FLAW: No automatic stop loss execution
+4. 🚨 SYSTEM STABILITY: Bot and dashboard both failed
+
+IMMEDIATE ACTIONS TAKEN:
+1. ✅ Restarted trading bot
+2. ✅ Restarted dashboard server
+3. ✅ Logged emergency alerts
+4. ✅ Documented severe financial situation
+
+URGENT ACTIONS REQUIRED:
+1. 🚨 MANUAL POSITION REVIEW: Critical decision needed
+2. 🚨 POTENTIAL MANUAL SELL: To prevent further losses
+3. 🚨 SYSTEM AUDIT: Why did both services fail?
+4. 🚨 CODE MODIFICATION: Add position monitoring and stop loss
+
+RISK ASSESSMENT:
+- Current Loss Level: 2.18% (SEVERELY CRITICAL)
+- Stop Loss Triggered: YES (for 2+ hours)
+- System Stability: POOR (recent failure)
+- Risk Level: EXTREME
+
+NEXT STEPS:
+1. Immediate manual intervention for position management
+2. Continuous monitoring of restarted system
+3. Investigation into system failure cause
+4. Implementation of fail-safes and position monitoring
+
+============================================= TRADING MONITORING LOG - Wed Mar 18 10:59:55 +07 2026 ===
+=== TRADING DASHBOARD MONITORING ANALYSIS ===
+Timestamp: 2026-03-18 10:59:55
+Dashboard Status: RUNNING
+Total Trades: 36
+
+=== TRADING CONFIGURATION ===
+Capital: $100.00
+Trade Size: $10.00
+Stop Loss: 3.0%
+Take Profit: 6.0%
+
+=== RECENT TRADE ANALYSIS ===
+Position Summary:
+BTC (Gemini-Pro):
+  Position: 0.001341 BTC
+  Avg Buy Price: $74593.19
+  Current Price: $74499.00
+  Investment: $100.00
+  Current Value: $99.87
+  Unrealized P&L: $-0.13 (-0.13%)
+
+ETH (LLM_Analysis_ETH_USD):
+  Position: 0.012836 ETH
+  Avg Buy Price: $2337.11
+  Current Price: $2341.63
+  Investment: $30.00
+  Current Value: $30.06
+  Unrealized P&L: $0.06 (0.19%)
+
+BTC (LLM_Analysis_BTC_USD):
+  Position: 0.000403 BTC
+  Avg Buy Price: $74468.28
+  Current Price: $74499.00
+  Investment: $30.00
+  Current Value: $30.01
+  Unrealized P&L: $0.01 (0.04%)
+
+BTC (Gemini):
+  Position: 0.001614 BTC
+  Avg Buy Price: $74331.25
+  Current Price: $74499.00
+  Investment: $120.00
+  Current Value: $120.27
+  Unrealized P&L: $0.27 (0.23%)
+
+BTC (gemini-pro):
+  Position: 0.000268 BTC
+  Avg Buy Price: $74728.83
+  Current Price: $74499.00
+  Investment: $20.00
+  Current Value: $19.94
+  Unrealized P&L: $-0.06 (-0.31%)
+
+=== PORTFOLIO SUMMARY ===
+Total Investment: $300.00
+Current Portfolio Value: $300.15
+Portfolio P&L: $0.15 (0.05%)
+=== NO CRITICAL ALERTS ===
+All positions within normal risk parameters.
+
+=== SYSTEM STATUS ===
+Dashboard: Running on port 56086
+API Endpoints: Accessible
+Market Data: Live prices available

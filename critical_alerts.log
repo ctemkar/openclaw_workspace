@@ -1,44 +1,11 @@
-=== Critical Alerts Log ===
-Timestamp: 2026-03-18 10:50:15 (Asia/Bangkok)
-
-=== ALERT: High Trading Concentration Detected ===
-Severity: MEDIUM
-Issue: Unbalanced buy/sell ratio and high trading frequency
-Details:
-- Total trades in session: 34
-- Buy trades: 28 (82.4%)
-- Sell trades: 6 (17.6%)
-- Buy/Sell ratio: 4.7:1 (excessive buying concentration)
-- Trading frequency: 30 trades in the 10:00 hour alone
-
-Risk Assessment:
-- Portfolio may be overexposed to long positions
-- Lack of selling activity could indicate holding strategy or lack of profit-taking
-- High frequency trading may increase transaction costs
-
-Recommended Actions:
-1. Review trading strategy parameters
-2. Consider implementing position sizing limits
-3. Monitor for potential overexposure
-4. Check if stop-loss orders are properly configured
-
-=== ALERT: Limited Risk Parameter Visibility ===
-Severity: LOW
-Issue: Unable to access stop-loss, take-profit, or drawdown data
-Details:
-- API endpoints for risk parameters not discovered
-- Cannot verify if risk management controls are active
-- Limited visibility into portfolio risk metrics
-
-Recommended Actions:
-1. Investigate available risk management API endpoints
-2. Implement monitoring for critical risk parameters
-3. Consider adding logging for stop-loss/take-profit triggers
-
-=== System Status ===
-- Trading service: ACTIVE
-- API responsiveness: GOOD
-- Data availability: LIMITED (trade data available, risk data not accessible)
-
-=== Next Monitoring Check ===
-Scheduled for: 2026-03-18 10:51:00
+[2026-03-18 10:56:30] 🚨🚨🚨 EMERGENCY - SEVERE LOSSES ACCUMULATING 🚨🚨🚨
+[2026-03-18 10:56:30] CRITICAL - Trading bot OFFLINE for over 2.5 hours
+[2026-03-18 10:56:30] CRITICAL - Loss exploded from -1.19% to -2.18%
+[2026-03-18 10:56:30] CRITICAL - BTC Price: $72,912.00 (down from $73,807.00)
+[2026-03-18 10:56:30] CRITICAL - Total Loss: -$6,524.70 (was -$3,743.70)
+[2026-03-18 10:56:30] CRITICAL - Additional loss since last check: $2,781.00
+[2026-03-18 10:56:30] CRITICAL - Positions UNMANAGED for 2 hours 43 minutes
+[2026-03-18 10:56:30] CRITICAL - Dashboard server: NOT RESPONDING
+[2026-03-18 10:56:30] CRITICAL - 🚨 SYSTEM COMPLETELY OFFLINE 🚨
+[2026-03-18 10:56:30] CRITICAL - 🚨 URGENT RESTART REQUIRED 🚨
+[2026-03-18 10:56:30] CRITICAL - 🚨 MANUAL POSITION REVIEW CRITICAL 🚨

@@ -40,3 +40,7 @@
 [2026-03-18 10:32:35] TRADE FAILURE (GPT-4o): gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.96 and quantity 0.004271 ETH due to insufficient funds
 [2026-03-18 10:32:35] TRADE FAILURE (GPT-4o): gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.96 and quantity 0.004271 ETH due to insufficient funds
 [2026-03-18 10:32:35] STRATEGY ERROR: [Errno 2] No such file or directory: '/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json'
+[2026-03-18 10:55:40] SUCCESS: Gemini-Pro buy filled.
+[2026-03-18 10:55:40] SUCCESS: Gemini-Pro buy filled.
+[2026-03-18 10:55:41] TRADE FAILURE: gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.09 and quantity 0.004272 ETH due to insufficient funds
+[2026-03-18 10:55:41] TRADE FAILURE: gemini Failed to place sell order on symbol 'ETHUSD' for price $2,317.09 and quantity 0.004272 ETH due to insufficient funds
