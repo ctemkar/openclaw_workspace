@@ -1,5 +1,5 @@
 === Critical Alerts Log ===
-Timestamp: 2026-03-18 17:14:55 (Asia/Bangkok)
+Timestamp: 2026-03-18 17:57:35 (Asia/Bangkok)
 
 🟢 SYSTEM STATUS: NORMAL - No Critical Alerts
 
@@ -7,27 +7,33 @@ System Components Status:
 ✅ TRADING SERVER: RUNNING (port 5001 active)
 ✅ DASHBOARD: OPERATIONAL (serving data on port 5001)
 ✅ MARKET DATA: AVAILABLE (dashboard analysis functional)
-✅ ANALYSIS: Last run at 2026-03-18T16:28:15 (46 minutes ago)
+✅ ANALYSIS: Last run at 2026-03-18T17:28:26 (29 minutes ago)
 ⚠️ STRATEGY: No strategy file found (endpoint returns error)
 
 Open Positions Status:
 1. BTC/USD BUY @ $74,094.64 (13:39:48)
-   - Current: $74,154.09 (+0.08%)
+   - Current: $74,190.02 (+0.12%)
+   - Position Value: $200.23
+   - Entry Value: $200.00
+   - P&L: +$0.23 (+0.12%)
    - Stop-loss: $70,389.91 (-5.0%)
-   - Buffer to SL: 4.99% (SAFE - needs -5.08% drop to trigger)
+   - Buffer to SL: 5.12% (SAFE - needs -5.12% drop to trigger)
    - Take-profit: $81,504.10 (+10.0%)
-   - Progress to TP: 0.08% (needs +9.92% gain to trigger)
+   - Progress to TP: 0.12% (needs +9.87% gain to trigger)
 
 2. ETH/USD BUY @ $2,325.28 (13:39:49)
-   - Current: $2,331.12 (+0.25%)
+   - Current: $2,329.06 (+0.15%)
+   - Position Value: $200.30
+   - Entry Value: $200.00
+   - P&L: +$0.30 (+0.15%)
    - Stop-loss: $2,209.02 (-5.0%)
-   - Buffer to SL: 4.98% (SAFE - needs -5.23% drop to trigger)
+   - Buffer to SL: 5.16% (SAFE - needs -5.16% drop to trigger)
    - Take-profit: $2,557.81 (+10.0%)
-   - Progress to TP: 0.25% (needs +9.75% gain to trigger)
+   - Progress to TP: 0.15% (needs +9.84% gain to trigger)
 
 Risk Assessment:
-🟢 LOW RISK: All positions profitable
-🟢 LOW RISK: Far from stop-loss triggers (>4.9% buffer)
+🟢 LOW RISK: All positions profitable (+$0.53 total)
+🟢 LOW RISK: Far from stop-loss triggers (>5.1% buffer)
 🟢 LOW RISK: No drawdown indicators
 🟢 LOW RISK: System components operational
 ⚠️ MEDIUM RISK: Max daily trades reached (2/2) - no new trades possible today
@@ -36,39 +42,47 @@ Risk Assessment:
 Trading Limits:
 - Daily trades: 2/2 (LIMIT REACHED - no new trades today)
 - Capital: $1,000.00 (full amount available)
-- Exposure: ~$400 (40% of capital in positions)
+- Exposure: $400.00 (40% of capital in positions)
+- Current Portfolio Value: $400.53 (+0.13% on exposure)
 - Stop-loss: 5.0% (active on all positions)
 - Take-profit: 10.0% (active on all positions)
 
 Market Conditions (from latest analysis):
-- BTC/USD: $74,154.09
+- BTC/USD: $74,190.02
   - Signal: BUY (70% confidence)
-  - Support: $73,556.12 (current: -0.81% from support)
-  - Resistance: $74,683.70 (current: +0.71% to resistance)
+  - Support: $73,556.12 (current: -0.85% from support)
+  - Resistance: $74,683.70 (current: +0.66% to resistance)
   - Status: Skipped (max daily trades reached)
 
-- ETH/USD: $2,331.12
+- ETH/USD: $2,329.06
   - Signal: BUY (70% confidence)
-  - Support: $2,308.08 (current: -0.99% from support)
-  - Resistance: $2,350.29 (current: +0.82% to resistance)
+  - Support: $2,308.08 (current: -0.91% from support)
+  - Resistance: $2,350.29 (current: +0.91% to resistance)
   - Status: Skipped (max daily trades reached)
 
 Critical Levels Monitoring:
 BTC/USD:
-  - Stop-loss trigger: $70,389.91 (current: $74,154.09, -5.08% needed)
-  - Take-profit trigger: $81,504.10 (current: $74,154.09, +9.92% needed)
-  - Critical support: $73,556.12 (current: -0.81%)
+  - Stop-loss trigger: $70,389.91 (current: $74,190.02, -5.12% needed)
+  - Take-profit trigger: $81,504.10 (current: $74,190.02, +9.87% needed)
+  - Critical support: $73,556.12 (current: -0.85%)
 
 ETH/USD:
-  - Stop-loss trigger: $2,209.02 (current: $2,331.12, -5.23% needed)
-  - Take-profit trigger: $2,557.81 (current: $2,331.12, +9.75% needed)
-  - Critical support: $2,308.08 (current: -0.99%)
+  - Stop-loss trigger: $2,209.02 (current: $2,329.06, -5.16% needed)
+  - Take-profit trigger: $2,557.81 (current: $2,329.06, +9.84% needed)
+  - Critical support: $2,308.08 (current: -0.91%)
 
 Price Stability Analysis:
-- BTC/USD: Stable at ~$74,154 (no significant movement since last check)
-- ETH/USD: Stable at ~$2,331 (no significant movement since last check)
-- Both assets trading calmly near support levels
+- BTC/USD: Stable at ~$74,190 (no significant movement since last check)
+- ETH/USD: Stable at ~$2,329 (no significant movement since last check)
+- Both assets trading calmly above support levels
 - No volatility spikes detected
+- Market conditions: CALM
+
+Drawdown Analysis:
+- Maximum potential loss before stops: $20.55 (5.14% of exposure)
+- Current unrealized gain: $0.53 (+0.13% on exposure)
+- Risk/Reward ratio: 1:2 (5% stop-loss vs 10% take-profit)
+- Position sizing: $200 per position (20% of capital each)
 
 === NO IMMEDIATE ACTION REQUIRED ===
 All systems operational. Positions within safe parameters.
@@ -76,9 +90,11 @@ No stop-loss or take-profit triggers detected.
 No critical drawdown indicators.
 
 ⚠️ RECOMMENDATIONS:
-1. Consider creating a strategy file for /strategy endpoint
-2. Monitor for daily trade limit reset
+1. Create a strategy file for /strategy endpoint to avoid "No strategy file found" error
+2. Monitor for daily trade limit reset (tomorrow)
 3. Continue hourly monitoring for risk alerts
+4. Consider reviewing position sizing strategy
+5. Check server connectivity if dashboard becomes unresponsive
 
 System monitoring active. Next check in 1 hour.
 

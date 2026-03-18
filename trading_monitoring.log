@@ -1,11 +1,11 @@
 === TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 17:14:45 (Asia/Bangkok)
+Timestamp: 2026-03-18 17:57:30 (Asia/Bangkok)
 Dashboard Status: Running on port 5001
 Trading Server Status: RUNNING (port 5001 active)
 
 === SYSTEM STATUS ===
 Status: running
-Last Analysis: 2026-03-18T16:28:15.662948 (46 minutes ago)
+Last Analysis: 2026-03-18T17:28:26.566850 (29 minutes ago)
 Next Analysis: hourly
 Capital: $1,000.00
 Trading Pairs: BTC/USD, ETH/USD
@@ -17,17 +17,17 @@ Max trades/day: 2
 Today's trades: 2/2 (LIMIT REACHED)
 
 === CURRENT MARKET ANALYSIS ===
-BTC/USD: $74,154.09
-  - SMA 10: $74,089.70
-  - SMA 20: $74,222.97
+BTC/USD: $74,190.02
+  - SMA 10: $74,112.80
+  - SMA 20: $74,249.78
   - Support: $73,556.12
   - Resistance: $74,683.70
   - Signal: BUY (Confidence: 70%)
   - Status: Skipped (max daily trades reached)
 
-ETH/USD: $2,331.12
-  - SMA 10: $2,325.67
-  - SMA 20: $2,328.19
+ETH/USD: $2,329.06
+  - SMA 10: $2,326.71
+  - SMA 20: $2,328.15
   - Support: $2,308.08
   - Resistance: $2,350.29
   - Signal: BUY (Confidence: 70%)
@@ -38,21 +38,25 @@ From trades log (most recent open positions):
 
 1. BTC/USD BUY @ $74,094.64 (13:39:48)
    - Quantity: 0.002699 BTC
-   - Current Price: $74,154.09 (from analysis)
-   - Current P&L: +$0.16 (+0.08%)
+   - Current Price: $74,190.02 (from analysis)
+   - Position Value: $200.23 (0.002699 * $74,190.02)
+   - Entry Value: $200.00 (0.002699 * $74,094.64)
+   - Current P&L: +$0.23 (+0.12%)
    - Stop-loss: $70,389.91 (-5.0%)
    - Take-profit: $81,504.10 (+10.0%)
-   - Distance to SL: -4.99% (safe)
-   - Distance to TP: +9.92%
+   - Distance to SL: -5.12% (safe)
+   - Distance to TP: +9.87%
 
 2. ETH/USD BUY @ $2,325.28 (13:39:49)
    - Quantity: 0.086 ETH
-   - Current Price: $2,331.12 (from analysis)
-   - Current P&L: +$0.50 (+0.25%)
+   - Current Price: $2,329.06 (from analysis)
+   - Position Value: $200.30 (0.086 * $2,329.06)
+   - Entry Value: $200.00 (0.086 * $2,325.28)
+   - Current P&L: +$0.30 (+0.15%)
    - Stop-loss: $2,209.02 (-5.0%)
    - Take-profit: $2,557.81 (+10.0%)
-   - Distance to SL: -4.98% (safe)
-   - Distance to TP: +9.75%
+   - Distance to SL: -5.16% (safe)
+   - Distance to TP: +9.84%
 
 === TRADING ACTIVITY ===
 Total trades recorded: 12
@@ -66,18 +70,20 @@ Recent trades (last 6):
 
 === PORTFOLIO SUMMARY ===
 Total Capital: $1,000.00
-Estimated Exposure: ~$400.00 (from 2 open positions)
-Estimated Portfolio Value: ~$400.66
-Total P&L: +$0.66 (+0.17% on exposure)
+Open Positions: 2
+Estimated Exposure: $400.00 (from 2 open positions)
+Current Portfolio Value: $400.53 (sum of position values)
+Total P&L: +$0.53 (+0.13% on exposure, +0.05% on total capital)
 Daily Trades: 2/2 (limit reached)
 
 === RISK ASSESSMENT ===
 Risk Status: LOW
 ✅ All positions slightly profitable
-✅ Far from stop-loss levels (>4.9% buffer)
+✅ Far from stop-loss levels (>5.1% buffer)
 ✅ No critical drawdown indicators
 ✅ System operational
 ⚠️ Max daily trades reached (no new trades possible today)
+⚠️ No strategy file found (using default parameters)
 
 Stop-loss Protection: ACTIVE (5% on all positions)
 Take-profit Targets: SET (10% on all positions)
@@ -91,30 +97,53 @@ Take-profit Targets: SET (10% on all positions)
 
 === CRITICAL LEVELS TO WATCH ===
 BTC/USD:
-  - Stop-loss trigger: $70,389.91 (needs -5.08% drop from $74,154.09)
-  - Take-profit trigger: $81,504.10 (needs +9.92% gain from $74,154.09)
-  - Critical support: $73,556.12 (current: $74,154.09, -0.81% from support)
+  - Current Price: $74,190.02
+  - Stop-loss trigger: $70,389.91 (needs -5.12% drop)
+  - Take-profit trigger: $81,504.10 (needs +9.87% gain)
+  - Critical support: $73,556.12 (current: $74,190.02, -0.85% from support)
+  - Risk Level: LOW (0.85% above support)
 
 ETH/USD:
-  - Stop-loss trigger: $2,209.02 (needs -5.23% drop from $2,331.12)
-  - Take-profit trigger: $2,557.81 (needs +9.75% gain from $2,331.12)
-  - Critical support: $2,308.08 (current: $2,331.12, -0.99% from support)
+  - Current Price: $2,329.06
+  - Stop-loss trigger: $2,209.02 (needs -5.16% drop)
+  - Take-profit trigger: $2,557.81 (needs +9.84% gain)
+  - Critical support: $2,308.08 (current: $2,329.06, -0.91% from support)
+  - Risk Level: LOW (0.91% above support)
 
 === PRICE MOVEMENT ANALYSIS ===
-Since last check (16:34):
-- BTC/USD: Stable at ~$74,154.09 (no significant change)
-- ETH/USD: Stable at ~$2,331.12 (no significant change)
-- Both assets trading near support levels but above them
-- No major volatility detected
+Since last check (17:54):
+- BTC/USD: Stable at ~$74,190 (no significant change)
+- ETH/USD: Stable at ~$2,329 (no significant change)
+- Both assets stable with minor fluctuations
+- Trading above support levels
+- No significant volatility detected
+
+=== DRAWDOWN ANALYSIS ===
+Maximum Drawdown Potential:
+- BTC/USD: Current position could lose $10.23 before stop-loss (-5.12%)
+- ETH/USD: Current position could lose $10.32 before stop-loss (-5.16%)
+- Total potential loss before stops: $20.55 (5.14% of exposure)
+- Acceptable risk level: Within 5% stop-loss parameters
 
 === RECOMMENDATIONS ===
 1. MONITOR market for moves toward critical support levels
 2. WAIT for daily trade limit reset before new positions
-3. REVIEW trading strategy at /strategy endpoint (currently: "No strategy file found")
+3. CREATE strategy file for /strategy endpoint (currently missing)
 4. CONSIDER adjusting position sizes if volatility increases
 5. WATCH for any system alerts or failures
+6. CHECK for any server downtime or connectivity issues
 
 === NEXT CHECK ===
-Scheduled for: 2026-03-18 18:14:45 (in 1 hour)
+Scheduled for: 2026-03-18 18:57:30 (in 1 hour)
 
 === END OF REPORT ===
+
+2026-03-18 17:57:30,789 - INFO - Dashboard monitoring completed successfully
+2026-03-18 17:57:30,789 - INFO - System status: running, Last analysis: 2026-03-18T17:28:26.566850
+2026-03-18 17:57:30,789 - INFO - Capital: $1000.00, Stop-loss: 5.0%, Take-profit: 10.0%
+2026-03-18 17:57:30,789 - INFO - Today's trades: 2/2 (max daily trades reached)
+2026-03-18 17:57:30,789 - INFO - BTC/USD: $74,190.02 (BUY signal, confidence: 70%)
+2026-03-18 17:57:30,789 - INFO - ETH/USD: $2,329.06 (BUY signal, confidence: 70%)
+2026-03-18 17:57:30,789 - INFO - Open positions: 2 (BTC/USD +$0.23, ETH/USD +$0.30)
+2026-03-18 17:57:30,789 - INFO - Total P&L: +$0.53 (+0.13% on exposure)
+2026-03-18 17:57:30,789 - INFO - No critical alerts detected

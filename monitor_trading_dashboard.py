@@ -12,7 +12,7 @@ except:
 
 LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL = f"http://localhost:{PORT}/"
+URL = f"http://localhost:{PORT}/trades"
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -40,52 +40,65 @@ def analyze_data(data):
     all_logs = []
     critical_alerts = []
 
-    # Extract trading logs
-    if "logs" in data:
-        for log in data["logs"]:
-            all_logs.append(f"Log: {log}")
-        analysis_summary += f"\nExtracted {len(data['logs'])} trading logs.\n"
+    # Extract trading data
+    if "trades" in data:
+        trades = data["trades"]
+        analysis_summary += f"\nFound {len(trades)} trades in the system.\n"
+        
+        # Analyze recent trades
+        recent_trades = trades[:5]  # Look at most recent 5 trades
+        analysis_summary += f"\nRecent trades (last {len(recent_trades)}):\n"
+        
+        for i, trade in enumerate(recent_trades, 1):
+            # Handle different trade formats
+            if "side" in trade and "price" in trade:
+                side = trade.get("side", "unknown").upper()
+                price = trade.get("price", "N/A")
+                amount = trade.get("amount", trade.get("quantity", "N/A"))
+                symbol = trade.get("symbol", "unknown")
+                time = trade.get("time", "unknown")
+                
+                log_entry = f"Trade {i}: {side} {amount} {symbol} @ ${price} at {time}"
+                all_logs.append(log_entry)
+                analysis_summary += f"  {log_entry}\n"
+                
+                # Check for potential issues
+                if side == "SELL" and float(price) < 0:
+                    alert_msg = f"CRITICAL ALERT: Negative price in sell trade! Price: ${price}"
+                    critical_alerts.append(alert_msg)
+                    critical_alert_logger.critical(alert_msg)
+                    analysis_summary += f"  ⚠️ {alert_msg}\n"
     else:
-        analysis_summary += "\nNo trading logs found.\n"
+        analysis_summary += "\nNo trades found in the data.\n"
 
-    # Extract status updates
-    if "status" in data:
-        all_logs.append(f"Status: {data['status']}" )
-        analysis_summary += f"Status Update: {data['status']}\n"
-    else:
-        analysis_summary += "No status update found.\n"
+    # Extract count and timestamp
+    if "count" in data:
+        analysis_summary += f"\nTotal trade count: {data['count']}\n"
+    
+    if "timestamp" in data:
+        analysis_summary += f"Data timestamp: {data['timestamp']}\n"
 
-    # Extract risk parameters
-    risk_params = {}
-    if "risk_parameters" in data:
-        risk_params = data["risk_parameters"]
-        analysis_summary += f"Risk Parameters: {risk_params}\n"
-    else:
-        analysis_summary += "No risk parameters found.\n"
-
-    # Generate alerts
-    stop_loss_triggered = risk_params.get("stop_loss_triggered", False)
-    take_profit_triggered = risk_params.get("take_profit_triggered", False)
-    drawdown_critical = risk_params.get("drawdown_critical", False)
-
-    if stop_loss_triggered:
-        alert_msg = "CRITICAL ALERT: Stop Loss triggered!"
+    # Check for system health
+    if len(data.get("trades", [])) == 0:
+        alert_msg = "ALERT: No trades found in the system. Check if trading is active."
         critical_alerts.append(alert_msg)
-        critical_alert_logger.critical(alert_msg)
-        analysis_summary += f"ALERT: {alert_msg}\n"
-    if take_profit_triggered:
-        alert_msg = "ALERT: Take Profit triggered."
+        analysis_summary += f"\n⚠️ {alert_msg}\n"
+    
+    # Check for excessive trades (more than 10 in a short period)
+    if len(data.get("trades", [])) > 10:
+        alert_msg = f"ALERT: High trade volume detected ({len(data['trades'])} trades)."
         critical_alerts.append(alert_msg)
-        analysis_summary += f"ALERT: {alert_msg}\n"
-    if drawdown_critical:
-        alert_msg = "CRITICAL ALERT: Drawdown indicator critical!"
-        critical_alerts.append(alert_msg)
-        critical_alert_logger.critical(alert_msg)
-        analysis_summary += f"ALERT: {alert_msg}\n"
+        analysis_summary += f"\n⚠️ {alert_msg}\n"
 
     # Log all extracted data
     for log_entry in all_logs:
         logging.info(log_entry)
+
+    # Add summary of alerts
+    if critical_alerts:
+        analysis_summary += f"\n⚠️ Generated {len(critical_alerts)} alert(s).\n"
+    else:
+        analysis_summary += "\n✅ No critical alerts detected.\n"
 
     return analysis_summary
 
