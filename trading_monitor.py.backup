@@ -56,9 +56,9 @@ class TradingMonitor:
             if port_file.exists():
                 with open(port_file, 'r') as f:
                     port = f.read().strip()
-                    url = f"http://localhost:{port}/status"
+                    url = f"http://localhost:{port}/api/status/all"
             else:
-                url = f"{DASHBOARD_URL}/status"
+                url = f"{DASHBOARD_URL}/api/status/all"
             
             response = self.session.get(url)
             response.raise_for_status()
@@ -74,33 +74,13 @@ class TradingMonitor:
             if port_file.exists():
                 with open(port_file, 'r') as f:
                     port = f.read().strip()
-                    url = f"http://localhost:{port}/summary"
+                    url = f"http://localhost:{port}/api/trading/configure"
             else:
-                url = f"{DASHBOARD_URL}/summary"
+                url = f"{DASHBOARD_URL}/api/trading/configure"
             
             response = self.session.get(url)
             response.raise_for_status()
-            # Parse HTML summary for key info
-            html_content = response.text
-            config_data = {}
-            
-            # Extract key metrics from HTML
-            lines = html_content.split('\n')
-            for line in lines:
-                if "Today's trades:" in line:
-                    config_data['today_trades'] = line.split(':')[1].strip()
-                elif "Total trades:" in line:
-                    config_data['total_trades'] = line.split(':')[1].strip()
-                elif "Total P&L:" in line:
-                    config_data['total_pnl'] = line.split(':')[1].strip()
-                elif "Available capital:" in line:
-                    config_data['available_capital'] = line.split(':')[1].strip()
-                elif "Risk per trade:" in line:
-                    config_data['risk_per_trade'] = line.split(':')[1].strip()
-                elif "Max positions:" in line:
-                    config_data['max_positions'] = line.split(':')[1].strip()
-            
-            return config_data
+            return response.json()
         except requests.exceptions.RequestException as e:
             self.logger.warning(f"Failed to fetch trading config: {e}")
             return None

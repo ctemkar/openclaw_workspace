@@ -1,4 +1,198 @@
-<html><body>
-<a href="/foobar-0.1.tar.gz#md5=0_correct_md5">foobar-0.1.tar.gz</a><br/>
-<a href="../../external.html" rel="homepage">external homepage</a><br/>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #334155;
+        }
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .status-running {
+            background: #10b981;
+            color: #064e3b;
+        }
+        .status-stopped {
+            background: #ef4444;
+            color: #7f1d1d;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #f8fafc;
+            font-size: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #334155;
+        }
+        .metric:last-child {
+            border-bottom: none;
+        }
+        .metric-label {
+            color: #94a3b8;
+        }
+        .metric-value {
+            color: #f8fafc;
+            font-weight: 600;
+        }
+        .refresh-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .refresh-btn:hover {
+            background: #2563eb;
+        }
+        .timestamp {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Crypto Trading Dashboard</h1>
+            <div id="status" class="status-badge status-running">RUNNING</div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Trading Status</h2>
+            <div class="grid">
+                <div>
+                    <div class="metric">
+                        <span class="metric-label">Bot Status</span>
+                        <span id="bot-status" class="metric-value">Checking...</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Active Pairs</span>
+                        <span id="active-pairs" class="metric-value">3</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Scan Interval</span>
+                        <span class="metric-value">5 minutes</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="metric">
+                        <span class="metric-label">Total Trades</span>
+                        <span id="total-trades" class="metric-value">0</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Win Rate</span>
+                        <span id="win-rate" class="metric-value">0%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Last Trade</span>
+                        <span id="last-trade" class="metric-value">Never</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📈 Market Pairs</h2>
+            <div id="pairs-list">
+                <div class="metric">
+                    <span class="metric-label">BTC/USD</span>
+                    <span class="metric-value">Monitoring</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">ETH/USD</span>
+                    <span class="metric-value">Monitoring</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">SOL/USD</span>
+                    <span class="metric-value">Monitoring</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ Controls</h2>
+            <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Data</button>
+            <div class="timestamp">
+                Last updated: <span id="last-updated">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchStatus() {
+            try {
+                const response = await fetch('/api/status/all');
+                const data = await response.json();
+                
+                document.getElementById('bot-status').textContent = data.status;
+                document.getElementById('total-trades').textContent = data.trades.length;
+                document.getElementById('last-updated').textContent = data.timestamp;
+                
+                const statusBadge = document.getElementById('status');
+                statusBadge.textContent = data.status;
+                statusBadge.className = `status-badge status-${data.status.toLowerCase()}`;
+                
+                if (data.trades.length > 0) {
+                    const lastTrade = data.trades[data.trades.length - 1];
+                    document.getElementById('last-trade').textContent = lastTrade.time || 'Recent';
+                }
+            } catch (error) {
+                console.error('Error fetching status:', error);
+                document.getElementById('bot-status').textContent = 'Error';
+            }
+        }
+        
+        function refreshData() {
+            fetchStatus();
+        }
+        
+        // Initial load
+        fetchStatus();
+        
+        // Auto-refresh every 30 seconds
+        setInterval(fetchStatus, 30000);
+    </script>
+</body>
+</html>
