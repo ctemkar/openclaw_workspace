@@ -13,3 +13,9 @@
 [2026-03-18 10:24:18]   LLM_Analysis_BTC_USD: BUY BTC/USD (confidence: 0.65)
 [2026-03-18 10:24:18]   LLM_Analysis_ETH_USD: BUY ETH/USD (confidence: 0.65)
 [2026-03-18 10:24:18]   LLM_Analysis_SOL_USD: SELL SOL/USD (confidence: 0.65)
+[2026-03-18 10:29:29] Starting LLM analysis for trading strategies
+[2026-03-18 10:29:37] Market data fetched for 3 pairs
+[2026-03-18 10:29:37] Generated 3 trading strategies
+[2026-03-18 10:29:37]   LLM_Analysis_BTC_USD: BUY BTC/USD (confidence: 0.65)
+[2026-03-18 10:29:37]   LLM_Analysis_ETH_USD: BUY ETH/USD (confidence: 0.65)
+[2026-03-18 10:29:37]   LLM_Analysis_SOL_USD: SELL SOL/USD (confidence: 0.65)
