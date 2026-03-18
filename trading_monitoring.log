@@ -81,3 +81,47 @@ RECOMMENDED ACTIONS:
 
 === Monitoring complete at Wed Mar 18 07:11:23 +07 2026 ===
 2026-03-18 07:13:03,939 - ERROR - Could not find dashboard on any port
+=== Trading Monitoring Update: Wed Mar 18 07:15:30 +07 2026 ===
+TRADING DASHBOARD MONITORING REPORT
+====================================
+Timestamp: 2026-03-18 07:15:30 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor (cron:b8838308-dd01-4039-8c8c-57a5735f2758)
+
+SYSTEM STATUS:
+• Dashboard Service: ONLINE (port 57092)
+• Trading Bot: RUNNING
+• Bot Process: PID 8546 (Sleeping/Normal)
+• API Connectivity: LIMITED (basic dashboard available)
+
+PORTFOLIO ANALYSIS:
+• Asset: BTC/USD
+• Total Holdings: 0.00053507 BTC
+• Total Investment: $40.00
+• Current BTC Price: $74043.00
+• Current Portfolio Value: $39.62
+• Total P&L: $-0.38 (-0.95%)
+• Position Size: Small ($40.00 investment)
+
+RISK PARAMETERS:
+• Stop Loss Threshold: -1.00% (NOT TRIGGERED - current: -0.95%)
+• Take Profit Target: +2.00% (NOT TRIGGERED - current: -0.95%)
+• Risk Buffer to Stop Loss: 0.05% (ABOVE THRESHOLD)
+• Drawdown Status: MINIMAL (-0.95% from entry)
+
+TRADING ACTIVITY:
+• Last Trade: 02:24:56
+• Recent Activity: ACTIVE
+• Trade Conditions: Buy conditions not met (prices above strategy thresholds)
+• Available Funds: Insufficient for standard $10 trade size
+• Active Strategies: 3 (BTC, ETH, SOL)
+
+MARKET CONDITIONS:
+• BTC Price: $74043.00
+• Market Trend: UPWARD (prices rising above bot's buy thresholds)
+
+CRITICAL ALERTS:
+• No critical alerts at this time
+
+RECOMMENDATIONS:
+1. MONITOR CLOSELY: Portfolio near stop loss threshold
+2. CONSIDER ADJUSTMENT: Review trading parameters for current market conditions
