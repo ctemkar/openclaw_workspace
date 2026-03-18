@@ -1,3 +1,163 @@
-Take-Profit Triggered for ETH/USD at 3600.
-Stop-Loss Triggered for BTC/USD at 64000.
-Current Drawdown: 9.2% (approaching limit)
+# ====================================================
+# ALERT CHECK: 2026-03-18 14:53:52 (Asia/Bangkok) / 2026-03-18 07:53:52 UTC
+# ====================================================
+
+## CRITICAL ALERTS: NONE
+
+## ALERT DETAILS:
+
+### STOP-LOSS TRIGGERS:
+- Status: NO TRIGGERS
+- Analysis:
+  * BTC/USD: Current price $73,762.00, Stop-loss at $70,389.91 (5% below entry)
+  * ETH/USD: Current price $2,315.46, Stop-loss at $2,208.76 (5% below entry)
+  * Buffer: Both positions have ~4.5% buffer before stop-loss triggers
+  * No stop-loss exits detected in trade history
+
+### TAKE-PROFIT TRIGGERS:
+- Status: NO TRIGGERS
+- Analysis:
+  * BTC/USD: Current price $73,762.00, Take-profit at $81,504.10 (10% above entry)
+  * ETH/USD: Current price $2,315.46, Take-profit at $2,557.51 (10% above entry)
+  * Required gain: Both positions need ~9.5% gain to reach take-profit targets
+  * No take-profit exits detected in trade history
+
+### CRITICAL DRAWDOWN:
+- Status: NO CRITICAL DRAWDOWN
+- Analysis:
+  * P&L reported as $0.00 (positions still open)
+  * Capital remains at initial $1000.00
+  * No losses reported in system
+  * No drawdown events detected
+
+### SYSTEM FAILURES:
+- Status: NO FAILURES
+- Analysis:
+  * Dashboard accessible and responsive
+  * All endpoints operational (including strategy endpoint)
+  * Trading system status: "running"
+  * Risk parameters active and functional
+
+### POSITION RISK:
+- Status: ACCEPTABLE RISK
+- Analysis:
+  * Total exposure: ~$400.00 (40% of capital)
+  * Remaining capital: ~$600.00 (60% available)
+  * Position sizing: Conservative (20% per position)
+  * Daily trade limit reached: 2/2 trades (conservative risk management)
+
+### MARKET RISK:
+- Status: MODERATE
+- Analysis:
+  * BTC: 0.28% above support level ($73,556.12)
+  * ETH: 0.32% above support level ($2,308.08)
+  * Both positions near support but not breaching
+  * Technical signals: BUY (70% confidence) for both
+  * Market conditions: Normal volatility expected
+
+## ALERT SUMMARY:
+- CRITICAL ALERTS: 0
+- WARNINGS: 1 (Daily trade limit reached - non-critical, expected behavior)
+- INFO: System operating normally, positions healthy
+
+## RECOMMENDED MONITORING:
+1. Continue hourly monitoring for stop-loss triggers
+2. Watch support levels: BTC $73,556.12, ETH $2,308.08
+3. Monitor for take-profit opportunities
+4. Check system status at next scheduled analysis (~48 minutes)
+5. Resume trading at daily reset (00:00 UTC)
+
+## NEXT ALERT CHECK:
+- Scheduled: Next monitoring cycle (approx. 1 hour)
+- Trigger conditions:
+  * Price drops below stop-loss levels (5% from entry)
+  * Price reaches take-profit levels (10% from entry)
+  * System failure or dashboard unavailability
+  * Critical drawdown detected
+  * Risk parameter violations
+
+# ====================================================
+# End of alert check
+# ====================================================
+
+# ====================================================
+# ALERT CHECK: 2026-03-18 14:51:23 (Asia/Bangkok) / 2026-03-18 07:51:23 UTC
+# ====================================================
+
+## CRITICAL ALERTS: NONE
+
+## ALERT DETAILS:
+
+### STOP-LOSS TRIGGERS:
+- Status: NO TRIGGERS
+- Analysis:
+  * BTC/USD: Current price $73,762.00, Stop-loss at $70,389.91 (5% below entry)
+  * ETH/USD: Current price $2,315.46, Stop-loss at $2,208.76 (5% below entry)
+  * Buffer: Both positions have ~4.5% buffer before stop-loss triggers
+  * No stop-loss exits detected in trade history
+
+### TAKE-PROFIT TRIGGERS:
+- Status: NO TRIGGERS
+- Analysis:
+  * BTC/USD: Current price $73,762.00, Take-profit at $81,504.10 (10% above entry)
+  * ETH/USD: Current price $2,315.46, Take-profit at $2,557.51 (10% above entry)
+  * Required gain: Both positions need ~9.5% gain to reach take-profit targets
+  * No take-profit exits detected in trade history
+
+### CRITICAL DRAWDOWN:
+- Status: NO CRITICAL DRAWDOWN
+- Analysis:
+  * P&L reported as $0.00 (positions still open)
+  * Capital remains at initial $1000.00
+  * No losses reported in system
+  * No drawdown events detected
+
+### SYSTEM FAILURES:
+- Status: NO FAILURES
+- Analysis:
+  * Dashboard accessible and responsive
+  * All endpoints operational (except strategy endpoint - non-critical)
+  * Trading system status: "running"
+  * Risk parameters active and functional
+
+### POSITION RISK:
+- Status: ACCEPTABLE RISK
+- Analysis:
+  * Total exposure: ~$400.00 (40% of capital)
+  * Remaining capital: ~$600.00 (60% available)
+  * Position sizing: Conservative (20% per position)
+  * Daily trade limit reached: 2/2 trades (conservative risk management)
+
+### MARKET RISK:
+- Status: MODERATE
+- Analysis:
+  * BTC: 0.28% above support level ($73,556.12)
+  * ETH: 0.32% above support level ($2,308.08)
+  * Both positions near support but not breaching
+  * Technical signals: BUY (70% confidence) for both
+  * Market conditions: Normal volatility expected
+
+## ALERT SUMMARY:
+- CRITICAL ALERTS: 0
+- WARNINGS: 1 (Daily trade limit reached - non-critical, expected behavior)
+- INFO: System operating normally, positions healthy
+
+## RECOMMENDED MONITORING:
+1. Continue hourly monitoring for stop-loss triggers
+2. Watch support levels: BTC $73,556.12, ETH $2,308.08
+3. Monitor for take-profit opportunities
+4. Check system status at next scheduled analysis (~51 minutes)
+5. Resume trading at daily reset (00:00 UTC)
+
+## NEXT ALERT CHECK:
+- Scheduled: Next monitoring cycle (approx. 1 hour)
+- Trigger conditions:
+  * Price drops below stop-loss levels (5% from entry)
+  * Price reaches take-profit levels (10% from entry)
+  * System failure or dashboard unavailability
+  * Critical drawdown detected
+  * Risk parameter violations
+
+# ====================================================
+# End of alert check
+# ====================================================

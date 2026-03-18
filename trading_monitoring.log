@@ -1,18 +1,329 @@
-Trading Dashboard - Status: Live
-Timestamp: 2026-03-18T07:00:00Z
+# ====================================================
+# Monitoring Check: 2026-03-18 14:57:32 (Asia/Bangkok) / 2026-03-18 07:57:36 UTC
+# ====================================================
 
-Risk Parameters:
-  Volatility: High
-  Leverage: 5x
-  Max Drawdown Limit: 10%
+## DASHBOARD STATUS:
+- Dashboard accessible: YES (HTTP 200)
+- Status endpoint: OPERATIONAL
+- Trades endpoint: OPERATIONAL (10 trades in history)
+- Summary endpoint: OPERATIONAL
+- Strategy endpoint: ERROR (no strategy file - non-critical)
 
-Trading Logs:
-  - Executed Buy Order: BTC/USD @ 65000
-  - Executed Sell Order: ETH/USD @ 3500
-  - Take-Profit Triggered: ETH/USD @ 3600
-  - Stop-Loss Triggered: BTC/USD @ 64000
+## SYSTEM STATUS:
+- Status: "running"
+- Capital: $1000.00 (intact)
+- Trading pairs: ["BTC/USD", "ETH/USD"]
+- Last analysis: 2026-03-18T14:42:26.749910
+- Analysis scheduled: "hourly"
+- Risk parameters active:
+  - Max trades per day: 2
+  - Stop loss: 5% (0.05)
+  - Take profit: 10% (0.1)
 
-Alerts:
-  - Take-Profit Triggered for ETH/USD at 3600.
-  - Stop-Loss Triggered for BTC/USD at 64000.
-  - Current Drawdown: 9.2% (approaching limit)
+## TRADE ANALYSIS:
+- Total trades in history: 10
+- Today's trades executed: 2/2 (daily limit reached)
+- Most recent trades:
+  1. BTC/USD BUY @ $74,094.64 (0.002699 BTC) at 13:39:48
+  2. ETH/USD BUY @ $2,325.28 (0.086 ETH) at 13:39:49
+- All trades show "filled" status
+- P&L: $0.00 (positions still open)
+
+## POSITION ANALYSIS:
+- BTC Position: 0.002699 BTC @ $74,094.64 = ~$200.00 position
+- ETH Position: 0.086 ETH @ $2,325.28 = ~$200.00 position
+- Total exposure: ~$400.00 (40% of capital)
+- Remaining capital: ~$600.00 (60% available for risk management)
+- Position sizing: Conservative (20% per position)
+
+## MARKET ANALYSIS (from summary):
+- BTC/USD:
+  - Price: $73,762.00
+  - SMA 10: $74,201.90, SMA 20: $74,214.91
+  - Support: $73,556.12 (0.28% below current)
+  - Resistance: $74,800.00
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+- ETH/USD:
+  - Price: $2,315.46
+  - SMA 10: $2,328.26, SMA 20: $2,328.20
+  - Support: $2,308.08 (0.32% below current)
+  - Resistance: $2,350.29
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+## RISK ASSESSMENT:
+- Stop-loss levels (5% below entry):
+  - BTC: $70,389.91 (current buffer: 4.56% above stop-loss)
+  - ETH: $2,208.76 (current buffer: 4.59% above stop-loss)
+- Take-profit levels (10% above entry):
+  - BTC: $81,504.10 (need: 9.56% gain from current)
+  - ETH: $2,557.51 (need: 9.59% gain from current)
+- Current price vs support:
+  - BTC: $73,762.00 (0.28% above support at $73,556.12)
+  - ETH: $2,315.46 (0.32% above support at $2,308.08)
+
+## ALERT CHECK:
+1. STOP-LOSS TRIGGERS: NONE
+   - Current prices well above stop-loss levels
+   - No stop-loss exits in trade history
+   - Positions have healthy 4.5%+ buffer before stop-loss
+
+2. TAKE-PROFIT TRIGGERS: NONE
+   - Current prices need ~9.5% gain to reach take-profit targets
+   - No take-profit exits in trade history
+   - Positions still early in profit cycle
+
+3. CRITICAL DRAWDOWN: NONE
+   - P&L reported as $0.00
+   - Capital remains at initial $1000.00
+   - No indication of losses or drawdown
+
+4. DAILY TRADE LIMIT REACHED: YES
+   - System has executed 2/2 daily trades
+   - Trading paused until next day's reset
+   - Conservative risk management preventing overtrading
+
+## SYSTEM HEALTH:
+- Trading system: ACTIVE (conservative mode, daily limit reached)
+- Risk management: FUNCTIONAL
+- Dashboard: OPERATIONAL
+- Monitoring: ACTIVE
+- Next analysis: ~45 minutes (hourly schedule, last at 14:42:26)
+
+## RECOMMENDED ACTIONS:
+- Continue monitoring positions for stop-loss triggers (5% threshold)
+- Watch for take-profit opportunities (10% threshold)
+- Resume trading at next day's reset (approx. 00:00 UTC)
+- Monitor support levels: BTC $73,556.12, ETH $2,308.08
+- Consider adjusting position sizing if market volatility increases
+
+## ALERT PRIORITY:
+- CRITICAL: NONE
+- WARNING: Daily trade limit reached (non-critical, expected behavior)
+- INFO: System operating normally, positions healthy, risk management active
+
+# ====================================================
+# End of monitoring check
+# ====================================================
+
+# ====================================================
+# Monitoring Check: 2026-03-18 14:53:52 (Asia/Bangkok) / 2026-03-18 07:53:52 UTC
+# ====================================================
+
+## DASHBOARD STATUS:
+- Dashboard accessible: YES (HTTP 200)
+- Status endpoint: OPERATIONAL
+- Trades endpoint: OPERATIONAL (10 trades in history)
+- Summary endpoint: OPERATIONAL
+- Strategy endpoint: OPERATIONAL (via /strategy endpoint)
+
+## SYSTEM STATUS:
+- Status: "running"
+- Capital: $1000.00 (intact)
+- Trading pairs: ["BTC/USD", "ETH/USD"]
+- Last analysis: 2026-03-18T14:42:26.749910
+- Analysis scheduled: "hourly"
+- Risk parameters active:
+  - Max trades per day: 2
+  - Stop loss: 5% (0.05)
+  - Take profit: 10% (0.1)
+
+## TRADE ANALYSIS:
+- Total trades in history: 10
+- Today's trades executed: 2/2 (daily limit reached)
+- Most recent trades:
+  1. BTC/USD BUY @ $74,094.64 (0.002699 BTC) at 13:39:48
+  2. ETH/USD BUY @ $2,325.28 (0.086 ETH) at 13:39:49
+- All trades show "filled" status
+- P&L: $0.00 (positions still open)
+
+## POSITION ANALYSIS:
+- BTC Position: 0.002699 BTC @ $74,094.64 = ~$200.00 position
+- ETH Position: 0.086 ETH @ $2,325.28 = ~$200.00 position
+- Total exposure: ~$400.00 (40% of capital)
+- Remaining capital: ~$600.00 (60% available for risk management)
+- Position sizing: Conservative (20% per position)
+
+## MARKET ANALYSIS (from summary):
+- BTC/USD:
+  - Price: $73,762.00
+  - SMA 10: $74,201.90, SMA 20: $74,214.91
+  - Support: $73,556.12 (0.28% below current)
+  - Resistance: $74,800.00
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+- ETH/USD:
+  - Price: $2,315.46
+  - SMA 10: $2,328.26, SMA 20: $2,328.20
+  - Support: $2,308.08 (0.32% below current)
+  - Resistance: $2,350.29
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+## RISK ASSESSMENT:
+- Stop-loss levels (5% below entry):
+  - BTC: $70,389.91 (current buffer: 4.56% above stop-loss)
+  - ETH: $2,208.76 (current buffer: 4.59% above stop-loss)
+- Take-profit levels (10% above entry):
+  - BTC: $81,504.10 (need: 9.56% gain from current)
+  - ETH: $2,557.51 (need: 9.59% gain from current)
+- Current price vs support:
+  - BTC: $73,762.00 (0.28% above support at $73,556.12)
+  - ETH: $2,315.46 (0.32% above support at $2,308.08)
+
+## ALERT CHECK:
+1. STOP-LOSS TRIGGERS: NONE
+   - Current prices well above stop-loss levels
+   - No stop-loss exits in trade history
+   - Positions have healthy 4.5%+ buffer before stop-loss
+
+2. TAKE-PROFIT TRIGGERS: NONE
+   - Current prices need ~9.5% gain to reach take-profit targets
+   - No take-profit exits in trade history
+   - Positions still early in profit cycle
+
+3. CRITICAL DRAWDOWN: NONE
+   - P&L reported as $0.00
+   - Capital remains at initial $1000.00
+   - No indication of losses or drawdown
+
+4. DAILY TRADE LIMIT REACHED: YES
+   - System has executed 2/2 daily trades
+   - Trading paused until next day's reset
+   - Conservative risk management preventing overtrading
+
+## SYSTEM HEALTH:
+- Trading system: ACTIVE (conservative mode, daily limit reached)
+- Risk management: FUNCTIONAL
+- Dashboard: OPERATIONAL
+- Monitoring: ACTIVE
+- Next analysis: ~48 minutes (hourly schedule, last at 14:42:26)
+
+## RECOMMENDED ACTIONS:
+- Continue monitoring positions for stop-loss triggers (5% threshold)
+- Watch for take-profit opportunities (10% threshold)
+- Resume trading at next day's reset (approx. 00:00 UTC)
+- Monitor support levels: BTC $73,556.12, ETH $2,308.08
+- Consider adjusting position sizing if market volatility increases
+
+## ALERT PRIORITY:
+- CRITICAL: NONE
+- WARNING: Daily trade limit reached (non-critical, expected behavior)
+- INFO: System operating normally, positions healthy, risk management active
+
+# ====================================================
+# End of monitoring check
+# ====================================================
+
+# ====================================================
+# Monitoring Check: 2026-03-18 14:51:23 (Asia/Bangkok) / 2026-03-18 07:51:23 UTC
+# ====================================================
+
+## DASHBOARD STATUS:
+- Dashboard accessible: YES (HTTP 200)
+- Status endpoint: OPERATIONAL
+- Trades endpoint: OPERATIONAL (10 trades in history)
+- Summary endpoint: OPERATIONAL
+- Strategy endpoint: ERROR (no strategy file - non-critical)
+
+## SYSTEM STATUS:
+- Status: "running"
+- Capital: $1000.00 (intact)
+- Trading pairs: ["BTC/USD", "ETH/USD"]
+- Last analysis: 2026-03-18T14:42:26.749910
+- Analysis scheduled: "hourly"
+- Risk parameters active:
+  - Max trades per day: 2
+  - Stop loss: 5% (0.05)
+  - Take profit: 10% (0.1)
+
+## TRADE ANALYSIS:
+- Total trades in history: 10
+- Today's trades executed: 2/2 (daily limit reached)
+- Most recent trades:
+  1. BTC/USD BUY @ $74,094.64 (0.002699 BTC) at 13:39:48
+  2. ETH/USD BUY @ $2,325.28 (0.086 ETH) at 13:39:49
+- All trades show "filled" status
+- P&L: $0.00 (positions still open)
+
+## POSITION ANALYSIS:
+- BTC Position: 0.002699 BTC @ $74,094.64 = ~$200.00 position
+- ETH Position: 0.086 ETH @ $2,325.28 = ~$200.00 position
+- Total exposure: ~$400.00 (40% of capital)
+- Remaining capital: ~$600.00 (60% available for risk management)
+- Position sizing: Conservative (20% per position)
+
+## MARKET ANALYSIS (from summary):
+- BTC/USD:
+  - Price: $73,762.00
+  - SMA 10: $74,201.90, SMA 20: $74,214.91
+  - Support: $73,556.12 (0.28% below current)
+  - Resistance: $74,800.00
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+- ETH/USD:
+  - Price: $2,315.46
+  - SMA 10: $2,328.26, SMA 20: $2,328.20
+  - Support: $2,308.08 (0.32% below current)
+  - Resistance: $2,350.29
+  - Signal: BUY (70% confidence) - near support level
+  - Status: Skipped (max daily trades reached)
+
+## RISK ASSESSMENT:
+- Stop-loss levels (5% below entry):
+  - BTC: $70,389.91 (current buffer: 4.56% above stop-loss)
+  - ETH: $2,208.76 (current buffer: 4.59% above stop-loss)
+- Take-profit levels (10% above entry):
+  - BTC: $81,504.10 (need: 9.56% gain from current)
+  - ETH: $2,557.51 (need: 9.59% gain from current)
+- Current price vs support:
+  - BTC: $73,762.00 (0.28% above support at $73,556.12)
+  - ETH: $2,315.46 (0.32% above support at $2,308.08)
+
+## ALERT CHECK:
+1. STOP-LOSS TRIGGERS: NONE
+   - Current prices well above stop-loss levels
+   - No stop-loss exits in trade history
+   - Positions have healthy 4.5%+ buffer before stop-loss
+
+2. TAKE-PROFIT TRIGGERS: NONE
+   - Current prices need ~9.5% gain to reach take-profit targets
+   - No take-profit exits in trade history
+   - Positions still early in profit cycle
+
+3. CRITICAL DRAWDOWN: NONE
+   - P&L reported as $0.00
+   - Capital remains at initial $1000.00
+   - No indication of losses or drawdown
+
+4. DAILY TRADE LIMIT REACHED: YES
+   - System has executed 2/2 daily trades
+   - Trading paused until next day's reset
+   - Conservative risk management preventing overtrading
+
+## SYSTEM HEALTH:
+- Trading system: ACTIVE (conservative mode, daily limit reached)
+- Risk management: FUNCTIONAL
+- Dashboard: OPERATIONAL
+- Monitoring: ACTIVE
+- Next analysis: ~51 minutes (hourly schedule, last at 14:42:26)
+
+## RECOMMENDED ACTIONS:
+- Continue monitoring positions for stop-loss triggers (5% threshold)
+- Watch for take-profit opportunities (10% threshold)
+- Resume trading at next day's reset (approx. 00:00 UTC)
+- Monitor support levels: BTC $73,556.12, ETH $2,308.08
+- Consider adjusting position sizing if market volatility increases
+
+## ALERT PRIORITY:
+- CRITICAL: NONE
+- WARNING: Daily trade limit reached (non-critical, expected behavior)
+- INFO: System operating normally, positions healthy, risk management active
+
+# ====================================================
+# End of monitoring check
+# ====================================================

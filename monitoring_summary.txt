@@ -1,59 +1,80 @@
 TRADING DASHBOARD MONITORING SUMMARY
-========================================
-Timestamp: 2026-03-18 12:50:00 (Asia/Bangkok)
+Generated: 2026-03-18 14:29:39 (Asia/Bangkok)
 
-SYSTEM STATUS:
-• Dashboard: ACCESSIBLE (http://localhost:5001/)
-• Trading Status: STOPPED
-• Active Strategies: 0
-• API Status: Functional
+=== SYSTEM STATUS ===
+• Dashboard: OPERATIONAL (http://localhost:5001/)
+• Trading System: ACTIVE (conservative mode)
+• Capital: $1,000.00
+• Risk Parameters: Stop-loss=5%, Take-profit=10%
+• Max Daily Trades: 2 (currently reached)
+• Trading Pairs: BTC/USD, ETH/USD
 
-TRADING CONFIGURATION:
-• Capital: $100.00
-• Trade Size: $10.00
-• Stop-Loss: 3.0%
-• Take-Profit: 6.0%
+=== TRADING ACTIVITY ===
+• Total trades in system: 10
+• Today's trades executed: 2/2 (daily limit reached)
+• Last analysis: 2026-03-18 13:42:15
+• Next analysis: ~24 minutes (hourly schedule)
 
-TRADE STATISTICS:
-• Total Trades: 50
-• Buy Trades: 44 (88.0%)
-• Sell Trades: 6 (12.0%)
-• Buy/Sell Ratio: 44:6 (7.33:1)
-• BTC Buy Trades: 41
-• BTC Sell Trades: 0
-• Average BTC Buy Price: $74,375.92
-• Latest Trade Time: 11:43:17
-• Hours Since Last Trade: 1.1
+=== MARKET CONDITIONS ===
+• BTC/USD: $74,094.64
+  - Below SMAs (10-day: $74,260.90, 20-day: $74,201.82)
+  - Support: $73,556.12 | Resistance: $74,800.00
+  - Signal: BUY (70% confidence)
 
-RISK ANALYSIS:
-• Current Drawdown: 0.00% (based on available data)
-• Stop-Loss Threshold: -3.0% (NOT triggered)
-• Take-Profit Threshold: +6.0% (NOT triggered)
-• Extreme Buy Bias: 7.33:1 buy/sell ratio
-• High BTC Concentration: 82.0% of trades are BTC buys
+• ETH/USD: $2,325.01
+  - Below SMAs (10-day: $2,328.55, 20-day: $2,327.60)
+  - Support: $2,308.08 | Resistance: $2,350.29
+  - Signal: BUY (70% confidence)
 
-CRITICAL ALERTS:
-⚠️ WARNING: Extreme buy-side bias (7.33:1 ratio)
-⚠️ WARNING: Trading bot is STOPPED
-⚠️ WARNING: No sell-side BTC trades detected
-⚠️ WARNING: High concentration in BTC (82% of trades)
+=== POSITION ANALYSIS ===
+Recent BTC Positions:
+  • 0.000134526 BTC @ $74,334.94 (Gemini)
+  • 0.000134575 BTC @ $74,308.00 (Gemini)
+  • 0.000134524 BTC @ $74,335.92 (LLM_Analysis_BTC_USD)
 
-NO CRITICAL STOP-LOSS OR TAKE-PROFIT ORDERS TRIGGERED:
-• No stop-loss orders have been triggered
-• No take-profit orders have been triggered
-• No critical drawdown detected in current monitoring
+Recent ETH Positions:
+  • 0.00428857 ETH @ $2,331.78 (LLM_Analysis_ETH_USD)
+  • 0.086 ETH @ $2,325.28 (strategy)
 
-RECOMMENDATIONS:
-1. Review trading strategy for buy-side bias
-2. Consider implementing sell signals for BTC
-3. Restart trading bot only after strategy adjustment
-4. Monitor for potential overtrading patterns
+Notable Trade:
+  • SELL: 0.10531637 SOL @ $94.952 (LLM_Analysis_SOL_USD)
 
-LOGS UPDATED:
-• General monitoring data logged to: trading_monitoring.log
-• Critical alerts logged to: critical_alerts.log
-• Next monitoring check scheduled in 30 minutes
+=== RISK ASSESSMENT ===
+Stop-loss Monitoring (5% threshold):
+  • BTC positions: No triggers (current ~0.28% below avg entry)
+  • ETH positions: No triggers (current ~0.13% below avg entry)
 
-SUMMARY:
-The trading dashboard is accessible but the trading bot is currently stopped. There is an extreme buy-side bias in the trading history with 44 buy trades vs only 6 sell trades, and all BTC trades are buys with no sells. No critical stop-loss or take-profit orders have been triggered. The system requires strategy review before restarting trading operations.
-========================================
+Take-profit Monitoring (10% threshold):
+  • No positions showing 10%+ gains
+
+Drawdown Analysis:
+  • No significant drawdown detected
+  • All positions within safe parameters
+
+=== ALERTS ===
+CRITICAL ALERTS: NONE
+
+WARNING ALERTS:
+  • Daily trade limit reached (10 trades vs 2 max limit)
+  • System operating in conservative mode (trading paused)
+  • Strategy file not found (non-critical system issue)
+
+INFO ALERTS:
+  • System operating normally
+  • Dashboard endpoints responsive
+  • Risk management functional
+  • Positions healthy and within risk parameters
+
+=== LOGGING STATUS ===
+• Trading monitoring log updated: ./trading_monitoring.log
+• Critical alerts log checked: ./critical_alerts.log (no new critical alerts)
+• Monitoring interval: Completed successfully
+
+=== RECOMMENDATIONS ===
+1. Monitor for next analysis cycle (~24 minutes)
+2. Review daily trade limit configuration if higher activity is desired
+3. Consider adding strategy file for complete system functionality
+4. Continue monitoring for stop-loss/take-profit triggers
+
+=== NEXT CHECK ===
+Scheduled for next cron execution or manual trigger.
