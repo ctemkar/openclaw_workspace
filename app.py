@@ -45,7 +45,6 @@ def start_bot():
     if get_status() == "STOPPED":
         subprocess.Popen(["/Users/chetantemkar/.openclaw/workspace/app/venv/bin/python", os.path.join(BASE_DIR, "crypto_trading_llm_live.py")])
     return jsonify({"status": "success"})
-
 @app.route('/api/llm/generate', methods=['POST'])
 def generate_strat():
     with open(os.path.join(BASE_DIR, "llm_strategies.json"), "w") as f:

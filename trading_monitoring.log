@@ -63,3 +63,37 @@ Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
    Resistance: $2350.29
    Signal: BUY (Confidence: 70%)
 
+=== Trading Dashboard Monitor - Wed Mar 18 21:03:11 +07 2026 ===
+Timestamp: 2026-03-18 21:02:00 (UTC)
+System Status: running
+Capital: .00
+Risk Parameters: Stop-loss: 5%, Take-profit: 10%, Max trades/day: 2
+Today's trades: 2/2 (max reached)
+Current P&L: /bin/zsh.00
+BTC/USD Price: .33 | Signal: BUY (70% confidence)
+ETH/USD Price: .31 | Signal: BUY (70% confidence)
+Last analysis: 2026-03-18T20:46:25.626681
+Analysis scheduled: hourly
+==========================================
+⚠️ WARNING: Prices declining - BTC down ~2.4%, ETH down ~4% from recent buys
+⚠️ ETH approaching stop-loss threshold (4% down, stop-loss at 5%)
+[2026-03-18T21:14:43.977304] Starting trading dashboard monitor...
+[2026-03-18T21:14:43.982586] Error fetching data: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /summary (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))
+[2026-03-18T21:14:43.982659] Trading dashboard monitor finished.
+
+=== Trading Dashboard Monitor - Wed Mar 18 21:16:06  2026 ===
+Timestamp: 2026-03-18 21:16:06
+System Status: unknown
+Capital: $1000.00
+Risk Parameters: Stop-loss: 5%, Take-profit: 10%, Max trades/day: 2
+Today's trades: 0/2 (max: 2)
+Current P&L: $0.00
+BTC/USD Price: N/A | Signal: N/A
+ETH/USD Price: N/A | Signal: N/A
+BTC Drawdown: -2.38%
+ETH Drawdown: -4.06%
+Last analysis: N/A
+Analysis scheduled: unknown
+
+✅ No critical alerts at this time
+==================================================
