@@ -1,0 +1,59 @@
+TRADING DASHBOARD MONITORING SUMMARY
+========================================
+Timestamp: 2026-03-18 12:50:00 (Asia/Bangkok)
+
+SYSTEM STATUS:
+• Dashboard: ACCESSIBLE (http://localhost:5001/)
+• Trading Status: STOPPED
+• Active Strategies: 0
+• API Status: Functional
+
+TRADING CONFIGURATION:
+• Capital: $100.00
+• Trade Size: $10.00
+• Stop-Loss: 3.0%
+• Take-Profit: 6.0%
+
+TRADE STATISTICS:
+• Total Trades: 50
+• Buy Trades: 44 (88.0%)
+• Sell Trades: 6 (12.0%)
+• Buy/Sell Ratio: 44:6 (7.33:1)
+• BTC Buy Trades: 41
+• BTC Sell Trades: 0
+• Average BTC Buy Price: $74,375.92
+• Latest Trade Time: 11:43:17
+• Hours Since Last Trade: 1.1
+
+RISK ANALYSIS:
+• Current Drawdown: 0.00% (based on available data)
+• Stop-Loss Threshold: -3.0% (NOT triggered)
+• Take-Profit Threshold: +6.0% (NOT triggered)
+• Extreme Buy Bias: 7.33:1 buy/sell ratio
+• High BTC Concentration: 82.0% of trades are BTC buys
+
+CRITICAL ALERTS:
+⚠️ WARNING: Extreme buy-side bias (7.33:1 ratio)
+⚠️ WARNING: Trading bot is STOPPED
+⚠️ WARNING: No sell-side BTC trades detected
+⚠️ WARNING: High concentration in BTC (82% of trades)
+
+NO CRITICAL STOP-LOSS OR TAKE-PROFIT ORDERS TRIGGERED:
+• No stop-loss orders have been triggered
+• No take-profit orders have been triggered
+• No critical drawdown detected in current monitoring
+
+RECOMMENDATIONS:
+1. Review trading strategy for buy-side bias
+2. Consider implementing sell signals for BTC
+3. Restart trading bot only after strategy adjustment
+4. Monitor for potential overtrading patterns
+
+LOGS UPDATED:
+• General monitoring data logged to: trading_monitoring.log
+• Critical alerts logged to: critical_alerts.log
+• Next monitoring check scheduled in 30 minutes
+
+SUMMARY:
+The trading dashboard is accessible but the trading bot is currently stopped. There is an extreme buy-side bias in the trading history with 44 buy trades vs only 6 sell trades, and all BTC trades are buys with no sells. No critical stop-loss or take-profit orders have been triggered. The system requires strategy review before restarting trading operations.
+========================================
