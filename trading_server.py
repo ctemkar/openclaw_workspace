@@ -176,6 +176,16 @@ def get_strategy():
             "timestamp": datetime.now().isoformat()
         })
 
+@app.route('/api/llm/strategies')
+def get_llm_strategies():
+    """API endpoint for LLM strategies (compatibility)"""
+    try:
+        with open(STRATEGY_FILE, 'r') as f:
+            strategy = json.load(f)
+        return jsonify([strategy])  # Return as array for compatibility
+    except:
+        return jsonify([])  # Return empty array if no strategy
+
 @app.route('/summary')
 def get_summary():
     """Get trading summary"""

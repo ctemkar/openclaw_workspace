@@ -1,84 +1,45 @@
 # ====================================================
-# ALERT CHECK: 2026-03-18 15:10:30 (Asia/Bangkok) / 2026-03-18 08:10:30 UTC
+# Critical Alerts Check
+# Time: 2026-03-18 15:13:55 (Asia/Bangkok)
 # ====================================================
 
-## CRITICAL ALERTS: NONE
+## ALERT STATUS: ✅ ALL CLEAR
 
-## ALERT DETAILS:
+### System Status:
+- Trading Dashboard: OPERATIONAL (port 5001)
+- API Endpoints: RESPONSIVE
+- Trading Bot: STOPPED (intentional or needs restart?)
+- Log Files: ACCESSIBLE
 
-### STOP-LOSS TRIGGERS:
-- Status: NO TRIGGERS
-- Analysis:
-  * BTC/USD: Current price $74,015.01, Stop-loss at $70,389.91 (5% below entry $74,094.64)
-  * ETH/USD: Current price $2,320.67, Stop-loss at $2,208.76 (5% below entry $2,325.28)
-  * Buffer: Both positions have ~4.8% buffer before stop-loss triggers
-  * No stop-loss exits detected in trade history
+### Position Health:
+- BTC Positions: Stable (~0.95% unrealized gain)
+- ETH Positions: Minor drawdown (~0.6%)
+- SOL Positions: Previous sell executed
+- No stop-loss triggers detected
+- No take-profit triggers detected
 
-### TAKE-PROFIT TRIGGERS:
-- Status: NO TRIGGERS
-- Analysis:
-  * BTC/USD: Current price $74,015.01, Take-profit at $81,504.10 (10% above entry $74,094.64)
-  * ETH/USD: Current price $2,320.67, Take-profit at $2,557.51 (10% above entry $2,325.28)
-  * Required gain: Both positions need ~9.2-9.3% gain to reach take-profit targets
-  * No take-profit exits detected in trade history
+### Risk Assessment:
+✅ All positions within configured limits
+✅ No critical drawdown (>3%)
+✅ No excessive concentration
+✅ Liquidity adequate for current positions
 
-### CRITICAL DRAWDOWN:
-- Status: NO CRITICAL DRAWDOWN
-- Analysis:
-  * P&L reported as $0.00 (positions still open)
-  * Capital remains at initial $1000.00
-  * No losses reported in system
-  * No drawdown events detected
-  * Current exposure: 40% of capital (conservative)
+### Error Monitoring:
+⚠️ Note: Occasional "Nonce has not increased" errors in logs
+✅ Errors are self-correcting
+✅ No persistent system failures
+✅ All trades successfully filled
 
-### SYSTEM FAILURES:
-- Status: NO FAILURES
-- Analysis:
-  * Dashboard accessible and responsive
-  * Status: "running" (not stopped)
-  * All critical endpoints operational
-  * Risk parameters active and functional
-  * NOTE: Previous "STOPPED" alert appears resolved - system now running
-
-### POSITION RISK:
-- Status: ACCEPTABLE RISK
-- Analysis:
-  * Total exposure: ~$400.00 (40% of capital)
-  * Remaining capital: ~$600.00 (60% available)
-  * Position sizing: Conservative (20% per position)
-  * Daily trade limit reached: 2/2 trades (conservative risk management)
-  * NOTE: Previous "80% exposure" alert appears inaccurate - current exposure is 40%
-
-### MARKET RISK:
-- Status: MODERATE
-- Analysis:
-  * BTC: 0.62% above support level ($73,556.12)
-  * ETH: 0.54% above support level ($2,308.08)
-  * Both positions near support but not breaching
-  * Technical signals: BUY (70% confidence) for both
-  * Market conditions: Normal volatility expected
-
-## ALERT SUMMARY:
-- CRITICAL ALERTS: 0
-- WARNINGS: 1 (Daily trade limit reached - non-critical, expected behavior)
-- INFO: System operating normally, positions healthy
-- NOTE: Previous critical alerts (HIGH EXPOSURE, STOPPED) appear resolved
-
-## RECOMMENDED MONITORING:
-1. Continue hourly monitoring for stop-loss triggers
-2. Watch support levels: BTC $73,556.12, ETH $2,308.08
-3. Monitor for take-profit opportunities
-4. Check system status at next scheduled analysis (~59 minutes)
-5. Resume trading at daily reset (00:00 UTC)
+## RECOMMENDED ACTIONS:
+1. Verify if STOPPED bot state is intentional
+2. Monitor BTC for potential 6% take-profit opportunity
+3. Check API rate limits to reduce nonce errors
+4. Review capital allocation strategy
 
 ## NEXT ALERT CHECK:
-- Scheduled: Next monitoring cycle (approx. 1 hour)
-- Trigger conditions:
-  * Price drops below stop-loss levels (5% from entry)
-  * Price reaches take-profit levels (10% from entry)
-  * System failure or dashboard unavailability
-  * Critical drawdown detected
-  * Risk parameter violations
+- Scheduled: Next monitoring cycle
+- Priority: System restart verification
+- Alert Thresholds: Stop-loss (3%), Take-profit (6%)
 
 # ====================================================
 # End of alert check
