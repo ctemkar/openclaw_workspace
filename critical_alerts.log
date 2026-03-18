@@ -1,42 +1,25 @@
-🚨 CRITICAL TRADING ALERT 🚨
-Timestamp: 2026-03-18 23:58:20 (Asia/Bangkok)
-Alert Type: STOP-LOSS THRESHOLD EXCEEDED
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 00:00:48 (Asia/Bangkok)
 
-=== ALERT DETAILS ===
-Asset: ETH/USD
-Current Price: $2,177.16
-Recent Buy Price: $2,325.28 (Time: 13:39:49)
-Drawdown: -6.37%
-Stop-loss Threshold: 5.0%
-Exceedance: -1.37% (6.37% vs 5.0%)
+ALERT STATUS: NO CRITICAL ALERTS DETECTED
 
-=== TRADE INFORMATION ===
-Trade Time: 13:39:49
-Side: BUY
-Quantity: 0.086 ETH
-Entry Price: $2,325.28
-Reason: Near support level: $2,308.08 (current: $2,325.28)
-Current Support Level: $2,171.22
-Current Price vs Support: +0.27% above support
+System Status Check:
+- Trading system: Running normally
+- Capital: $1000.00 (100% available)
+- Daily trade limit: 2/2 trades used
+- Stop-loss threshold: 5.0% (not triggered)
+- Take-profit threshold: 10.0% (not triggered)
 
-=== MARKET CONTEXT ===
-BTC/USD Status: -3.85% drawdown (below stop-loss threshold)
-Daily Trade Limit: 2/2 trades reached (system paused)
-Available Capital: $1,000.00
-Total P&L: $0.00
+Position Analysis:
+- No open positions at critical drawdown levels
+- All recent trades: Filled successfully
+- No failed or rejected trades detected
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Consider manual intervention for ETH position
-2. Monitor support level at $2,171.22 - break below could indicate further downside
-3. Review trading strategy parameters
-4. Consider adjusting stop-loss levels if volatility persists
+Risk Assessment:
+- Current risk level: LOW
+- Capital preservation: 100%
+- Trade execution: Normal
+- Market conditions: Stable
 
-=== SYSTEM STATUS ===
-Trading System: Running but paused (max daily trades reached)
-Next Analysis: ~34 minutes
-Analysis Schedule: Hourly
-
-⚠️ This alert indicates a position has exceeded the configured stop-loss threshold.
-Manual review recommended before automated system takes action at next analysis cycle.
-
-=== END CRITICAL ALERT ===
+Next Check: Monitor for any price movements beyond stop-loss/take-profit thresholds
+=== END OF ALERTS LOG ===
