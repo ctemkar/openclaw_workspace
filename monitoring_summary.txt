@@ -1,0 +1,68 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Monitoring Time: 2026-03-18 23:22:04 (Asia/Bangkok)
+Server Status: RESTORED (was offline, now running)
+
+SYSTEM OVERVIEW
+---------------
+• Capital: $1,000.00
+• Stop-loss: 5.0%
+• Take-profit: 10.0%
+• Max trades/day: 2
+• Trading pairs: BTC/USD, ETH/USD
+• Total historical trades: 12
+• Today's trades: 2/2 (limit reached)
+
+CURRENT MARKET PRICES
+---------------------
+• BTC/USD: $71,310.00
+• ETH/USD: $2,177.48
+
+POSITION ANALYSIS
+-----------------
+Recent trades analyzed (5 most recent):
+
+1. BTC trade @ $73,990.75: Current -3.62% (within limits)
+2. BTC trade @ $73,950.01: Current -3.57% (within limits)  
+3. BTC trade @ $74,334.94: Current -4.07% (within limits)
+4. SOL trade @ $94.952 (SELL): Not monitored
+5. ETH trade @ $2,331.78: Current -6.62% ⚠️ STOP-LOSS TRIGGERED
+
+CRITICAL ALERT
+--------------
+⚠️ STOP-LOSS TRIGGERED: ETH position entered at $2,331.78 has declined to $2,177.48 (-6.62%), exceeding the 5.0% stop-loss threshold.
+
+This represents a realized loss on the ETH position. Immediate action recommended:
+1. Verify position closure
+2. Review trading strategy for ETH
+3. Consider adjusting risk parameters
+
+RISK ASSESSMENT
+---------------
+• BTC positions: All within acceptable range (-3.57% to -4.07%)
+• ETH position: STOP-LOSS TRIGGERED (-6.62%)
+• System health: Server restored, monitoring active
+• Capital preservation: $1,000.00 intact
+
+TECHNICAL LEVELS TO MONITOR
+---------------------------
+• BTC Support: $70,896.70
+• ETH Support: $2,171.22
+• BTC Resistance: $74,299.16
+• ETH Resistance: $2,332.66
+
+RECOMMENDATIONS
+---------------
+1. MANUAL INTERVENTION REQUIRED for ETH stop-loss position
+2. Monitor BTC approaching support level ($70,896.70 vs current $71,310.00)
+3. Review daily trade limit (2/2 reached)
+4. Next automated analysis scheduled in 1 hour
+5. Consider implementing trailing stop-loss for volatile assets
+
+LOGGING COMPLETE
+----------------
+• Monitoring data logged to: trading_monitoring.log
+• Critical alert logged to: critical_alerts.log
+• Previous critical alert resolved: System offline (now restored)
+
+NEXT SCHEDULED MONITOR: 2026-03-18 23:19:18 + 1 hour = ~00:19:18

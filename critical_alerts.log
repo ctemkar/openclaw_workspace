@@ -1,99 +1,42 @@
-🚨🚨🚨 CRITICAL TRADING ALERT 🚨🚨🚨
-Timestamp: 2026-03-18 22:55:16 (Asia/Bangkok)
+🚨 CRITICAL TRADING ALERT 🚨
+Timestamp: 2026-03-18 23:58:20 (Asia/Bangkok)
+Alert Type: STOP-LOSS THRESHOLD EXCEEDED
 
-=== EMERGENCY: STOP-LOSS TRIGGERED ===
+=== ALERT DETAILS ===
+Asset: ETH/USD
+Current Price: $2,177.16
+Recent Buy Price: $2,325.28 (Time: 13:39:49)
+Drawdown: -6.37%
+Stop-loss Threshold: 5.0%
+Exceedance: -1.37% (6.37% vs 5.0%)
 
-🛑 ETH/USD POSITION HAS HIT STOP-LOSS LEVEL 🛑
+=== TRADE INFORMATION ===
+Trade Time: 13:39:49
+Side: BUY
+Quantity: 0.086 ETH
+Entry Price: $2,325.28
+Reason: Near support level: $2,308.08 (current: $2,325.28)
+Current Support Level: $2,171.22
+Current Price vs Support: +0.27% above support
 
-Position Details:
-- Symbol: ETH/USD
-- Entry Price: $2,325.28 (13:39:49)
-- Current Price: $2,182.66
-- Position Size: 0.086 ETH
-- Current Loss: -$12.27 (-6.13%)
-- Stop-loss Setting: 5.0% ($2,209.02)
-- STATUS: STOP-LOSS TRIGGERED (-6.13% < -5.0%)
+=== MARKET CONTEXT ===
+BTC/USD Status: -3.85% drawdown (below stop-loss threshold)
+Daily Trade Limit: 2/2 trades reached (system paused)
+Available Capital: $1,000.00
+Total P&L: $0.00
 
-=== SECONDARY ALERT: BTC POSITION AT RISK ===
-
-⚠️ BTC/USD POSITION APPROACHING STOP-LOSS ⚠️
-- Symbol: BTC/USD
-- Entry Price: $74,094.64 (13:39:48)
-- Current Price: $71,275.39
-- Position Size: 0.002699 BTC
-- Current Loss: -$7.61 (-3.80%)
-- Stop-loss Setting: 5.0% ($70,389.91)
-- Distance to Stop-loss: 1.26% (needs -$885.48 drop)
-- STATUS: HIGH RISK
-
-=== MARKET CONDITIONS ===
-
-Significant Market Downturn Detected:
-- BTC/USD: $71,275.39 (DOWN 3.88% from previous $74,154.09)
-- ETH/USD: $2,182.66 (DOWN 6.37% from previous $2,331.12)
-- Both assets experiencing heavy selling pressure
-- ETH trading BELOW critical support level ($2,188.80)
-- BTC trading just ABOVE critical support level ($71,161.67)
-
-=== PORTFOLIO IMPACT ===
-
-Total Capital: $1,000.00
-Current Exposure: $399.96
-Estimated Portfolio Value: $980.13
-Total Loss: -$19.87 (-4.97% on exposure, -1.99% on total capital)
-
-Breakdown:
-1. ETH/USD: -$12.27 (-6.13%)
-2. BTC/USD: -$7.61 (-3.80%)
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Consider manual intervention for ETH position
+2. Monitor support level at $2,171.22 - break below could indicate further downside
+3. Review trading strategy parameters
+4. Consider adjusting stop-loss levels if volatility persists
 
 === SYSTEM STATUS ===
+Trading System: Running but paused (max daily trades reached)
+Next Analysis: ~34 minutes
+Analysis Schedule: Hourly
 
-✅ Trading Server: RUNNING (port 5001 active)
-✅ Dashboard: OPERATIONAL
-✅ Market Data: AVAILABLE
-⚠️ Daily Trade Limit: 2/2 REACHED (no new trades possible)
-⚠️ Strategy File: NOT FOUND (using default parameters)
+⚠️ This alert indicates a position has exceeded the configured stop-loss threshold.
+Manual review recommended before automated system takes action at next analysis cycle.
 
-Last Analysis: 2026-03-18T22:31:27 (24 minutes ago)
-Next Analysis: Hourly (23:31)
-
-=== URGENT ACTION REQUIRED ===
-
-🚨 IMMEDIATE STEPS:
-1. CHECK if stop-loss orders are being executed automatically
-2. MANUALLY CLOSE ETH position if system not auto-closing
-3. MONITOR BTC position closely (approaching stop-loss)
-4. REVIEW market conditions for continued downturn
-5. CONSIDER reducing position sizes if volatility persists
-
-🔄 System Limitations:
-- Daily trade limit reached (2/2) - cannot open new positions
-- No strategy file found - using default 5% stop-loss
-- Next analysis not until 23:31 - manual monitoring required
-
-=== RISK ASSESSMENT ===
-
-🛑 CRITICAL RISK: ETH position below stop-loss
-⚠️ HIGH RISK: BTC position approaching stop-loss
-⚠️ HIGH RISK: Market in significant downturn
-⚠️ MEDIUM RISK: Daily trade limit prevents new positions
-✅ LOW RISK: System operational
-
-=== NEXT STEPS ===
-
-1. IMMEDIATE: Verify ETH position closure
-2. CONTINUOUS: Monitor BTC position for stop-loss trigger
-3. REVIEW: Market conditions and trading strategy
-4. ADJUST: Consider tighter stop-losses if volatility continues
-5. SCHEDULE: More frequent monitoring during market stress
-
-=== MONITORING SCHEDULE ===
-
-Next Automated Check: 2026-03-18 23:55:16 (1 hour)
-⚠️ RECOMMENDED: Increase monitoring frequency to every 15 minutes
-
-=== ALERT PRIORITY: CRITICAL ===
-
-This alert requires immediate attention. The ETH position has exceeded its stop-loss threshold and manual intervention may be required.
-
-=== END OF CRITICAL ALERT ===
+=== END CRITICAL ALERT ===
