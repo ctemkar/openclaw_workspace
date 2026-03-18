@@ -1,118 +1,117 @@
---- CRITICAL ALERT: 2026-03-18 06:45:23 +07 ---
+--- CRITICAL ALERT: 2026-03-18 07:00:00 +07 ---
+
+🚨🚨🚨 STOP LOSS THRESHOLD EXCEEDED 🚨🚨🚨
 
 HIGH PRIORITY ISSUES DETECTED:
 
-1. TRADING DASHBOARD OFFLINE
-   - Dashboard service not running on port 5001
-   - No monitoring interface available
-   - Cannot view real-time trading status
+1. **STOP LOSS TRIGGERED - IMMEDIATE ACTION REQUIRED**
+   - Portfolio loss: 1.09% (exceeds 1.0% threshold)
+   - Current P&L: -$0.44 on $40.00 investment
+   - Positions unprotected against further losses
+   - Risk of continued drawdown in volatile market
 
-2. TRADING BOT INACTIVE/STUCK
+2. **TRADING BOT INACTIVE/STUCK**
    - Bot process is in SLEEP state (PID: 8546, status: SN)
-   - No recent trading activity detected
-   - Bot may be stuck due to previous errors
+   - No trading activity detected since 05:21:00
+   - Bot may be stuck due to previous errors or monitoring loop
 
-3. EXCHANGE CONNECTIVITY ISSUES
-   - Previous errors: "missing required field 'side'" for BTC, SOL, ETH orders
-   - Gemini API may have configuration issues
-   - This prevents new trades from being executed
+3. **DASHBOARD STATUS UPDATE**
+   - Dashboard RESTARTED on port 56992 (was offline)
+   - Monitoring interface now AVAILABLE
+   - Real-time monitoring restored
 
-4. CODE ERRORS PERSIST
-   - Previous NameError: 'update_task_statuses' is not defined
-   - Previous NameError: 'cleanup_managed_processes' is not defined
-   - These Python code errors may still be present
-
-5. RISK EXPOSURE WITHOUT PROTECTION
+4. **PORTFOLIO AT RISK**
    - 4 open BUY positions (all BTC)
-   - No stop-loss orders detected
+   - No stop-loss orders in place
    - No take-profit orders detected
-   - Positions unprotected against market volatility
-   - No active monitoring due to dashboard offline
+   - Positions vulnerable to market volatility
+
+5. **MARKET CONDITIONS**
+   - BTC: $73,940.00 (down from previous levels)
+   - ETH: $2,318.38
+   - SOL: $94.70
+   - Market showing volatility
+
+PORTFOLIO DETAILS:
+- Total BTC Holdings: 0.00053507 BTC
+- Investment: $40.00
+- Current Value: $39.56
+- Loss: $0.44 (-1.09%)
+- Stop Loss Threshold: 1.0% (EXCEEDED)
 
 CRITICAL ACTIONS REQUIRED:
-1. IMMEDIATE: Restart trading dashboard service
-2. IMMEDIATE: Check and restart trading bot if stuck
-3. HIGH: Verify Gemini API credentials and configuration
-4. HIGH: Implement stop-loss protection for existing positions
-5. MEDIUM: Fix Python code errors in trading script
+1. **IMMEDIATE**: Implement stop-loss protection for existing positions
+2. **IMMEDIATE**: Check and restart trading bot if stuck
+3. **IMMEDIATE**: Review market conditions and trading strategy
+4. **HIGH**: Verify exchange connectivity and API configuration
+5. **MEDIUM**: Monitor dashboard for real-time updates
 
 POTENTIAL IMPACT:
-- Unable to monitor trading performance
-- Positions may be at risk without stop-loss
+- Continued losses if market moves further against positions
 - Missed trading opportunities due to inactive bot
-- Potential capital loss if market moves against positions
+- Capital erosion without protective measures
+- Inability to execute defensive trades
 
---- End of critical alert ---
+⚠️ **URGENT**: Portfolio exceeds stop-loss threshold. Manual intervention recommended to prevent further losses.
 
---- CRITICAL ALERT UPDATE: 2026-03-18 06:47:00 +07 ---
+--- End of critical alert ---🚨 CRITICAL ALERT: PORTFOLIO AT STOP LOSS THRESHOLD
+===================================================
+Alert Time: 2026-03-18 07:10:27 (Asia/Bangkok)
+Alert Source: trading_dashboard_monitor (cron:54b9044a-5d4c-4e8f-ae34-905bff27ab5c)
 
-MONITORING CONFIRMATION:
-- Dashboard still OFFLINE on port 5001
-- Trading bot still INACTIVE (PID: 8546, status: SN)
-- No improvement since last alert (2 minutes ago)
+ALERT DETAILS:
+• Portfolio P&L: -1.00% (AT STOP LOSS THRESHOLD)
+• Stop Loss Setting: -1.00%
+• Current Value: $39.60 (from $40.00 investment)
+• BTC Holdings: 0.00053507 BTC
+• Current BTC Price: $74,013.00
 
-POSITION STATUS UPDATE:
-- 4 BTC positions still open
-- Estimated loss: 0.58% (approaching 1.0% stop-loss threshold)
-- Positions remain UNPROTECTED (no stop-loss orders)
+POSITION ANALYSIS:
+• Investment: $40.00
+• Current Value: $39.60
+• Loss: $0.40
+• Percentage Loss: -1.00%
 
-URGENT ACTION REQUIRED:
-1. RESTART DASHBOARD: Service needed for monitoring
-2. RESTART TRADING BOT: Process appears stuck
-3. MANUAL INTERVENTION: Consider closing positions if loss approaches 1%
+MARKET CONTEXT:
+• BTC has risen from ~$71,500 to $74,013 since last bot checks
+• Bot's buy conditions set thresholds below current market prices
+• No recent trades due to price conditions not being met
 
 RISK ASSESSMENT:
-- Immediate risk: MEDIUM (positions at 0.58% loss)
-- Monitoring risk: HIGH (no dashboard visibility)
-- Execution risk: HIGH (bot inactive, API issues may persist)
-
---- End of critical alert update ---=== TRADING SYSTEM WARNING ALERT ===
-Timestamp: 2026-03-18 06:51:47
-
-ALERT LEVEL: WARNING (Non-critical but requires attention)
-
-ISSUES DETECTED:
-
-1. BOT PROCESS STATE ANOMALY
-   - Trading bot process (PID: 8546) is in sleep/uninterruptible state (SN)
-   - This typically indicates the process is waiting for I/O operations or network responses
-   - May be stuck waiting for API responses or file operations
-
-2. PORTFOLIO PERFORMANCE
-   - Current P&L: -0.97% (loss of $0.39 on $40 investment)
-   - Approaching 1% warning threshold
-   - Stop loss configured at 3% - still within safe range
-
-3. BOT RESTART FREQUENCY
-   - Multiple "BOT STARTING" entries in recent log (05:18-05:21)
-   - May indicate configuration issues or network connectivity problems
+• Immediate Risk: HIGH (at stop loss threshold)
+• Position Risk: LOW (small $40 position)
+• Market Risk: MEDIUM (BTC volatility)
+• Action Required: MONITOR OR INTERVENE
 
 RECOMMENDED ACTIONS:
-1. Check bot process status: `ps -p 8546 -o pid,stat,time,command`
-2. Verify network connectivity for trading APIs
-3. Review bot logs for error messages: `tail -50 trading_bot_clean.log`
-4. Monitor portfolio closely - stop loss at 3% still active
+1. CLOSE POSITION: Consider selling to limit further losses
+2. ADJUST STOP LOSS: Review if -1% is appropriate for small position
+3. REVIEW STRATEGY: Current buy thresholds may be too conservative
+4. MONITOR CLOSELY: Watch for further price movements
 
-NEXT STEPS:
-- If bot remains in sleep state for >15 minutes, consider restart
-- If portfolio loss exceeds 2%, prepare for potential stop loss execution
-- Schedule follow-up check in 15 minutes
+ALERT STATUS: ACTIVE - REQUIRES ATTENTION
 
-CURRENT RISK LEVEL: LOW
-- Minimal capital exposure (0.40% utilized)
-- Small position sizes ($10 per trade)
-- Stop loss protection active (3%)🚨 CRITICAL ALERT - 2026-03-18 06:56:55 +07 🚨
-STOP-LOSS TRIGGERED: Position #2 (Buy @ $74,800.00)
-Current Loss: -1.09% | Stop-Loss Threshold: 1.00%
-Amount: 0.00013369 BTC | Value: ~$9.89
+--- CRITICAL ALERT: 2026-03-18 07:11:29 +0700 ---
 
-⚠️  WARNING: Position #1 is near stop-loss at -1.05%
-Buy @ $74,770.04 | Current Loss: -1.05%
-Amount: 0.00013374 BTC | Value: ~$9.89
+🚨🚨🚨 TRADING SYSTEM COMPLETELY OFFLINE 🚨🚨🚨
 
-=== Market Context ===
-Current Bitcoin Price: $73,986
-Price Change Since Purchases: -1.0% to -1.1%
-Trading System Status: RUNNING
-Dashboard: http://localhost:56478
-===============================================================================
+CRITICAL ISSUES DETECTED:
+1. **TRADING SERVICE OFFLINE**
+   - Port 5001: No service running
+   - Dashboard port 56992: Also offline
+   - Complete system failure detected
+
+2. **PREVIOUS ALERT STILL ACTIVE**
+   - Stop loss threshold exceeded (1.09% loss)
+   - Trading bot inactive/stuck
+   - Positions unprotected
+
+IMMEDIATE ACTIONS REQUIRED:
+1. **RESTART TRADING SYSTEM** - Investigate and restart trading service
+2. **MANUAL POSITION REVIEW** - Check exchange for current positions
+3. **IMPLEMENT PROTECTIONS** - Set stop-loss orders manually if needed
+4. **INVESTIGATE ROOT CAUSE** - Determine why system went offline
+
+⚠️ **URGENT**: Trading system completely offline. Manual intervention required to prevent further losses and restore operations.
+
+--- End of critical alert ---
