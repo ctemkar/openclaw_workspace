@@ -1,0 +1,34 @@
+Error fetching trading progress: HTTPConnectionPool(host='localhost', port=59745): Max retries exceeded with url: /api/trading/progress (Caused by NewConnectionError("HTTPConnection(host='localhost', port=59745): Failed to establish a new connection: [Errno 61] Connection refused"))
+Error fetching configuration: HTTPConnectionPool(host='localhost', port=59745): Max retries exceeded with url: /api/trading/configure (Caused by NewConnectionError("HTTPConnection(host='localhost', port=59745): Failed to establish a new connection: [Errno 61] Connection refused"))
+=== TRADING MONITORING CHECK: 2026-03-18 16:46:48 (Asia/Bangkok) ===
+Dashboard Gateway: http://localhost:5001/ (redirects to http://localhost:59745/)
+Active Port: 59745 (via gateway on 5001)
+
+--- TRADING STATUS ---
+{
+  "status": "ERROR",
+  "trades": []
+}
+
+--- MARKET PRICES ---
+{
+  "BTC": 74344.98,
+  "ETH": 2331.69,
+  "SOL": 95.268,
+  "timestamp": "2026-03-18 16:46:48 (Asia/Bangkok)"
+}
+
+--- POSITION ANALYSIS ---
+Total BTC: 0.00000000
+Total USD Invested: $0.00
+Average Buy Price: N/A
+Current BTC Price: $74344.98
+Current Position Value: $0.00
+P&L: $+0.00
+P&L %: 0.00%
+Stop loss triggered: False (Loss is 0.00%, threshold is 3.00%)
+
+--- CRITICAL ALERTS CHECK ---
+[CURRENT_TIME] STATUS - Current loss: 0.00%, below 3.00% stop loss threshold
+
+=== END OF MONITORING CHECK ===

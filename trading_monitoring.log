@@ -1,69 +1,10 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-18 15:54:00 (Asia/Bangkok)
-Dashboard Status: RUNNING (http://localhost:5001/)
+=== TRADING MONITORING REPORT ===
+Timestamp: Wed Mar 18 16:59:14 +07 2026
+Dashboard Status: Running
+Last Analysis: 2026-03-18T16:28:15.662948
 
-=== SYSTEM STATUS ===
-- Capital: $1,000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
-- Trading pairs: BTC/USD, ETH/USD
-- Last analysis: 2026-03-18T15:52:23.161039
-- Analysis scheduled: hourly
-
-=== CURRENT MARKET PRICES ===
-- BTC/USD: $74,120.00 (from CoinGecko)
-- ETH/USD: $2,324.74 (from CoinGecko)
-
-=== RECENT TRADES ANALYSIS ===
-Total trades executed: 12
-Today's trades: 2/2 (limit reached)
-
-Recent trades:
-1. BTC/USD BUY at $74,094.64 (quantity: 0.002699 BTC) - 13:39:48
-2. ETH/USD BUY at $2,325.28 (quantity: 0.086 ETH) - 13:39:49
-
-=== POSITION ANALYSIS ===
-
-BTC Position:
-- Entry price: $74,094.64
-- Quantity: 0.002699 BTC
-- Current value: 0.002699 * $74,120.00 = $200.05
-- Entry value: 0.002699 * $74,094.64 = $199.99
-- Unrealized P&L: +$0.06 (+0.03%)
-- Stop-loss level: $74,094.64 * 0.95 = $70,389.91
-- Take-profit level: $74,094.64 * 1.10 = $81,504.10
-- Distance to stop-loss: Current $74,120.00 vs $70,389.91 = +5.0%
-- Distance to take-profit: Current $74,120.00 vs $81,504.10 = -10.0%
-
-ETH Position:
-- Entry price: $2,325.28
-- Quantity: 0.086 ETH
-- Current value: 0.086 * $2,324.74 = $199.93
-- Entry value: 0.086 * $2,325.28 = $199.97
-- Unrealized P&L: -$0.04 (-0.02%)
-- Stop-loss level: $2,325.28 * 0.95 = $2,209.02
-- Take-profit level: $2,325.28 * 1.10 = $2,557.81
-- Distance to stop-loss: Current $2,324.74 vs $2,209.02 = +4.9%
-- Distance to take-profit: Current $2,324.74 vs $2,557.81 = -10.1%
-
-=== RISK ASSESSMENT ===
-1. POSITION SIZING: Both positions are approximately $200 each (20% of capital each)
-2. DRAWDOWN RISK: Minimal - positions are near entry prices
-3. STOP-LOSS TRIGGER RISK: LOW - Both positions are ~5% above stop-loss levels
-4. TAKE-PROFIT TRIGGER RISK: LOW - Both positions are ~10% below take-profit levels
-5. DAILY LIMIT: REACHED - 2/2 trades executed today
-
-=== ALERT STATUS ===
-- NO STOP-LOSS TRIGGERS DETECTED
-- NO TAKE-PROFIT TRIGGERS DETECTED  
-- NO CRITICAL DRAWDOWN INDICATORS
-- DAILY TRADING LIMIT REACHED (normal operation)
-
-=== RECOMMENDATIONS ===
-1. Monitor positions for any significant price movements
-2. Next analysis scheduled in ~1 hour
-3. System operating within normal parameters
-
-=== NEXT CHECK ===
-Scheduled for: 2026-03-18 16:52:23 (1 hour from last analysis)
+=== RISK PARAMETERS ===
+Capital: .00
+Stop-loss: 5%
+Take-profit: 10%
+Max trades/day: 2
