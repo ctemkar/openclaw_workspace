@@ -1,49 +1,46 @@
-[2026-03-18 09:56:00] TRADING DASHBOARD MONITORING REPORT
-======================================================
+=== Trading Dashboard Monitor Report ===
+Timestamp: 2026-03-18 10:08:00 (Asia/Bangkok)
+Dashboard Status: ACTIVE (Port 59745)
+Trading Bot Status: RUNNING (Multiple instances detected)
 
-SYSTEM STATUS:
-- Trading Dashboard: Running on port 59745 (redirected from 5001)
-- Trading Script: Running (PID: 72293, 67305)
-- Dashboard Accessible: Yes
+=== MARKET DATA ===
+Current BTC Price: $74,300.00
+Current ETH Price: $2,330.64
+Current SOL Price: $94.98
 
-PORTFOLIO ANALYSIS:
-- BTC Holdings: 0.00053507 BTC
-- Current BTC Price: $74,383.00
-- Current Portfolio Value: $39.80
-- Investment: $40.00
-- Current P&L: -$0.20 (-0.50%)
-- Average Entry Price: $74,756.91
-- Current BTC Price vs Entry: -0.50% (below entry)
+=== TRADING ACTIVITY ===
+Total Trades Executed: 4
+All trades are BUY orders for BTC/USD:
+1. 04:45:54 - Gemini-Pro - BUY @ $74,770.04 (0.00013374 BTC)
+2. 04:43:01 - Gemini-Pro - BUY @ $74,800.00 (0.00013369 BTC)
+3. 02:25:17 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
+4. 02:24:56 - gemini-pro - BUY @ $74,728.83 (0.00013382 BTC)
 
-RISK PARAMETERS:
-- Stop Loss: -3.00% (currently at -0.50%, distance: 2.50%)
-- Take Profit: +2.00% (currently at -0.50%, distance: 2.50%)
-- Critical Drawdown: -5.00% (distance: 4.50%)
+=== PERFORMANCE ANALYSIS ===
+Current BTC Price: $74,300.00
+Average Buy Price: ~$74,756.93
+Current Position: All positions are underwater (buy prices > current price)
+Average Loss per Trade: ~$456.93 (0.61% loss)
+Total Position Size: ~0.00053507 BTC (~$39.75 at current price)
+Total Investment: ~$40.00 (4 trades × $10 each)
 
-TRADING ACTIVITY:
-- Total Trades Today: 4 BUY orders
-- Last Trade: 04:45 AM (Asia/Bangkok)
-- Trade Size: $10.00 per trade
-- Recent Trade Cycles: Completed at 09:09, 09:04, 09:00 AM (no buys)
-- Current Market Sentiment: NEUTRAL (confidence: 50.0%)
-- Recommendation: HOLD
+=== RISK ASSESSMENT ===
+No stop-loss orders detected in logs
+No take-profit orders detected in logs
+Maximum Drawdown: ~0.61% (within normal range)
+No critical alerts triggered
 
-MARKET DATA:
-- BTC/USD: $74,383.00
-- ETH/USD: $2,333.73
-- SOL/USD: $95.02
+=== SYSTEM STATUS ===
+Dashboard Server: Running on port 59745
+Trading Bot: Multiple instances detected (processes 72293, 67305)
+Log Files: All log files accessible and being written to
+API Endpoints: All endpoints responding normally
 
-ALERT STATUS:
-✅ No stop-loss orders triggered
-✅ No take-profit orders triggered
-✅ No critical drawdown indicators
-⚠️ Portfolio is slightly underwater (-0.50%)
-⚠️ BTC price below average entry price
+=== RECOMMENDATIONS ===
+1. Consider implementing stop-loss orders to limit downside risk
+2. Current positions are slightly underwater but within normal market fluctuations
+3. Monitor for any additional buy signals that could average down positions
+4. Check for any stuck orders or failed trades in the bot logs
 
-RECOMMENDATIONS:
-1. Monitor BTC price movement - currently below entry
-2. Watch for potential stop-loss trigger if BTC drops to $72,512
-3. Watch for take-profit trigger if BTC rises to $76,252
-4. Continue HOLD strategy per current market sentiment
-
-NEXT CHECK: 10:00 AM
+=== NEXT CHECK ===
+Scheduled for next cron execution

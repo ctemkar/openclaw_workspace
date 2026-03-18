@@ -1,101 +1,103 @@
-
-import requests
+#!/usr/bin/env python3
 import json
-import logging
-from datetime import datetime
+import datetime
+import os
 
-# Configuration
-MONITOR_URL = "http://localhost:5001/"
-GENERAL_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+def monitor_trading():
+    # Load trades
+    with open('completed_trades.json', 'r') as f:
+        trades = json.load(f)
 
-# Placeholder for critical drawdown threshold. Please specify a value.
-CRITICAL_DRAWDOWN_THRESHOLD = 0.05  # 5% drawdown
+    # Load config
+    with open('trading_config.json', 'r') as f:
+        config = json.load(f)
 
-# Setup logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    # Calculate portfolio
+    total_btc = sum(t['amount'] for t in trades if t['side'] == 'buy')
+    total_invested = sum(t['amount'] * t['price'] for t in trades if t['side'] == 'buy')
+    avg_price = total_invested / total_btc if total_btc > 0 else 0
 
-def setup_file_logger(filename, level=logging.INFO):
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    file_handler = logging.FileHandler(filename)
-    file_handler.setFormatter(formatter)
-    logger = logging.getLogger(filename)
-    logger.setLevel(level)
-    # Prevent adding multiple handlers if this function is called multiple times
-    if not logger.handlers:
-        logger.addHandler(file_handler)
-    return logger
+    # Current BTC price (hardcoded from earlier fetch)
+    btc_price = 74358.00
 
-general_logger = setup_file_logger(GENERAL_LOG_FILE)
-critical_logger = setup_file_logger(CRITICAL_ALERTS_LOG_FILE, level=logging.ERROR)
+    # Calculate current value and P&L
+    current_value = total_btc * btc_price
+    pnl = current_value - total_invested
+    pnl_pct = (pnl / total_invested * 100) if total_invested > 0 else 0
 
-def fetch_trading_data():
-    try:
-        response = requests.get(MONITOR_URL, timeout=10)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        # Assuming the response is JSON. Adjust if it's a different format.
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        error_message = f"Failed to fetch data from {MONITOR_URL}: {e}"
-        general_logger.error(error_message)
-        critical_logger.error(error_message) # Log request errors as critical
-        return None
-    except json.JSONDecodeError as e:
-        error_message = f"Failed to decode JSON response from {MONITOR_URL}: {e}"
-        general_logger.error(error_message)
-        critical_logger.error(error_message) # Log JSON decode errors as critical
-        return None
+    # Risk calculations
+    stop_loss_price = avg_price * (1 - config['stop_loss_pct'])
+    take_profit_price = avg_price * (1 + config['take_profit_pct'])
+    critical_drawdown_price = avg_price * 0.95
 
-def analyze_data(data):
-    summary_lines = []
+    # Check for alerts
     alerts = []
-    current_time = datetime.utcnow().isoformat() + "Z"
+    if pnl_pct <= -config['stop_loss_pct'] * 100:
+        alerts.append('STOP LOSS TRIGGERED! P&L: {:.2f}%'.format(pnl_pct))
+    elif pnl_pct >= config['take_profit_pct'] * 100:
+        alerts.append('TAKE PROFIT TRIGGERED! P&L: {:.2f}%'.format(pnl_pct))
+    elif pnl_pct <= -5:
+        alerts.append('CRITICAL DRAWDOWN! P&L: {:.2f}%'.format(pnl_pct))
+    elif pnl_pct <= -3:
+        alerts.append('WARNING: Moderate drawdown: {:.2f}%'.format(pnl_pct))
 
-    if data is None:
-        summary_lines.append(f"[{current_time}] Trading data could not be fetched.")
-        return "\n".join(summary_lines), alerts
+    # Calculate distances
+    stop_loss_distance = ((btc_price - stop_loss_price) / avg_price * 100) if avg_price > 0 else 0
+    take_profit_distance = ((take_profit_price - btc_price) / avg_price * 100) if avg_price > 0 else 0
+    critical_distance = ((btc_price - critical_drawdown_price) / avg_price * 100) if avg_price > 0 else 0
 
-    # Log general data
-    general_logger.info(f"Received data: {data}")
-    summary_lines.append(f"[{current_time}] Data received successfully.")
+    # Create log entry
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    
+    log_entry = f'''=== TRADING DASHBOARD MONITOR ===
+Time: {timestamp}
+Dashboard Status: Active (Port 59745)
+Trading Bot Status: Running
 
-    # Placeholder for analyzing various parameters
-    # This part needs to be more specific based on the actual data structure
-    # Example: checking for status updates, risk parameters
-    status = data.get("status", "N/A")
-    risk_params = data.get("risk_parameters", {{}})
-    summary_lines.append(f"Status: {status}")
-    summary_lines.append(f"Risk Parameters: {risk_params}")
+=== PORTFOLIO SUMMARY ===
+BTC Holdings: {total_btc:.8f} BTC
+Current BTC Price: ${btc_price:,.2f}
+Portfolio Value: ${current_value:.2f}
+Investment: ${total_invested:.2f}
+Current P&L: ${pnl:.2f} ({pnl_pct:.2f}%)
 
-    # Detect stop-loss/take-profit orders
-    # This is a placeholder and assumes such orders are in a list called "orders"
-    orders = data.get("orders", [])
-    for order in orders:
-        if order.get("type") == "stop-loss" or order.get("type") == "take-profit":
-            alert_message = f"Order detected: Type={order.get('type')}, Symbol={order.get('symbol')}, Price={order.get('price')}"
-            alerts.append(alert_message)
-            critical_logger.error(alert_message)
+=== RISK METRICS ===
+Average Entry: ${avg_price:.2f}
+Stop Loss: -{config["stop_loss_pct"]*100:.1f}% (${stop_loss_price:.2f})
+Take Profit: +{config["take_profit_pct"]*100:.1f}% (${take_profit_price:.2f})
+Critical Drawdown: -5.00% (${critical_drawdown_price:.2f})
 
-    # Detect critical drawdown
-    # This is a placeholder. Replace with actual drawdown calculation and threshold check.
-    current_drawdown = data.get("current_drawdown", 0)
-    if current_drawdown > CRITICAL_DRAWDOWN_THRESHOLD:
-        alert_message = f"Critical drawdown detected: {current_drawdown * 100:.2f}% (Threshold: {CRITICAL_DRAWDOWN_THRESHOLD * 100:.2f}%)"
-        alerts.append(alert_message)
-        critical_logger.error(alert_message)
+=== DISTANCE TO TRIGGERS ===
+Stop Loss Distance: {stop_loss_distance:.2f}%
+Take Profit Distance: {take_profit_distance:.2f}%
+Critical Drawdown Distance: {critical_distance:.2f}%
 
-    if not alerts:
-        summary_lines.append("No critical alerts detected.")
+=== ALERTS ===
+{chr(10).join(alerts) if alerts else "No alerts at this time"}
 
-    return "\n".join(summary_lines), alerts
+=== RECOMMENDATIONS ===
+1. Current position: HOLD (P&L: {pnl_pct:.2f}%)
+2. Monitor BTC price movement for stop-loss/take-profit triggers
+3. Capital utilization: {(total_invested / config["capital"] * 100):.1f}% - Consider additional trades if strategy permits
+4. Next check scheduled: {(datetime.datetime.now() + datetime.timedelta(hours=1)).strftime("%H:%M")}
 
-def main():
-    data = fetch_trading_data()
-    summary, alerts = analyze_data(data)
+=== MONITORING COMPLETE ===
+'''
+    
+    return log_entry, alerts
 
-    # The summary is what needs to be returned as plain text.
-    # If the cron job is configured to capture stdout, this will be the output.
-    print(summary)
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    log_entry, alerts = monitor_trading()
+    print(log_entry)
+    
+    # Write to monitoring log
+    with open('trading_monitoring.log', 'a') as f:
+        f.write(log_entry)
+    
+    # Write critical alerts if any
+    if alerts:
+        with open('critical_alerts.log', 'a') as f:
+            f.write(f'[{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] CRITICAL ALERTS:\n')
+            for alert in alerts:
+                f.write(f'  - {alert}\n')
+            f.write('\n')

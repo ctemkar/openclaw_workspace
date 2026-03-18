@@ -4,3 +4,6 @@
 [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
 [2026-03-18 07:57:53] BOT STARTING: Monitoring for Model Strategies
 [2026-03-18 08:13:05] BOT STARTING: Monitoring for Model Strategies
+[2026-03-18 10:14:33] SUCCESS: Gemini buy filled at 74319.47
+[2026-03-18 10:14:37] SUCCESS: Gemini buy filled at 74332.65
+[2026-03-18 10:14:37] STRATEGY ERROR: [Errno 2] No such file or directory: '/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json'
