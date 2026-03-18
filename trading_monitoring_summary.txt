@@ -1,50 +1,64 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-19 02:00:00 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING - EXECUTIVE SUMMARY
+==================================================
+Timestamp: 2026-03-19 04:15:46 (Asia/Bangkok)
 
 SYSTEM STATUS:
-✅ Dashboard accessible at http://localhost:5001/
-✅ Server running normally
-✅ Last analysis: 2026-03-19T01:33:12.545570
-✅ Capital: $1,000.00 available
+✅ Dashboard: Online and accessible
+✅ Status Endpoint: Responding with current parameters
+✅ Trades Endpoint: Showing 10 active positions
+✅ Summary Endpoint: Showing trading paused (2/2 daily trades used)
+⚠️ Strategy Endpoint: Configuration missing (no strategy file)
+❌ Stop-loss Execution: Confirmed failing for 38+ minutes
 
-TRADING ACTIVITY:
-⚠️ Daily trade limit reached: 2/2 trades executed
-📊 Total trades in system: 4
-📈 Today's trades: 2/2 limit used
-
-MARKET ANALYSIS:
-BTC/USD: $71,832.76
-- Change from last trade: -3.37%
-- Status: Within range, approaching 5% stop-loss
-- Support: $70,896.70
-- Signal: BUY (70% confidence)
-
-ETH/USD: $2,202.81
-- Change from last trade: -5.53% ⚠️
-- Status: STOP-LOSS TRIGGERED (exceeds 5% threshold)
-- Support: $2,167.99
-- Signal: BUY (70% confidence)
-
-CRITICAL ALERTS:
-🚨 HIGH PRIORITY: ETH/USD stop-loss triggered at -5.53%
-🚨 HIGH PRIORITY: Daily trade limit reached (2/2)
-⚠️ MONITORING: BTC/USD approaching stop-loss at -3.37%
+PORTFOLIO PERFORMANCE:
+- Total Capital: $1,000.00
+- Total Investment: $860.04 (86.0% deployed)
+- Available Capital: $139.96 (14.0% remaining)
+- Current Portfolio Value: $836.45
+- Total P&L: -$23.58 (-2.7% on investment, -2.4% on capital)
+- Daily Trade Limit: 2/2 trades used (trading paused)
 
 RISK ASSESSMENT:
-1. ETH/USD position requires immediate attention
-2. BTC/USD position needs monitoring
-3. Trading system paused due to daily limit
-4. No take-profit triggers detected
+- Current Drawdown: 2.4% (within 5% limit)
+- Buffer to Maximum Drawdown: $26.42 (2.6% buffer)
+- Stop-loss Triggered Positions: 2 out of 10 (20%)
+- Take-profit Triggered Positions: 0 out of 10 (0%)
+- Risk Level: LOW (but with systemic issues)
 
-NEXT SCHEDULED ANALYSIS: ~02:33:12
+CRITICAL ISSUES:
+1. STOP-LOSS EXECUTION FAILURE: 2 ETH positions remain open despite being below stop-loss for 38+ minutes
+   - Position #1 (ETH): -6.2% loss, 1.3% below stop-loss
+   - Position #8 (ETH): -6.0% loss, 1.0% below stop-loss
+   - Total at risk: $12.57
 
-ACTION REQUIRED:
-1. Review ETH/USD position for potential exit
-2. Monitor BTC/USD for stop-loss breach
-3. Consider manual intervention as system is paused
-4. Review trading strategy parameters
+2. CONFIGURATION ISSUES:
+   - Strategy file missing (endpoint returns "No strategy file found")
+   - Dashboard P&L reporting discrepancy (shows $0.00 vs actual -$23.58)
 
-Logs updated:
-- trading_monitoring.log: Complete monitoring report
-- critical_alerts.log: Critical alerts with details
+3. SYSTEM INTEGRITY:
+   - No logs endpoint available
+   - Trading auto-paused due to daily limit
+   - No evidence of automatic stop-loss execution
+
+MARKET CONDITIONS:
+- BTC Price: $71,213.23 (recovering)
+- ETH Price: $2,186.36 (recovering)
+- Market Trend: Recovery from earlier lows
+- Technical Signals: BUY (but trading paused)
+
+RECOMMENDED ACTIONS (PRIORITIZED):
+1. URGENT: Manually close ETH positions #1 and #8
+2. URGENT: Investigate stop-loss execution mechanism
+3. IMPORTANT: Restore strategy configuration file
+4. IMPORTANT: Fix dashboard P&L reporting
+5. IMPORTANT: Review system logs for execution failures
+
+NEXT STEPS:
+- Immediate manual intervention required for positions at risk
+- System diagnostics to identify root cause of stop-loss failure
+- Configuration restoration and system audit
+- Consider implementing redundant stop-loss mechanisms
+
+ALERT STATUS: HIGH PRIORITY - Manual intervention required
+FINANCIAL IMPACT: Moderate ($12.57 at immediate risk)
+SYSTEMIC RISK: High (stop-loss mechanism confirmed failing)

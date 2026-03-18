@@ -1,47 +1,49 @@
-TRADING DASHBOARD MONITORING SUMMARY
-======================================
-Timestamp: 2026-03-19 03:04:21
+=== CRON JOB EXECUTION SUMMARY ===
+Job: trading_dashboard_monitor (ID: 660ba644-e82d-4388-87c5-d43c104f1c04)
+Execution Time: 2026-03-19 04:14:27 (Asia/Bangkok)
 
-SYSTEM STATUS:
-✅ Trading dashboard running on port 5001
-✅ Last analysis: 2026-03-19 03:00:58
-✅ Risk parameters: 5% stop-loss, 10% take-profit
-⚠️ Daily trade limit: 2/2 trades used (limit reached)
+EXECUTION STATUS: ✅ COMPLETED
+- Dashboard fetched successfully
+- All endpoints checked
+- Logs updated
+- Critical alerts generated
 
-POSITION ANALYSIS:
-1. BTC/USD Position:
-   - Size: 0.00563552 BTC ($400.23)
-   - P&L: -$9.77 (-2.38%)
-   - Distance to stop-loss: 2.7% buffer
-   - Risk Level: MEDIUM
+SYSTEM STATUS OVERVIEW:
+✅ Dashboard: Accessible at http://localhost:5001/
+✅ Status Endpoint: Responding with system status
+✅ Trades Endpoint: Showing 10 active positions
+✅ Summary Endpoint: Showing trading paused (2/2 daily trades used)
+❌ Strategy Endpoint: 404 Error (Configuration broken)
+❌ Stop-loss Execution: FAILING (2 positions below stop-loss remain open)
 
-2. ETH/USD Position:
-   - Size: 0.18148857 ETH ($397.05)
-   - P&L: -$12.98 (-3.17%)
-   - Distance to stop-loss: 1.9% buffer
-   - Risk Level: HIGH ⚠️
-
-CAPITAL UTILIZATION:
+RISK ASSESSMENT:
 - Total Capital: $1,000.00
-- Deployed: $820.04 (82.0%)
-- Available: $179.96 (18.0%)
-- Portfolio Value: $797.28 (-2.78% drawdown)
+- Current Value: $836.45
+- Total P&L: -$23.58 (-2.4%)
+- Drawdown: 2.4% (within 5% limit)
+- Buffer to max drawdown: $26.42 (2.6%)
 
-ALERTS:
-⚠️ WARNING: ETH position approaching stop-loss (1.9% buffer)
-✅ No critical stop-loss or take-profit triggers activated
-❌ Daily trading limit reached - no new trades possible today
+CRITICAL ISSUES DETECTED:
+1. STOP-LOSS EXECUTION FAILURE: 2 ETH positions remain open despite being below stop-loss
+   - Position #1 (ETH): -6.2% loss, stop-loss triggered 1.3% below
+   - Position #8 (ETH): -6.0% loss, stop-loss triggered 1.0% below
+   - Time since trigger: ~37 minutes
+   - Total at risk: $12.57
 
-RECOMMENDATIONS:
-1. Close monitoring required for ETH position
-2. Set price alert for ETH at $2,160
-3. Consider adjusting ETH stop-loss to 3% if volatility increases
-4. Monitor BTC at $70,500 support level
-5. Next analysis scheduled for 04:00 local time
+2. CONFIGURATION ISSUE: Strategy endpoint returns 404 error
+3. DAILY LIMIT REACHED: Trading auto-paused (2/2 trades used)
 
-FILES UPDATED:
-1. trading_monitoring.log - Complete position analysis
-2. critical_alerts.log - ETH warning alert
-3. cron_summary.txt - This summary report
+ALERT STATUS:
+- Monitoring Log: ✅ Updated at /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- Critical Alerts: ✅ Updated at /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+- Alert Priority: HIGH (Systemic failure, manual intervention required)
 
-NEXT CHECK: Scheduled for next cron run
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Manual closure of ETH positions #1 and #8
+2. URGENT: System diagnostics for stop-loss execution failure
+3. IMPORTANT: Configuration fix for strategy endpoint
+4. REVIEW: Consider adjusting risk parameters or position sizing
+
+NEXT SCHEDULED CHECK: 04:19 AM (5-minute interval)
+
+=== END OF REPORT ===
