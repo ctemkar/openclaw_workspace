@@ -1,147 +1,138 @@
-=== TRADING MONITORING REPORT ===
-Timestamp: 2026-03-18 10:57:15 (Asia/Bangkok)
-Monitoring Source: System restart after failure
-
-🚨🚨🚨 EMERGENCY - SYSTEM RESTARTED AFTER CRITICAL FAILURE 🚨🚨🚨
-
-SYSTEM STATUS:
-- Trading Bot: ✅ RESTARTED (PID 12903) - was OFFLINE for 2.5+ hours
-- Dashboard Server: ✅ RESTARTED (PID 12904) on port 5001
-- Previous Port: 57686 (not responding)
-- System: Was COMPLETELY OFFLINE
-
-🚨 CRITICAL FINANCIAL SITUATION:
-- BTC Price: $72,912.00 (severe decline)
-- Total Investment: $298,971.70
-- Current Value: $292,447.00
-- Total Loss: -$6,524.70 (-2.18%) 🚨🚨🚨
-- Stop Loss Threshold: 1% (SEVERELY EXCEEDED)
-
-LOSS PROGRESSION TIMELINE:
-- 05:58: -0.65% (-$1,939.70)
-- 08:11: -1.06% (-$3,139.70) - STOP LOSS TRIGGERED
-- 08:48: -1.19% (-$3,743.70) - WORSENING
-- 10:56: -2.18% (-$6,524.70) - CRITICAL 🚨
-- Time unmanaged: 2 hours 43 minutes
-- Additional loss during downtime: $2,781.00
-
-POSITION ANALYSIS (SEVERE LOSSES):
-- Trade 1: Buy $74,770.04 → Current $72,912 = -2.49% loss 🚨
-- Trade 2: Buy $74,800.00 → Current $72,912 = -2.53% loss 🚨
-- Trade 3: Buy $74,700.83 → Current $72,912 = -2.40% loss 🚨
-- Trade 4: Buy $74,700.83 → Current $72,912 = -2.40% loss 🚨
-
-SYSTEM FAILURE ANALYSIS:
-- Trading Bot: Stopped around 08:13:43
-- Dashboard: Stopped sometime after 08:48
-- Total Downtime: ~2.5 hours during critical market decline
-- Cause: Unknown - may be related to termination signals
-- Impact: Severe financial losses accumulated unchecked
-
-RESTART ACTIONS:
-1. Trading Bot: Restarted at 10:56 (PID 12903)
-2. Dashboard: Restarted at 10:57 (PID 12904) on port 5001
-3. Monitoring: Position monitor confirms severe losses
-4. Alerting: Critical alerts logged
-
-CURRENT BOT ACTIVITY:
-- Checking buy conditions (as per trading.log)
-- Using strategy: 'OpenAI_Volatility_Strategy'
-- Still not monitoring existing positions
-- No stop loss execution mechanism
-
-CRITICAL ISSUES REMAINING:
-1. 🚨 SEVERE LOSSES: -2.18% far exceeds -1% stop loss
-2. 🚨 NO POSITION MANAGEMENT: Bot still doesn't monitor existing positions
-3. 🚨 DESIGN FLAW: No automatic stop loss execution
-4. 🚨 SYSTEM STABILITY: Bot and dashboard both failed
-
-IMMEDIATE ACTIONS TAKEN:
-1. ✅ Restarted trading bot
-2. ✅ Restarted dashboard server
-3. ✅ Logged emergency alerts
-4. ✅ Documented severe financial situation
-
-URGENT ACTIONS REQUIRED:
-1. 🚨 MANUAL POSITION REVIEW: Critical decision needed
-2. 🚨 POTENTIAL MANUAL SELL: To prevent further losses
-3. 🚨 SYSTEM AUDIT: Why did both services fail?
-4. 🚨 CODE MODIFICATION: Add position monitoring and stop loss
-
-RISK ASSESSMENT:
-- Current Loss Level: 2.18% (SEVERELY CRITICAL)
-- Stop Loss Triggered: YES (for 2+ hours)
-- System Stability: POOR (recent failure)
-- Risk Level: EXTREME
-
-NEXT STEPS:
-1. Immediate manual intervention for position management
-2. Continuous monitoring of restarted system
-3. Investigation into system failure cause
-4. Implementation of fail-safes and position monitoring
-
-============================================= TRADING MONITORING LOG - Wed Mar 18 10:59:55 +07 2026 ===
-=== TRADING DASHBOARD MONITORING ANALYSIS ===
-Timestamp: 2026-03-18 10:59:55
-Dashboard Status: RUNNING
-Total Trades: 36
-
-=== TRADING CONFIGURATION ===
-Capital: $100.00
-Trade Size: $10.00
-Stop Loss: 3.0%
-Take Profit: 6.0%
-
-=== RECENT TRADE ANALYSIS ===
-Position Summary:
-BTC (Gemini-Pro):
-  Position: 0.001341 BTC
-  Avg Buy Price: $74593.19
-  Current Price: $74499.00
-  Investment: $100.00
-  Current Value: $99.87
-  Unrealized P&L: $-0.13 (-0.13%)
-
-ETH (LLM_Analysis_ETH_USD):
-  Position: 0.012836 ETH
-  Avg Buy Price: $2337.11
-  Current Price: $2341.63
-  Investment: $30.00
-  Current Value: $30.06
-  Unrealized P&L: $0.06 (0.19%)
-
-BTC (LLM_Analysis_BTC_USD):
-  Position: 0.000403 BTC
-  Avg Buy Price: $74468.28
-  Current Price: $74499.00
-  Investment: $30.00
-  Current Value: $30.01
-  Unrealized P&L: $0.01 (0.04%)
-
-BTC (Gemini):
-  Position: 0.001614 BTC
-  Avg Buy Price: $74331.25
-  Current Price: $74499.00
-  Investment: $120.00
-  Current Value: $120.27
-  Unrealized P&L: $0.27 (0.23%)
-
-BTC (gemini-pro):
-  Position: 0.000268 BTC
-  Avg Buy Price: $74728.83
-  Current Price: $74499.00
-  Investment: $20.00
-  Current Value: $19.94
-  Unrealized P&L: $-0.06 (-0.31%)
-
-=== PORTFOLIO SUMMARY ===
-Total Investment: $300.00
-Current Portfolio Value: $300.15
-Portfolio P&L: $0.15 (0.05%)
-=== NO CRITICAL ALERTS ===
-All positions within normal risk parameters.
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-18 11:50:58 (Asia/Bangkok)
+Dashboard Status: ACCESSIBLE (HTTP 200)
 
 === SYSTEM STATUS ===
-Dashboard: Running on port 56086
-API Endpoints: Accessible
-Market Data: Live prices available
+Trading Status: MULTIPLE INSTANCES RUNNING (10 processes detected)
+Dashboard: RUNNING (http://localhost:5001/)
+Conservative Trading System: ACTIVE & MONITORING (daily limit reached: 2/2 trades)
+Trading Script Status: 10 INSTANCES RUNNING (increase from 9)
+
+=== PORTFOLIO STATUS ===
+BTC Holdings: 0.00053507 BTC (from previous log)
+Average Entry Price: $74,756.91 (from previous log)
+Current BTC Price: $74,230.00 (CoinGecko API - updated)
+Current Value: $39.70 (estimated)
+Investment: $40.00 (from previous log)
+Current P&L: -$0.30 (-0.75%)
+
+=== RISK PARAMETERS ===
+Capital: $10,000.00 (dashboard) / $1,000.00 (conservative)
+Trade Size: $10.00 (dashboard) / $20-$40 (conservative)
+Stop Loss: 3.00% (dashboard) / 5.00% (conservative)
+Take Profit: 6.00% (dashboard) / 10.00% (conservative)
+
+=== RISK ASSESSMENT ===
+Current Drawdown: -0.75%
+Distance to 5% Stop-Loss: 4.50% further decline needed ($3,340.85 buffer)
+Distance to 10% Take-Profit: 10.81% upside needed ($8,073.91 to target)
+Risk Level: LOW
+No stop-loss or take-profit orders triggered
+
+=== TRADING ACTIVITY ===
+Total Trades: 0 (dashboard) / 4 (conservative positions)
+Last Trade Activity: 11:19:07 (Gemini-Pro buy filled)
+Conservative Positions: 4 BTC buy positions from previous execution
+Daily Trade Limit: 2 trades/day (conservative) - LIMIT REACHED (2/2)
+Recent Trading: Active trading detected (multiple Gemini-Pro buys)
+
+=== MARKET CONDITIONS ===
+BTC/USD: $74,230.00 (-0.75% from average entry)
+ETH/USD: $2,332.02 (estimated)
+Market Sentiment: NEUTRAL (50% confidence)
+24h BTC Change: +0.11% (slight recovery)
+Support Levels: $70,859, $69,382
+Resistance Levels: $74,549, $76,025
+
+=== ALERT STATUS ===
+⚠️  Multiple trading script instances running (10 processes) - INCREASE from 9
+⚠️  Conservative system at daily trade limit (2/2 used)
+⚠️  Strategy file missing: llm_strategies.json (reported in logs)
+✅ No stop-loss orders triggered (drawdown: -0.75% < 5.00% threshold)
+✅ No take-profit orders triggered (insufficient upside: 10.81% needed)
+✅ No critical drawdown detected
+✅ Dashboard accessible and responding
+⚠️  ETH sell order failures due to insufficient funds (multiple instances)
+
+=== CRITICAL MONITORING ===
+1. Process Management: 10 trading script instances detected - INCREASING
+2. System Resources: Monitor for potential overload
+3. Price Thresholds: 
+   - Stop-loss would trigger at: $71,019.06 (5% loss from entry)
+   - Take-profit would trigger at: $82,232.60 (10% gain from entry)
+4. Current BTC Price: $74,230.00
+5. Buffer to stop-loss: $3,210.94 (4.50% further decline needed)
+6. ETH Trading Issues: Multiple sell order failures (insufficient funds)
+
+=== RECOMMENDATIONS ===
+1. Monitor process count (10 instances - consider cleanup)
+2. Check ETH balance for sell order failures
+3. Create missing llm_strategies.json file
+4. Continue tracking BTC price against $71,019 stop-loss level
+5. No action needed on existing positions (risk level: LOW)
+6. Conservative approach: No new trades (daily limit reached)
+
+=== NEXT CHECK ===
+Will monitor for:
+1. Process count changes (currently 10 instances)
+2. BTC price approaching $71,019 stop-loss level
+3. Market sentiment shift (confidence >60% for new trades)
+4. Trade execution failures or API issues
+5. System resource usage (CPU/memory)
+6. ETH balance issues resolution
+
+=== UPDATE LOG ===
+2026-03-18 11:50:58: Monitoring check completed
+- Process count increased to 10 instances (from 9)
+- BTC price: $74,230.00 (slight decrease from $74,242)
+- Portfolio drawdown: -0.75% (slight increase from -0.69%)
+- Last trade: 11:19:07 (Gemini-Pro buy)
+- ETH sell order failures detected (insufficient funds)
+- Strategy file missing: llm_strategies.json
+- Conservative system at daily limit (2/2 trades)
+- No critical alerts detected
+- All risk parameters within acceptable ranges
+- Dashboard accessible and responding=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-18 11:55:13 (Asia/Bangkok)
+Dashboard Status: ACCESSIBLE (HTTP 200)
+
+=== SYSTEM STATUS ===
+Trading Status: STOPPED
+Dashboard: RUNNING (http://localhost:5001/)
+Active Strategies: 0
+Last Update: 11:55:08
+
+=== TRADING METRICS ===
+Total Trades: 50
+  • Buy Trades: 44
+  • Sell Trades: 6
+Total Investment: $440.00
+Total Sales: $60.00
+Realized P&L: $0.00
+P&L Percentage: 0.00%
+
+=== RISK PARAMETERS ===
+Capital: $100.00
+Stop Loss: 3.00% (trigger at -$3.00)
+Take Profit: 6.00% (trigger at +$6.00)
+Current Drawdown: 2.50%
+
+=== ALERT STATUS ===
+Stop Loss Triggered: NO
+Take Profit Triggered: NO
+Critical Drawdown: NO (threshold: >5.00%)
+
+=== ANALYSIS ===
+• Trading system is currently STOPPED
+• No active strategies running
+• Moderate trading activity with 50 total trades
+• Risk parameters within safe limits
+• No immediate alerts required
+
+=== RECOMMENDATIONS ===
+1. Consider restarting trading system if intentional stop
+2. Monitor drawdown closely if it approaches 5%
+3. Review strategy configuration for optimal performance
+
+=== NEXT CHECK ===
+Scheduled for: 2026-03-18 12:00:00 (Asia/Bangkok)

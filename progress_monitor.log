@@ -558,3 +558,43 @@ http://127.0.0.1:52407
 
 STATUS: [OK] API is UP
 BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:00:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:56776
+
+STATUS: [OK] API is UP
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:10:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
+STATUS: [WARN] API is DOWN
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:20:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
+STATUS: [WARN] API is DOWN
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:30:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
+STATUS: [WARN] API is DOWN
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:40:01 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
+STATUS: [WARN] API is DOWN
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 11:50:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
+STATUS: [WARN] API is DOWN
+BOT: [OK] RUNNING
+--- Progress Monitor: Wed Mar 18 12:00:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:59544
+
