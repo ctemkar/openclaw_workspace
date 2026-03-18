@@ -1,0 +1,66 @@
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-19 05:15:40 (Asia/Bangkok)
+
+SYSTEM STATUS:
+✅ Dashboard: Running on port 5001
+✅ Server: Active (trading_server.py)
+✅ Bot: Running (crypto_trading_llm_live.py)
+✅ API: Responding to status requests
+❌ Stop-loss enforcement: FAILING
+❌ P&L calculation: INACCURATE
+
+CAPITAL & RISK PARAMETERS:
+- Initial Capital: $1,000.00
+- Current Investment: $860.04
+- Capital Remaining: $139.96
+- Stop-loss Threshold: 5.0%
+- Take-profit Threshold: 10.0%
+- Max Daily Trades: 2/2 (LIMIT REACHED)
+
+PORTFOLIO PERFORMANCE:
+- Total Positions: 10 (7 BTC, 3 ETH)
+- Total Investment: $860.04
+- Current Value: $840.14
+- Total Loss: -2.31% (-$19.90)
+- Reported P&L: $0.00 (INACCURATE)
+
+CRITICAL RISK ALERTS:
+🚨 2 ETH POSITIONS EXCEED STOP-LOSS THRESHOLD:
+  1. ETH/USD @ $2,331.78: -5.54% loss (STOP-LOSS TRIGGERED)
+  2. ETH/USD @ $2,325.28: -5.28% loss (STOP-LOSS TRIGGERED)
+
+⚠️ 6 BTC POSITIONS APPROACHING STOP-LOSS:
+  - All high-entry BTC positions (74,300-74,335 range) at 4.00-4.04% loss
+  - 1% away from 5% stop-loss trigger
+
+MARKET ANALYSIS (from 04:55:37):
+- BTC/USD: $71,333.47 (BUY signal, 70% confidence)
+- ETH/USD: $2,202.61 (SELL signal, 65% confidence)
+- ETH below both SMAs (bearish trend)
+- BTC near support level ($70,501.79)
+
+SYSTEM INTEGRITY ISSUES:
+1. STOP-LOSS ENFORCEMENT FAILURE: Positions exceeding 5% loss not closed
+2. P&L CALCULATION ERROR: Reports $0.00 vs actual -2.31% loss
+3. DAILY TRADE LIMIT REACHED: Cannot enter new positions
+4. STRATEGY FILE ERROR: Missing llm_strategies.json
+5. INSUFFICIENT FUNDS ERRORS: Multiple trade failures in logs
+
+IMMEDIATE ACTIONS REQUIRED:
+1. MANUAL INTERVENTION: Close 2 ETH positions at $2,331.78 and $2,325.28
+2. Investigate stop-loss execution system
+3. Fix P&L calculation logic
+4. Review trading strategy given bearish ETH signals
+5. Consider implementing trailing stop-loss
+
+RECOMMENDATIONS:
+1. Implement real-time stop-loss monitoring with automatic execution
+2. Reduce position sizes for better risk management
+3. Add position sizing based on remaining capital
+4. Fix strategy file path errors
+5. Implement proper error handling for insufficient funds
+6. Add portfolio rebalancing logic
+7. Consider implementing a circuit breaker for consecutive losses
+
+NEXT MONITORING: In 1 hour (approx. 06:15)
+===========================================
