@@ -1,5 +1,5 @@
 === Critical Alerts Log ===
-Timestamp: 2026-03-18 16:57:18 (Asia/Bangkok)
+Timestamp: 2026-03-18 17:14:55 (Asia/Bangkok)
 
 🟢 SYSTEM STATUS: NORMAL - No Critical Alerts
 
@@ -7,48 +7,79 @@ System Components Status:
 ✅ TRADING SERVER: RUNNING (port 5001 active)
 ✅ DASHBOARD: OPERATIONAL (serving data on port 5001)
 ✅ MARKET DATA: AVAILABLE (dashboard analysis functional)
-✅ ANALYSIS: Last run at 2026-03-18T16:28:15 (29 minutes ago)
+✅ ANALYSIS: Last run at 2026-03-18T16:28:15 (46 minutes ago)
+⚠️ STRATEGY: No strategy file found (endpoint returns error)
 
 Open Positions Status:
 1. BTC/USD BUY @ $74,094.64 (13:39:48)
    - Current: $74,154.09 (+0.08%)
    - Stop-loss: $70,389.91 (-5.0%)
-   - Buffer to SL: 5.00% (SAFE - needs -5.08% drop to trigger)
+   - Buffer to SL: 4.99% (SAFE - needs -5.08% drop to trigger)
    - Take-profit: $81,504.10 (+10.0%)
    - Progress to TP: 0.08% (needs +9.92% gain to trigger)
 
 2. ETH/USD BUY @ $2,325.28 (13:39:49)
    - Current: $2,331.12 (+0.25%)
    - Stop-loss: $2,209.02 (-5.0%)
-   - Buffer to SL: 5.00% (SAFE - needs -5.24% drop to trigger)
+   - Buffer to SL: 4.98% (SAFE - needs -5.23% drop to trigger)
    - Take-profit: $2,557.81 (+10.0%)
-   - Progress to TP: 0.25% (needs +9.73% gain to trigger)
-
-Portfolio Summary:
-- Total Capital: $1,000.00
-- Active Exposure: $400.00 (2 positions)
-- Portfolio Value: $400.66
-- Total P&L: +$0.66 (+0.17%)
-- Daily Trades: 2/2 (LIMIT REACHED)
+   - Progress to TP: 0.25% (needs +9.75% gain to trigger)
 
 Risk Assessment:
-✅ ALL POSITIONS PROFITABLE
-✅ NO STOP-LOSS TRIGGERS
-✅ NO TAKE-PROFIT TRIGGERS
-✅ NO CRITICAL DRAWDOWN
-⚠️ MAX DAILY TRADES REACHED (no new trades today)
+🟢 LOW RISK: All positions profitable
+🟢 LOW RISK: Far from stop-loss triggers (>4.9% buffer)
+🟢 LOW RISK: No drawdown indicators
+🟢 LOW RISK: System components operational
+⚠️ MEDIUM RISK: Max daily trades reached (2/2) - no new trades possible today
+⚠️ MEDIUM RISK: No strategy file found - using default parameters
+
+Trading Limits:
+- Daily trades: 2/2 (LIMIT REACHED - no new trades today)
+- Capital: $1,000.00 (full amount available)
+- Exposure: ~$400 (40% of capital in positions)
+- Stop-loss: 5.0% (active on all positions)
+- Take-profit: 10.0% (active on all positions)
+
+Market Conditions (from latest analysis):
+- BTC/USD: $74,154.09
+  - Signal: BUY (70% confidence)
+  - Support: $73,556.12 (current: -0.81% from support)
+  - Resistance: $74,683.70 (current: +0.71% to resistance)
+  - Status: Skipped (max daily trades reached)
+
+- ETH/USD: $2,331.12
+  - Signal: BUY (70% confidence)
+  - Support: $2,308.08 (current: -0.99% from support)
+  - Resistance: $2,350.29 (current: +0.82% to resistance)
+  - Status: Skipped (max daily trades reached)
 
 Critical Levels Monitoring:
 BTC/USD:
-  - Current: $74,154.09
-  - Stop-loss: $70,389.91 (-5.08% from current)
-  - Take-profit: $81,504.10 (+9.92% from current)
+  - Stop-loss trigger: $70,389.91 (current: $74,154.09, -5.08% needed)
+  - Take-profit trigger: $81,504.10 (current: $74,154.09, +9.92% needed)
+  - Critical support: $73,556.12 (current: -0.81%)
 
 ETH/USD:
-  - Current: $2,331.12
-  - Stop-loss: $2,209.02 (-5.24% from current)
-  - Take-profit: $2,557.81 (+9.73% from current)
+  - Stop-loss trigger: $2,209.02 (current: $2,331.12, -5.23% needed)
+  - Take-profit trigger: $2,557.81 (current: $2,331.12, +9.75% needed)
+  - Critical support: $2,308.08 (current: -0.99%)
 
-Next Monitoring: System will continue hourly analysis. No manual intervention required.
+Price Stability Analysis:
+- BTC/USD: Stable at ~$74,154 (no significant movement since last check)
+- ETH/USD: Stable at ~$2,331 (no significant movement since last check)
+- Both assets trading calmly near support levels
+- No volatility spikes detected
 
-==================================================
+=== NO IMMEDIATE ACTION REQUIRED ===
+All systems operational. Positions within safe parameters.
+No stop-loss or take-profit triggers detected.
+No critical drawdown indicators.
+
+⚠️ RECOMMENDATIONS:
+1. Consider creating a strategy file for /strategy endpoint
+2. Monitor for daily trade limit reset
+3. Continue hourly monitoring for risk alerts
+
+System monitoring active. Next check in 1 hour.
+
+=== End of Status Update ===
