@@ -67,4 +67,17 @@ RECOMMENDED ACTION:
 - Consider adjusting entry strategy if trend continues
 
 NEXT CHECK: 10:00 AM
-======================================================
+======================================================2026-03-18 10:20:58,103 - WARNING - STRATEGY ERRORS DETECTED: 1 errors in recent logs. Bot may not be functioning correctly.
+2026-03-18 10:23:54,104 - WARNING - STRATEGY ERRORS DETECTED: 1 errors in recent logs. Bot may not be functioning correctly.
+[2026-03-18 10:23:54] CRITICAL ALERTS DETECTED
+==================================================
+
+ALERT: STRATEGY ERRORS DETECTED in trading logs
+
+Current Status:
+- BTC Price: $74,301
+- Portfolio P&L: -0.17%
+- Stop Loss Price: $73686.93
+- Take Profit Price: $75919.87
+==================================================
+

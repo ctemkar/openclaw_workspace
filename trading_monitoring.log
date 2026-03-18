@@ -60,4 +60,71 @@ API Endpoints: Dashboard responding but API endpoints returning 404 errors
 5. Check API endpoint configuration as endpoints are returning 404 errors
 
 === NEXT CHECK ===
-Scheduled for next cron execution
+Scheduled for next cron execution2026-03-18 10:20:58,103 - INFO - Found dashboard on port 61481
+2026-03-18 10:20:58,103 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
+2026-03-18 10:20:58,103 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 05:20:08] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 05:21:00] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 07:57:53] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 08:13:05] BOT STARTING: Monitoring for Model Strategies
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 10:14:33] SUCCESS: Gemini buy filled at 74319.47
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 10:14:37] SUCCESS: Gemini buy filled at 74332.65
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 10:14:37] STRATEGY ERROR: [Errno 2] No such file or directory: '/Users/chetantemkar/.openclaw/workspace/app/llm_strategies.json'
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 10:18:29] SUCCESS: Gemini buy filled at 74308.79
+2026-03-18 10:20:58,103 - INFO - Trading Log: [2026-03-18 10:20:26] SUCCESS: Gemini buy filled at 74308.0
+2026-03-18 10:20:58,103 - INFO - Trading Log: 
+2026-03-18 10:20:58,103 - INFO - Status Update: Trading: RUNNING - Last update: 2026-03-18 10:20:58
+2026-03-18 10:20:58,103 - WARNING - STRATEGY ERRORS DETECTED: 1 errors in recent logs. Bot may not be functioning correctly.
+2026-03-18 10:20:58,103 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
+2026-03-18 10:23:54,104 - INFO - Found dashboard on port 64110
+2026-03-18 10:23:54,104 - INFO - Fetched data: Capital=10000.0, StopLoss=0.01, TakeProfit=0.02
+2026-03-18 10:23:54,104 - INFO - Market Prices: {'BTC/USD': 74800.0, 'ETH/USD': 2317.71}
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:21:23] SUCCESS: LLM_Analysis_SOL_USD sell filled at 94.952
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:21:28] SUCCESS: Gemini buy filled at 74334.94
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:21:34] SUCCESS: Gemini buy filled at 74325.97
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:21:59] SUCCESS: Gemini buy filled at 74332.4
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:22:04] SUCCESS: Gemini buy filled at 74331.3
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:22:09] SUCCESS: Gemini buy filled at 74340.87
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:22:25] SUCCESS: Gemini buy filled at 74340.69
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:22:30] SUCCESS: Gemini buy filled at 74349.96
+2026-03-18 10:23:54,104 - INFO - Trading Log: [2026-03-18 10:22:36] SUCCESS: Gemini buy filled at 74350.0
+2026-03-18 10:23:54,104 - INFO - Trading Log: 
+2026-03-18 10:23:54,104 - INFO - Status Update: Trading: RUNNING - Last update: 2026-03-18 10:23:54
+2026-03-18 10:23:54,104 - WARNING - STRATEGY ERRORS DETECTED: 1 errors in recent logs. Bot may not be functioning correctly.
+2026-03-18 10:23:54,104 - INFO - Stop loss threshold: $9900.00, Take profit threshold: $10200.00
+=== Trading Dashboard Monitor Report ===
+Timestamp: 2026-03-18 10:23:54 (Asia/Bangkok)
+Dashboard Status: ACTIVE (Port 61481)
+Trading Bot Status: RUNNING (2 instances detected)
+
+=== MARKET DATA ===
+Current BTC Price: $74,301
+Current ETH Price: $2,331.78
+Current SOL Price: $94.95
+
+=== PORTFOLIO STATUS ===
+BTC Holdings: 0.00228399 BTC
+Average BTC Entry: $74431.25
+Current BTC Value: $169.70
+BTC Investment: $170.00
+BTC Unrealized P&L: $-0.30 (-0.17%)
+
+=== RISK PARAMETERS ===
+Stop Loss: $73686.93 (1.0% below entry)
+Take Profit: $75919.87 (2.0% above entry)
+Current Price vs Stop Loss: 0.83% above
+Current Price vs Take Profit: 2.18% above
+
+=== TRADING ACTIVITY ===
+Total Trades Executed: 19
+Recent Trades (last 5):
+1. 10:22:36 - Gemini - BUY @ $74,350.00 (0.00013450 BTC)
+2. 10:22:30 - Gemini - BUY @ $74,349.96 (0.00013450 BTC)
+3. 10:22:25 - Gemini - BUY @ $74,340.69 (0.00013452 BTC)
+4. 10:22:09 - Gemini - BUY @ $74,340.87 (0.00013452 BTC)
+5. 10:22:04 - Gemini - BUY @ $74,331.30 (0.00013453 BTC)
+
+🚨 CRITICAL ALERTS:
+- STRATEGY ERRORS DETECTED in trading logs
+
+

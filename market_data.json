@@ -1,0 +1,44 @@
+{
+  "BTC/USD": {
+    "price": 74461.57,
+    "change_24h": null,
+    "volume": 295.07086465,
+    "high_24h": null,
+    "low_24h": null,
+    "sma_20": 74184.49500000001,
+    "sma_50": 74461.57,
+    "rsi": 58.58964560764038,
+    "trend": "bullish",
+    "support": 73556.12,
+    "resistance": 74788.64,
+    "timestamp": "2026-03-18T10:24:16.808954"
+  },
+  "ETH/USD": {
+    "price": 2338.28,
+    "change_24h": null,
+    "volume": 3317.162599,
+    "high_24h": null,
+    "low_24h": null,
+    "sma_20": 2326.21,
+    "sma_50": 2338.28,
+    "rsi": 55.40990021522205,
+    "trend": "bullish",
+    "support": 2308.08,
+    "resistance": 2343.38,
+    "timestamp": "2026-03-18T10:24:17.814182"
+  },
+  "SOL/USD": {
+    "price": 95.354,
+    "change_24h": null,
+    "volume": 24282.79336,
+    "high_24h": null,
+    "low_24h": null,
+    "sma_20": 94.43565000000001,
+    "sma_50": 95.354,
+    "rsi": 64.72212633759057,
+    "trend": "bullish",
+    "support": 94.154,
+    "resistance": 95.619,
+    "timestamp": "2026-03-18T10:24:18.854821"
+  }
+}
