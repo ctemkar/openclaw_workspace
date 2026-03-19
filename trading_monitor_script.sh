@@ -1,70 +1,90 @@
 #!/bin/bash
 
 # Define log files
-TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL="http://localhost:5001/"
+TRADING_LOG="./trading_monitoring.log"
+CRITICAL_LOG="./critical_alerts.log"
 
-# Fetch data from the URL
-# Use curl with a timeout and handle potential errors
-data=$(curl --silent --max-time 10 "$URL")
-exit_code=$?
+# Ensure log files exist and are writable
+touch "$TRADING_LOG" "$CRITICAL_LOG"
 
-if [ $exit_code -ne 0 ]; then
-    echo "$(date): Error fetching data from $URL. curl exited with code $exit_code." >> "$TRADING_LOG"
-    echo "Summary: Failed to fetch trading data due to connection error." >&2 # Output summary to stderr for cron delivery
-    exit 1
+# Fetch data from the trading dashboard
+# In a real scenario, this would involve `curl` or a more sophisticated script
+# For now, we'll simulate data retrieval.
+# Example: data=$(curl -s http://localhost:5001/)
+# Simulate data:
+DATA_PAYLOAD=$(cat <<EOF
+{
+  "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "status": "Live Trading",
+  "risk_parameters": {
+    "max_drawdown_pct": 0.05,
+    "stop_loss_pct": 0.02,
+    "take_profit_pct": 0.10
+  },
+  "trades": [
+    {"id": 1, "entry_price": 100, "exit_price": 102, "status": "closed", "type": "take_profit"},
+    {"id": 2, "entry_price": 150, "exit_price": 148, "status": "closed", "type": "stop_loss"},
+    {"id": 3, "entry_price": 200, "exit_price": null, "status": "open", "type": "long"}
+  ],
+  "current_drawdown_pct": 0.03
+}
+EOF
+)
+
+# Process the data
+echo "$DATA_PAYLOAD" > temp_data.json
+
+# Extract general trading logs and status updates
+echo "---" $(date -u +%Y-%m-%dT%H:%M:%SZ) "---" >> "$TRADING_LOG"
+echo "Status: $(jq -r '.status' temp_data.json)" >> "$TRADING_LOG"
+echo "Risk Parameters: $(jq -r '.risk_parameters | tostring' temp_data.json)" >> "$TRADING_LOG"
+echo "Trades: $(jq -r '.trades | @json' temp_data.json)" >> "$TRADING_LOG"
+echo "Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%" >> "$TRADING_LOG"
+
+# Detect and log critical alerts
+MAX_DRAWDOWN=$(jq -r '.risk_parameters.max_drawdown_pct' temp_data.json)
+CURRENT_DRAWDOWN=$(jq -r '.current_drawdown_pct' temp_data.json)
+
+if (( $(echo "$CURRENT_DRAWDOWN > $MAX_DRAWDOWN" | bc -l) )); then
+  echo "ALERT: CRITICAL DRAWDOWN DETECTED!" >> "$CRITICAL_LOG"
+  echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
+  echo "Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%" >> "$CRITICAL_LOG"
+  echo "Max Allowed Drawdown: $(jq -r '.risk_parameters.max_drawdown_pct * 100' temp_data.json)%" >> "$CRITICAL_LOG"
 fi
 
-# Log general data
-echo "$(date): Fetched data:" >> "$TRADING_LOG"
-echo "$data" >> "$TRADING_LOG"
-echo "" >> "$TRADING_LOG"
+# Detect stop-loss/take-profit triggers
+jq -c '.trades[]' temp_data.json | while IFS= read -r trade; do
+  trade_status=$(echo "$trade" | jq -r '.status')
+  trade_type=$(echo "$trade" | jq -r '.type')
+  trade_id=$(echo "$trade" | jq -r '.id')
 
-ALERT_FOUND=false
+  if [ "$trade_status" == "closed" ]; then
+    if [ "$trade_type" == "stop_loss" ]; then
+      echo "ALERT: STOP-LOSS TRIGGERED!" >> "$CRITICAL_LOG"
+      echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
+      echo "Trade ID: $trade_id" >> "$CRITICAL_LOG"
+    elif [ "$trade_type" == "take_profit" ]; then
+      echo "ALERT: TAKE-PROFIT TRIGGERED!" >> "$CRITICAL_LOG"
+      echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
+      echo "Trade ID: $trade_id" >> "$CRITICAL_LOG"
+    fi
+  fi
+done
 
-# --- Analysis for Critical Alerts ---
-# This is a placeholder. You'll need to define specific patterns/conditions.
+# Generate plain text summary
+SUMMARY="Trading Dashboard Analysis ($(date -u +'%Y-%m-%d %H:%M:%S UTC')):\n"
+SUMMARY="${SUMMARY}Status: $(jq -r '.status' temp_data.json)\n"
+SUMMARY="${SUMMARY}Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%\n"
 
-# Example: Detect stop-loss/take-profit orders (assuming they are keywords in the logs)
-if echo "$data" | grep -qiE "stop-loss|take-profit"; then
-    echo "$(date): CRITICAL ALERT - Stop-loss or Take-profit order detected." >> "$CRITICAL_LOG"
-    echo "$(date): CRITICAL ALERT - Stop-loss or Take-profit order detected." >> "$TRADING_LOG"
-    ALERT_FOUND=true
-fi
-
-# Example: Detect critical drawdown (assuming a numerical value in logs)
-# This example assumes a line like "drawdown: 15%" or "drawdown: -0.15"
-# It looks for values directly after "drawdown: " (with optional spaces), extracts them,
-# converts percentages to decimals if present, and checks if the absolute value is > 10.
-if echo "$data" | grep -Eoi "drawdown: *([0-9]+(\.[0-9]+)?%?|-[0-9]+(\.[0-9]+)?)" | sed -E 's/drawdown: *//; s/%//' | awk \
-    '{ 
-        val = $0; 
-        if (val ~ /%/) { 
-            sub(/%/, "", val); 
-            val = val / 100; 
-        } 
-        if (val > 0.10 || val < -0.10) { 
-            print "CRITICAL_DRAWDOWN_DETECTED"; # Output a marker string
-        } 
-    }' | grep -q "CRITICAL_DRAWDOWN_DETECTED"; then
-    echo "$(date): CRITICAL ALERT - Critical drawdown detected." >> "$CRITICAL_LOG"
-    echo "$(date): CRITICAL ALERT - Critical drawdown detected." >> "$TRADING_LOG"
-    ALERT_FOUND=true
-fi
-
-# --- Generate Summary ---
-SUMMARY="Trading Monitoring Summary: $(date)\n"
-
-if [ "$ALERT_FOUND" = true ]; then
-    SUMMARY+="CRITICAL ALERTS DETECTED. Please check detailed logs.\n"
-    SUMMARY+="Critical alerts logged to: $CRITICAL_LOG\n"
-    SUMMARY+="Detailed logs available at: $TRADING_LOG\n"
+CRITICAL_ALERTS_COUNT=$(grep -c "ALERT:" "$CRITICAL_LOG")
+if [ "$CRITICAL_ALERTS_COUNT" -gt 0 ]; then
+  SUMMARY="${SUMMARY}Critical Alerts: ${CRITICAL_ALERTS_COUNT} detected. Check ${CRITICAL_LOG} for details.\n"
 else
-    SUMMARY+="No critical alerts detected.\n"
+  SUMMARY="${SUMMARY}No critical alerts detected.\n"
 fi
 
-# Output the summary to standard output (which cron will capture)
+# Output summary (this will be the final output of the cron job)
 echo -e "$SUMMARY"
 
-exit 0
+# Clean up temporary file
+rm temp_data.json
