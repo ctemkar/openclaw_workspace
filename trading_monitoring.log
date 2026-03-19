@@ -1,100 +1,192 @@
-=== Trading Monitoring Report - 2026-03-19 13:58:25 ===
-Data fetched from: http://localhost:5001/
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-19 14:18:16 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
 
-System Status: running
-Capital: $1000.0
-Stop-loss: 5.00%
+=== SYSTEM STATUS ===
+Status: running
+Capital: $1000.00
+Last Analysis: 2026-03-19T13:42:19.071671
+Analysis Schedule: hourly
+Trading Pairs: BTC/USD, ETH/USD
+
+=== RISK PARAMETERS ===
+Stop-loss: 5.0%
 Take-profit: 10.0%
-Max trades/day: 2
-Today's trades: 2/2
-Last analysis: 2026-03-19T13:42:19.071671
-Total trades in history: 10
+Max trades per day: 2
 
-Recent Trades (10 total):
-1. ETH/USD - BUY - 0.00428857 @ $2331.78 - 10:21:22 - filled
-2. BTC/USD - BUY - 0.00013452 @ $74335.92 - 10:21:21 - filled
-3. BTC/USD - BUY - 0.00013458 @ $74308.0 - 10:20:26 - filled
-4. BTC/USD - BUY - 0.00013457 @ $74308.79 - 10:18:29 - filled
-5. BTC/USD - BUY - 0.00013453 @ $74332.65 - 10:14:36 - filled
-6. BTC/USD - BUY - 0.00013455 @ $74319.47 - 10:14:33 - filled
-7. BTC/USD - BUY - 0.002699 @ $74094.64 - 13:39:48 - Near support level
-8. ETH/USD - BUY - 0.086 @ $2325.28 - 13:39:49 - Near support level
-9. BTC/USD - BUY - 0.002802 @ $71386.0 - 00:33:00 - Near support level
-10. ETH/USD - BUY - 0.0912 @ $2193.6 - 00:33:02 - Near support level
+=== RECENT TRADES (Last 10) ===
+1. Time: 10:21:22 | Side: buy | Amount: 0.00428857 ETH | Price: $2331.78 | Model: LLM_Analysis_ETH_USD | Status: filled
+2. Time: 10:21:21 | Side: buy | Amount: 0.00013452 BTC | Price: $74335.92 | Model: LLM_Analysis_BTC_USD | Status: filled
+3. Time: 10:20:26 | Side: buy | Amount: 0.00013458 BTC | Price: $74308.00 | Model: Gemini | Status: filled
+4. Time: 10:18:29 | Side: buy | Amount: 0.00013457 BTC | Price: $74308.79 | Model: Gemini | Status: filled
+5. Time: 10:14:36 | Side: buy | Amount: 0.00013453 BTC | Price: $74332.65 | Model: Gemini | Status: filled
+6. Time: 10:14:33 | Side: buy | Amount: 0.00013455 BTC | Price: $74319.47 | Model: Gemini | Status: filled
+7. Time: 13:39:48 | Side: BUY | Quantity: 0.002699 BTC | Price: $74094.64 | Reason: Near support level: $73556.12 (current: $74094.64)
+8. Time: 13:39:49 | Side: BUY | Quantity: 0.086 ETH | Price: $2325.28 | Reason: Near support level: $2308.08 (current: $2325.28)
+9. Time: 00:33:00 | Side: BUY | Quantity: 0.002802 BTC | Price: $71386.00 | Reason: Near support level: $70896.70 (current: $71386.00)
+10. Time: 00:33:02 | Side: BUY | Quantity: 0.0912 ETH | Price: $2193.60 | Reason: Near support level: $2167.99 (current: $2193.60)
 
-Summary Analysis:
+=== CURRENT MARKET ANALYSIS ===
+BTC/USD:
+  Current Price: $70701.72
+  SMA 10: $71109.21
+  SMA 20: $71517.35
+  Support: $70501.79
+  Resistance: $71627.41
+  Signal: BUY (Confidence: 70%)
+  Status: Skipping - Max daily trades reached
 
-🔍 Analyzing BTC/USD...
-   Price: $70701.72
-   SMA 10: $71109.21
-   SMA 20: $71517.35
-   Support: $70501.79
-   Resistance: $71627.41
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $70501.79 (current: $70701.72)
-   ⏸️ Skipping: Max daily trades reached
+ETH/USD:
+  Current Price: $2184.65
+  SMA 10: $2198.16
+  SMA 20: $2208.71
+  Support: $2154.55
+  Resistance: $2232.71
+  Signal: BUY (Confidence: 70%)
+  Status: Skipping - Max daily trades reached
 
-🔍 Analyzing ETH/USD...
-   Price: $2184.65
-   SMA 10: $2198.16
-   SMA 20: $2208.71
-   Support: $2154.55
-   Resistance: $2232.71
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2154.55 (current: $2184.65)
-   ⏸️ Skipping: Max daily trades reached
+=== TRADING SUMMARY ===
+Today's trades executed: 2/2
+Total trades: 4
+Total P&L: $0.00
+Available capital: $1000.00
 
-📈 Trading Summary:
+=== CRITICAL ANALYSIS ===
+🚨 CRITICAL CONDITIONS DETECTED 🚨
+
+1. ETH/USD POSITION - STOP-LOSS TRIGGERED:
+   - Current Price: $2,184.65
+   - Recent High (Entry): $2,331.78
+   - Drawdown: -6.31%
+   - Stop-loss Threshold: -5.0%
+   - STATUS: 🚨 STOP-LOSS TRIGGERED - Exceeds threshold by 1.31%
+
+2. BTC/USD POSITION - NEAR STOP-LOSS:
+   - Current Price: $70,701.72
+   - Recent High (Entry): $74,335.92
+   - Drawdown: -4.89%
+   - Stop-loss Threshold: -5.0%
+   - STATUS: ⚠️ WARNING - Only 0.11% away from stop-loss
+
+3. DRAWDOWN ALERTS:
+   - BTC Drawdown: -4.89% (Threshold: -3.00%) - Exceeds by 1.89%
+   - ETH Drawdown: -6.31% (Threshold: -3.00%) - Exceeds by 3.31%
+
+=== RISK ASSESSMENT ===
+Both positions are in significant drawdown:
+- BTC: 0.11% away from automatic stop-loss trigger
+- ETH: STOP-LOSS ALREADY TRIGGERED (6.31% drawdown vs 5.0% threshold)
+
+Current market conditions indicate bearish pressure on both BTC and ETH.
+
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Execute stop-loss for ETH position (already triggered)
+2. MONITOR: BTC position extremely close to stop-loss - prepare for execution
+3. REVIEW: Trading strategy may need adjustment given current market conditions
+4. CAPITAL: $1,000.00 remains available but positions at risk
+
+=== NEXT ANALYSIS ===
+Scheduled: Next run in 1 hour (approx. 14:42 local time)
+System will attempt analysis but max daily trades reached (2/2)
+
+==================================================
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-19 14:22:31 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
+
+=== SYSTEM STATUS ===
+analysis_scheduled: hourly
+capital: 1000.0
+last_analysis: 2026-03-19T13:42:19.071671
+status: running
+trading_pairs: [
+
+=== RISK PARAMETERS ===
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Max trades per day: 2
+
+=== CURRENT PRICES ===
+BTC/USD: $70,701.72
+ETH/USD: $2,184.65
+
+=== POSITION ANALYSIS ===
+ETH/USD Position:
+  - Entry Price (High): $2,331.78
+  - Current Price: $2,184.65
+  - Drawdown: -6.31%
+  - Stop-loss Threshold: -5.0%
+  - STATUS: 🚨 STOP-LOSS TRIGGERED
+
+BTC/USD Position:
+  - Entry Price (High): $74,335.92
+  - Current Price: $70,701.72
+  - Drawdown: -4.89%
+  - Stop-loss Threshold: -5.0%
+  - STATUS: ⚠️ WARNING - Near stop-loss threshold
+
+=== TRADING SUMMARY ===
+📊 Today's trades: 2/2
    Today's trades executed: 2/2
    Total trades: 4
    Total P&L: $0.00
-   Available capital: $1000.00
-
-✅ Analysis complete. Next run in 1 hour.
-
-=== ALERT CHECK ===
-🚨 **STOP-LOSS TRIGGERED FOR ETH/USD** (continuing violation)
-⚠️ BTC approaching stop-loss (-4.89%, threshold -5%)
-⚠️ Max daily trades reached: 2/2
-⚠️ All trades are BUY positions (no SELL/exits found)
-⚠️ Last analysis was 16 minutes ago (normal)
-
-=== DETAILED ANALYSIS - 2026-03-19 13:58:25 ===
-Status JSON: {"analysis_scheduled":"hourly","capital":1000.0,"last_analysis":"2026-03-19T13:42:19.071671","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-19T13:58:00.454696","trading_pairs":["BTC/USD","ETH/USD"]}
-
-Trade data structure count:        10
-
-=== CRITICAL CHECK SUMMARY ===
-✅ Dashboard is responsive
-🚨 **CRITICAL: ETH STOP-LOSS VIOLATION** (-6.31% vs 5% limit)
-⚠️ **CRITICAL: BTC APPROACHING STOP-LOSS** (-4.89% vs 5% limit)
-⚠️ NO EXIT (SELL) TRADES FOUND - All positions are open
-⚠️ MAX DAILY TRADES REACHED - System is paused for new entries
-⚠️ PRICE ANALYSIS: BTC at $70,701.72 (near support $70,501.79) - 0.28% above support
-⚠️ PRICE ANALYSIS: ETH at $2,184.65 (near support $2,154.55) - 1.40% above support
-
-=== STOP-LOSS VIOLATION DETAILS ===
-ETH/USD:
-- Entry price: $2,331.78 (highest entry)
-- Current price: $2,184.65
-- Drawdown: -6.31%
-- Stop-loss threshold: -5%
-- Violation: 1.31% beyond limit
-- Duration: 11+ minutes since initial alert
-
-BTC/USD:
-- Entry price: $74,335.92 (highest entry)
-- Current price: $70,701.72
-- Drawdown: -4.89%
-- Stop-loss threshold: -5%
-- Proximity: 0.11% from trigger
-- Risk: High probability of imminent violation
-
-=== SYSTEM INTEGRITY CHECK ===
-❌ Stop-loss mechanism: FAILED (ETH violation ongoing)
-❌ Exit strategy: FAILED (no SELL trades)
-❌ Position management: FAILED (aging positions)
-❌ Risk controls: COMPLETELY BYPASSED
-✅ Dashboard operation: NORMAL (misleading)
 
 === MONITORING COMPLETE ===
+Next check scheduled via cron job
+{
+  "timestamp": "2026-03-19T14:27:24.588453",
+  "status": {
+    "analysis_scheduled": "hourly",
+    "capital": 1000.0,
+    "last_analysis": "2026-03-19T13:42:19.071671",
+    "port": 5001,
+    "risk_parameters": {
+      "max_trades_per_day": 2,
+      "stop_loss": 0.05,
+      "take_profit": 0.1
+    },
+    "status": "running",
+    "timestamp": "2026-03-19T14:27:24.592773",
+    "trading_pairs": [
+      "BTC/USD",
+      "ETH/USD"
+    ]
+  },
+  "summary": {
+    "capital": 1000.0,
+    "stop_loss": 0.05,
+    "take_profit": 0.1,
+    "today_trades": 2,
+    "total_trades": 4,
+    "total_pnl": 0.0,
+    "available_capital": 1000.0,
+    "signals": []
+  },
+  "trades_count": 10,
+  "recent_trades": [
+    {
+      "amount": 0.00428856924752764,
+      "model": "LLM_Analysis_ETH_USD",
+      "price": 2331.78,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:21:22"
+    },
+    {
+      "amount": 0.0001345244667719186,
+      "model": "LLM_Analysis_BTC_USD",
+      "price": 74335.92,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:21:21"
+    },
+    {
+      "amount": 0.0001345750121117511,
+      "model": "Gemini",
+      "price": 74308.0,
+      "side": "buy",
+      "status": "filled",
+      "time": "10:20:26"
+    }
+  ]
+}
