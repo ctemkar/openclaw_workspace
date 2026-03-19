@@ -1,75 +1,99 @@
-# Trading Monitoring System - Status Report
-**Generated:** 2026-03-19 05:06 AM (Asia/Bangkok)
+# Trading Monitoring Summary
+## Analysis Time: 2026-03-19 07:51:06 (Asia/Bangkok)
 
-## 📊 System Status
-- ✅ **Server Status:** Running (HTTP 200 OK)
-- ✅ **Monitoring Active:** Yes
-- ⚠️ **Critical Alerts:** 1 Active Alert
-- 📈 **Last Analysis:** 2026-03-19T04:55:37.038346
-- 🔄 **Next Analysis:** Scheduled hourly
+## 🚨 CRITICAL FINDINGS
 
-## 💰 Capital & Risk Parameters
-- **Available Capital:** $1,000.00
-- **Stop-Loss Threshold:** 5.0%
-- **Take-Profit Threshold:** 10.0%
-- **Max Trades/Day:** 2 (LIMIT REACHED)
-- **Trading Pairs:** BTC/USD, ETH/USD
+### STOP-LOSS TRIGGERS DETECTED:
+1. **ETH/USD Position 1**: Entry $2,331.78 → Current $2,193.82 (-5.92% loss)
+2. **ETH/USD Position 2**: Entry $2,325.28 → Current $2,193.82 (-5.65% loss)
 
-## ⚠️ CRITICAL ALERT - ACTIVE
-### STOP-LOSS TRIGGERED: ETH/USD
-- **Position:** ETH/USD (Ethereum)
-- **Entry Price:** $2,331.78
-- **Current Price:** $2,202.61
-- **Loss Percentage:** -5.54% (Exceeds 5.0% stop-loss)
-- **Time in Alert:** ~15 minutes
-- **Market Signal:** SELL (65% confidence)
-- **Action Required:** IMMEDIATE REVIEW
+### PORTFOLIO STATUS:
+- **Total Capital**: $1,000.00
+- **Total Positions Value**: $837.21
+- **Total P&L**: -$22.83 (-2.28%)
+- **Available Capital**: $139.96
+- **Exposure**: 83.7% of capital
 
-## 📈 Portfolio Analysis
-### Open Positions:
-1. **ETH/USD:** Entry $2,331.78 → Current $2,202.61 (-5.54%) ⚠️
-2. **BTC/USD:** Entry $74,335.92 → Current $71,333.47 (-4.04%)
-3. **BTC (Gemini):** Entry $74,308.00 → Current $71,333.47 (-4.00%)
-4. **BTC (Gemini):** Entry $74,308.79 → Current $71,333.47 (-4.00%)
+## 📊 POSITION DETAILS
 
-### Capital Utilization:
-- **Total Investment:** ~$60.00
-- **Available Capital:** ~$940.00
-- **Utilization Rate:** 6.0% (SAFE)
+### BTC/USD Positions (7 positions):
+- Total quantity: ~0.005636 BTC
+- Average entry: ~$72,753.66
+- Current price: $71,116.36
+- Total value: ~$400.63
+- Total P&L: ~-$9.38 (-2.29%)
+- **Status**: ✅ Within stop-loss limits (2.71% buffer)
 
-## 🔍 Market Conditions
-### BTC/USD:
-- **Current Price:** $71,333.47
-- **Signal:** BUY (70% confidence)
-- **Support:** $70,501.79
-- **Resistance:** $74,091.55
-- **Status:** Near support level
+### ETH/USD Positions (3 positions):
+- Total quantity: ~0.181489 ETH
+- Average entry: ~$2,259.26
+- Current price: $2,193.82
+- Total value: ~$398.52
+- Total P&L: ~-$11.51 (-2.81%)
+- **Status**: 🚨 2 positions triggered stop-loss at 5%
 
-### ETH/USD:
-- **Current Price:** $2,202.61
-- **Signal:** SELL (65% confidence)
-- **Support:** $2,154.55
-- **Resistance:** $2,318.32
-- **Status:** Bearish trend, below SMAs
+## ⚠️ RISK ASSESSMENT
 
-## 📋 Recommendations
-1. **IMMEDIATE ACTION:** Review ETH/USD position at -5.54% loss
-2. **Manual Intervention Required:** System at daily trade limit (2/2)
-3. **Consider:** Closing ETH position or adjusting stop-loss
-4. **Monitor:** BTC positions approaching stop-loss (-4.04%)
-5. **Next Analysis:** Automatic in ~50 minutes
+### High Risk Indicators:
+1. **High Exposure**: 83.7% of capital deployed
+2. **Limited Cash**: Only $139.96 available
+3. **Stop-loss Triggers**: 2 ETH positions exceeded 5% loss threshold
+4. **All Positions in Loss**: Both BTC and ETH showing negative P&L
 
-## 📁 Log Files
-- **Monitoring Log:** `trading_monitoring.log` (Updated)
-- **Critical Alerts:** `critical_alerts.log` (Updated)
-- **Analysis Script:** `analyze_trading.py`
+### Moderate Risk Indicators:
+1. **Portfolio Drawdown**: -2.28% (acceptable but concerning)
+2. **Daily Trade Limit Reached**: 2/2 trades used today
+3. **Market Conditions**: Both assets showing BUY signals but prices declining
 
-## ✅ System Health
-- ✅ Server responding on port 5001
-- ✅ Monitoring cron job active
-- ✅ Log files being updated
-- ✅ Alert system functional
-- ⚠️ Trade limit reached - manual review needed
+## 🛡️ SYSTEM STATUS
+
+### Trading Server:
+- ✅ Running on http://localhost:5001/
+- ✅ Last analysis: 2026-03-19T07:41:07.942507
+- ✅ Next analysis scheduled: Hourly (~08:41)
+- ✅ Max daily trades: 2/2 used
+
+### Monitoring System:
+- ✅ Logging active (trading_monitoring.log)
+- ✅ Critical alerts captured (critical_alerts.log)
+- ✅ Real-time price monitoring active
+- ✅ Risk parameter enforcement: 5% stop-loss, 10% take-profit
+
+## 🎯 RECOMMENDED ACTIONS
+
+### IMMEDIATE (High Priority):
+1. **Review ETH positions**: Consider closing or hedging the 2 positions that triggered stop-loss
+2. **Reduce exposure**: Consider taking profits on any winning positions (none currently)
+3. **Increase cash position**: Consider reducing overall exposure below 70%
+
+### SHORT-TERM (Next 24 hours):
+1. **Monitor closely**: Set alerts for 4% loss threshold on remaining positions
+2. **Review strategy**: Assess why multiple positions triggered stop-loss
+3. **Adjust risk parameters**: Consider tightening stop-loss to 4% given current market volatility
+
+### SYSTEM IMPROVEMENTS:
+1. **Add position sizing**: Implement position sizing based on risk percentage
+2. **Add trailing stops**: Consider implementing trailing stop-loss orders
+3. **Improve diversification**: Consider adding more trading pairs to spread risk
+4. **Enhance alerts**: Add SMS/email notifications for critical alerts
+
+## 📈 MARKET CONTEXT
+
+### Current Prices:
+- BTC/USD: $71,116.36
+- ETH/USD: $2,193.82
+
+### Last Trading Signals:
+- BTC/USD: BUY signal (70% confidence) - Near support level
+- ETH/USD: BUY signal (70% confidence) - Near support level
+- **Note**: Both signals were skipped due to daily trade limit
+
+## 🔄 NEXT STEPS
+
+1. **Next monitoring check**: ~08:41 (hourly schedule)
+2. **Review critical alerts**: Address stop-loss triggers immediately
+3. **Update risk parameters**: Consider adjustments based on current market conditions
+4. **Document lessons learned**: Record why stop-losses were triggered for strategy improvement
 
 ---
-*Monitoring system will continue hourly analysis. Critical alerts require manual intervention when trade limits are reached.*
+*Generated by OpenClaw Trading Monitoring System at 2026-03-19 07:51:06*

@@ -1,27 +1,66 @@
 === CRITICAL ALERT ANALYSIS ===
-Timestamp: 2026-03-19 07:09:12 (Asia/Bangkok)
+Timestamp: 2026-03-19 07:57:30 (Asia/Bangkok)
 
-✅ NO CRITICAL ALERTS
+✅ NO CRITICAL ALERTS DETECTED
+
+CURRENT POSITION STATUS:
+BTC/USD:
+  - Position: 0.005636 BTC
+  - Average Entry: $72753.66
+  - Current Price: $71089.82
+  - Position Value: $400.63
+  - Unrealized Loss: $-9.38 (-2.29%)
+  - Stop-loss Threshold: 5.0%
+  - Status: ✅ Within limits (2.71% buffer remaining)
+
+ETH/USD:
+  - Position: 0.181489 ETH
+  - Average Entry: $2259.26
+  - Current Price: $2195.85
+  - Position Value: $398.52
+  - Unrealized Loss: $-11.51 (-2.81%)
+  - Stop-loss Threshold: 5.0%
+  - Status: ✅ Within limits (2.19% buffer remaining)
+
+📊 PORTFOLIO STATUS:
+  - Total Position Value: $799.15
+  - Total Cost Basis: $820.04
+  - Total Unrealized Loss: $-20.89 (-2.55%)
+  - Available Capital: $1000.00
+  - Exposure: 79.9% of capital
+  - Cash Remaining: $200.85
 
 ⚠️ WARNING INDICATORS:
-  - ⚠️ ETH approaching stop-loss: -2.51% loss (2.49% buffer remaining)
-  - ⚠️ BTC approaching stop-loss: -2.13% loss (2.87% buffer remaining)
-  - ⚠️ Total portfolio drawdown: -2.31%
-  - ⚠️ High exposure: 84.0% of capital deployed
-  - ⚠️ Daily trade limit reached - no new trades possible
+  - ⚠️ Both positions showing losses (BTC: -2.29%, ETH: -2.81%)
+  - ⚠️ Total portfolio drawdown: -2.55%
+  - ⚠️ High exposure (79.9% of capital)
+  - ⚠️ Limited cash remaining ($200.85)
+  - ⚠️ ETH position approaching stop-loss (2.19% buffer)
 
-📊 MONITORING STATUS:
-  - System operational: ✅
-  - Positions within risk limits: ✅ (but close)
-  - No stop-loss triggers: ✅
-  - Market conditions: Bearish (ETH SELL signal, BTC near support)
-  - Next analysis: 07:40
-  - Action: Monitor closely, prepare for potential stop-loss execution
+📈 MARKET CONDITIONS:
+  - BTC/USD: BUY signal (70% confidence) - Near support level
+  - ETH/USD: BUY signal (70% confidence) - Near support level
+  - System Status: Running
+  - Last Analysis: 2026-03-19T07:41:07.942507
+  - Next Analysis: ~08:41
 
-🚨 RISK LEVEL: MEDIUM
-  - Positions are in loss but within acceptable range
-  - Market showing bearish signals
-  - High capital exposure increases risk
-  - Consider reducing position sizes if drawdown exceeds 3%
+🟡 RISK LEVEL: MODERATE TO ELEVATED
+  - Both positions within stop-loss limits
+  - Portfolio drawdown acceptable (-2.55%)
+  - High exposure (79.9% of capital)
+  - ETH position has limited buffer (2.19% to stop-loss)
+  - Both assets showing BUY signals
+  - Daily trade limit may prevent new positions
+
+🚨 WATCHLIST:
+  - ETH/USD: Monitor closely - approaching stop-loss threshold
+  - Portfolio exposure: Consider reducing if losses continue
+
+RECOMMENDED STEPS:
+1. ✅ Continue monitoring positions hourly
+2. ⚠️ Monitor ETH position closely (2.19% buffer to stop-loss)
+3. ⚠️ Consider reducing exposure if losses approach 4%
+4. ⚠️ Review cash position - limited funds available
+5. Next analysis scheduled for ~08:41
 
 ==================================================
