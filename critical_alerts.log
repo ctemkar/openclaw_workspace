@@ -1,8 +1,0 @@
-# Critical Alerts Log
-
-This log file records critical alerts from the trading dashboard monitor.
-
-**Alert Conditions:**
-- Triggered stop-loss orders
-- Triggered take-profit orders
-- Critical drawdown
