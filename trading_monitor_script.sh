@@ -1,90 +1,60 @@
 #!/bin/bash
+URL="http://localhost:5001/"
+MONITOR_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+SUMMARY_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_summary.txt"
+TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 
-# Define log files
-TRADING_LOG="./trading_monitoring.log"
-CRITICAL_LOG="./critical_alerts.log"
+echo "--- Monitoring started at $TIMESTAMP ---" >> "$MONITOR_LOG"
 
-# Ensure log files exist and are writable
-touch "$TRADING_LOG" "$CRITICAL_LOG"
+# Using curl to fetch. Ensure curl is installed on the system where cron runs.
+# If not, this part will fail. The prompt implies a shell environment.
+curl -s "$URL" >> "$MONITOR_LOG"
+CURL_EXIT_CODE=$?
 
-# Fetch data from the trading dashboard
-# In a real scenario, this would involve `curl` or a more sophisticated script
-# For now, we'll simulate data retrieval.
-# Example: data=$(curl -s http://localhost:5001/)
-# Simulate data:
-DATA_PAYLOAD=$(cat <<EOF
-{
-  "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-  "status": "Live Trading",
-  "risk_parameters": {
-    "max_drawdown_pct": 0.05,
-    "stop_loss_pct": 0.02,
-    "take_profit_pct": 0.10
-  },
-  "trades": [
-    {"id": 1, "entry_price": 100, "exit_price": 102, "status": "closed", "type": "take_profit"},
-    {"id": 2, "entry_price": 150, "exit_price": 148, "status": "closed", "type": "stop_loss"},
-    {"id": 3, "entry_price": 200, "exit_price": null, "status": "open", "type": "long"}
-  ],
-  "current_drawdown_pct": 0.03
-}
-EOF
-)
-
-# Process the data
-echo "$DATA_PAYLOAD" > temp_data.json
-
-# Extract general trading logs and status updates
-echo "---" $(date -u +%Y-%m-%dT%H:%M:%SZ) "---" >> "$TRADING_LOG"
-echo "Status: $(jq -r '.status' temp_data.json)" >> "$TRADING_LOG"
-echo "Risk Parameters: $(jq -r '.risk_parameters | tostring' temp_data.json)" >> "$TRADING_LOG"
-echo "Trades: $(jq -r '.trades | @json' temp_data.json)" >> "$TRADING_LOG"
-echo "Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%" >> "$TRADING_LOG"
-
-# Detect and log critical alerts
-MAX_DRAWDOWN=$(jq -r '.risk_parameters.max_drawdown_pct' temp_data.json)
-CURRENT_DRAWDOWN=$(jq -r '.current_drawdown_pct' temp_data.json)
-
-if (( $(echo "$CURRENT_DRAWDOWN > $MAX_DRAWDOWN" | bc -l) )); then
-  echo "ALERT: CRITICAL DRAWDOWN DETECTED!" >> "$CRITICAL_LOG"
-  echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
-  echo "Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%" >> "$CRITICAL_LOG"
-  echo "Max Allowed Drawdown: $(jq -r '.risk_parameters.max_drawdown_pct * 100' temp_data.json)%" >> "$CRITICAL_LOG"
+if [ $CURL_EXIT_CODE -ne 0 ]; then
+    echo "Error: curl failed with exit code $CURL_EXIT_CODE at $(date)" >> "$ALERT_LOG"
+    echo "CRITICAL: Trading dashboard at $URL is unreachable." >> "$ALERT_LOG"
+    echo "CRITICAL: Trading dashboard at $URL is unreachable. (Timestamp: $TIMESTAMP)" > "$SUMMARY_FILE"
+    exit 1
 fi
 
-# Detect stop-loss/take-profit triggers
-jq -c '.trades[]' temp_data.json | while IFS= read -r trade; do
-  trade_status=$(echo "$trade" | jq -r '.status')
-  trade_type=$(echo "$trade" | jq -r '.type')
-  trade_id=$(echo "$trade" | jq -r '.id')
+# --- Alert Detection Logic ---
+# This is a placeholder. Real logic would depend on the content fetched (e.g., JSON parsing, regex)
+# Example: Detect if "stop_loss_triggered": true in JSON output
+ALERT_DETECTED=false
+if grep -q '"stop_loss_triggered": true' "$MONITOR_LOG"; then
+    echo "ALERT: Stop-loss triggered at $(date)" >> "$ALERT_LOG"
+    ALERT_DETECTED=true
+fi
+if grep -q '"take_profit_triggered": true' "$MONITOR_LOG"; then
+    echo "ALERT: Take-profit triggered at $(date)" >> "$ALERT_LOG"
+    ALERT_DETECTED=true
+fi
+# Critical drawdown detection (example: if current balance drops below a threshold)
+# A simpler check could be looking for a specific "drawdown_critical: true" flag.
+if grep -q '"drawdown_critical": true' "$MONITOR_LOG"; then
+    echo "ALERT: Critical drawdown detected at $(date)" >> "$ALERT_LOG"
+    ALERT_DETECTED=true
+fi
 
-  if [ "$trade_status" == "closed" ]; then
-    if [ "$trade_type" == "stop_loss" ]; then
-      echo "ALERT: STOP-LOSS TRIGGERED!" >> "$CRITICAL_LOG"
-      echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
-      echo "Trade ID: $trade_id" >> "$CRITICAL_LOG"
-    elif [ "$trade_type" == "take_profit" ]; then
-      echo "ALERT: TAKE-PROFIT TRIGGERED!" >> "$CRITICAL_LOG"
-      echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$CRITICAL_LOG"
-      echo "Trade ID: $trade_id" >> "$CRITICAL_LOG"
-    fi
-  fi
-done
+# --- Generate Summary ---
+echo "Trading Dashboard Analysis Summary ($TIMESTAMP)" > "$SUMMARY_FILE"
+echo "============================================" >> "$SUMMARY_FILE"
+echo "" >> "$SUMMARY_FILE"
 
-# Generate plain text summary
-SUMMARY="Trading Dashboard Analysis ($(date -u +'%Y-%m-%d %H:%M:%S UTC')):\n"
-SUMMARY="${SUMMARY}Status: $(jq -r '.status' temp_data.json)\n"
-SUMMARY="${SUMMARY}Current Drawdown: $(jq -r '.current_drawdown_pct * 100' temp_data.json)%\n"
+# Append last few lines of monitoring log (e.g., last 10 lines)
+echo "Recent Monitoring Data:" >> "$SUMMARY_FILE"
+tail -n 10 "$MONITOR_LOG" >> "$SUMMARY_FILE"
+echo "" >> "$SUMMARY_FILE"
 
-CRITICAL_ALERTS_COUNT=$(grep -c "ALERT:" "$CRITICAL_LOG")
-if [ "$CRITICAL_ALERTS_COUNT" -gt 0 ]; then
-  SUMMARY="${SUMMARY}Critical Alerts: ${CRITICAL_ALERTS_COUNT} detected. Check ${CRITICAL_LOG} for details.\n"
+if [ "$ALERT_DETECTED" = true ]; then
+    echo "CRITICAL ALERTS DETECTED:" >> "$SUMMARY_FILE"
+    # Append last few lines of alert log
+    tail -n 10 "$ALERT_LOG" >> "$SUMMARY_FILE"
 else
-  SUMMARY="${SUMMARY}No critical alerts detected.\n"
+    echo "No critical alerts detected." >> "$SUMMARY_FILE"
 fi
 
-# Output summary (this will be the final output of the cron job)
-echo -e "$SUMMARY"
-
-# Clean up temporary file
-rm temp_data.json
+echo "--- Monitoring finished at $(date) ---" >> "$MONITOR_LOG"
+echo "Monitoring task completed."
