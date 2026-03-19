@@ -1,0 +1,64 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-19 06:22:10 (Asia/Bangkok)
+Monitor ID: trading_dashboard_monitor
+
+SYSTEM STATUS:
+✅ Dashboard accessible: http://localhost:5001/
+✅ System running: Active analysis at 05:40:44
+⚠️ Max daily trades reached: 2/2 (system skipping signals)
+
+CAPITAL & RISK PARAMETERS:
+- Available capital: $1,000.00
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades/day: 2
+- Trading pairs: BTC/USD, ETH/USD
+
+CURRENT MARKET SIGNALS:
+- BTC/USD: $71,043.00 → BUY (70% confidence)
+  Support: $70,501.79 | Resistance: $72,999.99
+  Status: Skipped (max trades reached)
+  
+- ETH/USD: $2,190.87 → BUY (70% confidence)
+  Support: $2,154.55 | Resistance: $2,270.24
+  Status: Skipped (max trades reached)
+
+PORTFOLIO RISK ASSESSMENT:
+🔴 CRITICAL SITUATION DETECTED
+
+1. BTC POSITIONS:
+   - 6 positions, average entry: $74,283.24
+   - Current price: $71,043.00 (-4.36% drawdown)
+   - Stop-loss trigger: $70,569.08
+   - Distance to stop-loss: $473.92 (0.67%)
+   - Status: 🔴 CRITICAL - Within 0.67% of stop-loss
+
+2. ETH POSITIONS:
+   - 3 positions, average entry: $2,283.55
+   - Current price: $2,190.87 (-4.06% drawdown)
+   - Stop-loss trigger: $2,169.38
+   - Distance to stop-loss: $21.49 (0.99%)
+   - Status: 🔴 CRITICAL - Within 0.99% of stop-loss
+
+3. STOP-LOSS FAILURE:
+   - 2 ETH positions already exceed 5% stop-loss threshold
+   - Stop-loss mechanism appears inactive
+   - Manual intervention required
+
+TRADING ACTIVITY:
+- Today's trades: 2/2 (limit reached)
+- Total trades: 4
+- Total P&L: $0.00
+- System generating BUY signals but unable to execute
+
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Check stop-loss implementation - appears non-functional
+2. Review ETH positions that have exceeded 5% loss threshold
+3. Consider adjusting max daily trades limit if market conditions warrant
+4. Monitor BTC positions closely - stop-loss may trigger with minor price drop
+5. Verify trading system configuration and order execution logic
+
+NEXT MONITORING CHECK: 1 hour from now
+CRITICAL ALERTS LOGGED: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+MONITORING LOG: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log

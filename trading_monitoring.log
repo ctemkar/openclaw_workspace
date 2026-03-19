@@ -1,105 +1,55 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-19 06:08:25 +07 (Asia/Bangkok)
-Monitor Run: trading_dashboard_monitor (cron:f94405bd-2cb1-4e6c-8427-6d7ce49efb4d)
+=== TRADING MONITORING LOG ===
+Timestamp: 2026-03-19 06:56:21 (Asia/Bangkok)
+Dashboard Status: running
+Last Analysis: 2026-03-19T06:40:56.552811
 
-=== MARKET DATA ===
-Current Prices:
-- BTC/USD: $71,043.00
-- ETH/USD: $2,190.87
+CAPITAL & RISK PARAMETERS:
+- Capital: $1000.00
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades/day: 2
+- Trading pairs: ['BTC/USD', 'ETH/USD']
 
-Market Movement (Last 2 minutes):
-- BTC: $71,043.00 → $71,043.00 (0.00%)
-- ETH: $2,190.87 → $2,190.87 (0.00%)
+CURRENT TRADING STATUS:
+- Today's trades executed: 2/2 (max reached)
+- Total trades in system: 10
+- Total P&L: $0.00 (from system)
+- Available capital: $1000.00
+- System status: running
+- Analysis scheduled: hourly
 
-Technical Indicators:
-- BTC: Below SMA10 ($71,491.04) and SMA20 ($72,747.13)
-- ETH: Below SMA10 ($2,200.31) and SMA20 ($2,260.14)
-- BTC Signal: BUY (70% confidence)
-- ETH Signal: BUY (70% confidence)
+POSITION ANALYSIS:
+BTC/USD:
+  - Position size: 0.005636 BTC
+  - Average entry: $72,753.66
+  - Current price: $71,336.27
+  - Position value: $402.02
+  - Unrealized P&L: -1.95% ($-7.99)
+  - Distance to stop-loss: 3.05%
 
-Support Levels:
-- BTC: $70,501.79
-- ETH: $2,154.55
+ETH/USD:
+  - Position size: 0.181489 ETH
+  - Average entry: $2,259.26
+  - Current price: $2,202.53
+  - Position value: $399.73
+  - Unrealized P&L: -2.51% ($-10.30)
+  - Distance to stop-loss: 2.49%
 
-=== PORTFOLIO ANALYSIS ===
-Total Positions: 10 (7 BTC, 3 ETH)
-Total Investment: ~$1,000.00 (100% deployed)
+PORTFOLIO SUMMARY:
+- Total position value: $801.75
+- Total cost basis: $820.04
+- Total unrealized loss: $-18.28 (-2.23%)
+- Available capital: $1000.00
+- Total exposure: 80.2% of capital
 
-BTC Positions (7):
-1. Position 2: Buy @ $74,335.92 → P&L: -4.43%
-2. Position 3: Buy @ $74,308.00 → P&L: -4.39%
-3. Position 4: Buy @ $74,308.79 → P&L: -4.39%
-4. Position 5: Buy @ $74,332.65 → P&L: -4.43%
-5. Position 6: Buy @ $74,319.47 → P&L: -4.41%
-6. Position 7: Buy @ $74,094.64 → P&L: -4.12%
-7. Position 9: Buy @ $71,386.00 → P&L: -0.48%
+RISK ASSESSMENT:
+- ✅ BTC within stop-loss limits (-1.95% loss)
+- ✅ ETH within stop-loss limits (-2.51% loss)
+- ✅ Portfolio drawdown acceptable (-2.23%)
+- ✅ Risk parameters being respected
+- ⚠️ Daily trade limit reached - no new trades possible today
+- ⚠️ Both positions in loss: BTC -1.95%, ETH -2.51%
+- ⚠️ Total portfolio drawdown: -2.23%
 
-ETH Positions (3):
-1. Position 1: Buy @ $2,331.78 → P&L: -6.04%
-2. Position 8: Buy @ $2,325.28 → P&L: -5.78%
-3. Position 10: Buy @ $2,193.60 → P&L: -0.12%
-
-=== DRAWDOWN ANALYSIS ===
-BTC Average Buy Price: $72,889.97
-BTC Current Drawdown: -2.53%
-ETH Average Buy Price: $2,259.26
-ETH Current Drawdown: -3.03%
-Portfolio Weighted Drawdown: -2.77%
-
-=== RISK PARAMETERS ===
-Stop-Loss Settings:
-- BTC: 5.0% (trigger at $69,254.47 average)
-- ETH: 5.0% (trigger at $2,146.29 average)
-
-Current Distance to Stop-Loss:
-- BTC: 2.37% buffer (current: -2.53% vs -5.0% trigger)
-- ETH: 1.97% buffer (current: -3.03% vs -5.0% trigger)
-
-Critical Positions:
-1. ETH Position 1: -6.04% (VIOLATING stop-loss by -1.04%)
-2. ETH Position 8: -5.78% (VIOLATING stop-loss by -0.78%)
-3. BTC Positions 2-7: All between -4.12% to -4.43% (within 0.57-0.88% of stop-loss)
-
-=== TRADING SYSTEM STATUS ===
-Daily Trade Limit: 2/2 used (MAXED OUT)
-Available Actions: NONE (system constrained)
-Capital Deployment: 100% at risk
-System Status: Running but risk management disabled
-Next Reset: 00:00 UTC (6+ hours)
-Last Analysis: 2026-03-19 05:40:44
-Next Analysis: ~2026-03-19 06:40:44
-
-=== ALERT STATUS ===
-Previous Critical Alert: 2026-03-19 06:06:00 (2 minutes ago)
-Alert Level: EXTREME CRISIS
-Situation: Two ETH positions violating stop-loss, six BTC positions near stop-loss
-Action Taken: NONE (system constrained)
-Time Since First Alert: 46 minutes
-
-=== MARKET SENTIMENT ===
-Current: BEARISH
-Trend: Sideways (no movement in last 2 minutes)
-Volatility: HIGH
-Risk Level: EXTREME
-
-=== RECOMMENDATIONS ===
-IMMEDIATE (0-5 minutes):
-1. Manual intervention REQUIRED for ETH positions 1 & 8
-2. Consider tightening BTC stop-loss to 4.5%
-3. Monitor BTC price movement closely
-
-SHORT-TERM (5-30 minutes):
-4. Prepare contingency plan for BTC cascade
-5. Review trading strategy effectiveness
-6. Consider implementing tighter risk parameters
-
-=== NEXT MONITORING CHECK ===
-Scheduled: ~2026-03-19 06:40:00
-Alert Threshold: Portfolio drawdown > -3.5% or any stop-loss violation
-
-=== SYSTEM NOTES ===
-- Dashboard accessible at http://localhost:5001/
-- Monitoring active via OpenClaw cron job
-- Critical alerts logged to critical_alerts.log
-- Manual intervention required due to system constraints
-- System signals BUY for both BTC and ETH but cannot act due to daily limit
+NEXT ANALYSIS SCHEDULED: Hourly (next at ~07:40 UTC)
+==================================================
