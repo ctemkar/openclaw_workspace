@@ -1,70 +1,52 @@
 
-# trading_monitor_script.py
 import requests
 import json
 from datetime import datetime
 
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-DASHBOARD_URL = "http://localhost:5001/"
+TRADING_URL = "http://localhost:5001/"
+MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 
-def log_message(message, log_file):
-    timestamp = datetime.now().isoformat()
-    with open(log_file, "a") as f:
-        f.write(f"[{timestamp}] {message}\n")
-
-def fetch_dashboard_data(url):
+def fetch_trading_data():
     try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad status codes
+        response = requests.get(TRADING_URL)
+        response.raise_for_status() # Raise an exception for bad status codes
         return response.json()
     except requests.exceptions.RequestException as e:
-        log_message(f"Error fetching data from {url}: {e}", LOG_FILE)
-        return None
-    except json.JSONDecodeError:
-        log_message(f"Error decoding JSON response from {url}", LOG_FILE)
+        print(f"Error fetching data: {e}")
         return None
 
-def analyze_trading_data(data):
-    critical_alerts = []
+def parse_and_log_data(data):
     if not data:
-        return critical_alerts
+        return
 
-    # --- Extracting and Logging General Data ---
-    capital = data.get("capital")
-    status_updates = data.get("status_updates", [])
-    trading_logs = data.get("trading_logs", [])
-    risk_parameters = data.get("risk_parameters", {})
+    timestamp = datetime.now().isoformat()
+    
+    # Log all extracted data
+    log_entry = {"timestamp": timestamp, "data": data}
+    with open(MONITORING_LOG, "a") as f:
+        f.write(json.dumps(log_entry) + "\n")
 
-    general_log_content = f"Capital: {capital}\nStatus Updates: {json.dumps(status_updates)}\nTrading Logs: {json.dumps(trading_logs)}\nRisk Parameters: {json.dumps(risk_parameters)}\n"
-    log_message(general_log_content, LOG_FILE)
+    # Check for alerts
+    alerts = []
+    if "risk_parameters" in data:
+        risk_params = data["risk_parameters"]
+        if "stop_loss_triggered" in risk_params and risk_params["stop_loss_triggered"]:
+            alerts.append(f"Stop loss triggered at {timestamp}")
+        if "take_profit_triggered" in risk_params and risk_params["take_profit_triggered"]:
+            alerts.append(f"Take profit triggered at {timestamp}")
+        if "drawdown_critical" in risk_params and risk_params["drawdown_critical"]:
+            alerts.append(f"Critical drawdown indicators at {timestamp}")
 
-    # --- Analyzing for Alerts ---
-    stop_loss_triggered = risk_parameters.get("stop_loss_triggered", False)
-    take_profit_triggered = risk_parameters.get("take_profit_triggered", False)
-    drawdown_critical = data.get("drawdown_indicators_critical", False) # Assuming this is a key in the data
-
-    if stop_loss_triggered:
-        critical_alerts.append("STOP-LOSS IMMEDIATELY TRIGGERED!")
-    if take_profit_triggered:
-        critical_alerts.append("TAKE-PROFIT IMMEDIATELY TRIGGERED!")
-    if drawdown_critical:
-        critical_alerts.append("CRITICAL DRAWDOWN INDICATORS DETECTED!")
-
-    # Add more complex analysis here if needed, e.g., analyzing trading_logs for patterns
-
-    return critical_alerts
+    if alerts:
+        with open(CRITICAL_ALERTS_LOG, "a") as f:
+            for alert in alerts:
+                f.write(f"{alert}\n")
+        print("Critical alerts triggered. See log file.")
 
 def main():
-    data = fetch_dashboard_data(DASHBOARD_URL)
-    critical_alerts = analyze_trading_data(data)
-
-    if critical_alerts:
-        alert_message = "\n".join(critical_alerts)
-        log_message(f"CRITICAL ALERTS: {alert_message}", ALERT_FILE)
-        print(f"CRITICAL ALERTS DETECTED: {alert_message}") # For immediate feedback if run manually
-    else:
-        print("No critical alerts detected.")
+    trading_data = fetch_trading_data()
+    parse_and_log_data(trading_data)
 
 if __name__ == "__main__":
     main()
