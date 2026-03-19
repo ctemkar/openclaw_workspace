@@ -1,41 +1,36 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-19 10:41:44.057827
-==================================================
+TRADING DASHBOARD MONITORING SUMMARY
+Date: 2026-03-19 11:45:56 (Asia/Bangkok)
 
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
+SYSTEM STATUS: ✅ OPERATIONAL
+- Dashboard accessible at http://localhost:5001/
+- System status: running
+- Last analysis: 11:41:55
+- Next analysis scheduled: 12:41:55 (56 minutes)
 
-🔍 Analyzing BTC/USD...
-   Price: $71283.36
-   24h Change: N/A
-   SMA 10: $71195.43
-   SMA 20: $71975.81
-   Support: $70501.79
-   Resistance: $72010.09
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $70501.79 (current: $71283.36)
-   ⏸️ Skipping: Max daily trades reached
+TRADING ACTIVITY:
+- Today's trades: 2/2 (limit reached)
+- Total trades: 4
+- Current P&L: $0.00
+- Available capital: $1000.00
 
-🔍 Analyzing ETH/USD...
-   Price: $2210.72
-   24h Change: N/A
-   SMA 10: $2194.99
-   SMA 20: $2227.34
-   Support: $2154.55
-   Resistance: $2220.00
-   Signal: SELL (Confidence: 70%)
-   Reasons: Bearish trend: Price $2210.72 below SMAs (10: $2194.99, 20: $2227.34)
-            Near resistance level: $2220.00 (current: $2210.72)
-   ⏸️ Skipping: Max daily trades reached
+MARKET ANALYSIS:
+BTC/USD: $70,726.13 | Signal: BUY (70% confidence) | Status: Max trades reached
+ETH/USD: $2,192.39 | Signal: BUY (70% confidence) | Status: Max trades reached
 
-📈 Trading Summary:
-   Today's trades executed: 2/2
-   Total trades: 4
-   Total P&L: $0.00
-   Available capital: $1000.00
+RISK ASSESSMENT:
+- Stop-loss: 5% | Take-profit: 10%
+- No stop-loss orders triggered
+- No take-profit orders triggered
+- No critical drawdown detected
 
-✅ Analysis complete. Next run in 1 hour.
+ALERT STATUS:
+⚠️ MONITORING: One ETH/USD position (entry: $2,331.78) showing ~6.0% drawdown, approaching 5% stop-loss threshold. All other positions within safe limits.
+
+RECOMMENDATIONS:
+1. Monitor ETH/USD position at $2,331.78 entry price
+2. System will resume trading after daily reset (midnight)
+3. Continue normal monitoring schedule
+
+FILES UPDATED:
+✓ trading_monitoring.log - Full monitoring data saved
+✓ critical_alerts.log - Alert status and risk assessment saved

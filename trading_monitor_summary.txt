@@ -1,56 +1,67 @@
 TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-19 10:46:55 (Asia/Bangkok)
+========================================
+Timestamp: 2026-03-19 11:33:35 (Asia/Bangkok)
+Job ID: d24753a5-a426-44a3-a7a6-1a4f6ee7ed38
 
-SYSTEM STATUS:
-✓ Trading server operational on port 5001
-✓ Last analysis: 10:41 AM
-✓ Next analysis: ~11:41 AM
-✓ Capital: $1,000.00
-✓ Trading pairs: BTC/USD, ETH/USD
+EXECUTIVE SUMMARY:
+------------------
+⚠️ CRITICAL ALERT: ETH/USD positions exceeding 5% stop-loss threshold
+✅ System operational and running normally
+⚠️ Daily trade limit reached (2/2 trades used)
+⏳ Next analysis in ~8 minutes
 
-TRADING ACTIVITY:
-• Total trades: 10 (all buys)
-• Today's trades: 2/2 (MAX LIMIT REACHED)
-• Latest trade: ETH buy at $2,331.78 (10:21 AM)
+KEY FINDINGS:
+-------------
+1. RISK PARAMETER VIOLATION:
+   - ETH/USD: 5.2% drawdown (exceeds 5% stop-loss)
+   - BTC/USD: 4.1% drawdown (below stop-loss, but close)
 
-RISK PARAMETERS:
-• Stop-loss: 5.0%
-• Take-profit: 10.0%
-• Max trades/day: 2
+2. TRADING ACTIVITY:
+   - Total trades in history: 10
+   - Today's trades: 2/2 (limit reached)
+   - Recent ETH buy: $2,331.78 (now at $2,210.72)
 
-CURRENT MARKET PRICES:
-• BTC/USD: $71,254.00
-• ETH/USD: $2,210.50
+3. MARKET ANALYSIS (from 10:41):
+   - BTC/USD: BUY signal (70% confidence)
+   - ETH/USD: SELL signal (70% confidence)
+   - Both trades skipped due to daily limit
 
-POSITION ANALYSIS:
-BTC Positions (7):
-• All in loss: -0.19% to -4.15%
-• Average buy: $72,869.35
-• Current drawdown: -2.22%
+4. SYSTEM STATUS:
+   - Capital: $1,000.00
+   - Available: $1,000.00 (from summary)
+   - P&L: $0.00 reported
+   - Port 5001: accessible
 
-ETH Positions (3):
-1. $2,331.78 → $2,210.50: -5.20% ⚠️ STOP-LOSS TRIGGERED
-2. $2,325.28 → $2,210.50: -4.94% ⚠️ NEAR STOP-LOSS
-3. $2,193.60 → $2,210.50: +0.77% ✓ PROFITABLE
+IMMEDIATE ACTIONS REQUIRED:
+---------------------------
+1. MANUAL INTERVENTION NEEDED for ETH positions
+2. Review stop-loss execution for ETH positions >5% loss
+3. Monitor BTC positions (4.1% drawdown, near stop-loss)
 
-CRITICAL ALERTS:
-🚨 CRITICAL: ETH Position 1 has triggered stop-loss at -5.20%
-⚠️ HIGH: ETH Position 2 at -4.94% (0.06% from stop-loss)
-⚠️ MEDIUM: All BTC positions in loss
-⚠️ MEDIUM: Portfolio drawdown: -2.04%
-⚠️ MEDIUM: Daily trade limit reached (2/2)
+SYSTEM CONSTRAINTS:
+-------------------
+- Cannot execute new trades today (daily limit reached)
+- Next automated analysis at ~11:41 (hourly schedule)
+- Manual override may be required for risk management
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Execute stop-loss for ETH Position 1
-2. IMMEDIATE: Monitor ETH Position 2 continuously
-3. SHORT-TERM: Review BTC positions
-4. SHORT-TERM: Consider strategy adjustment
-5. ADMIN: Check automatic stop-loss execution
+RECOMMENDATIONS:
+----------------
+1. Execute stop-loss on ETH positions exceeding 5% threshold
+2. Consider adjusting stop-loss parameter to 4% for tighter risk control
+3. Review position sizing strategy
+4. Monitor system for next analysis cycle
+5. Consider manual trade if risk becomes unacceptable
 
-NEXT MONITORING: 15 minutes (11:01 AM)
+ALERT STATUS:
+-------------
+🚨 CRITICAL: ETH stop-loss breach
+⚠️ WARNING: BTC near stop-loss
+✅ NORMAL: System operation
+⚠️ WARNING: Daily limit reached
 
-LOGS UPDATED:
-✓ trading_monitoring.log
-✓ critical_alerts.log
-✓ trading_monitor_summary.txt
+NEXT STEPS:
+-----------
+- Monitor for next analysis at ~11:41
+- Review critical_alerts.log for detailed position analysis
+- Check trading_monitoring.log for full system report
+- Manual decision required on ETH positions

@@ -1,47 +1,50 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-19 11:08:49
+Timestamp: 2026-03-19 11:54:49 (Asia/Bangkok)
 
-CRITICAL ALERTS:
-- MAX DAILY TRADES REACHED: 2/2 trades used today
-- PORTFOLIO DRAWDOWN DETECTED: -2.15% overall, -2.15% worst position (ETH)
-- ETH/USD BEARISH TREND SIGNAL: SELL signal with 70% confidence
-- TRADE EXECUTION BLOCKED: BUY signals active but max trades reached
+ALERT LEVEL: HIGH MONITORING (ORANGE)
+Alert: Position approaching stop-loss threshold - IMMINENT RISK
 
-ALERT DETAILS:
-1. Trade Limit Exceeded: System has executed 2/2 maximum daily trades
-2. Portfolio Drawdown: -2.15% overall, with both BTC (-2.02%) and ETH (-2.15%) in negative territory
-3. Market Conditions: ETH/USD showing bearish trend (price $2210.72, below average entry $2259.26)
-4. Missed Opportunities: BTC/USD has BUY signal but trades blocked
-5. Risk Accumulation: 82% capital utilized ($820.04 of $1000.00)
+DETAILS:
+- Symbol: ETH/USD
+- Entry Price: $2,331.78
+- Current Price: ~$2,192.39 (from dashboard)
+- Drawdown: ~ -5.97%
+- Stop-loss Threshold: 5% ($2,215.19)
+- Distance to Stop-loss: ~0.97% (~$22.80)
 
-POSITION-SPECIFIC RISK:
-- BTC Position: -2.02% drawdown, 2.98% buffer to stop-loss (-5%)
-- ETH Position: -2.15% drawdown, 2.85% buffer to stop-loss (-5%)
-- Worst-case: ETH position closest to stop-loss trigger
+POSITION INFORMATION:
+- Trade Time: 10:21:22
+- Amount: 0.00428857 ETH
+- Model: LLM_Analysis_ETH_USD
+- Status: Filled
 
-CURRENT RISK PARAMETERS:
-- Capital: $1000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
-- Available capital: $179.96
-- Total P&L: -$17.10 (-2.08%)
-- Capital utilization: 82.0%
+CURRENT STATUS:
+🚨 Position is VERY CLOSE to stop-loss threshold
+🚨 Drawdown at ~-5.97%, stop-loss triggers at -5.00%
+🚨 HIGH RISK - potential stop-loss execution IMMINENT
+🚨 Continuous monitoring required
 
-CRITICAL MONITORING POINTS:
-1. ETH/USD price movement toward stop-loss (-5% = $2146.30)
-2. BTC/USD support level at $70501.79
-3. Market trend confirmation for ETH bearish signal
-4. Potential stop-loss execution if thresholds breached
+OTHER POSITIONS STATUS:
+✅ BTC/USD positions: All within safe limits (drawdowns: ~-0.92% to -4.86%)
+✅ No take-profit orders triggered
+✅ No critical drawdowns detected for other positions
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Review current trade positions and drawdown levels
-2. IMMEDIATE: Monitor ETH/USD for potential downside risk to stop-loss
-3. IMMEDIATE: Watch BTC/USD support level at $70501.79
-4. CONSIDER: Adjusting max trades/day parameter if market conditions warrant
-5. VERIFY: System connectivity and exchange API status for stop-loss execution
-6. PREPARE: Stop-loss exit strategy if drawdown approaches -5%
+ACTION REQUIRED:
+1. MONITOR ETH/USD price movement CONTINUOUSLY
+2. Prepare for automatic stop-loss execution at 5% drawdown
+3. Consider manual intervention if volatility spikes
+4. Review position sizing for future ETH trades
 
-NEXT SCHEDULED ANALYSIS: Within 1 hour (approx. 12:05)
+SYSTEM STATUS:
+- Trading system: Operational
+- Daily trade limit: Reached (2/2 trades)
+- Next trading window: After midnight reset
+- Monitoring schedule: Active
+- Last dashboard check: 11:54:49
 
-=== END CRITICAL LOG ===
+CRITICAL THRESHOLDS:
+- Stop-loss: 5% (IMMINENT for ETH/USD)
+- Take-profit: 10% (Not triggered)
+- Max daily trades: 2/2 (Limit reached)
+
+=== END OF ALERT ENTRY ===

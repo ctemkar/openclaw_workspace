@@ -1,119 +1,66 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-19 11:08:49
-Dashboard Time: 2026-03-19T11:05:14.948541
+=== TRADING MONITORING LOG ENTRY ===
+Timestamp: 2026-03-19 11:58:47 (Asia/Bangkok)
+Monitoring Cycle: cron:d5d4e8bc-06ed-4d7e-89fc-0438d35d8417
 
 SYSTEM STATUS:
-- Status: running
+- Dashboard: http://localhost:5001/ (Operational)
+- System Status: running
+- Last Analysis: 2026-03-19T11:47:10.148754
+- Analysis Schedule: hourly
 - Capital: $1000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
-- Trading pairs: BTC/USD, ETH/USD
-- Last analysis: 2026-03-19T10:41:44.057881
-- Analysis schedule: hourly
+- Port: 5001
 
 TRADING ACTIVITY:
-- Today's trades: 2/2 (MAX REACHED)
-- Total trades in system: 10
-- Recent trades (last 10): 10 trades
+- Total Trades Today: 2/2 (limit reached)
+- Recent Trades (last 10):
+  1. ETH/USD BUY 0.00428857 @ $2,331.78 (LLM_Analysis_ETH_USD) - Filled 10:21:22
+  2. BTC/USD BUY 0.00013452 @ $74,335.92 (LLM_Analysis_BTC_USD) - Filled 10:21:21
+  3. BTC/USD BUY 0.00013458 @ $74,308.00 (Gemini) - Filled 10:20:26
+  4. BTC/USD BUY 0.00013457 @ $74,308.79 (Gemini) - Filled 10:18:29
+  5. BTC/USD BUY 0.00013453 @ $74,332.65 (Gemini) - Filled 10:14:36
+  6. BTC/USD BUY 0.00013455 @ $74,319.47 (Gemini) - Filled 10:14:33
+  7. BTC/USD BUY 0.002699 @ $74,094.64 - Filled 13:39:48
+  8. ETH/USD BUY 0.086 @ $2,325.28 - Filled 13:39:49
+  9. BTC/USD BUY 0.002802 @ $71,386.00 - Filled 00:33:00
+  10. ETH/USD BUY 0.0912 @ $2,193.60 - Filled 00:33:02
+
+CURRENT MARKET ANALYSIS (from dashboard summary):
+- BTC/USD: $70,726.13 | Signal: BUY (70% confidence) | Status: Max trades reached
+- ETH/USD: $2,192.39 | Signal: BUY (70% confidence) | Status: Max trades reached
 
 POSITION ANALYSIS:
-- BTC Positions: 6 trades, Total BTC: 0.005636
-- ETH Positions: 4 trades, Total ETH: 0.181489
-- Total Portfolio Cost: $820.04
-- Total Portfolio Value: $802.94
-- Total P&L: -$17.10 (-2.08%)
+1. ETH/USD Positions:
+   - Position 1: Entry $2,331.78, Current $2,192.39, Drawdown: -5.98% ⚠️ STOP-LOSS TRIGGERED!
+   - Position 2: Entry $2,325.28, Current $2,192.39, Drawdown: -5.72% ⚠️ STOP-LOSS TRIGGERED!
+   - Position 3: Entry $2,193.60, Current $2,192.39, Drawdown: -0.06% ✅ Safe
 
-MARKET ANALYSIS (from summary):
-- BTC/USD: $71283.36 | Signal: BUY (70% confidence) | Near support: $70501.79
-- ETH/USD: $2210.72 | Signal: SELL (70% confidence) | Bearish trend, near resistance: $2220.00
+2. BTC/USD Positions:
+   - Position 1: Entry $74,335.92, Current $70,726.13, Drawdown: -4.86% ⚠️ Close to stop-loss
+   - Position 2: Entry $74,308.00, Current $70,726.13, Drawdown: -4.82% ⚠️ Close to stop-loss
+   - Position 3: Entry $74,308.79, Current $70,726.13, Drawdown: -4.82% ⚠️ Close to stop-loss
+   - Position 4: Entry $74,332.65, Current $70,726.13, Drawdown: -4.85% ⚠️ Close to stop-loss
+   - Position 5: Entry $74,319.47, Current $70,726.13, Drawdown: -4.83% ⚠️ Close to stop-loss
+   - Position 6: Entry $74,094.64, Current $70,726.13, Drawdown: -4.55% ⚠️ Close to stop-loss
+   - Position 7: Entry $71,386.00, Current $70,726.13, Drawdown: -0.92% ✅ Safe
 
-RISK ASSESSMENT DETAILS:
-1. BTC Position:
-   - Average Entry: $72,753.66
-   - Current Price: $71,283.36
-   - P&L: -2.02% (-$8.29)
-   - Status: ⚠️ WARNING - In drawdown but above stop-loss (-5%)
+RISK PARAMETERS:
+- Stop-loss: 5%
+- Take-profit: 10%
+- Max trades/day: 2
+- Trading pairs: BTC/USD, ETH/USD
 
-2. ETH Position:
-   - Average Entry: $2,259.26
-   - Current Price: $2,210.72
-   - P&L: -2.15% (-$8.81)
-   - Status: ⚠️ WARNING - In drawdown but above stop-loss (-5%)
+ALERT STATUS:
+🚨 CRITICAL: Two ETH/USD positions have triggered stop-loss at -5.98% and -5.72% drawdown!
+⚠️ HIGH RISK: Six BTC/USD positions are dangerously close to stop-loss (all between -4.55% to -4.86% drawdown)
+✅ No take-profit orders triggered
+🚨 Multiple positions at critical risk levels
 
-3. Portfolio Health:
-   - Total Drawdown: -2.15% (worst performing asset)
-   - Capital Utilization: 82.0% ($820.04 of $1000.00)
-   - Available Capital: $179.96
+RECOMMENDATIONS:
+1. IMMEDIATE ACTION REQUIRED: ETH/USD positions have exceeded 5% stop-loss threshold
+2. BTC/USD positions are at HIGH RISK - monitor continuously
+3. Stop-loss orders should execute automatically for ETH positions
+4. Consider manual intervention for risk management
+5. Review trading strategy given current market conditions
+6. System will resume trading after daily reset (midnight)
 
-ALERTS & WARNINGS:
-⚠️ CRITICAL: MAX DAILY TRADES REACHED - 2/2 trades used today
-⚠️ WARNING: ETH/USD showing bearish trend signal (SELL 70% confidence)
-⚠️ WARNING: BTC Position in drawdown: -2.02%
-⚠️ WARNING: ETH Position in drawdown: -2.15%
-⚠️ NOTICE: BTC/USD near support level, BUY signal active but trades maxed
-⚠️ NOTICE: Portfolio drawdown at -2.15% (monitor for stop-loss triggers)
-
-STOP-LOSS/TAKE-PROFIT STATUS:
-- No stop-loss triggers detected (threshold: -5%)
-- No take-profit triggers detected (threshold: +10%)
-- Closest to stop-loss: ETH at -2.15% (2.85% buffer)
-- Closest to take-profit: N/A (all positions negative)
-
-PERFORMANCE METRICS:
-- Total P&L: -$17.10 (-2.08%)
-- Available capital: $179.96
-- Trade execution: All recent trades show "filled" status
-- System health: Operational but trade-limited
-- Risk level: MEDIUM-HIGH (due to max trades reached + drawdown)
-
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Monitor ETH/USD closely - bearish signal with existing drawdown
-2. IMMEDIATE: Watch BTC support at $70,501.79 - break could worsen drawdown
-3. CONSIDER: Adjusting max trades/day if market conditions improve
-4. VERIFY: Exchange connectivity for potential stop-loss execution
-5. PREPARE: Stop-loss exit plans if drawdown approaches -5%
-
-NEXT SCHEDULED ANALYSIS: Within 1 hour (approx. 12:05)
-
-=== END LOG ===[2026-03-19 11:10:56] Starting trading dashboard check...
-[2026-03-19 11:10:56] Dashboard is RUNNING
-[2026-03-19 11:10:56] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 11:10:56] Last analysis: 2026-03-19T10:41:44.057881
-[2026-03-19 11:10:56] Total trades: 10
-[2026-03-19 11:10:56] Risk check: No critical conditions detected
-[2026-03-19 11:10:56] Monitoring check completed
-=========================================
-[2026-03-19 11:11:01] Starting trading dashboard check...
-[2026-03-19 11:11:01] Dashboard is RUNNING
-[2026-03-19 11:11:01] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 11:11:01] Last analysis: 2026-03-19T10:41:44.057881
-[2026-03-19 11:11:01] Total trades: 10
-[2026-03-19 11:11:01] Risk check: No critical conditions detected
-[2026-03-19 11:11:01] Monitoring check completed
-=========================================
-[2026-03-19 11:11:06] Starting trading dashboard check...
-[2026-03-19 11:11:06] Dashboard is RUNNING
-[2026-03-19 11:11:29] Starting trading dashboard check...
-[2026-03-19 11:11:29] Dashboard is RUNNING
-[2026-03-19 11:11:29] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 11:11:29] Last analysis: 2026-03-19T10:41:44.057881
-[2026-03-19 11:11:29] Total trades: 10
-[2026-03-19 11:11:29] Risk check: No critical conditions detected
-[2026-03-19 11:11:29] Monitoring check completed
-=========================================
-[2026-03-19 11:11:44] Starting trading dashboard check...
-[2026-03-19 11:11:44] Dashboard is RUNNING
-[2026-03-19 11:11:44] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 11:11:44] Last analysis: 2026-03-19T10:41:44.057881
-[2026-03-19 11:11:44] Total trades: 10
-[2026-03-19 11:11:44] Risk check: No critical conditions detected
-[2026-03-19 11:11:44] Monitoring check completed
-=========================================
-[2026-03-19T11:12:09.920330] Trading Data: {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-19T10:41:44.057881", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-19T11:12:09.919851", "trading_pairs": ["BTC/USD", "ETH/USD"]}
-[2026-03-19T11:12:21.991736] Trading Data: {"analysis_scheduled": "hourly", "capital": 1000.0, "last_analysis": "2026-03-19T10:41:44.057881", "port": 5001, "risk_parameters": {"max_trades_per_day": 2, "stop_loss": 0.05, "take_profit": 0.1}, "status": "running", "timestamp": "2026-03-19T11:12:21.991239", "trading_pairs": ["BTC/USD", "ETH/USD"]}
-[2026-03-19 11:14:41] Starting trading dashboard check...
-[2026-03-19 11:14:46] Dashboard is RUNNING
-[2026-03-19 11:14:51] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 11:14:56] Last analysis: 2026-03-19T10:41:44.057881
-[2026-03-19 11:15:02] Total trades: 10
+=== END OF LOG ENTRY ===
