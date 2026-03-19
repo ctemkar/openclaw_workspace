@@ -1,44 +1,78 @@
-TRADING DATA MONITORING COMPLETE
-==================================
-Timestamp: 2026-03-19 10:42:30 AM (Asia/Bangkok)
+TRADING DASHBOARD MONITORING REPORT
+=====================================
+Monitoring Time: 2026-03-19 16:08 PM (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
 
-ACTIONS COMPLETED:
-1. ✅ Fetched data from http://localhost:5001/
-2. ✅ Parsed trading logs, status updates, and risk parameters
-3. ✅ Logged extracted data to trading_monitoring.log
-4. ✅ Analyzed positions for stop-loss/take-profit triggers
-5. ✅ Detected critical risk conditions
-6. ✅ Saved critical alerts to critical_alerts.log
+SYSTEM STATUS:
+• Dashboard Status: Running
+• Capital: $1,000.00
+• Last Analysis: 2026-03-19 15:46:20
+• Next Analysis: ~38 minutes (at 16:46)
+• Daily Trade Limit: 2/2 (REACHED - SYSTEM LOCKED)
+• Automatic Trading: Disabled
 
-DATA PROCESSED:
-- System Status: Running with $1,000 capital
-- Risk Parameters: 5% stop-loss, 10% take-profit, max 2 trades/day
-- Total Trades: 10 (all buy positions)
-- Current Market: BTC $71,310.00, ETH $2,215.55
+CURRENT MARKET PRICES:
+• BTC/USD: $70,110.72
+• ETH/USD: $2,166.88
 
-CRITICAL FINDINGS:
-⚠️ 2 ETH POSITIONS APPROACHING STOP-LOSS:
-1. ETH Position 1: -4.98% loss (0.02% from 5% stop-loss)
-2. ETH Position 2: -4.72% loss (0.28% from 5% stop-loss)
+POSITION ANALYSIS:
+• Total Open Positions: 6
+• Critical Positions (Stop-Loss Triggered): 4
+• Active Positions (Within Parameters): 2
 
-NO TAKE-PROFIT TRIGGERS DETECTED:
-- All positions below 10% profit threshold
+CRITICAL ALERTS:
+🚨 4 STOP-LOSS TRIGGERS NOT EXECUTED FOR ~65 MINUTES
+🚨 Daily trade limit reached (2/2 trades) - System locked
+🚨 Automatic trading disabled
+🚨 Manual intervention required on external Gemini platform
+🚨 Additional losses accumulating beyond stop-loss: $4.65
 
-PORTFOLIO STATUS:
-- Portfolio Weighted Drawdown: -1.91%
-- BTC Average Drawdown: -2.14%
-- ETH Average Drawdown: -1.56%
-- Capital Utilization: 86% ($860.04 invested)
+DETAILED POSITION STATUS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) 🚨 STOP-LOSS TRIGGERED
+   - 2.07% beyond 5% stop-loss threshold
+   - Most critical position
 
-FILES GENERATED:
-1. trading_monitoring.log - Complete trading data and analysis
-2. critical_alerts.log - Critical risk alerts for positions near stop-loss
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) 🚨 STOP-LOSS TRIGGERED
+   - 0.68% beyond 5% stop-loss threshold
 
-RECOMMENDATIONS:
-1. IMMEDIATE: Monitor ETH positions continuously
-2. SHORT-TERM: Review trading strategy given market conditions
-3. ADMIN: Verify automatic stop-loss execution is enabled
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) 🚨 STOP-LOSS TRIGGERED
+   - 0.38% beyond 5% stop-loss threshold
 
-NEXT SCHEDULED CHECK: Based on hourly analysis schedule
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) 🚨 STOP-LOSS TRIGGERED
+   - 1.81% beyond 5% stop-loss threshold
 
-SYSTEM HEALTH: All components operational
+5. BTC/USD @ $71,386.00 → $70,110.72 (-1.79%) ✅ ACTIVE
+   - Within risk parameters
+
+6. ETH/USD @ $2,193.60 → $2,166.88 (-1.22%) ✅ ACTIVE
+   - Within risk parameters
+
+RISK METRICS:
+• Total Capital Exposure: $820.04 (82.0% of capital)
+• Total Unrealized Loss: -$31.66 (3.17% of capital)
+• Excess Loss Beyond Stop-Loss: $4.65 (0.47% of capital)
+• Remaining Protected Capital: $179.96 (18.0%)
+
+TRADING ACTIVITY:
+• Total Trades in History: 10
+• Today's Trades Executed: 2/2 (max reached at 10:21 today)
+• Trading Pairs: BTC/USD, ETH/USD
+
+IMMEDIATE ACTION REQUIRED:
+1. 🚨 MANUAL INTERVENTION: Login to Gemini and execute stop-loss orders for all 4 critical positions
+2. ⚠️ Contact system administrator for daily trade limit override
+3. 📊 Monitor BTC/ETH price movements closely
+4. 💼 Protect remaining $179.96 of unexposed capital
+5. 🔧 Review and adjust daily trade limit settings for future operations
+
+TIME ANALYSIS:
+• Time since first alert: ~65 minutes
+• Additional losses accumulating: ~$4.65 beyond stop-loss threshold
+• Most critical position: ETH/USD @ $2,331.78 → $2,166.88 (-7.07%)
+
+LOGGED DATA:
+• Monitoring Log: ./trading_monitoring.log (updated)
+• Critical Alerts: ./critical_alerts.log (updated)
+
+RISK LEVEL: EXTREME - Immediate manual intervention required
+=====================================

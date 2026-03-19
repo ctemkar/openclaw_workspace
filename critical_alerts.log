@@ -1,30 +1,149 @@
-CRITICAL ALERTS - 2026-03-19T08:56:18.000000
-============================================================
-• 🚨 4 STOP-LOSS TRIGGERS NOT EXECUTED FOR ~55 MINUTES
-• DAILY TRADE LIMIT REACHED: 2/2
-• TOTAL UNREALIZED LOSS: $-31.66
-• EXCESS LOSS BEYOND STOP-LOSS: $4.65
-• ETH POSITIONS AT HIGHEST RISK: -7.07% drawdown
-• BTC POSITIONS: -5.68% drawdown
-• URGENT MANUAL INTERVENTION REQUIRED ON GEMINI
-• AUTOMATIC TRADING DISABLED DUE TO DAILY LIMIT
-• TIME SINCE FIRST ALERT: ~55 minutes
-• ADDITIONAL LOSSES ACCUMULATING: ~$4.65 beyond stop-loss threshold
-• MOST CRITICAL POSITION: ETH/USD @ $2,331.78 → $2,166.88 (-7.07%)
-• RISK LEVEL: EXTREME - Immediate action required
-============================================================
-CRITICAL ALERTS - 2026-03-19T08:59:52.000000
-============================================================
-• 🚨 4 STOP-LOSS TRIGGERS NOT EXECUTED FOR ~57 MINUTES
-• DAILY TRADE LIMIT REACHED: 2/2
-• TOTAL UNREALIZED LOSS: $-31.66
-• EXCESS LOSS BEYOND STOP-LOSS: $4.65
-• ETH POSITIONS AT HIGHEST RISK: -7.07% drawdown
-• BTC POSITIONS: -5.68% drawdown
-• URGENT MANUAL INTERVENTION REQUIRED ON GEMINI
-• AUTOMATIC TRADING DISABLED DUE TO DAILY LIMIT
-• TIME SINCE FIRST ALERT: ~57 minutes
-• ADDITIONAL LOSSES ACCUMULATING: ~$4.65 beyond stop-loss threshold
-• MOST CRITICAL POSITION: ETH/USD @ $2,331.78 → $2,166.88 (-7.07%)
-• RISK LEVEL: EXTREME - Immediate action required
-============================================================
+Any critical alerts will be logged here.CRITICAL ALERT: CRITICAL DRAWDOWN REPORTED at Thu Mar 19 16:11:11 +07 2026
+Simulated CRITICAL DRAWDOWN
+--- CRITICAL ALERT at Thu Mar 19 16:11:52 +07 2026 ---
+🚨 MULTIPLE STOP-LOSS TRIGGERS NOT EXECUTED 🚨
+
+CRITICAL ISSUES DETECTED:
+1. 4 STOP-LOSS TRIGGERS NOT EXECUTED - Manual intervention required
+2. Daily trade limit reached (2/2 trades) - Automatic trading disabled
+3. Excess loss beyond stop-loss: $4.65 accumulating
+4. Time since first alert: 15+ minutes
+
+AFFECTED POSITIONS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) - STOP-LOSS TRIGGERED
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) - STOP-LOSS TRIGGERED  
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) - STOP-LOSS TRIGGERED
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) - STOP-LOSS TRIGGERED
+
+TOTAL UNREALIZED LOSS: -$31.66
+EXCESS LOSS BEYOND STOP-LOSS: $4.65
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. Execute manual stop-loss orders on Gemini platform
+2. Contact system administrator for daily trade limit override
+3. Protect remaining capital from further erosion
+
+SYSTEM STATUS: Automatic trading DISABLED due to daily limit--- CRITICAL ALERT at Thu Mar 19 16:14:18 +0700 2026 ---
+🚨 MULTIPLE STOP-LOSS TRIGGERS STILL NOT EXECUTED 🚨
+
+CRITICAL ISSUES DETECTED:
+1. 4 STOP-LOSS TRIGGERS NOT EXECUTED - Manual intervention STILL required
+2. Daily trade limit reached (2/2 trades) - Automatic trading disabled
+3. Excess loss beyond stop-loss: $4.65 accumulating
+4. Time since first alert: ~25+ minutes
+
+AFFECTED POSITIONS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) - STOP-LOSS TRIGGERED
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) - STOP-LOSS TRIGGERED
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) - STOP-LOSS TRIGGERED
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) - STOP-LOSS TRIGGERED
+
+TOTAL UNREALIZED LOSS: -$31.66
+EXCESS LOSS BEYOND STOP-LOSS: $4.65
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. Execute manual stop-loss orders on Gemini platform URGENTLY
+2. Contact system administrator for daily trade limit override
+3. Protect remaining capital from further erosion
+
+SYSTEM STATUS: Automatic trading DISABLED due to daily limit
+--- CRITICAL ALERT at Thu Mar 19 16:16:41 +07 2026 ---
+🚨 MULTIPLE STOP-LOSS TRIGGERS STILL NOT EXECUTED 🚨
+
+CRITICAL ISSUES DETECTED:
+1. 4 STOP-LOSS TRIGGERS NOT EXECUTED - Manual intervention STILL required
+2. Daily trade limit reached (2/2 trades) - Automatic trading disabled
+3. Excess loss beyond stop-loss: $4.65 accumulating
+4. Time since first alert: ~30+ minutes
+
+AFFECTED POSITIONS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) - STOP-LOSS TRIGGERED
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) - STOP-LOSS TRIGGERED
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) - STOP-LOSS TRIGGERED
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) - STOP-LOSS TRIGGERED
+
+TOTAL UNREALIZED LOSS: -$31.66
+EXCESS LOSS BEYOND STOP-LOSS: $4.65
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. Execute manual stop-loss orders on Gemini platform URGENTLY
+2. Contact system administrator for daily trade limit override
+3. Protect remaining capital from further erosion
+
+SYSTEM STATUS: Automatic trading DISABLED due to daily limit
+--- CRITICAL ALERT at Thu Mar 19 16:18:15 +07 2026 ---
+🚨 MULTIPLE STOP-LOSS TRIGGERS STILL NOT EXECUTED - URGENT ATTENTION NEEDED 🚨
+
+CRITICAL ISSUES DETECTED:
+1. 4 STOP-LOSS TRIGGERS NOT EXECUTED - Manual intervention STILL required
+2. Daily trade limit reached (2/2 trades) - Automatic trading disabled
+3. Excess loss beyond stop-loss: $4.65 accumulating
+4. Time since first alert: ~35+ minutes
+5. Total unrealized loss: -$31.66
+6. Total capital exposure: $820.04 (82% of $1000 capital)
+
+AFFECTED POSITIONS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) - STOP-LOSS TRIGGERED
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) - STOP-LOSS TRIGGERED
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) - STOP-LOSS TRIGGERED
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) - STOP-LOSS TRIGGERED
+
+ACTIVE POSITIONS (NOT YET AT STOP-LOSS):
+5. BTC/USD @ $71,386.00 → $70,110.72 (-1.79%) ✅ ACTIVE
+6. ETH/USD @ $2,193.60 → $2,166.88 (-1.22%) ✅ ACTIVE
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. 🚨 EXECUTE MANUAL STOP-LOSS ORDERS ON GEMINI PLATFORM IMMEDIATELY
+2. ⚠️ Contact system administrator for daily trade limit override
+3. 📊 Monitor BTC/ETH price movements closely
+4. 💼 Protect remaining capital from further erosion
+5. 🔧 Review and adjust daily trade limit settings
+
+SYSTEM STATUS: Automatic trading DISABLED due to daily limit reached
+TIME SINCE LAST ANALYSIS: 31.8 minutes
+NEXT ANALYSIS IN: 28.2 minutes
+
+--- CRITICAL ALERT at Thu Mar 19 16:23:12 +07 2026 ---
+🚨 MULTIPLE STOP-LOSS TRIGGERS STILL NOT EXECUTED - SITUATION WORSENING 🚨
+
+CRITICAL ISSUES DETECTED:
+1. 4 STOP-LOSS TRIGGERS STILL NOT EXECUTED - Manual intervention URGENTLY required
+2. Daily trade limit reached (2/2 trades) - Automatic trading disabled
+3. Excess loss beyond stop-loss: $4.65 accumulating
+4. Time since first alert: ~40+ minutes
+5. Total unrealized loss: -$31.66
+6. Total capital exposure: $820.04 (82% of $1000 capital)
+7. System has been in critical state for OVER 40 MINUTES
+
+AFFECTED POSITIONS (STOP-LOSS TRIGGERED):
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) - LOSS: $0.71
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) - LOSS: $5.68
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) - LOSS: $10.74
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) - LOSS: $13.63
+
+ACTIVE POSITIONS (NOT YET AT STOP-LOSS):
+5. BTC/USD @ $71,386.00 → $70,110.72 (-1.79%) - LOSS: $3.57
+6. ETH/USD @ $2,193.60 → $2,166.88 (-1.22%) - LOSS: $2.43
+
+TOTAL BREAKDOWN:
+• Total unrealized loss: -$31.66
+• Excess loss beyond 5% stop-loss: $4.65
+• Capital at risk: $820.04 (82% of total)
+• Remaining capital buffer: $179.96
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. 🚨 EXECUTE MANUAL STOP-LOSS ORDERS ON GEMINI PLATFORM IMMEDIATELY - DO NOT DELAY
+2. ⚠️ Contact system administrator for daily trade limit override - EMERGENCY REQUEST
+3. 📊 Monitor BTC/ETH price movements closely - Prices: BTC $70,110.72, ETH $2,166.88
+4. 💼 Protect remaining capital from further erosion - Consider closing ALL positions
+5. 🔧 Review and adjust daily trade limit settings for future prevention
+6. 🛑 Consider system shutdown until manual intervention completed
+
+SYSTEM STATUS: 
+• Automatic trading: DISABLED due to daily limit reached
+• Time since last analysis: 36.8 minutes
+• Next analysis in: 23.2 minutes
+• Server status: RUNNING on port 5001
+• Analysis schedule: HOURLY
+
+URGENCY LEVEL: HIGHEST - Immediate manual intervention required to prevent further losses.
