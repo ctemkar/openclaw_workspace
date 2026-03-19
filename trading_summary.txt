@@ -1,40 +1,53 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-19 15:15:57.120605
-==================================================
+TRADING DASHBOARD MONITORING REPORT
+=====================================
+Monitoring Time: 2026-03-19 15:45:54
+Dashboard URL: http://localhost:5001/
 
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
+CURRENT PRICES:
+• BTC/USD: $70,110.72
+• ETH/USD: $2,166.88
 
-🔍 Analyzing BTC/USD...
-   Price: $70208.34
-   24h Change: N/A
-   SMA 10: $70931.98
-   SMA 20: $71211.51
-   Support: $69533.95
-   Resistance: $71627.41
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $69533.95 (current: $70208.34)
-   ⏸️ Skipping: Max daily trades reached
+POSITION ANALYSIS:
+• Total Open Positions: 6
+• Critical Positions (Stop-Loss Triggered): 4
+• Active Positions: 2
 
-🔍 Analyzing ETH/USD...
-   Price: $2167.17
-   24h Change: N/A
-   SMA 10: $2193.77
-   SMA 20: $2197.04
-   Support: $2144.69
-   Resistance: $2232.71
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2144.69 (current: $2167.17)
-   ⏸️ Skipping: Max daily trades reached
+RISK METRICS:
+• Total Capital Exposure: $820.04
+• Total Unrealized Loss: -$31.66
+• Excess Loss Beyond Stop-Loss: $4.65
 
-📈 Trading Summary:
-   Today's trades executed: 2/2
-   Total trades: 4
-   Total P&L: $0.00
-   Available capital: $1000.00
+CRITICAL ALERTS:
+🚨 4 STOP-LOSS TRIGGERS NOT EXECUTED
+🚨 Daily trade limit reached (2/2 trades)
+🚨 Automatic trading disabled
+🚨 Manual intervention required on external platform
+🚨 Time since first alert: 15 minutes
+🚨 Additional losses accumulating: ~$4.65
 
-✅ Analysis complete. Next run in 1 hour.
+SYSTEM STATUS:
+• Daily Trade Limit: 2/2 (REACHED)
+• Time since last analysis: 3.2 minutes
+• Next analysis in: 56.8 minutes
+
+RECOMMENDED ACTIONS:
+1. 🚨 IMMEDIATELY execute manual stop-loss orders on Gemini
+2. ⚠️ Contact system administrator for daily trade limit override
+3. 📊 Monitor BTC/ETH price movements closely
+4. 💼 Protect remaining capital from further erosion
+5. 🔧 Review and adjust daily trade limit settings
+
+DETAILED POSITIONS:
+1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) 🚨 STOP-LOSS
+2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) 🚨 STOP-LOSS
+3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) 🚨 STOP-LOSS
+4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) 🚨 STOP-LOSS
+5. BTC/USD @ $71,386.00 → $70,110.72 (-1.79%) ✅ ACTIVE
+6. ETH/USD @ $2,193.60 → $2,166.88 (-1.22%) ✅ ACTIVE
+
+LOGGED TO:
+• Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+NEXT MONITORING: In ~15 minutes
+=====================================
