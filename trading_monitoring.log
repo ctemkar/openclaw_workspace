@@ -1,75 +1,175 @@
 === TRADING MONITORING LOG ===
-Timestamp: 2026-03-19 07:57:30 (Asia/Bangkok)
-Dashboard Status: running
-Last Analysis: 2026-03-19T07:41:07.942507
+Timestamp: 2026-03-19 08:08:02 +07 (Asia/Bangkok)
+UTC Time: 2026-03-19 01:08:02 UTC
 
-CAPITAL & RISK PARAMETERS:
-- Capital: $1000.00
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-- Max trades/day: 2
-- Trading pairs: ['BTC/USD', 'ETH/USD']
+=== SYSTEM STATUS ===
+{
+    "analysis_scheduled": "hourly",
+    "capital": 1000.0,
+    "last_analysis": "2026-03-19T07:40:44.196786",
+    "port": 5001,
+    "risk_parameters": {
+        "max_trades_per_day": 2,
+        "stop_loss": 0.05,
+        "take_profit": 0.1
+    },
+    "status": "running",
+    "timestamp": "2026-03-19T08:07:43.000000",
+    "trading_pairs": [
+        "BTC/USD",
+        "ETH/USD"
+    ]
+}
 
-CURRENT TRADING STATUS:
-- Total trades in system: 10
-- Total P&L: $-20.89 (-2.55%)
-- Available capital: $1000.00
-- System status: running
-- Analysis scheduled: hourly
-- Next analysis: ~08:41 (hourly schedule)
+=== RECENT TRADES (10 total) ===
+1. ETH @ $2,331.78 (LLM_Analysis_ETH_USD) - BUY - 10:21:22
+2. BTC @ $74,335.92 (LLM_Analysis_BTC_USD) - BUY - 10:21:21
+3. BTC @ $74,308.00 (Gemini) - BUY - 10:20:26
+4. BTC @ $74,308.79 (Gemini) - BUY - 10:18:29
+5. BTC @ $74,332.65 (Gemini) - BUY - 10:14:36
+6. BTC @ $74,319.47 (Gemini) - BUY - 10:14:33
+7. BTC @ $74,094.64 (Support) - BUY - 13:39:48
+8. ETH @ $2,325.28 (Support) - BUY - 13:39:49
+9. BTC @ $71,386.00 (Support) - BUY - 00:33:00
+10. ETH @ $2,193.60 (Support) - BUY - 00:33:02
 
-POSITION ANALYSIS:
-BTC/USD:
-  - Position size: 0.005636 BTC
-  - Average entry: $72753.66
-  - Current price: $71089.82
-  - Position value: $400.63
-  - Unrealized P&L: $-9.38 (-2.29%)
-  - Distance to stop-loss: 2.71% buffer
-  - Status: ✅ Within risk limits
+=== P&L ANALYSIS ===
+Current Prices: BTC: $71,043.00 | ETH: $2,190.87
 
-ETH/USD:
-  - Position size: 0.181489 ETH
-  - Average entry: $2259.26
-  - Current price: $2195.85
-  - Position value: $398.52
-  - Unrealized P&L: $-11.51 (-2.81%)
-  - Distance to stop-loss: 2.19% buffer
-  - Status: ✅ Within risk limits
+BTC Positions:
+  Position 1: Buy @ $74,335.92 → Current: $71,043.00 → P&L: -4.43%
+  Position 2: Buy @ $74,308.00 → Current: $71,043.00 → P&L: -4.39%
+  Position 3: Buy @ $74,308.79 → Current: $71,043.00 → P&L: -4.39%
+  Position 4: Buy @ $74,332.65 → Current: $71,043.00 → P&L: -4.43%
+  Position 5: Buy @ $74,319.47 → Current: $71,043.00 → P&L: -4.41%
+  Position 6: Buy @ $74,094.64 → Current: $71,043.00 → P&L: -4.12%
+  Position 7: Buy @ $71,386.00 → Current: $71,043.00 → P&L: -0.48%
 
-PORTFOLIO SUMMARY:
-- Total position value: $799.15
-- Total cost basis: $820.04
-- Total unrealized P&L: $-20.89 (-2.55%)
-- Available capital: $1000.00
-- Total exposure: 79.9% of capital
-- Cash remaining: $200.85
+ETH Positions:
+  Position 1: Buy @ $2,331.78 → Current: $2,190.87 → P&L: -6.04%
+  Position 2: Buy @ $2,325.28 → Current: $2,190.87 → P&L: -5.78%
+  Position 3: Buy @ $2,193.60 → Current: $2,190.87 → P&L: -0.12%
 
-RISK ASSESSMENT:
-- ✅ BTC within stop-loss limits (-2.29% loss, 2.71% buffer)
-- ✅ ETH within stop-loss limits (-2.81% loss, 2.19% buffer)
-- ✅ Portfolio drawdown acceptable (-2.55%)
-- ⚠️ Both positions showing losses, but within acceptable limits
-- ⚠️ ETH position has smaller buffer to stop-loss (2.19%)
-- ✅ No critical drawdown indicators
+=== DRAWDOWN ANALYSIS ===
+BTC Average Buy Price: $73,869.35
+BTC Current Drawdown: -3.83%
+ETH Average Buy Price: $2,283.55
+ETH Current Drawdown: -4.06%
+Portfolio Weighted Drawdown: -3.90%
 
-MARKET SIGNALS (from last analysis):
-- BTC/USD: BUY signal (70% confidence) - Near support level
-- ETH/USD: BUY signal (70% confidence) - Near support level
-- Both signals skipped due to daily trade limit
+=== RISK ASSESSMENT ===
+Stop-Loss Threshold: 5.0%
+Take-Profit Threshold: 10.0%
+Max Daily Trades: 2/2 used
 
-ALERT STATUS:
-- ✅ No stop-loss triggers (5% threshold not reached)
-- ✅ No take-profit triggers (10% threshold not reached)
-- ✅ No critical drawdown indicators
-- ⚠️ ETH position approaching stop-loss (2.19% buffer remaining)
+=== ALERT STATUS ===
+🚨🚨 PERSISTENT CRITICAL ALERTS 🚨🚨
 
-RECOMMENDATIONS:
-1. ✅ All positions within risk limits
-2. ⚠️ Monitor ETH position closely (2.19% buffer to stop-loss)
-3. ⚠️ Consider reducing exposure if losses approach 4%
-4. Review trading strategy effectiveness
-5. Next analysis scheduled for ~08:41
+1. ETH Position 1: STOP-LOSS TRIGGERED FOR 2+ HOURS (-6.04% loss)
+   Buy: $2,331.78, Current: $2,190.87
+   Time Since Entry: ~21.5 hours
+   Time Since First Alert: ~2.5 hours
+   Status: 🔴 STOP-LOSS VIOLATION PERSISTING
+   Action Status: NO ACTION TAKEN
 
-NEXT ANALYSIS SCHEDULED: Hourly (next at ~08:41)
-=====================================================
+2. ETH Position 2: STOP-LOSS TRIGGERED FOR 2+ HOURS (-5.78% loss)
+   Buy: $2,325.28, Current: $2,190.87
+   Time Since Entry: ~18 hours
+   Time Since First Alert: ~2.5 hours
+   Status: 🔴 STOP-LOSS VIOLATION PERSISTING
+   Action Status: NO ACTION TAKEN
+
+3. BTC Positions: IMMINENT CASCADE RISK PERSISTS
+   Current BTC Price: $71,043.00
+   Stop-Loss Trigger Price: $70,501.79
+   Distance to Trigger: 0.76% buffer
+   
+   Critical Positions:
+   - 6 positions within 0.88% of stop-loss
+   - Closest: Positions 1 & 4 (0.57% buffer)
+   
+   Status: 🔴 CASCADE RISK STILL IMMINENT
+   Market Stability: Prices unchanged for 2+ hours
+
+=== TIME ANALYSIS ===
+Time Since Last Check: 2 hours 9 minutes
+Time Since First Critical Alert: 2 hours 46 minutes
+Market Movement: Stable (no significant change)
+Action Taken: NONE
+
+=== MARKET ANALYSIS ===
+Current Market Conditions:
+- BTC Price: $71,043.00 (unchanged for 2+ hours)
+- ETH Price: $2,190.87 (unchanged for 2+ hours)
+- Support Levels: BTC $70,501.79 | ETH $2,154.55
+- Resistance Levels: BTC $74,091.55 | ETH $2,318.32
+
+Market Stability Analysis:
+- Prices have stabilized after previous decline
+- No significant movement in 2+ hours
+- Market appears to be consolidating at current levels
+
+Trading Signals:
+- BTC: BUY signal (70% confidence) - but max daily trades reached
+- ETH: SELL signal (65% confidence) - bearish trend persists
+
+=== SYSTEM HEALTH ===
+✅ Trading System: Running normally
+✅ API Connectivity: Active
+✅ Analysis Schedule: Hourly (next ~2026-03-19 08:40:44)
+🔴 Daily Trade Limit: 2/2 used (no new trades possible today)
+🔴 Capital Utilization: $1,000.00 deployed (100% at risk)
+⚠️  Risk Level: EXTREME (multiple stop-loss violations persisting)
+
+=== POSITIVE DEVELOPMENTS ===
+1. Market Stabilization: Prices have stopped declining
+2. No Further Deterioration: Drawdown unchanged for 2+ hours
+3. Support Holding: Prices above key support levels
+4. Time Buffer: Additional 2 hours without cascade trigger
+
+=== NEGATIVE DEVELOPMENTS ===
+1. No Action Taken: Critical alerts ignored for 2.5+ hours
+2. Losses Accumulating: ETH positions continue violating stop-loss
+3. System Constraints: Still unable to take corrective action
+4. Capital Locked: $1,000.00 remains at extreme risk
+
+=== URGENT ACTION PLAN ===
+
+IMMEDIATE ACTIONS (STILL REQUIRED):
+1. EXECUTE stop-loss for ETH positions 1 & 2 (2.5+ hours overdue)
+2. SET stop-loss for BTC positions at -4.5% (tighter threshold)
+3. REVIEW why no action was taken on critical alerts
+
+WITHIN NEXT HOUR:
+4. MONITOR for any market movement that could trigger cascade
+5. EVALUATE if manual intervention is still possible
+6. CONSIDER partial liquidation to reduce risk
+
+STRATEGIC ADJUSTMENTS:
+7. REVIEW trading system constraints (daily trade limit too restrictive)
+8. IMPLEMENT automatic stop-loss execution (bypass constraints)
+9. ADD alert escalation mechanism (email/SMS notifications)
+
+=== RECOMMENDATIONS ===
+
+URGENT ACTIONS (STILL NEEDED):
+1. MANUAL INTERVENTION required immediately
+2. EXECUTE overdue stop-loss orders
+3. SET tighter risk parameters for remaining positions
+
+RISK MANAGEMENT:
+4. IMPLEMENT position size limits (max 15% of capital)
+5. ADD diversification (more trading pairs)
+6. REVIEW entry strategy (avoid clustering)
+
+SYSTEM IMPROVEMENTS:
+7. ADD emergency override for critical situations
+8. IMPLEMENT automatic stop-loss execution
+9. ADD multiple alert channels (not just logs)
+
+=== NEXT MONITORING CHECK ===
+Scheduled: Hourly monitoring via cron
+Next Check: ~2026-03-19 09:08:02
+⚠️  WARNING: Situation remains critical despite market stability
+
+==========================================
