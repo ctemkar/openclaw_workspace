@@ -1,13 +1,116 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-19 08:59:06 (Asia/Bangkok)
+Timestamp: 2026-03-19 09:07:02 (Asia/Bangkok)
 
-No critical alerts detected at this time.
+=== ALERT STATUS ===
+No immediate critical alerts detected.
 
-System Status: Normal
-- No stop-loss orders triggered
-- No take-profit orders triggered  
-- No critical drawdown indicators
-- Capital: $1000.00 (100% available)
+=== SYSTEM STATUS ===
+- Overall drawdown: -3.23% (below 5% stop-loss threshold)
+- No individual positions exceeding 5% stop-loss
 - Daily trade limit: 2/2 trades used
+- Capital: $1000.00 (100% available)
+- System status: running normally
+
+=== POSITION ANALYSIS ===
+Individual Position Performance:
+- BTC positions: -0.42% to -4.37% (7 positions)
+- ETH positions: -5.75% to +0.19% (4 positions)
+
+Critical Findings:
+⚠️  WARNING: 2 ETH positions showing losses >5% (-5.75% and -5.48%)
+⚠️  WARNING: 6 BTC positions showing losses >4% (-4.06% to -4.37%)
+⚠️  WARNING: Multiple positions approaching stop-loss threshold
+
+=== RECOMMENDATIONS ===
+1. Monitor ETH positions closely - 2 positions already exceed 5% stop-loss
+2. Consider adjusting stop-loss execution logic
+3. Review why positions exceeding stop-loss are not being closed
+4. Next analysis scheduled: ~2026-03-19T09:41:19
 
 === END OF ALERTS LOG ===
+
+🚨🚨🚨 URGENT CRITICAL ALERT - 2026-03-19 09:03:45 +07 🚨🚨🚨
+SEVERE DRAWDOWN WORSENING: -7.0% (Threshold: 1%)
+Drawdown increased from -5.0% to -7.0% since last alert
+
+NEARLY ALL POSITIONS TRIGGERED STOP-LOSS:
+9 out of 10 positions have exceeded 1% stop-loss threshold:
+- 6 Bitcoin positions: -3.98% to -4.30% loss
+- 3 Ethereum positions: -5.45% to -5.71% loss
+
+=== Market Context ===
+Current Bitcoin Price: $71,141 (-4.3% from average purchase price)
+Current Ethereum Price: $2,198.49 (-5.5% from average purchase price)
+Market Trend: DOWNWARD (prices declining since purchases)
+
+=== System Status ===
+Trading Bot: RUNNING
+Dashboard: http://localhost:5001
+Total Positions: 10
+Estimated Loss: $70.00 (7.0% of $1,000 capital)
+
+=== IMMEDIATE ACTION REQUIRED ===
+1. STOP THE TRADING BOT IMMEDIATELY to prevent further losses
+2. MANUALLY CLOSE all losing positions
+3. REVIEW stop-loss settings - 1% is too tight for current volatility
+4. CONSIDER increasing stop-loss to 3-5% or implementing trailing stop
+5. ANALYZE why stop-loss orders were not executed automatically
+
+==============================================================================={
+  "timestamp": "2026-03-19T09:08:48.327164",
+  "critical_conditions": [
+    "Max daily trades (2) reached or exceeded"
+  ],
+  "monitoring_data": {
+    "timestamp": "2026-03-19T09:08:48.319695",
+    "status": "running",
+    "capital": 1000.0,
+    "risk_parameters": {
+      "max_trades_per_day": 2,
+      "stop_loss": 0.05,
+      "take_profit": 0.1
+    },
+    "total_trades": 10,
+    "recent_trades_count": 5,
+    "last_analysis": "2026-03-19T08:41:19.785634",
+    "critical_conditions": [
+      "Max daily trades (2) reached or exceeded"
+    ],
+    "trading_pairs": [
+      "BTC/USD",
+      "ETH/USD"
+    ]
+  }
+}
+---
+
+
+🚨🚨🚨 CRITICAL ALERT - 2026-03-19 09:09:45 (Asia/Bangkok) 🚨🚨🚨
+STOP-LOSS CONDITIONS TRIGGERED ON MULTIPLE POSITIONS
+
+=== POSITION ANALYSIS ===
+Total Investment: $860.04
+Current Portfolio Value: $837.74
+Total P&L: -$22.30 (-2.59%)
+
+=== CRITICAL FINDINGS ===
+⚠️  2 ETH POSITIONS EXCEEDING 5% STOP-LOSS THRESHOLD:
+   1. 0.004289 ETH @ $2,331.78 → Current: $9.43 (-5.75%)
+   2. 0.086000 ETH @ $2,325.28 → Current: $189.01 (-5.48%)
+
+⚠️  6 BTC POSITIONS APPROACHING STOP-LOSS (-4.06% to -4.37%)
+
+=== SYSTEM STATUS ===
+Trading Bot: RUNNING
+Dashboard: http://localhost:5001
+Total Positions: 10
+Daily Trade Limit: 2/2 (MAX REACHED)
+Capital: $1,000.00 ($837.74 invested, $162.26 available)
+
+=== IMMEDIATE ACTION REQUIRED ===
+1. MANUALLY CLOSE 2 ETH positions exceeding 5% stop-loss
+2. MONITOR 6 BTC positions approaching stop-loss threshold
+3. REVIEW why stop-loss orders not executing automatically
+4. CONSIDER pausing trading until market conditions improve
+
+===============================================================================
