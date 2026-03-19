@@ -1,1 +1,60 @@
-New log entry.
+Capital: $1,000
+Stop-loss: 5%
+Take-profit: 10%
+Max trades/day: 2
+Pairs: BTC/USD, ETH/USD[2026-03-19 18:50:38] --- Data fetched at 2026-03-19 18:50:38 ---
+<html>
+    <head><title>Conservative Crypto Trading System</title></head>
+    <body>
+        <h1>Conservative Crypto Trading System</h1>
+        <p>Real trading with $1,000 capital on Gemini</p>
+        
+        <h2>Endpoints:</h2>
+        <ul>
+            <li><a href="/status">/status</a> - System status</li>
+            <li><a href="/analysis">/analysis</a> - Run analysis now</li>
+            <li><a href="/trades">/trades</a> - Recent trades</li>
+            <li><a href="/strategy">/strategy</a> - Current strategy</li>
+            <li><a href="/summary">/summary</a> - Trading summary</li>
+        </ul>
+        
+        <h2>Configuration:</h2>
+        <ul>
+            <li>Capital: $1,000</li>
+            <li>Stop-loss: 5%</li>
+            <li>Take-profit: 10%</li>
+            <li>Max trades/day: 2</li>
+            <li>Pairs: BTC/USD, ETH/USD</li>
+        </ul>
+    </body>
+    </html>
+[2026-03-19 18:50:38] Summary: Monitoring session completed with no critical alerts detected.
+
+[2026-03-19 18:55:38] --- Data fetched at 2026-03-19 18:55:38 ---
+<html>
+    <head><title>Conservative Crypto Trading System</title></head>
+    <body>
+        <h1>Conservative Crypto Trading System</h1>
+        <p>Real trading with $1,000 capital on Gemini</p>
+        
+        <h2>Endpoints:</h2>
+        <ul>
+            <li><a href="/status">/status</a> - System status</li>
+            <li><a href="/analysis">/analysis</a> - Run analysis now</li>
+            <li><a href="/trades">/trades</a> - Recent trades</li>
+            <li><a href="/strategy">/strategy</a> - Current strategy</li>
+            <li><a href="/summary">/summary</a> - Trading summary</li>
+        </ul>
+        
+        <h2>Configuration:</h2>
+        <ul>
+            <li>Capital: $1,000</li>
+            <li>Stop-loss: 5%</li>
+            <li>Take-profit: 10%</li>
+            <li>Max trades/day: 2</li>
+            <li>Pairs: BTC/USD, ETH/USD</li>
+        </ul>
+    </body>
+    </html>
+[2026-03-19 18:55:38] Summary: Monitoring session completed with no critical alerts detected.
+

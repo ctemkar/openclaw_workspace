@@ -1,58 +1,120 @@
 import requests
+import logging
+import time
 import json
 from datetime import datetime
+import os
 
-TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TRADING_DASHBOARD_URL = "http://localhost:5001/status"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def log_message(message, file_path):
-    timestamp = datetime.now().isoformat()
-    with open(file_path, "a") as f:
-        f.write(f"[{timestamp}] {message}\n")
+# Configuration
+MONITOR_URL = "http://localhost:5001/"
+TRADING_LOG_FILE = os.path.join(os.environ.get('WORKSPACE_DIR', '/Users/chetantemkar/.openclaw/workspace/app'), "trading_monitoring.log")
+ALERT_LOG_FILE = os.path.join(os.environ.get('WORKSPACE_DIR', '/Users/chetantemkar/.openclaw/workspace/app'), "critical_alerts.log")
+LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
 
-def fetch_and_parse_trading_data():
+# Setup logging for trading data
+trading_logger = logging.getLogger('trading_data')
+trading_logger.setLevel(logging.INFO)
+trading_handler = logging.FileHandler(TRADING_LOG_FILE)
+trading_handler.setFormatter(logging.Formatter(LOG_FORMAT))
+trading_logger.addHandler(trading_handler)
+
+# Setup logging for critical alerts
+alert_logger = logging.getLogger('critical_alerts')
+alert_logger.setLevel(logging.CRITICAL)
+alert_handler = logging.FileHandler(ALERT_LOG_FILE)
+alert_handler.setFormatter(logging.Formatter(LOG_FORMAT))
+alert_logger.addHandler(alert_handler)
+
+def fetch_and_process_data():
     try:
-        response = requests.get(TRADING_DASHBOARD_URL)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        data = response.json()
-        return data
+        # Use a timeout for the request
+        response = requests.get(MONITOR_URL, timeout=10)
+        response.raise_for_status() # Raise an exception for bad status codes
+        
+        try:
+            data = response.json()
+        except json.JSONDecodeError:
+            error_message = f"Error decoding JSON response from {MONITOR_URL}"
+            alert_logger.critical(f"{datetime.now().isoformat()} - JSON_DECODE_ERROR - {error_message}")
+            return f"Error: Invalid JSON received from trading dashboard. Details logged."
+
+        # Extract and log trading data
+        trading_data = {
+            "timestamp": datetime.now().isoformat(),
+            "logs": data.get("logs", []),
+            "status_updates": data.get("status_updates", []),
+            "risk_parameters": data.get("risk_parameters", {})
+        }
+        trading_logger.info(json.dumps(trading_data))
+
+        # Detect and log critical alerts
+        critical_alerts = []
+        stop_loss_triggered = data.get("stop_loss_triggered", False)
+        take_profit_triggered = data.get("take_profit_triggered", False)
+        critical_drawdown = data.get("critical_drawdown", False)
+
+        if stop_loss_triggered:
+            critical_alerts.append("STOP_LOSS_TRIGGERED")
+        if take_profit_triggered:
+            critical_alerts.append("TAKE_PROFIT_TRIGGERED")
+        if critical_drawdown:
+            critical_alerts.append("CRITICAL_DRAWDOWN")
+
+        if critical_alerts:
+            alert_data = {
+                "timestamp": datetime.now().isoformat(),
+                "alerts": critical_alerts,
+                "details": data # Include original data for context
+            }
+            alert_logger.critical(json.dumps(alert_data))
+
+        # Generate summary
+        summary = f"Trading Dashboard Monitor Report - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n"
+        summary += f"Status: {'OK' if not critical_alerts else 'CRITICAL'}\\n"
+        if critical_alerts:
+            summary += f"Critical Alerts: {', '.join(critical_alerts)}\\n"
+        summary += f"Logs written to: {TRADING_LOG_FILE}\\n"
+        summary += f"Alerts logged to: {ALERT_LOG_FILE}\\n"
+        # Add more summary details as needed from parsed data
+        # For example, if status_updates is available:
+        if trading_data["status_updates"]:
+            summary += f"Latest Status Update: {trading_data['status_updates'][-1]}\\n"
+        if trading_data["risk_parameters"]:
+            summary += f"Current Risk Parameters: {trading_data['risk_parameters']}\\n"
+
+
+        return summary
+
+    except requests.exceptions.ConnectionError:
+        error_message = f"Connection error: Could not connect to {MONITOR_URL}."
+        alert_logger.critical(f"{datetime.now().isoformat()} - CONNECTION_ERROR - {error_message}")
+        return f"Error: Could not connect to trading dashboard at {MONITOR_URL}. Details logged."
+    except requests.exceptions.Timeout:
+        error_message = f"Request timed out for {MONITOR_URL}."
+        alert_logger.critical(f"{datetime.now().isoformat()} - TIMEOUT_ERROR - {error_message}")
+        return f"Error: Request to trading dashboard timed out. Details logged."
     except requests.exceptions.RequestException as e:
-        log_message(f"Error fetching data from {TRADING_DASHBOARD_URL}: {e}", TRADING_LOG_FILE)
-        return None
-    except json.JSONDecodeError:
-        log_message(f"Error decoding JSON response from {TRADING_DASHBOARD_URL}", TRADING_LOG_FILE)
-        return None
+        error_message = f"Error fetching data from {MONITOR_URL}: {e}"
+        alert_logger.critical(f"{datetime.now().isoformat()} - REQUEST_ERROR - {error_message}")
+        return f"Error: An issue occurred while fetching data from the trading dashboard ({type(e).__name__}). Details logged."
+    except Exception as e:
+        error_message = f"An unexpected error occurred: {e}"
+        alert_logger.critical(f"{datetime.now().isoformat()} - UNEXPECTED_ERROR - {error_message}")
+        return f"An unexpected error occurred. Details logged."
 
-def analyze_data(data):
-    if not data:
-        return
-
-    # Log extracted data
-    log_message(f"Trading Data: {json.dumps(data)}", TRADING_LOG_FILE)
-
-    # Placeholder for alert logic
-    # In a real scenario, you'd parse specific fields from 'data'
-    # For example: data['status_updates'], data['risk_parameters']['stop_loss_triggered'], data['drawdown_indicators']['critical']
-
-    stop_loss_triggered = data.get('stop_loss_triggered', False) # Example field
-    take_profit_triggered = data.get('take_profit_triggered', False) # Example field
-    critical_drawdown = data.get('critical_drawdown', False) # Example field
-
-    critical_events = []
-    if stop_loss_triggered:
-        critical_events.append("STOP LOSS TRIGGERED")
-    if take_profit_triggered:
-        critical_events.append("TAKE PROFIT TRIGGERED")
-    if critical_drawdown:
-        critical_events.append("CRITICAL DRAWDOWN INDICATORS")
-
-    if critical_events:
-        alert_message = " ".join(critical_events) + "!"
-        log_message(alert_message, CRITICAL_ALERT_LOG_FILE)
-        log_message(alert_message, TRADING_LOG_FILE) # Also log critical alerts to general log
-
-# Main execution block
+# Main loop for continuous monitoring
 if __name__ == "__main__":
-    trading_data = fetch_and_parse_trading_data()
-    analyze_data(trading_data)
+    # Print initial summary on script start
+    initial_summary = fetch_and_process_data()
+    print(initial_summary)
+
+    # Continue monitoring
+    while True:
+        time.sleep(30) # Wait for 30 seconds before the next check
+        summary = fetch_and_process_data()
+        # Only print summary if it's an error message, otherwise logs are handled by the logger
+        if summary.startswith("Error:") or summary.startswith("An unexpected error occurred"):
+            print(summary)
+
