@@ -1,5 +1,5 @@
 === TRADING MONITORING LOG ===
-Timestamp: 2026-03-19 06:56:21 (Asia/Bangkok)
+Timestamp: 2026-03-19 07:09:12 (Asia/Bangkok)
 Dashboard Status: running
 Last Analysis: 2026-03-19T06:40:56.552811
 
@@ -17,39 +17,59 @@ CURRENT TRADING STATUS:
 - Available capital: $1000.00
 - System status: running
 - Analysis scheduled: hourly
+- Next analysis: ~07:40 (hourly schedule)
 
 POSITION ANALYSIS:
 BTC/USD:
-  - Position size: 0.005636 BTC
-  - Average entry: $72,753.66
-  - Current price: $71,336.27
-  - Position value: $402.02
-  - Unrealized P&L: -1.95% ($-7.99)
-  - Distance to stop-loss: 3.05%
+  - Position size: 0.006174 BTC
+  - Average entry: $72889.97
+  - Current price: $71336.27
+  - Position value: $440.41
+  - Unrealized P&L: $-9.59 (-2.13%)
+  - Distance to stop-loss: 2.87%
 
 ETH/USD:
   - Position size: 0.181489 ETH
-  - Average entry: $2,259.26
-  - Current price: $2,202.53
+  - Average entry: $2259.26
+  - Current price: $2202.53
   - Position value: $399.73
-  - Unrealized P&L: -2.51% ($-10.30)
+  - Unrealized P&L: $-10.30 (-2.51%)
   - Distance to stop-loss: 2.49%
 
 PORTFOLIO SUMMARY:
-- Total position value: $801.75
-- Total cost basis: $820.04
-- Total unrealized loss: $-18.28 (-2.23%)
+- Total position value: $840.15
+- Total cost basis: $860.04
+- Total unrealized P&L: $-19.89 (-2.31%)
 - Available capital: $1000.00
-- Total exposure: 80.2% of capital
+- Total exposure: 84.0% of capital
+- Cash remaining: $159.85
 
 RISK ASSESSMENT:
-- ✅ BTC within stop-loss limits (-1.95% loss)
-- ✅ ETH within stop-loss limits (-2.51% loss)
-- ✅ Portfolio drawdown acceptable (-2.23%)
+- ✅ BTC within stop-loss limits (2.87% buffer)
+- ✅ ETH within stop-loss limits (2.49% buffer)
+- ✅ Portfolio drawdown acceptable (-2.31%)
 - ✅ Risk parameters being respected
 - ⚠️ Daily trade limit reached - no new trades possible today
-- ⚠️ Both positions in loss: BTC -1.95%, ETH -2.51%
-- ⚠️ Total portfolio drawdown: -2.23%
+- ⚠️ BTC position in loss: -2.13%
+- ⚠️ ETH position in loss: -2.51%
+- ⚠️ Total portfolio drawdown: -2.31%
+- ⚠️ High exposure: 84.0% of capital deployed
 
-NEXT ANALYSIS SCHEDULED: Hourly (next at ~07:40 UTC)
+MARKET SIGNALS (from last analysis):
+- BTC/USD: BUY signal (70% confidence) - Near support level
+- ETH/USD: SELL signal (70% confidence) - Bearish trend, near resistance
+- Both signals skipped due to daily trade limit
+
+ALERT STATUS:
+- No stop-loss triggers (5% threshold not breached)
+- No take-profit triggers (10% threshold not reached)
+- No critical drawdown indicators
+
+RECOMMENDATIONS:
+1. Monitor positions closely as both are in loss
+2. Consider reducing exposure if drawdown approaches 4%
+3. Prepare for potential stop-loss execution if market continues downward
+4. Review strategy at next analysis (07:40)
+
+NEXT ANALYSIS SCHEDULED: Hourly (next at ~07:40)
 ==================================================

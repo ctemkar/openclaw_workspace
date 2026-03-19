@@ -1,19 +1,27 @@
 === CRITICAL ALERT ANALYSIS ===
-Timestamp: 2026-03-19 06:56:21 (Asia/Bangkok)
+Timestamp: 2026-03-19 07:09:12 (Asia/Bangkok)
 
 ✅ NO CRITICAL ALERTS
 
 ⚠️ WARNING INDICATORS:
-  - Both positions in loss territory
-  - BTC: -1.95% loss
-  - ETH: -2.51% loss
-  - Total portfolio drawdown: -2.23%
-  - Daily trade limit reached (2/2)
+  - ⚠️ ETH approaching stop-loss: -2.51% loss (2.49% buffer remaining)
+  - ⚠️ BTC approaching stop-loss: -2.13% loss (2.87% buffer remaining)
+  - ⚠️ Total portfolio drawdown: -2.31%
+  - ⚠️ High exposure: 84.0% of capital deployed
+  - ⚠️ Daily trade limit reached - no new trades possible
 
 📊 MONITORING STATUS:
-  - System operational
-  - Positions within risk limits
-  - No stop-loss triggers
-  - Continue hourly monitoring
+  - System operational: ✅
+  - Positions within risk limits: ✅ (but close)
+  - No stop-loss triggers: ✅
+  - Market conditions: Bearish (ETH SELL signal, BTC near support)
+  - Next analysis: 07:40
+  - Action: Monitor closely, prepare for potential stop-loss execution
+
+🚨 RISK LEVEL: MEDIUM
+  - Positions are in loss but within acceptable range
+  - Market showing bearish signals
+  - High capital exposure increases risk
+  - Consider reducing position sizes if drawdown exceeds 3%
 
 ==================================================
