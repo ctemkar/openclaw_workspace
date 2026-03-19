@@ -1,107 +1,65 @@
---- Critical Alerts ---
-[2026-03-19 09:22:56] CRITICAL: Stop-loss execution failure detected
-[2026-03-19 09:22:56] DETAILS: 1 ETH position remains open despite being below stop-loss threshold
-[2026-03-19 09:22:56] POSITION: ETH bought at $2325.28, current: $2201.44 (-5.3% loss)
-[2026-03-19 09:22:56] QUANTITY: 0.086 ETH
-[2026-03-19 09:22:56] UNREALIZED LOSS: $10.65
-[2026-03-19 09:22:56] STOP-LOSS THRESHOLD: 5.0% (triggered at 5.3%)
-[2026-03-19 09:22:56] TIME SINCE TRIGGER: ~43 minutes (since previous alert)
-[2026-03-19 09:22:56] TOTAL AT RISK: $10.65
-[2026-03-19 09:22:56] ACTION REQUIRED: Manual intervention needed to close position
-[2026-03-19 09:22:56] 
-[2026-03-19 09:22:56] ADDITIONAL ISSUE: Strategy endpoint configuration error (404)
-[2026-03-19 09:22:56] 
-[2026-03-19 09:22:56] SYSTEM STATUS: Trading dashboard operational, 2/2 daily trades used
-[2026-03-19 09:22:56] NEXT CHECK: 5 minutes
-[2026-03-19 09:28:13] CRITICAL: Stop-loss execution failure PERSISTS
-[2026-03-19 09:28:13] DETAILS: ETH position still open and below stop-loss threshold for 5+ minutes
-[2026-03-19 09:28:13] POSITION: ETH bought at $2325.28, current: $2201.44 (-5.3% loss)
-[2026-03-19 09:28:13] QUANTITY: 0.086 ETH
-[2026-03-19 09:28:13] UNREALIZED LOSS: $10.65
-[2026-03-19 09:28:13] STOP-LOSS THRESHOLD: 5.0% (triggered at 5.3%)
-[2026-03-19 09:28:13] TIME SINCE TRIGGER: ~48 minutes total
-[2026-03-19 09:28:13] TOTAL AT RISK: $10.65
-[2026-03-19 09:28:13] URGENCY: Position continues to accumulate losses
-[2026-03-19 09:28:13] 
-[2026-03-19 09:28:13] PORTFOLIO STATUS:
-[2026-03-19 09:28:13]   Total portfolio value: $781.76 (78.2% of capital)
-[2026-03-19 09:28:13]   Available capital: $199.96
-[2026-03-19 09:28:13]   Total drawdown: -1.8% ($18.27)
-[2026-03-19 09:28:13]   Other positions: BTC -3.9% ($7.81), BTC -0.3% ($0.52), ETH +0.4% ($0.72)
-[2026-03-19 09:28:13] 
-[2026-03-19 09:28:13] ADDITIONAL ISSUE: Strategy endpoint configuration error persists (404)
-[2026-03-19 09:28:13] 
-[2026-03-19 09:28:13] ACTION REQUIRED: Immediate manual intervention to close ETH position
-[2026-03-19 09:28:13] RECOMMENDATION: Close ETH position at market price to limit further losses
-[2026-03-19 09:28:13] 
-[2026-03-19 09:28:13] NEXT CHECK: 5 minutes
-[2026-03-19 09:50:17] CRITICAL: Stop-loss execution failure PERSISTS - URGENT ACTION REQUIRED
-[2026-03-19 09:50:17] DETAILS: ETH position has been below stop-loss threshold for OVER 70 MINUTES
-[2026-03-19 09:50:17] POSITION: ETH bought at $2,325.28, current: $2,203.60 (-5.2% loss)
-[2026-03-19 09:50:17] QUANTITY: 0.086 ETH
-[2026-03-19 09:50:17] UNREALIZED LOSS: $10.46
-[2026-03-19 09:50:17] STOP-LOSS THRESHOLD: 5.0% (triggered at 5.2%)
-[2026-03-19 09:50:17] TIME SINCE TRIGGER: ~70 minutes total
-[2026-03-19 09:50:17] TOTAL AT RISK: $10.46 (additional losses accumulating)
-[2026-03-19 09:50:17] 
-[2026-03-19 09:50:17] PORTFOLIO STATUS:
-[2026-03-19 09:50:17]   Total portfolio value: $781.14 (estimated)
-[2026-03-19 09:50:17]   Available capital: $199.96 (estimated)
-[2026-03-19 09:50:17]   Total drawdown: -1.8% ($17.90)
-[2026-03-19 09:50:17]   Other positions: BTC -3.9% ($7.82), BTC -0.3% ($0.53), ETH +0.5% ($0.91)
-[2026-03-19 09:50:17] 
-[2026-03-19 09:50:17] SYSTEM ISSUES:
-[2026-03-19 09:50:17]   1. Stop-loss mechanism not executing automatically
-[2026-03-19 09:50:17]   2. Strategy configuration missing (no strategy file)
-[2026-03-19 09:50:17]   3. Daily trade limit reached (2/2) - no new trades possible
-[2026-03-19 09:50:17] 
-[2026-03-19 09:50:17] IMMEDIATE ACTION REQUIRED:
-[2026-03-19 09:50:17]   1. MANUALLY CLOSE ETH position at market price
-[2026-03-19 09:50:17]   2. Investigate stop-loss execution failure
-[2026-03-19 09:50:17]   3. Create strategy configuration file
-[2026-03-19 09:50:17] 
-[2026-03-19 09:50:17] RISK LEVEL: HIGH - Position continues to accumulate losses
-[2026-03-19 09:50:17] NEXT CHECK: 5 minutes
-[2026-03-19 09:56:19] CRITICAL: MULTIPLE STOP-LOSS EXECUTION FAILURES - URGENT ACTION REQUIRED
-[2026-03-19 09:56:19] DETAILS: 2 ETH positions have been below stop-loss threshold for OVER 75 MINUTES
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] POSITION 1 DETAILS:
-[2026-03-19 09:56:19]   Asset: ETH
-[2026-03-19 09:56:19]   Quantity: 0.004289 ETH
-[2026-03-19 09:56:19]   Buy Price: $2,331.78
-[2026-03-19 09:56:19]   Current Price: $2,203.23
-[2026-03-19 09:56:19]   Loss: -5.5% ($0.55)
-[2026-03-19 09:56:19]   Stop-loss Threshold: 5.0% (triggered at 5.5%)
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] POSITION 2 DETAILS:
-[2026-03-19 09:56:19]   Asset: ETH
-[2026-03-19 09:56:19]   Quantity: 0.086000 ETH
-[2026-03-19 09:56:19]   Buy Price: $2,325.28
-[2026-03-19 09:56:19]   Current Price: $2,203.23
-[2026-03-19 09:56:19]   Loss: -5.2% ($10.50)
-[2026-03-19 09:56:19]   Stop-loss Threshold: 5.0% (triggered at 5.2%)
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] TOTAL AT RISK: $11.05 (additional losses accumulating)
-[2026-03-19 09:56:19] TIME SINCE FIRST TRIGGER: ~75 minutes total
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] PORTFOLIO STATUS:
-[2026-03-19 09:56:19]   Total portfolio value: $801.29 (80.1% of capital)
-[2026-03-19 09:56:19]   Available capital: $198.71
-[2026-03-19 09:56:19]   Total drawdown: -1.88% ($18.75)
-[2026-03-19 09:56:19]   Other positions: BTC -4.2% ($0.42), BTC -3.9% ($7.73), BTC -0.2% ($0.43), ETH +0.4% ($0.88)
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] SYSTEM ISSUES:
-[2026-03-19 09:56:19]   1. Stop-loss mechanism not executing automatically (critical failure)
-[2026-03-19 09:56:19]   2. Strategy configuration missing (no strategy file)
-[2026-03-19 09:56:19]   3. Daily trade limit reached (2/2) - no new trades possible
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] IMMEDIATE ACTION REQUIRED:
-[2026-03-19 09:56:19]   1. MANUALLY CLOSE both ETH positions at market price
-[2026-03-19 09:56:19]   2. Investigate stop-loss execution failure in trading system
-[2026-03-19 09:56:19]   3. Create strategy configuration file to prevent future issues
-[2026-03-19 09:56:19]   4. Consider disabling automated trading until stop-loss is fixed
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] RISK LEVEL: HIGH - Positions continue to accumulate losses
-[2026-03-19 09:56:19] URGENCY: IMMEDIATE - Every minute increases potential losses
-[2026-03-19 09:56:19] 
-[2026-03-19 09:56:19] NEXT CHECK: 5 minutes
+=== CRITICAL TRADING ALERT - 2026-03-19 10:09:57 ===
+
+URGENT: STOP-LOSS EXECUTION FAILURE PERSISTS - 80+ MINUTES
+
+CRITICAL ISSUES DETECTED:
+1. 🚨 STOP-LOSS EXECUTION FAILURE: Multiple ETH positions remain open despite being below stop-loss threshold for 80+ minutes
+2. 🚨 SYSTEM CONFIGURATION ERROR: Strategy endpoint returns 404 (no strategy file)
+3. 🚨 DAILY TRADE LIMIT REACHED: 2/2 trades used - no new trades possible
+
+POSITIONS AT RISK (based on last detailed analysis):
+ETH Position 1:
+  - Quantity: 0.004289 ETH
+  - Buy Price: $2,331.78
+  - Current Price: $2,203.23 (estimated)
+  - Loss: -5.5% ($0.55)
+  - Stop-loss Threshold: 5.0% (TRIGGERED)
+
+ETH Position 2:
+  - Quantity: 0.086000 ETH
+  - Buy Price: $2,325.28
+  - Current Price: $2,203.23 (estimated)
+  - Loss: -5.2% ($10.50)
+  - Stop-loss Threshold: 5.0% (TRIGGERED)
+
+TOTAL AT RISK: $11.05 (additional losses accumulating)
+
+PORTFOLIO STATUS (estimated):
+- Total Portfolio Value: ~$801.29 (80.1% of capital)
+- Available Capital: ~$198.71
+- Total Drawdown: ~1.88% ($18.75)
+- Other positions: BTC positions with -4.2%, -3.9%, -0.2% losses
+
+MARKET CONDITIONS:
+- BTC/USD: $71,231.00 (BUY signal, near support)
+- ETH/USD: $2,203.23 (SELL signal, near resistance)
+- ETH showing bearish trend: Price below both SMAs (10: $2,193.51, 20: $2,233.76)
+
+IMMEDIATE ACTION REQUIRED:
+1. 🔴 MANUALLY CLOSE ETH POSITIONS 1 & 2 AT MARKET PRICE
+   - Use trading dashboard or exchange interface
+   - Close positions immediately to limit further losses
+
+2. 🔴 INVESTIGATE STOP-LOSS EXECUTION FAILURE
+   - Check trading system logs
+   - Verify stop-loss order placement
+   - Test stop-loss functionality
+
+3. 🔴 CREATE STRATEGY CONFIGURATION
+   - Fix 404 error on /strategy endpoint
+   - Ensure proper risk parameters are configured
+
+4. 🔴 CONSIDER SYSTEM PAUSE
+   - Disable automated trading until stop-loss is fixed
+   - Review all open positions
+   - Adjust risk parameters if needed
+
+RISK LEVEL: HIGH - CRITICAL
+- Positions continue to accumulate losses
+- Stop-loss mechanism completely non-functional
+- Market conditions unfavorable for ETH (SELL signal)
+
+URGENCY: IMMEDIATE - Every minute increases potential losses
+
+NEXT MONITORING CHECK: 5 minutes
+Alert generated by Trading Dashboard Monitor
