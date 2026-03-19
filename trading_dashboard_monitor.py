@@ -50,8 +50,8 @@ def fetch_data():
         # Try each port
         for port in ports_to_try:
             try:
-                # Try the trading progress endpoint first
-                test_url = f"http://localhost:{port}/api/trading/progress"
+                # Try the status endpoint first
+                test_url = f"http://localhost:{port}/status"
                 response = requests.get(test_url, timeout=5)
                 if response.status_code == 200:
                     # Try to parse as JSON
@@ -68,6 +68,16 @@ def fetch_data():
             logging.error("Could not find dashboard on any port")
             return None
         
+        # Get trades data
+        trades_data = None
+        try:
+            trades_url = f"{dashboard_url}/trades"
+            trades_response = requests.get(trades_url, timeout=5)
+            if trades_response.status_code == 200:
+                trades_data = trades_response.json()
+        except:
+            trades_data = {"count": 0, "trades": []}
+        
         # Read trading logs directly from file since API endpoint doesn't exist
         trading_logs = []
         try:
@@ -80,14 +90,21 @@ def fetch_data():
         # For now, we'll use mock data or skip this
         prices_data = {"BTC/USD": 74800.0, "ETH/USD": 2317.71}  # Mock data based on recent trades
         
+        # Extract capital and risk parameters from status
+        capital = status_data.get('capital', 10000.0)
+        risk_params = status_data.get('risk_parameters', {})
+        stop_loss = risk_params.get('stop_loss', 0.01)
+        take_profit = risk_params.get('take_profit', 0.02)
+        
         # Combine all data
         combined_data = {
             'status': status_data,
+            'trades': trades_data,
             'logs': {"logs": "\n".join(trading_logs)},  # Mock logs structure
             'prices': prices_data,
-            'capital': 10000.0,  # Default from app.py MOCK_TRADING_CONFIG
-            'stop_loss': 0.01,   # Default from app.py MOCK_TRADING_CONFIG
-            'take_profit': 0.02, # Default from app.py MOCK_TRADING_CONFIG
+            'capital': capital,
+            'stop_loss': stop_loss,
+            'take_profit': take_profit,
             'trading_logs': trading_logs,
             'status_updates': [f"Trading: {status_data.get('status', 'unknown')} - Last update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"]
         }

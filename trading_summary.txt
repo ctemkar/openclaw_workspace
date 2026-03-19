@@ -1,5 +1,5 @@
 TRADING ANALYSIS REPORT
-Generated: 2026-03-19 14:42:29.199402
+Generated: 2026-03-19 15:15:57.120605
 ==================================================
 
 ============================================================
@@ -10,25 +10,25 @@ Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
 📊 Today's trades: 2/2
 
 🔍 Analyzing BTC/USD...
-   Price: $70177.95
+   Price: $70208.34
    24h Change: N/A
-   SMA 10: $71044.10
-   SMA 20: $71349.70
-   Support: $70544.35
+   SMA 10: $70931.98
+   SMA 20: $71211.51
+   Support: $69533.95
    Resistance: $71627.41
    Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $70544.35 (current: $70177.95)
+   Reasons: Near support level: $69533.95 (current: $70208.34)
    ⏸️ Skipping: Max daily trades reached
 
 🔍 Analyzing ETH/USD...
-   Price: $2173.18
+   Price: $2167.17
    24h Change: N/A
-   SMA 10: $2197.32
-   SMA 20: $2202.07
-   Support: $2179.09
+   SMA 10: $2193.77
+   SMA 20: $2197.04
+   Support: $2144.69
    Resistance: $2232.71
    Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2179.09 (current: $2173.18)
+   Reasons: Near support level: $2144.69 (current: $2167.17)
    ⏸️ Skipping: Max daily trades reached
 
 📈 Trading Summary:
