@@ -1,52 +1,82 @@
-
 import requests
 import json
 from datetime import datetime
 
-TRADING_URL = "http://localhost:5001/"
-MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_LOG_FILE = "./trading_monitoring.log"
+CRITICAL_ALERTS_FILE = "./critical_alerts.log"
+URL = "http://localhost:5001/"
 
 def fetch_trading_data():
     try:
-        response = requests.get(TRADING_URL)
-        response.raise_for_status() # Raise an exception for bad status codes
+        response = requests.get(URL)
+        response.raise_for_status()  # Raise an exception for bad status codes
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
+    except json.JSONDecodeError:
+        print("Error decoding JSON response.")
+        return None
 
-def parse_and_log_data(data):
-    if not data:
-        return
-
+def log_trading_data(data):
     timestamp = datetime.now().isoformat()
-    
-    # Log all extracted data
-    log_entry = {"timestamp": timestamp, "data": data}
-    with open(MONITORING_LOG, "a") as f:
-        f.write(json.dumps(log_entry) + "\n")
+    log_entry = f"{timestamp} - {json.dumps(data)}\n"
+    with open(TRADING_LOG_FILE, "a") as f:
+        f.write(log_entry)
 
-    # Check for alerts
-    alerts = []
-    if "risk_parameters" in data:
-        risk_params = data["risk_parameters"]
-        if "stop_loss_triggered" in risk_params and risk_params["stop_loss_triggered"]:
-            alerts.append(f"Stop loss triggered at {timestamp}")
-        if "take_profit_triggered" in risk_params and risk_params["take_profit_triggered"]:
-            alerts.append(f"Take profit triggered at {timestamp}")
-        if "drawdown_critical" in risk_params and risk_params["drawdown_critical"]:
-            alerts.append(f"Critical drawdown indicators at {timestamp}")
+def log_critical_alert(alert_type, details):
+    timestamp = datetime.now().isoformat()
+    log_entry = f"{timestamp} - {alert_type.upper()}: {json.dumps(details)}\n"
+    with open(CRITICAL_ALERTS_FILE, "a") as f:
+        f.write(log_entry)
 
-    if alerts:
-        with open(CRITICAL_ALERTS_LOG, "a") as f:
-            for alert in alerts:
-                f.write(f"{alert}\n")
-        print("Critical alerts triggered. See log file.")
+def generate_summary(data, critical_alerts):
+    summary = f"Trading Dashboard Analysis - {datetime.now().isoformat()}\n"
+    summary += "=========================================\n\n"
+
+    if data:
+        summary += "Current Trading Status:\n"
+        summary += f"  - Status: {data.get('status', 'N/A')}\n"
+        summary += f"  - Risk Parameters: {json.dumps(data.get('risk_parameters', {}))}\n"
+        summary += f"  - Current Logs: {json.dumps(data.get('trading_logs', []))}\n\n"
+    else:
+        summary += "Could not fetch current trading data.\n\n"
+
+    if critical_alerts:
+        summary += "CRITICAL ALERTS DETECTED:\n"
+        summary += "-------------------------\n"
+        for alert in critical_alerts:
+            summary += f"- {alert['type'].upper()}: {alert['details']}\n"
+    else:
+        summary += "No critical alerts detected.\n"
+
+    return summary
 
 def main():
-    trading_data = fetch_trading_data()
-    parse_and_log_data(trading_data)
+    data = fetch_trading_data()
+    critical_alerts = []
+
+    if data:
+        log_trading_data(data)
+
+        # Detect critical alerts
+        if data.get("stop_loss_triggered"):
+            alert_details = {"details": "Stop-loss order was triggered."}
+            log_critical_alert("stop-loss", alert_details)
+            critical_alerts.append({"type": "stop-loss", "details": alert_details})
+
+        if data.get("take_profit_triggered"):
+            alert_details = {"details": "Take-profit order was triggered."}
+            log_critical_alert("take-profit", alert_details)
+            critical_alerts.append({"type": "take-profit", "details": alert_details})
+
+        if data.get("critical_drawdown"):
+            alert_details = {"details": "Critical drawdown event occurred."}
+            log_critical_alert("critical-drawdown", alert_details)
+            critical_alerts.append({"type": "critical-drawdown", "details": alert_details})
+
+    summary = generate_summary(data, critical_alerts)
+    print(summary) # This will be captured by the cron job's output
 
 if __name__ == "__main__":
     main()
