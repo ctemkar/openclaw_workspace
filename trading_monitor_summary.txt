@@ -1,67 +1,86 @@
-TRADING DASHBOARD MONITORING SUMMARY
-========================================
-Timestamp: 2026-03-19 11:33:35 (Asia/Bangkok)
-Job ID: d24753a5-a426-44a3-a7a6-1a4f6ee7ed38
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-19 12:10 PM (Asia/Bangkok)
 
 EXECUTIVE SUMMARY:
-------------------
-⚠️ CRITICAL ALERT: ETH/USD positions exceeding 5% stop-loss threshold
-✅ System operational and running normally
-⚠️ Daily trade limit reached (2/2 trades used)
-⏳ Next analysis in ~8 minutes
+🚨 CRITICAL ALERT: Trading system has STOP-LOSS EXECUTION FAILURE
+⚠️ HIGH RISK: Multiple positions approaching stop-loss thresholds
+🔴 SYSTEM INTEGRITY: COMPROMISED - Manual intervention required
 
-KEY FINDINGS:
--------------
-1. RISK PARAMETER VIOLATION:
-   - ETH/USD: 5.2% drawdown (exceeds 5% stop-loss)
-   - BTC/USD: 4.1% drawdown (below stop-loss, but close)
+DETAILED FINDINGS:
 
-2. TRADING ACTIVITY:
-   - Total trades in history: 10
-   - Today's trades: 2/2 (limit reached)
-   - Recent ETH buy: $2,331.78 (now at $2,210.72)
+1. SYSTEM STATUS:
+   - Dashboard: Operational on port 5001
+   - Status: "running"
+   - Last analysis: 12:05 PM
+   - Analysis schedule: Hourly
+   - Capital: $1000.00
+   - Trading pairs: BTC/USD, ETH/USD
 
-3. MARKET ANALYSIS (from 10:41):
-   - BTC/USD: BUY signal (70% confidence)
-   - ETH/USD: SELL signal (70% confidence)
-   - Both trades skipped due to daily limit
+2. RISK PARAMETERS:
+   - Stop-loss: 5% (CRITICAL - NOT EXECUTING)
+   - Take-profit: 10%
+   - Max trades per day: 2/2 (Limit reached)
 
-4. SYSTEM STATUS:
-   - Capital: $1,000.00
-   - Available: $1,000.00 (from summary)
-   - P&L: $0.00 reported
-   - Port 5001: accessible
+3. POSITION ANALYSIS:
+   - Total positions: 10 (7 BTC, 3 ETH)
+   - ETH/USD: 2 positions EXCEEDED stop-loss (5.92% and 5.65% drawdown)
+   - BTC/USD: 6 positions within 0.36%-0.69% of stop-loss
+   - Time since first stop-loss trigger: ~2 hours
 
-IMMEDIATE ACTIONS REQUIRED:
----------------------------
-1. MANUAL INTERVENTION NEEDED for ETH positions
-2. Review stop-loss execution for ETH positions >5% loss
-3. Monitor BTC positions (4.1% drawdown, near stop-loss)
+4. MARKET CONDITIONS:
+   - BTC/USD: $70,873.77
+   - ETH/USD: $2,193.90
+   - Market signals: BUY for both (70% confidence)
+   - Trading limit: Reached (2/2 trades today)
 
-SYSTEM CONSTRAINTS:
--------------------
-- Cannot execute new trades today (daily limit reached)
-- Next automated analysis at ~11:41 (hourly schedule)
-- Manual override may be required for risk management
+5. SYSTEM INTEGRITY ISSUES:
+   - API Key errors detected in logs
+   - Stop-loss execution appears non-functional
+   - Positions remain open despite exceeding thresholds
+   - Error logs show "update_task_statuses" not defined
 
-RECOMMENDATIONS:
-----------------
-1. Execute stop-loss on ETH positions exceeding 5% threshold
-2. Consider adjusting stop-loss parameter to 4% for tighter risk control
-3. Review position sizing strategy
-4. Monitor system for next analysis cycle
-5. Consider manual trade if risk becomes unacceptable
+6. CRITICAL RISK ASSESSMENT:
+   - Stop-loss failure: CRITICAL
+   - Market exposure: HIGH
+   - Potential losses: ESCALATING
+   - System reliability: LOW
+   - Action urgency: IMMEDIATE
 
-ALERT STATUS:
--------------
-🚨 CRITICAL: ETH stop-loss breach
-⚠️ WARNING: BTC near stop-loss
-✅ NORMAL: System operation
-⚠️ WARNING: Daily limit reached
+RECOMMENDED ACTIONS:
+
+1. IMMEDIATE (Within 5 minutes):
+   - Manual liquidation of 2 ETH positions exceeding stop-loss
+   - Consider manual liquidation of 6 BTC positions near stop-loss
+   - Pause trading system
+
+2. SHORT-TERM (Within 30 minutes):
+   - Investigate stop-loss execution mechanism
+   - Check API key configuration
+   - Review error logs for system failures
+   - Restart trading system with enhanced monitoring
+
+3. MEDIUM-TERM (Within 2 hours):
+   - Implement redundant stop-loss monitoring
+   - Add alerting for execution failures
+   - Test stop-loss functionality with small trades
+   - Update system documentation
+
+4. LONG-TERM (Within 24 hours):
+   - Implement automated health checks
+   - Add fail-safe mechanisms
+   - Create escalation procedures
+   - Document incident response plan
 
 NEXT STEPS:
------------
-- Monitor for next analysis at ~11:41
-- Review critical_alerts.log for detailed position analysis
-- Check trading_monitoring.log for full system report
-- Manual decision required on ETH positions
+1. Acknowledge this alert
+2. Execute manual stop-loss orders
+3. Investigate system failure root cause
+4. Implement corrective actions
+5. Resume trading only after verification
+
+MONITORING CONTINUES:
+- Next scheduled check: 1:10 PM
+- Critical alerts logged to: critical_alerts.log
+- Full monitoring logs: trading_monitoring.log
+
+=== END OF SUMMARY ===
