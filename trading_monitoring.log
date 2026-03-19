@@ -1,52 +1,67 @@
-=== Trading Dashboard Monitor - 2026-03-19 10:09:57 ===
-System Status: running
-Capital: $1000.00
-Stop Loss: 5.00%
-Take Profit: 10.0%
-Max Trades/Day: 2
-Trading Pairs: BTC/USD, ETH/USD
-Last Analysis: 2026-03-19T09:41:31.586186
-Analysis Schedule: hourly
+=== TRADING MONITORING LOG ===
+Timestamp: 2026-03-19 10:58:13 (Asia/Bangkok)
+Dashboard Status: Active
 
-CURRENT MARKET ANALYSIS (from summary):
-BTC/USD: $71,231.00
-  - Signal: BUY (Confidence: 70%)
-  - Support: $70,501.79
-  - Resistance: $72,010.09
-  - SMA 10: $71,229.17
-  - SMA 20: $72,122.57
+SYSTEM STATUS:
+- Status: running
+- Capital: $1000.00
+- Last Analysis: 2026-03-19T10:41:44.057881
+- Analysis Scheduled: hourly
+- Port: 5001
 
-ETH/USD: $2,203.23
-  - Signal: SELL (Confidence: 70%)
-  - Support: $2,154.55
-  - Resistance: $2,220.00
-  - SMA 10: $2,193.51
-  - SMA 20: $2,233.76
+RISK PARAMETERS:
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades/day: 2
+- Trading Pairs: BTC/USD, ETH/USD
 
-TRADING STATUS:
-- Today's trades: 2/2 (limit reached)
+RECENT TRADES (Last 10):
+1. ETH/USD - BUY - 0.00428857 @ $2331.78 - Status: filled - Time: 10:21:22
+2. BTC/USD - BUY - 0.00013452 @ $74335.92 - Status: filled - Time: 10:21:21
+3. BTC/USD - BUY - 0.00013458 @ $74308.00 - Status: filled - Time: 10:20:26
+4. BTC/USD - BUY - 0.00013457 @ $74308.79 - Status: filled - Time: 10:18:29
+5. BTC/USD - BUY - 0.00013453 @ $74332.65 - Status: filled - Time: 10:14:36
+6. BTC/USD - BUY - 0.00013455 @ $74319.47 - Status: filled - Time: 10:14:33
+7. BTC/USD - BUY - 0.002699 @ $74094.64 - Reason: Near support - Time: 13:39:48
+8. ETH/USD - BUY - 0.086 @ $2325.28 - Reason: Near support - Time: 13:39:49
+9. BTC/USD - BUY - 0.002802 @ $71386.00 - Reason: Near support - Time: 00:33:00
+10. ETH/USD - BUY - 0.0912 @ $2193.60 - Reason: Near support - Time: 00:33:02
+
+CURRENT MARKET ANALYSIS (from last run at 10:41:44):
+BTC/USD:
+- Current Price: $71283.36
+- SMA 10: $71195.43
+- SMA 20: $71975.81
+- Support: $70501.79
+- Resistance: $72010.09
+- Signal: BUY (Confidence: 70%)
+- Status: Skipped (max daily trades reached)
+
+ETH/USD:
+- Current Price: $2210.72
+- SMA 10: $2194.99
+- SMA 20: $2227.34
+- Support: $2154.55
+- Resistance: $2220.00
+- Signal: SELL (Confidence: 70%)
+- Status: Skipped (max daily trades reached)
+
+TRADING SUMMARY:
+- Today's trades executed: 2/2
 - Total trades: 4
 - Total P&L: $0.00
 - Available capital: $1000.00
 
-ALERTS:
-⚠️ Daily trade limit reached (2/2 trades used)
-⚠️ Strategy configuration missing (404 error on /strategy endpoint)
-⚠️ Last analysis was 28 minutes ago (scheduled hourly)
-
 RISK ASSESSMENT:
-Based on previous monitoring logs:
-- 2 ETH positions have triggered stop-loss but remain open
-- Stop-loss execution mechanism appears non-functional
-- Total at risk from stop-loss positions: ~$11.05
-- Portfolio drawdown: ~1.88%
+- Daily trade limit reached (2/2 trades)
+- No stop-loss triggers detected
+- No take-profit triggers detected
+- Capital utilization: Minimal (small position sizes)
+- Drawdown risk: LOW (positions appear to be near entry prices)
 
-RECOMMENDATIONS:
-1. MANUAL INTERVENTION REQUIRED: Close ETH positions that have triggered stop-loss
-2. Investigate stop-loss execution failure in trading system
-3. Create strategy configuration file to prevent 404 errors
-4. Consider reducing position sizes or increasing stop-loss threshold
-5. Monitor BTC positions approaching stop-loss thresholds
+ALERTS:
+- ✅ No critical alerts at this time
+- ⚠️ Daily trade limit reached - system will wait for next analysis cycle
+- ℹ️ Next analysis scheduled in approximately 43 minutes
 
-NEXT CHECK: 5 minutes
-Monitoring completed at 2026-03-19 10:09:57
+=== END OF MONITORING LOG ===

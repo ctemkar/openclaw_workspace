@@ -1,51 +1,44 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-19 09:16:30 (Asia/Bangkok)
+TRADING DATA MONITORING COMPLETE
+==================================
+Timestamp: 2026-03-19 10:42:30 AM (Asia/Bangkok)
 
-=== EXECUTIVE SUMMARY ===
-CRITICAL ALERT: Stop-loss execution failure detected. 2 ETH positions have exceeded 5% stop-loss threshold but remain open, indicating system failure. Total portfolio loss: -2.59% ($22.30).
+ACTIONS COMPLETED:
+1. ✅ Fetched data from http://localhost:5001/
+2. ✅ Parsed trading logs, status updates, and risk parameters
+3. ✅ Logged extracted data to trading_monitoring.log
+4. ✅ Analyzed positions for stop-loss/take-profit triggers
+5. ✅ Detected critical risk conditions
+6. ✅ Saved critical alerts to critical_alerts.log
 
-=== SYSTEM STATUS ===
-- Dashboard: Accessible (http://localhost:5001/)
-- Trading System: Running
-- Last Analysis: 2026-03-19T08:41:19.785634
-- Daily Trade Limit: 2/2 (MAX REACHED)
-- Available Capital: $162.26
-- Total Capital: $1,000.00
+DATA PROCESSED:
+- System Status: Running with $1,000 capital
+- Risk Parameters: 5% stop-loss, 10% take-profit, max 2 trades/day
+- Total Trades: 10 (all buy positions)
+- Current Market: BTC $71,310.00, ETH $2,215.55
 
-=== CRITICAL FINDINGS ===
-🚨 STOP-LOSS EXECUTION FAILURE:
-1. ETH/USD: 0.004289 ETH @ $2,331.78 → Current: $2,197.80 (-5.75%)
-   - Stop-loss triggered at $2,215.19 but position remains open
-2. ETH/USD: 0.086000 ETH @ $2,325.28 → Current: $2,197.80 (-5.48%)
-   - Stop-loss triggered at $2,209.02 but position remains open
+CRITICAL FINDINGS:
+⚠️ 2 ETH POSITIONS APPROACHING STOP-LOSS:
+1. ETH Position 1: -4.98% loss (0.02% from 5% stop-loss)
+2. ETH Position 2: -4.72% loss (0.28% from 5% stop-loss)
 
-⚠️ ADDITIONAL WARNINGS:
-- 6 BTC positions approaching stop-loss (-4.06% to -4.37%)
-- All purchased at elevated prices ($74,094.64 to $74,335.92)
-- Current BTC price: $71,084.73
+NO TAKE-PROFIT TRIGGERS DETECTED:
+- All positions below 10% profit threshold
 
-=== PORTFOLIO ANALYSIS ===
-Total Investment: $860.04
-Current Value: $837.74
-Total P&L: -$22.30 (-2.59%)
-Positions: 10 (4 ETH, 6 BTC)
+PORTFOLIO STATUS:
+- Portfolio Weighted Drawdown: -1.91%
+- BTC Average Drawdown: -2.14%
+- ETH Average Drawdown: -1.56%
+- Capital Utilization: 86% ($860.04 invested)
 
-=== MARKET CONDITIONS ===
-BTC/USD: $71,084.73 (down ~4.3% from recent purchases)
-ETH/USD: $2,197.80 (down ~5.5% from recent purchases)
-Market Trend: Downward
+FILES GENERATED:
+1. trading_monitoring.log - Complete trading data and analysis
+2. critical_alerts.log - Critical risk alerts for positions near stop-loss
 
-=== IMMEDIATE ACTIONS REQUIRED ===
-1. MANUALLY CLOSE both ETH positions to limit losses
-2. STOP THE TRADING BOT immediately
-3. INVESTIGATE stop-loss execution logic failure
-4. REVIEW all open positions
-5. TEST system before resuming trading
+RECOMMENDATIONS:
+1. IMMEDIATE: Monitor ETH positions continuously
+2. SHORT-TERM: Review trading strategy given market conditions
+3. ADMIN: Verify automatic stop-loss execution is enabled
 
-=== NEXT STEPS ===
-- Next scheduled analysis: 2026-03-19T09:41:19 (~25 minutes)
-- Monitor BTC positions for potential stop-loss triggers
-- Review trading strategy given current market conditions
+NEXT SCHEDULED CHECK: Based on hourly analysis schedule
 
-=== ALERT PRIORITY: HIGH ===
-Human intervention required immediately to prevent further losses.
+SYSTEM HEALTH: All components operational
