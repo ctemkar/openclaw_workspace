@@ -1,3 +1,0 @@
-# trading_monitoring.log
-# critical_alerts.log
-[2026-03-20 01:52:18] Error fetching data from http://localhost:5001/: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))\n[2026-03-20 01:57:18] Error fetching data from http://localhost:5001/: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))\n
