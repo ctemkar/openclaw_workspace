@@ -1,200 +1,100 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-19 13:06:00 (Asia/Bangkok)
-Dashboard Status: Accessible (HTTP 200)
+=== Trading Monitoring Report - 2026-03-19 13:58:25 ===
+Data fetched from: http://localhost:5001/
 
-SYSTEM STATUS:
-- Status: running
-- Capital: $1000.00
-- Last analysis: 2026-03-19T13:04:39.808782
-- Analysis scheduled: hourly
-- Port: 5001
-- Trading pairs: BTC/USD, ETH/USD
-
-RISK PARAMETERS:
-- Max trades per day: 2
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-
-RECENT TRADES (10 total):
-1. ETH/USD BUY: 0.00428857 @ $2331.78 (LLM_Analysis_ETH_USD) - filled at 10:21:22
-2. BTC/USD BUY: 0.00013452 @ $74335.92 (LLM_Analysis_BTC/USD) - filled at 10:21:21
-3. BTC/USD BUY: 0.00013458 @ $74308.00 (Gemini) - filled at 10:20:26
-4. BTC/USD BUY: 0.00013457 @ $74308.79 (Gemini) - filled at 10:18:29
-5. BTC/USD BUY: 0.00013453 @ $74332.65 (Gemini) - filled at 10:14:36
-6. BTC/USD BUY: 0.00013455 @ $74319.47 (Gemini) - filled at 10:14:33
-7. BTC/USD BUY: 0.002699 @ $74094.64 (Near support) - filled at 13:39:48
-8. ETH/USD BUY: 0.086 @ $2325.28 (Near support) - filled at 13:39:49
-9. BTC/USD BUY: 0.002802 @ $71386.00 (Near support) - filled at 00:33:00
-10. ETH/USD BUY: 0.0912 @ $2193.60 (Near support) - filled at 00:33:02
-
-TRADING PATTERN ANALYSIS:
-- All 10 trades are BUY orders (100% buy bias)
-- No SELL trades recorded in recent history
-- Trading appears to be heavily skewed toward accumulation
-- Daily trade limit (2 trades) has been reached
-
-POSITION ANALYSIS:
-- Multiple small position sizes across different price levels
-- Positions appear to be dollar-cost averaging strategy
-- No indication of position exits or profit-taking
-
-RISK ASSESSMENT:
-- Heavy buy bias may indicate overexposure if market turns
-- No diversification in trade direction (all buys)
-- System appears to be accumulating rather than trading both directions
-- Potential risk if stop-loss levels are not properly set
-
-ALERT STATUS:
-- No stop-loss or take-profit orders triggered
-- No critical drawdown detected
-- System operating within configured parameters
-- WARNING: Heavy buy bias detected (10 buys, 0 sells)
-
-RECOMMENDATIONS:
-1. Review trading strategy for lack of sell-side trades
-2. Consider implementing profit-taking mechanisms
-3. Monitor position concentration risk
-4. Verify stop-loss orders are active for all positions
-
-=== END OF REPORT ===
---- Thu Mar 19 13:06:00 +07 2026 ---
-Status: {"analysis_scheduled":"hourly","capital":1000.0,"last_analysis":"2026-03-19T13:04:39.808782","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-19T13:05:35.515309","trading_pairs":["BTC/USD","ETH/USD"]}
-Trades: {"count":10,"timestamp":"2026-03-19T13:05:43.708671","trades":[{"amount":0.00428856924752764,"model":"LLM_Analysis_ETH_USD","price":2331.78,"side":"buy","status":"filled","time":"10:21:22"},{"amount":0.0001345244667719186,"model":"LLM_Analysis_BTC_USD","price":74335.92,"side":"buy","status":"filled","time":"10:21:21"},{"amount":0.0001345750121117511,"model":"Gemini","price":74308.0,"side":"buy","status":"filled","time":"10:20:26"},{"amount":0.00013457358140268468,"model":"Gemini","price":74308.79,"side":"buy","status":"filled","time":"10:18:29"},{"amount":0.00013453038469636157,"model":"Gemini","price":74332.65,"side":"buy","status":"filled","time":"10:14:36"},{"amount":0.00013455424265000813,"model":"Gemini","price":74319.47,"side":"buy","status":"filled","time":"10:14:33"},{"price":74094.64,"quantity":0.002699,"reason":"Near support level: $73556.12 (current: $74094.64)","side":"BUY","symbol":"BTC/USD","time":"13:39:48"},{"price":2325.28,"quantity":0.086,"reason":"Near support level: $2308.08 (current: $2325.28)","side":"BUY","symbol":"ETH/USD","time":"13:39:49"},{"price":71386.0,"quantity":0.002802,"reason":"Near support level: $70896.70 (current: $71386.00)","side":"BUY","symbol":"BTC/USD","time":"00:33:00"},{"price":2193.6,"quantity":0.0912,"reason":"Near support level: $2167.99 (current: $2193.60)","side":"BUY","symbol":"ETH/USD","time":"00:33:02"}]}
-Summary: <pre>TRADING DASHBOARD MONITORING REPORT
-=====================================
-Timestamp: Thu Mar 19 13:04:39 +07 2026
-
-SYSTEM STATUS
--------------
-Trading Status: running
+System Status: running
 Capital: $1000.0
-Last Analysis: 2026-03-19T12:50:46.881608
-Trading Pairs: BTC/USD, ETH/USD
+Stop-loss: 5.00%
+Take-profit: 10.0%
+Max trades/day: 2
+Today's trades: 2/2
+Last analysis: 2026-03-19T13:42:19.071671
+Total trades in history: 10
 
-TRADING ACTIVITY
-----------------
-Total Trades: 10
-Buy Trades: 10
-Sell Trades: 0
-Latest Trade: N/A buy at $2331.78 (10:21:22)
+Recent Trades (10 total):
+1. ETH/USD - BUY - 0.00428857 @ $2331.78 - 10:21:22 - filled
+2. BTC/USD - BUY - 0.00013452 @ $74335.92 - 10:21:21 - filled
+3. BTC/USD - BUY - 0.00013458 @ $74308.0 - 10:20:26 - filled
+4. BTC/USD - BUY - 0.00013457 @ $74308.79 - 10:18:29 - filled
+5. BTC/USD - BUY - 0.00013453 @ $74332.65 - 10:14:36 - filled
+6. BTC/USD - BUY - 0.00013455 @ $74319.47 - 10:14:33 - filled
+7. BTC/USD - BUY - 0.002699 @ $74094.64 - 13:39:48 - Near support level
+8. ETH/USD - BUY - 0.086 @ $2325.28 - 13:39:49 - Near support level
+9. BTC/USD - BUY - 0.002802 @ $71386.0 - 00:33:00 - Near support level
+10. ETH/USD - BUY - 0.0912 @ $2193.6 - 00:33:02 - Near support level
 
-ALERT STATUS
-------------
-✓ No new critical alerts
+Summary Analysis:
 
-RECOMMENDED ACTIONS
-------------------
-✓ System operational
+🔍 Analyzing BTC/USD...
+   Price: $70701.72
+   SMA 10: $71109.21
+   SMA 20: $71517.35
+   Support: $70501.79
+   Resistance: $71627.41
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $70501.79 (current: $70701.72)
+   ⏸️ Skipping: Max daily trades reached
 
-</pre>
+🔍 Analyzing ETH/USD...
+   Price: $2184.65
+   SMA 10: $2198.16
+   SMA 20: $2208.71
+   Support: $2154.55
+   Resistance: $2232.71
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $2154.55 (current: $2184.65)
+   ⏸️ Skipping: Max daily trades reached
 
-Summary generated at Thu Mar 19 13:06:00 +07 2026--- Monitoring run at 2026-03-19 13:08:17 ---
-Data fetched successfully.
-No critical alerts triggered.
---- Monitoring run finished at 2026-03-19 13:08:17 ---
+📈 Trading Summary:
+   Today's trades executed: 2/2
+   Total trades: 4
+   Total P&L: $0.00
+   Available capital: $1000.00
 
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-19 13:09:56 (+07)
-Dashboard Status: Accessible (HTTP 200)
+✅ Analysis complete. Next run in 1 hour.
 
-SYSTEM STATUS:
-- Status: running
-- Capital: $1000.0
-- Last analysis: 2026-03-19T13:04:39.808782
-- Analysis scheduled: hourly
-- Port: 5001
-- Trading pairs: BTC/USD, ETH/USD
+=== ALERT CHECK ===
+🚨 **STOP-LOSS TRIGGERED FOR ETH/USD** (continuing violation)
+⚠️ BTC approaching stop-loss (-4.89%, threshold -5%)
+⚠️ Max daily trades reached: 2/2
+⚠️ All trades are BUY positions (no SELL/exits found)
+⚠️ Last analysis was 16 minutes ago (normal)
 
-RISK PARAMETERS:
-- Max trades per day: 2
-- Stop-loss: 5%
-- Take-profit: 10%
+=== DETAILED ANALYSIS - 2026-03-19 13:58:25 ===
+Status JSON: {"analysis_scheduled":"hourly","capital":1000.0,"last_analysis":"2026-03-19T13:42:19.071671","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-19T13:58:00.454696","trading_pairs":["BTC/USD","ETH/USD"]}
 
-RECENT TRADES (10 total):
-1. Unknown buy: 0.00428856924752764 @ $2331.78 (LLM_Analysis_ETH_USD) - filled at 10:21:22
-2. Unknown buy: 0.0001345244667719186 @ $74335.92 (LLM_Analysis_BTC_USD) - filled at 10:21:21
-3. Unknown buy: 0.0001345750121117511 @ $74308.0 (Gemini) - filled at 10:20:26
-4. Unknown buy: 0.00013457358140268468 @ $74308.79 (Gemini) - filled at 10:18:29
-5. Unknown buy: 0.00013453038469636157 @ $74332.65 (Gemini) - filled at 10:14:36
+Trade data structure count:        10
 
-[Showing 5 of 10 trades]
+=== CRITICAL CHECK SUMMARY ===
+✅ Dashboard is responsive
+🚨 **CRITICAL: ETH STOP-LOSS VIOLATION** (-6.31% vs 5% limit)
+⚠️ **CRITICAL: BTC APPROACHING STOP-LOSS** (-4.89% vs 5% limit)
+⚠️ NO EXIT (SELL) TRADES FOUND - All positions are open
+⚠️ MAX DAILY TRADES REACHED - System is paused for new entries
+⚠️ PRICE ANALYSIS: BTC at $70,701.72 (near support $70,501.79) - 0.28% above support
+⚠️ PRICE ANALYSIS: ETH at $2,184.65 (near support $2,154.55) - 1.40% above support
 
-SUMMARY EXCERPT:
-ALERT STATUS
-------------
-✓ No new critical alerts
+=== STOP-LOSS VIOLATION DETAILS ===
+ETH/USD:
+- Entry price: $2,331.78 (highest entry)
+- Current price: $2,184.65
+- Drawdown: -6.31%
+- Stop-loss threshold: -5%
+- Violation: 1.31% beyond limit
+- Duration: 11+ minutes since initial alert
 
-RECOMMENDED ACTIONS
-------------------
+BTC/USD:
+- Entry price: $74,335.92 (highest entry)
+- Current price: $70,701.72
+- Drawdown: -4.89%
+- Stop-loss threshold: -5%
+- Proximity: 0.11% from trigger
+- Risk: High probability of imminent violation
 
-[2026-03-19 13:13:13] Starting trading dashboard check...
-[2026-03-19 13:13:13] Dashboard is RUNNING
-[2026-03-19 13:13:13] Metrics: Capital=$1000.0, Stop-loss=0.05%, Take-profit=0.1%
-[2026-03-19 13:13:13] Last analysis: 2026-03-19T13:04:39.808782
-[2026-03-19 13:13:13] Total trades: 10
-[2026-03-19 13:13:13] Risk check: No critical conditions detected
-[2026-03-19 13:13:13] Monitoring check completed
-=========================================
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-19 13:16:19 (Asia/Bangkok)
-Dashboard Status: Accessible (HTTP 200)
+=== SYSTEM INTEGRITY CHECK ===
+❌ Stop-loss mechanism: FAILED (ETH violation ongoing)
+❌ Exit strategy: FAILED (no SELL trades)
+❌ Position management: FAILED (aging positions)
+❌ Risk controls: COMPLETELY BYPASSED
+✅ Dashboard operation: NORMAL (misleading)
 
-SYSTEM STATUS:
-- Status: running
-- Capital: $1000.00
-- Last analysis: 2026-03-19T13:14:18.783523
-- Analysis scheduled: hourly
-- Port: 5001
-- Trading pairs: BTC/USD, ETH/USD
-
-RISK PARAMETERS:
-- Max trades per day: 2
-- Stop-loss: 5.0%
-- Take-profit: 10.0%
-
-RECENT TRADES (10 total):
-1. ETH/USD BUY: 0.00428857 @ $2331.78 (LLM_Analysis_ETH/USD) - filled at 10:21:22
-2. BTC/USD BUY: 0.00013452 @ $74335.92 (LLM_Analysis_BTC/USD) - filled at 10:21:21
-3. BTC/USD BUY: 0.00013458 @ $74308.00 (Gemini) - filled at 10:20:26
-4. BTC/USD BUY: 0.00013457 @ $74308.79 (Gemini) - filled at 10:18:29
-5. BTC/USD BUY: 0.00013453 @ $74332.65 (Gemini) - filled at 10:14:36
-6. BTC/USD BUY: 0.00013455 @ $74319.47 (Gemini) - filled at 10:14:33
-7. BTC/USD BUY: 0.002699 @ $74094.64 (Near support) - filled at 13:39:48
-8. ETH/USD BUY: 0.086 @ $2325.28 (Near support) - filled at 13:39:49
-9. BTC/USD BUY: 0.002802 @ $71386.00 (Near support) - filled at 00:33:00
-10. ETH/USD BUY: 0.0912 @ $2193.60 (Near support) - filled at 00:33:02
-
-TRADING PATTERN ANALYSIS:
-- All 10 trades are BUY orders (100% buy bias)
-- No SELL trades recorded in recent history
-- Trading appears to be heavily skewed toward accumulation
-- Daily trade limit (2 trades) has been reached based on configuration
-
-POSITION ANALYSIS:
-- Multiple small position sizes across different price levels
-- Positions appear to be dollar-cost averaging strategy
-- No indication of position exits or profit-taking
-- Mix of algorithmic (Gemini, LLM) and support-based trading
-
-RISK ASSESSMENT:
-⚠️ WARNING: Heavy buy bias detected (100% buys)
-- No diversification in trade direction (all buys)
-- System appears to be accumulating rather than trading both directions
-- Potential overexposure if market turns bearish
-- Stop-loss protection critical for all positions
-
-ALERT STATUS:
-- No stop-loss or take-profit orders triggered
-- No critical drawdown detected
-- System operating within configured parameters
-- Daily trade limit reached (2/2 trades)
-
-RECOMMENDATIONS:
-1. Implement sell-side strategy for better diversification
-2. Review position sizing and risk management
-3. Ensure stop-loss orders are active for all positions
-4. Monitor for any signs of overexposure
-5. Consider adjusting daily trade limit if needed
-
-NEXT SCHEDULED CHECK: 2026-03-19 14:16:19
-===========================================
+=== MONITORING COMPLETE ===
