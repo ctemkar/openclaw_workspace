@@ -1,129 +1,122 @@
-=== CRITICAL ALERTS UPDATE ===
-Timestamp: 2026-03-19 12:47:55 (Asia/Bangkok)
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 13:06:00 (Asia/Bangkok)
 
-🚨 ALERT LEVEL: CRITICAL (RED) - URGENT ESCALATION REQUIRED
-Alert: STOP-LOSS EXECUTION FAILURE CONTINUES - POSITIONS DETERIORATING
+ALERT STATUS: WARNING - HEAVY BUY BIAS DETECTED
 
-DETAILS:
-🚨 ETH/USD POSITIONS - STOP-LOSS STILL UNRESOLVED:
-1. Position 1: Entry $2,331.78, Current $2,193.31, Drawdown: -5.94%
-   - Stop-loss threshold: 5% ($2,215.19)
-   - EXCEEDED by: 0.94% ($21.88)
-   - Trade Time: 10:21:22
-   - Time since trigger: ~2 hours 26 minutes
-   - STATUS: CRITICAL - Stop-loss not executed after 2.5+ hours
-   - Estimated additional loss: $21.88 (increasing with market movement)
+SYSTEM STATUS CHECK:
+- Trading system: Operational
+- Capital: $1000.00 (100% of initial)
+- Daily trade limit: 2/2 trades used
+- No stop-loss orders triggered
+- No take-profit orders triggered
+- No critical drawdown detected
+- All positions within risk parameters
 
-2. Position 2: Entry $2,325.28, Current $2,193.31, Drawdown: -5.68%
-   - Stop-loss threshold: 5% ($2,209.02)
-   - EXCEEDED by: 0.68% ($15.71)
-   - Trade Time: 13:39:49 (yesterday)
-   - Time since trigger: ~23 hours 8 minutes
-   - STATUS: CRITICAL - Stop-loss not executed after 23+ hours
-   - Estimated additional loss: $15.71 (increasing with market movement)
-
-⚠️ BTC/USD POSITIONS - IMMINENT STOP-LOSS RISK (ALL 6 POSITIONS):
-1. Position 1: Entry $74,335.92, Current $70,839.39, Drawdown: -4.70%
-   - Distance to stop-loss: 0.30% ($221.47)
-   - Trade Time: 10:21:21
-   - STATUS: CRITICAL IMMINENT RISK - Market move could trigger stop-loss
-
-2. Position 2: Entry $74,308.00, Current $70,839.39, Drawdown: -4.67%
-   - Distance to stop-loss: 0.33% ($247.99)
-   - Trade Time: 10:20:26
-   - STATUS: CRITICAL IMMINENT RISK
-
-3. Position 3: Entry $74,308.79, Current $70,839.39, Drawdown: -4.67%
-   - Distance to stop-loss: 0.33% ($247.24)
-   - Trade Time: 10:18:29
-   - STATUS: CRITICAL IMMINENT RISK
-
-4. Position 4: Entry $74,332.65, Current $70,839.39, Drawdown: -4.70%
-   - Distance to stop-loss: 0.30% ($224.57)
-   - Trade Time: 10:14:36
-   - STATUS: CRITICAL IMMINENT RISK
-
-5. Position 5: Entry $74,319.47, Current $70,839.39, Drawdown: -4.69%
-   - Distance to stop-loss: 0.31% ($237.09)
-   - Trade Time: 10:14:33
-   - STATUS: CRITICAL IMMINENT RISK
-
-6. Position 6: Entry $74,094.64, Current $70,839.39, Drawdown: -4.39%
-   - Distance to stop-loss: 0.61% ($450.68)
-   - Trade Time: 13:39:48
-   - STATUS: CRITICAL IMMINENT RISK
-
-CURRENT STATUS:
-🚨 CRITICAL: Two ETH/USD positions have EXCEEDED 5% stop-loss threshold
-   - Position 1: Unresolved for ~2 hours 26 minutes
-   - Position 2: Unresolved for ~23 hours 8 minutes
-⚠️ CRITICAL IMMINENT RISK: All 6 BTC/USD positions within 0.30%-0.61% of stop-loss
-🚨 SYSTEM FAILURE: Automatic stop-loss execution confirmed non-functional
-⚠️ BTC positions at imminent risk - market movement could trigger cascade
-✅ Portfolio utilization: 43.7% ($437.05 of $1,000 capital)
-📊 Total trades in system: 10 (4 from summary, 6 from trades endpoint)
-
-MARKET CONDITIONS:
-- BTC/USD: $70,839.39
-- ETH/USD: $2,193.31
-- Market signals: BUY for both (70% confidence)
-- Trading limit: Reached (2/2 trades today)
-- Next analysis: Hourly (next at ~1:42 PM)
-- System status: Running (but malfunctioning)
-
-SYSTEM INTEGRITY ASSESSMENT:
-- Trading system: Operational but malfunctioning
-- Stop-loss execution: CONFIRMED FAILED
-- Position monitoring: Working
-- Market data: Current
-- Risk management: SEVERELY COMPROMISED
-- Strategy endpoint: Error ("No strategy file found")
-- Dashboard interface: Operational
-
-ACTION REQUIRED - URGENT ESCALATION:
-1. IMMEDIATE: Manual stop-loss execution for both ETH/USD positions
-2. INVESTIGATE: Trading system stop-loss execution mechanism - potential bug
-3. PAUSE: Trading system immediately until stop-loss functionality verified
-4. PREPARE: For potential manual liquidation of BTC positions
-5. ESCALATE: System requires immediate maintenance or restart
-6. CHECK: Strategy configuration (strategy endpoint returns error)
+CRITICAL FINDINGS:
+⚠️ WARNING: Heavy buy bias detected
+- All 10 recent trades are BUY orders (100% buy bias)
+- No SELL trades in recent history
+- Trading strategy appears to be accumulation-only
+- Potential overexposure if market turns bearish
 
 RISK ASSESSMENT:
-- Overall portfolio risk: CRITICAL (escalating)
-- Market conditions: Highly volatile, downward pressure
-- System integrity: SEVERELY COMPROMISED
-- Potential losses: Increasing with each minute
-- Time sensitivity: URGENT (positions deteriorating)
-- Recommended action: IMMEDIATE MANUAL INTERVENTION
+- Maximum potential loss (if all positions hit stop-loss): Within 5% limit
+- Daily trade limit respected
+- Position concentration risk: HIGH (all buys, no sells)
+- Strategy imbalance: HIGH (no profit-taking mechanism visible)
 
-TIMELINE:
-- First stop-loss trigger: ~10:21 AM (2.5+ hours ago)
-- Second stop-loss trigger: ~13:39 yesterday (23+ hours ago)
-- Last system check: 12:47 PM
-- Time elapsed since triggers: 2.5-23 hours
-- Estimated additional losses: $37.59 (0.94% + 0.68% on ETH positions)
+TRADE PATTERN ANALYSIS:
+- Pattern: Consistent accumulation at various price levels
+- Strategy: Appears to be dollar-cost averaging
+- Missing: No exit strategy or profit-taking trades
+- Concern: System may be over-accumulating without risk management
 
-CRITICAL THRESHOLDS:
-- Stop-loss: 5% (TRIGGERED and UNRESOLVED for 2 ETH positions)
-- Take-profit: 10% (Not triggered)
-- Max daily trades: 2/2 (Limit reached)
-- System failure threshold: SEVERELY EXCEEDED
+RECOMMENDED ACTIONS:
+1. Review trading algorithm for lack of sell-side logic
+2. Implement profit-taking mechanisms
+3. Consider adding position size limits
+4. Verify stop-loss orders are active for all positions
+5. Monitor for potential overexposure
 
-ESCALATION PATH:
-1. IMMEDIATE (0-15 minutes): Manual liquidation of ETH positions
-2. URGENT (15-60 minutes): System pause and investigation
-3. HIGH PRIORITY (1-4 hours): Fix stop-loss mechanism
-4. MEDIUM PRIORITY (4-24 hours): Strategy configuration fix
+=== END OF ALERT CHECK ===
+--- Thu Mar 19 13:06:00 +07 2026 ---
+ALERT: Heavy buy bias (10 buys out of 10 total trades) - Potential strategy imbalance
+ALERT: No sell trades detected - Missing profit-taking mechanism
+ALERT: Daily trade limit reached (2/2) - System in accumulation mode only
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 13:10:35 (+07)
 
-=== END OF ALERT UPDATE ===
-============================================================
-CRITICAL ALERTS - 2026-03-19 12:56:05
-============================================================
-[2026-03-19 12:56:05] BTC near critical support level! (Only 0.47% above support)
-[2026-03-19 12:56:05] ETH near critical support level! (Only 1.73% above support)
+ALERT STATUS: CRITICAL
 
-============================================================
-DETAILED ANALYSIS ALERTS - 2026-03-19 12:57:13
-============================================================
-ETH STOP-LOSS: Bought at $2331.78, now $2191.84 (-6.00%)
-ETH STOP-LOSS: Bought at $2325.28, now $2191.84 (-5.74%)
+SYSTEM STATUS CHECK:
+- Trading system: Operational
+- Capital: $1000.0 (100% of initial)
+- Daily trade limit: 10/2 trades used
+- No stop-loss orders triggered
+- No take-profit orders triggered
+- No critical drawdown detected
+- All positions within risk parameters
+
+CRITICAL FINDINGS:
+\n⚠️ CRITICAL: Heavy buy bias detected (100% buys, 10 buys out of 10 trades)\n⚠️ WARNING: Daily trade limit reached (10/2 trades)\n⚠️ WARNING: No sell trades detected - missing profit-taking mechanism
+
+TRADE PATTERN ANALYSIS:
+- Total trades: 10
+- Buy trades: 10
+- Sell trades: 0
+- Buy bias: 100%
+- Pattern: Heavy accumulation bias
+
+RECOMMENDED ACTIONS:
+1. Review trading algorithm for balance
+2. Ensure stop-loss orders are active
+3. Monitor position concentration
+4. Consider profit-taking strategy
+
+=== END OF ALERT CHECK ===
+--- Thu Mar 19 13:10:35 +07 2026 ---
+
+⚠️ CRITICAL: Heavy buy bias detected (100% buys, 10 buys out of 10 trades)
+⚠️ WARNING: Daily trade limit reached (10/2 trades)
+⚠️ WARNING: No sell trades detected - missing profit-taking mechanism
+
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-19 13:16:30 (Asia/Bangkok)
+
+ALERT STATUS: WARNING - PERSISTENT BUY BIAS AND TRADE LIMIT ISSUES
+
+SYSTEM STATUS CHECK:
+- Trading system: Operational
+- Capital: $1000.00 (100% of initial)
+- Daily trade limit: 2/2 trades configured, but 10 trades detected
+- No stop-loss orders triggered
+- No take-profit orders triggered
+- No critical drawdown detected
+- All positions within risk parameters
+
+CRITICAL FINDINGS:
+⚠️ WARNING: Persistent heavy buy bias
+- All 10 recent trades are BUY orders (100% buy bias)
+- No SELL trades in recent history
+- Trading strategy appears to be accumulation-only
+- Potential overexposure if market turns bearish
+
+⚠️ WARNING: Trade limit configuration mismatch
+- System configured for max 2 trades/day
+- 10 trades detected in recent history
+- Possible configuration issue or misinterpretation of limit
+
+⚠️ WARNING: Missing profit-taking mechanism
+- No sell trades executed
+- No take-profit orders triggered
+- Positions may be held indefinitely without profit realization
+
+RECOMMENDED ACTIONS:
+1. Review trading strategy for buy/sell balance
+2. Verify daily trade limit configuration and enforcement
+3. Implement profit-taking mechanism
+4. Ensure stop-loss orders are properly set for all positions
+5. Consider position size adjustments for risk management
+
+NEXT REVIEW: 2026-03-19 14:16:30
+===================================

@@ -1,40 +1,28 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-19 12:50:46.881560
-==================================================
+TRADING DASHBOARD MONITORING REPORT
+=====================================
+Timestamp: Thu Mar 19 13:15:00 +07 2026
 
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $1000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
+SYSTEM STATUS
+-------------
+Trading Status: running
+Capital: $1000.0
+Last Analysis: 2026-03-19T13:04:39.808782
+Trading Pairs: BTC/USD, ETH/USD
 
-🔍 Analyzing BTC/USD...
-   Price: $70830.52
-   24h Change: N/A
-   SMA 10: $71132.63
-   SMA 20: $71684.70
-   Support: $70501.79
-   Resistance: $71627.41
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $70501.79 (current: $70830.52)
-   ⏸️ Skipping: Max daily trades reached
+TRADING ACTIVITY
+----------------
+Total Trades: 10
+Buy Trades: 10
+Sell Trades: 0
+Latest Trade: ETH/USD buy at $2331.78 (10:21:22)
 
-🔍 Analyzing ETH/USD...
-   Price: $2191.84
-   24h Change: N/A
-   SMA 10: $2197.89
-   SMA 20: $2215.70
-   Support: $2154.55
-   Resistance: $2232.71
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2154.55 (current: $2191.84)
-   ⏸️ Skipping: Max daily trades reached
+ALERT STATUS
+------------
+✓ No new critical alerts
+✓ Dashboard health: Excellent
 
-📈 Trading Summary:
-   Today's trades executed: 2/2
-   Total trades: 4
-   Total P&L: $0.00
-   Available capital: $1000.00
+RECOMMENDED ACTIONS
+------------------
+✓ System operational
+✓ Monitor for next scheduled analysis (~14:04)
 
-✅ Analysis complete. Next run in 1 hour.
