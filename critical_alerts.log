@@ -1,4 +1,1 @@
-Stop-loss or take-profit triggered, or critical drawdown indicators detected.
-Timestamp: 2026-03-19T15:56:33Z
-ALERT: SOL/USD stop-loss might be triggered at 95 (Entry: 100).
-
+# Trading Dashboard Monitoring Log\n\nThis file logs data from the trading dashboard at http://localhost:5001/, including trading logs, status updates, and risk parameters.\n\n# Critical Alerts Log\n\nThis file logs critical alerts such as triggered stop-loss/take-profit orders or critical drawdown events.\n\n_Log started: 2026-03-19 16:20:00 UTC_
