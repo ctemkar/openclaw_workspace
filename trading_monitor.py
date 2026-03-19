@@ -1,53 +1,71 @@
-import requests
-import datetime
-import os
 
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL = "http://localhost:5001/"
+import requests
+import json
+import datetime
+import time
+
+# Configuration
+TRADING_DASHBOARD_URL = "http://localhost:5001/"
+TRADING_MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+CHECK_INTERVAL_SECONDS = 300  # 5 minutes
 
 def log_message(message, log_file):
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    # Ensure the directory exists before writing
-    os.makedirs(os.path.dirname(log_file), exist_ok=True)
     with open(log_file, "a") as f:
-        f.write(f"[{timestamp}] {message}
-")
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write("[" + timestamp + "] " + message + "\\n")
 
-def monitor_trading():
+def fetch_and_parse_data():
     try:
-        response = requests.get(URL)
-        response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
-        data = response.text
-
-        log_message("--- Monitoring Run ---", LOG_FILE)
-        log_message(data, LOG_FILE)
-
-        # Detect stop-loss/take-profit orders or critical drawdown
-        critical_alerts = []
-        if "stop-loss triggered" in data.lower() or "take-profit triggered" in data.lower():
-            critical_alerts.append("Order triggered (stop-loss/take-profit)")
-        if "critical drawdown" in data.lower():
-            critical_alerts.append("Critical drawdown detected")
-
-        if critical_alerts:
-            alert_message = f"Critical Alerts: {', '.join(critical_alerts)}"
-            log_message(alert_message, ALERT_LOG_FILE)
-            return f"Analysis complete. Critical Alerts: {', '.join(critical_alerts)}"
-        else:
-            return "Analysis complete. No critical alerts detected."
-
+        response = requests.get(TRADING_DASHBOARD_URL)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        data = response.json()
+        return data
     except requests.exceptions.RequestException as e:
-        error_message = f"Error fetching data from {URL}: {e}"
-        log_message(error_message, LOG_FILE)
-        log_message(error_message, ALERT_LOG_FILE)
-        return f"Error during monitoring: {e}"
-    except Exception as e:
-        error_message = f"An unexpected error occurred: {e}"
-        log_message(error_message, LOG_FILE)
-        log_message(error_message, ALERT_LOG_FILE)
-        return f"An unexpected error occurred: {e}"
+        log_message(f"Error fetching data from {TRADING_DASHBOARD_URL}: {e}", TRADING_MONITORING_LOG)
+        return None
+    except json.JSONDecodeError:
+        log_message(f"Error decoding JSON from {TRADING_DASHBOARD_URL}", TRADING_MONITORING_LOG)
+        return None
+
+def analyze_and_alert(data):
+    if data is None:
+        return
+
+    log_message(f"Data fetched: {json.dumps(data)}", TRADING_MONITORING_LOG)
+
+    stop_loss_triggered = False
+    take_profit_triggered = False
+    critical_drawdown = False
+
+    # Example: Check for stop-loss/take-profit triggers (adapt based on actual data structure)
+    if "trades" in data:
+        for trade in data["trades"]:
+            if trade.get("status") == "stop_loss_triggered":
+                stop_loss_triggered = True
+                log_message(f"ALERT: Stop-loss triggered for trade ID: {trade.get('id')}", CRITICAL_ALERTS_LOG)
+            if trade.get("status") == "take_profit_triggered":
+                take_profit_triggered = True
+                log_message(f"ALERT: Take-profit triggered for trade ID: {trade.get('id')}", CRITICAL_ALERTS_LOG)
+
+    # Example: Check for drawdown indicators (adapt based on actual data structure)
+    if "risk_parameters" in data:
+        current_capital = data["risk_parameters"].get("capital")
+        initial_capital = data["risk_parameters"].get("initial_capital") # Assuming initial capital is available
+        if current_capital is not None and initial_capital is not None:
+            drawdown_percentage = ((initial_capital - current_capital) / initial_capital) * 100
+            if drawdown_percentage > 10:  # Example: 10% drawdown is critical
+                critical_drawdown = True
+                log_message(f"ALERT: Critical drawdown detected: {drawdown_percentage:.2f}%", CRITICAL_ALERTS_LOG)
+
+    if stop_loss_triggered or take_profit_triggered or critical_drawdown:
+        log_message("Critical alerts logged.", CRITICAL_ALERTS_LOG)
+
+def main():
+    while True:
+        data = fetch_and_parse_data()
+        analyze_and_alert(data)
+        time.sleep(CHECK_INTERVAL_SECONDS)
 
 if __name__ == "__main__":
-    summary = monitor_trading()
-    print(summary)
+    main()
