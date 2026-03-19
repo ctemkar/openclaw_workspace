@@ -1,108 +1,108 @@
-import os
+
 import requests
+import json
 import logging
-from datetime import datetime
 
-# Read current port from .active_port file
-try:
-    with open(".active_port", "r") as f:
-        PORT = f.read().strip()
-except:
-    PORT = "5001"  # Fallback
+# Configuration
+URL = "http://localhost:5001/"
+TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+LOG_LEVEL = logging.INFO
 
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-URL = f"http://localhost:{PORT}/trades"
+# Setup logging for trading data
+trading_logger = logging.getLogger('trading_logger')
+trading_logger.setLevel(LOG_LEVEL)
+trading_handler = logging.FileHandler(TRADING_LOG_FILE)
+trading_formatter = logging.Formatter('%(asctime)s - %(message)s')
+trading_handler.setFormatter(trading_formatter)
+trading_logger.addHandler(trading_handler)
 
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+# Setup logging for critical alerts
+alert_logger = logging.getLogger('alert_logger')
+alert_logger.setLevel(LOG_LEVEL)
+alert_handler = logging.FileHandler(CRITICAL_ALERTS_FILE)
+alert_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+alert_handler.setFormatter(alert_formatter)
+alert_logger.addHandler(alert_handler)
 
-critical_alert_logger = logging.getLogger('critical_alert_logger')
-critical_alert_logger.setLevel(logging.CRITICAL)
-critical_alert_handler = logging.FileHandler(CRITICAL_ALERT_LOG_FILE)
-critical_alert_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-critical_alert_logger.addHandler(critical_alert_handler)
-
-def fetch_data(url):
+def fetch_trading_data():
     try:
-        response = requests.get(url)
+        response = requests.get(URL)
         response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json()
+        data = response.json()
+        return data
     except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to fetch data from {url}: {e}")
+        alert_logger.error(f"Failed to fetch data from {URL}: {e}")
+        return None
+    except json.JSONDecodeError:
+        alert_logger.error(f"Failed to decode JSON response from {URL}")
         return None
 
 def analyze_data(data):
     if not data:
-        return "No data available for analysis."
+        return "No data received.", []
 
-    analysis_summary = f"Trading Dashboard Analysis - {datetime.now().isoformat()}\n"
-    all_logs = []
-    critical_alerts = []
-
-    # Extract trading data
-    if "trades" in data:
-        trades = data["trades"]
-        analysis_summary += f"\nFound {len(trades)} trades in the system.\n"
-        
-        # Analyze recent trades
-        recent_trades = trades[:5]  # Look at most recent 5 trades
-        analysis_summary += f"\nRecent trades (last {len(recent_trades)}):\n"
-        
-        for i, trade in enumerate(recent_trades, 1):
-            # Handle different trade formats
-            if "side" in trade and "price" in trade:
-                side = trade.get("side", "unknown").upper()
-                price = trade.get("price", "N/A")
-                amount = trade.get("amount", trade.get("quantity", "N/A"))
-                symbol = trade.get("symbol", "unknown")
-                time = trade.get("time", "unknown")
-                
-                log_entry = f"Trade {i}: {side} {amount} {symbol} @ ${price} at {time}"
-                all_logs.append(log_entry)
-                analysis_summary += f"  {log_entry}\n"
-                
-                # Check for potential issues
-                if side == "SELL" and float(price) < 0:
-                    alert_msg = f"CRITICAL ALERT: Negative price in sell trade! Price: ${price}"
-                    critical_alerts.append(alert_msg)
-                    critical_alert_logger.critical(alert_msg)
-                    analysis_summary += f"  ⚠️ {alert_msg}\n"
-    else:
-        analysis_summary += "\nNo trades found in the data.\n"
-
-    # Extract count and timestamp
-    if "count" in data:
-        analysis_summary += f"\nTotal trade count: {data['count']}\n"
-    
-    if "timestamp" in data:
-        analysis_summary += f"Data timestamp: {data['timestamp']}\n"
-
-    # Check for system health
-    if len(data.get("trades", [])) == 0:
-        alert_msg = "ALERT: No trades found in the system. Check if trading is active."
-        critical_alerts.append(alert_msg)
-        analysis_summary += f"\n⚠️ {alert_msg}\n"
-    
-    # Check for excessive trades (more than 10 in a short period)
-    if len(data.get("trades", [])) > 10:
-        alert_msg = f"ALERT: High trade volume detected ({len(data['trades'])} trades)."
-        critical_alerts.append(alert_msg)
-        analysis_summary += f"\n⚠️ {alert_msg}\n"
+    trading_logs = data.get("logs", [])
+    status_updates = data.get("status", {})
+    risk_parameters = data.get("risk", {})
 
     # Log all extracted data
-    for log_entry in all_logs:
-        logging.info(log_entry)
+    trading_logger.info(f"Logs: {trading_logs}")
+    trading_logger.info(f"Status: {status_updates}")
+    trading_logger.info(f"Risk Parameters: {risk_parameters}")
 
-    # Add summary of alerts
-    if critical_alerts:
-        analysis_summary += f"\n⚠️ Generated {len(critical_alerts)} alert(s).\n"
-    else:
-        analysis_summary += "\n✅ No critical alerts detected.\n"
+    alerts = []
+    summary_lines = ["Trading Dashboard Analysis:"]
+    
+    summary_lines.append(f"\nStatus Updates:")
+    for key, value in status_updates.items():
+        summary_lines.append(f"- {key}: {value}")
 
-    return analysis_summary
+    summary_lines.append(f"\nRisk Parameters:")
+    capital = risk_parameters.get("capital")
+    stop_loss = risk_parameters.get("stop_loss")
+    take_profit = risk_parameters.get("take_profit")
+    
+    if capital is not None:
+        summary_lines.append(f"- Capital: {capital}")
+    if stop_loss is not None:
+        summary_lines.append(f"- Stop Loss: {stop_loss}")
+        # Example alert for stop-loss triggered (assuming a 'triggered' field)
+        if isinstance(stop_loss, dict) and stop_loss.get("triggered"):
+            alert_message = f"STOP-LOSS TRIGGERED: {stop_loss.get('level')}"
+            alert_logger.critical(alert_message)
+            alerts.append(alert_message)
+            summary_lines.append(f"  - ALERT: {alert_message}")
+            
+    if take_profit is not None:
+        summary_lines.append(f"- Take Profit: {take_profit}")
+        # Example alert for take-profit triggered (assuming a 'triggered' field)
+        if isinstance(take_profit, dict) and take_profit.get("triggered"):
+            alert_message = f"TAKE-PROFIT TRIGGERED: {take_profit.get('level')}"
+            alert_logger.critical(alert_message)
+            alerts.append(alert_message)
+            summary_lines.append(f"  - ALERT: {alert_message}")
+
+    # Example alert for critical drawdown (assuming a 'drawdown' field in risk)
+    drawdown = risk_parameters.get("drawdown")
+    if drawdown is not None and drawdown.get("level") is not None and drawdown.get("critical"):
+        alert_message = f"CRITICAL DRAWDOWN ALERT: {drawdown.get('level')}"
+        alert_logger.critical(alert_message)
+        alerts.append(alert_message)
+        summary_lines.append(f"  - ALERT: {alert_message}")
+        
+    if not alerts:
+        summary_lines.append("\nNo critical alerts to report.")
+
+    return "\\n".join(summary_lines), alerts
+
+def main():
+    data = fetch_trading_data()
+    summary, alerts = analyze_data(data)
+    
+    # The summary is automatically delivered as per the cron job configuration.
+    # If it were not, we would print it here:
+    # print(summary) 
 
 if __name__ == "__main__":
-    trading_data = fetch_data(URL)
-    summary = analyze_data(trading_data)
-    print(summary) # This will be captured by the ACP session
+    main()
