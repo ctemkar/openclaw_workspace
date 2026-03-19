@@ -1,65 +1,50 @@
 #!/bin/bash
 
-# Configuration
-URL="http://localhost:5001/"
-TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TEMP_LOG=$(mktemp)
+LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERT_LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_DASHBOARD_URL="http://localhost:5001/"
 
-# Ensure log files exist
-touch "$TRADING_LOG" "$CRITICAL_LOG"
+echo "Starting trading dashboard monitor at $(date)" >> "$LOG_FILE"
 
-# Fetch data from the URL
-if ! curl -s "$URL" > "$TEMP_LOG"; then
-    echo "$(date): Failed to fetch data from $URL" >&2
-    exit 1
+# Fetch data and log it
+curl -s "$TRADING_DASHBOARD_URL" >> "$LOG_FILE"
+echo "---" >> "$LOG_FILE"
+
+# Analyze data for critical alerts
+ALERT_DETECTED=false
+if curl -s "$TRADING_DASHBOARD_URL" | grep -q "STOP_LOSS_TRIGGERED"; then
+  echo "STOP_LOSS_TRIGGERED detected at $(date)" >> "$ALERT_LOG_FILE"
+  echo "STOP_LOSS_TRIGGERED detected at $(date)" >> "$LOG_FILE" # Also log to main log
+  ALERT_DETECTED=true
 fi
 
-# Extract trading logs, status updates, and risk parameters
-# This is a placeholder; actual extraction logic will depend on the data format from the URL
-# Assuming the output is JSON for this example
-if ! jq -s '.' "$TEMP_LOG" > /dev/null 2>&1; then
-    echo "$(date): Data is not valid JSON. Logging raw data."
-    cat "$TEMP_LOG" >> "$TRADING_LOG"
+if curl -s "$TRADING_DASHBOARD_URL" | grep -q "TAKE_PROFIT_TRIGGERED"; then
+  echo "TAKE_PROFIT_TRIGGERED detected at $(date)" >> "$ALERT_LOG_FILE"
+  echo "TAKE_PROFIT_TRIGGERED detected at $(date)" >> "$LOG_FILE" # Also log to main log
+  ALERT_DETECTED=true
+fi
+
+if curl -s "$TRADING_DASHBOARD_URL" | grep -q "CRITICAL_DRAWDOWN"; then
+  echo "CRITICAL_DRAWDOWN detected at $(date)" >> "$ALERT_LOG_FILE"
+  echo "CRITICAL_DRAWDOWN detected at $(date)" >> "$LOG_FILE" # Also log to main log
+  ALERT_DETECTED=true
+fi
+
+if [ "$ALERT_DETECTED" = false ]; then
+  echo "No critical alerts detected at $(date)" >> "$LOG_FILE"
+fi
+
+echo "Trading dashboard monitor finished at $(date)" >> "$LOG_FILE"
+echo "---" >> "$LOG_FILE"
+
+# Provide a plain text summary (for cron delivery if needed, though logging is primary)
+SUMMARY="Trading dashboard analysis complete at $(date). See logs for details."
+if [ "$ALERT_DETECTED" = true ]; then
+  SUMMARY="$SUMMARY Critical alerts were detected. Check $ALERT_LOG_FILE for details."
 else
-    echo "$(date): Processing JSON data..."
-    # Example: Extracting specific fields if data is JSON
-    # This needs to be customized based on the actual JSON structure
-    STATUS_UPDATES=$(jq -c '.status_updates[]' "$TEMP_LOG" || echo "No status updates found")
-    RISK_PARAMS=$(jq -c '.risk_parameters' "$TEMP_LOG" || echo "No risk parameters found")
-
-    echo "$(date): Status Updates: $STATUS_UPDates" >> "$TRADING_LOG"
-    echo "$(date): Risk Parameters: $RISK_PARAMS" >> "$TRADING_LOG"
-
-    # Detect stop-loss/take-profit orders or critical drawdown
-    # This is a placeholder; actual detection logic will depend on the data
-    STOP_LOSS_TRIGGERED=$(jq '.alerts[] | select(.type == "stop_loss") | .message' "$TEMP_LOG" || echo "")
-    TAKE_PROFIT_TRIGGERED=$(jq '.alerts[] | select(.type == "take_profit") | .message' "$TEMP_LOG" || echo "")
-    CRITICAL_DRAWDOWN=$(jq '.alerts[] | select(.type == "critical_drawdown") | .message' "$TEMP_LOG" || echo "")
-
-    if [ -n "$STOP_LOSS_TRIGGERED" ]; then
-        echo "$(date): STOP-LOSS TRIGGERED: $STOP_LOSS_TRIGGERED" >> "$CRITICAL_LOG"
-    fi
-    if [ -n "$TAKE_PROFIT_TRIGGERED" ]; then
-        echo "$(date): TAKE-PROFIT TRIGGERED: $TAKE_PROFIT_TRIGGERED" >> "$CRITICAL_LOG"
-    fi
-    if [ -n "$CRITICAL_DRAWDOWN" ]; then
-        echo "$(date): CRITICAL DRAWDOWN: $CRITICAL_DRAWDOWN" >> "$CRITICAL_LOG"
-    fi
+  SUMMARY="$SUMMARY No critical alerts were found."
 fi
 
-# Generate summary (plain text)
-SUMMARY=""
-if [ -s "$CRITICAL_LOG" ]; then
-    SUMMARY+="CRITICAL ALERTS DETECTED:\n"
-    SUMMARY+=$(cat "$CRITICAL_LOG")
-    SUMMARY+="\n\n"
-fi
-SUMMARY+="Trading logs and status updates have been logged to $TRADING_LOG."
-
-# The summary will be automatically delivered by the cron job's systemEvent payload.
-# If a specific external recipient was requested, it would be noted here.
-
-rm "$TEMP_LOG"
-
-exit 0
+# If this were to be delivered via message, it would go here.
+# For now, we rely on the logs.
+echo "$SUMMARY" > /tmp/trading_summary.txt # Temporary file for summary if needed by another process

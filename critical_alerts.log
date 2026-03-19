@@ -1,2 +1,8 @@
-Placeholder for critical data2026-03-19 18:33:55,938 - CRITICAL - 2026-03-19T18:33:55.938859 - JSON_DECODE_ERROR - Error decoding JSON response from http://localhost:5001/
-2026-03-19 18:34:25,941 - CRITICAL - 2026-03-19T18:34:25.941944 - JSON_DECODE_ERROR - Error decoding JSON response from http://localhost:5001/
+# Critical Alerts Log
+
+This log file records critical alerts from the trading dashboard monitor.
+
+**Alert Conditions:**
+- Triggered stop-loss orders
+- Triggered take-profit orders
+- Critical drawdown
