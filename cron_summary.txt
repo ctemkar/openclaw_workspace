@@ -1,49 +1,38 @@
-=== CRON JOB EXECUTION SUMMARY ===
-Job: trading_dashboard_monitor (ID: 660ba644-e82d-4388-87c5-d43c104f1c04)
-Execution Time: 2026-03-19 04:14:27 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+Timestamp: 2026-03-19 14:55:45 (Asia/Bangkok)
 
-EXECUTION STATUS: ✅ COMPLETED
-- Dashboard fetched successfully
-- All endpoints checked
-- Logs updated
-- Critical alerts generated
+SYSTEM STATUS: Dashboard active, trading constrained
+CAPITAL: $1,000.00 | Stop-loss: 5.0% | Take-profit: 10.0%
 
-SYSTEM STATUS OVERVIEW:
-✅ Dashboard: Accessible at http://localhost:5001/
-✅ Status Endpoint: Responding with system status
-✅ Trades Endpoint: Showing 10 active positions
-✅ Summary Endpoint: Showing trading paused (2/2 daily trades used)
-❌ Strategy Endpoint: 404 Error (Configuration broken)
-❌ Stop-loss Execution: FAILING (2 positions below stop-loss remain open)
+CURRENT PRICES:
+- BTC/USD: $70,177.95
+- ETH/USD: $2,173.18
+
+CRITICAL FINDINGS:
+🚨 4 OUT OF 6 POSITIONS HAVE STOP-LOSS TRIGGERED:
+- BTC: 2 positions at 5.29%-5.59% drawdown (stop-loss: 5.0%)
+- ETH: 2 positions at 6.54%-6.80% drawdown (stop-loss: 5.0%)
+
+SYSTEM CONSTRAINTS:
+⚠️ Max daily trades reached: 2/2
+⚠️ Automatic trading paused
+⚠️ Manual intervention required for stop-loss execution
 
 RISK ASSESSMENT:
-- Total Capital: $1,000.00
-- Current Value: $836.45
-- Total P&L: -$23.58 (-2.4%)
-- Drawdown: 2.4% (within 5% limit)
-- Buffer to max drawdown: $26.42 (2.6%)
+- 66.7% of analyzed positions exceed stop-loss threshold
+- Both assets trading below key moving averages
+- Bearish market momentum confirmed
+- High volatility environment
 
-CRITICAL ISSUES DETECTED:
-1. STOP-LOSS EXECUTION FAILURE: 2 ETH positions remain open despite being below stop-loss
-   - Position #1 (ETH): -6.2% loss, stop-loss triggered 1.3% below
-   - Position #8 (ETH): -6.0% loss, stop-loss triggered 1.0% below
-   - Time since trigger: ~37 minutes
-   - Total at risk: $12.57
+URGENT ACTIONS REQUIRED:
+1. MANUAL STOP-LOSS EXECUTION for all triggered positions
+2. Use external trading platform if system constrained
+3. Contact system administrator immediately
+4. Review trading strategy and risk parameters
 
-2. CONFIGURATION ISSUE: Strategy endpoint returns 404 error
-3. DAILY LIMIT REACHED: Trading auto-paused (2/2 trades used)
+MONITORING STATUS:
+- Dashboard operational but trade-constrained
+- Continuous monitoring active
+- Next scheduled analysis: Hourly
 
-ALERT STATUS:
-- Monitoring Log: ✅ Updated at /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-- Critical Alerts: ✅ Updated at /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-- Alert Priority: HIGH (Systemic failure, manual intervention required)
-
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Manual closure of ETH positions #1 and #8
-2. URGENT: System diagnostics for stop-loss execution failure
-3. IMPORTANT: Configuration fix for strategy endpoint
-4. REVIEW: Consider adjusting risk parameters or position sizing
-
-NEXT SCHEDULED CHECK: 04:19 AM (5-minute interval)
-
-=== END OF REPORT ===
+ALERT LEVEL: 🚨 CRITICAL - IMMEDIATE ACTION REQUIRED

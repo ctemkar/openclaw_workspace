@@ -1,116 +1,213 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-19 14:18:16 (Asia/Bangkok)
+Timestamp: 2026-03-19 14:41:30 (Asia/Bangkok)
 
-🚨 CRITICAL ALERTS DETECTED 🚨
+🚨 URGENT CRITICAL ALERTS DETECTED 🚨
 
-=== STOP-LOSS TRIGGERED ===
-1. ETH/USD POSITION:
+=== STOP-LOSS STATUS UPDATE ===
+1. ETH/USD POSITION - STILL TRIGGERED:
    - Current Price: $2,184.65
    - Entry Price (High): $2,331.78
    - Current Drawdown: -6.31%
    - Stop-loss Threshold: -5.0%
-   - STATUS: 🚨 STOP-LOSS TRIGGERED - Exceeds threshold by 1.31%
-   - ACTION REQUIRED: Immediate stop-loss execution needed
+   - STATUS: 🚨 STOP-LOSS STILL TRIGGERED - No action taken yet
+   - TIME SINCE TRIGGER: ~4 hours 20 minutes (since 10:21 entry)
+   - URGENCY: ⚠️ EXTREME - Position continues to deteriorate
+   - ACTION: MANUAL INTERVENTION REQUIRED IMMEDIATELY
 
-=== IMMINENT STOP-LOSS WARNING ===
-2. BTC/USD POSITION:
+2. BTC/USD POSITION - CRITICAL WARNING:
    - Current Price: $70,701.72
    - Entry Price (High): $74,335.92
    - Current Drawdown: -4.89%
    - Stop-loss Threshold: -5.0%
-   - STATUS: ⚠️ CRITICAL WARNING - Only 0.11% away from stop-loss
+   - STATUS: ⚠️ EXTREMELY CRITICAL - Only 0.11% from trigger
    - Projected stop-loss price: $70,175.89
-   - Current distance to stop-loss: $525.83 (0.74%)
+   - Current distance: $525.83 (0.74% of current price)
+   - RISK LEVEL: 🚨 MAXIMUM - Any downward movement will trigger
+   - MONITORING: CONTINUOUS - Prepare for immediate action
 
-=== DRAWDOWN ALERTS ===
-1. BTC/USD Position:
-   - Current Price: $70,701.72
-   - Recent High: $74,335.92
-   - Current Drawdown: -4.89%
-   - Threshold: -3.00%
-   - STATUS: CRITICAL - Drawdown exceeds threshold by 1.89%
+=== POSITION DETERIORATION ANALYSIS ===
+Both positions showing continued weakness:
+- ETH: Down 6.31% from entry, below all moving averages
+- BTC: Down 4.89% from entry, below all moving averages
+- Market sentiment remains bearish for both assets
+- Technical indicators confirm bearish momentum
 
-2. ETH/USD Position:
-   - Current Price: $2,184.65
-   - Recent High: $2,331.78
-   - Current Drawdown: -6.31%
-   - Threshold: -3.00%
-   - STATUS: CRITICAL - Drawdown exceeds threshold by 3.31%
+=== SYSTEM CONSTRAINTS ===
+⚠️ CRITICAL LIMITATION DETECTED:
+- Max daily trades: 2/2 (REACHED)
+- System status: "Skipping - Max daily trades reached" for both assets
+- Automatic stop-loss execution may be blocked
+- Manual intervention REQUIRED for risk management
+- Trading dashboard operational but constrained
 
-=== POSITION ANALYSIS ===
-BTC Position:
-  - Average Entry: $73,869.35
-  - Current P&L: -4.29%
-  - Stop-loss Level: $70,175.89 (0.74% below current)
-  - Take-profit Level: $81,256.29 (14.93% above current)
-  - Risk Status: ⚠️ EXTREMELY HIGH - Near stop-loss trigger
+=== FINANCIAL IMPACT ANALYSIS ===
+Current Positions:
+1. ETH Position:
+   - Size: ~0.0912 ETH
+   - Entry Value: ~$200.00 (approx)
+   - Current Value: ~$199.15
+   - Unrealized Loss: ~$0.85 (0.43%)
+   - Stop-loss Triggered: YES (-6.31% from high)
 
-ETH Position:
-  - Average Entry: $2,283.55
-  - Current P&L: -4.33%
-  - Stop-loss Level: $2,169.38 (0.70% below current)
-  - Take-profit Level: $2,511.91 (14.98% above current)
-  - Risk Status: 🚨 STOP-LOSS TRIGGERED - Immediate action required
+2. BTC Position:
+   - Size: ~0.002802 BTC
+   - Entry Value: ~$200.00 (approx)
+   - Current Value: ~$198.15
+   - Unrealized Loss: ~$1.85 (0.93%)
+   - Near Stop-loss: YES (-4.89% from high)
 
-=== MARKET CONDITIONS ===
-Current Market Sentiment: Bearish
-- BTC: Trading below both SMA 10 ($71,109.21) and SMA 20 ($71,517.35)
-- ETH: Trading below both SMA 10 ($2,198.16) and SMA 20 ($2,208.71)
-- Both assets near support levels but showing continued downward pressure
+Total Portfolio:
+- Total Position Value: ~$397.30
+- Total Capital: $1,000.00
+- Capital at Risk: $397.30 (39.7%)
+- Current Unrealized Loss: ~$2.70 (0.27% of portfolio, 0.27% of capital)
+- Maximum Potential Loss (if stop-loss triggers): ~$39.73 (10% of positions, 3.97% of capital)
 
-=== TRADING CONSTRAINTS ===
-- Max daily trades reached: 2/2
-- System cannot execute new trades until reset
-- Stop-loss executions may still be possible (check system configuration)
+⚠️ IMPORTANT NOTE: The 6.31% and 4.89% drawdown figures are from recent highs, not from average entry prices. Actual unrealized losses are smaller but risk remains high.
 
-=== URGENT RECOMMENDATIONS ===
-1. IMMEDIATE: Manually execute stop-loss for ETH position
-2. MONITOR: BTC position for automatic stop-loss trigger
-3. REVIEW: Current trading strategy given bearish market conditions
-4. CONSIDER: Adjusting stop-loss levels if market volatility increases
-5. CHECK: System configuration for automatic stop-loss execution capability
+=== URGENT ACTION REQUIRED ===
+1. MANUAL STOP-LOSS EXECUTION:
+   - ETH position: Execute IMMEDIATELY at market price
+   - BTC position: Set stop-loss order at $70,175.89 or execute preemptively
 
-=== SYSTEM STATUS ===
-Dashboard: Operational
-Capital: $1,000.00 (positions at risk)
-Today's trades: 2/2 (max reached - no new trades possible)
-Next analysis: Scheduled in 1 hour (14:42 local time)
-Alert Level: 🚨 CRITICAL
+2. SYSTEM OVERRIDE PROCEDURE:
+   - Verify if emergency stop-loss bypasses daily trade limit
+   - Check system logs for automatic stop-loss execution capability
+   - Contact system administrator for manual override
+
+3. CAPITAL PROTECTION MEASURES:
+   - Current capital at risk: $397.30
+   - Protect remaining capital: $602.70
+   - Consider reducing position sizes in future trades
+   - Review stop-loss strategy and thresholds
+
+=== MARKET ANALYSIS ===
+Current Technical Indicators (14:41):
+- BTC/USD: $70,701.72
+  - SMA 10: $71,109.21 (below)
+  - SMA 20: $71,517.35 (below)
+  - Support: $70,501.79 (very close)
+  - Resistance: $71,627.41
+  - Signal: BUY (but constrained)
+
+- ETH/USD: $2,184.65
+  - SMA 10: $2,198.16 (below)
+  - SMA 20: $2,208.71 (below)
+  - Support: $2,154.55
+  - Resistance: $2,232.71
+  - Signal: BUY (but constrained)
+
+Market Conditions:
+- Bearish momentum for both BTC and ETH
+- Trading below key moving averages
+- Near support levels but showing weakness
+- High volatility environment
+
+=== RECOMMENDED IMMEDIATE ACTIONS ===
+1. CONTACT: Trading system administrator immediately
+2. EXECUTE: Manual stop-loss for ETH via external platform if system constrained
+3. MONITOR: BTC position with real-time alerts
+4. REVIEW: Trading strategy and risk parameters
+5. CONSIDER: Temporary trading suspension until market stabilizes
+
+=== ALERT STATUS ===
+Alert Level: 🚨 CRITICAL - IMMEDIATE ACTION REQUIRED
+Time Since First Alert: ~7 minutes
+System Status: Dashboard operational but trade-constrained
+Capital Protection: URGENT - Positions at maximum risk
+Monitoring Frequency: Continuous
+
+=== NEXT STEPS ===
+1. Immediate manual intervention for ETH stop-loss
+2. Continuous monitoring of BTC position
+3. System configuration review for emergency procedures
+4. Strategy adjustment based on market conditions
+5. Regular monitoring updates every 15 minutes
 
 ==============================================
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-19 14:23:23 (Asia/Bangkok)
+=== CRITICAL ALERT UPDATE ===
+Timestamp: 2026-03-19 14:49:39 (Asia/Bangkok) | UTC: 2026-03-19T07:49:39Z
+Alert Level: CRITICAL
 
-🚨 CRITICAL ALERTS DETECTED 🚨
+🚨 BTC STOP-LOSS TRIGGERED: Current drawdown -5.59% exceeds stop-loss threshold of 5.0%
+🚨 ETH STOP-LOSS TRIGGERED: Current drawdown -6.80% exceeds stop-loss threshold of 5.0%
+⚠️ MAX DAILY TRADES REACHED: 2/2 - Automatic trading paused
 
-=== STOP-LOSS TRIGGERED ===
-1. ETH/USD POSITION:
-   - Current Price: $2,184.65
-   - Entry Price (High): $2,331.78
-   - Current Drawdown: -6.31%
-   - Stop-loss Threshold: -5.0%
-   - STATUS: 🚨 STOP-LOSS TRIGGERED - Exceeds threshold by 1.31%
-   - ACTION REQUIRED: Immediate stop-loss execution needed
+=== CURRENT POSITION ANALYSIS ===
+BTC Position:
+  Current Price: $70177.95
+  Highest Entry: $74335.92
+  Drawdown: -5.59%
+  Stop-loss Threshold: 5.0%
+  Status: 🚨 STOP-LOSS TRIGGERED
 
-=== IMMINENT STOP-LOSS WARNING ===
-2. BTC/USD POSITION:
-   - Current Price: $70,701.72
-   - Entry Price (High): $74,335.92
-   - Current Drawdown: -4.89%
-   - Stop-loss Threshold: -5.0%
-   - STATUS: ⚠️ WARNING - Only 0.11% from stop-loss trigger
-   - MONITOR CLOSELY: Price movement could trigger stop-loss
+ETH Position:
+  Current Price: $2173.18
+  Highest Entry: $2331.78
+  Drawdown: -6.80%
+  Stop-loss Threshold: 5.0%
+  Status: 🚨 STOP-LOSS TRIGGERED
+
+=== SYSTEM CONSTRAINTS ===
+Max daily trades: 2/2
+⚠️ TRADING CONSTRAINED: Automatic execution paused
 
 === RECOMMENDED ACTIONS ===
-1. Execute stop-loss order for ETH/USD position immediately
-2. Monitor BTC/USD position closely - consider preemptive stop-loss
-3. Review trading strategy given current market conditions
-4. Consider reducing position sizes or increasing stop-loss buffer
+1. 🚨 IMMEDIATE MANUAL INTERVENTION REQUIRED
+2. Execute stop-loss orders via external platform
+3. Monitor positions continuously
+4. Contact system administrator
 
-=== ALERT GENERATION COMPLETE ===
-{
-  "timestamp": "2026-03-19T14:27:24.588453",
-  "alerts": [
-    "\ud83d\udcca Max daily trades reached: 2/2"
-  ]
-}
+==============================================
+=== CRITICAL ALERT - STOP-LOSS TRIGGERS ===
+Timestamp: 2026-03-19 14:53:20 +07
+Multiple trading positions have exceeded 5% stop-loss threshold:
+- 6 BTC positions at 5.29% to 5.59% drawdown
+- 2 ETH positions at 6.54% to 6.80% drawdown
+Current prices: BTC=,177.95, ETH=,173.18
+Current prices: BTC=$70,177.95, ETH=$2,173.18
+IMMEDIATE ACTION REQUIRED: Review stop-loss execution and trading strategy
+==========================================
+=== CRITICAL ALERT UPDATE ===
+Timestamp: 2026-03-19 14:55:40 +07 | UTC: 2026-03-19T07:55:40Z
+Alert Level: CRITICAL
+
+🚨 MULTIPLE STOP-LOSS TRIGGERS STILL ACTIVE 🚨
+
+CURRENT POSITION STATUS:
+
+BTC POSITIONS:
+1. Entry: $74,335.92 | Current: $70,177.95 | Drawdown: -5.59% | STATUS: 🚨 STOP-LOSS TRIGGERED
+2. Entry: $74,094.64 | Current: $70,177.95 | Drawdown: -5.29% | STATUS: 🚨 STOP-LOSS TRIGGERED
+3. Entry: $71,386.00 | Current: $70,177.95 | Drawdown: -1.69% | STATUS: ✅ OK
+
+ETH POSITIONS:
+1. Entry: $2,331.78 | Current: $2,173.18 | Drawdown: -6.80% | STATUS: 🚨 STOP-LOSS TRIGGERED
+2. Entry: $2,325.28 | Current: $2,173.18 | Drawdown: -6.54% | STATUS: 🚨 STOP-LOSS TRIGGERED
+3. Entry: $2,193.60 | Current: $2,173.18 | Drawdown: -0.93% | STATUS: ✅ OK
+
+SUMMARY:
+- Total positions analyzed: 6
+- Stop-loss triggered: 4 (66.7%)
+- Within limits: 2 (33.3%)
+- Max daily trades: 2/2 (REACHED)
+
+⚠️ SYSTEM CONSTRAINTS:
+- Automatic trading paused due to daily limit
+- Stop-loss execution may be blocked
+- Manual intervention REQUIRED
+
+🚨 URGENT ACTION REQUIRED:
+1. Execute manual stop-loss for all triggered positions
+2. Use external platform if system constrained
+3. Contact system administrator immediately
+4. Review trading strategy and risk parameters
+
+MARKET CONDITIONS:
+- BTC: $70,177.95 (below all moving averages)
+- ETH: $2,173.18 (below all moving averages)
+- Bearish momentum continues
+- High volatility environment
+
+NEXT MONITORING: Continuous
+==========================================
