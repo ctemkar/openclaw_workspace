@@ -1,64 +1,71 @@
 #!/bin/bash
 
-MONITORING_LOG="./trading_monitoring.log"
-CRITICAL_ALERTS_LOG="./critical_alerts.log"
-URL="http://localhost:5001/"
+LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERT_LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_DASHBOARD_URL="http://localhost:5001/"
 
-# Fetch data
-data=$(curl -s "$URL")
+# Fetch data from the trading dashboard
+RAW_DATA=$(curl -s "$TRADING_DASHBOARD_URL")
 
-# Log all data
-echo -e "$(date '+%Y-%m-%d %H:%M:%S') - Fetched data:\n$data" | tee -a "$MONITORING_LOG"
+# Log the raw data
+echo "$(date): Raw data fetched." >> "$LOG_FILE"
+echo "$RAW_DATA" >> "$LOG_FILE"
+echo "--------------------" >> "$LOG_FILE"
 
-# Detect and log critical alerts
-# Assuming stop-loss/take-profit orders or critical drawdown are indicated by specific keywords
-# Replace 'STOP_LOSS_TRIGGERED|TAKE_PROFIT_TRIGGERED|CRITICAL_DRAWDOWN' with actual patterns if known
-# Also adding a check for the content of the critical alerts log itself to avoid duplicates in summary if the script runs multiple times before the summary is seen.
-alert_keywords='STOP_LOSS_TRIGGERED|TAKE_PROFIT_TRIGGERED|CRITICAL_DRAWDOWN'
-current_alerts=$(echo "$data" | grep -E "$alert_keywords")
+# --- Analysis and Alerting ---
+SUMMARY="Trading Dashboard Analysis:\n"
+ALERTS=""
 
-if [ -n "$current_alerts" ]; then
-  echo -e "$(date '+%Y-%m-%d %H:%M:%S') - CRITICAL ALERTS DETECTED:\n$current_alerts" | tee -a "$CRITICAL_ALERTS_LOG"
-fi
+# Placeholder for status updates and risk parameters extraction
+# Assuming RAW_DATA is JSON for this example. If it's plain text, parsing logic will differ.
+# If it's not JSON, you'll need to adjust parsing or use different tools.
 
-# Generate summary
-summary="Trading Dashboard Analysis Summary:\n"
-summary+="------------------------------------\n"
-summary+="Timestamp: $(date '+%Y-%m-%d %H:%M:%S')\n"
+# Example: Extracting status and risk parameters if data is JSON
+if echo "$RAW_DATA" | jq -e . >/dev/null 2>&1; then
+    CURRENT_STATUS=$(echo "$RAW_DATA" | jq -r '.status // "N/A"')
+    RISK_PARAM=$(echo "$RAW_DATA" | jq -r '.riskParameters | tostring // "N/A"')
+    STOP_LOSS_TRIGGERED=$(echo "$RAW_DATA" | jq -r '.stopLossTriggered // "false"')
+    TAKE_PROFIT_TRIGGERED=$(echo "$RAW_DATA" | jq -r '.takeProfitTriggered // "false"')
+    CRITICAL_DRAWDOWN=$(echo "$RAW_DATA" | jq -r '.criticalDrawdown // "false"')
 
-if [ -s "$CRITICAL_ALERTS_LOG" ]; then
-  # Check if the latest alerts are already in the summary output to avoid re-logging them in the summary if the log file keeps growing.
-  # This is a simplistic approach; a more robust solution would involve tracking processed alerts.
-  last_log_line_brief=$(tail -n 5 "$CRITICAL_ALERTS_LOG" | head -n 1) # Check last few lines for potential alert indicators
-  if echo "$current_alerts" | grep -q -v -F "$last_log_line_brief"; then
-      summary+="CRITICAL ALERTS DETECTED and logged to $CRITICAL_ALERTS_LOG.\n"
-  else
-      summary+="Existing critical alerts are still present (logged to $CRITICAL_ALERTS_LOG).\n"
-  fi
+    SUMMARY+="Current Status: ${CURRENT_STATUS}\n"
+    SUMMARY+="Risk Parameters: ${RISK_PARAM}\n"
 
+    if [ "$STOP_LOSS_TRIGGERED" = "true" ]; then
+        ALERT="STOP-LOSS ORDER TRIGGERED at $(date)"
+        ALERTS+="$ALERT\n"
+        echo "$(date): $ALERT" >> "$ALERT_LOG_FILE"
+    fi
+
+    if [ "$TAKE_PROFIT_TRIGGERED" = "true" ]; then
+        ALERT="TAKE-PROFIT ORDER TRIGGERED at $(date)"
+        ALERTS+="$ALERT\n"
+        echo "$(date): $ALERT" >> "$ALERT_LOG_FILE"
+    fi
+
+    if [ "$CRITICAL_DRAWDOWN" = "true" ]; then
+        ALERT="CRITICAL DRAWDOWN DETECTED at $(date)"
+        ALERTS+="$ALERT\n"
+        echo "$(date): $ALERT" >> "$ALERT_LOG_FILE"
+    fi
 else
-  summary+="No new critical alerts detected.\n"
+    # Fallback for non-JSON data or if jq is not available
+    # This part would need to be more robust based on the actual data format from localhost:5001
+    SUMMARY+="Could not parse trading data as JSON. Raw data logged.\n"
+    ALERTS+="Could not parse trading data as JSON. Automated alerts may be missed.\n"
+    echo "$(date): Could not parse trading data as JSON." >> "$ALERT_LOG_FILE"
 fi
 
-# Extract and display key parameters if possible (example: assuming 'Risk Parameter: X' format)
-risk_params=$(echo "$data" | grep -i "risk parameter:")
-if [ -n "$risk_params" ]; then
-  summary+="\nRisk Parameters:\n"
-  summary+="$risk_params\n"
+if [ -n "$ALERTS" ]; then
+    SUMMARY+="\nCritical Alerts:\n${ALERTS}"
 fi
 
-# Extract and display status updates (example: assuming 'Status: Y' format)
-status_updates=$(echo "$data" | grep -i "status:")
-if [ -n "$status_updates" ]; then
-  summary+="\nStatus Updates:\n"
-  summary+="$status_updates\n"
+# Output the summary
+echo -e "$SUMMARY"
+
+# Log the alerts separately if any
+if [ -n "$ALERTS" ]; then
+    echo "$(date): Critical alerts generated." >> "$LOG_FILE"
 fi
 
-# Extract and display trading logs (example: assuming lines containing 'Trade ID:')
-trading_logs=$(echo "$data" | grep -i "trade id:")
-if [ -n "$trading_logs" ]; then
-  summary+="\nRecent Trading Logs:\n"
-  summary+="$trading_logs\n"
-fi
-
-echo -e "$summary"
+exit 0
