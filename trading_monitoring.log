@@ -1,1 +1,24 @@
-2026-03-20 09:56:00 - Monitoring started.
+{"trading_logs": [
+    {"timestamp": "2026-03-20T10:20:00Z", "action": "buy", "symbol": "BTC", "price": 50000, "amount": 0.1},
+    {"timestamp": "2026-03-20T10:21:00Z", "action": "sell", "symbol": "BTC", "price": 50500, "amount": 0.1}
+  ],
+  "status_updates": {
+    "market_open": true,
+    "system_healthy": true
+  },
+  "risk_parameters": {
+    "capital": 100000,
+    "stop_loss_pct": 0.05,
+    "take_profit_pct": 0.10,
+    "current_drawdown_pct": 0.03
+  }
+}
+
+--- Monitoring Results ---
+Status: OK
+Alerts: None
+
+--- Detailed Log ---
+Trading Logs: Processed 2 logs.
+Status Updates: Market open, System healthy.
+Risk Parameters: Capital: $100000.00, Stop Loss: 5.00%, Take Profit: 10.00%, Current Drawdown: 3.00%.

@@ -1,1 +1,1 @@
-2026-03-20 09:56:00 - Monitoring started.
+[2026-03-20 10:30:00 UTC] Error: Failed to fetch data from http://localhost:5001/. Reason: Blocked hostname or private/internal/special-use IP address.
