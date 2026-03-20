@@ -1,82 +1,80 @@
 import requests
-import json
-import datetime
-import os
+import logging
 
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TRADING_DATA_URL = "http://localhost:5001/"
+# Configure logging
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_trading_data():
+trading_log_file = "./trading_monitoring.log"
+critical_alerts_file = "./critical_alerts.log"
+url = "http://localhost:5001/"
+
+def fetch_trading_data(url):
     try:
-        response = requests.get(TRADING_DATA_URL)
-        response.raise_for_status() # Raise an exception for bad status codes
-        return response.json()
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        return response.text
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching trading data: {e}")
+        logging.error(f"Error fetching data from {url}: {e}")
         return None
 
-def log_data(data):
-    timestamp = datetime.datetime.now().isoformat()
-    log_entry = f"[{timestamp}] {json.dumps(data)}\n"
-    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-    with open(LOG_FILE, "a") as f:
-        f.write(log_entry)
+def analyze_data(data):
+    if not data:
+        return "No data received.", False
 
-def check_critical_alerts(data):
-    triggered = False
-    alert_message = ""
-    alert_details = {}
+    trading_logs = []
+    status_updates = []
+    risk_parameters = {}
+    critical_alerts = []
+    has_critical_alert = False
 
-    if not data or not isinstance(data, dict):
-        if data is not None: # Log if data is not None but not a dict
-            timestamp = datetime.datetime.now().isoformat()
-            log_entry = f"[{timestamp}] Received unexpected data format: {data}\n"
-            os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-            with open(LOG_FILE, "a") as f:
-                f.write(log_entry)
-        return False, "", {}
+    # Basic parsing - replace with more robust parsing as needed
+    for line in data.splitlines():
+        if "TRADING_LOG" in line:
+            trading_logs.append(line)
+        elif "STATUS_UPDATE" in line:
+            status_updates.append(line)
+        elif "RISK_PARAM" in line:
+            try:
+                key, value = line.split("=", 1)
+                risk_parameters[key.strip()] = value.strip()
+            except ValueError:
+                logging.warning(f"Could not parse RISK_PARAM line: {line}")
+        elif "STOP_LOSS_TRIGGERED" in line or "TAKE_PROFIT_TRIGGERED" in line or "CRITICAL_DRAWDOWN" in line:
+            critical_alerts.append(line)
+            has_critical_alert = True
 
-    # Example checks: Replace with actual logic based on data structure
-    # --- These are placeholders, you need to know the actual keys ---
-    stop_loss_triggered = data.get("stop_loss_triggered", False)
-    take_profit_triggered = data.get("take_profit_triggered", False)
-    drawdown_critical = data.get("drawdown_critical", False)
-    
-    if stop_loss_triggered:
-        triggered = True
-        alert_message += "STOP LOSS TRIGGERED! "
-        alert_details["stop_loss"] = data.get("stop_loss_details", "N/A")
+    # Generate summary
+    summary = "Trading Monitoring Summary:\n\n"
+    summary += "--- Trading Logs ---\n" + "\n".join(trading_logs) + "\n\n"
+    summary += "--- Status Updates ---\n" + "\n".join(status_updates) + "\n\n"
+    summary += "--- Risk Parameters ---\n"
+    for key, value in risk_parameters.items():
+        summary += f"{key}: {value}\n"
+    summary += "\n"
 
-    if take_profit_triggered:
-        triggered = True
-        alert_message += "TAKE PROFIT TRIGGERED! "
-        alert_details["take_profit"] = data.get("take_profit_details", "N/A")
+    if has_critical_alert:
+        summary += "--- CRITICAL ALERTS DETECTED ---\n" + "\n".join(critical_alerts) + "\n"
+        for alert in critical_alerts:
+            logging.warning(f"CRITICAL ALERT: {alert}")
+            with open(critical_alerts_file, "a") as f:
+                f.write(alert + "\n")
 
-    if drawdown_critical:
-        triggered = True
-        alert_message += "DRAWDOWN CRITICAL! "
-        alert_details["drawdown"] = data.get("drawdown_details", "N/A")
-    # --- End of placeholders ---
+    # Log all data
+    with open(trading_log_file, "a") as f:
+        f.write(data + "\n")
 
-    if triggered:
-        timestamp = datetime.datetime.now().isoformat()
-        critical_log_entry = f"[{timestamp}] CRITICAL ALERT: {alert_message.strip()}\nDetails: {json.dumps(alert_details)}\n"
-        os.makedirs(os.path.dirname(CRITICAL_ALERTS_FILE), exist_ok=True)
-        with open(CRITICAL_ALERTS_FILE, "a") as f:
-            f.write(critical_log_entry)
-        print(f"CRITICAL ALERT: {alert_message.strip()} - Details logged to {CRITICAL_ALERTS_FILE}")
-    
-    return triggered, alert_message.strip(), alert_details
+    return summary, has_critical_alert
 
+# Main execution
 if __name__ == "__main__":
-    trading_data = fetch_trading_data()
-    if trading_data is not None: # Check if fetch was successful (even if data is empty dict)
-        log_data(trading_data)
-        is_critical, alert_msg, alert_details = check_critical_alerts(trading_data)
-        # The systemEvent will display the alert message if it's critical
-        if is_critical:
-            print(f"ALERT: {alert_msg}")
-    else:
-        log_data({"error": "Failed to fetch trading data from API."})
+    raw_data = fetch_trading_data(url)
+    analysis_summary, detected_alerts = analyze_data(raw_data)
 
+    # The summary will be returned to the system to be delivered.
+    # For this script, we just log it. In a real cron job, the output of the script would be captured.
+    logging.info(analysis_summary)
+    if detected_alerts:
+        logging.info("Critical alerts were detected and logged.")
+    else:
+        logging.info("No critical alerts detected.")
