@@ -1,101 +1,126 @@
-
+# scripts/trading_monitor.py
 import requests
 import json
-import logging
+import datetime
+import os
 
-# --- Configuration ---
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-TRADING_DASHBOARD_URL = "http://localhost:5001/"
-CRITICAL_DRAWDOWN_THRESHOLD = 0.05  # 5% drawdown
+# Define paths relative to the script's directory
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+TRADING_LOG_PATH = os.path.join(SCRIPT_DIR, "..", "trading_monitoring.log")
+CRITICAL_ALERT_LOG_PATH = os.path.join(SCRIPT_DIR, "..", "critical_alerts.log")
+URL = "http://localhost:5001/"
 
-# --- Logging Setup ---
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE),
-        logging.StreamHandler() # Also log to console for visibility
-    ]
-)
-
-def fetch_trading_data(url):
+def fetch_data(url):
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json()
+        # Attempt to parse as JSON, fall back to text if not JSON
+        try:
+            return response.json()
+        except json.JSONDecodeError:
+            print(f"Response from {url} is not valid JSON. Returning raw text.")
+            return response.text
     except requests.exceptions.RequestException as e:
-        logging.error(f"Error fetching data from {url}: {e}")
-        return None
-    except json.JSONDecodeError:
-        logging.error(f"Error decoding JSON from {url}")
+        print(f"Error fetching data from {url}: {e}")
         return None
 
-def parse_and_log_data(data):
+def parse_and_analyze(data):
     if not data:
-        logging.warning("No data received to parse.")
-        return
+        return None, [], []
 
-    # Sample parsing logic - adjust based on actual data structure
-    trading_logs = data.get("logs", [])
-    status_updates = data.get("status", {})
-    risk_parameters = data.get("risk", {})
-
-    logging.info("--- Trading Logs ---")
-    for log in trading_logs:
-        logging.info(log)
-
-    logging.info("--- Status Updates ---")
-    logging.info(json.dumps(status_updates, indent=2))
-
-    logging.info("--- Risk Parameters ---")
-    logging.info(json.dumps(risk_parameters, indent=2))
-
-    return status_updates, risk_parameters
-
-def check_alerts(status_updates, risk_parameters):
     alerts = []
-    if not status_updates or not risk_parameters:
-        logging.warning("Insufficient data for alert checking.")
-        return alerts
+    critical_data_payload = {} # This will store data relevant for critical alerts
 
-    # Check for triggered stop-loss or take-profit
-    if status_updates.get("stop_loss_triggered"):
-        alerts.append("ALERT: Stop-loss triggered!")
-    if status_updates.get("take_profit_triggered"):
-        alerts.append("ALERT: Take-profit triggered!")
+    # --- Flexible Parsing Logic ---
+    # Try to parse as JSON first
+    parsed_json = None
+    if isinstance(data, dict):
+        parsed_json = data
+    else: # If it's text, try to load it as JSON
+        try:
+            parsed_json = json.loads(data)
+        except json.JSONDecodeError:
+            pass # Keep data as raw text if not JSON
 
-    # Check for critical drawdown
-    current_capital = risk_parameters.get("capital", 0)
-    initial_capital = risk_parameters.get("initial_capital", current_capital) # Assume initial_capital is same as current if not present
-    if initial_capital > 0:
-        drawdown = (initial_capital - current_capital) / initial_capital
-        if drawdown > CRITICAL_DRAWDOWN_THRESHOLD:
-            alerts.append(f"CRITICAL ALERT: Drawdown ({drawdown:.2%}) exceeds threshold ({CRITICAL_DRAWDOWN_THRESHOLD:.2%})!")
+    if parsed_json:
+        capital = parsed_json.get('capital')
+        stop_loss_triggered = parsed_json.get('stop_loss_triggered', False)
+        take_profit_triggered = parsed_json.get('take_profit_triggered', False)
+        drawdown_critical = parsed_json.get('drawdown_critical', False)
+        status_updates = parsed_json.get('status_updates', [])
+        trading_logs = parsed_json.get('trading_logs', [])
+
+        if stop_loss_triggered:
+            alerts.append("STOP LOSS TRIGGERED")
+        if take_profit_triggered:
+            alerts.append("TAKE PROFIT TRIGGERED")
+        if drawdown_critical:
+            alerts.append("CRITICAL DRAWDOWN INDICATORS")
+
+        # Prepare data for critical alert log
+        critical_data_payload = {
+            "timestamp": datetime.datetime.utcnow().isoformat(),
+            "capital": capital,
+            "stop_loss_triggered": stop_loss_triggered,
+            "take_profit_triggered": take_profit_triggered,
+            "drawdown_critical": drawdown_critical,
+            "status_updates": status_updates,
+            "trading_logs": trading_logs,
+            "raw_data": parsed_json # Include the parsed JSON data
+        }
+        # Also return the parsed data for general logging
+        return parsed_json, alerts, critical_data_payload
     else:
-        logging.warning("Initial capital not available or zero, cannot check drawdown.")
+        # If parsing as JSON failed, treat the whole response as log data
+        print("Could not parse data as JSON. Logging raw text.")
+        return data, [], {
+            "timestamp": datetime.datetime.utcnow().isoformat(),
+            "raw_data": data # Log the raw text
+        }
 
 
-    return alerts
+def log_data(data_to_log, alerts, critical_data_payload):
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def log_critical_alerts(alerts):
-    if not alerts:
-        logging.info("No critical alerts to log.")
-        return
+    # Log all extracted data
+    log_entry_prefix = f"[{current_time}]"
+    if alerts:
+        log_entry_prefix += f" ALERT(S): {', '.join(alerts)} |"
 
-    logging.warning("--- Critical Alerts ---")
-    with open(CRITICAL_ALERTS_FILE, "a") as f:
-        for alert in alerts:
-            logging.warning(alert)
-            f.write(alert + "\n")
-    logging.warning("---------------------")
+    try:
+        # Ensure log directory exists
+        os.makedirs(os.path.dirname(TRADING_LOG_PATH), exist_ok=True)
+        with open(TRADING_LOG_PATH, "a") as f:
+            f.write(f"{log_entry_prefix} Extracted Data: {json.dumps(data_to_log, indent=2) if isinstance(data_to_log, dict) else data_to_log}\n")
+    except IOError as e:
+        print(f"Error writing to {TRADING_LOG_PATH}: {e}")
 
+    # Log critical alerts and their data
+    if alerts:
+        try:
+            # Ensure path exists
+            os.makedirs(os.path.dirname(CRITICAL_ALERT_LOG_PATH), exist_ok=True)
+            with open(CRITICAL_ALERT_LOG_PATH, "a") as f:
+                f.write(f"--- CRITICAL ALERT at {current_time} ---\n")
+                f.write(f"Triggered: {', '.join(alerts)}\n")
+                f.write(f"Critical Data Payload: {json.dumps(critical_data_payload, indent=2)}\n")
+                f.write("--------------------------\n")
+        except IOError as e:
+            print(f"Error writing to {CRITICAL_ALERT_LOG_PATH}: {e}")
 
 if __name__ == "__main__":
-    logging.info("Starting trading data fetch and monitoring...")
-    data = fetch_trading_data(TRADING_DASHBOARD_URL)
-    if data:
-        status_updates, risk_parameters = parse_and_log_data(data)
-        alerts = check_alerts(status_updates, risk_parameters)
-        log_critical_alerts(alerts)
-    logging.info("Trading data fetch and monitoring complete.")
+    print(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Fetching data from {URL}...")
+    fetched_data = fetch_data(URL)
+
+    if fetched_data is not None:
+        print("Data fetched. Parsing and analyzing...")
+        original_data_for_log, alerts, critical_data_payload = parse_and_analyze(fetched_data)
+        print("Logging data...")
+        log_data(original_data_for_log, alerts, critical_data_payload)
+
+        if alerts:
+            print(f"*** Critical Alerts Triggered: {', '.join(alerts)} ***")
+        else:
+            print("No critical alerts triggered.")
+    else:
+        print("Failed to fetch data. No analysis or logging performed.")

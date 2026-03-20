@@ -1,62 +1,76 @@
 
 import requests
-import time
+import json
 import os
+from datetime import datetime
 
-URL = "http://localhost:5001/"
+MONITOR_URL = "http://localhost:5001/"
 TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERTS_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 
-# Ensure log directories exist
-for log_path in [TRADING_LOG_PATH, CRITICAL_ALERTS_LOG_PATH]:
-    os.makedirs(os.path.dirname(log_path), exist_ok=True)
-
-def fetch_data():
+def fetch_trading_data():
     try:
-        response = requests.get(URL)
+        response = requests.get(MONITOR_URL, timeout=10)
         response.raise_for_status() # Raise an exception for bad status codes
-        return response.json() # Assuming the endpoint returns JSON
+        return response.json()
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from {URL}: {e}")
+        print(f"Error fetching data from {MONITOR_URL}: {e}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from {MONITOR_URL}")
         return None
 
 def log_data(data):
-    with open(TRADING_LOG_PATH, "a") as f:
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-        f.write(f"{timestamp} - {data}\n")
+    if data:
+        log_entry = f"[{datetime.now().isoformat()}] Data: {json.dumps(data)}\n"
+        with open(TRADING_LOG_PATH, "a") as f:
+            f.write(log_entry)
 
-def check_alerts(data):
+def log_alert(alert_message):
+    log_entry = f"[{datetime.now().isoformat()}] ALERT: {alert_message}\n"
+    with open(CRITICAL_ALERTS_LOG_PATH, "a") as f:
+        f.write(log_entry)
+
+def analyze_and_alert(data):
     alerts = []
-    if data and isinstance(data, dict):
-        # Example: Check for stop-loss/take-profit orders or critical drawdown
-        # This is highly dependent on the structure of your trading data
-        if data.get("stop_loss_triggered"):
-            alerts.append(f"STOP LOSS TRIGGERED: {data.get('stop_loss_details', 'N/A')}")
-        if data.get("take_profit_triggered"):
-            alerts.append(f"TAKE PROFIT TRIGGERED: {data.get('take_profit_details', 'N/A')}")
-        if data.get("critical_drawdown"):
-            alerts.append(f"CRITICAL DRAWDOWN DETECTED: {data.get('drawdown_details', 'N/A')}")
-        
+    if not data:
+        return alerts
+
+    # Detect stop-loss/take-profit orders
+    if "orders" in data and data["orders"]:
+        for order in data["orders"]:
+            if order.get("type") in ["stop_loss", "take_profit"]:
+                alert_message = f"Order triggered: {order.get('type')}. Details: {order.get('details', 'N/A')}"
+                alerts.append(alert_message)
+                log_alert(alert_message)
+
+    # Detect critical drawdown
+    if "drawdown" in data and data["drawdown"] == "critical":
+        alert_message = "Critical drawdown detected!"
+        alerts.append(alert_message)
+        log_alert(alert_message)
+    elif "drawdown" in data and isinstance(data["drawdown"], (int, float)) and data["drawdown"] > 20: # Example: >20% drawdown
+        alert_message = f"Significant drawdown detected: {data['drawdown']}%"
+        alerts.append(alert_message)
+        log_alert(alert_message)
+
     return alerts
 
-def log_alerts(alerts):
-    if alerts:
-        with open(CRITICAL_ALERTS_LOG_PATH, "a") as f:
-            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            for alert in alerts:
-                f.write(f"{timestamp} - ALERT: {alert}\n")
-
 def generate_summary(data, alerts):
-    summary = "Trading Dashboard Analysis:\n"
-    if data:
-        summary += f"- Status: {data.get('status', 'N/A')}\n"
-        summary += f"- Risk Parameters: {data.get('risk_parameters', 'N/A')}\n"
-        # Add more details from data as needed
-    else:
-        summary += "- Could not retrieve live data.\n"
+    summary = f"Trading Analysis Summary - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    summary += "----------------------------------------\n"
+
+    if not data:
+        summary += "Failed to fetch trading data.\n"
+        return summary
+
+    summary += f"Status: {data.get('status', 'N/A')}\n"
+    summary += f"Risk Parameters: {data.get('risk_parameters', 'N/A')}\n"
+    summary += f"Number of orders: {len(data.get('orders', []))}\n"
+    summary += f"Drawdown: {data.get('drawdown', 'N/A')}\n"
 
     if alerts:
-        summary += "\nCRITICAL ALERTS: \n"
+        summary += "\nCritical Alerts:\n"
         for alert in alerts:
             summary += f"- {alert}\n"
     else:
@@ -64,16 +78,12 @@ def generate_summary(data, alerts):
 
     return summary
 
+def main():
+    trading_data = fetch_trading_data()
+    log_data(trading_data)
+    alerts = analyze_and_alert(trading_data)
+    summary = generate_summary(trading_data, alerts)
+    print(summary) # This will be captured by the cron job's systemEvent
+
 if __name__ == "__main__":
-    while True:
-        current_data = fetch_data()
-        if current_data:
-            log_data(current_data)
-            critical_alerts = check_alerts(current_data)
-            if critical_alerts:
-                log_alerts(critical_alerts)
-            
-            summary = generate_summary(current_data, critical_alerts)
-            print(summary) # This will be captured by the parent session
-        
-        time.sleep(60) # Check every 60 seconds
+    main()

@@ -118,7 +118,7 @@ def analyze_and_alert(data):
         logging.warning("CRITICAL ALERTS DETECTED")
         try:
             with open(CRITICAL_ALERTS_FILE, 'a') as f:
-                f.write(f"{datetime.utcnow().isoformat()} - Alerts: {'; '.join(alert_messages)}
+                f.write(f"{datetime.utcnow().isoformat()} - Alerts: {'; '.join(alert_messages)}")
 ")
             logging.info(f"Critical alerts logged to {CRITICAL_ALERTS_FILE}")
         except IOError as e:

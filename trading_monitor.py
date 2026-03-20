@@ -1,87 +1,169 @@
+
 import requests
-import json
+from bs4 import BeautifulSoup
+import logging
 import os
-import datetime
 
-TRADING_DATA_URL = "http://localhost:5001/"
-TRADING_MONITORING_LOG_DIR = "/Users/chetantemkar/.openclaw/workspace/app/"
-TRADING_MONITORING_LOG_FILE = os.path.join(TRADING_MONITORING_LOG_DIR, "trading_monitoring.log")
-CRITICAL_ALERTS_LOG_FILE = os.path.join(TRADING_MONITORING_LOG_DIR, "critical_alerts.log")
+# Configuration
+URL = "http://localhost:5001/"
+TRADING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+LOG_TRANSACTION_DATA = True # Set to False if you don't want to log all transactions
+ALERT_STOP_LOSS_TAKE_PROFIT = True
+ALERT_DRAWDOWN = True
 
-def fetch_trading_data():
+# Setup logging for all extracted data
+logging.basicConfig(filename=TRADING_LOG_FILE, level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Setup logging for critical alerts
+critical_logger = logging.getLogger('critical_alerts')
+critical_logger.setLevel(logging.CRITICAL)
+critical_handler = logging.FileHandler(CRITICAL_ALERTS_FILE)
+critical_formatter = logging.Formatter('%(asctime)s - CRITICAL - %(message)s')
+critical_handler.setFormatter(critical_formatter)
+critical_logger.addHandler(critical_handler)
+# Prevent propagation to the root logger if critical_alerts messages should only go to critical_alerts.log
+critical_logger.propagate = False
+
+
+def fetch_trading_data(url):
+    """Fetches data from the given URL."""
     try:
-        response = requests.get(TRADING_DATA_URL, timeout=10) # Added timeout
-        response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json() # Assuming JSON response
-    except requests.exceptions.Timeout:
-        print(f"Request timed out for {TRADING_DATA_URL}")
-        return None
+        response = requests.get(url)
+        response.raise_for_status() # Raise an exception for bad status codes
+        return response.text
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching trading data: {e}")
-        return None
-    except json.JSONDecodeError:
-        print(f"Error decoding JSON from {TRADING_DATA_URL}")
+        logging.error(f"Error fetching data from {url}: {e}")
         return None
 
-def log_to_file(file_path, content):
-    try:
-        # Ensure directory exists
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
-        # Get current timestamp for logging
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
-        with open(file_path, "a") as f:
-            f.write(f"[{timestamp}] {content}\n")
-    except IOError as e:
-        print(f"Error writing to file {file_path}: {e}")
+def parse_trading_data(html_content):
+    """
+    Parses the HTML content to extract trading logs, status updates,
+    and risk parameters. This is a placeholder and needs to be
+    adapted based on the actual HTML structure of http://localhost:5001/.
+    """
+    if not html_content:
+        return None, None
 
-def identify_critical_events(data):
-    # Placeholder logic: Replace with actual stop-loss/take-profit/drawdown indicators
-    # Example: If 'status' is 'critical' or 'drawdown' > 5
-    critical_events = []
-    if data:
-        current_price = data.get("current_price")
-        stop_loss = data.get("stop_loss")
-        take_profit = data.get("take_profit")
-        drawdown = data.get("drawdown") # Assuming drawdown is a percentage
+    soup = BeautifulSoup(html_content, 'html.parser')
+    extracted_data = {
+        "trading_logs": [],
+        "status_updates": [],
+        "risk_parameters": {
+            "capital": None,
+            "stop_loss": [],
+            "take_profit": []
+        }
+    }
 
-        if data.get("status") == "critical":
-            critical_events.append("Critical status detected.")
-        
-        if stop_loss is not None and current_price is not None and current_price <= stop_loss:
-            critical_events.append(f"Stop-loss triggered at price {current_price}.")
-        
-        if take_profit is not None and current_price is not None and current_price >= take_profit:
-            critical_events.append(f"Take-profit triggered at price {current_price}.")
+    # --- Placeholder parsing logic ---
+    # This section needs to be customized based on the actual HTML content of http://localhost:5001/
+    # Example: Assume logs are in a table with class 'trading-log-table'
+    log_table = soup.find('table', class_='trading-log-table')
+    if log_table:
+        for row in log_table.find_all('tr')[1:]: # Skip header row
+            cells = row.find_all('td')
+            if len(cells) >= 4: # Assuming at least 4 columns: Timestamp, Action, Amount, Details
+                log_entry = {
+                    "timestamp": cells[0].get_text(strip=True),
+                    "action": cells[1].get_text(strip=True),
+                    "amount": cells[2].get_text(strip=True),
+                    "details": cells[3].get_text(strip=True)
+                }
+                extracted_data["trading_logs"].append(log_entry)
 
-        if drawdown is not None and drawdown > 5: # Example threshold for drawdown
-            critical_events.append(f"Critical drawdown detected: {drawdown}%.")
-            
-    return critical_events
+    # Example: Assume status updates are in divs with class 'status-update'
+    status_updates = soup.find_all('div', class_='status-update')
+    for update in status_updates:
+        extracted_data["status_updates"].append(update.get_text(strip=True))
+
+    # Example: Assume risk parameters are in specific divs/spans
+    capital_div = soup.find('div', id='current-capital')
+    if capital_div:
+        extracted_data["risk_parameters"]["capital"] = capital_div.get_text(strip=True)
+
+    stop_loss_elements = soup.find_all('span', class_='stop-loss-level')
+    for sl in stop_loss_elements:
+        extracted_data["risk_parameters"]["stop_loss"].append(sl.get_text(strip=True))
+
+    take_profit_elements = soup.find_all('span', class_='take-profit-level')
+    for tp in take_profit_elements:
+        extracted_data["risk_parameters"]["take_profit"].append(tp.get_text(strip=True))
+
+    # --- End of placeholder parsing logic ---
+
+    return extracted_data
+
+def check_alerts(data):
+    """
+    Checks for triggered stop-loss, take-profit, or critical drawdown indicators.
+    This is a placeholder and needs to be adapted based on how these conditions
+    are represented in the fetched data.
+    """
+    alerts = []
+    if not data:
+        return alerts
+
+    # Placeholder for stop-loss/take-profit alerts
+    if ALERT_STOP_LOSS_TAKE_PROFIT:
+        # Example: Check if any active stop-loss or take-profit levels are met
+        # This requires knowing the current market price, which is not provided here.
+        # For demonstration, let's assume we're looking for specific alert text or values.
+        # In a real scenario, you would compare current prices with configured levels.
+        for log in data.get("trading_logs", []):
+            if "STOP LOSS TRIGGERED" in log.get("details", "").upper():
+                alerts.append(f"Stop loss triggered: {log}")
+            if "TAKE PROFIT TRIGGERED" in log.get("details", "").upper():
+                alerts.append(f"Take profit triggered: {log}")
+
+    # Placeholder for drawdown alerts
+    if ALERT_DRAWDOWN:
+        # Example: Check for drawdown indicators. This would typically involve
+        # calculating current drawdown based on historical performance or
+        # looking for specific indicators in the status updates/logs.
+        # For demonstration, let's assume a critical drawdown is indicated by a status update.
+        for update in data.get("status_updates", []):
+            if "CRITICAL DRAWDOWN" in update.upper():
+                alerts.append(f"Critical drawdown detected: {update}")
+
+    return alerts
+
+def log_data(data):
+    """Logs all extracted data."""
+    if not data:
+        return
+
+    if LOG_TRANSACTION_DATA:
+        if data.get("trading_logs"):
+            for log in data["trading_logs"]:
+                logging.info(f"Trading Log: {log}")
+        if data.get("status_updates"):
+            for update in data["status_updates"]:
+                logging.info(f"Status Update: {update}")
+        if data.get("risk_parameters"):
+            logging.info(f"Risk Parameters: {data['risk_parameters']}")
+
+def log_critical_alerts(alerts):
+    """Logs critical alerts."""
+    if alerts:
+        for alert in alerts:
+            critical_logger.critical(alert)
+        print(f"CRITICAL ALERTS TRIGGERED: {', '.join(alerts)}") # Optional: print to stdout for immediate feedback
 
 def main():
-    data = fetch_trading_data()
+    """Main function to execute the trading monitoring task."""
+    html_content = fetch_trading_data(URL)
+    if not html_content:
+        return
 
-    if data:
-        # Log all extracted data to trading_monitoring.log
-        log_to_file(TRADING_MONITORING_LOG_FILE, f"Extracted Data: {json.dumps(data, indent=2)}")
+    parsed_data = parse_trading_data(html_content)
 
-        # Identify and log critical events
-        critical_events = identify_critical_events(data)
+    log_data(parsed_data)
 
-        if critical_events:
-            alert_message = "CRITICAL EVENTS: " + "\n  - ".join(critical_events)
-            log_to_file(CRITICAL_ALERTS_LOG_FILE, alert_message)
-            print("Critical events detected and logged.")
-        else:
-            # If no critical events, log extracted data to critical alerts log as per requirement
-            log_to_file(CRITICAL_ALERTS_LOG_FILE, f"No critical events. Extracted Data: {json.dumps(data, indent=2)}")
-            print("No critical events detected. Extracted data logged to critical alerts log.")
-    else:
-        log_to_file(TRADING_MONITORING_LOG_FILE, "Failed to fetch trading data.")
-        log_to_file(CRITICAL_ALERTS_LOG_FILE, "Failed to fetch trading data.")
-        print("Failed to fetch trading data. Logs updated accordingly.")
+    alerts = check_alerts(parsed_data)
+    if alerts:
+        log_critical_alerts(alerts)
 
 if __name__ == "__main__":
     main()
