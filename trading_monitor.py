@@ -1,129 +1,87 @@
-
 import requests
-import logging
-from datetime import datetime
+import json
+import os
+import datetime
 
-# Configuration
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-DASHBOARD_URL = "http://localhost:5001/"
-ALERT_THRESHOLD_DRAWDOWN = -0.10  # Example: -10% drawdown is critical
+TRADING_DATA_URL = "http://localhost:5001/"
+TRADING_MONITORING_LOG_DIR = "/Users/chetantemkar/.openclaw/workspace/app/"
+TRADING_MONITORING_LOG_FILE = os.path.join(TRADING_MONITORING_LOG_DIR, "trading_monitoring.log")
+CRITICAL_ALERTS_LOG_FILE = os.path.join(TRADING_MONITORING_LOG_DIR, "critical_alerts.log")
 
-# Setup logging
-logging.basicConfig(
-    filename=LOG_FILE,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
-critical_logger = logging.getLogger("CriticalAlerts")
-critical_logger.setLevel(logging.CRITICAL)
-critical_handler = logging.FileHandler(CRITICAL_ALERTS_FILE)
-critical_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
-critical_logger.addHandler(critical_handler)
-
-def fetch_dashboard_data(url):
+def fetch_trading_data():
     try:
-        response = requests.get(url)
+        response = requests.get(TRADING_DATA_URL, timeout=10) # Added timeout
         response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json() # Assuming the dashboard returns JSON
+        return response.json() # Assuming JSON response
+    except requests.exceptions.Timeout:
+        print(f"Request timed out for {TRADING_DATA_URL}")
+        return None
     except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to fetch data from {url}: {e}")
+        print(f"Error fetching trading data: {e}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from {TRADING_DATA_URL}")
         return None
 
-def parse_trading_data(data):
-    if not data:
-        return None, None # No data to parse
+def log_to_file(file_path, content):
+    try:
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        
+        # Get current timestamp for logging
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        with open(file_path, "a") as f:
+            f.write(f"[{timestamp}] {content}\n")
+    except IOError as e:
+        print(f"Error writing to file {file_path}: {e}")
 
-    # --- Placeholder Parsing Logic ---
-    # This is where you would implement actual parsing based on the dashboard's JSON structure.
-    # Example structure assumed:
-    # {
-    #   "status_updates": "...",
-    #   "risk_parameters": {
-    #     "capital": 10000.0,
-    #     "stop_loss": 0.95, # e.g., 5% stop loss
-    #     "take_profit": 1.10 # e.g., 10% take profit
-    #   },
-    #   "performance": {
-    #     "drawdown": -0.05, # e.g., 5% drawdown
-    #     "profit": 0.02 # e.g., 2% profit
-    #   },
-    #   "open_trades": [...]
-    # }
+def identify_critical_events(data):
+    # Placeholder logic: Replace with actual stop-loss/take-profit/drawdown indicators
+    # Example: If 'status' is 'critical' or 'drawdown' > 5
+    critical_events = []
+    if data:
+        current_price = data.get("current_price")
+        stop_loss = data.get("stop_loss")
+        take_profit = data.get("take_profit")
+        drawdown = data.get("drawdown") # Assuming drawdown is a percentage
 
-    status_updates = data.get("status_updates", "No status updates available.")
-    risk_parameters = data.get("risk_parameters", {})
-    performance = data.get("performance", {})
+        if data.get("status") == "critical":
+            critical_events.append("Critical status detected.")
+        
+        if stop_loss is not None and current_price is not None and current_price <= stop_loss:
+            critical_events.append(f"Stop-loss triggered at price {current_price}.")
+        
+        if take_profit is not None and current_price is not None and current_price >= take_profit:
+            critical_events.append(f"Take-profit triggered at price {current_price}.")
 
-    logging.info("Successfully parsed trading data.")
-    return {
-        "status_updates": status_updates,
-        "risk_parameters": risk_parameters,
-        "performance": performance
-    }, data # Return raw data for potential use in alerts
-
-def analyze_for_alerts(parsed_data, raw_data):
-    alerts = []
-    critical_data_for_log = {}
-
-    if not parsed_data:
-        return alerts, {}
-
-    risk = parsed_data.get("risk_parameters", {})
-    perf = parsed_data.get("performance", {})
-
-    # Check for triggered stop-loss/take-profit (simplified example)
-    # This would typically involve comparing current trade P/L against stop/take profit levels.
-    # For this example, we can just log the parameters if they exist.
-    if risk.get("stop_loss"):
-        logging.info(f"Stop loss parameter set: {risk['stop_loss']}")
-    if risk.get("take_profit"):
-        logging.info(f"Take profit parameter set: {risk['take_profit']}")
-
-    # Check for critical drawdown
-    current_drawdown = perf.get("drawdown")
-    if current_drawdown is not None and current_drawdown < ALERT_THRESHOLD_DRAWDOWN:
-        alert_msg = f"CRITICAL DOWNDRAW: Current drawdown is {current_drawdown:.2%}, which is below the threshold of {ALERT_THRESHOLD_DRAWDOWN:.2%}"
-        alerts.append(alert_msg)
-        critical_data_for_log["drawdown"] = current_drawdown
-        logging.critical(alert_msg) # Add to critical log as well
-
-    # Add other alert conditions here based on your specific needs.
-    # For example, checking open trade P/L against stop_loss/take_profit.
-
-    # Collect critical data for saving
-    if critical_data_for_log:
-        critical_data_for_log["timestamp"] = datetime.utcnow().isoformat()
-        # You might want to add relevant parts of raw_data here too
-        if "open_trades" in raw_data:
-            critical_data_for_log["open_trades_snapshot"] = raw_data["open_trades"]
-
-
-    return alerts, critical_data_for_log
+        if drawdown is not None and drawdown > 5: # Example threshold for drawdown
+            critical_events.append(f"Critical drawdown detected: {drawdown}%.")
+            
+    return critical_events
 
 def main():
-    logging.info("Starting trading dashboard monitor job.")
-    data = fetch_dashboard_data(DASHBOARD_URL)
+    data = fetch_trading_data()
 
     if data:
-        parsed_data, raw_data = parse_trading_data(data)
-        if parsed_data:
-            alerts, critical_data = analyze_for_alerts(parsed_data, raw_data)
+        # Log all extracted data to trading_monitoring.log
+        log_to_file(TRADING_MONITORING_LOG_FILE, f"Extracted Data: {json.dumps(data, indent=2)}")
 
-            if critical_data:
-                critical_logger.critical(f"CRITICAL DATA SAVED: {critical_data}")
+        # Identify and log critical events
+        critical_events = identify_critical_events(data)
 
-            if alerts:
-                logging.warning(f"Alerts triggered: {alerts}")
-            else:
-                logging.info("No critical alerts triggered.")
+        if critical_events:
+            alert_message = "CRITICAL EVENTS: " + "\n  - ".join(critical_events)
+            log_to_file(CRITICAL_ALERTS_LOG_FILE, alert_message)
+            print("Critical events detected and logged.")
         else:
-            logging.error("Failed to parse dashboard data.")
+            # If no critical events, log extracted data to critical alerts log as per requirement
+            log_to_file(CRITICAL_ALERTS_LOG_FILE, f"No critical events. Extracted Data: {json.dumps(data, indent=2)}")
+            print("No critical events detected. Extracted data logged to critical alerts log.")
     else:
-        logging.error("Failed to fetch data from dashboard.")
-
-    logging.info("Trading dashboard monitor job finished.")
+        log_to_file(TRADING_MONITORING_LOG_FILE, "Failed to fetch trading data.")
+        log_to_file(CRITICAL_ALERTS_LOG_FILE, "Failed to fetch trading data.")
+        print("Failed to fetch trading data. Logs updated accordingly.")
 
 if __name__ == "__main__":
     main()

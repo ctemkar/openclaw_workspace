@@ -1,78 +1,119 @@
-
 import requests
-import time
-import datetime
-import sys
+import logging
+from datetime import datetime
 
+# --- Configuration ---
 TRADING_DASHBOARD_URL = "http://localhost:5001/"
-LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+MONITORING_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
+# --- End Configuration ---
 
-# Define stop-loss, take-profit, and drawdown thresholds (example values)
-STOP_LOSS_THRESHOLD = -0.05  # 5% drawdown
-TAKE_PROFIT_THRESHOLD = 0.10 # 10% profit
-CRITICAL_DRAWDOWN_THRESHOLD = -0.15 # 15% drawdown
+# Set up logging for general monitoring
+logging.basicConfig(filename=MONITORING_LOG_FILE, level=logging.INFO, format=LOG_FORMAT)
 
-def log_message(message, log_file):
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(log_file, "a") as f:
-        f.write(f"[{timestamp}] {message}\n")
+# Set up a separate logger for critical alerts to ensure they go to the specific file
+alert_logger = logging.getLogger('alert_logger')
+alert_logger.setLevel(logging.WARNING) # Log WARNING and above
+# Prevent duplicate handlers if this script is run multiple times in the same process
+if not alert_logger.handlers:
+    alert_handler = logging.FileHandler(CRITICAL_ALERTS_LOG_FILE)
+    alert_formatter = logging.Formatter(LOG_FORMAT)
+    alert_handler.setFormatter(alert_formatter)
+    alert_logger.addHandler(alert_handler)
 
-def analyze_trading_data(data):
-    logs = data.get("logs", [])
-    status = data.get("status", "OK")
-    risk_parameters = data.get("risk_parameters", {{}})
-    
-    trading_log_summary = f"Trading Logs: {len(logs)} entries. Status: {status}. "
-    if risk_parameters:
-        trading_log_summary += f"Risk Parameters: {risk_parameters}"
-        
-    alerts = []
-    
-    # Example: Check for stop-loss/take-profit based on simulated trade data in logs
-    # This is a placeholder and would need to be adapted based on actual log data structure
-    for entry in logs:
-        if "trade_result" in entry:
-            trade_result = entry["trade_result"]
-            if trade_result <= STOP_LOSS_THRESHOLD:
-                alerts.append(f"STOP-LOSS TRIGGERED: Trade result {trade_result:.4f}")
-            elif trade_result >= TAKE_PROFIT_THRESHOLD:
-                alerts.append(f"TAKE-PROFIT TRIGGERED: Trade result {trade_result:.4f}")
-                
-    # Example: Check for critical drawdown based on a hypothetical "current_drawdown" in status or risk_parameters
-    current_drawdown = risk_parameters.get("current_drawdown", 0)
-    if current_drawdown <= CRITICAL_DRAWDOWN_THRESHOLD:
-        alerts.append(f"CRITICAL DRAWDOWN DETECTED: {current_drawdown:.4f}")
-        
-    return trading_log_summary, alerts
+def analyze_trading_data():
+    """
+    Fetches data from the trading dashboard, analyzes it, and logs results.
+    Returns a plain text summary of the analysis.
+    """
+    summary_lines = []
+    current_timestamp_str = datetime.now().isoformat()
+    current_time_display = f"{datetime.now().strftime('%A, %B %dth, %Y — %I:%M %p (Asia/Bangkok) / %Y-%m-%d %H:%M UTC')}"
+    summary_lines.append(f"--- Analysis Run: {current_time_display} ---")
 
-def monitor():
-    log_message("Starting trading dashboard monitor...", LOG_FILE)
-    while True:
-        try:
-            response = requests.get(TRADING_DASHBOARD_URL, timeout=10)
-            response.raise_for_status()  # Raise an exception for bad status codes
-            data = response.json()
-            
-            trading_log_summary, alerts = analyze_trading_data(data)
-            
-            log_message(trading_log_summary, LOG_FILE)
-            
-            if alerts:
-                alert_message = "\n".join(alerts)
-                log_message(f"*** CRITICAL ALERTS ***\n{alert_message}", ALERT_FILE)
-                print(f"CRITICAL ALERTS DETECTED: {alert_message}") # Also print to stdout for visibility
-            else:
-                print("No critical alerts.")
-                
-        except requests.exceptions.RequestException as e:
-            log_message(f"Error fetching data from dashboard: {e}", LOG_FILE)
-            print(f"Error fetching data from dashboard: {e}")
-        except Exception as e:
-            log_message(f"An unexpected error occurred: {e}", LOG_FILE)
-            print(f"An unexpected error occurred: {e}")
-            
-        time.sleep(60) # Check every 60 seconds
+    try:
+        # Fetch data from the trading dashboard
+        response = requests.get(TRADING_DASHBOARD_URL, timeout=10) # Add a timeout
+        response.raise_for_status()  # Raises HTTPError for bad responses (4xx or 5xx)
+        data = response.json() # Assume the dashboard returns JSON
+
+        # Log general data
+        logging.info(f"Successfully fetched data from {TRADING_DASHBOARD_URL}")
+        summary_lines.append("Successfully connected to trading dashboard.")
+
+        # Extract and log trading logs
+        trading_logs = data.get('trading_logs', [])
+        logging.info(f"Extracted {len(trading_logs)} trading logs.")
+        for log in trading_logs:
+            logging.info(f"Trading Log Entry: {log}")
+            summary_lines.append(f"Log: {log}")
+
+        # Extract and log status updates
+        status_updates = data.get('status_updates', {})
+        logging.info(f"Extracted status updates: {status_updates}")
+        summary_lines.append(f"Status Updates: {status_updates}")
+
+        # Extract and log risk parameters
+        risk_parameters = data.get('risk_parameters', {})
+        logging.info(f"Extracted risk parameters: {risk_parameters}")
+        summary_lines.append(f"Risk Parameters: {risk_parameters}")
+
+        # Detect and log critical events
+        stop_loss_triggered = data.get('stop_loss_triggered', False)
+        take_profit_triggered = data.get('take_profit_triggered', False)
+        critical_drawdown = data.get('critical_drawdown', False)
+
+        critical_alerts_found = False
+
+        if stop_loss_triggered:
+            alert_message = f"STOP-LOSS TRIGGERED: A stop-loss order was activated."
+            alert_logger.warning(alert_message)
+            logging.warning(alert_message) # Also log to general log
+            summary_lines.append(f"ALERT: {alert_message}")
+            critical_alerts_found = True
+
+        if take_profit_triggered:
+            # This is typically not an alert, but informational
+            info_message = f"TAKE-PROFIT TRIGGERED: A take-profit order was activated."
+            logging.info(info_message)
+            summary_lines.append(f"INFO: {info_message}")
+
+        if critical_drawdown:
+            alert_message = f"CRITICAL DRAWDOWN: The trading account experienced a critical drawdown."
+            alert_logger.warning(alert_message)
+            logging.warning(alert_message) # Also log to general log
+            summary_lines.append(f"ALERT: {alert_message}")
+            critical_alerts_found = True
+
+        if not critical_alerts_found:
+            summary_lines.append("No critical alerts detected.")
+
+    except requests.exceptions.Timeout:
+        error_message = f"Request timed out while trying to connect to {TRADING_DASHBOARD_URL}."
+        logging.error(error_message)
+        alert_logger.error(error_message) # Log connection errors as critical too
+        summary_lines.append(f"ERROR: Connection to trading dashboard timed out.")
+    except requests.exceptions.RequestException as e:
+        error_message = f"Error fetching data from {TRADING_DASHBOARD_URL}: {e}"
+        logging.error(error_message)
+        alert_logger.error(error_message) # Log connection errors as critical too
+        summary_lines.append(f"ERROR: Could not connect to trading dashboard. Details: {e}")
+    except Exception as e:
+        # Catch any other unexpected errors during processing
+        error_message = f"An unexpected error occurred during analysis: {e}"
+        logging.error(error_message)
+        alert_logger.error(error_message) # Log unexpected errors as critical too
+        summary_lines.append(f"ERROR: An unexpected error occurred. Details: {e}")
+
+    # Ensure at least a basic summary line is always returned
+    if len(summary_lines) <= 1: # Only contains the header line
+        summary_lines.append("No data processed or an error occurred.")
+
+    # Join the summary lines into a single plain text string
+    return "\n".join(summary_lines)
 
 if __name__ == "__main__":
-    monitor()
+    # Execute the analysis and print the summary
+    analysis_summary = analyze_trading_data()
+    print(analysis_summary)
