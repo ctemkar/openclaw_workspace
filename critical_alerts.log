@@ -1,1 +1,1 @@
-# Critical Alerts Log\n\nThis file logs critical events and data related to trading performance analysis and risk management. \n\n- **Stop-Loss/Take-Profit Triggers:** Records instances where stop-loss or take-profit levels are met.\n- **Drawdown Indicators:** Logs data when critical drawdown indicators appear.\n\n## Purpose\n\nThis log serves as a\nsecondary, more focused record of high-priority events, complementing the main trading_monitoring.log.\n
+Placeholder for critical alerts

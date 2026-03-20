@@ -1,63 +1,74 @@
 #!/bin/bash
 
-# --- Configuration ---
-FETCH_URL="http://localhost:5001/"
-MONITOR_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-CRITICAL_DRAWDOWN_THRESHOLD="0.10" # Example: 10% drawdown
+# Trading monitoring script
+LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_FILE="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+DATA_URL="http://localhost:5001/"
 
-# --- Fetch Data ---
-echo "$(date): Fetching data from $FETCH_URL" >> "$MONITOR_LOG"
-FETCHED_DATA=$(curl -s "$FETCH_URL") # Using curl for flexibility, assuming JSON or text
+echo "--- $(date) ---" >> $LOG_FILE
+
+# 1. Fetch data from the URL using exec and curl
+echo "Fetching data from $DATA_URL..." >> $LOG_FILE
+FETCHED_DATA=$(curl -s $DATA_URL)
 
 if [ $? -ne 0 ]; then
-  echo "$(date): ERROR - Failed to fetch data from $FETCH_URL" >> "$MONITOR_LOG"
+  echo "Error: Failed to fetch data from $DATA_URL" >> $LOG_FILE
   exit 1
 fi
 
-# --- Parse Data ---
-# This is a placeholder. You'll need to adapt this based on the actual data format (JSON, text, etc.)
-# Example assuming JSON output:
-echo "$(date): Parsing data..." >> "$MONITOR_LOG"
+echo "Data fetched successfully." >> $LOG_FILE
 
-# Extracting example fields. Adjust these based on your actual data structure.
-# You might need to use tools like 'jq' for JSON, 'grep'/'sed'/'awk' for text.
+# 3. Log all extracted data
+echo "$FETCHED_DATA" >> $LOG_FILE
 
-# Example: Extracting status updates, capital, stop loss, take profit
-status_updates=$(echo "$FETCHED_DATA" | jq -r '.status_updates // ""') # Placeholder, use appropriate jq query
-capital=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.capital // ""')
-stop_loss=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.stop_loss // ""')
-take_profit=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.take_profit // ""')
-current_drawdown=$(echo "$FETCHED_DATA" | jq -r '.performance.current_drawdown // ""') # Example for drawdown
+# --- Placeholder for 2. Parse data and 4. Implement alert conditions ---
+# In a real-world scenario, you would use a more robust parsing method here,
+# potentially invoking a Python script or using tools like `jq` if the data is JSON.
+# For simplicity, we'll use basic grep for demonstration, assuming text-based data.
 
-# Log the extracted data
-echo "$(date): Status Updates: $status_updates" >> "$MONITOR_LOG"
-echo "$(date): Capital: $capital, Stop Loss: $stop_loss, Take Profit: $take_profit, Drawdown: $current_drawdown" >> "$MONITOR_LOG"
-echo "---" >> "$MONITOR_LOG"
+# Example: Check for critical conditions (this is highly dependent on the data format)
+# Assumed format for demonstration:
+# STOP_LOSS_HIT=true
+# TAKE_PROFIT_HIT=false
+# DRAWDOWN_CRITICAL=false
+# CAPITAL=10000
+# STOP_LOSS=9000
+# TAKE_PROFIT=11000
 
-# --- Alerting Logic ---
-echo "$(date): Checking for alerts..." >> "$MONITOR_LOG"
-ALERTED=false
+STOP_LOSS_HIT=$(echo "$FETCHED_DATA" | grep "STOP_LOSS_HIT=true" > /dev/null && echo "true" || echo "false")
+TAKE_PROFIT_HIT=$(echo "$FETCHED_DATA" | grep "TAKE_PROFIT_HIT=true" > /dev/null && echo "true" || echo "false")
+DRAWDOWN_CRITICAL=$(echo "$FETCHED_DATA" | grep "DRAWDOWN_CRITICAL=true" > /dev/null && echo "true" || echo "false")
 
-# Alert if stop-loss or take-profit is triggered (assuming these are specific values or states)
-# This requires knowing what indicates a triggered SL/TP. For example, if 'stop_loss' has a 'triggered' field.
-# Placeholder logic:
-if [[ "$stop_loss" == "triggered" || "$take_profit" == "triggered" ]]; then
-  echo "$(date): ALERT - Stop Loss or Take Profit triggered!" >> "$ALERT_LOG"
-  ALERTED=true
+CAPITAL=$(echo "$FETCHED_DATA" | grep "CAPITAL=" | cut -d' -f2)
+STOP_LOSS=$(echo "$FETCHED_DATA" | grep "STOP_LOSS=" | cut -d' -f2)
+TAKE_PROFIT=$(echo "$FETCHED_DATA" | grep "TAKE_PROFIT=" | cut -d' -f2)
+
+ALERT_TRIGGERED=false
+ALERT_MESSAGE=""
+
+if [ "$STOP_LOSS_HIT" == "true" ]; then
+  ALERT_TRIGGERED=true
+  ALERT_MESSAGE="STOP LOSS HIT. Capital: $CAPITAL, Stop Loss: $STOP_LOSS"
+  echo "ALERT: Stop Loss Hit!" >> $LOG_FILE
+elif [ "$TAKE_PROFIT_HIT" == "true" ]; then
+  ALERT_TRIGGERED=true
+  ALERT_MESSAGE="TAKE PROFIT HIT. Capital: $CAPITAL, Take Profit: $TAKE_PROFIT"
+  echo "ALERT: Take Profit Hit!" >> $LOG_FILE
+elif [ "$DRAWDOWN_CRITICAL" == "true" ]; then
+  ALERT_TRIGGERED=true
+  ALERT_MESSAGE="DRAWDOWN CRITICAL. Capital: $CAPITAL"
+  echo "ALERT: Drawdown Critical!" >> $LOG_FILE
 fi
 
-# Alert if drawdown indicators appear critical
-# Example: comparing current drawdown to a threshold
-if (( $(echo "$current_drawdown > $CRITICAL_DRAWDOWN_THRESHOLD" | bc -l) )); then
-  echo "$(date): ALERT - Critical Drawdown detected! Current: $current_drawdown" >> "$ALERT_LOG"
-  ALERTED=true
+# 5. If any alert condition is met, save critical data
+if [ "$ALERT_TRIGGERED" == "true" ]; then
+  echo "--- Critical Alert ---" >> $CRITICAL_ALERTS_FILE
+  echo "Timestamp: $(date)" >> $CRITICAL_ALERTS_FILE
+  echo "$ALERT_MESSAGE" >> $CRITICAL_ALERTS_FILE
+  echo "Full Fetched Data Snippet:" >> $CRITICAL_ALERTS_FILE
+  echo "$FETCHED_DATA" | head -n 10 >> $CRITICAL_ALERTS_FILE # Log snippet of data
+  echo "----------------------" >> $CRITICAL_ALERTS_FILE
+  echo "Critical alert logged to $CRITICAL_ALERTS_FILE" >> $LOG_FILE
 fi
 
-if [ "$ALERTED" = true ]; then
-  echo "$(date): Critical alerts logged to $ALERT_LOG" >> "$MONITOR_LOG"
-else
-  echo "$(date): No critical alerts. Trading monitoring successful." >> "$MONITOR_LOG"
-fi
-
-exit 0
+echo "Trading monitoring script finished." >> $LOG_FILE
