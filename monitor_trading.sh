@@ -1,38 +1,36 @@
-
 #!/bin/bash
 
+LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERT_LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 URL="http://localhost:5001/"
-TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-SUMMARY_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_summary.txt"
 
 # Fetch data
-response=$(curl -s "$URL")
+data=$(curl -s "$URL")
 
-# Log all data
-echo "$(date): $response" >> "$TRADING_LOG"
+# Log all extracted data
+echo "$(date): $data" >> "$LOG_FILE"
 
-# Detect critical alerts (example: simple keyword detection)
-if echo "$response" | grep -qi "stop-loss triggered"; then
-  echo "$(date): STOP-LOSS TRIGGERED - $response" >> "$CRITICAL_LOG"
-  echo "ALERT: Stop-loss triggered at $(date)." >> "$SUMMARY_LOG"
-fi
+# --- Placeholder for parsing and alerting logic ---
+# This is where you would add logic to parse 'data',
+# check for stop-loss/take-profit triggers, and identify critical drawdown.
+# For now, we'll just log a placeholder message.
 
-if echo "$response" | grep -qi "take-profit triggered"; then
-  echo "$(date): TAKE-PROFIT TRIGGERED - $response" >> "$CRITICAL_LOG"
-  echo "ALERT: Take-profit triggered at $(date)." >> "$SUMMARY_LOG"
-fi
+echo "$(date): Performing analysis and checking for alerts..." >> "$LOG_FILE"
 
-if echo "$response" | grep -qi "critical drawdown"; then
-  echo "$(date): CRITICAL DRAWDOWN - $response" >> "$CRITICAL_LOG"
-  echo "ALERT: Critical drawdown detected at $(date)." >> "$SUMMARY_LOG"
-fi
+# Example: If we assume 'data' is JSON and has 'stop_loss_triggered' and 'drawdown_critical' fields
+# if echo "$data" | jq -e '.stop_loss_triggered == true' > /dev/null; then
+#     echo "$(date): STOP LOSS TRIGGERED" >> "$ALERT_LOG_FILE"
+#     echo "$(date): Stop loss triggered. See $ALERT_LOG_FILE for details." >> "$LOG_FILE"
+# fi
 
-# Generate summary if no critical alerts were explicitly logged in this run,
-# otherwise the alerts above have already added to SUMMARY_LOG.
-# More sophisticated analysis would go here.
-if [ ! -s "$SUMMARY_LOG" ] || ! tail -n 1 "$SUMMARY_LOG" | grep -q "ALERT:"; then
-  echo "$(date): Analysis complete. No critical alerts detected in this cycle." >> "$SUMMARY_LOG"
-fi
+# if echo "$data" | jq -e '.drawdown_critical == true' > /dev/null; then
+#     echo "$(date): CRITICAL DRAWDOWN DETECTED" >> "$ALERT_LOG_FILE"
+#     echo "$(date): Critical drawdown detected. See $ALERT_LOG_FILE for details." >> "$LOG_FILE"
+# fi
+# --- End of placeholder logic ---
 
-echo "Monitoring complete."
+# If you need to send a summary as plain text, you would construct it here
+# and the cron job's output redirection would handle it.
+# For now, the logging itself serves as the "summary".
+
+exit 0

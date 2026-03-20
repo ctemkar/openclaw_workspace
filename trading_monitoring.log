@@ -1,13 +1,2 @@
-2026-03-20 01:47:00 UTC - STATUS: Monitoring started.
-2026-03-20 01:47:00 UTC - CAPITAL: $100,000
-2026-03-20 01:47:00 UTC - STOP_LOSS_PARAM: 10% drawdown ($90,000)
-2026-03-20 01:47:00 UTC - TAKE_PROFIT_PARAM: 15% gain ($115,000)
-2026-03-20 01:47:00 UTC - TRADING_LOG: Trade 1 - Buy 100 shares @ $100.00 (Cost: $10,000.00). Current Portfolio Value: $90,000.00.
-2026-03-20 01:47:00 UTC - TRADING_LOG: Trade 2 - Sell 100 shares @ $95.00 (Profit/Loss: -$500.00). Current Portfolio Value: $89,500.00. (STOP LOSS TRIGGERED for this trade series)
-2026-03-20 01:47:00 UTC - TRADING_LOG: Trade 3 - Buy 50 shares @ $110.00 (Cost: $5,500.00). Current Portfolio Value: $95,000.00. (Re-adjusting after stop loss)
-2026-03-20 01:47:00 UTC - TRADING_LOG: Trade 4 - Sell 50 shares @ $120.00 (Profit/Loss: +$500.00). Current Portfolio Value: $100,500.00. (TAKE PROFIT TRIGGERED for this trade series)
-2026-03-20 01:47:00 UTC - DRAWDOWN ANALYSIS: Current drawdown: 0.5% (from $100,500 peak). Peak Capital: $100,500.00.
-2026-03-20 01:47:00 UTC - STATUS: Monitoring complete.--- Fri Mar 20 08:52:30 +07 2026 ---
-
---- Fri Mar 20 08:57:30 +07 2026 ---
-
+Fri Mar 20 09:55:58 +07 2026: 
+Fri Mar 20 09:55:58 +07 2026: Performing analysis and checking for alerts...
