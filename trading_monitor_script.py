@@ -1,93 +1,171 @@
+
 import requests
-import json
-import os
+import logging
 from datetime import datetime
+import json
 
-TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-DASHBOARD_URL = "http://localhost:5001/"
-ALERT_THRESHOLD_DRAWDOWN = 0.10 # Example: 10% drawdown
+# Configuration
+LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_DASHBOARD_URL = "http://localhost:5001/"
 
-def fetch_dashboard_data():
+# Setup logging
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+def fetch_trading_data(url):
+    """Fetches data from the trading dashboard URL."""
     try:
-        response = requests.get(DASHBOARD_URL)
-        response.raise_for_status() # Raise an exception for bad status codes
-        return response.json()
+        # Use requests for simplicity within the script.
+        # If this script is run by an agent with access to tools,
+        # you would ideally pass the content from a tool call.
+        response = requests.get(url)
+        response.raise_for_status()
+        # Try to parse as JSON first, then fall back to text if it fails.
+        try:
+            return response.json() # Return parsed JSON if possible
+        except json.JSONDecodeError:
+            return response.text # Return raw text if not JSON
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from {DASHBOARD_URL}: {e}")
+        logging.error(f"Failed to fetch data from {url}: {e}")
         return None
 
-def parse_and_log_data(data):
+def parse_trading_data(data):
+    """
+    Parses the fetched data (JSON or text) to extract trading logs,
+    status updates, and risk parameters. This function needs to be adapted
+    based on the actual data format returned by the URL.
+    """
+    if data is None:
+        return None
+
+    extracted_data = {
+        "timestamp": datetime.utcnow().isoformat(),
+        "logs": [],
+        "status_updates": [],
+        "risk_parameters": {
+            "capital": None,
+            "stop_loss_triggered": False,
+            "take_profit_triggered": False,
+            "drawdown_critical": False
+        }
+    }
+
+    # --- Parsing Logic ---
+    # This logic is highly dependent on the data format.
+    # Assume JSON first, then fallback to text parsing if needed.
+
+    if isinstance(data, dict):
+        # Assuming JSON data structure
+        extracted_data["logs"] = data.get("logs", [])
+        extracted_data["status_updates"] = data.get("status_updates", [])
+        risk_params = data.get("risk_parameters", {})
+        extracted_data["risk_parameters"]["capital"] = risk_params.get("capital")
+        extracted_data["risk_parameters"]["stop_loss_triggered"] = risk_params.get("stop_loss_triggered", False)
+        extracted_data["risk_parameters"]["take_profit_triggered"] = risk_params.get("take_profit_triggered", False)
+        extracted_data["risk_parameters"]["drawdown_critical"] = risk_params.get("drawdown_critical", False)
+
+    elif isinstance(data, str):
+        # Fallback for plain text - needs specific parsing rules.
+        # This is a very basic example, expecting specific keywords.
+        lines = data.splitlines()
+        for line in lines:
+            line_lower = line.lower()
+            if "log:" in line_lower:
+                extracted_data["logs"].append(line.replace("log:", "").strip())
+            elif "status:" in line_lower:
+                extracted_data["status_updates"].append(line.replace("status:", "").strip())
+            elif "capital:" in line_lower:
+                try:
+                    extracted_data["risk_parameters"]["capital"] = float(line.split("capital:")[1].strip().replace("$", "").replace(",", ""))
+                except ValueError:
+                    pass
+            elif "stop loss triggered" in line_lower:
+                extracted_data["risk_parameters"]["stop_loss_triggered"] = True
+            elif "take profit triggered" in line_lower:
+                extracted_data["risk_parameters"]["take_profit_triggered"] = True
+            elif "drawdown critical" in line_lower:
+                extracted_data["risk_parameters"]["drawdown_critical"] = True
+    else:
+        logging.error(f"Unexpected data format received: {type(data)}")
+        return None
+    # --- End Parsing Logic ---
+
+    return extracted_data
+
+def analyze_and_alert(data):
+    """Analyzes extracted data for alerts and writes critical data."""
+    critical_alerts_found = False
+    alert_messages = []
+
     if not data:
-        return
+        return False, []
 
-    log_entry = f"[{datetime.now().isoformat()}] "
-    risk_params = data.get("risk_parameters", {})
-    status_updates = data.get("status_updates", [])
-    trading_logs = data.get("trading_logs", [])
+    # Check for triggered stop-loss or take-profit
+    if data["risk_parameters"].get("stop_loss_triggered", False):
+        alert_messages.append(f"ALERT: Stop-loss triggered.")
+        critical_alerts_found = True
+    if data["risk_parameters"].get("take_profit_triggered", False):
+        alert_messages.append(f"ALERT: Take-profit triggered.")
+        critical_alerts_found = True
 
-    log_entry += f"Capital: {risk_params.get('capital', 'N/A')}, "
-    log_entry += f"Stop Loss: {risk_params.get('stop_loss', 'N/A')}, "
-    log_entry += f"Take Profit: {risk_params.get('take_profit', 'N/A')}\n"
+    # Check for critical drawdown indicators
+    if data["risk_parameters"].get("drawdown_critical", False):
+        alert_messages.append(f"ALERT: Critical drawdown indicators detected.")
+        critical_alerts_found = True
 
-    # Simple logging for now, could be more detailed
-    for update in status_updates:
-        log_entry += f"Status Update: {update}\n"
-    for log in trading_logs:
-        log_entry += f"Trading Log: {log}\n"
+    if critical_alerts_found:
+        logging.warning("CRITICAL ALERTS DETECTED")
+        try:
+            with open(CRITICAL_ALERTS_FILE, 'a') as f:
+                f.write(f"{datetime.utcnow().isoformat()} - Alerts: {'; '.join(alert_messages)}
+")
+            logging.info(f"Critical alerts logged to {CRITICAL_ALERTS_FILE}")
+        except IOError as e:
+            logging.error(f"Failed to write to critical alerts log {CRITICAL_ALERTS_FILE}: {e}")
+    else:
+        logging.info("No critical alerts detected.")
 
-    with open(TRADING_LOG_PATH, "a") as f:
-        f.write(log_entry)
-
-def check_alerts(data):
-    if not data:
-        return False
-
-    critical_alert_triggered = False
-    alerts = []
-
-    risk_params = data.get("risk_parameters", {})
-    stop_loss = risk_params.get("stop_loss")
-    take_profit = risk_params.get("take_profit")
-    capital = risk_params.get("capital")
-
-    # Check stop loss
-    if capital is not None and stop_loss is not None and capital <= stop_loss:
-        alerts.append(f"ALERT: Stop Loss triggered at {stop_loss} (Capital: {capital})")
-        critical_alert_triggered = True
-
-    # Check take profit
-    if capital is not None and take_profit is not None and capital >= take_profit:
-        alerts.append(f"ALERT: Take Profit triggered at {take_profit} (Capital: {capital})")
-        critical_alert_triggered = True
-
-    # Check drawdown indicators (example)
-    # This would require more context, e.g., historical capital to calculate drawdown
-    # For now, a placeholder: if capital drops below a certain percentage of initial capital
-    # Assuming initial capital is stored somewhere or can be inferred.
-    # For simplicity, let's imagine a 'current_drawdown' field in risk_parameters
-    current_drawdown = risk_params.get("current_drawdown")
-    if current_drawdown is not None and current_drawdown >= ALERT_THRESHOLD_DRAWDOWN:
-        alerts.append(f"CRITICAL ALERT: Drawdown ({current_drawdown*100:.2f}%) exceeds threshold ({ALERT_THRESHOLD_DRAWDOWN*100:.2f}%)")
-        critical_alert_triggered = True
-
-
-    if alerts:
-        alert_log_entry = f"[{datetime.now().isoformat()}] " + "\\n".join(alerts) + "\\n"
-        with open(CRITICAL_ALERTS_PATH, "a") as f:
-            f.write(alert_log_entry)
-    
-    return critical_alert_triggered
+    return critical_alerts_found, alert_messages
 
 def main():
-    data = fetch_dashboard_data()
-    parse_and_log_data(data)
-    critical_alert_triggered = check_alerts(data)
+    """Main function to fetch, parse, log, and alert."""
+    logging.info("Starting trading monitoring task.")
+    trading_data = fetch_trading_data(TRADING_DASHBOARD_URL)
 
-    if critical_alert_triggered:
-        print("Critical alerts generated. Check critical_alerts.log.")
+    if trading_data is None:
+        logging.error("Aborting task due to failed data fetch.")
+        return
+
+    extracted_data = parse_trading_data(trading_data)
+
+    if extracted_data:
+        # Log all extracted data
+        log_entry = f"Timestamp: {extracted_data['timestamp']}
+"
+        log_entry += "Logs:
+" + "\n".join(extracted_data.get('logs', [])) + "\n"
+        log_entry += "Status Updates:\n" + "\n".join(extracted_data.get('status_updates', [])) + "\n"
+        log_entry += "Risk Parameters:\n"
+        for key, value in extracted_data.get('risk_parameters', {}).items():
+            log_entry += f"  {key}: {value}\n"
+
+        try:
+            # Append to the log file
+            with open(LOG_FILE, 'a') as f:
+                f.write(log_entry + "---\n")
+            logging.info(f"Trading data logged to {LOG_FILE}")
+        except IOError as e:
+            logging.error(f"Failed to write to log file {LOG_FILE}: {e}")
+
+        # Analyze and alert
+        critical_found, alerts = analyze_and_alert(extracted_data)
+        if critical_found:
+            logging.warning("Critical alerts were triggered.")
     else:
-        print("Monitoring successful. No critical alerts.")
+        logging.warning("No data was extracted or data format is unrecognized.")
+
+    logging.info("Trading monitoring task finished.")
 
 if __name__ == "__main__":
     main()
