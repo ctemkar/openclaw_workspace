@@ -1,80 +1,80 @@
+
 import requests
-import logging
+import json
+from datetime import datetime
 
-# Configure logging
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+LOG_FILE = "./trading_monitoring.log"
+ALERT_LOG_FILE = "./critical_alerts.log"
+URL = "http://localhost:5001/"
 
-trading_log_file = "./trading_monitoring.log"
-critical_alerts_file = "./critical_alerts.log"
-url = "http://localhost:5001/"
-
-def fetch_trading_data(url):
+def fetch_and_log_data():
+    summary_lines = []
+    alert_lines = []
     try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        return response.text
+        response = requests.get(URL, timeout=10)
+        response.raise_for_status() # Raise HTTPError for bad responses (4xx or 5xx)
+
+        data = response.json()
+
+        timestamp = datetime.utcnow().isoformat() + "Z"
+
+        # Log general monitoring data
+        with open(LOG_FILE, "a") as f:
+            f.write(f"--- {timestamp} ---\n")
+            f.write(f"Status Updates: {json.dumps(data.get("status_updates", "N/A"), indent=2)}\n")
+            f.write(f"Risk Parameters: {json.dumps(data.get("risk_parameters", "N/A"), indent=2)}\n")
+            f.write(f"Trading Logs: {json.dumps(data.get("trading_logs", "N/A"), indent=2)}\n")
+            f.write("\n")
+            summary_lines.append(f"[{timestamp}] Monitored: OK.")
+
+        # Detect and log alerts
+        trading_logs = data.get("trading_logs", [])
+        critical_alert_detected = False
+        if isinstance(trading_logs, list):
+            for log_entry in trading_logs:
+                if "stop-loss" in log_entry.lower() or "take-profit" in log_entry.lower() or "critical drawdown" in log_entry.lower():
+                    alert_message = f"[{timestamp}] CRITICAL ALERT: {log_entry}"
+                    with open(ALERT_LOG_FILE, "a") as f:
+                        f.write(alert_message + "\n")
+                    alert_lines.append(f"[{timestamp}] ALERT: {log_entry}")
+                    critical_alert_detected = True
+
+        if not critical_alert_detected and isinstance(trading_logs, list) and len(trading_logs) > 0:
+            summary_lines.append("No critical alerts detected in trading logs.")
+        elif not isinstance(trading_logs, list):
+            summary_lines.append("Trading logs data format unexpected. Cannot check for alerts.")
+
+    except requests.exceptions.Timeout:
+        error_message = f"[{timestamp}] ERROR: Request timed out while trying to reach {URL}"
+        with open(ALERT_LOG_FILE, "a") as f:
+            f.write(error_message + "\n")
+        summary_lines.append(f"[{timestamp}] ERROR: Timeout connecting to dashboard.")
+        alert_lines.append(f"[{timestamp}] ERROR: Timeout connecting to dashboard.")
     except requests.exceptions.RequestException as e:
-        logging.error(f"Error fetching data from {url}: {e}")
-        return None
+        error_message = f"[{timestamp}] ERROR: Failed to fetch data from {URL}: {e}"
+        with open(ALERT_LOG_FILE, "a") as f:
+            f.write(error_message + "\n")
+        summary_lines.append(f"[{timestamp}] ERROR: Failed to connect to dashboard ({e}).")
+        alert_lines.append(f"[{timestamp}] ERROR: Failed to connect to dashboard ({e}).")
+    except json.JSONDecodeError:
+        error_message = f"[{timestamp}] ERROR: Failed to decode JSON response from {URL}"
+        with open(ALERT_LOG_FILE, "a") as f:
+            f.write(error_message + "\n")
+        summary_lines.append(f"[{timestamp}] ERROR: Invalid JSON response from dashboard.")
+        alert_lines.append(f"[{timestamp}] ERROR: Invalid JSON response from dashboard.")
+    except Exception as e:
+        error_message = f"[{timestamp}] UNEXPECTED ERROR: {e}"
+        with open(ALERT_LOG_FILE, "a") as f:
+            f.write(error_message + "\n")
+        summary_lines.append(f"[{timestamp}] UNEXPECTED ERROR occurred.")
+        alert_lines.append(f"[{timestamp}] UNEXPECTED ERROR occurred.")
 
-def analyze_data(data):
-    if not data:
-        return "No data received.", False
+    return "\n".join(summary_lines), "\n".join(alert_lines)
 
-    trading_logs = []
-    status_updates = []
-    risk_parameters = {}
-    critical_alerts = []
-    has_critical_alert = False
-
-    # Basic parsing - replace with more robust parsing as needed
-    for line in data.splitlines():
-        if "TRADING_LOG" in line:
-            trading_logs.append(line)
-        elif "STATUS_UPDATE" in line:
-            status_updates.append(line)
-        elif "RISK_PARAM" in line:
-            try:
-                key, value = line.split("=", 1)
-                risk_parameters[key.strip()] = value.strip()
-            except ValueError:
-                logging.warning(f"Could not parse RISK_PARAM line: {line}")
-        elif "STOP_LOSS_TRIGGERED" in line or "TAKE_PROFIT_TRIGGERED" in line or "CRITICAL_DRAWDOWN" in line:
-            critical_alerts.append(line)
-            has_critical_alert = True
-
-    # Generate summary
-    summary = "Trading Monitoring Summary:\n\n"
-    summary += "--- Trading Logs ---\n" + "\n".join(trading_logs) + "\n\n"
-    summary += "--- Status Updates ---\n" + "\n".join(status_updates) + "\n\n"
-    summary += "--- Risk Parameters ---\n"
-    for key, value in risk_parameters.items():
-        summary += f"{key}: {value}\n"
-    summary += "\n"
-
-    if has_critical_alert:
-        summary += "--- CRITICAL ALERTS DETECTED ---\n" + "\n".join(critical_alerts) + "\n"
-        for alert in critical_alerts:
-            logging.warning(f"CRITICAL ALERT: {alert}")
-            with open(critical_alerts_file, "a") as f:
-                f.write(alert + "\n")
-
-    # Log all data
-    with open(trading_log_file, "a") as f:
-        f.write(data + "\n")
-
-    return summary, has_critical_alert
-
-# Main execution
 if __name__ == "__main__":
-    raw_data = fetch_trading_data(url)
-    analysis_summary, detected_alerts = analyze_data(raw_data)
-
-    # The summary will be returned to the system to be delivered.
-    # For this script, we just log it. In a real cron job, the output of the script would be captured.
-    logging.info(analysis_summary)
-    if detected_alerts:
-        logging.info("Critical alerts were detected and logged.")
-    else:
-        logging.info("No critical alerts detected.")
+    analysis_summary, critical_alerts = fetch_and_log_data()
+    print("--- Analysis Summary ---")
+    print(analysis_summary)
+    if critical_alerts:
+        print("\n--- Critical Alerts ---")
+        print(critical_alerts)
