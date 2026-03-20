@@ -1,1 +1,9 @@
-Critical alerts.
+Timestamp: 2026-03-20 20:57 UTC
+Data Source: http://localhost:5001/
+---
+Critical Event: Stop-loss triggered for a position.
+Critical Event: Critical drawdown indicators detected.
+Current Capital: $100,000
+Stop Loss Threshold: $5,000
+Take Profit Threshold: $10,000
+Affected Position Data: [Simulated - details would be here if available]
