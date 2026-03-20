@@ -1,71 +1,82 @@
-
 import requests
 import json
 import datetime
-import time
+import os
 
-# Configuration
-TRADING_DASHBOARD_URL = "http://localhost:5001/"
-TRADING_MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-CHECK_INTERVAL_SECONDS = 300  # 5 minutes
+LOG_FILE = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_FILE = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_DATA_URL = "http://localhost:5001/"
 
-def log_message(message, log_file):
-    with open(log_file, "a") as f:
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        f.write("[" + timestamp + "] " + message + "\\n")
-
-def fetch_and_parse_data():
+def fetch_trading_data():
     try:
-        response = requests.get(TRADING_DASHBOARD_URL)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        data = response.json()
-        return data
+        response = requests.get(TRADING_DATA_URL)
+        response.raise_for_status() # Raise an exception for bad status codes
+        return response.json()
     except requests.exceptions.RequestException as e:
-        log_message(f"Error fetching data from {TRADING_DASHBOARD_URL}: {e}", TRADING_MONITORING_LOG)
-        return None
-    except json.JSONDecodeError:
-        log_message(f"Error decoding JSON from {TRADING_DASHBOARD_URL}", TRADING_MONITORING_LOG)
+        print(f"Error fetching trading data: {e}")
         return None
 
-def analyze_and_alert(data):
-    if data is None:
-        return
+def log_data(data):
+    timestamp = datetime.datetime.now().isoformat()
+    log_entry = f"[{timestamp}] {json.dumps(data)}\n"
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, "a") as f:
+        f.write(log_entry)
 
-    log_message(f"Data fetched: {json.dumps(data)}", TRADING_MONITORING_LOG)
+def check_critical_alerts(data):
+    triggered = False
+    alert_message = ""
+    alert_details = {}
 
-    stop_loss_triggered = False
-    take_profit_triggered = False
-    critical_drawdown = False
+    if not data or not isinstance(data, dict):
+        if data is not None: # Log if data is not None but not a dict
+            timestamp = datetime.datetime.now().isoformat()
+            log_entry = f"[{timestamp}] Received unexpected data format: {data}\n"
+            os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+            with open(LOG_FILE, "a") as f:
+                f.write(log_entry)
+        return False, "", {}
 
-    # Example: Check for stop-loss/take-profit triggers (adapt based on actual data structure)
-    if "trades" in data:
-        for trade in data["trades"]:
-            if trade.get("status") == "stop_loss_triggered":
-                stop_loss_triggered = True
-                log_message(f"ALERT: Stop-loss triggered for trade ID: {trade.get('id')}", CRITICAL_ALERTS_LOG)
-            if trade.get("status") == "take_profit_triggered":
-                take_profit_triggered = True
-                log_message(f"ALERT: Take-profit triggered for trade ID: {trade.get('id')}", CRITICAL_ALERTS_LOG)
+    # Example checks: Replace with actual logic based on data structure
+    # --- These are placeholders, you need to know the actual keys ---
+    stop_loss_triggered = data.get("stop_loss_triggered", False)
+    take_profit_triggered = data.get("take_profit_triggered", False)
+    drawdown_critical = data.get("drawdown_critical", False)
+    
+    if stop_loss_triggered:
+        triggered = True
+        alert_message += "STOP LOSS TRIGGERED! "
+        alert_details["stop_loss"] = data.get("stop_loss_details", "N/A")
 
-    # Example: Check for drawdown indicators (adapt based on actual data structure)
-    if "risk_parameters" in data:
-        current_capital = data["risk_parameters"].get("capital")
-        initial_capital = data["risk_parameters"].get("initial_capital") # Assuming initial capital is available
-        if current_capital is not None and initial_capital is not None:
-            drawdown_percentage = ((initial_capital - current_capital) / initial_capital) * 100
-            if drawdown_percentage > 10:  # Example: 10% drawdown is critical
-                critical_drawdown = True
-                log_message(f"ALERT: Critical drawdown detected: {drawdown_percentage:.2f}%", CRITICAL_ALERTS_LOG)
+    if take_profit_triggered:
+        triggered = True
+        alert_message += "TAKE PROFIT TRIGGERED! "
+        alert_details["take_profit"] = data.get("take_profit_details", "N/A")
 
-    if stop_loss_triggered or take_profit_triggered or critical_drawdown:
-        log_message("Critical alerts logged.", CRITICAL_ALERTS_LOG)
+    if drawdown_critical:
+        triggered = True
+        alert_message += "DRAWDOWN CRITICAL! "
+        alert_details["drawdown"] = data.get("drawdown_details", "N/A")
+    # --- End of placeholders ---
 
-def main():
-    while True:
-        data = fetch_and_parse_data()
-        analyze_and_alert(data)
-        time.sleep(CHECK_INTERVAL_SECONDS)
+    if triggered:
+        timestamp = datetime.datetime.now().isoformat()
+        critical_log_entry = f"[{timestamp}] CRITICAL ALERT: {alert_message.strip()}\nDetails: {json.dumps(alert_details)}\n"
+        os.makedirs(os.path.dirname(CRITICAL_ALERTS_FILE), exist_ok=True)
+        with open(CRITICAL_ALERTS_FILE, "a") as f:
+            f.write(critical_log_entry)
+        print(f"CRITICAL ALERT: {alert_message.strip()} - Details logged to {CRITICAL_ALERTS_FILE}")
+    
+    return triggered, alert_message.strip(), alert_details
 
 if __name__ == "__main__":
-    main()
+    trading_data = fetch_trading_data()
+    if trading_data is not None: # Check if fetch was successful (even if data is empty dict)
+        log_data(trading_data)
+        is_critical, alert_msg, alert_details = check_critical_alerts(trading_data)
+        # The systemEvent will display the alert message if it's critical
+        if is_critical:
+            print(f"ALERT: {alert_msg}")
+    else:
+        log_data({"error": "Failed to fetch trading data from API."})
+
