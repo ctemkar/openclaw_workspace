@@ -1,99 +1,132 @@
 import requests
 import json
-import datetime
+import logging
+import os
 
-# Configuration
-URL = "http://localhost:5001/"
-MONITORING_LOG = "./trading_monitoring.log"
-CRITICAL_ALERTS_LOG = "./critical_alerts.log"
-STOP_LOSS_THRESHOLD = -0.10  # Example: 10% drawdown
-TAKE_PROFIT_THRESHOLD = 0.15 # Example: 15% profit
-CRITICAL_DRAWDOWN_THRESHOLD = -0.20 # Example: 20% drawdown
+# Ensure the workspace directory exists
+workspace_dir = "/Users/chetantemkar/.openclaw/workspace/app"
+os.makedirs(workspace_dir, exist_ok=True)
 
-def fetch_data(url):
+log_file_path = os.path.join(workspace_dir, "trading_monitoring.log")
+alerts_file_path = os.path.join(workspace_dir, "critical_alerts.log")
+
+# Configure logging to go to the specified file and stdout
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[logging.FileHandler(log_file_path),
+                              logging.StreamHandler()])
+
+# --- Configuration ---
+FETCH_URL = "http://localhost:5001/"
+
+# --- Alert parameters (example values) ---
+# These would typically be configured or derived from the fetched data.
+# For this example, assuming they are set as constants or fetched.
+STOP_LOSS_THRESHOLD = 0.05  # 5% loss
+TAKE_PROFIT_THRESHOLD = 0.10 # 10% gain
+DRAWDOWN_CRITICAL_THRESHOLD = 0.15 # 15% drawdown
+
+def fetch_and_process_trading_data():
     try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
-        return response.json()
+        # 1. Fetch data from the URL
+        logging.info(f"Fetching data from {FETCH_URL}...")
+        response = requests.get(FETCH_URL, timeout=10) # Added timeout
+        response.raise_for_status()  # Raise an exception for bad status codes
+        data = response.json()
+
+        # Log raw fetched data
+        logging.info(f"Raw data fetched: {json.dumps(data)}")
+
+        # 2. Parse the fetched data
+        # Assuming JSON structure like:
+        # {
+        #   "trading_logs": [...],
+        #   "status_updates": [...],
+        #   "risk_parameters": {
+        #     "capital": ...,
+        #     "stop_loss": ..., # This could be a fixed value or a current loss percentage
+        #     "take_profit": ..., # This could be a fixed value or a current gain percentage
+        #     "current_drawdown": ... # e.g., percentage of capital lost from peak
+        #   }
+        # }
+        trading_logs = data.get("trading_logs", [])
+        status_updates = data.get("status_updates", [])
+        risk_parameters = data.get("risk_parameters", {})
+
+        # Extracting risk parameters, handling potential missing keys
+        capital = risk_parameters.get("capital")
+        # Assuming stop_loss and take_profit in risk_parameters are current PnL percentages relative to entry,
+        # or absolute thresholds. For alert logic, we need to compare to thresholds.
+        # Let's assume risk_parameters["stop_loss"] is the current loss percentage and risk_parameters["take_profit"] is current gain percentage.
+        current_stop_loss_loss_pct = risk_parameters.get("stop_loss") # e.g., -0.02 for 2% loss
+        current_take_profit_gain_pct = risk_parameters.get("take_profit") # e.g., 0.03 for 3% gain
+        current_drawdown_pct = risk_parameters.get("current_drawdown") # e.g., 0.08 for 8% drawdown
+
+        # 3. Log all extracted data
+        logging.info("--- Extracted Data ---")
+        for log in trading_logs:
+            logging.info(f"Log: {log}")
+        for status in status_updates:
+            logging.info(f"Status: {status}")
+        if capital is not None:
+            logging.info(f"Capital: {capital}")
+        if current_stop_loss_loss_pct is not None:
+            logging.info(f"Current Stop Loss (Loss %): {current_stop_loss_loss_pct}")
+        if current_take_profit_gain_pct is not None:
+            logging.info(f"Current Take Profit (Gain %): {current_take_profit_gain_pct}")
+        if current_drawdown_pct is not None:
+            logging.info(f"Current Drawdown %: {current_drawdown_pct}")
+        logging.info("----------------------")
+
+        # 4. Implement alert conditions
+        alerts_triggered = []
+        alert_details = []
+
+        # Check stop-loss: if current loss percentage is DEEPER than the threshold
+        if current_stop_loss_loss_pct is not None and current_stop_loss_loss_pct <= -STOP_LOSS_THRESHOLD:
+            alerts_triggered.append("STOP_LOSS_HIT")
+            alert_details.append(f"Stop-loss hit. Current loss: {current_stop_loss_loss_pct*100:.2f}%. Threshold: {-STOP_LOSS_THRESHOLD*100:.2f}%.")
+
+        # Check take-profit: if current gain percentage is HIGHER than the threshold
+        if current_take_profit_gain_pct is not None and current_take_profit_gain_pct >= TAKE_PROFIT_THRESHOLD:
+            alerts_triggered.append("TAKE_PROFIT_HIT")
+            alert_details.append(f"Take-profit hit. Current gain: {current_take_profit_gain_pct*100:.2f}%. Threshold: {TAKE_PROFIT_THRESHOLD*100:.2f}%.")
+
+        # Check drawdown: if current drawdown percentage is HIGHER than the threshold
+        if current_drawdown_pct is not None and current_drawdown_pct >= DRAWDOWN_CRITICAL_THRESHOLD:
+            alerts_triggered.append("CRITICAL_DRAWDOWN")
+            alert_details.append(f"Critical drawdown. Current: {current_drawdown_pct*100:.2f}%. Threshold: {DRAWDOWN_CRITICAL_THRESHOLD*100:.2f}%.")
+
+        # 5. If any alert condition is met, save critical data
+        if alerts_triggered:
+            critical_data_summary = f" Timestamp: {logging.Formatter('%(asctime)s').formatTime(logging.LogRecord('', '', '', '', '', '', ''))}\n" # Get current timestamp
+            critical_data_summary += f" Alerts: {', '.join(alerts_triggered)}\n"
+            critical_data_summary += f" Details: {'; '.join(alert_details)}\n"
+            critical_data_summary += f" Full Data: {json.dumps(data, indent=2)}"
+
+            # Append to critical alerts log file
+            try:
+                with open(alerts_file_path, 'a') as f:
+                    f.write(critical_data_summary + "\n")
+                logging.warning(f"CRITICAL ALERT DETECTED AND LOGGED: {', '.join(alerts_triggered)}")
+            except IOError as e:
+                logging.error(f"Failed to write to critical alerts log {alerts_file_path}: {e}")
+        else:
+            logging.info("No critical alerts triggered.")
+
+    except requests.exceptions.ConnectionError:
+        logging.error(f"Failed to connect to {FETCH_URL}. Is the server running?")
+    except requests.exceptions.Timeout:
+        logging.error(f"Request to {FETCH_URL} timed out.")
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from {url}: {e}")
-        return None
+        logging.error(f"Error fetching data from {FETCH_URL}: {e}")
     except json.JSONDecodeError:
-        print(f"Error decoding JSON from {url}")
-        return None
-
-def analyze_data(data):
-    timestamp = datetime.datetime.now().isoformat()
-    monitoring_log_entry = f"{timestamp}: Data received.\n"
-    critical_alerts = []
-    summary = f"Trading Dashboard Analysis - {timestamp}\n\n"
-
-    if data is None:
-        monitoring_log_entry += "No data received.\n"
-        summary += "Failed to retrieve data from the trading dashboard.\n"
-        return monitoring_log_entry, critical_alerts, summary
-
-    # Extracting general data
-    trading_logs = data.get("trading_logs", [])
-    status_updates = data.get("status_updates", [])
-    risk_parameters = data.get("risk_parameters", {})
-
-    monitoring_log_entry += f"Risk Parameters: {json.dumps(risk_parameters)}\n"
-    monitoring_log_entry += f"Status Updates: {len(status_updates)} found.\n"
-    monitoring_log_entry += f"Trading Logs: {len(trading_logs)} found.\n"
-
-    summary += "Status Updates:\n"
-    for update in status_updates:
-        summary += f"- {update}\n"
-    summary += "\n"
-
-    # Detecting alerts
-    for log in trading_logs:
-        if 'type' in log and 'amount' in log:
-            log_type = log['type']
-            amount = log['amount']
-            
-            if log_type == "stop_loss" and amount <= STOP_LOSS_THRESHOLD:
-                alert_msg = f"ALERT: Stop-loss triggered at {amount*100:.2f}% on {timestamp}"
-                critical_alerts.append(alert_msg)
-                monitoring_log_entry += f"CRITICAL: {alert_msg}\n"
-            elif log_type == "take_profit" and amount >= TAKE_PROFIT_THRESHOLD:
-                alert_msg = f"ALERT: Take-profit triggered at {amount*100:.2f}% on {timestamp}"
-                critical_alerts.append(alert_msg)
-                monitoring_log_entry += f"ALERT: {alert_msg}\n"
-
-    # Check for critical drawdown
-    current_drawdown = risk_parameters.get("current_drawdown", 0)
-    if current_drawdown <= CRITICAL_DRAWDOWN_THRESHOLD:
-        alert_msg = f"CRITICAL DRAWDOWN ALERT: Current drawdown is {current_drawdown*100:.2f}% on {timestamp}"
-        critical_alerts.append(alert_msg)
-        monitoring_log_entry += f"CRITICAL: {alert_msg}\n"
-
-    if critical_alerts:
-        summary += "Critical Alerts:\n"
-        for alert in critical_alerts:
-            summary += f"- {alert}\n"
-    else:
-        summary += "No critical alerts detected.\n"
-
-    return monitoring_log_entry, critical_alerts, summary
-
-def log_to_file(filepath, content):
-    try:
-        with open(filepath, "a") as f:
-            f.write(content + "\n")
+        logging.error(f"Error decoding JSON response from {FETCH_URL}. Response: {response.text}")
     except IOError as e:
-        print(f"Error writing to file {filepath}: {e}")
+        logging.error(f"File I/O error: {e}")
+    except Exception as e:
+        logging.error(f"An unexpected error occurred: {e}", exc_info=True) # Log exception info for debugging
 
-# --- Main execution ---
+# Execute the function
 if __name__ == "__main__":
-    data = fetch_data(URL)
-    monitoring_entry, alerts, analysis_summary = analyze_data(data)
-
-    log_to_file(MONITORING_LOG, monitoring_entry)
-
-    if alerts:
-        for alert in alerts:
-            log_to_file(CRITICAL_ALERTS_LOG, alert)
-
-    print(analysis_summary) # This will be output by exec and can be captured
+    fetch_and_process_trading_data()
