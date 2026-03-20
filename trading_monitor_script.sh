@@ -1,72 +1,63 @@
 #!/bin/bash
 
 # --- Configuration ---
-URL="http://localhost:5001/"
-LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-SUMMARY_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_summary.txt" # Temporary file for summary
+FETCH_URL="http://localhost:5001/"
+MONITOR_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+CRITICAL_DRAWDOWN_THRESHOLD="0.10" # Example: 10% drawdown
 
 # --- Fetch Data ---
-# Using curl with a timeout and capturing output
-DATA=$(curl -s --max-time 10 "$URL")
+echo "$(date): Fetching data from $FETCH_URL" >> "$MONITOR_LOG"
+FETCHED_DATA=$(curl -s "$FETCH_URL") # Using curl for flexibility, assuming JSON or text
 
-# --- Logging ---
-echo "--- $(date) ---" >> "$LOG_FILE"
-echo "$DATA" >> "$LOG_FILE"
-
-# --- Analysis and Alerting ---
-echo "--- $(date) ---" > "$SUMMARY_FILE"
-echo "--- Analysis for $URL ---" >> "$SUMMARY_FILE"
-
-# Basic keyword detection for alerts
-STOP_LOSS_ALERT=$(echo "$DATA" | grep -i "STOP-LOSS TRIGGERED\|STOP LOSS HIT\|STOPPED OUT")
-TAKE_PROFIT_ALERT=$(echo "$DATA" | grep -i "TAKE-PROFIT TRIGGERED\|TAKE PROFIT HIT\|TAKE GAIN")
-CRITICAL_DRAWDOWN_ALERT=$(echo "$DATA" | grep -i "CRITICAL DRAWDOWN\|MAX DRAWDOWN REACHED\|DEEP LOSS")
-
-# Log critical alerts and add to summary
-if [ -n "$STOP_LOSS_ALERT" ]; then
-  echo "CRITICAL ALERT: STOP-LOSS TRIGGERED at $(date)" >> "$CRITICAL_ALERTS_LOG"
-  echo "CRITICAL ALERT: STOP-LOSS TRIGGERED" >> "$SUMMARY_FILE"
-  echo "$STOP_LOSS_ALERT" >> "$SUMMARY_FILE"
+if [ $? -ne 0 ]; then
+  echo "$(date): ERROR - Failed to fetch data from $FETCH_URL" >> "$MONITOR_LOG"
+  exit 1
 fi
 
-if [ -n "$TAKE_PROFIT_ALERT" ]; then
-  echo "ALERT: TAKE-PROFIT TRIGGERED at $(date)" >> "$LOG_FILE" # Log non-critical alerts to main log
-  echo "ALERT: TAKE-PROFIT TRIGGERED" >> "$SUMMARY_FILE"
-  echo "$TAKE_PROFIT_ALERT" >> "$SUMMARY_FILE"
+# --- Parse Data ---
+# This is a placeholder. You'll need to adapt this based on the actual data format (JSON, text, etc.)
+# Example assuming JSON output:
+echo "$(date): Parsing data..." >> "$MONITOR_LOG"
+
+# Extracting example fields. Adjust these based on your actual data structure.
+# You might need to use tools like 'jq' for JSON, 'grep'/'sed'/'awk' for text.
+
+# Example: Extracting status updates, capital, stop loss, take profit
+status_updates=$(echo "$FETCHED_DATA" | jq -r '.status_updates // ""') # Placeholder, use appropriate jq query
+capital=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.capital // ""')
+stop_loss=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.stop_loss // ""')
+take_profit=$(echo "$FETCHED_DATA" | jq -r '.risk_parameters.take_profit // ""')
+current_drawdown=$(echo "$FETCHED_DATA" | jq -r '.performance.current_drawdown // ""') # Example for drawdown
+
+# Log the extracted data
+echo "$(date): Status Updates: $status_updates" >> "$MONITOR_LOG"
+echo "$(date): Capital: $capital, Stop Loss: $stop_loss, Take Profit: $take_profit, Drawdown: $current_drawdown" >> "$MONITOR_LOG"
+echo "---" >> "$MONITOR_LOG"
+
+# --- Alerting Logic ---
+echo "$(date): Checking for alerts..." >> "$MONITOR_LOG"
+ALERTED=false
+
+# Alert if stop-loss or take-profit is triggered (assuming these are specific values or states)
+# This requires knowing what indicates a triggered SL/TP. For example, if 'stop_loss' has a 'triggered' field.
+# Placeholder logic:
+if [[ "$stop_loss" == "triggered" || "$take_profit" == "triggered" ]]; then
+  echo "$(date): ALERT - Stop Loss or Take Profit triggered!" >> "$ALERT_LOG"
+  ALERTED=true
 fi
 
-if [ -n "$CRITICAL_DRAWDOWN_ALERT" ]; then
-  echo "CRITICAL ALERT: CRITICAL DRAWDOWN at $(date)" >> "$CRITICAL_ALERTS_LOG"
-  echo "CRITICAL ALERT: CRITICAL DRAWDOWN" >> "$SUMMARY_FILE"
-  echo "$CRITICAL_DRAWDOWN_ALERT" >> "$SUMMARY_FILE"
+# Alert if drawdown indicators appear critical
+# Example: comparing current drawdown to a threshold
+if (( $(echo "$current_drawdown > $CRITICAL_DRAWDOWN_THRESHOLD" | bc -l) )); then
+  echo "$(date): ALERT - Critical Drawdown detected! Current: $current_drawdown" >> "$ALERT_LOG"
+  ALERTED=true
 fi
 
-# Extract and log status updates and risk parameters (simplified example)
-# Assuming these are lines containing "STATUS:" or "RISK:"
-STATUS_UPDATES=$(echo "$DATA" | grep -i "STATUS:")
-RISK_PARAMETERS=$(echo "$DATA" | grep -i "RISK PARAMETER:")
-
-echo "--- Status Updates ---" >> "$SUMMARY_FILE"
-if [ -n "$STATUS_UPDATES" ]; then
-  echo "$STATUS_UPDATES" >> "$SUMMARY_FILE"
+if [ "$ALERTED" = true ]; then
+  echo "$(date): Critical alerts logged to $ALERT_LOG" >> "$MONITOR_LOG"
 else
-  echo "No specific status updates found." >> "$SUMMARY_FILE"
+  echo "$(date): No critical alerts. Trading monitoring successful." >> "$MONITOR_LOG"
 fi
 
-echo "--- Risk Parameters ---" >> "$SUMMARY_FILE"
-if [ -n "$RISK_PARAMETERS" ]; then
-  echo "$RISK_PARAMETERS" >> "$SUMMARY_FILE"
-else
-  echo "No specific risk parameters found." >> "$SUMMARY_FILE"
-fi
-
-# --- Final Summary ---
-echo "" >> "$SUMMARY_FILE"
-echo "Analysis complete. See '$LOG_FILE' for full logs and '$CRITICAL_ALERTS_LOG' for critical alerts." >> "$SUMMARY_FILE"
-
-# The final output will be the content of the summary file
-cat "$SUMMARY_FILE"
-
-# Clean up temporary summary file if needed (though cron will run it again)
-# rm "$SUMMARY_FILE"
+exit 0
