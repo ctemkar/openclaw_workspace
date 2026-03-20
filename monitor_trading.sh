@@ -1,36 +1,40 @@
 #!/bin/bash
 
-LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-ALERT_LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 URL="http://localhost:5001/"
 
-# Fetch data
-data=$(curl -s "$URL")
+echo "--- $(date) ---" >> $TRADING_LOG
 
-# Log all extracted data
-echo "$(date): $data" >> "$LOG_FILE"
+# Fetch data from the URL
+curl -s $URL >> $TRADING_LOG
 
-# --- Placeholder for parsing and alerting logic ---
-# This is where you would add logic to parse 'data',
-# check for stop-loss/take-profit triggers, and identify critical drawdown.
-# For now, we'll just log a placeholder message.
+# Placeholder for status updates and risk parameters extraction and logging
+# In a real scenario, you would parse the output of curl and extract specific information.
+# Example: If the output is JSON, you might use jq.
+# echo "Status updates and risk parameters will be logged here." >> $TRADING_LOG
 
-echo "$(date): Performing analysis and checking for alerts..." >> "$LOG_FILE"
+# Placeholder for detecting stop-loss/take-profit orders or critical drawdown
+# This would involve parsing the trading logs for specific keywords or patterns.
+if grep -q "STOP_LOSS_TRIGGERED" $TRADING_LOG || grep -q "TAKE_PROFIT_TRIGGERED" $TRADING_LOG || grep -q "CRITICAL_DRAWDOWN" $TRADING_LOG; then
+  echo "ALERT: Critical event detected at $(date)" >> $CRITICAL_ALERT_LOG
+  # You would also extract and log details about the alert here.
+  echo "Critical event detected. See $TRADING_LOG for details." >> $CRITICAL_ALERT_LOG
+fi
 
-# Example: If we assume 'data' is JSON and has 'stop_loss_triggered' and 'drawdown_critical' fields
-# if echo "$data" | jq -e '.stop_loss_triggered == true' > /dev/null; then
-#     echo "$(date): STOP LOSS TRIGGERED" >> "$ALERT_LOG_FILE"
-#     echo "$(date): Stop loss triggered. See $ALERT_LOG_FILE for details." >> "$LOG_FILE"
-# fi
+# Generate summary
+SUMMARY="Trading log updated. " 
+if [ -s $CRITICAL_ALERT_LOG ] && tail -n 1 $CRITICAL_ALERT_LOG | grep -q "ALERT:"; then
+  SUMMARY+="CRITICAL ALERT detected. See $CRITICAL_ALERT_LOG for details."
+else
+  SUMMARY+="No critical alerts detected."
+fi
 
-# if echo "$data" | jq -e '.drawdown_critical == true' > /dev/null; then
-#     echo "$(date): CRITICAL DRAWDOWN DETECTED" >> "$ALERT_LOG_FILE"
-#     echo "$(date): Critical drawdown detected. See $ALERT_LOG_FILE for details." >> "$LOG_FILE"
-# fi
-# --- End of placeholder logic ---
+echo "$SUMMARY"
 
-# If you need to send a summary as plain text, you would construct it here
-# and the cron job's output redirection would handle it.
-# For now, the logging itself serves as the "summary".
-
+# This script assumes that the output of curl is what you want to log directly.
+# For more sophisticated parsing, you would need to pipe the curl output to other commands (e.g., jq, awk, sed).
+# Example for JSON parsing:
+# curl -s $URL | jq . >> $TRADING_LOG
+# The alert detection is also a placeholder and needs to be implemented based on actual log content.
 exit 0
