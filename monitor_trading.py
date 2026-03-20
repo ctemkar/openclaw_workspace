@@ -1,108 +1,86 @@
-# monitor_trading.py (corrected log_message function)
 import requests
-import json
-from datetime import datetime
 import os
+import datetime
+import time
 
-TRADING_MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+LOG_DIR = "/Users/chetantemkar/.openclaw/workspace/app/"
+TRADING_LOG = os.path.join(LOG_DIR, "trading_monitoring.log")
+CRITICAL_LOG = os.path.join(LOG_DIR, "critical_alerts.log")
 URL = "http://localhost:5001/"
-
-def log_message(log_file, message):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    try:
-        # Construct the message with timestamp
-        log_entry = f"[{timestamp}] {message}"
-        # Append the newline character explicitly
-        with open(log_file, "a") as f:
-            f.write(log_entry + "
-")
-    except Exception as e:
-        print(f"Error writing to log file {log_file}: {e}")
-
+CHECK_INTERVAL_SECONDS = 300 # 5 minutes
 
 def monitor_trading_dashboard():
     try:
-        try:
-            response = requests.get(URL, timeout=5)
-            response.raise_for_status()
-            data = response.json()
-        except requests.exceptions.ConnectionError:
-            data = {
-                "trading_logs": "Connection to dashboard failed.",
-                "status": "UNAVAILABLE",
-                "risk_parameters": "N/A",
-                "alerts": "CONNECTION_ERROR"
-            }
-        except requests.exceptions.Timeout:
-            data = {
-                "trading_logs": "Connection to dashboard timed out.",
-                "status": "UNAVAILABLE",
-                "risk_parameters": "N/A",
-                "alerts": "TIMEOUT_ERROR"
-            }
-        except requests.exceptions.RequestException as e:
-            data = {
-                "trading_logs": f"Request error: {e}",
-                "status": "ERROR",
-                "risk_parameters": "N/A",
-                "alerts": f"REQUEST_ERROR: {e}"
-            }
-        except json.JSONDecodeError:
-            data = {
-                "trading_logs": "Received non-JSON response.",
-                "status": "ERROR",
-                "risk_parameters": "N/A",
-                "alerts": "INVALID_RESPONSE_FORMAT"
-            }
+        # Ensure log directory exists
+        os.makedirs(LOG_DIR, exist_ok=True)
 
-        os.makedirs(os.path.dirname(TRADING_MONITORING_LOG), exist_ok=True)
-        os.makedirs(os.path.dirname(CRITICAL_ALERTS_LOG), exist_ok=True)
+        response = requests.get(URL, timeout=10)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        data = response.text
 
-        log_message(TRADING_MONITORING_LOG, f"Received data from {URL}: {json.dumps(data)}")
+        # Extract data (placeholders)
+        trading_logs = extract_trading_logs(data)
+        status_updates = extract_status_updates(data)
+        risk_parameters = extract_risk_parameters(data)
+        critical_alerts = detect_critical_alerts(data)
 
-        trading_logs = data.get('trading_logs', 'N/A')
-        status_updates = data.get('status', 'N/A')
-        risk_parameters = data.get('risk_parameters', 'N/A')
+        # Log general data
+        with open(TRADING_LOG, "a") as f:
+            f.write(f"Timestamp: {datetime.datetime.now().isoformat()}\n")
+            f.write(f"Trading Logs: {trading_logs}\n")
+            f.write(f"Status Updates: {status_updates}\n")
+            f.write(f"Risk Parameters: {risk_parameters}\n")
+            f.write("-" * 20 + "\n")
 
-        log_message(TRADING_MONITORING_LOG, f"Trading Logs: {trading_logs}")
-        log_message(TRADING_MONITORING_LOG, f"Status Updates: {status_updates}")
-        log_message(TRADING_MONITORING_LOG, f"Risk Parameters: {risk_parameters}")
-
-        critical_alerts_detected = []
-        alerts = data.get('alerts', [])
-        if isinstance(alerts, list):
-            for alert in alerts:
-                 if isinstance(alert, str) and any(keyword in alert.upper() for keyword in ["STOP_LOSS_TRIGGERED", "TAKE_PROFIT_TRIGGERED", "CRITICAL_DRAWDOWN"]):
-                    critical_alerts_detected.append(alert)
-                    log_message(CRITICAL_ALERTS_LOG, f"CRITICAL ALERT DETECTED: {alert}")
-        elif isinstance(alerts, str):
-            if any(keyword in alerts.upper() for keyword in ["STOP_LOSS_TRIGGERED", "TAKE_PROFIT_TRIGGERED", "CRITICAL_DRAWDOWN"]):
-                critical_alerts_detected.append(alerts)
-                log_message(CRITICAL_ALERTS_LOG, f"CRITICAL ALERT DETECTED: {alerts}")
-
-        summary = f"Trading Dashboard Analysis ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')}):
-")
-        summary += f"  URL: {URL}
-")
-        summary += f"  Status: {status_updates}
-")
-        summary += f"  Risk Parameters: {risk_parameters}
-")
-        if critical_alerts_detected:
-            summary += f"  CRITICAL ALERTS: {'; '.join(critical_alerts_detected)}
-")
+        # Log critical alerts if any
+        if critical_alerts:
+            with open(CRITICAL_LOG, "a") as f:
+                f.write(f"CRITICAL ALERT at {datetime.datetime.now().isoformat()}:\n")
+                for alert in critical_alerts:
+                    f.write(f"- {alert}\n")
+                f.write("-" * 20 + "\n")
+            summary = f"CRITICAL ALERTS DETECTED: {', '.join(critical_alerts)}. See {CRITICAL_LOG} for details."
         else:
-            summary += "  No critical alerts detected.
-")
+            summary = "Trading dashboard monitored. No critical alerts detected."
+        
+        print(f"[{datetime.datetime.now().isoformat()}] {summary}") # Print to stdout for visibility
 
-        print(summary)
-
+    except requests.exceptions.RequestException as e:
+        error_message = f"Error fetching data from {URL}: {e}"
+        print(f"[{datetime.datetime.now().isoformat()}] {error_message}")
+        with open(CRITICAL_LOG, "a") as f:
+            f.write(f"CRITICAL ERROR at {datetime.datetime.now().isoformat()}: {error_message}\n")
     except Exception as e:
-        error_message = f"An unexpected error occurred in monitor_trading_dashboard: {e}"
-        log_message(TRADING_MONITORING_LOG, error_message)
-        log_message(CRITICAL_ALERTS_LOG, f"SYSTEM ERROR: {error_message}")
-        print(f"Error: {error_message}")
+        error_message = f"An unexpected error occurred: {e}"
+        print(f"[{datetime.datetime.now().isoformat()}] {error_message}")
+        with open(CRITICAL_LOG, "a") as f:
+            f.write(f"CRITICAL ERROR at {datetime.datetime.now().isoformat()}: {error_message}\n")
+
+def extract_trading_logs(data):
+    # PLACEHOLDER: Implement actual log extraction logic here.
+    # Example: Parse lines containing "TRADE:" or similar.
+    return "Sample trading log entry based on placeholder."
+
+def extract_status_updates(data):
+    # PLACEHOLDER: Implement actual status update extraction logic here.
+    return "Sample status update."
+
+def extract_risk_parameters(data):
+    # PLACEHOLDER: Implement actual risk parameter extraction logic here.
+    return "Sample risk parameters."
+
+def detect_critical_alerts(data):
+    # PLACEHOLDER: Implement actual critical alert detection logic here.
+    alerts = []
+    if "stop-loss triggered" in data.lower():
+        alerts.append("Stop-loss order triggered.")
+    if "critical drawdown" in data.lower():
+        alerts.append("Critical drawdown detected.")
+    # Add more checks for 'take-profit' or other critical conditions.
+    return alerts
 
 if __name__ == "__main__":
-    monitor_trading_dashboard()
+    print(f"Starting trading dashboard monitor. Checking {URL} every {CHECK_INTERVAL_SECONDS} seconds.")
+    while True:
+        monitor_trading_dashboard()
+        time.sleep(CHECK_INTERVAL_SECONDS)

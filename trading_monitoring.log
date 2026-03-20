@@ -1,48 +1,30 @@
-{"trading_logs": [
-    {"timestamp": "2026-03-20T10:20:00Z", "action": "buy", "symbol": "BTC", "price": 50000, "amount": 0.1},
-    {"timestamp": "2026-03-20T10:21:00Z", "action": "sell", "symbol": "BTC", "price": 50500, "amount": 0.1}
-  ],
-  "status_updates": {
-    "market_open": true,
-    "system_healthy": true
-  },
-  "risk_parameters": {
-    "capital": 100000,
-    "stop_loss_pct": 0.05,
-    "take_profit_pct": 0.10,
-    "current_drawdown_pct": 0.03
-  }
-}
-
---- Monitoring Results ---
-Status: OK
-Alerts: None
-
---- Detailed Log ---
-Trading Logs: Processed 2 logs.
-Status Updates: Market open, System healthy.
-Risk Parameters: Capital: $100000.00, Stop Loss: 5.00%, Take Profit: 10.00%, Current Drawdown: 3.00%.
-Fri Mar 20 18:27:04 +07 2026: --- Trading Log Entry ---
+Error: Unable to access http://localhost:5001/ due to it being a private IP address. Monitoring could not be performed.Fri Mar 20 19:12:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:27:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:17:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:32:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:22:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:37:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:27:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:42:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:32:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:47:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:37:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:52:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:42:08 +07 2026: --- Trading Log Entry ---
 
 
-Fri Mar 20 18:57:07 +07 2026: --- Trading Log Entry ---
+Fri Mar 20 19:47:08 +07 2026: --- Trading Log Entry ---
+
+
+Fri Mar 20 19:52:08 +07 2026: --- Trading Log Entry ---
+
+
+Fri Mar 20 19:57:08 +07 2026: --- Trading Log Entry ---
 
 
