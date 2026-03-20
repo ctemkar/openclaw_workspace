@@ -1,1 +1,9 @@
-# trading_dashboard_monitor\n## Description\nMonitors http://localhost:5001/ for trading logs, status updates, and risk parameters. Logs all data to `trading_monitoring.log` and critical alerts (stop-loss/take-profit orders, critical drawdown) to `critical_alerts.log`. Provides a plain text summary of the analysis and any critical alerts.\n\n## Schedule\nRuns on a cron schedule in the Asia/Bangkok timezone.\n\n## Dependencies\n- `http://localhost:5001/` must be accessible and serving the trading dashboard.\n\n## Runtime Notes\nThis job runs in an isolated session and will include previous messages as context for the `agentTurn` payload.\n\n## Actions\n1. Fetch data from `http://localhost:5001/`.\n2. Parse trading logs, status updates, and risk parameters.\n3. Log extracted data to `./trading_monitoring.log`.\n4. Detect and log any triggered stop-loss/take-profit orders or critical drawdown to `./critical_alerts.log`.\n5. Generate a plain text summary of the analysis and any critical alerts.\n6. The summary will be delivered automatically to the chat channel.
+# trading_dashboard_monitor
+
+This agent monitors the trading dashboard at http://localhost:5001/.
+
+It extracts and logs trading logs, status updates, and risk parameters to `./trading_monitoring.log`.
+
+It also detects and logs critical events such as stop-loss orders, take-profit orders, and critical drawdowns to `./critical_alerts.log`.
+
+A plain text summary of the analysis and any critical alerts is automatically delivered.

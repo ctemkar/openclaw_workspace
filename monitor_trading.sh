@@ -1,40 +1,58 @@
 #!/bin/bash
 
-TRADING_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERT_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 URL="http://localhost:5001/"
+MONITOR_LOG="/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+ALERTS_LOG="/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
 
-echo "--- $(date) ---" >> $TRADING_LOG
+# Fetch data
+DATA=$(curl --max-time 10 -s "$URL")
 
-# Fetch data from the URL
-curl -s $URL >> $TRADING_LOG
-
-# Placeholder for status updates and risk parameters extraction and logging
-# In a real scenario, you would parse the output of curl and extract specific information.
-# Example: If the output is JSON, you might use jq.
-# echo "Status updates and risk parameters will be logged here." >> $TRADING_LOG
-
-# Placeholder for detecting stop-loss/take-profit orders or critical drawdown
-# This would involve parsing the trading logs for specific keywords or patterns.
-if grep -q "STOP_LOSS_TRIGGERED" $TRADING_LOG || grep -q "TAKE_PROFIT_TRIGGERED" $TRADING_LOG || grep -q "CRITICAL_DRAWDOWN" $TRADING_LOG; then
-  echo "ALERT: Critical event detected at $(date)" >> $CRITICAL_ALERT_LOG
-  # You would also extract and log details about the alert here.
-  echo "Critical event detected. See $TRADING_LOG for details." >> $CRITICAL_ALERT_LOG
+if [ $? -ne 0 ]; then
+  echo "$(date): ERROR: Failed to fetch data from $URL. Curl exited with status $?." >> "$MONITOR_LOG"
+  echo "$(date): ERROR: Failed to fetch data from $URL. Check connectivity and server status."
+  exit 1
 fi
+
+# Log all extracted data
+echo "$(date): --- Trading Data ---" >> "$MONITOR_LOG"
+echo "$DATA" >> "$MONITOR_LOG"
+echo "" >> "$MONITOR_LOG"
+
+# Detect and log critical alerts
+echo "$(date): --- Critical Alerts ---" >> "$ALERTS_LOG"
+ALERT_FOUND=false
+
+# Detect stop-loss/take-profit (adjust keywords as needed based on actual output)
+if echo "$DATA" | grep -q -i -e "STOP_LOSS_TRIGGERED" -e "TAKE_PROFIT_HIT"; then
+  ALERT_MESSAGE="ORDER_TRIGGERED: Stop-loss or Take-profit order triggered."
+  echo "$(date): $ALERT_MESSAGE" >> "$ALERTS_LOG"
+  ALERT_FOUND=true
+fi
+
+# Detect critical drawdown (adjust threshold/keywords as needed)
+if echo "$DATA" | grep -q -i "CRITICAL_DRAWDOWN"; then
+  ALERT_MESSAGE="DRAWDOWN_ALERT: Critical drawdown detected."
+  echo "$(date): $ALERT_MESSAGE" >> "$ALERTS_LOG"
+  ALERT_FOUND=true
+fi
+
+if [ "$ALERT_FOUND" = false ]; then
+  echo "No critical alerts detected." >> "$ALERTS_LOG"
+fi
+echo "" >> "$ALERTS_LOG"
 
 # Generate summary
-SUMMARY="Trading log updated. " 
-if [ -s $CRITICAL_ALERT_LOG ] && tail -n 1 $CRITICAL_ALERT_LOG | grep -q "ALERT:"; then
-  SUMMARY+="CRITICAL ALERT detected. See $CRITICAL_ALERT_LOG for details."
+SUMMARY="Trading Monitoring Summary (as of $(date)):\n"
+SUMMARY+="  - Monitored URL: $URL\n"
+SUMMARY+="  - Trading data logged to: $MONITOR_LOG\n"
+SUMMARY+="  - Alerts logged to: $ALERTS_LOG\n"
+
+if [ "$ALERT_FOUND" = true ]; then
+  SUMMARY+="  - CRITICAL ALERTS DETECTED. Review $ALERTS_LOG for details.\n"
 else
-  SUMMARY+="No critical alerts detected."
+  SUMMARY+="  - No critical alerts detected.\n"
 fi
 
-echo "$SUMMARY"
+echo -e "$SUMMARY"
 
-# This script assumes that the output of curl is what you want to log directly.
-# For more sophisticated parsing, you would need to pipe the curl output to other commands (e.g., jq, awk, sed).
-# Example for JSON parsing:
-# curl -s $URL | jq . >> $TRADING_LOG
-# The alert detection is also a placeholder and needs to be implemented based on actual log content.
 exit 0
