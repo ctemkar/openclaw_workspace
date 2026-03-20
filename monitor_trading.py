@@ -1,59 +1,108 @@
+# monitor_trading.py (corrected log_message function)
 import requests
 import json
 from datetime import datetime
+import os
 
-MONITORING_LOG = "./trading_monitoring.log"
-CRITICAL_ALERTS_LOG = "./critical_alerts.log"
-TRADING_DASHBOARD_URL = "http://localhost:5001/"
+TRADING_MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
+CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
+URL = "http://localhost:5001/"
 
-def log_message(message, log_file):
-    timestamp = datetime.now().isoformat()
-    with open(log_file, "a") as f:
-        f.write(f"[{timestamp}] {message}
+def log_message(log_file, message):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    try:
+        # Construct the message with timestamp
+        log_entry = f"[{timestamp}] {message}"
+        # Append the newline character explicitly
+        with open(log_file, "a") as f:
+            f.write(log_entry + "
+")
+    except Exception as e:
+        print(f"Error writing to log file {log_file}: {e}")
+
+
+def monitor_trading_dashboard():
+    try:
+        try:
+            response = requests.get(URL, timeout=5)
+            response.raise_for_status()
+            data = response.json()
+        except requests.exceptions.ConnectionError:
+            data = {
+                "trading_logs": "Connection to dashboard failed.",
+                "status": "UNAVAILABLE",
+                "risk_parameters": "N/A",
+                "alerts": "CONNECTION_ERROR"
+            }
+        except requests.exceptions.Timeout:
+            data = {
+                "trading_logs": "Connection to dashboard timed out.",
+                "status": "UNAVAILABLE",
+                "risk_parameters": "N/A",
+                "alerts": "TIMEOUT_ERROR"
+            }
+        except requests.exceptions.RequestException as e:
+            data = {
+                "trading_logs": f"Request error: {e}",
+                "status": "ERROR",
+                "risk_parameters": "N/A",
+                "alerts": f"REQUEST_ERROR: {e}"
+            }
+        except json.JSONDecodeError:
+            data = {
+                "trading_logs": "Received non-JSON response.",
+                "status": "ERROR",
+                "risk_parameters": "N/A",
+                "alerts": "INVALID_RESPONSE_FORMAT"
+            }
+
+        os.makedirs(os.path.dirname(TRADING_MONITORING_LOG), exist_ok=True)
+        os.makedirs(os.path.dirname(CRITICAL_ALERTS_LOG), exist_ok=True)
+
+        log_message(TRADING_MONITORING_LOG, f"Received data from {URL}: {json.dumps(data)}")
+
+        trading_logs = data.get('trading_logs', 'N/A')
+        status_updates = data.get('status', 'N/A')
+        risk_parameters = data.get('risk_parameters', 'N/A')
+
+        log_message(TRADING_MONITORING_LOG, f"Trading Logs: {trading_logs}")
+        log_message(TRADING_MONITORING_LOG, f"Status Updates: {status_updates}")
+        log_message(TRADING_MONITORING_LOG, f"Risk Parameters: {risk_parameters}")
+
+        critical_alerts_detected = []
+        alerts = data.get('alerts', [])
+        if isinstance(alerts, list):
+            for alert in alerts:
+                 if isinstance(alert, str) and any(keyword in alert.upper() for keyword in ["STOP_LOSS_TRIGGERED", "TAKE_PROFIT_TRIGGERED", "CRITICAL_DRAWDOWN"]):
+                    critical_alerts_detected.append(alert)
+                    log_message(CRITICAL_ALERTS_LOG, f"CRITICAL ALERT DETECTED: {alert}")
+        elif isinstance(alerts, str):
+            if any(keyword in alerts.upper() for keyword in ["STOP_LOSS_TRIGGERED", "TAKE_PROFIT_TRIGGERED", "CRITICAL_DRAWDOWN"]):
+                critical_alerts_detected.append(alerts)
+                log_message(CRITICAL_ALERTS_LOG, f"CRITICAL ALERT DETECTED: {alerts}")
+
+        summary = f"Trading Dashboard Analysis ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')}):
+")
+        summary += f"  URL: {URL}
+")
+        summary += f"  Status: {status_updates}
+")
+        summary += f"  Risk Parameters: {risk_parameters}
+")
+        if critical_alerts_detected:
+            summary += f"  CRITICAL ALERTS: {'; '.join(critical_alerts_detected)}
+")
+        else:
+            summary += "  No critical alerts detected.
 ")
 
-def monitor():
-    try:
-        response = requests.get(TRADING_DASHBOARD_URL, timeout=10)
-        response.raise_for_status() # Raise an exception for bad status codes
-        data = response.json()
+        print(summary)
 
-        # Log general monitoring data
-        log_message(f"Status: OK. Data: {json.dumps(data)}", MONITORING_LOG)
-
-        # Check for critical alerts
-        critical_alerts = []
-        if data.get("stop_loss_triggered"):
-            critical_alerts.append("STOP-LOSS TRIGGERED")
-        if data.get("take_profit_triggered"):
-            critical_alerts.append("TAKE-PROFIT TRIGGERED")
-        if data.get("drawdown_critical"):
-            critical_alerts.append("CRITICAL DRAWDOWN DETECTED")
-
-        if critical_alerts:
-            alert_message = f"CRITICAL ALERT(S): {', '.join(critical_alerts)}. Data: {json.dumps(data)}"
-            log_message(alert_message, CRITICAL_ALERTS_LOG)
-            return f"CRITICAL: {' & '.join(critical_alerts)}. Analysis follows:
-{json.dumps(data, indent=2)}"
-        else:
-            return f"Trading Dashboard Status: OK. Risk Parameters: {json.dumps(data, indent=2)}"
-
-    except requests.exceptions.RequestException as e:
-        error_message = f"ERROR connecting to {TRADING_DASHBOARD_URL}: {e}"
-        log_message(error_message, MONITORING_LOG)
-        log_message(f"CRITICAL ALERT: Failed to connect to trading dashboard. Error: {e}", CRITICAL_ALERTS_LOG)
-        return f"CRITICAL: Failed to connect to trading dashboard ({TRADING_DASHBOARD_URL}). Error: {e}"
-    except json.JSONDecodeError:
-        error_message = "ERROR: Received non-JSON response from trading dashboard."
-        log_message(error_message, MONITORING_LOG)
-        log_message(f"CRITICAL ALERT: Invalid response from trading dashboard.", CRITICAL_ALERTS_LOG)
-        return "CRITICAL: Received invalid (non-JSON) response from trading dashboard."
     except Exception as e:
-        error_message = f"An unexpected error occurred: {e}"
-        log_message(error_message, MONITORING_LOG)
-        log_message(f"CRITICAL ALERT: Unexpected error during monitoring. Error: {e}", CRITICAL_ALERTS_LOG)
-        return f"CRITICAL: An unexpected error occurred: {e}"
+        error_message = f"An unexpected error occurred in monitor_trading_dashboard: {e}"
+        log_message(TRADING_MONITORING_LOG, error_message)
+        log_message(CRITICAL_ALERTS_LOG, f"SYSTEM ERROR: {error_message}")
+        print(f"Error: {error_message}")
 
 if __name__ == "__main__":
-    summary = monitor()
-    print(summary) # This will be captured if scheduled via cron job that outputs stdout
+    monitor_trading_dashboard()
