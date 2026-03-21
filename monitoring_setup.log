@@ -1,0 +1,1 @@
+New cron job added for trading_dashboard_monitor. It will run every 5 minutes. Please specify how you'd like to extract data from http://localhost:5001/ for logs, status updates, and risk parameters. I also need details on how to detect stop-loss/take-profit orders and critical drawdown.
