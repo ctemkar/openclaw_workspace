@@ -23,8 +23,29 @@ else
     echo "STATUS: [ERROR] Port file missing"
 fi
 
-if ! ps aux | grep -v grep | grep "crypto_trading_llm_live.py" > /dev/null; then
-    echo "BOT: [WARN] NOT DETECTED"
+# Check for actual running trading bots
+BOTS_RUNNING=0
+BOT_LIST=""
+
+if ps aux | grep -v grep | grep -E "(simple_real_trader|real_futures_trading_bot|fixed_futures_bot)" > /dev/null; then
+    BOTS_RUNNING=$((BOTS_RUNNING + 1))
+    BOT_LIST="$BOT_LIST simple_real_trader.py"
+fi
+
+if ps aux | grep -v grep | grep "real_futures_trading_bot.py" > /dev/null; then
+    BOTS_RUNNING=$((BOTS_RUNNING + 1))
+    BOT_LIST="$BOT_LIST real_futures_trading_bot.py"
+fi
+
+if ps aux | grep -v grep | grep "fixed_futures_bot.py" > /dev/null; then
+    BOTS_RUNNING=$((BOTS_RUNNING + 1))
+    BOT_LIST="$BOT_LIST fixed_futures_bot.py"
+fi
+
+if [ $BOTS_RUNNING -eq 0 ]; then
+    echo "BOT: [CRITICAL] NO TRADING BOTS RUNNING"
+elif [ $BOTS_RUNNING -eq 1 ]; then
+    echo "BOT: [WARN] ONLY 1 BOT RUNNING:${BOT_LIST}"
 else
-    echo "BOT: [OK] RUNNING"
+    echo "BOT: [OK] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
 fi

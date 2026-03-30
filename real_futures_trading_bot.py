@@ -76,6 +76,15 @@ def initialize_binance_futures():
         # Test connection
         exchange.load_markets()
         logger.info("✅ Binance Futures exchange connected")
+        
+        # Set position mode to ONE-WAY (required for SHORT/LONG positions)
+        try:
+            exchange.set_position_mode(hedged=False)  # ONE-WAY mode
+            logger.info("✅ Position mode set to ONE-WAY")
+        except Exception as e:
+            logger.warning(f"⚠️  Could not set position mode: {e}")
+            logger.info("   Trying to continue anyway...")
+        
         return exchange
     except Exception as e:
         logger.error(f"❌ Binance Futures connection failed: {e}")
@@ -220,6 +229,10 @@ def execute_real_futures_short(exchange, analysis, usdt_balance):
             logger.info(f"Setting {LEVERAGE}x leverage for {symbol}...")
             exchange.set_leverage(LEVERAGE, symbol)
             
+            # Set position side to SHORT for this symbol
+            logger.info(f"Setting position side to SHORT for {symbol}...")
+            exchange.set_position_side(symbol=symbol, side='SHORT')
+            
             # Place SHORT market order
             logger.warning(f"📉 PLACING REAL SHORT ORDER: {amount:.6f} {symbol} @ market")
             
@@ -228,7 +241,7 @@ def execute_real_futures_short(exchange, analysis, usdt_balance):
                 type='market',
                 side='sell',
                 amount=amount,
-                params={'positionSide': 'SHORT'}  # Explicitly short
+                params={'positionSide': 'SHORT'}
             )
             
             logger.critical(f"✅ REAL SHORT ORDER EXECUTED!")

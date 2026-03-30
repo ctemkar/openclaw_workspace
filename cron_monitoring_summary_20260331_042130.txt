@@ -1,0 +1,74 @@
+TRADING DASHBOARD MONITORING REPORT
+=====================================
+Generated: 2026-03-31 04:21:30 (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor
+Dashboard: http://localhost:5001/
+
+EXECUTIVE SUMMARY
+-----------------
+⚠️ CRITICAL ALERT: ETH position has triggered stop-loss at -6.90% drawdown
+✅ System operational and running
+✅ BTC position within normal range (-0.61%)
+⚠️ Trading in simulation mode only
+
+DETAILED ANALYSIS
+-----------------
+
+1. SYSTEM STATUS:
+   - Status: Running
+   - Port: 5001
+   - Last analysis: 2026-03-31 04:07:34
+   - Next analysis: Hourly schedule
+   - Capital: $250.00
+
+2. MARKET PRICES:
+   - BTC/USD: $66,839.00
+   - ETH/USD: $2,039.35
+
+3. PORTFOLIO PERFORMANCE:
+   BTC Position:
+   - Average buy: $67,247.51
+   - Current: $66,839.00
+   - Drawdown: -0.61% ✅
+   - Status: Within normal range
+
+   ETH Position:
+   - Average buy: $2,190.42
+   - Current: $2,039.35
+   - Drawdown: -6.90% ⚠️
+   - Status: STOP-LOSS TRIGGERED (threshold: -5.00%)
+
+4. RECENT TRADES (4 total):
+   1. ETH/USD BUY @ $2,325.28 (13:39:49)
+   2. ETH/USD BUY @ $2,193.60 (00:33:02)
+   3. BTC/USD BUY @ $67,247.51 (21:29:41)
+   4. ETH/USD BUY @ $2,052.38 (21:29:42)
+
+5. RISK PARAMETERS:
+   - Stop-loss: 5.0%
+   - Take-profit: 10.0%
+   - Max trades/day: 2
+   - Position size: Max 50% of capital
+
+CRITICAL FINDINGS
+-----------------
+1. 🚨 ETH POSITION BREACH: Current drawdown of -6.90% exceeds the 5% stop-loss threshold
+2. Simulation Mode: System is not executing real trades (requires API credentials)
+3. No automatic stop-loss execution in current configuration
+
+RECOMMENDED ACTIONS
+-------------------
+1. IMMEDIATE: Review ETH position and consider manual stop-loss execution
+2. Review trading strategy for ETH/USD pair
+3. Consider enabling real trading with proper risk management
+4. Implement automatic stop-loss execution in live mode
+5. Monitor BTC position (currently safe at -0.61%)
+
+NEXT STEPS
+----------
+- Monitor will check again at 04:31:30
+- Critical alerts saved to: ./critical_alerts.log
+- Full monitoring log: ./trading_monitoring.log
+
+ALERT STATUS: CRITICAL - REQUIRES IMMEDIATE ATTENTION
+=====================================================

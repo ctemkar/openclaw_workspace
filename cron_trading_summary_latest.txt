@@ -1,67 +1,86 @@
 === CRON TRADING MONITORING SUMMARY ===
-Execution Time: 2026-03-31 04:08:09 (Asia/Bangkok)
-Cron Job ID: f434e20f-dc24-4be6-b102-73407a1b1b26
-Job Name: trading_dashboard_monitor
+Execution Time: 2026-03-31 04:36:30 (Asia/Bangkok)
+Cron Job ID: trading_dashboard_monitor (726c2c35-657e-4f9b-b26c-3b44394cd414)
 
 === EXECUTION STATUS ===
-✅ Dashboard fetched successfully (HTTP 200)
-✅ All endpoints responsive (/status, /trades, /summary, /strategy)
-✅ Market data retrieved from CoinGecko
-✅ Trade analysis completed
-✅ Logs updated: trading_monitoring.log, critical_alerts.log
+✅ Dashboard Access: SUCCESS (http://localhost:5001/)
+✅ Data Extraction: SUCCESS (Status, Trades, Strategy, Summary)
+✅ Real-time Prices: SUCCESS (CoinGecko API)
+✅ Log Updates: SUCCESS (trading_monitoring.log, critical_alerts.log)
 
-=== KEY FINDINGS ===
-🚨 CRITICAL ALERTS DETECTED:
-- 8 out of 10 trades (80%) have triggered stop-loss (5% threshold)
-- 6 trades show critical drawdown ≥8%
-- Worst drawdown: ETH/USD at -13.09%
-- Portfolio P&L: -6.85% ($84.99 simulated loss)
+=== SYSTEM OVERVIEW ===
+- Dashboard Status: RUNNING
+- Last Analysis: 2026-03-31T04:27:33.657854 (9 minutes ago)
+- Capital: $250.00
+- Trading Pairs: BTC/USD, ETH/USD
+- Risk Parameters: 5% Stop-loss, 10% Take-profit
+- Max Daily Trades: 2
 
-⚠️ RISK VIOLATIONS:
-- Daily trade limit exceeded: 10 trades vs 2 maximum (500% over)
-- Stop-loss ineffective: 80% breach rate
-- Inconsistent position sizing
-- 0% win rate (8 losses, 0 wins, 2 active)
+=== PORTFOLIO PERFORMANCE ===
+- Total Positions: 4 trades
+- Active Positions: 4
+- Total Investment: $799.93
+- Current Value: $759.21
+- Total P&L: -5.09%
+- Total Loss: $40.72
 
-=== SYSTEM STATUS ===
-Dashboard: http://localhost:5001/ (Operational)
-Mode: SIMULATION (No real API keys)
-Capital: $250.00 (Simulated)
-Last Analysis: 2026-03-31T03:43:02.404723
-Analysis Schedule: Hourly
+=== CRITICAL ALERTS DETECTED ===
+🚨 HIGH PRIORITY ALERTS (2):
+1. ETH/USD BUY @ $2,325.28 - Stop-loss TRIGGERED (-12.22% P&L)
+2. ETH/USD BUY @ $2,193.60 - Stop-loss TRIGGERED (-6.95% P&L)
+
+=== RISK ASSESSMENT ===
+⚠️ HIGH RISK INDICATORS:
+- Portfolio drawdown: -5.09% (EXCEEDS 5% THRESHOLD)
+- 50% of positions triggered stop-loss (2 out of 4)
+- ETH concentration: 3 out of 4 positions
+- ETH price at critical support: $2,040.68
+
+✅ STABLE INDICATORS:
+- BTC position: -0.64% (within limits)
+- Recent ETH position: -0.55% (within limits)
+- Dashboard operational
+- Market sentiment: BULLISH
+
+=== MARKET DATA ===
+Real-time Prices (CoinGecko):
+- BTC/USD: $66,820.00
+- ETH/USD: $2,041.09
+
+Dashboard Analysis:
+- BTC Support: $66,816.75
+- BTC Resistance: $66,827.79
+- ETH Support: $2,040.68
+- ETH Resistance: $2,041.47
+- Trading Signal: BUY (BTC/USD near support)
 
 === RECOMMENDED ACTIONS ===
-1. 🚨 IMMEDIATE: Pause automated trading
-2. 🚨 URGENT: Review strategy execution logic
-3. 🚨 IMPORTANT: Adjust risk parameters (stop-loss to 7-8%)
-4. 🚨 NECESSARY: Standardize position sizing
-5. 🚨 ADVISORY: Backtest strategy with historical data
+URGENT (Next 1 hour):
+1. Execute stop-loss orders for triggered ETH positions
+2. Consider hedging with Binance short positions
+3. Monitor ETH support level ($2,040.68)
 
-=== LOG FILES UPDATED ===
-1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-   - Appended comprehensive monitoring report
-   - Documented 8 stop-loss triggers, 6 critical drawdowns
-   
-2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-   - Appended escalated critical alert
-   - Alert level: CRITICAL (worsening conditions)
-   - Previous: 4 stop-loss triggers → Current: 8 stop-loss triggers
+SHORT-TERM (Next 24 hours):
+1. Review position sizing and diversification
+2. Consider tightening stop-loss parameters
+3. Assess trading strategy effectiveness
 
-=== NEXT MONITORING CYCLE ===
-Scheduled: 2026-03-31 04:12:09 (4 minutes)
-Alert Persistence: CRITICAL conditions ongoing
-Action Required: Manual intervention recommended
+=== FILES UPDATED ===
+1. ./trading_monitoring.log - Full monitoring data with real-time analysis
+2. ./critical_alerts.log - Critical risk alerts and recommendations
+3. ./cron_trading_summary_latest.txt - This summary report
 
-=== EXECUTION METRICS ===
-Start Time: 2026-03-31 04:04:00
-End Time: 2026-03-31 04:08:09
-Duration: 4 minutes 9 seconds
-Data Points Analyzed: 10 trades, 2 cryptocurrencies
-Market Data Sources: CoinGecko API, Trading Dashboard
-Analysis Complete: Yes
-Alerts Generated: Yes (Critical)
+=== NEXT SCHEDULED CHECK ===
+- Dashboard next analysis: HOURLY
+- Recommended monitoring interval: 30-60 minutes
+- Critical threshold: Portfolio drawdown > 5% (CURRENTLY TRIGGERED)
+
+=== ALERT STATUS: ACTIVE ===
+Immediate attention required due to:
+1. Multiple stop-loss triggers
+2. Portfolio drawdown exceeding 5%
+3. ETH positions significantly underwater
 
 === END OF SUMMARY ===
-Cron job completed successfully with critical alerts.
-Monitoring logs updated for risk management tracking.
-Manual review required due to deteriorating trading performance.
+Generated by: trading_dashboard_monitor cron job
+Timestamp: 2026-03-31 04:36:30 Asia/Bangkok

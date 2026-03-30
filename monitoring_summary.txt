@@ -1,66 +1,57 @@
 TRADING DASHBOARD MONITORING SUMMARY
-=======================================
-Timestamp: 2026-03-19 14:16:48 (Asia/Bangkok)
-Monitoring Interval: Cron job execution
+=====================================
+Execution Time: 2026-03-31 04:56:05 (UTC+7)
+Monitoring ID: 28409715-E767-44F8-82FE-5FC32BD0063E
 
-DASHBOARD STATUS:
-✅ Dashboard is running at http://localhost:5001/
-✅ System status: running
-✅ Capital: $1,000.00
-✅ Last analysis: 2026-03-19T13:42:19.071671
-✅ Next analysis: Scheduled hourly
-✅ Trading pairs: BTC/USD, ETH/USD
+SYSTEM STATUS: RUNNING
+- Capital: $250.00
+- Last Analysis: 2026-03-31 04:43:09
+- Trading Pairs: BTC/USD, ETH/USD
+- Risk Parameters: 5% SL, 10% TP, 2 trades/day max
 
-RISK PARAMETERS:
-• Stop-loss: 5.0%
-• Take-profit: 10.0%
-• Max trades per day: 2
+MARKET DATA:
+- BTC/USD: $66,903.29
+- ETH/USD: $2,045.44
+- Market Sentiment: BULLISH
+- Support/Resistance: BTC $66,883/$66,900, ETH $2,043/$2,045
 
-CURRENT MARKET ANALYSIS:
-• BTC/USD: $70,701.72
-• ETH/USD: $2,184.65
-• Recent trades: 10 total trades
+TRADE ACTIVITY:
+- Total Trades: 4 (exceeds 2/day limit - VIOLATION)
+- Recent Trades:
+  1. ETH BUY $2,325.28 (13:39:49)
+  2. ETH BUY $2,193.60 (00:33:02)
+  3. BTC BUY $67,247.51 (21:29:41)
+  4. ETH BUY $2,052.38 (21:29:42)
 
-ALERT STATUS:
-🚨 CRITICAL ALERTS: 1
-   - MAX DAILY TRADES REACHED (2/2)
+CRITICAL CONDITIONS DETECTED: 🚨
+1. STOP-LOSS TRIGGERED: ETH position at $2,325.28 entry
+   - Current: $2,045.44 (-12.03% drawdown)
+   - Stop-loss: $2,209.02 (TRIGGERED by 7.03%)
 
-⚠️ DRAWDOWN ALERTS: 2
-   - BTC/USD: -4.89% drawdown (below -3% threshold)
-   - ETH/USD: -6.31% drawdown (below -3% threshold)
+2. STOP-LOSS TRIGGERED: ETH position at $2,193.60 entry
+   - Current: $2,045.44 (-6.75% drawdown)
+   - Stop-loss: $2,083.92 (TRIGGERED by 1.75%)
 
-🚨 STOP-LOSS ALERTS: 1
-   - ETH/USD: -6.31% drawdown (EXCEEDS -5% stop-loss threshold!)
+3. RISK MANAGEMENT VIOLATION:
+   - Executed: 4 trades
+   - Allowed: 2 trades/day
+   - Violation: 100% over limit
 
-✅ TAKE-PROFIT ALERTS: 0
-   - No positions have reached 10% profit target
-
-CRITICAL FINDINGS:
-1. ETH/USD POSITION HAS TRIGGERED STOP-LOSS!
-   - Current price: $2,184.65
-   - Entry high: $2,331.78
-   - Drawdown: -6.31% (exceeds -5% stop-loss)
-   - ACTION REQUIRED: Stop-loss should be executed
-
-2. BTC/USD POSITION NEARING STOP-LOSS
-   - Current price: $70,701.72
-   - Entry high: $74,335.92
-   - Drawdown: -4.89% (close to -5% stop-loss)
-   - Monitor closely
-
-3. MAX DAILY TRADES REACHED
-   - 2/2 trades executed today
-   - No new trades will be executed until next day
+RISK ASSESSMENT:
+- Active Losses: 2 ETH positions in stop-loss territory
+- Portfolio Exposure: 100% of capital deployed
+- System Health: WARNING - Multiple violations
+- Urgency Level: HIGH
 
 RECOMMENDED ACTIONS:
-1. IMMEDIATE: Execute stop-loss for ETH/USD position
-2. Monitor BTC/USD position for potential stop-loss trigger
-3. Review trading strategy given current market conditions
-4. Consider adjusting risk parameters if volatility persists
+1. Close losing ETH positions immediately
+2. Review and enforce daily trade limits
+3. Consider tighter stop-loss levels (3-4%)
+4. Review ETH trading strategy
+5. Implement circuit breaker for consecutive losses
 
-LOG FILES UPDATED:
-• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+NEXT ANALYSIS: Scheduled hourly
+ALERTS LOGGED: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+MONITORING LOG: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
 
-NEXT MONITORING: Scheduled via cron job
-=======================================
+END OF SUMMARY

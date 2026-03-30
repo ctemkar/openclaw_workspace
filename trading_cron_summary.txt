@@ -1,56 +1,42 @@
 TRADING DASHBOARD MONITORING SUMMARY
-=======================================
-Execution Time: 2026-03-31 03:17:45 (Asia/Bangkok)
+=====================================
+Execution Time: 2026-03-31 04:29:22 (Asia/Bangkok)
 
 SYSTEM STATUS:
-✅ Dashboard operational at http://localhost:5001/
-✅ Last analysis: 2026-03-31 02:42:53
+✅ Trading system running normally
+✅ Last analysis completed: 2026-03-31T04:27:33
 ✅ Capital: $250.00
-✅ Risk parameters: 5% SL, 10% TP, Max 2 trades/day
-✅ Trading pairs: BTC/USD, ETH/USD
-✅ API Mode: Simulation
+✅ Hourly analysis schedule active
+
+TRADING ACTIVITY:
+• Total trades: 4
+• Trading pairs: BTC/USD, ETH/USD
+• Daily limit: 2 trades (VIOLATION: 4 trades - 100% over limit)
 
 MARKET DATA:
-• BTC/USD: $66,530 (Coingecko)
-• ETH/USD: $2,022.83 (Coingecko)
-• Market Sentiment: BULLISH (from analysis)
-• BTC 24h Volume: $20,026,747
-• ETH 24h Volume: $9,396,305
+• BTC/USD: $66,806.82
+• ETH/USD: $2,042.29
+• Market sentiment: BULLISH
+• Current signal: BUY (BTC/USD recommended)
 
-TRADING PERFORMANCE:
-• Total trades: 10 (4 Gemini + 6 recent)
-• Total investment: $1,199.93
-• Current value: ~$1,119.67
-• Total P&L: -$80.26 (-6.69%)
-
-🚨 CRITICAL FINDINGS:
-1. 4 out of 6 recent trades have triggered 5% stop-loss
-2. Portfolio drawdown at -6.69% (approaching -10% critical)
-3. No take-profit triggers achieved
-4. Multiple positions significantly underwater
-
-STOP-LOSS TRIGGERS:
-1. BTC @ $74,094.64 → $66,530: -10.21% ⚠️
-2. ETH @ $2,325.28 → $2,022.83: -13.01% ⚠️
-3. BTC @ $71,386.00 → $66,530: -6.80% ⚠️
-4. ETH @ $2,193.60 → $2,022.83: -7.79% ⚠️
+CRITICAL ALERTS DETECTED (2):
+🚨 STOP-LOSS BREACHED: ETH/USD position at $2325.28 (-12.16%)
+🚨 STOP-LOSS BREACHED: ETH/USD position at $2193.60 (-6.89%)
 
 RISK ASSESSMENT:
-• Risk Level: HIGH
-• Action Required: IMMEDIATE
-• Strategy Review: URGENT
+• Portfolio health: POOR
+• Stop-loss breaches: 2 positions
+• Take-profit triggers: None
+• Drawdown indicators: CRITICAL for ETH positions
 
-RECOMMENDATIONS:
-1. Close positions exceeding 5% stop-loss
-2. Reduce position sizes to 25-30% of capital
-3. Implement tighter 3-4% stop-losses
-4. Pause new trades until market stabilizes
-5. Re-evaluate support-based entry strategy
+ACTIONS REQUIRED:
+1. IMMEDIATE: Review and address stop-loss breaches on ETH positions
+2. ENFORCE: Daily trade limit (currently exceeded by 100%)
+3. ADJUST: Consider tighter risk parameters or position sizing
 
-FILES UPDATED:
-1. trading_monitoring.log - Full monitoring report
-2. critical_alerts.log - Critical risk alerts
-3. trading_cron_summary.txt - This summary
+DATA LOGGED:
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
 
-NEXT MONITORING: 04:17 AM (hourly)
-ALERT THRESHOLD: -10% portfolio drawdown
+NEXT MONITORING: Scheduled for next hourly analysis
+=====================================
