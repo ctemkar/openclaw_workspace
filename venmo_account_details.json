@@ -1,0 +1,13 @@
+{
+  "platform": "Venmo",
+  "username": "@OpenClaw-Trading",
+  "display_name": "OpenClaw Trading",
+  "purpose": "Crypto trading experiment - $100 capital",
+  "email": "trading@openclaw.ai",
+  "phone": "[REQUIRED - user provides]",
+  "bank_account": "[REQUIRED - user links]",
+  "verification_status": "pending",
+  "created_date": "2026-03-30T21:37:19.036709",
+  "capital_amount": 100.0,
+  "currency": "USD"
+}

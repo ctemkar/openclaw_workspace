@@ -1,0 +1,59 @@
+
+    ============================================================
+    TEST PAYMENT INSTRUCTIONS - CREDIT CARD
+    ============================================================
+    
+    Since this is a demo environment, here's how to simulate payment:
+    
+    1. OPEN PAYMENT PAGE:
+       File: stripe_payment_page.html
+       Or run: open stripe_payment_page.html
+    
+    2. CLICK "PAY WITH CREDIT CARD"
+       This opens a test payment modal
+    
+    3. CLICK "Simulate Successful Payment"
+       This simulates $103.00 payment
+    
+    4. SYSTEM WILL:
+       • Log payment as successful
+       • Begin crypto conversion simulation
+       • Start trading bot with $100 capital
+       • Update dashboard
+    
+    ============================================================
+    REAL PAYMENT DETAILS (For Production):
+    ============================================================
+    
+    Payment ID: oc_trading_20260330_215112_fb687440
+    Amount: $103.00
+    Description: OpenClaw Trading - $100 Crypto Experiment
+    
+    Stripe Integration Required:
+    • Real Stripe account with API keys
+    • Webhook endpoint for payment confirmation
+    • Automatic crypto conversion setup
+    
+    ============================================================
+    DEMO MODE ACTIVATION:
+    ============================================================
+    
+    To activate demo trading mode:
+    
+    1. Simulate payment via the HTML page
+    2. Or run: python3 simulate_payment.py
+    3. Trading bot will activate with simulated $100
+    
+    ============================================================
+    FILES CREATED:
+    ============================================================
+    
+    1. stripe_config.json - Payment configuration
+    2. stripe_payment_page.html - Interactive payment page
+    3. simulate_payment.py - Demo payment script
+    4. This instructions file
+    
+    ============================================================
+    Created: 2026-03-30 21:51:12
+    ============================================================
+    

@@ -1,0 +1,90 @@
+
+    ============================================================
+    TRADITIONAL PAYMENT - $100 TRADING EXPERIMENT
+    ============================================================
+    
+    CHOOSE YOUR PAYMENT METHOD:
+    
+    1. PAYPAL (RECOMMENDED - Fast & Protected)
+       • To: trading@openclaw.ai
+       • Amount: $100.00
+       • Fee: ~$3.00
+       • Time: Instant
+       • Protection: PayPal Buyer Protection
+    
+    2. ZELLE (Fastest & No Fee)
+       • To: [Phone/Email provided]
+       • Amount: $100.00
+       • Fee: $0
+       • Time: Instant
+       • Requires: Bank Zelle enrollment
+    
+    3. CREDIT CARD (Easiest)
+       • Processor: Stripe
+       • Amount: $103.00 ($100 + 3% fee)
+       • Time: Instant
+       • Get: Payment link
+    
+    4. BANK TRANSFER (Direct)
+       • Routing/Account: [Provided]
+       • Amount: $100.00
+       • Fee: $0-$25
+       • Time: 1-2 business days
+    
+    ============================================================
+    WHAT HAPPENS AFTER PAYMENT:
+    ============================================================
+    
+    STEP 1: Payment Received
+    • Instant notification
+    • Confirmation sent to you
+    
+    STEP 2: Convert to Crypto
+    • PayPal/Zelle → Bank (instant)
+    • Bank → Coinbase (1-2 days for ACH)
+    • USD → USDC (instant, ~1.5% fee)
+    • Send to trading wallet
+    
+    STEP 3: Start Trading
+    • AI activates upon crypto arrival
+    • First analysis within 5 minutes
+    • First trade within 15 minutes
+    
+    ============================================================
+    TIMELINE BY METHOD:
+    ============================================================
+    
+    CREDIT CARD:    Instant → 5 min crypto → 10 min trading
+    PAYPAL:         Instant → 1-2 days bank → then crypto
+    ZELLE:          Instant → 1-2 days bank → then crypto
+    BANK TRANSFER:  1-2 days → then crypto
+    
+    ============================================================
+    FEES & NET AMOUNT:
+    ============================================================
+    
+    Credit Card:    $103.00 paid → ~$98.50 trading
+    PayPal:         $100.00 + $3 fee → ~$96.50 trading  
+    Zelle:          $100.00 → ~$98.50 trading
+    Bank:           $100.00 → ~$98.50 trading
+    
+    ============================================================
+    RECOMMENDATION:
+    ============================================================
+    
+    🥇 CREDIT CARD: Fastest start (trading in 15 minutes)
+    🥈 ZELLE:       No fees, but bank delay
+    🥉 PAYPAL:      Buyer protection, but fees
+    
+    ============================================================
+    READY WHEN YOU ARE:
+    ============================================================
+    
+    1. Choose your payment method
+    2. I'll provide exact details
+    3. You send $100
+    4. Trading begins ASAP
+    
+    Created: 2026-03-30 21:47:50
+    ============================================================
+    

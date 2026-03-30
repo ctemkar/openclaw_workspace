@@ -1,0 +1,38 @@
+{
+  "payment_id": "oc_trading_20260330_215112_fb687440",
+  "amount": 10300,
+  "currency": "usd",
+  "description": "OpenClaw Trading - $100 Crypto Experiment",
+  "metadata": {
+    "experiment": "crypto_trading_100",
+    "user": "ctemkar",
+    "capital": 100.0,
+    "purpose": "AI-powered crypto trading",
+    "wallet": "0xa1e286f29f9c095213928451ed2cb8102f787eb4"
+  },
+  "success_url": "http://127.0.0.1:5080/payment_success",
+  "cancel_url": "http://127.0.0.1:5080/payment_cancel",
+  "automatic_conversion": {
+    "enabled": true,
+    "target_currency": "USDC",
+    "target_network": "Polygon",
+    "target_wallet": "0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+    "conversion_provider": "Coinbase Commerce"
+  },
+  "timeline": {
+    "payment": "instant",
+    "crypto_conversion": "5 minutes",
+    "wallet_funding": "2 minutes",
+    "trading_start": "10 minutes after payment",
+    "total_to_trading": "15-20 minutes"
+  },
+  "fees": {
+    "stripe_fee": "2.9% + $0.30",
+    "crypto_conversion": "1.5%",
+    "network_fee": "~$0.50",
+    "total_fees": "~$4.50",
+    "net_to_trading": "~$98.50"
+  },
+  "status": "ready",
+  "created": "2026-03-30T21:51:12.044966"
+}

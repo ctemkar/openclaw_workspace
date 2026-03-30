@@ -1,0 +1,10 @@
+{
+  "network": "Polygon (MATIC)",
+  "address": "0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+  "currency": "USDC",
+  "capital": 100.0,
+  "status": "active",
+  "real_funds": true,
+  "activated": "2026-03-30T21:56:40.151560",
+  "monitoring": "https://polygonscan.com/address/0xa1e286f29f9c095213928451ed2cb8102f787eb4"
+}

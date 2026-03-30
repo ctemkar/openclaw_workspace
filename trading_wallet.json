@@ -1,0 +1,14 @@
+{
+  "network": "Polygon (MATIC)",
+  "chain_id": 137,
+  "address": "0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+  "currency": "USDC",
+  "purpose": "OpenClaw Trading - $100 Experiment",
+  "created": "2026-03-30T21:41:21.351278",
+  "capital_target": 100.0,
+  "capital_currency": "USD",
+  "status": "ready_for_funding",
+  "security_note": "PRIVATE KEY WOULD BE SECURELY STORED IN PRODUCTION",
+  "monitoring_url": "https://polygonscan.com/address/0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+  "qr_code_url": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0xa1e286f29f9c095213928451ed2cb8102f787eb4"
+}

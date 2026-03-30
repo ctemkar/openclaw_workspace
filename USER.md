@@ -2,11 +2,11 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** Chetan
+- **What to call them:** Chetu
 - **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Timezone:** Asia/Bangkok (GMT+7)
+- **Notes:** In Bangkok
 
 ## Context
 

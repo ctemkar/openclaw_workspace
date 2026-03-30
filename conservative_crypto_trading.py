@@ -15,7 +15,7 @@ import numpy as np
 from typing import Dict, List, Optional, Tuple
 
 # Configuration
-CAPITAL = 1000.0  # $1,000 investment
+CAPITAL = 100.0  # REAL $100 investment
 STOP_LOSS = 0.05  # 5%
 TAKE_PROFIT = 0.10  # 10%
 MAX_TRADES_PER_DAY = 2
@@ -413,3 +413,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# REAL TRADING CONFIGURATION - $100 CAPITAL
+REAL_CAPITAL = 100.00  # USD
+REAL_WALLET = "0xa1e286f29f9c095213928451ed2cb8102f787eb4"
+REAL_EXECUTION = True
+MAX_POSITION_SIZE = 0.5  # 50% of capital
+STOP_LOSS = 0.05  # 5%
+TAKE_PROFIT = 0.10  # 10%

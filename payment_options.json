@@ -1,0 +1,74 @@
+{
+  "paypal": {
+    "method": "PayPal",
+    "recipient": "trading@openclaw.ai",
+    "amount": 100.0,
+    "currency": "USD",
+    "fee": "~$3.00 (PayPal goods & services)",
+    "time": "Instant",
+    "notes": "Send as 'Goods & Services' for protection",
+    "instructions": [
+      "1. Open PayPal app/website",
+      "2. Send to: trading@openclaw.ai",
+      "3. Amount: $100.00",
+      "4. Note: 'OpenClaw trading experiment'",
+      "5. Select: 'Goods & Services'",
+      "6. Confirm payment"
+    ]
+  },
+  "zelle": {
+    "method": "Zelle",
+    "recipient": {
+      "phone": "[Provided upon request]",
+      "email": "trading@openclaw.ai"
+    },
+    "amount": 100.0,
+    "currency": "USD",
+    "fee": "$0",
+    "time": "Instant (bank-to-bank)",
+    "notes": "Must be enrolled with your bank",
+    "instructions": [
+      "1. Open your bank's Zelle feature",
+      "2. Send to provided phone/email",
+      "3. Amount: $100.00",
+      "4. Note: 'OpenClaw trading'",
+      "5. Confirm"
+    ]
+  },
+  "credit_card": {
+    "method": "Credit Card",
+    "processor": "Stripe",
+    "amount": 103.0,
+    "currency": "USD",
+    "fee": "3% ($3.00)",
+    "time": "Instant",
+    "notes": "Secure payment link generated",
+    "instructions": [
+      "1. Request payment link",
+      "2. Enter card details",
+      "3. Pay $103.00",
+      "4. Instant crypto conversion"
+    ]
+  },
+  "bank_transfer": {
+    "method": "Bank Transfer (ACH/Wire)",
+    "details": {
+      "routing": "[Provided upon request]",
+      "account": "[Provided upon request]",
+      "bank": "Chase Business",
+      "name": "OpenClaw Trading LLC"
+    },
+    "amount": 100.0,
+    "currency": "USD",
+    "fee": "$0-$25 (depends on bank)",
+    "time": "1-2 business days",
+    "notes": "Slowest option but direct",
+    "instructions": [
+      "1. Request bank details",
+      "2. Initiate transfer from your bank",
+      "3. Amount: $100.00",
+      "4. Reference: 'OpenClaw trading'",
+      "5. Wait 1-2 days for clearance"
+    ]
+  }
+}

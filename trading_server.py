@@ -68,7 +68,7 @@ def index():
     <head><title>Conservative Crypto Trading System</title></head>
     <body>
         <h1>Conservative Crypto Trading System</h1>
-        <p>Real trading with $1,000 capital on Gemini</p>
+        <p>Real trading with $100 capital on Gemini</p>
         
         <h2>Endpoints:</h2>
         <ul>
@@ -81,7 +81,7 @@ def index():
         
         <h2>Configuration:</h2>
         <ul>
-            <li>Capital: $1,000</li>
+            <li>Capital: $100</li>
             <li>Stop-loss: 5%</li>
             <li>Take-profit: 10%</li>
             <li>Max trades/day: 2</li>
@@ -99,7 +99,7 @@ def get_status():
         "timestamp": datetime.now().isoformat(),
         "port": 5001,
         "analysis_scheduled": "hourly",
-        "capital": 1000.0,
+        "capital": 100.0,  # REAL $100 capital
         "risk_parameters": {
             "stop_loss": 0.05,
             "take_profit": 0.10,

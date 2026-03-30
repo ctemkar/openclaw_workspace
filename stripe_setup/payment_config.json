@@ -1,0 +1,38 @@
+{
+  "experiment_name": "$100_Trading_Growth_Challenge",
+  "user_email": "ctemkarthailand@gmail.com",
+  "initial_capital_usd": 100.00,
+  "target_currency": "USDC",
+  "stripe_config": {
+    "account_type": "standard",
+    "payout_schedule": "manual",
+    "statement_descriptor": "OpenClaw Trading",
+    "receipt_email": true,
+    "metadata": {
+      "experiment_id": "20260330_2121",
+      "user_id": "ctemkar",
+      "purpose": "AI_trading_experiment"
+    }
+  },
+  "crypto_conversion": {
+    "onramp_provider": "MoonPay",
+    "target_chain": "Polygon",
+    "target_wallet": "0x742d35Cc6634C0532925a3b844Bc9e90F1b6fB28",
+    "auto_convert": true,
+    "min_amount_usd": 50
+  },
+  "trading_parameters": {
+    "initial_trade_size_usd": 20,
+    "max_position_size_usd": 40,
+    "stop_loss_pct": 0.015,
+    "take_profit_pct": 0.03,
+    "assets": ["BTC", "ETH", "SOL"],
+    "strategy": "llm_momentum_scalping"
+  },
+  "reporting": {
+    "dashboard_url": "http://127.0.0.1:5080",
+    "update_interval_minutes": 240,
+    "trade_alerts": true,
+    "daily_summary": true
+  }
+}

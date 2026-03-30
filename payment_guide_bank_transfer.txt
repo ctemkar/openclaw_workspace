@@ -1,0 +1,25 @@
+
+        ========================================
+        BANK TRANSFER (ACH/WIRE) - STEP BY STEP
+        ========================================
+        
+        Amount: $100.00
+        Fee: $0-$25 (depends on bank)
+        Time: 1-2 business days
+        
+        STEPS:
+        1. 1. Request bank details
+2. 2. Initiate transfer from your bank
+3. 3. Amount: $100.00
+4. 4. Reference: 'OpenClaw trading'
+5. 5. Wait 1-2 days for clearance
+
+        NOTES:
+        • Slowest option but direct
+        • After payment, notify for confirmation
+        • Trading starts after crypto conversion
+        
+        CONTACT FOR DETAILS:
+        • Request exact Bank Transfer (ACH/Wire) details
+        • Provide your contact info if needed
+        

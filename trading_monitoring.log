@@ -1,14 +1,70 @@
-# Trading Monitoring Log
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-30 21:55:15 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
 
-**Timestamp:** 2026-03-20 23:50 UTC
+=== SYSTEM STATUS ===
+Status: running
+Capital: $1000.00
+Last Analysis: 2026-03-30T21:40:42.376323
+Analysis Schedule: hourly
+Port: 5001
 
-**Data Extracted:**
-- Trading Logs: [Content of trading logs]
-- Status Updates: [Status updates]
-- Risk Parameters:
-    - Capital: [Capital amount]
-    - Stop Loss: [Stop loss level]
-    - Take Profit: [Take profit level]
+=== RISK PARAMETERS ===
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Max trades per day: 2
+Trading pairs: BTC/USD, ETH/USD
 
-**Alerts:**
-[Details of any triggered stop-loss, take-profit, or critical drawdown indicators]
+=== RECENT TRADES (Last 10) ===
+1. Time: 10:20:26 | Symbol: BTC/USD | Side: buy | Price: $74,308.00 | Amount: 0.00013458 | Status: filled
+2. Time: 10:18:29 | Symbol: BTC/USD | Side: buy | Price: $74,308.79 | Amount: 0.00013457 | Status: filled
+3. Time: 10:14:36 | Symbol: BTC/USD | Side: buy | Price: $74,332.65 | Amount: 0.00013453 | Status: filled
+4. Time: 10:14:33 | Symbol: BTC/USD | Side: buy | Price: $74,319.47 | Amount: 0.00013455 | Status: filled
+5. Time: 13:39:48 | Symbol: BTC/USD | Side: BUY | Price: $74,094.64 | Quantity: 0.002699 | Reason: Near support level: $73556.12 (current: $74094.64)
+6. Time: 13:39:49 | Symbol: ETH/USD | Side: BUY | Price: $2,325.28 | Quantity: 0.086 | Reason: Near support level: $2308.08 (current: $2325.28)
+7. Time: 00:33:00 | Symbol: BTC/USD | Side: BUY | Price: $71,386.00 | Quantity: 0.002802 | Reason: Near support level: $70896.70 (current: $71386.00)
+8. Time: 00:33:02 | Symbol: ETH/USD | Side: BUY | Price: $2,193.60 | Quantity: 0.0912 | Reason: Near support level: $2167.99 (current: $2193.60)
+9. Time: 21:29:41 | Symbol: BTC/USD | Side: BUY | Price: $67,247.51 | Quantity: 0.002974 | Reason: Near support level: $67110.20 (current: $67247.51)
+10. Time: 21:29:42 | Symbol: ETH/USD | Side: BUY | Price: $2,052.38 | Quantity: 0.0974 | Reason: Near support level: $2033.94 (current: $2052.38)
+
+=== CURRENT MARKET ANALYSIS ===
+BTC/USD:
+  Current Price: $67,274.80
+  SMA 10: $67,532.33
+  SMA 20: $66,998.74
+  Support: $67,110.20
+  Resistance: $68,136.29
+  Signal: BUY (Confidence: 70%)
+  Status: Max daily trades reached (2/2)
+
+ETH/USD:
+  Current Price: $2,051.87
+  SMA 10: $2,056.37
+  SMA 20: $2,029.11
+  Support: $2,033.94
+  Resistance: $2,082.48
+  Signal: BUY (Confidence: 70%)
+  Status: Max daily trades reached (2/2)
+
+=== TRADING SUMMARY ===
+Today's trades executed: 2/2
+Total trades: 6
+Total P&L: $0.00
+Available capital: $1000.00
+
+=== CURRENT STRATEGY ===
+Active signal: BUY for ETH/USD
+Price: $2,052.38
+Quantity: 0.0974
+Confidence: 70%
+Reasons: Near support level: $2033.94 (current: $2052.38)
+
+=== MONITORING NOTES ===
+- System is running normally
+- Max daily trades reached for both pairs (2/2)
+- Next analysis scheduled in approximately 45 minutes
+- No critical alerts detected
+- All trades appear to be filled successfully
+- Risk parameters are within acceptable limits
+
+=== END OF LOG ENTRY ===

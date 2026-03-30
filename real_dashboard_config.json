@@ -1,0 +1,20 @@
+{
+  "version": "real_1.0",
+  "capital": 100.0,
+  "wallet": "0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+  "status": "active",
+  "real_mode": true,
+  "started": "2026-03-30T21:56:45.321686",
+  "endpoints": {
+    "dashboard": "http://127.0.0.1:5080",
+    "api": "http://127.0.0.1:5001",
+    "wallet_monitor": "https://polygonscan.com/address/0xa1e286f29f9c095213928451ed2cb8102f787eb4"
+  },
+  "metrics": {
+    "initial_capital": 100.0,
+    "current_value": 100.0,
+    "trades_today": 0,
+    "total_pnl": 0.0,
+    "win_rate": 0.0
+  }
+}

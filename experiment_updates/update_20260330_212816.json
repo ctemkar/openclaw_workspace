@@ -1,0 +1,13 @@
+{
+  "type": "initial_update",
+  "timestamp": "2026-03-30T21:28:16.915776",
+  "balance": 100.0,
+  "total_value": 100.0,
+  "total_pnl": 0.0,
+  "total_pnl_pct": 0.0,
+  "open_positions": 0,
+  "total_trades": 0,
+  "win_rate": 0,
+  "status": "awaiting_payment",
+  "message": "Awaiting $100 payment to begin trading. System ready."
+}

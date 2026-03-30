@@ -51,9 +51,35 @@
         "reason": "Near support level: $2167.99 (current: $2193.60)",
         "status": "OPEN"
       }
+    ],
+    "2026-03-30": [
+      {
+        "id": "BTCUSD_1774880981",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "entry_price": 67247.51,
+        "quantity": 0.002974,
+        "stop_loss": 63885.13449999999,
+        "take_profit": 73972.261,
+        "timestamp": "2026-03-30T21:29:41.976395",
+        "reason": "Near support level: $67110.20 (current: $67247.51)",
+        "status": "OPEN"
+      },
+      {
+        "id": "ETHUSD_1774880982",
+        "symbol": "ETH/USD",
+        "side": "BUY",
+        "entry_price": 2052.38,
+        "quantity": 0.0974,
+        "stop_loss": 1949.761,
+        "take_profit": 2257.6180000000004,
+        "timestamp": "2026-03-30T21:29:42.834049",
+        "reason": "Near support level: $2033.94 (current: $2052.38)",
+        "status": "OPEN"
+      }
     ]
   },
-  "total_trades": 4,
+  "total_trades": 6,
   "total_pnl": 0.0,
   "capital": 1000.0
 }

@@ -1,0 +1,23 @@
+{
+  "trading_system": "conservative_crypto_trading.py",
+  "wallet_integration": {
+    "wallet_address": "0xa1e286f29f9c095213928451ed2cb8102f787eb4",
+    "network": "Polygon (MATIC)",
+    "currency": "USDC",
+    "capital": 100.0,
+    "status": "awaiting_funding",
+    "last_checked": "2026-03-30T21:41:21.351548"
+  },
+  "exchange": "Gemini",
+  "pairs": [
+    "BTC/USD",
+    "ETH/USD"
+  ],
+  "strategy": "conservative_llm_analysis",
+  "risk_parameters": {
+    "stop_loss": 0.05,
+    "take_profit": 0.1,
+    "max_trades_per_day": 2,
+    "position_size": 0.5
+  }
+}

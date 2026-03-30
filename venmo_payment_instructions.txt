@@ -1,0 +1,38 @@
+
+    ============================================================
+    VENMO PAYMENT INSTRUCTIONS - REAL $100 TRANSFER
+    ============================================================
+    
+    ACCOUNT: @OpenClaw-Trading
+    AMOUNT: $100.00
+    NOTE: "Trading experiment - ctemkar"
+    
+    STEPS:
+    1. Open Venmo app
+    2. Search for: @OpenClaw-Trading
+    3. Tap "Pay"
+    4. Enter: $100.00
+    5. Add note: "Trading experiment - ctemkar"
+    6. Confirm payment
+    
+    WHAT HAPPENS NEXT:
+    1. Immediate notification of receipt
+    2. Convert to USDC (5-10 minutes)
+    3. Fund trading wallet
+    4. Start AI trading
+    5. First update within 30 minutes
+    
+    FEES:
+    • Venmo fee: $0 (personal payment)
+    • Conversion: ~$1.50 (1.5%)
+    • Network: ~$0.50 (Polygon)
+    • Net trading: ~$98.00
+    
+    VERIFICATION:
+    • Wallet address will be shared
+    • Track on polygonscan.com
+    • Dashboard: http://127.0.0.1:5080
+    
+    Created: 2026-03-30 21:37:19
+    ============================================================
+    

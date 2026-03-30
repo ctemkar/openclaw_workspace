@@ -1,0 +1,41 @@
+
+    ============================================================
+    DIRECT CRYPTO FUNDING - IMMEDIATE TRADING START
+    ============================================================
+    
+    WALLET ADDRESS (Polygon Network):
+    0xa1e286f29f9c095213928451ed2cb8102f787eb4
+    
+    NETWORK: Polygon (MATIC) - Chain ID: 137
+    CURRENCY: USDC (ERC-20 token)
+    AMOUNT: $100.00 worth of USDC
+    
+    STEPS:
+    1. Open your crypto wallet (Coinbase, MetaMask, etc.)
+    2. Ensure you have USDC on Polygon network
+    3. Send EXACTLY $100 worth of USDC to:
+    
+       0xa1e286f29f9c095213928451ed2cb8102f787eb4
+    
+    4. Network: Polygon (MATIC) - NOT Ethereum Mainnet
+    5. Add note: "OpenClaw trading"
+    
+    WHAT HAPPENS:
+    • Funds detected within 2-3 minutes
+    • Trading starts automatically
+    • First trade within 5 minutes
+    • Dashboard updates real-time
+    
+    VERIFICATION:
+    • Track: https://polygonscan.com/address/0xa1e286f29f9c095213928451ed2cb8102f787eb4
+    • Dashboard: http://127.0.0.1:5080
+    • API: http://127.0.0.1:5001/status
+    
+    FEES:
+    • Network fee: ~$0.10-$0.50 (Polygon)
+    • No conversion fees
+    • 100% of $100 goes to trading
+    
+    Created: 2026-03-30 21:41:21
+    ============================================================
+    

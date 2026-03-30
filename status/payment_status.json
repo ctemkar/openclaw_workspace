@@ -1,0 +1,10 @@
+{
+  "payment_id": "pay_20260330_212320",
+  "user_email": "ctemkarthailand@gmail.com",
+  "amount_usd": 100.0,
+  "status": "pending",
+  "timestamp": "2026-03-30T21:23:20.422723",
+  "conversion_status": "waiting",
+  "trading_status": "ready",
+  "dashboard_url": "http://127.0.0.1:5080"
+}
