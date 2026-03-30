@@ -1,76 +1,69 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-18 23:02:45 (Asia/Bangkok)
-Cron Job: trading_dashboard_monitor (c739ea9d-afd5-447a-aae5-a3a3b3f5d15c)
+=== TRADING DASHBOARD MONITOR CRON SUMMARY ===
+Execution Time: 2026-03-31 00:03:30 (Asia/Bangkok)
+Cron Job ID: f9a21295-7fe4-4907-acbc-521fa2d040b2
+Job Name: trading_dashboard_monitor
 
-=== EXECUTION STATUS ===
-✅ Dashboard accessible: http://localhost:5001/
-✅ Monitoring logs updated: trading_monitoring.log
-✅ Critical alerts updated: critical_alerts.log
-✅ System status: RUNNING
+--- EXECUTION OVERVIEW ---
+✅ Dashboard accessible at http://localhost:5001/
+✅ Status endpoint: Operational (running)
+✅ Trades endpoint: 10 historical trades retrieved
+✅ Summary endpoint: Current position data retrieved
 
-=== CRITICAL FINDINGS ===
-🚨 EMERGENCY: ETH STOP-LOSS TRIGGERED BUT NOT AUTO-CLOSED
-- ETH/USD position at -6.13% (below 5% stop-loss)
-- Position has been below stop-loss for 7+ minutes
-- No automatic closure detected
-- Manual intervention required immediately
+--- KEY FINDINGS ---
 
-⚠️ HIGH RISK: BTC POSITION APPROACHING STOP-LOSS
-- BTC/USD position at -3.80%
-- Stop-loss at 5.0% ($70,389.91)
-- Distance to stop-loss: 1.26% ($885.48)
-- Requires close monitoring
+1. SYSTEM STATUS:
+   - Capital: $250.00 (status) vs $800.00 (summary) - DISCREPANCY
+   - Last analysis: 2026-03-30T23:59:26.222560
+   - Trading pairs: BTC/USD, ETH/USD
+   - Risk parameters: 5% stop-loss, 10% take-profit, 2 max trades/day
 
-=== MARKET CONDITIONS ===
-📉 SIGNIFICANT DOWNTURN DETECTED:
-- BTC/USD: $71,275.39 (-3.88% from previous)
-- ETH/USD: $2,182.66 (-6.37% from previous)
-- Both assets below key moving averages
-- ETH trading below critical support level
+2. CURRENT POSITION:
+   - ETH/USD: 0.09708 @ $2,060.15
+   - Stop-loss: $1,957.14 (-5%)
+   - Take-profit: $2,266.17 (+10%)
+   - Current price: $2,060.15 (breakeven)
+   - Status: ✅ Within risk limits
 
-=== SYSTEM HEALTH ===
-✅ Trading server: Operational (port 5001)
-✅ Dashboard: Accessible
-⚠️ Strategy file: Not found (using defaults)
-⚠️ Daily trade limit: 2/2 reached (no new trades)
-⚠️ Last analysis: 31 minutes ago (22:31:27)
-⚠️ Next analysis: 29 minutes (23:31)
+3. HISTORICAL ANALYSIS:
+   - 10 total trades in history
+   - 4 out of 6 historical positions exceed 5% stop-loss threshold
+   - P&L reporting shows $0.00, suggesting tracking issues
 
-=== PORTFOLIO STATUS ===
-💰 Total Capital: $1,000.00
-📊 Current Exposure: $399.96 (2 positions)
-📉 Portfolio Value: $980.13
-📉 Total Loss: -$19.87 (-1.99% on capital)
+4. MARKET CONDITIONS:
+   - BTC/USD: $67,232.00 (+1.18% 24h)
+   - ETH/USD: $2,060.15 (+3.22% 24h)
+   - Volume: High ($38B BTC, $16.6B ETH)
 
-Position Breakdown:
-1. ETH/USD: -$12.27 (-6.13%) 🚨 STOP-LOSS TRIGGERED
-2. BTC/USD: -$7.61 (-3.80%) ⚠️ AT RISK
+--- ALERTS GENERATED ---
 
-=== URGENT ACTIONS REQUIRED ===
-1. 🚨 MANUALLY CLOSE ETH POSITION IMMEDIATELY
-   - Use market order to sell 0.086 ETH
-   - Current price: $2,182.66
-   - Prevent further losses
+🟡 WARNING ALERTS (in trading_monitoring.log):
+1. Multiple historical positions exceeding stop-loss
+2. Capital discrepancy between endpoints
+3. P&L reporting inconsistency
 
-2. ⚠️ MONITOR BTC POSITION CLOSELY
-   - Prepare for manual closure if stop-loss triggers
-   - Current distance: 1.26% above stop-loss
+🔴 CRITICAL ALERTS (in critical_alerts.log):
+1. Capital accounting discrepancy ($250 vs $800)
+2. Historical losses not reflected in P&L
+3. Stop-loss execution verification needed
 
-3. 🔧 FIX SYSTEM CONFIGURATION
-   - Create strategy file for proper execution
-   - Verify stop-loss order execution capability
-   - Check trading API connectivity
+--- FILES UPDATED ---
+1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+   - Appended new monitoring entry with detailed analysis
+   - Added drawdown calculations for historical positions
+   - Included risk assessment and recommendations
 
-=== LOG FILES UPDATED ===
-1. trading_monitoring.log: Full monitoring report with analysis
-2. critical_alerts.log: Detailed critical alerts with action steps
-3. cron_trading_summary.txt: This summary report
+2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+   - Created new critical alert entry
+   - Highlighted capital discrepancy and stop-loss concerns
+   - Provided urgent action recommendations
 
-=== NEXT SCHEDULED CHECK ===
-⏰ Next cron execution: 2026-03-19 00:02:45 (1 hour)
-⚠️ RECOMMENDATION: Increase monitoring frequency during critical conditions
+--- RECOMMENDATIONS FOR NEXT RUN ---
+1. Monitor ETH/USD position for stop-loss trigger (< $1,957.14)
+2. Verify capital reporting consistency
+3. Check if daily trade limit resets (currently 1/2 used)
+4. Review server logs for stop-loss execution events
 
-=== ALERT PRIORITY: CRITICAL ===
-This condition requires immediate manual intervention. The trading system appears to be monitoring but not executing stop-loss orders automatically.
+--- NEXT SCHEDULED CHECK ---
+Based on hourly analysis schedule: ~2026-03-31 01:00:00
 
 === END OF SUMMARY ===

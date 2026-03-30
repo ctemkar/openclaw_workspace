@@ -97,7 +97,7 @@ def main():
     print("26-CRYPTO TRADING BOT - REAL MODE")
     print("=" * 70)
     print("Monitoring all 26 top cryptocurrencies")
-    print("Dual Exchange: Gemini (LONG) + Binance (SHORT)")
+    print("Dual Exchange: Gemini (LONG on 16 cryptos) + Binance (SHORT on 26 cryptos)")
     print("=" * 70)
     
     # Load API keys
@@ -164,23 +164,24 @@ def main():
             # Analyze Gemini pairs (LONG opportunities)
             if "gemini" in exchanges:
                 print("\n🔍 GEMINI (LONG opportunities):")
-                gemini_pairs = ["BTC/USD", "ETH/USD", "SOL/USD", "ADA/USD", "MATIC/USD", "LINK/USD", "UNI/USD"]
+                gemini_pairs = ['BTC/USD', 'ETH/USD', 'SOL/USD', 'XRP/USD', 'DOT/USD', 'DOGE/USD', 'AVAX/USD', 'LINK/USD', 'UNI/USD', 'LTC/USD', 'ATOM/USD', 'FIL/USD', 'XTZ/USD', 'AAVE/USD', 'COMP/USD', 'YFI/USD']
                 
-                for pair in gemini_pairs[:3]:  # Check first 3 each cycle
+                for pair in gemini_pairs[:6]:  # Check first 6 each cycle (was 3)
                     analysis = analyze_symbol(exchanges["gemini"], pair)
                     if analysis:
                         print(f"  {pair:10} ${analysis['price']:8.2f} {analysis['change']:6.2f}% {analysis['signal']:8}")
                         
-                        # Simple LONG signal
-                        if analysis['signal'] == "BULLISH" and analysis['change'] > 1.5:
+                        # Simple LONG signal - lowered threshold for more opportunities
+                        if analysis['signal'] == "BULLISH" and analysis['change'] > 0.8:
                             print(f"    ⚡ LONG SIGNAL: {pair} up {analysis['change']:.2f}%")
+                            print(f"    💰 Potential LONG trade on Gemini")
             
             # Analyze Binance pairs (SHORT opportunities)
             if "binance" in exchanges:
                 print("\n🔍 BINANCE (SHORT opportunities):")
                 # Check a subset of cryptos each cycle
                 start_idx = (cycle - 1) * 5 % len(CRYPTOS)
-                cryptos_to_check = CRYPTOS[start_idx:start_idx + 5]
+                cryptos_to_check = CRYPTOS[start_idx:start_idx + 8]  # Check 8 each cycle (was 5)
                 
                 for crypto in cryptos_to_check:
                     pair = f"{crypto}/USDT"
@@ -188,9 +189,10 @@ def main():
                     if analysis:
                         print(f"  {pair:12} ${analysis['price']:8.2f} {analysis['change']:6.2f}% {analysis['signal']:8}")
                         
-                        # Simple SHORT signal
-                        if analysis['signal'] == "BEARISH" and analysis['change'] < -1.5:
+                        # Simple SHORT signal - lowered threshold for more opportunities
+                        if analysis['signal'] == "BEARISH" and analysis['change'] < -1.0:
                             print(f"    ⚡ SHORT SIGNAL: {pair} down {analysis['change']:.2f}%")
+                            print(f"    💰 Potential SHORT trade on Binance (when funds available)")
             
             print(f"\n⏰ Next analysis in 2 minutes...")
             print("=" * 70)

@@ -1,89 +1,157 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-30 22:50:05 (Asia/Bangkok)
-Cron Job: trading_dashboard_monitor (408b9c2b-eefa-402d-b7be-9817ee932f36)
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-31 00:57:58 (Asia/Bangkok)
+Monitoring Job ID: MONITOR-20260331-005758
+Previous Report: 2026-03-31 00:56:30
 
---- RAW FETCHED CONTENT ---
+=== SYSTEM STATUS ===
+• Dashboard Status: RUNNING (Port: 5001)
+• Last Analysis: 2026-03-31T00:48:41.698451 (9 minutes ago)
+• Analysis Schedule: Hourly
+• Trading Pairs: BTC/USD, ETH/USD
+• Time Since Last Analysis: 9 minutes
 
-1. MAIN PAGE (http://localhost:5001/):
-<html>
-    <head><title>Conservative Crypto Trading System</title></head>
-    <body>
-        <h1>Conservative Crypto Trading System</h1>
-        <p>Real trading with $100 capital on Gemini</p>
-        
-        <h2>Endpoints:</h2>
-        <ul>
-            <li><a href="/status">/status</a> - System status</li>
-            <li><a href="/analysis">/analysis</a> - Run analysis now</li>
-            <li><a href="/trades">/trades</a> - Recent trades</li>
-            <li><a href="/strategy">/strategy</a> - Current strategy</li>
-            <li><a href="/summary">/summary</a> - Trading summary</li>
-        </ul>
-        
-        <h2>Configuration:</h2>
-        <ul>
-            <li>Capital: $100</li>
-            <li>Stop-loss: 5%</li>
-            <li>Take-profit: 10%</li>
-            <li>Max trades/day: 2</li>
-            <li>Pairs: BTC/USD, ETH/USD</li>
-        </ul>
-    </body>
-    </html>
+=== CAPITAL & RISK PARAMETERS ===
+⚠️ CAPITAL DATA INCONSISTENCY:
+• Dashboard HTML: $250 ($200 Gemini + $50 Binance)
+• Status endpoint: $250.00 capital
+• Summary endpoint: $1000 capital (SANDBOX mode)
+• Stop-loss: 5% (Gemini) / 7% (Binance)
+• Take-profit: 10% (Gemini) / 8% (Binance)
+• Max trades/day: 2 (from status) vs 5 total (from HTML)
 
-2. STATUS ENDPOINT (http://localhost:5001/status):
-{"analysis_scheduled":"hourly","capital":100.0,"last_analysis":"2026-03-30T22:01:11.445599","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-30T22:49:55.634353","trading_pairs":["BTC/USD","ETH/USD"]}
+=== TRADING ACTIVITY ANALYSIS ===
+• Total Historical Trades: 10 (unchanged since last report)
+• No new trades detected since last monitoring
+• Trade Distribution:
+  - 4 Gemini BTC buys at ~$74,308 range (10:14-10:20)
+  - 2 BTC buys at $74,094.64 and $71,386.00 (13:39, 00:33)
+  - 2 ETH buys at $2,325.28 and $2,193.60 (13:39, 00:33)
+  - 2 BTC/ETH buys at $67,247.51 and $2,052.38 (21:29)
+• Trade Stagnation: No trades in 3+ hours
 
-3. TRADES ENDPOINT (http://localhost:5001/trades):
-{"count":10,"timestamp":"2026-03-30T22:50:05.241541","trades":[{"amount":0.0001345750121117511,"model":"Gemini","price":74308.0,"side":"buy","status":"filled","time":"10:20:26"},{"amount":0.00013457358140268468,"model":"Gemini","price":74308.79,"side":"buy","status":"filled","time":"10:18:29"},{"amount":0.00013453038469636157,"model":"Gemini","price":74332.65,"side":"buy","status":"filled","time":"10:14:36"},{"amount":0.00013455424265000813,"model":"Gemini","price":74319.47,"side":"buy","status":"filled","time":"10:14:33"},{"price":74094.64,"quantity":0.002699,"reason":"Near support level: $73556.12 (current: $74094.64)","side":"BUY","symbol":"BTC/USD","time":"13:39:48"},{"price":2325.28,"quantity":0.086,"reason":"Near support level: $2308.08 (current: $2325.28)","side":"BUY","symbol":"ETH/USD","time":"13:39:49"},{"price":71386.0,"quantity":0.002802,"reason":"Near support level: $70896.70 (current: $71386.00)","side":"BUY","symbol":"BTC/USD","time":"00:33:00"},{"price":2193.6,"quantity":0.0912,"reason":"Near support level: $2167.99 (current: $2193.60)","side":"BUY","symbol":"ETH/USD","time":"00:33:02"},{"price":67247.51,"quantity":0.002974,"reason":"Near support level: $67110.20 (current: $67247.51)","side":"BUY","symbol":"BTC/USD","time":"21:29:41"},{"price":2052.38,"quantity":0.0974,"reason":"Near support level: $2033.94 (current: $2052.38)","side":"BUY","symbol":"ETH/USD","time":"21:29:42"}]}
+=== CURRENT MARKET ANALYSIS ===
+• Current Market Prices (from latest analysis):
+  - BTC/USD: $67,300.17
+  - ETH/USD: $2,018.43
+• Market Signals:
+  - BTC/USD: HOLD (20% confidence)
+  - ETH/USD: HOLD (0% confidence)
+• Trading Mode: SANDBOX (Simulated)
+• Trades Remaining Today: 2
+• Capital: $1000 (from summary, inconsistent with $250 in other endpoints)
 
-4. SUMMARY ENDPOINT (http://localhost:5001/summary):
-<pre>TRADING ANALYSIS REPORT
-Generated: 2026-03-30 22:01:11.445569
-==================================================
+=== POSITION RISK ASSESSMENT ===
 
-============================================================
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-Capital: $100.00 | Stop-loss: 5.0% | Take-profit: 10.0%
-Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
-============================================================
-📊 Today's trades: 2/2
+Based on current market prices ($67,300 BTC, $2,018 ETH):
 
-🔍 Analyzing BTC/USD...
-   Price: $67777.93
-   24h Change: N/A
-   SMA 10: $67553.27
-   SMA 20: $67069.11
-   Support: $67051.55
-   Resistance: $68136.29
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $67051.55 (current: $67777.93)
-   ⏸️ Skipping: Max daily trades reached
+🚨 CRITICAL RISK: 8 POSITIONS EXCEED 5% STOP-LOSS THRESHOLD
 
-🔍 Analyzing ETH/USD...
-   Price: $2069.87
-   24h Change: N/A
-   SMA 10: $2058.74
-   SMA 20: $2032.87
-   Support: $2039.91
-   Resistance: $2082.48
-   Signal: BUY (Confidence: 70%)
-   Reasons: Near support level: $2039.91 (current: $2069.87)
-   ⏸️ Skipping: Max daily trades reached
+HIGH-RISK POSITIONS (>5% loss):
+1. Gemini BTC @ $74,308.00: 9.4% loss
+2. Gemini BTC @ $74,308.79: 9.4% loss
+3. Gemini BTC @ $74,332.65: 9.5% loss
+4. Gemini BTC @ $74,319.47: 9.4% loss
+5. BTC @ $74,094.64: 9.2% loss
+6. BTC @ $71,386.00: 5.7% loss
+7. ETH @ $2,325.28: 13.2% loss
+8. ETH @ $2,193.60: 8.0% loss
 
-📈 Trading Summary:
-   Today's trades executed: 2/2
-   Total trades: 6
-   Total P&L: $0.00
-   Available capital: $1000.00
+LOW-RISK POSITIONS (<2% loss):
+1. BTC @ $67,247.51: -0.1% loss (slight gain)
+2. ETH @ $2,052.38: 1.7% loss
 
-✅ Analysis complete. Next run in 1 hour.
-</pre>
+🚨 ALERT: 80% of positions exceed stop-loss thresholds
 
-=== END OF LOG ===2026-03-30 23:17:19.040828: Error fetching data from http://localhost:5001/: Expecting value: line 2 column 5 (char 5)
-2026-03-30 23:18:23.783650: Fetched data: {'analysis_scheduled': 'hourly', 'capital': 100.0, 'last_analysis': '2026-03-30T23:05:38.642534', 'port': 5001, 'risk_parameters': {'max_trades_per_day': 2, 'stop_loss': 0.05, 'take_profit': 0.1}, 'status': 'running', 'timestamp': '2026-03-30T23:18:23.782608', 'trading_pairs': ['BTC/USD', 'ETH/USD']}
-2026-03-30 23:18:23.783771: An unexpected error occurred: name 'current_drawdown' is not defined
-2026-03-30 23:18:44.256108: Fetched data: {'analysis_scheduled': 'hourly', 'capital': 100.0, 'last_analysis': '2026-03-30T23:05:38.642534', 'port': 5001, 'risk_parameters': {'max_trades_per_day': 2, 'stop_loss': 0.05, 'take_profit': 0.1}, 'status': 'running', 'timestamp': '2026-03-30T23:18:44.255344', 'trading_pairs': ['BTC/USD', 'ETH/USD']}
-2026-03-30 23:18:44.256223: An unexpected error occurred: name 'trading_logs' is not defined
-2026-03-30 23:19:07.350384: Fetched data: {'analysis_scheduled': 'hourly', 'capital': 100.0, 'last_analysis': '2026-03-30T23:05:38.642534', 'port': 5001, 'risk_parameters': {'max_trades_per_day': 2, 'stop_loss': 0.05, 'take_profit': 0.1}, 'status': 'running', 'timestamp': '2026-03-30T23:19:07.349563', 'trading_pairs': ['BTC/USD', 'ETH/USD']}
-2026-03-30 23:19:07.350493: Dashboard status: running, Capital: $100.00
+=== STRATEGY ANALYSIS ===
+• Strategy: Gemini_Longs_Binance_Shorts
+• Gemini Action: Execute LONG if price near support, RSI < 40, trend bullish
+• Binance Action: Execute SHORT if price near resistance, RSI > 60, trend bearish
+• Capital Allocation: $35 per Gemini trade, $9 per Binance trade
+• Hedging: Binance shorts can hedge Gemini longs during downturns
+
+=== SYSTEM HEALTH CHECK ===
+
+✅ RESOLVED ISSUES (from previous reports):
+1. Python Error: FIXED - TOTAL_CAPITAL defined
+2. Capital Inconsistency: PARTIAL - Dashboard shows $250
+3. Strategy Missing: FIXED - llm_strategies.json created
+
+🚨 ACTIVE CRITICAL ISSUES:
+1. Stop-loss Execution Unverified: 8 positions exceed 5% threshold
+2. Position Tracking Missing: Cannot verify current positions
+3. Trade Activity Stagnation: No new trades in 3+ hours
+4. Downside Bias: All 10 trades are BUY orders in declining market
+5. Capital Inconsistency: Summary shows $1000 vs $250 elsewhere
+6. Max trades inconsistency: Status says 2 vs HTML says 5
+
+✅ FUNCTIONAL COMPONENTS:
+1. Web Server: Running and responsive
+2. Trade Recording: Active (10 trades recorded)
+3. Status Updates: Timestamps updating correctly
+4. Analysis Schedule: Hourly analysis working
+5. Strategy System: Functional
+
+=== PERFORMANCE METRICS ===
+• Trade Count: 10 trades total
+• Trade Frequency: Historically multiple trades/day, currently stagnant
+• Risk Exposure: VERY HIGH (80% positions underwater)
+• System Reliability: IMPROVED (critical errors fixed)
+• Data Quality: MIXED (inconsistencies remain)
+• Market Trend: Downtrend evident in historical trades
+
+=== ALERT STATUS ===
+• System Error: RESOLVED ✅
+• Data Consistency: PARTIAL ⚠️ (multiple inconsistencies)
+• Strategy Missing: RESOLVED ✅
+• Stop-loss Monitoring: CRITICAL FAILURE 🚨 (8 positions exceed threshold)
+• Take-profit Monitoring: UNABLE TO VERIFY ⚠️
+• Position Tracking: MISSING ⚠️
+• Trade Activity: STAGNANT (no new trades in 3+ hours) ⚠️
+• System Availability: PASSED ✅
+
+=== CRITICAL RISK INDICATORS ===
+1. Multiple positions exceed stop-loss thresholds
+2. No verification of risk management execution
+3. Trade pattern shows consistent buying into downtrend
+4. No sell trades or profit-taking visible
+5. Accumulating risk in declining market
+6. Capital data inconsistency between endpoints
+7. Max trades parameter inconsistency
+
+=== RECOMMENDED ACTIONS ===
+
+IMMEDIATE (Highest Priority - Within 1 hour):
+1. VERIFY STOP-LOSS EXECUTION: Check exchange accounts for executed stop-loss orders
+2. MANUAL POSITION CHECK: Review all open positions on Gemini and Binance
+3. SYSTEM PAUSE: Consider pausing trading until risk management verified
+4. RESOLVE CAPITAL INCONSISTENCY: Fix $1000 vs $250 discrepancy
+
+SHORT-TERM (Within 4 hours):
+1. Implement position tracking with real-time P&L
+2. Investigate trade stagnation and system execution
+3. Review trading strategy for downside bias
+4. Standardize all parameter reporting across endpoints
+
+LONG-TERM (Within 24 hours):
+1. Implement comprehensive risk monitoring system
+2. Add stop-loss execution verification
+3. Create alert escalation procedures
+4. Standardize data formats and reporting
+
+=== RISK LEVEL ASSESSMENT ===
+Overall Risk Level: HIGH 🚨
+No improvement since last report
+
+Reasons for HIGH risk:
+1. 8 positions exceed 5% stop-loss thresholds (80% of portfolio)
+2. No verification of risk management execution
+3. No current position or P&L visibility
+4. Trade activity stagnation suggests potential system failure
+5. Downside bias in trading pattern
+6. Multiple data inconsistencies
+
+=== MONITORING COMPLETE ===
+Next scheduled check: 2026-03-31 01:57:58 (Asia/Bangkok)
+Time elapsed since last analysis: 9 minutes
+System status: RUNNING WITH UNVERIFIED RISK MANAGEMENT
+Alert: CRITICAL RISK - Immediate human intervention recommended

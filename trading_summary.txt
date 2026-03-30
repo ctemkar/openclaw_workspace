@@ -1,24 +1,26 @@
 ============================================================
-CRYPTO TRADING SUMMARY
-Time: 2026-03-30 23:59:25 
-Capital: $800.00
-Daily Trades Used: 1/2
+CONSERVATIVE CRYPTO TRADING SUMMARY
 ============================================================
+Date: 2026-03-31 00:48:39
+Capital: $1000
+Risk Parameters: 5% stop-loss, 10% take-profit
+Max trades per day: 2
+Mode: SANDBOX (Simulated)
 
-RECENT TRADES:
-- 2026-03-30T23:59:25 | ETHUSD | BUY | Qty: 0.09708 | Price: $2060.15 | Value: $200.00
+No trades executed in this session.
+MARKET ANALYSIS:
+----------------------------------------
+BTC/USD:
+  Price: $67300.17
+  Signal: HOLD (confidence: 20.00%)
+  Analysis: Neutral market conditions: score=-20
+ETH/USD:
+  Price: $2018.43
+  Signal: HOLD (confidence: 0.00%)
+  Analysis: Neutral market conditions: score=0
 
-OPEN POSITIONS:
-- ETHUSD: 0.09708 @ $2060.15 | SL: $1957.14 | TP: $2266.17
-
-MARKET OVERVIEW:
-- BTCUSD: $67,232.00 | 24h: +1.18% | Vol: $38.0B
-- ETHUSD: $2,060.15 | 24h: +3.22% | Vol: $16.6B
-
-RISK PARAMETERS:
-- Max Daily Trades: 2
-- Stop-Loss: 5.0%
-- Take-Profit: 10.0%
-- Position Size: 20% of capital
-
+RECOMMENDATION:
+----------------------------------------
+Trades remaining today: 2
+Continue monitoring for strong signals with >60% confidence.
 ============================================================

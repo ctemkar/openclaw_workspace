@@ -1,78 +1,62 @@
-TRADING DASHBOARD MONITORING REPORT
+TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Monitoring Time: 2026-03-19 16:08 PM (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+Timestamp: 2026-03-31 00:37:00 (Asia/Bangkok)
 
 SYSTEM STATUS:
-• Dashboard Status: Running
-• Capital: $1,000.00
-• Last Analysis: 2026-03-19 15:46:20
-• Next Analysis: ~38 minutes (at 16:46)
-• Daily Trade Limit: 2/2 (REACHED - SYSTEM LOCKED)
-• Automatic Trading: Disabled
-
-CURRENT MARKET PRICES:
-• BTC/USD: $70,110.72
-• ETH/USD: $2,166.88
-
-POSITION ANALYSIS:
-• Total Open Positions: 6
-• Critical Positions (Stop-Loss Triggered): 4
-• Active Positions (Within Parameters): 2
-
-CRITICAL ALERTS:
-🚨 4 STOP-LOSS TRIGGERS NOT EXECUTED FOR ~65 MINUTES
-🚨 Daily trade limit reached (2/2 trades) - System locked
-🚨 Automatic trading disabled
-🚨 Manual intervention required on external Gemini platform
-🚨 Additional losses accumulating beyond stop-loss: $4.65
-
-DETAILED POSITION STATUS:
-1. ETH/USD @ $2,331.78 → $2,166.88 (-7.07%) 🚨 STOP-LOSS TRIGGERED
-   - 2.07% beyond 5% stop-loss threshold
-   - Most critical position
-
-2. BTC/USD @ $74,335.92 → $70,110.72 (-5.68%) 🚨 STOP-LOSS TRIGGERED
-   - 0.68% beyond 5% stop-loss threshold
-
-3. BTC/USD @ $74,094.64 → $70,110.72 (-5.38%) 🚨 STOP-LOSS TRIGGERED
-   - 0.38% beyond 5% stop-loss threshold
-
-4. ETH/USD @ $2,325.28 → $2,166.88 (-6.81%) 🚨 STOP-LOSS TRIGGERED
-   - 1.81% beyond 5% stop-loss threshold
-
-5. BTC/USD @ $71,386.00 → $70,110.72 (-1.79%) ✅ ACTIVE
-   - Within risk parameters
-
-6. ETH/USD @ $2,193.60 → $2,166.88 (-1.22%) ✅ ACTIVE
-   - Within risk parameters
-
-RISK METRICS:
-• Total Capital Exposure: $820.04 (82.0% of capital)
-• Total Unrealized Loss: -$31.66 (3.17% of capital)
-• Excess Loss Beyond Stop-Loss: $4.65 (0.47% of capital)
-• Remaining Protected Capital: $179.96 (18.0%)
-
-TRADING ACTIVITY:
-• Total Trades in History: 10
-• Today's Trades Executed: 2/2 (max reached at 10:21 today)
+• Web Dashboard: RUNNING on port 5001
+• Last Analysis: 2026-03-31T00:32:02 (5 minutes ago)
+• Analysis Schedule: Hourly
 • Trading Pairs: BTC/USD, ETH/USD
 
-IMMEDIATE ACTION REQUIRED:
-1. 🚨 MANUAL INTERVENTION: Login to Gemini and execute stop-loss orders for all 4 critical positions
-2. ⚠️ Contact system administrator for daily trade limit override
-3. 📊 Monitor BTC/ETH price movements closely
-4. 💼 Protect remaining $179.96 of unexposed capital
-5. 🔧 Review and adjust daily trade limit settings for future operations
+CRITICAL ISSUES IDENTIFIED:
+1. 🚨 Python Runtime Error: TOTAL_CAPITAL variable not defined
+   - Location: conservative_crypto_trading.py line 306
+   - Impact: Analysis cannot complete
+   - Fix: Add "TOTAL_CAPITAL = 250.0" to configuration section
 
-TIME ANALYSIS:
-• Time since first alert: ~65 minutes
-• Additional losses accumulating: ~$4.65 beyond stop-loss threshold
-• Most critical position: ETH/USD @ $2,331.78 → $2,166.88 (-7.07%)
+2. 🚨 Data Inconsistency: Capital amount mismatch
+   - Dashboard HTML: $100
+   - Status endpoint: $250
+   - Fix: Update dashboard HTML to show $250
 
-LOGGED DATA:
-• Monitoring Log: ./trading_monitoring.log (updated)
-• Critical Alerts: ./critical_alerts.log (updated)
+3. 🚨 Strategy Missing: /strategy endpoint returns error
+   - Error: "No strategy file found"
+   - Fix: Create strategy file or implement strategy generation
 
-RISK LEVEL: EXTREME - Immediate manual intervention required
-=====================================
+4. 🚨 Stop-loss Execution Unverified
+   - Multiple positions likely exceed 5% stop-loss threshold
+   - No evidence of stop-loss triggers in trade data
+   - Action: Verify stop-loss order execution
+
+5. 🚨 Position Tracking Missing
+   - No real-time P&L calculation
+   - Cannot determine active positions
+   - Fix: Implement position tracking system
+
+TRADING ACTIVITY:
+• Total Trades: 10 (all BUY orders)
+• Last Trade: 21:29 (3+ hours ago)
+• Trade Pattern: Buying into downtrend
+• Price Trend: Decreasing (BTC: $74,308 → $67,247)
+
+RISK ASSESSMENT:
+• Multiple positions likely underwater
+• Stop-loss thresholds likely exceeded
+• No sell trades or profit-taking visible
+• System trading blind without position tracking
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. Fix Python error by adding TOTAL_CAPITAL = 250.0
+2. Verify stop-loss order execution
+3. Reconcile capital data ($100 vs $250)
+4. Create strategy file for /strategy endpoint
+5. Consider pausing trading until issues resolved
+
+SYSTEM HEALTH: POOR 🚨
+Multiple critical failures require immediate attention.
+
+Monitoring logs saved to:
+• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+Next monitoring check: 01:37:00

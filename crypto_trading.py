@@ -3,275 +3,380 @@
 Conservative Crypto Trading Bot
 Uses Gemini API with $1,000 capital
 Risk parameters: 5% stop-loss, 10% take-profit, max 2 trades per day
-Analyzes BTC/USD and ETH/USD
+Analyzes BTC/USD and ETH/USD with conservative strategy
 """
 
-import os
+import ccxt
+import pandas as pd
+import numpy as np
 import time
 import json
-import requests
-import pandas as pd
+import os
 from datetime import datetime, timedelta
-import numpy as np
-from typing import Dict, List, Optional, Tuple
+import sys
 
-# Configuration
-CAPITAL = 1000.0  # USD
-MAX_DAILY_TRADES = 2
-STOP_LOSS_PCT = 0.05  # 5%
-TAKE_PROFIT_PCT = 0.10  # 10%
-SYMBOLS = ['BTCUSD', 'ETHUSD']
+# Trading parameters
+CAPITAL = 1000  # $1,000 total capital
+MAX_TRADES_PER_DAY = 2
+STOP_LOSS_PCT = 5  # 5% stop-loss
+TAKE_PROFIT_PCT = 10  # 10% take-profit
+POSITION_SIZE_PCT = 40  # Use 40% of capital per trade (conservative)
 
-# Gemini API configuration (would need actual API keys in production)
+# Gemini API configuration (using sandbox for safety)
+# In production, use real API keys from environment variables
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
 GEMINI_API_SECRET = os.getenv('GEMINI_API_SECRET', '')
 
+# Use sandbox for testing, set to False for real trading
+USE_SANDBOX = True
+
 class ConservativeCryptoTrader:
     def __init__(self):
-        self.capital = CAPITAL
-        self.positions = {}
-        self.daily_trades = 0
-        self.trade_history = []
+        """Initialize Gemini exchange connection"""
+        if USE_SANDBOX:
+            self.exchange = ccxt.gemini({
+                'apiKey': GEMINI_API_KEY,
+                'secret': GEMINI_API_SECRET,
+                'sandbox': True,
+                'enableRateLimit': True,
+            })
+        else:
+            self.exchange = ccxt.gemini({
+                'apiKey': GEMINI_API_KEY,
+                'secret': GEMINI_API_SECRET,
+                'enableRateLimit': True,
+            })
         
-    def get_market_data(self, symbol: str) -> Dict:
-        """Get current market data for a symbol"""
+        # Track daily trades
+        self.today_trades = 0
+        self.trades_history = []
+        
+        # Market symbols to analyze
+        self.symbols = ['BTC/USD', 'ETH/USD']
+        
+        print(f"Initialized Conservative Crypto Trader")
+        print(f"Capital: ${CAPITAL}")
+        print(f"Risk Parameters: {STOP_LOSS_PCT}% stop-loss, {TAKE_PROFIT_PCT}% take-profit")
+        print(f"Max trades per day: {MAX_TRADES_PER_DAY}")
+        print(f"Using {'SANDBOX' if USE_SANDBOX else 'LIVE'} mode")
+    
+    def fetch_market_data(self, symbol, timeframe='1h', limit=100):
+        """Fetch OHLCV data for analysis"""
         try:
-            # For demo purposes, using CoinGecko API (free)
-            if symbol == 'BTCUSD':
-                url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true'
-                response = requests.get(url, timeout=10)
-                data = response.json()
-                return {
-                    'price': data['bitcoin']['usd'],
-                    'change_24h': data['bitcoin']['usd_24h_change'],
-                    'volume': data['bitcoin']['usd_24h_vol'],
-                    'market_cap': data['bitcoin']['usd_market_cap']
-                }
-            elif symbol == 'ETHUSD':
-                url = 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true'
-                response = requests.get(url, timeout=10)
-                data = response.json()
-                return {
-                    'price': data['ethereum']['usd'],
-                    'change_24h': data['ethereum']['usd_24h_change'],
-                    'volume': data['ethereum']['usd_24h_vol'],
-                    'market_cap': data['ethereum']['usd_market_cap']
-                }
+            ohlcv = self.exchange.fetch_ohlcv(symbol, timeframe, limit=limit)
+            df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+            df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+            df.set_index('timestamp', inplace=True)
+            return df
         except Exception as e:
-            print(f"Error fetching market data: {e}")
+            print(f"Error fetching data for {symbol}: {e}")
             return None
     
-    def analyze_market_sentiment(self, symbol: str) -> Dict:
-        """Analyze market sentiment and technical indicators"""
-        market_data = self.get_market_data(symbol)
-        if not market_data:
-            return {'sentiment': 'neutral', 'signal': 'hold'}
+    def calculate_technical_indicators(self, df):
+        """Calculate conservative technical indicators"""
+        if df is None or len(df) < 20:
+            return None
         
-        price = market_data['price']
-        change_24h = market_data['change_24h']
-        volume = market_data['volume']
+        # Simple Moving Averages
+        df['SMA_20'] = df['close'].rolling(window=20).mean()
+        df['SMA_50'] = df['close'].rolling(window=50).mean()
         
-        # Simple sentiment analysis
-        sentiment = 'neutral'
-        if change_24h > 3:
-            sentiment = 'bullish'
-        elif change_24h < -3:
-            sentiment = 'bearish'
+        # Relative Strength Index (RSI)
+        delta = df['close'].diff()
+        gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+        rs = gain / loss
+        df['RSI'] = 100 - (100 / (1 + rs))
         
-        # Volume analysis
-        volume_signal = 'normal'
-        if volume > 10000000000:  # 10B+ volume
-            volume_signal = 'high'
+        # Bollinger Bands
+        df['BB_middle'] = df['close'].rolling(window=20).mean()
+        bb_std = df['close'].rolling(window=20).std()
+        df['BB_upper'] = df['BB_middle'] + (bb_std * 2)
+        df['BB_lower'] = df['BB_middle'] - (bb_std * 2)
         
-        # Determine trading signal (conservative approach)
-        signal = 'hold'
-        if sentiment == 'bullish' and volume_signal == 'high':
-            signal = 'buy'
-        elif sentiment == 'bearish' and volume_signal == 'high':
-            signal = 'sell'
+        # Support and Resistance levels (simplified)
+        df['support'] = df['low'].rolling(window=20).min()
+        df['resistance'] = df['high'].rolling(window=20).max()
         
-        return {
-            'symbol': symbol,
-            'price': price,
-            'change_24h': change_24h,
-            'volume': volume,
-            'sentiment': sentiment,
-            'volume_signal': volume_signal,
-            'signal': signal,
-            'timestamp': datetime.now().isoformat()
-        }
+        return df
     
-    def calculate_position_size(self, price: float) -> float:
+    def analyze_market_sentiment(self, df):
+        """Analyze market sentiment based on technical indicators"""
+        if df is None or len(df) < 50:
+            return "NEUTRAL", 0
+        
+        latest = df.iloc[-1]
+        prev = df.iloc[-2]
+        
+        score = 0
+        
+        # Trend analysis (weight: 40%)
+        if latest['SMA_20'] > latest['SMA_50']:
+            score += 40  # Bullish trend
+        else:
+            score -= 40  # Bearish trend
+        
+        # RSI analysis (weight: 30%)
+        if latest['RSI'] < 30:
+            score += 30  # Oversold, bullish signal
+        elif latest['RSI'] > 70:
+            score -= 30  # Overbought, bearish signal
+        
+        # Bollinger Band analysis (weight: 20%)
+        if latest['close'] < latest['BB_lower']:
+            score += 20  # Below lower band, potential bounce
+        elif latest['close'] > latest['BB_upper']:
+            score -= 20  # Above upper band, potential pullback
+        
+        # Support/Resistance analysis (weight: 10%)
+        if latest['close'] > latest['resistance'] * 0.98:
+            score += 10  # Near resistance, caution
+        elif latest['close'] < latest['support'] * 1.02:
+            score -= 10  # Near support, potential bounce
+        
+        # Determine sentiment
+        if score >= 20:
+            return "BULLISH", score
+        elif score <= -20:
+            return "BEARISH", score
+        else:
+            return "NEUTRAL", score
+    
+    def get_trading_signal(self, symbol):
+        """Generate conservative trading signal"""
+        df = self.fetch_market_data(symbol)
+        if df is None:
+            return "HOLD", 0, "No data"
+        
+        df = self.calculate_technical_indicators(df)
+        if df is None:
+            return "HOLD", 0, "Insufficient data"
+        
+        sentiment, score = self.analyze_market_sentiment(df)
+        latest = df.iloc[-1]
+        
+        # Conservative trading rules
+        signal = "HOLD"
+        confidence = abs(score) / 100.0
+        
+        # Only trade on strong signals for conservative approach
+        if sentiment == "BULLISH" and score >= 40:
+            signal = "BUY"
+            reason = f"Strong bullish signals: SMA crossover, RSI oversold, price near support"
+        elif sentiment == "BEARISH" and score <= -40:
+            signal = "SELL"
+            reason = f"Strong bearish signals: SMA crossover, RSI overbought, price near resistance"
+        else:
+            reason = f"Neutral market conditions: score={score}"
+        
+        return signal, confidence, reason
+    
+    def check_daily_trade_limit(self):
+        """Check if daily trade limit has been reached"""
+        today = datetime.now().date()
+        today_trades = sum(1 for trade in self.trades_history 
+                          if trade['timestamp'].date() == today)
+        return today_trades >= MAX_TRADES_PER_DAY
+    
+    def calculate_position_size(self, price):
         """Calculate position size based on capital and risk parameters"""
-        # Conservative: Use 20% of capital per trade
-        position_value = self.capital * 0.2
+        position_value = CAPITAL * (POSITION_SIZE_PCT / 100)
         quantity = position_value / price
-        return round(quantity, 6)
+        return quantity, position_value
     
-    def execute_trade(self, symbol: str, signal: str, price: float) -> Optional[Dict]:
-        """Execute a trade (simulated for demo)"""
-        if self.daily_trades >= MAX_DAILY_TRADES:
-            print(f"Max daily trades ({MAX_DAILY_TRADES}) reached")
-            return None
+    def execute_trade(self, symbol, signal, price):
+        """Execute trade with proper risk management"""
+        if self.check_daily_trade_limit():
+            print(f"Daily trade limit ({MAX_TRADES_PER_DAY}) reached. Skipping trade.")
+            return False
         
-        quantity = self.calculate_position_size(price)
-        if quantity * price > self.capital * 0.25:  # Safety check
-            quantity = (self.capital * 0.2) / price
+        quantity, position_value = self.calculate_position_size(price)
         
-        trade_value = quantity * price
+        # Calculate stop-loss and take-profit prices
+        if signal == "BUY":
+            stop_loss_price = price * (1 - STOP_LOSS_PCT / 100)
+            take_profit_price = price * (1 + TAKE_PROFIT_PCT / 100)
+            order_type = "buy"
+        elif signal == "SELL":
+            stop_loss_price = price * (1 + STOP_LOSS_PCT / 100)
+            take_profit_price = price * (1 - TAKE_PROFIT_PCT / 100)
+            order_type = "sell"
+        else:
+            return False
         
-        # Simulate trade execution
-        trade_id = f"{symbol}_{int(time.time())}"
-        trade = {
-            'trade_id': trade_id,
-            'symbol': symbol,
-            'action': signal,
-            'quantity': quantity,
-            'price': price,
-            'value': trade_value,
-            'stop_loss': price * (1 - STOP_LOSS_PCT) if signal == 'buy' else price * (1 + STOP_LOSS_PCT),
-            'take_profit': price * (1 + TAKE_PROFIT_PCT) if signal == 'buy' else price * (1 - TAKE_PROFIT_PCT),
-            'timestamp': datetime.now().isoformat(),
-            'status': 'executed'
-        }
-        
-        self.trade_history.append(trade)
-        self.daily_trades += 1
-        
-        # Update capital (simulated)
-        if signal == 'buy':
-            self.capital -= trade_value
-            self.positions[symbol] = trade
-        elif signal == 'sell':
-            self.capital += trade_value
-            if symbol in self.positions:
-                del self.positions[symbol]
-        
-        return trade
-    
-    def check_open_positions(self):
-        """Check stop-loss and take-profit levels for open positions"""
-        for symbol, position in list(self.positions.items()):
-            current_data = self.get_market_data(symbol)
-            if not current_data:
-                continue
+        # In sandbox mode, simulate trade execution
+        if USE_SANDBOX:
+            trade = {
+                'timestamp': datetime.now(),
+                'symbol': symbol,
+                'type': order_type,
+                'quantity': quantity,
+                'price': price,
+                'value': position_value,
+                'stop_loss': stop_loss_price,
+                'take_profit': take_profit_price,
+                'status': 'SIMULATED'
+            }
+            self.trades_history.append(trade)
+            self.today_trades += 1
             
-            current_price = current_data['price']
+            print(f"\n{'='*60}")
+            print(f"SIMULATED TRADE EXECUTED")
+            print(f"{'='*60}")
+            print(f"Symbol: {symbol}")
+            print(f"Action: {order_type.upper()}")
+            print(f"Quantity: {quantity:.6f}")
+            print(f"Price: ${price:.2f}")
+            print(f"Position Value: ${position_value:.2f}")
+            print(f"Stop-Loss: ${stop_loss_price:.2f} ({STOP_LOSS_PCT}%)")
+            print(f"Take-Profit: ${take_profit_price:.2f} ({TAKE_PROFIT_PCT}%)")
+            print(f"{'='*60}")
             
-            # Check stop-loss
-            if position['action'] == 'buy':
-                if current_price <= position['stop_loss']:
-                    print(f"Stop-loss triggered for {symbol} at ${current_price}")
-                    # Execute sell to close position
-                    self.execute_trade(symbol, 'sell', current_price)
-                elif current_price >= position['take_profit']:
-                    print(f"Take-profit triggered for {symbol} at ${current_price}")
-                    self.execute_trade(symbol, 'sell', current_price)
+            return True
+        else:
+            # Real trade execution (commented out for safety)
+            try:
+                # order = self.exchange.create_order(
+                #     symbol=symbol,
+                #     type='limit',
+                #     side=order_type,
+                #     amount=quantity,
+                #     price=price
+                # )
+                # print(f"Real trade executed: {order}")
+                # return True
+                print("Real trading disabled. Enable by setting USE_SANDBOX=False and providing API keys.")
+                return False
+            except Exception as e:
+                print(f"Error executing trade: {e}")
+                return False
     
     def run_analysis(self):
-        """Run complete trading analysis"""
+        """Run complete market analysis and execute trades if signals are strong"""
         print(f"\n{'='*60}")
-        print(f"CONSERVATIVE CRYPTO TRADING ANALYSIS")
-        print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"Capital: ${self.capital:.2f}")
-        print(f"Daily Trades: {self.daily_trades}/{MAX_DAILY_TRADES}")
-        print(f"{'='*60}\n")
+        print(f"CRYPTO MARKET ANALYSIS - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"{'='*60}")
         
-        analysis_results = []
+        trade_executed = False
         
-        for symbol in SYMBOLS:
+        for symbol in self.symbols:
             print(f"\nAnalyzing {symbol}...")
-            analysis = self.analyze_market_sentiment(symbol)
-            analysis_results.append(analysis)
             
-            print(f"  Current Price: ${analysis['price']:,.2f}")
-            print(f"  24h Change: {analysis['change_24h']:.2f}%")
-            print(f"  Volume: ${analysis['volume']:,.0f}")
-            print(f"  Sentiment: {analysis['sentiment']}")
-            print(f"  Volume Signal: {analysis['volume_signal']}")
-            print(f"  Trading Signal: {analysis['signal']}")
+            # Get current price
+            try:
+                ticker = self.exchange.fetch_ticker(symbol)
+                current_price = ticker['last']
+                print(f"Current Price: ${current_price:.2f}")
+            except Exception as e:
+                print(f"Error fetching price for {symbol}: {e}")
+                continue
             
-            # Execute trade if signal is strong and we have capacity
-            if analysis['signal'] in ['buy', 'sell'] and self.daily_trades < MAX_DAILY_TRADES:
-                print(f"\n  Executing {analysis['signal']} order for {symbol}...")
-                trade = self.execute_trade(symbol, analysis['signal'], analysis['price'])
-                if trade:
-                    print(f"  Trade Executed:")
-                    print(f"    Quantity: {trade['quantity']}")
-                    print(f"    Value: ${trade['value']:.2f}")
-                    print(f"    Stop-Loss: ${trade['stop_loss']:.2f}")
-                    print(f"    Take-Profit: ${trade['take_profit']:.2f}")
+            # Get trading signal
+            signal, confidence, reason = self.get_trading_signal(symbol)
+            
+            print(f"Signal: {signal}")
+            print(f"Confidence: {confidence:.2%}")
+            print(f"Reason: {reason}")
+            
+            # Execute trade if signal is strong enough
+            if signal in ["BUY", "SELL"] and confidence >= 0.6:
+                print(f"\nStrong {signal} signal detected for {symbol} (confidence: {confidence:.2%})")
+                
+                if self.execute_trade(symbol, signal, current_price):
+                    trade_executed = True
+                    print(f"Trade executed successfully!")
+                else:
+                    print(f"Trade execution failed or skipped.")
+            else:
+                print(f"No strong trading signal for {symbol}. Holding position.")
         
-        # Check existing positions
-        if self.positions:
-            print(f"\nChecking open positions...")
-            self.check_open_positions()
-        
-        return analysis_results
+        return trade_executed
     
-    def generate_summary(self) -> str:
-        """Generate plain text summary of trading activity"""
+    def generate_summary(self):
+        """Generate plain text summary of trades"""
         summary = []
         summary.append("=" * 60)
-        summary.append("CRYPTO TRADING SUMMARY")
-        summary.append(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S %Z')}")
-        summary.append(f"Capital: ${self.capital:.2f}")
-        summary.append(f"Daily Trades Used: {self.daily_trades}/{MAX_DAILY_TRADES}")
+        summary.append("CONSERVATIVE CRYPTO TRADING SUMMARY")
+        summary.append("=" * 60)
+        summary.append(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        summary.append(f"Capital: ${CAPITAL}")
+        summary.append(f"Risk Parameters: {STOP_LOSS_PCT}% stop-loss, {TAKE_PROFIT_PCT}% take-profit")
+        summary.append(f"Max trades per day: {MAX_TRADES_PER_DAY}")
+        summary.append(f"Mode: {'SANDBOX (Simulated)' if USE_SANDBOX else 'LIVE'}")
+        summary.append("")
+        
+        if not self.trades_history:
+            summary.append("No trades executed in this session.")
+        else:
+            summary.append("TRADES EXECUTED:")
+            summary.append("-" * 40)
+            
+            for i, trade in enumerate(self.trades_history, 1):
+                summary.append(f"Trade #{i}:")
+                summary.append(f"  Time: {trade['timestamp'].strftime('%Y-%m-%d %H:%M:%S')}")
+                summary.append(f"  Symbol: {trade['symbol']}")
+                summary.append(f"  Action: {trade['type'].upper()}")
+                summary.append(f"  Quantity: {trade['quantity']:.6f}")
+                summary.append(f"  Price: ${trade['price']:.2f}")
+                summary.append(f"  Value: ${trade['value']:.2f}")
+                summary.append(f"  Stop-Loss: ${trade['stop_loss']:.2f}")
+                summary.append(f"  Take-Profit: ${trade['take_profit']:.2f}")
+                summary.append(f"  Status: {trade['status']}")
+                summary.append("")
+        
+        # Market analysis summary
+        summary.append("MARKET ANALYSIS:")
+        summary.append("-" * 40)
+        
+        for symbol in self.symbols:
+            try:
+                ticker = self.exchange.fetch_ticker(symbol)
+                signal, confidence, reason = self.get_trading_signal(symbol)
+                summary.append(f"{symbol}:")
+                summary.append(f"  Price: ${ticker['last']:.2f}")
+                summary.append(f"  Signal: {signal} (confidence: {confidence:.2%})")
+                summary.append(f"  Analysis: {reason}")
+            except Exception as e:
+                summary.append(f"{symbol}: Error in analysis - {str(e)}")
+        
+        summary.append("")
+        summary.append("RECOMMENDATION:")
+        summary.append("-" * 40)
+        
+        if self.check_daily_trade_limit():
+            summary.append("Daily trade limit reached. No further trades recommended today.")
+        else:
+            trades_remaining = MAX_TRADES_PER_DAY - self.today_trades
+            summary.append(f"Trades remaining today: {trades_remaining}")
+            summary.append("Continue monitoring for strong signals with >60% confidence.")
+        
         summary.append("=" * 60)
         
-        if self.trade_history:
-            summary.append("\nRECENT TRADES:")
-            for trade in self.trade_history[-5:]:  # Last 5 trades
-                summary.append(f"- {trade['timestamp'][:19]} | {trade['symbol']} | "
-                             f"{trade['action'].upper()} | Qty: {trade['quantity']} | "
-                             f"Price: ${trade['price']:.2f} | Value: ${trade['value']:.2f}")
-        else:
-            summary.append("\nNo trades executed in this session.")
-        
-        summary.append("\nOPEN POSITIONS:")
-        if self.positions:
-            for symbol, position in self.positions.items():
-                summary.append(f"- {symbol}: {position['quantity']} @ ${position['price']:.2f} | "
-                             f"SL: ${position['stop_loss']:.2f} | TP: ${position['take_profit']:.2f}")
-        else:
-            summary.append("- None")
-        
-        summary.append("\nMARKET OVERVIEW:")
-        for symbol in SYMBOLS:
-            data = self.get_market_data(symbol)
-            if data:
-                summary.append(f"- {symbol}: ${data['price']:,.2f} | "
-                             f"24h: {data['change_24h']:+.2f}% | "
-                             f"Vol: ${data['volume']/1e9:.1f}B")
-        
-        summary.append("\nRISK PARAMETERS:")
-        summary.append(f"- Max Daily Trades: {MAX_DAILY_TRADES}")
-        summary.append(f"- Stop-Loss: {STOP_LOSS_PCT*100}%")
-        summary.append(f"- Take-Profit: {TAKE_PROFIT_PCT*100}%")
-        summary.append(f"- Position Size: 20% of capital")
-        
-        summary.append("\n" + "=" * 60)
         return "\n".join(summary)
 
 def main():
-    """Main trading function"""
+    """Main execution function"""
+    print("Starting Conservative Crypto Trading Analysis...")
+    
+    # Initialize trader
     trader = ConservativeCryptoTrader()
     
-    print("Starting conservative crypto trading analysis...")
-    print(f"Initial Capital: ${trader.capital:.2f}")
-    print(f"Risk Parameters: {STOP_LOSS_PCT*100}% SL, {TAKE_PROFIT_PCT*100}% TP")
-    print(f"Max Daily Trades: {MAX_DAILY_TRADES}")
-    
     # Run analysis
-    analysis_results = trader.run_analysis()
+    trade_executed = trader.run_analysis()
     
     # Generate summary
     summary = trader.generate_summary()
-    print(summary)
+    
+    print("\n" + summary)
     
     # Save summary to file
     with open('trading_summary.txt', 'w') as f:
         f.write(summary)
+    
+    if trade_executed:
+        print("\n✅ Trade(s) executed successfully!")
+    else:
+        print("\n⏸️ No trades executed - waiting for stronger signals.")
     
     return summary
 

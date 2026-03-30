@@ -1,0 +1,40 @@
+======================================================================
+CONSERVATIVE CRYPTO TRADING - EXECUTION SUMMARY
+Date: 2026-03-31 00:14:39 
+Initial Capital: $1000.00
+Trades Executed: 1/2
+======================================================================
+
+💰 TOTAL INVESTED: $200.00
+💰 CAPITAL REMAINING: $800.00
+
+📊 EXECUTED TRADES:
+--------------------------------------------------
+
+Trade #1:
+  ID: trade_1774890877
+  Symbol: ETHUSD
+  Action: BUY
+  Executed: 2026-03-31T00:14:37.668699
+  Price: $2060.59
+  Quantity: 0.097060
+  Value: $200.00
+  Stop Loss: $1957.56 (5.0%)
+  Take Profit: $2266.65 (10.0%)
+  Confidence: 0.55
+  Risk per Trade: 2%
+  Max Capital Usage: 20%
+
+======================================================================
+🔒 RISK MANAGEMENT PROTOCOL:
+  • Stop Loss: 5.0% per trade
+  • Take Profit: 10.0% per trade
+  • Max Trades per Day: 2
+  • Max Position Size: 20% of capital
+  • Max Risk per Trade: 2% of capital
+  • Minimum Confidence: 55% BUY / 60% SELL
+======================================================================
+
+⚠️  DISCLAIMER: This is a simulated trading exercise.
+   Real trading requires actual API keys and carries risk.
+======================================================================

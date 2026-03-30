@@ -19,6 +19,7 @@ from typing import Dict, Optional
 # CONFIGURATION
 # ============================================================================
 # CAPITAL variable replaced with TOTAL_CAPITAL ($250 dual exchange)
+TOTAL_CAPITAL = 250.0  # $250 total capital for dual exchange trading
 STOP_LOSS_PCT = 0.05  # 5% stop-loss
 TAKE_PROFIT_PCT = 0.10  # 10% take-profit
 MAX_POSITION_SIZE = 0.5  # Maximum 50% of capital per trade

@@ -5,7 +5,7 @@ import datetime
 
 TRADE_MONITORING_LOG = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
 CRITICAL_ALERTS_LOG = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-DATA_URL = "http://localhost:5001/"
+DATA_URL = "http://localhost:5001/status"
 
 def get_script_dir():
     return os.path.dirname(os.path.abspath(__file__))

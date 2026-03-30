@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 TRADING_LOG_PATH = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
 CRITICAL_ALERTS_LOG_PATH = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
-API_URL = f'http://localhost:{PORT}/'
+API_URL = f'http://localhost:{PORT}/status'
 
 def log_to_file(log_path, message):
     with open(log_path, 'a') as f:
