@@ -1,206 +1,137 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-31 05:56:30 (Asia/Bangkok)
-Dashboard Status: Running
-Last Analysis: 2026-03-31T05:43:18.144753
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-31 06:26:30 (Asia/Bangkok)
+Monitoring URL: http://localhost:5001/
 
-CAPITAL & RISK PARAMETERS:
-- Total Capital: $250.00
-- Risk Parameters: 5.0% stop-loss, 10.0% take-profit
-- Max trades per day: 2
-- Trading pairs: BTC/USD, ETH/USD
+=== SYSTEM STATUS ===
+Status: running
+Last Analysis: 2026-03-31T06:26:08.175455
+Analysis Schedule: hourly
+Capital: $250.00
+Port: 5001
+Trading Pairs: BTC/USD, ETH/USD
 
-CURRENT MARKET PRICES (Live from CoinGecko):
-- BTC/USD: $66,713.00
-- ETH/USD: $2,030.83
+=== RISK PARAMETERS ===
+Max Trades Per Day: 2
+Stop Loss: 5.0%
+Take Profit: 10.0%
 
-ACTIVE TRADES (4 total):
-1. ETH/USD BUY @ $2,325.28 (0.086 quantity) - Time: 13:39:49
-   Reason: Near support level: $2308.08
-   Current P&L: -12.66% - STOP-LOSS TRIGGERED
-   Status: 🚨 CRITICAL - Below stop-loss ($2,209.02)
-   Loss Amount: -$25.32
-   Current Value: $174.65 (Entry: $199.97)
-   Distance to Stop-Loss: -$178.26 (already triggered)
-   
-2. ETH/USD BUY @ $2,193.60 (0.0912 quantity) - Time: 00:33:02
-   Reason: Near support level: $2167.99
-   Current P&L: -7.42% - STOP-LOSS TRIGGERED
-   Status: 🚨 CRITICAL - Below stop-loss ($2,083.92)
-   Loss Amount: -$14.85
-   Current Value: $185.21 (Entry: $200.06)
-   Distance to Stop-Loss: -$53.09 (already triggered)
-   
-3. BTC/USD BUY @ $67,247.51 (0.002974 quantity) - Time: 21:29:41
-   Reason: Near support level: $67110.20
-   Current P&L: -0.80% - ACTIVE
-   Status: ⚠️ WATCH - Near entry, monitor closely
-   Loss Amount: -$1.59
-   Current Value: $198.40 (Entry: $199.99)
-   Distance to Stop-Loss: $2,827.87 (4.2% buffer)
-   
-4. ETH/USD BUY @ $2,052.38 (0.0974 quantity) - Time: 21:29:42
-   Reason: Near support level: $2033.94
-   Current P&L: -1.05% - ACTIVE
-   Status: ⚠️ WATCH - Near entry, monitor closely
-   Loss Amount: -$2.10
-   Current Value: $197.80 (Entry: $199.90)
-   Distance to Stop-Loss: $81.14 (4.0% buffer)
+=== RECENT TRADES (4 total) ===
+1. Symbol: ETH/USD | Side: BUY | Price: $2325.28 | Quantity: 0.086 | Time: 13:39:49
+   Reason: Near support level: $2308.08 (current: $2325.28)
 
-PORTFOLIO ANALYSIS:
-- Total Portfolio Value: $756.06 (estimated)
-- Capital Deployed: $250.00
-- Portfolio P&L: -$43.86 (-5.5%)
-- Critical overall drawdown detected: -5.5% (monitor closely)
-- Total Unrealized Loss: -$43.86 (from active positions)
-- ETH Exposure: 75.0% of deployed capital (HIGH CONCENTRATION)
-- BTC Exposure: 25.0% of deployed capital
-- Average Position Drawdown: -5.48%
+2. Symbol: ETH/USD | Side: BUY | Price: $2193.60 | Quantity: 0.0912 | Time: 00:33:02
+   Reason: Near support level: $2167.99 (current: $2193.60)
 
-CRITICAL ALERTS:
-1. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,325.28 → Current: $2,030.83 (Loss: -12.66%)
-2. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,193.60 → Current: $2,030.83 (Loss: -7.42%)
-3. ⚠️ HIGH ETH CONCENTRATION: 75.0% of portfolio (>70% threshold)
+3. Symbol: BTC/USD | Side: BUY | Price: $67247.51 | Quantity: 0.002974 | Time: 21:29:41
+   Reason: Near support level: $67110.20 (current: $67247.51)
 
-MARKET ANALYSIS:
-- ETH showing significant weakness with multiple positions below stop-loss
-- BTC holding relatively stable near entry levels
-- Market sentiment from last analysis: BULLISH (but ETH weakness contradicts)
-- Current ETH price: $2,030.83 (below all recent entry points)
-- ETH Support: $2,033.63 (per last analysis)
-- ETH Resistance: $2,033.91 (per last analysis)
-- ETH is trading BELOW support level - bearish signal
-- BTC Support: $66,784.00 (per last analysis)
-- BTC Resistance: $66,792.81 (per last analysis)
-- BTC is trading BELOW support level - bearish signal
+4. Symbol: ETH/USD | Side: BUY | Price: $2052.38 | Quantity: 0.0974 | Time: 21:29:42
+   Reason: Near support level: $2033.94 (current: $2052.38)
 
-RECOMMENDED ACTIONS:
-1. URGENT: Execute stop-loss orders for ETH positions if not already done
-2. Review ETH market conditions - consider pausing new ETH longs
-3. Monitor BTC position for potential stop-loss trigger
-4. Consider adjusting ETH stop-loss to 3-4% given current volatility
-5. Reduce ETH concentration in portfolio (currently 75.0%)
-6. Consider hedging with Binance shorts as per strategy
-7. Check if stop-loss orders executed on exchange
-8. Consider taking partial profits on any remaining positions to reduce risk
+=== CURRENT STRATEGY ===
+Name: Gemini_Longs_Binance_Shorts
+Description: Gemini for conservative longs, Binance for opportunistic shorts
+Created: 2026-03-30T22:28:47.373456
 
-STRATEGY OVERVIEW:
-- Name: Gemini_Longs_Binance_Shorts
-- Description: Gemini for conservative longs, Binance for opportunistic shorts
-- Gemini (LONG): Execute if price near support, RSI < 40, trend bullish
-- Binance (SHORT): Execute if price near resistance, RSI > 60, trend bearish
-- Hedging: Binance shorts can hedge Gemini longs during downturns
-- Gemini Capital per trade: $35.00
-- Binance Capital per trade: $9.00
-- Max Gemini trades/day: 2
-- Max Binance trades/day: 1
+Gemini Execution:
+- Action: Execute LONG if: price near support, RSI < 40, trend bullish
+- Capital Per Trade: $35.00
+- Max Trades Per Day: 2
 
-LAST ANALYSIS SUMMARY (05:43:18):
-- Market Sentiment: BULLISH
-- Trading Signal: BUY
-- Recommended Trade: BTC/USD BUY @ $66,789.67
-- Position Size: 0.001872 ($125.00)
-- Stop Loss: $63,450.19 (5.0%)
-- Take Profit: $73,468.64 (10.0%)
-- Risk/Reward: 1:2.0
-- Execution Status: SIMULATED (API credentials needed)
+Binance Execution:
+- Action: Execute SHORT if: price near resistance, RSI > 60, trend bearish
+- Capital Per Trade: $9.00
+- Max Trades Per Day: 1
 
-SYSTEM STATUS:
-- Dashboard: Active on port 5001
-- Analysis scheduled: hourly
-- Last analysis run: 05:43:18
-- Next analysis due: ~06:43:18
-- API Mode: SIMULATION
-- Total trades today: 4 (2 ETH, 1 BTC, 1 ETH)
-- Trades remaining today: 0 (max 2 reached)
+Hedging: Binance shorts can hedge Gemini longs during downturns
 
-=== END OF LOG ===
+=== MARKET DATA (from latest analysis) ===
+BTC/USD: $66,609.34
+ETH/USD: $2,021.97
+BTC 24h Volume: $14,818,757
+ETH 24h Volume: $9,473,318
+Market Sentiment: NEUTRAL
 
-[2026-03-31 05:56:30] {
-  "endpoint": "/status",
-  "data": {
-    "analysis_scheduled": "hourly",
-    "capital": 250.0,
-    "last_analysis": "2026-03-31T05:43:18.144753",
-    "port": 5001,
-    "risk_parameters": {
-      "max_trades_per_day": 2,
-      "stop_loss": 0.05,
-      "take_profit": 0.1
-    },
-    "status": "running",
-    "timestamp": "2026-03-31T05:56:04.124340",
-    "trading_pairs": [
-      "BTC/USD",
-      "ETH/USD"
-    ]
-  }
-}
-[2026-03-31 05:56:30] {
-  "endpoint": "/trades",
-  "data": {
-    "count": 4,
-    "timestamp": "2026-03-31T05:56:08.897565",
-    "trades": [
-      {
-        "price": 2325.28,
-        "quantity": 0.086,
-        "reason": "Near support level: $2308.08 (current: $2325.28)",
-        "side": "BUY",
-        "symbol": "ETH/USD",
-        "time": "13:39:49"
-      },
-      {
-        "price": 2193.6,
-        "quantity": 0.0912,
-        "reason": "Near support level: $2167.99 (current: $2193.60)",
-        "side": "BUY",
-        "symbol": "ETH/USD",
-        "time": "00:33:02"
-      },
-      {
-        "price": 67247.51,
-        "quantity": 0.002974,
-        "reason": "Near support level: $67110.20 (current: $67247.51)",
-        "side": "BUY",
-        "symbol": "BTC/USD",
-        "time": "21:29:41"
-      },
-      {
-        "price": 2052.38,
-        "quantity": 0.0974,
-        "reason": "Near support level: $2033.94 (current: $2052.38)",
-        "side": "BUY",
-        "symbol": "ETH/USD",
-        "time": "21:29:42"
-      }
-    ]
-  }
-}
-[2026-03-31 05:56:30] {
-  "endpoint": "/strategy",
-  "data": {
-    "created": "2026-03-30T22:28:47.373456",
-    "description": "Gemini for conservative longs, Binance for opportunistic shorts",
-    "execution": {
-      "binance": {
-        "action": "Execute SHORT if: price near resistance, RSI > 60, trend bearish",
-        "capital_per_trade": 9.0,
-        "max_trades_per_day": 1
-      },
-      "gemini": {
-        "action": "Execute LONG if: price near support, RSI < 40, trend bullish",
-        "capital_per_trade": 35.0,
-        "max_trades_per_day": 2
-      }
-    },
-    "hedging": "Binance shorts can hedge Gemini longs during downturns",
-    "name": "Gemini_Longs_Binance_Shorts"
-  }
-}
-[2026-03-31 05:56:30] {
-  "market_prices": {
-    "BTC/USD": 66713.00,
-    "ETH/USD": 2030.83,
-    "source": "CoinGecko API"
-  }
-}
+=== SUPPORT/RESISTANCE LEVELS ===
+BTC Support: $66,624.74
+BTC Resistance: $66,631.37
+ETH Support: $2,022.04
+ETH Resistance: $2,022.45
+
+=== TRADING DECISION ===
+Signal: BUY
+Reason: Price within 1% of support ($66624.74)
+
+=== TRADE RECOMMENDATION ===
+Symbol: BTC/USD
+Action: BUY
+Entry Price: $66,609.34
+Position Size: 0.001877
+Position Value: $125.00
+Stop Loss: $63,278.87 (5.0%)
+Take Profit: $73,270.27 (10.0%)
+Risk/Reward Ratio: 1:2.0
+
+=== EXECUTION STATUS ===
+Mode: SIMULATION - API credentials needed for real trading
+
+=== RISK MANAGEMENT SUMMARY ===
+Capital: $250.00
+Max Position Size: 50.0% of capital
+Stop Loss: 5.0%
+Take Profit: 10.0%
+Max Daily Trades: 2
+Strategy: Conservative support-based trading
+
+=== DRAWDOWN ANALYSIS ===
+1. ETH/USD @ $2325.28:
+   - Current Price: $2,021.97
+   - Drawdown: -13.05%
+   - Stop Loss: $2,209.02 (-5.0%)
+   - Status: 🚨 CRITICAL - Stop loss triggered (-8.05% beyond stop)
+
+2. ETH/USD @ $2193.60:
+   - Current Price: $2,021.97
+   - Drawdown: -7.83%
+   - Stop Loss: $2,083.92 (-5.0%)
+   - Status: 🚨 CRITICAL - Stop loss triggered (-2.83% beyond stop)
+
+3. BTC/USD @ $67247.51:
+   - Current Price: $66,609.34
+   - Drawdown: -0.95%
+   - Stop Loss: $63,885.13 (-5.0%)
+   - Status: ✅ Within normal range
+
+4. ETH/USD @ $2052.38:
+   - Current Price: $2,021.97
+   - Drawdown: -1.48%
+   - Stop Loss: $1,949.76 (-5.0%)
+   - Status: ✅ Within normal range
+
+=== CAPITAL UTILIZATION ===
+Total Capital: $250.00
+Capital Used in Trades: $799.93 (320.0%)
+⚠️  WARNING: High capital utilization (320.0% used)
+
+=== TRADE LIMIT CHECK ===
+Max Daily Trades: 2
+Current Trades Today: 0 (4 total historical)
+⚠️  WARNING: Historical trade count (4) exceeds daily limit (2)
+
+=== MONITORING NOTES ===
+- System is running normally
+- Last analysis was at 06:26:08 (just completed)
+- Next analysis scheduled hourly
+- 4 trades recorded in history
+- All trades are BUY positions on ETH/USD and BTC/USD
+- 2 ETH positions have triggered stop-loss conditions
+- System operating in simulation mode (no real trades executed)
+- Market sentiment changed from BULLISH to NEUTRAL
+
+=== RECOMMENDATIONS ===
+1. Immediate action required for ETH positions at $2325.28 and $2193.60 - stop loss triggered
+2. Consider adjusting risk parameters or exiting positions
+3. Review trading strategy given current market conditions
+4. Monitor BTC position closely as it approaches support levels
+
+=== END OF MONITORING LOG ===
