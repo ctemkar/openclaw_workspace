@@ -1,78 +1,120 @@
-=== TRADING MONITORING LOG - 2026-03-31 02:56:00 ===
-Dashboard URL: http://localhost:5001/
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-31 03:58:45 (Asia/Bangkok)
+Dashboard Status: Running
+Last Analysis: 2026-03-31T03:43:02.404723
 
-SYSTEM STATUS:
-  Status: running
-  Capital: $250.00
-  Last Analysis: 2026-03-31T02:42:53.262120
-  Analysis Scheduled: hourly
-  Trading Pairs: ['BTC/USD', 'ETH/USD']
-  Risk Parameters:
-    Stop Loss: 5.0%
-    Take Profit: 10.0%
-    Max Trades/Day: 2
+=== SYSTEM STATUS ===
+Capital: $250.00
+Trading Pairs: BTC/USD, ETH/USD
+Risk Parameters:
+  - Stop Loss: 5.0%
+  - Take Profit: 10.0%
+  - Max Trades/Day: 2
+Analysis Schedule: Hourly
+Current Mode: SIMULATION (API credentials needed for real trading)
 
-=== TRADE ANALYSIS ===
-=== TRADE ANALYSIS ===
-Current BTC Price: $66242.82
-Current ETH Price: $2015.21
-Stop Loss: 5.0%
-Take Profit: 10.0%
+=== CURRENT MARKET PRICES (LIVE) ===
+BTC/USD: $66,605.00 (CoinGecko: $66,605)
+ETH/USD: $2,023.42 (CoinGecko: $2,023.42)
+System BTC Price: $66,611.07 (from dashboard)
+System ETH Price: $2,021.77 (from dashboard)
+Price Discrepancy: Minimal (0.01-0.08%)
 
-Trade 5: BTC/USD BUY @ $74094.64
-  Current: $66242.82 | P&L: -10.60%
-  Stop Loss: $70389.91 | Take Profit: $81504.10
-  Status: STOP-LOSS TRIGGERED
+=== TRADING ACTIVITY ANALYSIS ===
+Total Trades: 10 (from /trades endpoint)
+Trade Status Analysis:
+  - 4 trades show >5% drawdown (stop-loss triggered)
+  - 6 trades show <5% drawdown (still active)
+  - 0 trades show take-profit triggers
+  - All trades are in "filled" or executed status
 
-Trade 6: ETH/USD BUY @ $2325.28
-  Current: $2015.21 | P&L: -13.33%
-  Stop Loss: $2209.02 | Take Profit: $2557.81
-  Status: STOP-LOSS TRIGGERED
+Recent Trade Times:
+  - Latest: 10:20:26 (today)
+  - Earliest: 21:29:41 (yesterday)
+  - Trading activity spans ~13 hours
 
-Trade 7: BTC/USD BUY @ $71386.00
-  Current: $66242.82 | P&L: -7.20%
-  Stop Loss: $67816.70 | Take Profit: $78524.60
-  Status: STOP-LOSS TRIGGERED
+=== CRITICAL ALERTS DETECTED ===
+🚨 STOP-LOSS TRIGGERS (4 out of 10 trades):
+  1. BTC/USD: Entry $74,094.64 → Current $66,605.00 (-10.11%)
+  2. ETH/USD: Entry $2,325.28 → Current $2,023.42 (-12.98%)
+  3. BTC/USD: Entry $71,386.00 → Current $66,605.00 (-6.70%)
+  4. ETH/USD: Entry $2,193.60 → Current $2,023.42 (-7.76%)
 
-Trade 8: ETH/USD BUY @ $2193.60
-  Current: $2015.21 | P&L: -8.13%
-  Stop Loss: $2083.92 | Take Profit: $2412.96
-  Status: STOP-LOSS TRIGGERED
-
-Trade 9: BTC/USD BUY @ $67247.51
-  Current: $66242.82 | P&L: -1.49%
-  Stop Loss: $63885.13 | Take Profit: $73972.26
-  Status: ACTIVE
-
-Trade 10: ETH/USD BUY @ $2052.38
-  Current: $2015.21 | P&L: -1.81%
-  Stop Loss: $1949.76 | Take Profit: $2257.62
-  Status: ACTIVE
+🚨 CRITICAL DRAWDOWN ALERTS (≥8%):
+  1. BTC/USD: Entry $74,094.64 → Current $66,605.00 (-10.11%)
+  2. ETH/USD: Entry $2,325.28 → Current $2,023.42 (-12.98%)
 
 === DRAWDOWN ANALYSIS ===
-Estimated Portfolio Value: $1114.78
-Capital: $250.00
-Drawdown: 0.00%
+BTC Average Drawdown: -5.91% ⚠️ MODERATE DRAWDOWN
+ETH Average Drawdown: -7.37% ⚠️ SIGNIFICANT DRAWDOWN
+Overall Average Drawdown: -3.98%
 
-=== CRITICAL ALERTS ===
-🚨 STOP-LOSS TRIGGERED: BTC bought at $74094.64, current $66242.82 (-10.60%)
-🚨 STOP-LOSS TRIGGERED: ETH bought at $2325.28, current $2015.21 (-13.33%)
-🚨 STOP-LOSS TRIGGERED: BTC bought at $71386.00, current $66242.82 (-7.20%)
-🚨 STOP-LOSS TRIGGERED: ETH bought at $2193.60, current $2015.21 (-8.13%)
+Worst Drawdown: ETH/USD at -12.98% (stop-loss triggered)
+Best Position: BTC/USD at -1.00% (still active)
 
-=== MARKET DATA (from summary) ===
-BTC/USD: $66,242.82
-ETH/USD: $2,015.21
-BTC 24h Volume: $20,026,747
-ETH 24h Volume: $9,396,305
-Market Sentiment: BULLISH
+=== RISK PARAMETERS BREACHES ===
+1. 🚨 4 STOP-LOSS TRIGGERS ACTIVATED (5% threshold breached)
+2. No take-profit triggers detected (0% vs 10% target)
+3. Daily trade limit exceeded: 10 trades vs 2 max limit (500% over limit)
+4. Position sizing: Trades show varying position sizes (0.000134 to 0.0974)
+5. Risk/Reward ratio: Current trades show negative performance
 
-=== TRADING RECOMMENDATION ===
-Action: BUY BTC/USD
-Entry Price: $66,242.82
-Position Size: 0.001887
-Position Value: $125.00
-Stop Loss: $62,930.68 (5.0%)
-Take Profit: $72,867.10 (10.0%)
+=== PERFORMANCE METRICS ===
+Average Loss per Trade: -3.98%
+Worst Performing Trade: ETH/USD (-12.98%)
+Best Performing Trade: BTC/USD (-1.00%)
+Win Rate: 0% (0 winning trades)
+Loss Rate: 40% (4 losing trades, 6 still active)
 
-=== END OF LOG ===
+=== STRATEGY ANALYSIS ===
+Current Strategy: Gemini_Longs_Binance_Shorts
+- Gemini: Conservative longs near support, RSI < 40, bullish trend
+- Binance: Opportunistic shorts near resistance, RSI > 60, bearish trend
+- Capital Allocation: $35 per Gemini trade, $9 per Binance trade
+- Execution: All trades appear to be LONG positions only
+- Strategy Age: ~5.5 hours (created 2026-03-30T22:28:47)
+
+=== MARKET CONDITIONS ===
+Market Sentiment: BULLISH (from last analysis)
+BTC Support: $66,586.70 (from dashboard)
+BTC Resistance: $66,596.58 (from dashboard)
+ETH Support: $2,021.47 (from dashboard)
+ETH Resistance: $2,021.81 (from dashboard)
+Current Price vs Support:
+  - BTC: $66,605.00 vs $66,586.70 (+0.03% above support)
+  - ETH: $2,023.42 vs $2,021.47 (+0.10% above support)
+
+=== TRADING RECOMMENDATION ANALYSIS ===
+Last Recommendation: BUY BTC/USD
+  - Entry Price: $66,611.07
+  - Position Size: 0.001877
+  - Position Value: $125.00
+  - Stop Loss: $63,280.52 (5.0%)
+  - Take Profit: $73,272.18 (10.0%)
+  - Risk/Reward: 1:2.0
+
+Current Price vs Recommendation:
+  - Current: $66,605.00
+  - Entry: $66,611.07
+  - Difference: -0.01% (slight discount)
+
+=== ALERT STATUS ===
+🔴 CRITICAL ALERTS: 4 stop-loss triggers detected
+🟡 WARNING ALERTS: Daily trade limit exceeded (500% over)
+🟢 NORMAL: System running, no connectivity issues
+
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review and close positions with >5% drawdown
+2. ADJUST: Reduce position sizes to align with risk parameters
+3. PAUSE: Consider pausing trading until market stabilizes
+4. REVIEW: Audit trading strategy execution logic
+5. MONITOR: Watch for further drawdown in active positions
+
+=== NEXT MONITORING SCHEDULE ===
+Next check: 2026-03-31 04:58:45 (in ~60 minutes)
+Alert threshold: Any position >5% drawdown or >10% profit
+
+=== END OF REPORT ===
+Previous report: 2026-03-31 03:54:56
+Monitoring interval: ~4 minutes
+System uptime: Dashboard operational

@@ -1,54 +1,115 @@
-=== CRITICAL TRADING ALERTS - 2026-03-31 02:56:00 ===
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 03:54:56 (Asia/Bangkok)
+Alert Level: 🚨 CRITICAL
 
-🚨 MULTIPLE STOP-LOSS TRIGGERS DETECTED 🚨
+=== ALERT SUMMARY ===
+Trading system shows 4 stop-loss breaches and 2 critical drawdowns (≥8%). 
+System operating in SIMULATION mode - no real capital at risk, but strategy 
+requires urgent review and parameter adjustments.
 
-CRITICAL ALERTS:
-1. 🚨 STOP-LOSS TRIGGERED: BTC bought at $74094.64, current $66242.82 (-10.60%)
-   - Entry: $74,094.64
-   - Current: $66,242.82
-   - Loss: -10.60%
-   - Stop Loss Level: $70,389.91 (5%)
-   - Status: STOP-LOSS HIT
+=== DETAILED ALERTS ===
 
-2. 🚨 STOP-LOSS TRIGGERED: ETH bought at $2325.28, current $2015.21 (-13.33%)
-   - Entry: $2,325.28
-   - Current: $2,015.21
-   - Loss: -13.33%
-   - Stop Loss Level: $2,209.02 (5%)
-   - Status: STOP-LOSS HIT
+🚨 STOP-LOSS BREACHES (4 TRADES):
+1. BTC/USD: $74,094.64 → $66,573.00 (-10.15%) | Stop-loss: 5.0%
+2. ETH/USD: $2,325.28 → $2,022.21 (-13.03%) | Stop-loss: 5.0%
+3. BTC/USD: $71,386.00 → $66,573.00 (-6.74%) | Stop-loss: 5.0%
+4. ETH/USD: $2,193.60 → $2,022.21 (-7.81%) | Stop-loss: 5.0%
 
-3. 🚨 STOP-LOSS TRIGGERED: BTC bought at $71386.00, current $66242.82 (-7.20%)
-   - Entry: $71,386.00
-   - Current: $66,242.82
-   - Loss: -7.20%
-   - Stop Loss Level: $67,816.70 (5%)
-   - Status: STOP-LOSS HIT
+🚨 CRITICAL DRAWDOWN ALERTS (≥8%):
+1. BTC/USD: $74,094.64 → $66,573.00 (-10.15%)
+2. ETH/USD: $2,325.28 → $2,022.21 (-13.03%)
 
-4. 🚨 STOP-LOSS TRIGGERED: ETH bought at $2193.60, current $2015.21 (-8.13%)
-   - Entry: $2,193.60
-   - Current: $2,015.21
-   - Loss: -8.13%
-   - Stop Loss Level: $2,083.92 (5%)
-   - Status: STOP-LOSS HIT
+⚠️ RISK PARAMETER VIOLATIONS:
+1. Daily trade limit: 10 trades executed vs 2 maximum (500% over limit)
+2. Stop-loss effectiveness: 40% of trades breached stop-loss
+3. Position consistency: Varying position sizes (0.000134 to 0.0974)
+4. Win rate: 0% (4 losses, 0 wins, 6 active)
+5. Average loss: -4.02% across all trades
 
-SUMMARY:
-- 4 out of 6 active trades have triggered stop-loss levels
-- Average loss across triggered trades: -9.82%
-- All triggered trades are beyond the 5% stop-loss threshold
-- Current market conditions appear bearish despite BULLISH sentiment indicator
+=== DRAWDOWN ANALYSIS ===
+BTC Average Drawdown: -5.97% ⚠️ MODERATE
+ETH Average Drawdown: -7.44% ⚠️ SIGNIFICANT
+Overall Average Drawdown: -4.02%
+Worst Drawdown: ETH/USD at -13.03% ⚠️ CRITICAL
+BTC Price vs Support: $66,573.00 vs $66,586.70 (-0.02% below) ⚠️
 
-RECOMMENDED ACTIONS:
-1. Review trading strategy and entry criteria
-2. Consider tightening stop-loss levels or adjusting position sizing
-3. Verify market sentiment indicators are accurate
-4. Check if trades are being executed at optimal support levels
-5. Review risk management parameters
+=== PERFORMANCE IMPACT (SIMULATED) ===
+If $250 capital with actual trades:
+- Active Trades: 6 (60% of portfolio)
+- Stopped Out: 4 (40% of portfolio)
+- Average Drawdown: -4.02%
+- Portfolio Impact: ~$10.05 loss
+- Remaining Capital: ~$239.95
+- Recovery Required: +4.2% to break even
 
-SYSTEM STATUS:
-- Trading System: Running
-- Capital: $250.00
-- Risk Parameters: 5% SL, 10% TP
-- Last Analysis: 2026-03-31T02:42:53.262120
-- Next Analysis: Hourly
+=== MARKET CONTEXT ===
+Current Prices (CoinGecko):
+- BTC: $66,573.00
+- ETH: $2,022.21
 
-=== END OF CRITICAL ALERTS ===
+Dashboard Support Levels:
+- BTC Support: $66,586.70 (current: -0.02% BELOW) ⚠️
+- ETH Support: $2,021.47 (current: +0.04% above)
+
+Market Sentiment: BULLISH (from dashboard analysis)
+Last Trading Signal: BUY BTC/USD at $66,611.07
+Current Price vs Signal: -0.06% (slight discount)
+
+=== STRATEGY ISSUES IDENTIFIED ===
+1. Entry Timing: Multiple entries near $74K peak (now at $66.5K)
+2. Stop-loss Setting: 5% may be too tight for current volatility
+3. Trade Frequency: 10 trades in ~13 hours vs 2 daily limit
+4. Support Calculation: BTC price below calculated support
+5. Position Sizing: Inconsistent across similar trades
+6. Critical Drawdowns: 2 trades with ≥8% losses
+
+=== URGENT ACTIONS REQUIRED ===
+If transitioning to real trading:
+
+1. 🚨 REVIEW: Entry strategy - all 4 stopped trades entered near peaks
+2. 🚨 ADJUST: Stop-loss to 7-10% for current market conditions
+3. 🚨 IMPLEMENT: Trade limit enforcement (max 2/day)
+4. 🚨 VALIDATE: Support/resistance calculation accuracy
+5. 🚨 TEST: Strategy with wider stop-loss in simulation
+6. 🚨 MONITOR: Price vs support levels more frequently
+7. 🚨 DIVERSIFY: Entry timing to avoid cluster at peaks
+8. 🚨 REVIEW: Trades with ≥8% drawdown for strategy flaws
+
+=== CURRENT SYSTEM STATUS ===
+Mode: SIMULATION (safe - no real capital at risk)
+Capital: $250.00 (simulated)
+Strategy: Gemini_Longs_Binance_Shorts
+Dashboard: Operational (http://localhost:5001/)
+Last Analysis: 2026-03-31T03:43:02.404723
+Next Analysis: ~03:53 (hourly schedule)
+Active Monitoring: OpenClaw cron job
+
+=== ALERT SEVERITY ASSESSMENT ===
+Severity: CRITICAL (for strategy flaws and ≥8% drawdowns)
+Severity: HIGH (for risk parameter violations)
+Severity: MEDIUM (for system operation)
+Current Risk: LOW (simulation mode only)
+
+=== RECOMMENDED IMMEDIATE STEPS ===
+1. Do NOT enable real trading until issues resolved
+2. Backtest strategy with historical $74K-$66.5K period
+3. Implement trailing stop-loss for active positions
+4. Add volatility-adjusted position sizing
+5. Review support calculation as BTC below support
+6. Consider time-based entry staggering
+7. Set up real-time alerts for support breaches
+8. Review trades with ≥8% drawdown for pattern recognition
+
+=== ALERT GENERATED BY ===
+OpenClaw Trading Dashboard Monitor
+Cron Job: trading_dashboard_monitor
+Time: 2026-03-31 03:54:56 Asia/Bangkok
+Previous Alert: 2026-03-31 03:51:46 (3 minutes ago)
+
+[2026-03-31 03:54:56] 🚨 CRITICAL: 4 stop-loss breaches detected
+[2026-03-31 03:54:56] 🚨 CRITICAL: 2 trades with ≥8% drawdown
+[2026-03-31 03:54:56] 🚨 CRITICAL: BTC price below support level
+[2026-03-31 03:54:56] ⚠️ WARNING: Daily trade limit exceeded 500%
+[2026-03-31 03:54:56] ⚠️ WARNING: ETH average drawdown -7.44%
+[2026-03-31 03:54:56] ✅ INFO: 6 trades still active, 4 stopped out
+[2026-03-31 03:54:56] ✅ INFO: System in SIMULATION mode - no real risk

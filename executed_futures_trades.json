@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-03-31T03:58:12.066711",
+    "exchange": "binance_futures",
+    "symbol": "DOT/USDT",
+    "side": "sell",
+    "type": "SHORT",
+    "order_id": "31693431072",
+    "entry_price": 1.234,
+    "executed_price": 1.234,
+    "amount": 19.488197618314427,
+    "position_value": 24.048435861,
+    "leverage": 2,
+    "stop_loss": 1.27102,
+    "take_profit": 1.1723,
+    "signal_strength": 1.986,
+    "status": "EXECUTED",
+    "risk_notes": "Capital at risk: $12.02"
+  }
+]
