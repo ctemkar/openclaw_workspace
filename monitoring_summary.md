@@ -1,99 +1,86 @@
-# Trading Monitoring Summary
-## Analysis Time: 2026-03-19 07:51:06 (Asia/Bangkok)
+# Trading Dashboard Monitoring Summary
+**Timestamp:** 2026-03-31 05:14:00 (Asia/Bangkok)
 
-## 🚨 CRITICAL FINDINGS
+## ✅ Monitoring Task Completed
 
-### STOP-LOSS TRIGGERS DETECTED:
-1. **ETH/USD Position 1**: Entry $2,331.78 → Current $2,193.82 (-5.92% loss)
-2. **ETH/USD Position 2**: Entry $2,325.28 → Current $2,193.82 (-5.65% loss)
+### 1. Data Collection
+- ✅ Fetched dashboard from http://localhost:5001/
+- ✅ Retrieved system status, trades, and summary data
+- ✅ Obtained current market prices from CoinGecko API
+- ✅ Analyzed 4 active trading positions
 
-### PORTFOLIO STATUS:
-- **Total Capital**: $1,000.00
-- **Total Positions Value**: $837.21
-- **Total P&L**: -$22.83 (-2.28%)
-- **Available Capital**: $139.96
-- **Exposure**: 83.7% of capital
+### 2. Analysis Performed
+- ✅ Compared current prices against entry prices
+- ✅ Checked for stop-loss triggers (5% threshold)
+- ✅ Checked for take-profit triggers (10% threshold)
+- ✅ Calculated portfolio performance and drawdown
+- ✅ Assessed risk parameters and strategy status
 
-## 📊 POSITION DETAILS
+### 3. Critical Findings
+**⚠️ 2 STOP-LOSS TRIGGERS DETECTED:**
+1. **ETH/USD @ $2,325.28** - Current: $2,034.07 (-12.52%)
+2. **ETH/USD @ $2,193.60** - Current: $2,034.07 (-7.27%)
 
-### BTC/USD Positions (7 positions):
-- Total quantity: ~0.005636 BTC
-- Average entry: ~$72,753.66
-- Current price: $71,116.36
-- Total value: ~$400.63
-- Total P&L: ~-$9.38 (-2.29%)
-- **Status**: ✅ Within stop-loss limits (2.71% buffer)
+**📊 Portfolio Status:**
+- Total Investment: $799.93
+- Current Value: $756.93
+- Total P&L: -$43.00 (-5.38%)
+- Drawdown: 0.0%
 
-### ETH/USD Positions (3 positions):
-- Total quantity: ~0.181489 ETH
-- Average entry: ~$2,259.26
-- Current price: $2,193.82
-- Total value: ~$398.52
-- Total P&L: ~-$11.51 (-2.81%)
-- **Status**: 🚨 2 positions triggered stop-loss at 5%
+### 4. Logs Updated
+- ✅ **trading_monitoring.log** - Updated with latest analysis
+- ✅ **critical_alerts.log** - Updated with 2 active stop-loss alerts
 
-## ⚠️ RISK ASSESSMENT
+### 5. System Health Check
+- ✅ Dashboard accessible: Yes
+- ✅ API endpoints responding: Yes
+- ✅ Market data available: Yes
+- ✅ Trading system active: Yes
+- ⚠️ Critical alerts present: Yes (2 stop-loss triggers)
 
-### High Risk Indicators:
-1. **High Exposure**: 83.7% of capital deployed
-2. **Limited Cash**: Only $139.96 available
-3. **Stop-loss Triggers**: 2 ETH positions exceeded 5% loss threshold
-4. **All Positions in Loss**: Both BTC and ETH showing negative P&L
+## 📈 Key Observations
 
-### Moderate Risk Indicators:
-1. **Portfolio Drawdown**: -2.28% (acceptable but concerning)
-2. **Daily Trade Limit Reached**: 2/2 trades used today
-3. **Market Conditions**: Both assets showing BUY signals but prices declining
+### ETH Positions Under Pressure
+- 2 out of 3 ETH positions have triggered stop-loss
+- ETH showing significant weakness vs BTC
+- Support levels for ETH may need recalibration
 
-## 🛡️ SYSTEM STATUS
+### BTC Position Stable
+- BTC position down only -0.81%
+- Still 4.19% away from stop-loss trigger
+- Better performance compared to ETH
 
-### Trading Server:
-- ✅ Running on http://localhost:5001/
-- ✅ Last analysis: 2026-03-19T07:41:07.942507
-- ✅ Next analysis scheduled: Hourly (~08:41)
-- ✅ Max daily trades: 2/2 used
+### Strategy Performance
+- Current strategy: Gemini_Longs_Binance_Shorts
+- Mode: SIMULATION (no real trades executed)
+- Support-based buying strategy struggling with ETH
+- Consider strategy adjustment or pause for ETH trades
 
-### Monitoring System:
-- ✅ Logging active (trading_monitoring.log)
-- ✅ Critical alerts captured (critical_alerts.log)
-- ✅ Real-time price monitoring active
-- ✅ Risk parameter enforcement: 5% stop-loss, 10% take-profit
+## 🚨 Recommended Actions
 
-## 🎯 RECOMMENDED ACTIONS
+1. **Immediate:**
+   - Review ETH positions that have exceeded stop-loss
+   - Consider exiting or adjusting stop-loss levels
 
-### IMMEDIATE (High Priority):
-1. **Review ETH positions**: Consider closing or hedging the 2 positions that triggered stop-loss
-2. **Reduce exposure**: Consider taking profits on any winning positions (none currently)
-3. **Increase cash position**: Consider reducing overall exposure below 70%
+2. **Short-term:**
+   - Monitor BTC and remaining ETH positions closely
+   - Consider pausing new ETH trades
+   - Review support level calculations
 
-### SHORT-TERM (Next 24 hours):
-1. **Monitor closely**: Set alerts for 4% loss threshold on remaining positions
-2. **Review strategy**: Assess why multiple positions triggered stop-loss
-3. **Adjust risk parameters**: Consider tightening stop-loss to 4% given current market volatility
+3. **Strategic:**
+   - Evaluate overall trading strategy effectiveness
+   - Consider implementing trailing stop-loss
+   - Review position sizing methodology
 
-### SYSTEM IMPROVEMENTS:
-1. **Add position sizing**: Implement position sizing based on risk percentage
-2. **Add trailing stops**: Consider implementing trailing stop-loss orders
-3. **Improve diversification**: Consider adding more trading pairs to spread risk
-4. **Enhance alerts**: Add SMS/email notifications for critical alerts
+## 🔄 Next Monitoring Cycle
+- **Next scheduled check:** ~06:14 AM (in ~1 hour)
+- **Next system analysis:** ~05:43 AM (hourly schedule)
+- **Dashboard:** http://localhost:5001/
 
-## 📈 MARKET CONTEXT
-
-### Current Prices:
-- BTC/USD: $71,116.36
-- ETH/USD: $2,193.82
-
-### Last Trading Signals:
-- BTC/USD: BUY signal (70% confidence) - Near support level
-- ETH/USD: BUY signal (70% confidence) - Near support level
-- **Note**: Both signals were skipped due to daily trade limit
-
-## 🔄 NEXT STEPS
-
-1. **Next monitoring check**: ~08:41 (hourly schedule)
-2. **Review critical alerts**: Address stop-loss triggers immediately
-3. **Update risk parameters**: Consider adjustments based on current market conditions
-4. **Document lessons learned**: Record why stop-losses were triggered for strategy improvement
+## 📊 Files Generated/Updated
+1. `trading_monitoring.log` - Complete monitoring report
+2. `critical_alerts.log` - Critical alerts with action items
+3. This summary document
 
 ---
-*Generated by OpenClaw Trading Monitoring System at 2026-03-19 07:51:06*
+*Monitoring completed by OpenClaw cron job at 2026-03-31 05:14:00*

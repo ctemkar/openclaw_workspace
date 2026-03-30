@@ -1,0 +1,152 @@
+{
+  "trading_server_status": {
+    "analysis_scheduled": "hourly",
+    "capital": 250.0,
+    "last_analysis": "2026-03-31T04:43:09.187157",
+    "port": 5001,
+    "risk_parameters": {
+      "max_trades_per_day": 2,
+      "stop_loss": 0.05,
+      "take_profit": 0.1
+    },
+    "status": "running",
+    "timestamp": "2026-03-31T05:27:26.612403",
+    "trading_pairs": [
+      "BTC/USD",
+      "ETH/USD"
+    ]
+  },
+  "trading_server_trades": {
+    "count": 4,
+    "timestamp": "2026-03-31T05:27:26.613734",
+    "trades": [
+      {
+        "price": 2325.28,
+        "quantity": 0.086,
+        "reason": "Near support level: $2308.08 (current: $2325.28)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "13:39:49"
+      },
+      {
+        "price": 2193.6,
+        "quantity": 0.0912,
+        "reason": "Near support level: $2167.99 (current: $2193.60)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "00:33:02"
+      },
+      {
+        "price": 67247.51,
+        "quantity": 0.002974,
+        "reason": "Near support level: $67110.20 (current: $67247.51)",
+        "side": "BUY",
+        "symbol": "BTC/USD",
+        "time": "21:29:41"
+      },
+      {
+        "price": 2052.38,
+        "quantity": 0.0974,
+        "reason": "Near support level: $2033.94 (current: $2052.38)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "21:29:42"
+      }
+    ]
+  },
+  "market_data": {
+    "btc_usd": 66802,
+    "eth_usd": 2036.64,
+    "timestamp": "2026-03-31T05:27:27.000647"
+  },
+  "bots_status": [
+    {
+      "status": "error",
+      "bot": "26 Crypto Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 4,
+      "recent_errors": [
+        "2026-03-31 05:26:46,212 - ERROR - Error analyzing YFI/USD: '>' not supported between instances of 'NoneType' and 'float'",
+        "2026-03-31 05:26:45,609 - ERROR - Error analyzing COMP/USD: '>' not supported between instances of 'NoneType' and 'float'",
+        "2026-03-31 05:26:45,070 - ERROR - Error analyzing AAVE/USD: '>' not supported between instances of 'NoneType' and 'float'"
+      ],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 05:26:46,891 - INFO - \u26a1 BINANCE SHORT SIGNAL: DOT/USDT",
+      "log_file": "26_crypto_live_trading.log",
+      "log_size_kb": 428.3876953125
+    },
+    {
+      "status": "running",
+      "bot": "Binance Futures Short Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 05:27:15,445 - INFO - \u2705 FUTURES SHORT PLAN CREATED for COMP/USDT",
+      "log_file": "binance_futures_trading.log",
+      "log_size_kb": 438.21875
+    },
+    {
+      "status": "running",
+      "bot": "Fixed Futures Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 1,
+      "balance_info": "2026-03-31 05:24:31,280 - INFO - \ud83d\udcb0 Binance Futures balance:",
+      "log_file": "fixed_futures_trading.log",
+      "log_size_kb": 44.08203125
+    },
+    {
+      "status": "error",
+      "bot": "Real Futures Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 1,
+      "recent_errors": [
+        "2026-03-31 05:27:06,362 - ERROR - \u274c Trade execution failed: binance {\"code\":-4061,\"msg\":\"Order's position side does not match user's setting.\"}"
+      ],
+      "trades_executed": 1,
+      "balance_info": "2026-03-31 05:27:06,044 - INFO - Setting 2x leverage for COMP/USDT...",
+      "log_file": "real_futures_trading.log",
+      "log_size_kb": 173.43359375
+    },
+    {
+      "status": "running",
+      "bot": "Real Trading Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 05:22:28,772 - INFO - \ud83d\udcb0 Balance: $542.27 USD",
+      "log_file": "real_trading.log",
+      "log_size_kb": 12.619140625
+    }
+  ],
+  "process_status": [
+    {
+      "bot": "26 Crypto Bot",
+      "running": true,
+      "process_count": 1
+    },
+    {
+      "bot": "Binance Futures Short Bot",
+      "running": true,
+      "process_count": 1
+    },
+    {
+      "bot": "Fixed Futures Bot",
+      "running": true,
+      "process_count": 1
+    },
+    {
+      "bot": "Real Futures Bot",
+      "running": true,
+      "process_count": 1
+    },
+    {
+      "bot": "Trading Server",
+      "running": true,
+      "process_count": 1
+    }
+  ]
+}

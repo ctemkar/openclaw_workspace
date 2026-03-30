@@ -1,145 +1,110 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 04:56:10 (UTC+7)
-Alert ID: 28409715-E767-44F8-82FE-5FC32BD0063E
+Timestamp: 2026-03-31 05:22:50 (Asia/Bangkok)
+Alert Level: HIGH
 
-🚨 CRITICAL CONDITIONS DETECTED 🚨
+ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION
+- Symbol: ETH/USD
+- Entry Price: $2,325.28
+- Current Price: $2,034.52
+- Loss: -12.50%
+- Position Size: 0.086 ETH
+- Trade Time: 13:39:49
+- Reason: Near support level: $2308.08 (current: $2325.28)
+- Stop-Loss Setting: 5%
+- Loss Exceeds Stop-Loss By: 7.50%
+- Action Required: Exit position immediately or adjust stop-loss
+- Status: UNRESOLVED (loss worsened from -12.49% to -12.50%)
 
-1. STOP-LOSS TRIGGERED:
-   - Symbol: ETH/USD
-   - Current Price: $2,045.44
-   - Entry Price: $2,325.28
-   - Stop Loss Level: $2,209.02 (5% below entry)
-   - Drawdown: -12.03%
-   - Trade Time: 13:39:49
-   - Status: ACTIVE LOSS
+ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION
+- Symbol: ETH/USD
+- Entry Price: $2,193.60
+- Current Price: $2,034.52
+- Loss: -7.25%
+- Position Size: 0.0912 ETH
+- Trade Time: 00:33:02
+- Reason: Near support level: $2167.99 (current: $2193.60)
+- Stop-Loss Setting: 5%
+- Loss Exceeds Stop-Loss By: 2.25%
+- Action Required: Exit position or adjust stop-loss
+- Status: UNRESOLVED (loss unchanged at -7.25%)
 
-2. STOP-LOSS TRIGGERED:
-   - Symbol: ETH/USD
-   - Current Price: $2,045.44
-   - Entry Price: $2,193.60
-   - Stop Loss Level: $2,083.92 (5% below entry)
-   - Drawdown: -6.75%
-   - Trade Time: 00:33:02
-   - Status: ACTIVE LOSS
+ALERT 3: BTC POSITION NEARING STOP-LOSS
+- Symbol: BTC/USD
+- Entry Price: $67,247.51
+- Current Price: $66,742.00
+- Loss: -0.77%
+- Position Size: 0.002974 BTC
+- Trade Time: 21:29:41
+- Distance to Stop-Loss: 4.23%
+- Monitoring: Position approaching 5% stop-loss threshold
+- Status: WORSENED (loss increased from -0.72% to -0.77%)
 
-3. RISK MANAGEMENT VIOLATION:
-   - Daily Trade Limit Exceeded
-   - Executed Trades: 4
-   - Maximum Allowed: 2
-   - Violation: 100% over limit
-   - Status: ONGOING VIOLATION
+ALERT 4: ETH POSITION NEARING STOP-LOSS
+- Symbol: ETH/USD
+- Entry Price: $2,052.38
+- Current Price: $2,034.52
+- Loss: -0.87%
+- Position Size: 0.0974 ETH
+- Trade Time: 21:29:42
+- Distance to Stop-Loss: 4.13%
+- Monitoring: Position approaching 5% stop-loss threshold
+- Status: WORSENED (loss increased from -0.86% to -0.87%)
 
-POSITION ANALYSIS:
-- Total Open Positions: 4
-- Losing Positions: 2 (ETH trades)
-- Neutral Positions: 2 (BTC and recent ETH trade)
-- Winning Positions: 0
-- Total Portfolio Exposure: All $250 capital deployed
+=== PORTFOLIO STATUS ===
+- Total Investment: $799.93
+- Total Current Value: $757.13
+- Total Loss: -$42.80 (-5.35%)
+- Portfolio Drawdown: 5.35% (WARNING: Above 5% threshold)
+- Active Positions: 4 (1 BTC, 3 ETH)
+- Positions in Loss: 4 (100%)
+- Positions at/over Stop-Loss: 2 (50%)
+- Positions Near Stop-Loss: 2 (50%)
 
-CURRENT MARKET CONDITIONS:
-- BTC/USD: $66,903.29
-- ETH/USD: $2,045.44
-- Market Sentiment: BULLISH (but ETH showing weakness)
-- System Status: running
+=== SYSTEM STATUS ===
+- Trading System: Conservative Crypto Trading System
+- Capital Allocation: $250.00
+- Stop-Loss Setting: 5%
+- Take-Profit Setting: 10%
+- Current Mode: SIMULATION
 - Last Analysis: 2026-03-31 04:43:09
+- Next Analysis: ~05:43 AM (in ~20 minutes)
+- Dashboard Status: Active and responding
 
-DRAWDOWN SEVERITY:
-- ETH Trade 1: -12.03% (SERIOUS - exceeds 5% stop-loss by 7.03%)
-- ETH Trade 2: -6.75% (MODERATE - exceeds 5% stop-loss by 1.75%)
-- BTC Trade: -0.51% (MINOR)
-- ETH Trade 3: -0.34% (MINOR)
+=== TRADING STRATEGY ANALYSIS ===
+- Current Strategy: Support-based buying near identified support levels
+- Issue Detected: Multiple ETH trades entered near support but prices continued to decline
+- Support Level Accuracy: Poor for ETH positions
+- Market Conditions: ETH showing significant weakness vs BTC
+- Strategy Performance: 2 out of 4 trades have triggered stop-loss
+- ETH vs BTC Performance: ETH down 12.50% vs BTC down 0.77%
 
-RECOMMENDED IMMEDIATE ACTIONS:
-1. CLOSE ETH POSITIONS IMMEDIATELY to prevent further losses
-2. Review and reset daily trade counter
-3. Consider tightening stop-loss levels to 3-4% for volatile conditions
-4. Review trading strategy for ETH pairs
-5. Consider reducing position sizes for ETH trades
-6. Implement circuit breaker: Pause trading if 2 consecutive stop-losses hit
+=== IMMEDIATE ACTIONS RECOMMENDED ===
+1. URGENT: Exit ETH positions that have exceeded 5% stop-loss threshold (positions 1 & 2)
+2. RISK MANAGEMENT: Review and potentially adjust stop-loss levels for remaining positions
+3. STRATEGY PAUSE: Consider pausing new ETH trades until market conditions improve
+4. CAPITAL PRESERVATION: Evaluate reducing position sizes to preserve capital
+5. MONITOR CLOSELY: BTC and remaining ETH positions are near stop-loss levels
+6. PORTFOLIO REBALANCE: Consider reducing ETH exposure given current weakness
 
-RISK MANAGEMENT REVIEW NEEDED:
-- Current stop-loss (5%) may be too wide for current volatility
-- Daily trade limit enforcement needs review
-- Position sizing relative to volatility needs adjustment
-- Consider implementing trailing stop-losses
+=== MARKET CONDITIONS UPDATE ===
+- BTC Price: $66,742.00 (down 0.77% from entry)
+- ETH Price: $2,034.52 (down 12.50% from highest entry)
+- BTC Support Level: $66,883.42 (from last analysis)
+- ETH Support Level: $2,043.50 (from last analysis)
+- Current vs Support: BTC below support, ETH below support
+- Market Sentiment: BULLISH (from last analysis, but current prices suggest caution)
 
-NEXT MONITORING SCHEDULE: Within 1 hour
-URGENCY LEVEL: HIGH - Immediate action recommended
-
-=== END OF CRITICAL ALERTS ===
-
-=== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 04:58:02 (UTC+7)
-Alert ID: 80fe6a91-df91-4613-9663-d15c40bfc63d
-
-🚨 URGENT: STOP-LOSS TRIGGERS WORSENING 🚨
-
-CRITICAL CONDITIONS DETECTED:
-
-1. ETH/USD STOP-LOSS TRIGGERED - WORSENING:
-   - Entry Price: $2,325.28
-   - Stop Loss Level: $2,209.02 (5% below entry)
-   - Current Price: $2,038.57 (from CoinGecko)
-   - Drawdown: -12.33% (INCREASED from -12.03%)
-   - Loss if closed: $24.67
-   - Status: CRITICAL - Loss accelerating
-
-2. ETH/USD STOP-LOSS TRIGGERED - WORSENING:
-   - Entry Price: $2,193.60
-   - Stop Loss Level: $2,083.92 (5% below entry)
-   - Current Price: $2,038.57 (from CoinGecko)
-   - Drawdown: -7.07% (INCREASED from -6.75%)
-   - Loss if closed: $14.15
-   - Status: SERIOUS - Loss increasing
-
-3. MARKET DOWNTURN DETECTED:
-   - BTC: $66,781.00 (down 0.18% from last analysis)
-   - ETH: $2,038.57 (down 0.34% from last analysis)
-   - Trend: Bearish pressure on ETH continues
-
-4. RISK MANAGEMENT FAILURE:
-   - Daily Trade Limit: 4/2 (100% violation)
-   - Stop-loss enforcement: FAILED (positions not closed)
-   - Position management: POOR (multiple losing positions held)
-
-FINANCIAL IMPACT:
-- Total Potential Loss on Triggered Positions: $38.82
-- Portfolio Drawdown: Approximately 15.53% of $250 capital
-- Risk Exposure: 100% of capital deployed
-- Risk/Reward Imbalance: All positions at risk, none at profit
-
-SYSTEM INTEGRITY CONCERNS:
-1. Stop-loss triggers detected but positions remain open
-2. No automated position closure mechanism
-3. Trade execution appears to be simulation only
-4. Risk parameters not being enforced in practice
-
-IMMEDIATE ACTION REQUIRED:
-🔴 URGENT: MANUALLY CLOSE ETH POSITIONS 1 & 2
-🔴 Review trading system automation
-🔴 Implement actual stop-loss execution
-🔴 Pause all new trading activity
-🔴 Conduct system audit
-
-MARKET CONTEXT:
-- ETH showing continued weakness vs BTC
-- Market sentiment may be shifting
-- Volatility increasing
-- Consider broader market conditions
-
-RISK MANAGEMENT FAILURE ANALYSIS:
-1. Theoretical vs Actual: System calculates stop-loss but doesn't execute
-2. Simulation Gap: Analysis recommends trades but doesn't manage exits
-3. Monitoring vs Action: Alerts generated but no automated response
-4. Capital Protection: $38.82 at immediate risk
-
-RECOMMENDATIONS:
-1. IMMEDIATE: Close losing ETH positions manually
-2. SHORT-TERM: Implement actual stop-loss execution
-3. MEDIUM-TERM: Review and test trading strategy
-4. LONG-TERM: Add position management automation
-
-URGENCY LEVEL: CRITICAL - Financial losses accumulating
-TIME SENSITIVITY: Minutes matter - each price drop increases losses
-
-=== END OF CRITICAL ALERTS ===
+=== ALERT GENERATION DETAILS ===
+- Monitoring Script: trading_dashboard_monitor (Cron ID: 68a5e165-c461-4c3c-82b3-a74fecc661f6)
+- Source Dashboard: http://localhost:5001/
+- Price Source: CoinGecko API (live prices)
+- Alert Thresholds: 
+  • Stop-Loss: 5%
+  • Take-Profit: 10%
+  • Portfolio Drawdown Warning: 3%
+  • Critical Drawdown: 7%
+- Current Status: 
+  • 2 stop-loss alerts active (UNRESOLVED)
+  • 2 positions nearing stop-loss (MONITORING)
+  • Portfolio drawdown: 5.35% (WARNING level)
+  • No take-profit triggers detected

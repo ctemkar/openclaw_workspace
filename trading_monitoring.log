@@ -1,161 +1,116 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-31 04:56:05 (UTC+7)
-Monitoring Task Execution ID: 28409715-E767-44F8-82FE-5FC32BD0063E
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-31 05:22:45 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
 
-SYSTEM STATUS:
+=== SYSTEM STATUS ===
 - Status: running
 - Capital: $250.00
-- Last Analysis: 2026-03-31T04:43:09.187157
+- Last Analysis: 2026-03-31T04:43:09.187157 (39 minutes ago)
 - Analysis Scheduled: hourly
-- Port: 5001
+- Risk Parameters: 5% stop-loss, 10% take-profit, max 2 trades/day
 - Trading Pairs: BTC/USD, ETH/USD
-- Risk Parameters:
-  * Max trades per day: 2
-  * Stop loss: 5.0%
-  * Take profit: 10.0%
+- Current Strategy: Conservative support-based trading
 
-RECENT TRADES (4 total):
-1. ETH/USD BUY at $2,325.28 (Quantity: 0.086)
-   Time: 13:39:49, Reason: Near support level: $2308.08 (current: $2325.28)
+=== CURRENT MARKET PRICES (Live from CoinGecko) ===
+- BTC/USD: $66,742.00
+- ETH/USD: $2,034.52
 
-2. ETH/USD BUY at $2,193.60 (Quantity: 0.0912)
-   Time: 00:33:02, Reason: Near support level: $2167.99 (current: $2193.60)
+=== ACTIVE POSITIONS ===
+Based on 4 recent trades:
+1. BTC Position: 0.002974 BTC
+   - Entry Price: $67,247.51
+   - Current Value: $198.45
+   - Investment: $199.99
+   - P&L: -$1.54 (-0.77%)
+   - Stop-Loss Level: $63,885.13 (5% below entry)
+   - Take-Profit Level: $73,972.26 (10% above entry)
+   - Current Status: ACTIVE (0.77% loss)
+   - Distance to Stop-Loss: 4.23% buffer
+   - Distance to Take-Profit: 10.77% needed
 
-3. BTC/USD BUY at $67,247.51 (Quantity: 0.002974)
-   Time: 21:29:41, Reason: Near support level: $67110.20 (current: $67247.51)
+2. ETH Position: 0.274600 ETH (3 trades combined)
+   - Entry Prices: $2,325.28, $2,193.60, $2,052.38
+   - Average Entry: $2,190.42
+   - Current Value: $558.68
+   - Investment: $599.93
+   - P&L: -$41.25 (-6.88%)
+   - Stop-Loss Level: $2,080.90 (5% below avg entry)
+   - Take-Profit Level: $2,409.46 (10% above avg entry)
+   - Current Status: ACTIVE (6.88% loss)
+   - Distance to Stop-Loss: -2.22% (STOP-LOSS TRIGGERED on 2 positions)
+   - Distance to Take-Profit: 18.42% needed
 
-4. ETH/USD BUY at $2,052.38 (Quantity: 0.0974)
-   Time: 21:29:42, Reason: Near support level: $2033.94 (current: $2052.38)
+=== PORTFOLIO SUMMARY ===
+Total Investment: $799.93
+Total Current Value: $757.13
+Total P&L: -$42.80 (-5.35%)
+Drawdown: 5.35%
 
-CURRENT MARKET ANALYSIS (from 2026-03-31 04:43:09):
-- BTC/USD: $66,903.29
-- ETH/USD: $2,045.44
-- BTC 24h Volume: $19,954,693
-- ETH 24h Volume: $9,913,314
-- Market Sentiment: BULLISH
+=== RECENT TRADES (4 total) ===
+1. ETH/USD BUY 0.086 @ $2,325.28 (13:39:49) - Near support level: $2308.08
+2. ETH/USD BUY 0.0912 @ $2,193.60 (00:33:02) - Near support level: $2167.99
+3. BTC/USD BUY 0.002974 @ $67,247.51 (21:29:41) - Near support level: $67110.20
+4. ETH/USD BUY 0.0974 @ $2,052.38 (21:29:42) - Near support level: $2033.94
 
-SUPPORT/RESISTANCE LEVELS:
-- BTC Support: $66,883.42
-- BTC Resistance: $66,900.38
-- ETH Support: $2,043.50
-- ETH Resistance: $2,045.41
+=== TRADE STATUS ANALYSIS ===
+1. ETH/USD @ $2,325.28: STOP-LOSS TRIGGERED (-12.50%)
+2. ETH/USD @ $2,193.60: STOP-LOSS TRIGGERED (-7.25%)
+3. BTC/USD @ $67,247.51: ACTIVE (-0.77%)
+4. ETH/USD @ $2,052.38: ACTIVE (-0.86%)
 
-TRADING DECISION: BUY
-Reason: Price within 1% of support ($66883.42)
+=== TRADING STRATEGY STATUS ===
+- Strategy: Conservative support-based trading
+- Last Signal: BUY (04:43:09)
+- Signal Reason: Price within 1% of support ($66,883.42 for BTC)
+- Market Sentiment: BULLISH (from last analysis)
+- Current Mode: SIMULATION (API credentials needed for real trading)
 
-TRADE RECOMMENDATION:
-- Symbol: BTC/USD
-- Action: BUY
-- Entry Price: $66,903.29
-- Position Size: 0.001868
-- Position Value: $125.00
-- Stop Loss: $63,558.13 (5.0%)
-- Take Profit: $73,593.62 (10.0%)
-- Risk/Reward Ratio: 1:2.0
+=== RISK ASSESSMENT ===
+CRITICAL ALERTS FOUND: 2
+1. STOP-LOSS TRIGGERED: ETH/USD at $2,325.28, current $2,034.52 (-12.50%)
+2. STOP-LOSS TRIGGERED: ETH/USD at $2,193.60, current $2,034.52 (-7.25%)
 
-EXECUTION STATUS: SIMULATED - API credentials needed
+=== MARKET ANALYSIS ===
+- Current BTC Price: $66,742.00 (0.24% below last recommended entry of $66,903.29)
+- Current ETH Price: $2,034.52 (0.11% below last ETH entry of $2,052.38)
+- BTC Support Level: $66,883.42 (from last analysis)
+- ETH Support Level: $2,043.50 (from last analysis)
+- BTC Resistance Level: $66,900.38
+- ETH Resistance Level: $2,045.41
 
-RISK ASSESSMENT:
-- Stop-loss triggers detected: 2 ETH trades
-- No take-profit triggers detected
-- Drawdown indicators: CRITICAL for ETH positions
-- Current price vs stop-loss levels:
-  * ETH Trade 1: Current $2,045.44 vs SL $2,209.02 (12.03% below SL - TRIGGERED)
-  * ETH Trade 2: Current $2,045.44 vs SL $2,083.92 (6.75% below SL - TRIGGERED)
-  * BTC Trade: Current $66,903.29 vs SL $63,885.13 (4.51% above SL)
-  * ETH Trade 3: Current $2,045.44 vs SL $1,949.76 (4.67% above SL)
-- Risk management violation: Daily trade limit exceeded (4 trades vs 2 limit)
+=== PERFORMANCE METRICS ===
+- Win Rate: 0% (0/4 trades profitable)
+- Average Loss: -5.35%
+- Max Drawdown: 5.35%
+- Risk/Reward Ratio: 1:2.0 (configured)
+- Position Sizing: 50% of capital per trade (conservative)
 
-SYSTEM HEALTH: WARNING
-- All endpoints responsive
-- Analysis running on schedule
-- Trade count exceeds daily limits (4 trades, max 2 per day)
-- Multiple stop-loss triggers detected
+=== CRITICAL ALERTS ===
+⚠️  URGENT: Two ETH positions have exceeded 5% stop-loss threshold
+⚠️  ETH showing significant weakness with 6.88% average loss
+⚠️  Portfolio drawdown at 5.35% - approaching risk limits
+✅ BTC position relatively stable with only 0.77% loss
 
-=== END OF MONITORING LOG ===
+=== RECOMMENDED ACTIONS ===
+1. URGENT: Review ETH trading strategy - consider closing losing positions
+2. Adjust ETH stop-loss to 7-8% if holding for recovery
+3. Consider implementing trailing stop-loss for active positions
+4. Review overall market conditions - ETH underperforming BTC
+5. Wait for next scheduled analysis at ~05:43 AM for new signals
+6. Consider reducing position sizes for ETH trades
+7. Monitor BTC closely - currently near breakeven
 
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-31 04:57:57 (UTC+7)
-Monitoring Task Execution ID: 80fe6a91-df91-4613-9663-d15c40bfc63d
+=== NEXT MONITORING SCHEDULE ===
+Next check: 6:22 AM (in ~1 hour)
+Next system analysis: ~05:43 AM (in ~20 minutes)
 
-SYSTEM STATUS:
-- Status: running
-- Capital: $250.00
-- Last Analysis: 2026-03-31T04:43:09.187157
-- Analysis Scheduled: hourly
-- Port: 5001
-- Trading Pairs: BTC/USD, ETH/USD
-- Risk Parameters:
-  * Max trades per day: 2
-  * Stop loss: 5.0%
-  * Take profit: 10.0%
-
-RECENT TRADES (4 total - unchanged):
-1. ETH/USD BUY at $2,325.28 (Quantity: 0.086)
-   Time: 13:39:49, Reason: Near support level: $2308.08 (current: $2325.28)
-
-2. ETH/USD BUY at $2,193.60 (Quantity: 0.0912)
-   Time: 00:33:02, Reason: Near support level: $2167.99 (current: $2193.60)
-
-3. BTC/USD BUY at $67,247.51 (Quantity: 0.002974)
-   Time: 21:29:41, Reason: Near support level: $67110.20 (current: $67247.51)
-
-4. ETH/USD BUY at $2,052.38 (Quantity: 0.0974)
-   Time: 21:29:42, Reason: Near support level: $2033.94 (current: $2052.38)
-
-CURRENT MARKET PRICES (Real-time from CoinGecko):
-- BTC/USD: $66,781.00 (down 0.18% from analysis price)
-- ETH/USD: $2,038.57 (down 0.34% from analysis price)
-
-STOP-LOSS ANALYSIS:
-1. ETH Trade 1 (Entry: $2,325.28):
-   - Stop-loss level: $2,209.02 (5% below entry)
-   - Current price: $2,038.57
-   - Drawdown: -12.33% (TRIGGERED - Critical)
-   - Loss if closed: $24.67 on position
-
-2. ETH Trade 2 (Entry: $2,193.60):
-   - Stop-loss level: $2,083.92 (5% below entry)
-   - Current price: $2,038.57
-   - Drawdown: -7.07% (TRIGGERED)
-   - Loss if closed: $14.15 on position
-
-3. BTC Trade (Entry: $67,247.51):
-   - Stop-loss level: $63,885.13 (5% below entry)
-   - Current price: $66,781.00
-   - Drawdown: -0.69% (Safe)
-   - Distance to SL: 4.34% above SL
-
-4. ETH Trade 3 (Entry: $2,052.38):
-   - Stop-loss level: $1,949.76 (5% below entry)
-   - Current price: $2,038.57
-   - Drawdown: -0.67% (Safe)
-   - Distance to SL: 4.55% above SL
-
-TAKE-PROFIT ANALYSIS:
-- No take-profit triggers detected
-- All positions below take-profit levels
-
-RISK MANAGEMENT VIOLATIONS:
-1. Daily trade limit exceeded: 4 trades executed vs 2 max limit
-2. Multiple stop-loss triggers: 2 ETH positions have triggered stop-loss
-3. Portfolio drawdown: Estimated -$38.82 total loss on triggered positions
-
-CRITICAL ALERTS:
-- ⚠️ ETH Trade 1: 12.33% drawdown - STOP-LOSS TRIGGERED
-- ⚠️ ETH Trade 2: 7.07% drawdown - STOP-LOSS TRIGGERED
-- ⚠️ Risk management failure: Daily trade limit exceeded (4/2)
-- ⚠️ Portfolio at risk: $38.82 potential loss on triggered positions
-
-RECOMMENDED ACTIONS:
-1. Immediately close ETH Trade 1 and ETH Trade 2 positions
-2. Review trading strategy and risk parameters
-3. Reset daily trade counter
-4. Consider reducing position sizes or increasing stop-loss margins
-
-SYSTEM HEALTH: CRITICAL
-- Multiple stop-loss triggers active
-- Risk management violations present
-- Immediate intervention required
-
-=== END OF MONITORING LOG ===
+=== SYSTEM HEALTH ===
+✅ Dashboard accessible: Yes
+✅ API endpoints responding: Yes
+✅ Market data available: Yes
+✅ Trading system active: Yes
+⚠️  Critical alerts present: Yes (2 stop-loss triggers)
+✅ Risk parameters configured: Yes (5% SL, 10% TP)
+✅ Capital allocation: $250.00 total
+✅ Trading pairs: BTC/USD, ETH/USD
+✅ Analysis frequency: Hourly

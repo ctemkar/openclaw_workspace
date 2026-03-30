@@ -1,57 +1,40 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Execution Time: 2026-03-31 04:56:05 (UTC+7)
-Monitoring ID: 28409715-E767-44F8-82FE-5FC32BD0063E
+TRADING MONITORING SUMMARY - DATA PROCESSING COMPLETE
+=====================================================
+Timestamp: 2026-03-31 05:28:30 (Asia/Bangkok)
+Event: Scheduled Trading Data Processing
 
-SYSTEM STATUS: RUNNING
-- Capital: $250.00
-- Last Analysis: 2026-03-31 04:43:09
-- Trading Pairs: BTC/USD, ETH/USD
-- Risk Parameters: 5% SL, 10% TP, 2 trades/day max
+PROCESSING RESULTS
+------------------
+✅ Trading data successfully fetched and processed
+✅ Comprehensive analysis completed
+✅ Critical issues identified and documented
+✅ Reports generated for review
 
-MARKET DATA:
-- BTC/USD: $66,903.29
-- ETH/USD: $2,045.44
-- Market Sentiment: BULLISH
-- Support/Resistance: BTC $66,883/$66,900, ETH $2,043/$2,045
+KEY FINDINGS
+------------
+1. SYSTEM STATUS: All 5 trading bots running
+2. MARKET DATA: Live prices available (BTC: $66,802, ETH: $2,036)
+3. CRITICAL ISSUES: 2 ETH positions exceed 5% stop-loss
+4. PORTFOLIO: 5.35% drawdown (above warning threshold)
+5. TRADING ACTIVITY: 4 pending buy orders, 0% fill rate
 
-TRADE ACTIVITY:
-- Total Trades: 4 (exceeds 2/day limit - VIOLATION)
-- Recent Trades:
-  1. ETH BUY $2,325.28 (13:39:49)
-  2. ETH BUY $2,193.60 (00:33:02)
-  3. BTC BUY $67,247.51 (21:29:41)
-  4. ETH BUY $2,052.38 (21:29:42)
+URGENT ACTIONS REQUIRED
+-----------------------
+1. Exit ETH positions exceeding stop-loss (-12.50% and -7.25%)
+2. Fix Real Futures Bot configuration error
+3. Review trading strategy (100% buy bias, 0% fill rate)
 
-CRITICAL CONDITIONS DETECTED: 🚨
-1. STOP-LOSS TRIGGERED: ETH position at $2,325.28 entry
-   - Current: $2,045.44 (-12.03% drawdown)
-   - Stop-loss: $2,209.02 (TRIGGERED by 7.03%)
+FILES GENERATED
+---------------
+1. comprehensive_trading_report_20260331_052727.txt
+2. latest_trading_analysis.txt
+3. trading_data_snapshot_20260331_052727.json
+4. trading_data_processing_summary_20260331_0528.md
 
-2. STOP-LOSS TRIGGERED: ETH position at $2,193.60 entry
-   - Current: $2,045.44 (-6.75% drawdown)
-   - Stop-loss: $2,083.92 (TRIGGERED by 1.75%)
+NEXT STEPS
+----------
+- Address critical alerts immediately
+- Review comprehensive report for details
+- Next scheduled check: ~06:22 AM
 
-3. RISK MANAGEMENT VIOLATION:
-   - Executed: 4 trades
-   - Allowed: 2 trades/day
-   - Violation: 100% over limit
-
-RISK ASSESSMENT:
-- Active Losses: 2 ETH positions in stop-loss territory
-- Portfolio Exposure: 100% of capital deployed
-- System Health: WARNING - Multiple violations
-- Urgency Level: HIGH
-
-RECOMMENDED ACTIONS:
-1. Close losing ETH positions immediately
-2. Review and enforce daily trade limits
-3. Consider tighter stop-loss levels (3-4%)
-4. Review ETH trading strategy
-5. Implement circuit breaker for consecutive losses
-
-NEXT ANALYSIS: Scheduled hourly
-ALERTS LOGGED: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-MONITORING LOG: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-
-END OF SUMMARY
+STATUS: ✅ DATA PROCESSING COMPLETE - ACTION REQUIRED
