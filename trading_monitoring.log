@@ -1,108 +1,78 @@
-=== Monitoring Check: 2026-03-31 01:56:15 ===
-Current Market Prices (CoinGecko API):
-- BTC/USD: $66,553.00 (+0.27% 24h)
-- ETH/USD: $2,029.20 (+1.67% 24h)
+=== TRADING MONITORING LOG - 2026-03-31 02:56:00 ===
+Dashboard URL: http://localhost:5001/
 
-DASHBOARD STATUS:
-- System: Running ✓
-- Last Analysis: 2026-03-31T01:42:50 (13 minutes ago)
-- Capital: $250.00
-- Risk Parameters: 5% stop-loss, 10% take-profit
-- Max trades/day: 2 trades
-- Trading Pairs: BTC/USD, ETH/USD
-- Mode: SIMULATION (API credentials needed)
-- Market Sentiment: BULLISH (from /summary)
-- Analysis Frequency: hourly
+SYSTEM STATUS:
+  Status: running
+  Capital: $250.00
+  Last Analysis: 2026-03-31T02:42:53.262120
+  Analysis Scheduled: hourly
+  Trading Pairs: ['BTC/USD', 'ETH/USD']
+  Risk Parameters:
+    Stop Loss: 5.0%
+    Take Profit: 10.0%
+    Max Trades/Day: 2
 
-TRADE ANALYSIS (from /trades endpoint):
-- Total trades in system: 10
-- Recent trades (last 10):
-  1. BTC @ $74,308.00 (BUY, Gemini, filled) - 10:20:26
-  2. BTC @ $74,308.79 (BUY, Gemini, filled) - 10:18:29
-  3. BTC @ $74,332.65 (BUY, Gemini, filled) - 10:14:36
-  4. BTC @ $74,319.47 (BUY, Gemini, filled) - 10:14:33
-  5. BTC @ $74,094.64 (BUY, Gemini, filled) - 13:39:48 ⚠️
-  6. ETH @ $2,325.28 (BUY, Gemini, filled) - 13:39:49 ⚠️
-  7. BTC @ $71,386.00 (BUY, Gemini, filled) - 00:33:00 ⚠️
-  8. ETH @ $2,193.60 (BUY, Gemini, filled) - 00:33:02 ⚠️
-  9. BTC @ $67,247.51 (BUY, Gemini, filled) - 21:29:41
-  10. ETH @ $2,052.38 (BUY, Gemini, filled) - 21:29:42
+=== TRADE ANALYSIS ===
+=== TRADE ANALYSIS ===
+Current BTC Price: $66242.82
+Current ETH Price: $2015.21
+Stop Loss: 5.0%
+Take Profit: 10.0%
 
-CURRENT POSITION ANALYSIS:
-- Active positions: 6 (assuming oldest 4 are closed)
-- Current BTC price: $66,553.00
-- Current ETH price: $2,029.20
+Trade 5: BTC/USD BUY @ $74094.64
+  Current: $66242.82 | P&L: -10.60%
+  Stop Loss: $70389.91 | Take Profit: $81504.10
+  Status: STOP-LOSS TRIGGERED
 
-STOP-LOSS ANALYSIS (5% threshold):
-1. BTC @ $74,094.64 → Current $66,553.00 (-10.18%) ⚠️ TRIGGERED
-   * Loss: -$7,541.64 (-10.18%) | Exceeds threshold by 5.18%
-2. ETH @ $2,325.28 → Current $2,029.20 (-12.73%) ⚠️ TRIGGERED
-   * Loss: -$296.08 (-12.73%) | Exceeds threshold by 7.73%
-3. BTC @ $71,386.00 → Current $66,553.00 (-6.77%) ⚠️ TRIGGERED
-   * Loss: -$4,833.00 (-6.77%) | Exceeds threshold by 1.77%
-4. ETH @ $2,193.60 → Current $2,029.20 (-7.50%) ⚠️ TRIGGERED
-   * Loss: -$164.40 (-7.50%) | Exceeds threshold by 2.50%
-5. BTC @ $67,247.51 → Current $66,553.00 (-1.03%) ✓ OK
-6. ETH @ $2,052.38 → Current $2,029.20 (-1.13%) ✓ OK
+Trade 6: ETH/USD BUY @ $2325.28
+  Current: $2015.21 | P&L: -13.33%
+  Stop Loss: $2209.02 | Take Profit: $2557.81
+  Status: STOP-LOSS TRIGGERED
 
-TAKE-PROFIT ANALYSIS (10% threshold):
-- No take-profit triggers detected (all positions in loss)
+Trade 7: BTC/USD BUY @ $71386.00
+  Current: $66242.82 | P&L: -7.20%
+  Stop Loss: $67816.70 | Take Profit: $78524.60
+  Status: STOP-LOSS TRIGGERED
 
-PORTFOLIO ESTIMATE:
-- Assuming $125 per trade (from strategy summary):
-  Total investment: 6 trades × $125 = $750
-- Estimated current value: ~$668 (based on average -10.9% loss)
-- Drawdown: ~-10.9% ⚠️ HIGH RISK
-- Unrealized loss: ~$82
+Trade 8: ETH/USD BUY @ $2193.60
+  Current: $2015.21 | P&L: -8.13%
+  Stop Loss: $2083.92 | Take Profit: $2412.96
+  Status: STOP-LOSS TRIGGERED
 
-CURRENT TRADING SIGNAL (from /summary):
-- Trading Decision: BUY
-- Recommended Symbol: BTC/USD
-- Entry Price: $66,660.91
-- Position Size: 0.001875
-- Position Value: $125.00
-- Stop Loss: $63,327.86 (5.0%)
-- Take Profit: $73,327.00 (10.0%)
-- Risk/Reward: 1:2.0
+Trade 9: BTC/USD BUY @ $67247.51
+  Current: $66242.82 | P&L: -1.49%
+  Stop Loss: $63885.13 | Take Profit: $73972.26
+  Status: ACTIVE
 
-STRATEGY CONFIGURATION (from /strategy):
-- Name: Gemini_Longs_Binance_Shorts
-- Description: Gemini for conservative longs, Binance for opportunistic shorts
-- Gemini (LONG): $35 per trade, max 2 trades/day
-- Binance (SHORT): $9 per trade, max 1 trade/day
-- Hedging: Binance shorts can hedge Gemini longs during downturns
+Trade 10: ETH/USD BUY @ $2052.38
+  Current: $2015.21 | P&L: -1.81%
+  Stop Loss: $1949.76 | Take Profit: $2257.62
+  Status: ACTIVE
 
-CRITICAL RISK INDICATORS:
-1. 4 out of 6 positions have triggered stop-loss (66.7% of portfolio)
-2. Average loss across triggered positions: -9.3%
-3. Maximum individual loss: -12.73% (ETH @ $2,325.28)
-4. System in SIMULATION mode - no actual trades executed
-5. Market sentiment: BULLISH but prices declining
-6. Portfolio drawdown: -10.9% ⚠️
+=== DRAWDOWN ANALYSIS ===
+Estimated Portfolio Value: $1114.78
+Capital: $250.00
+Drawdown: 0.00%
 
-SYSTEM CONCERNS:
-1. ALL triggered stop-loss positions remain active (system not executing)
-2. Entry prices appear high relative to current market
-3. No evidence of automated risk management execution
-4. Trading frequency: 10 trades total, likely over multiple days
-5. Current BUY recommendation at $66,660.91 while existing positions are at loss
-6. No Binance short positions visible in trade history
+=== CRITICAL ALERTS ===
+🚨 STOP-LOSS TRIGGERED: BTC bought at $74094.64, current $66242.82 (-10.60%)
+🚨 STOP-LOSS TRIGGERED: ETH bought at $2325.28, current $2015.21 (-13.33%)
+🚨 STOP-LOSS TRIGGERED: BTC bought at $71386.00, current $66242.82 (-7.20%)
+🚨 STOP-LOSS TRIGGERED: ETH bought at $2193.60, current $2015.21 (-8.13%)
 
-RECOMMENDATIONS:
-1. URGENT: System is in simulation mode - no real risk currently
-2. If switching to live trading, verify stop-loss execution mechanism
-3. Review entry strategy - appears to enter at resistance levels
-4. Consider implementing trailing stop-loss for better risk management
-5. Add position sizing based on volatility (ATR-based)
-6. Monitor market conditions more frequently during high volatility
-7. Consider not opening new positions while existing ones are at significant loss
-8. Activate Binance short strategy to hedge long positions
+=== MARKET DATA (from summary) ===
+BTC/USD: $66,242.82
+ETH/USD: $2,015.21
+BTC 24h Volume: $20,026,747
+ETH 24h Volume: $9,396,305
+Market Sentiment: BULLISH
 
-ALERT STATUS:
-- Stop-loss triggered: 4 positions ⚠️
-- Take-profit triggered: 0 positions ✓
-- Drawdown: -10.9% ⚠️ HIGH RISK
-- System mode: SIMULATION (safe)
+=== TRADING RECOMMENDATION ===
+Action: BUY BTC/USD
+Entry Price: $66,242.82
+Position Size: 0.001887
+Position Value: $125.00
+Stop Loss: $62,930.68 (5.0%)
+Take Profit: $72,867.10 (10.0%)
 
-NEXT MONITORING: 30 minutes
-=== END OF REPORT ===
+=== END OF LOG ===

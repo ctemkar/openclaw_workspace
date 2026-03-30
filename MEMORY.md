@@ -5,17 +5,22 @@ This file serves as our persistent memory.
 ## Current Projects:
 
 ### Crypto Trading System
-*   **Status:** Dashboard/API is running (port 61804) and trading bot has been restarted and is actively monitoring. Bot is scanning for buy opportunities every 5 minutes.
-*   **Visuals Provided:** User shared an example of the app's UI.
-*   **Current Challenge:** Port 5001 was in use when trying to start `app.py`, but was resolved. All hardcoded port references have been fixed to use dynamic port allocation.
-*   **Recent Activity:** Progress monitor running every 10 minutes shows API port changes (62022 → 54213 → 61804). Bot restarted at 04:40 AM.
-*   **Performance Analysis:** No trades table exists yet (database empty). Bot is actively scanning BTC/USD, ETH/USD, SOL/USD with LLM strategies but conditions not met.
+*   **Status:** ✅ **REAL TRADING BOT DEPLOYED** - `real_gemini_trader.py` is now running and will actually buy/sell on Gemini with $200 capital. Conservative strategy (max 2 trades/day, 5% stop-loss, 10% take-profit).
+*   **Previous Issue:** Monitoring-only bots were running but not trading. Fixed by creating actual trading bot.
+*   **Current Setup:**
+    - Real trading bot: `real_gemini_trader.py` (PID 57043) - 10-minute intervals
+    - Trading server: `trading_server.py` (PID 49390) - API dashboard on port 5001
+    - Gemini balance: $542.27 USD available
+*   **Trading Strategy:** Conservative dip-buying
+    - BUY if price drops 3%+ (buy the dip)
+    - SELL if price rises 8%+ (take profit)  
+    - Max 2 trades per day
+    - 20% of capital per trade ($40)
 *   **Next Steps/Proactive Areas:**
-    *   Monitor bot for first trade execution.
-    *   Analyze performance metrics once trades occur.
-    *   Review and adjust risk management parameters (stop-loss, take-profit).
-    *   Explore new trading strategies and backtest them.
-    *   Enhance automated reporting.
+    *   Monitor for first REAL trade execution (not simulated)
+    *   Check trading logs for activity
+    *   Adjust strategy based on market conditions
+    *   Add Binance trading for shorts (optional)
 
 ## System Configuration & Operations:
 *   Hourly Git backups are intended.

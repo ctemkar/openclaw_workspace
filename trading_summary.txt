@@ -1,11 +1,11 @@
 TRADING ANALYSIS REPORT
-Generated: 2026-03-31 01:42:50.050751
+Generated: 2026-03-31 02:42:53.262080
 ==================================================
 
 ======================================================================
 CONSERVATIVE CRYPTO TRADING SYSTEM
 ======================================================================
-Execution Time: 2026-03-31 01:42:45 (UTC+7)
+Execution Time: 2026-03-31 02:42:48 (UTC+7)
 Capital: $250.00
 Risk Management: 5.0% SL, 10.0% TP
 Position Size: Max 50.0% of capital
@@ -16,17 +16,17 @@ API Mode: SIMULATION
 1️⃣  MARKET DATA ANALYSIS
 ----------------------------------------
 📊 Fetching real-time market data...
-✅ BTC/USD: $66,660.91
-✅ ETH/USD: $2,034.87
-✅ BTC 24h Volume: $19,739,962
-✅ ETH 24h Volume: $9,251,667
+✅ BTC/USD: $66,242.82
+✅ ETH/USD: $2,015.21
+✅ BTC 24h Volume: $20,026,747
+✅ ETH 24h Volume: $9,396,305
 
 2️⃣  SUPPORT/RESISTANCE LEVELS
 ----------------------------------------
-✅ BTC Support: $66,667.14
-✅ BTC Resistance: $66,669.56
-✅ ETH Support: $2,034.97
-✅ ETH Resistance: $2,035.11
+✅ BTC Support: $66,258.22
+✅ BTC Resistance: $66,265.66
+✅ ETH Support: $2,014.96
+✅ ETH Resistance: $2,015.12
 
 3️⃣  MARKET SENTIMENT
 ----------------------------------------
@@ -35,17 +35,17 @@ API Mode: SIMULATION
 4️⃣  TRADING ANALYSIS
 ----------------------------------------
 ✅ Trading Signal: BUY
-✅ Reason: Price within 1% of support ($66667.14)
+✅ Reason: Price within 1% of support ($66258.22)
 
 5️⃣  TRADE EXECUTION
 ----------------------------------------
 🎯 TRADE RECOMMENDATION FOUND!
    Symbol: BTC/USD
-   Entry Price: $66,660.91
-   Position Size: 0.001875
+   Entry Price: $66,242.82
+   Position Size: 0.001887
    Position Value: $125.00
-   Stop Loss: $63,327.86 (5.0%)
-   Take Profit: $73,327.00 (10.0%)
+   Stop Loss: $62,930.68 (5.0%)
+   Take Profit: $72,867.10 (10.0%)
    Risk/Reward: 1:2.0
 
 🔧 SIMULATED TRADE EXECUTION
@@ -62,32 +62,32 @@ FINAL TRADING SUMMARY
 
 CONSERVATIVE CRYPTO TRADING ANALYSIS
 ====================================
-Analysis Time: 2026-03-31 01:42:50 (UTC+7)
+Analysis Time: 2026-03-31 02:42:53 (UTC+7)
 
 MARKET DATA:
-• BTC/USD: $66,660.91
-• ETH/USD: $2,034.87
-• BTC 24h Volume: $19,739,962
-• ETH 24h Volume: $9,251,667
+• BTC/USD: $66,242.82
+• ETH/USD: $2,015.21
+• BTC 24h Volume: $20,026,747
+• ETH 24h Volume: $9,396,305
 • Market Sentiment: BULLISH
 
 SUPPORT/RESISTANCE:
-• BTC Support: $66,667.14
-• BTC Resistance: $66,669.56
-• ETH Support: $2,034.97
-• ETH Resistance: $2,035.11
+• BTC Support: $66,258.22
+• BTC Resistance: $66,265.66
+• ETH Support: $2,014.96
+• ETH Resistance: $2,015.12
 
 TRADING DECISION: BUY
-Reason: Price within 1% of support ($66667.14)
+Reason: Price within 1% of support ($66258.22)
 
 TRADE RECOMMENDATION:
 • Symbol: BTC/USD
 • Action: BUY
-• Entry Price: $66,660.91
-• Position Size: 0.001875
+• Entry Price: $66,242.82
+• Position Size: 0.001887
 • Position Value: $125.00
-• Stop Loss: $63,327.86 (5.0%)
-• Take Profit: $73,327.00 (10.0%)
+• Stop Loss: $62,930.68 (5.0%)
+• Take Profit: $72,867.10 (10.0%)
 • Risk/Reward Ratio: 1:2.0
 
 EXECUTION STATUS: SIMULATED - API credentials needed

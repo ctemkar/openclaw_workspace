@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-03-31T02:49:47.157317",
+  "analyses": [
+    {
+      "symbol": "BTCUSD",
+      "price": 66393.78,
+      "change_24h": 0.0,
+      "sentiment": "BULLISH",
+      "support": 66390.33,
+      "resistance": 66396.64333333333,
+      "bid_volume": 1.16047251,
+      "ask_volume": 0.09530708
+    },
+    {
+      "symbol": "ETHUSD",
+      "price": 2019.75,
+      "change_24h": 0.0,
+      "sentiment": "BULLISH",
+      "support": 2019.4433333333334,
+      "resistance": 2019.83,
+      "bid_volume": 1.791452,
+      "ask_volume": 0.830899
+    }
+  ],
+  "parameters": {
+    "capital": 1000,
+    "stop_loss_pct": 5,
+    "take_profit_pct": 10,
+    "max_daily_trades": 2
+  }
+}
