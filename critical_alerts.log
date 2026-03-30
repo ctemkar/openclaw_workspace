@@ -1,5 +1,5 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 03:54:56 (Asia/Bangkok)
+Timestamp: 2026-03-31 03:58:45 (Asia/Bangkok)
 Alert Level: 🚨 CRITICAL
 
 === ALERT SUMMARY ===
@@ -10,106 +10,224 @@ requires urgent review and parameter adjustments.
 === DETAILED ALERTS ===
 
 🚨 STOP-LOSS BREACHES (4 TRADES):
-1. BTC/USD: $74,094.64 → $66,573.00 (-10.15%) | Stop-loss: 5.0%
-2. ETH/USD: $2,325.28 → $2,022.21 (-13.03%) | Stop-loss: 5.0%
-3. BTC/USD: $71,386.00 → $66,573.00 (-6.74%) | Stop-loss: 5.0%
-4. ETH/USD: $2,193.60 → $2,022.21 (-7.81%) | Stop-loss: 5.0%
+1. BTC/USD: $74,094.64 → $66,605.00 (-10.11%) | Stop-loss: 5.0%
+2. ETH/USD: $2,325.28 → $2,023.42 (-12.98%) | Stop-loss: 5.0%
+3. BTC/USD: $71,386.00 → $66,605.00 (-6.70%) | Stop-loss: 5.0%
+4. ETH/USD: $2,193.60 → $2,023.42 (-7.76%) | Stop-loss: 5.0%
 
 🚨 CRITICAL DRAWDOWN ALERTS (≥8%):
-1. BTC/USD: $74,094.64 → $66,573.00 (-10.15%)
-2. ETH/USD: $2,325.28 → $2,022.21 (-13.03%)
+1. BTC/USD: $74,094.64 → $66,605.00 (-10.11%)
+2. ETH/USD: $2,325.28 → $2,023.42 (-12.98%)
 
 ⚠️ RISK PARAMETER VIOLATIONS:
 1. Daily trade limit: 10 trades executed vs 2 maximum (500% over limit)
 2. Stop-loss effectiveness: 40% of trades breached stop-loss
 3. Position consistency: Varying position sizes (0.000134 to 0.0974)
 4. Win rate: 0% (4 losses, 0 wins, 6 active)
-5. Average loss: -4.02% across all trades
+5. Average loss: -3.98% across all trades
 
 === DRAWDOWN ANALYSIS ===
-BTC Average Drawdown: -5.97% ⚠️ MODERATE
-ETH Average Drawdown: -7.44% ⚠️ SIGNIFICANT
-Overall Average Drawdown: -4.02%
-Worst Drawdown: ETH/USD at -13.03% ⚠️ CRITICAL
-BTC Price vs Support: $66,573.00 vs $66,586.70 (-0.02% below) ⚠️
+BTC Average Drawdown: -5.91% ⚠️ MODERATE
+ETH Average Drawdown: -7.37% ⚠️ SIGNIFICANT
+Overall Average Drawdown: -3.98%
+Worst Drawdown: ETH/USD at -12.98% ⚠️ CRITICAL
+BTC Price vs Support: $66,605.00 vs $66,586.70 (+0.03% above)
 
 === PERFORMANCE IMPACT (SIMULATED) ===
 If $250 capital with actual trades:
 - Active Trades: 6 (60% of portfolio)
 - Stopped Out: 4 (40% of portfolio)
-- Average Drawdown: -4.02%
-- Portfolio Impact: ~$10.05 loss
-- Remaining Capital: ~$239.95
+- Average Drawdown: -3.98%
+- Portfolio Impact: ~$9.95 loss
+- Remaining Capital: ~$240.05
 - Recovery Required: +4.2% to break even
 
 === MARKET CONTEXT ===
 Current Prices (CoinGecko):
-- BTC: $66,573.00
-- ETH: $2,022.21
+- BTC: $66,605.00
+- ETH: $2,023.42
 
 Dashboard Support Levels:
-- BTC Support: $66,586.70 (current: -0.02% BELOW) ⚠️
-- ETH Support: $2,021.47 (current: +0.04% above)
+- BTC Support: $66,586.70
+- BTC Resistance: $66,596.58
+- ETH Support: $2,021.47
+- ETH Resistance: $2,021.81
 
-Market Sentiment: BULLISH (from dashboard analysis)
-Last Trading Signal: BUY BTC/USD at $66,611.07
-Current Price vs Signal: -0.06% (slight discount)
+Market Sentiment: BULLISH (from dashboard)
+Trading Signal: BUY (from last analysis)
 
-=== STRATEGY ISSUES IDENTIFIED ===
-1. Entry Timing: Multiple entries near $74K peak (now at $66.5K)
-2. Stop-loss Setting: 5% may be too tight for current volatility
-3. Trade Frequency: 10 trades in ~13 hours vs 2 daily limit
-4. Support Calculation: BTC price below calculated support
-5. Position Sizing: Inconsistent across similar trades
-6. Critical Drawdowns: 2 trades with ≥8% losses
+=== STRATEGY ISSUES DETECTED ===
+1. Execution Logic: All trades are LONG positions despite strategy mentioning shorts
+2. Parameter Consistency: Varying position sizes don't match $35/$9 allocation
+3. Risk Management: Stop-loss triggers not being respected in simulation
+4. Trade Frequency: Excessive trading vs daily limits
+5. Strategy Adherence: Not following Gemini/Binance split as described
 
-=== URGENT ACTIONS REQUIRED ===
-If transitioning to real trading:
+=== URGENT RECOMMENDATIONS ===
+1. PAUSE TRADING: Immediately stop automated trading
+2. STRATEGY AUDIT: Review execution logic and parameter validation
+3. RISK REVIEW: Adjust stop-loss to 7-8% given current volatility
+4. POSITION SIZING: Standardize position sizes to match capital allocation
+5. BACKTESTING: Test strategy with historical data before resuming
+6. MONITORING: Increase monitoring frequency to hourly during market hours
 
-1. 🚨 REVIEW: Entry strategy - all 4 stopped trades entered near peaks
-2. 🚨 ADJUST: Stop-loss to 7-10% for current market conditions
-3. 🚨 IMPLEMENT: Trade limit enforcement (max 2/day)
-4. 🚨 VALIDATE: Support/resistance calculation accuracy
-5. 🚨 TEST: Strategy with wider stop-loss in simulation
-6. 🚨 MONITOR: Price vs support levels more frequently
-7. 🚨 DIVERSIFY: Entry timing to avoid cluster at peaks
-8. 🚨 REVIEW: Trades with ≥8% drawdown for strategy flaws
-
-=== CURRENT SYSTEM STATUS ===
-Mode: SIMULATION (safe - no real capital at risk)
-Capital: $250.00 (simulated)
-Strategy: Gemini_Longs_Binance_Shorts
+=== SYSTEM STATUS ===
 Dashboard: Operational (http://localhost:5001/)
 Last Analysis: 2026-03-31T03:43:02.404723
-Next Analysis: ~03:53 (hourly schedule)
-Active Monitoring: OpenClaw cron job
+Mode: SIMULATION (no real API keys configured)
+Capital: $250.00 (simulated)
+Risk Parameters: 5% SL, 10% TP, 2 trades/day
 
-=== ALERT SEVERITY ASSESSMENT ===
-Severity: CRITICAL (for strategy flaws and ≥8% drawdowns)
-Severity: HIGH (for risk parameter violations)
-Severity: MEDIUM (for system operation)
-Current Risk: LOW (simulation mode only)
+=== ALERT TRIGGERS ACTIVE ===
+🔴 STOP-LOSS: 4 triggers (immediate action required)
+🟡 TRADE LIMIT: 500% over daily limit
+🟡 DRAWDOWN: 2 positions >8% drawdown
+🟢 SYSTEM: Dashboard operational
+🟢 CONNECTIVITY: All endpoints responding
 
-=== RECOMMENDED IMMEDIATE STEPS ===
-1. Do NOT enable real trading until issues resolved
-2. Backtest strategy with historical $74K-$66.5K period
-3. Implement trailing stop-loss for active positions
-4. Add volatility-adjusted position sizing
-5. Review support calculation as BTC below support
-6. Consider time-based entry staggering
-7. Set up real-time alerts for support breaches
-8. Review trades with ≥8% drawdown for pattern recognition
+=== NEXT STEPS ===
+1. Manual intervention required to review trades
+2. Strategy parameter adjustment needed
+3. Consider switching to paper trading with real API
+4. Set up alert notifications for future breaches
+5. Schedule strategy review meeting
 
-=== ALERT GENERATED BY ===
-OpenClaw Trading Dashboard Monitor
-Cron Job: trading_dashboard_monitor
-Time: 2026-03-31 03:54:56 Asia/Bangkok
-Previous Alert: 2026-03-31 03:51:46 (3 minutes ago)
+=== END OF CRITICAL ALERT ===
+Previous alert: 2026-03-31 03:54:56
+Monitoring interval: ~4 minutes
+Alert persistence: Critical conditions ongoing
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 04:03:19 (Asia/Bangkok)
+Alert Level: 🚨 CRITICAL
 
-[2026-03-31 03:54:56] 🚨 CRITICAL: 4 stop-loss breaches detected
-[2026-03-31 03:54:56] 🚨 CRITICAL: 2 trades with ≥8% drawdown
-[2026-03-31 03:54:56] 🚨 CRITICAL: BTC price below support level
-[2026-03-31 03:54:56] ⚠️ WARNING: Daily trade limit exceeded 500%
-[2026-03-31 03:54:56] ⚠️ WARNING: ETH average drawdown -7.44%
-[2026-03-31 03:54:56] ✅ INFO: 6 trades still active, 4 stopped out
-[2026-03-31 03:54:56] ✅ INFO: System in SIMULATION mode - no real risk
+Critical Drawdown Alerts: 2 trades
+
+🚨 BTC/USD: Entry $74,094.64 → Current $66,588.00 (-10.13%)
+   Time: 13:39:48
+
+🚨 ETH/USD: Entry $2,325.28 → Current $2,021.16 (-13.08%)
+   Time: 13:39:49
+
+=== END OF CRITICAL ALERT ===
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 04:08:09 (Asia/Bangkok)
+Alert Level: 🚨 CRITICAL (ESCALATED)
+
+=== ALERT SUMMARY ===
+Trading system shows 8 stop-loss breaches (80% of trades) and 6 critical drawdowns (≥8%). 
+Conditions have worsened since last check (4→8 stop-loss triggers).
+System operating in SIMULATION mode - no real capital at risk, but strategy 
+requires URGENT review and immediate parameter adjustments.
+
+=== DETAILED ALERTS ===
+
+🚨 STOP-LOSS BREACHES (8 TRADES - 80%):
+1. BTC/USD: $74,308.00 → $66,571.00 (-10.41%) | Stop-loss: 5.0%
+2. BTC/USD: $74,308.79 → $66,571.00 (-10.41%) | Stop-loss: 5.0%
+3. BTC/USD: $74,332.65 → $66,571.00 (-10.44%) | Stop-loss: 5.0%
+4. BTC/USD: $74,319.47 → $66,571.00 (-10.43%) | Stop-loss: 5.0%
+5. BTC/USD: $74,094.64 → $66,571.00 (-10.15%) | Stop-loss: 5.0%
+6. ETH/USD: $2,325.28 → $2,020.84 (-13.09%) | Stop-loss: 5.0%
+7. BTC/USD: $71,386.00 → $66,571.00 (-6.75%) | Stop-loss: 5.0%
+8. ETH/USD: $2,193.60 → $2,020.84 (-7.88%) | Stop-loss: 5.0%
+
+🚨 CRITICAL DRAWDOWN ALERTS (≥8% - 6 TRADES):
+1. BTC/USD: $74,308.00 → $66,571.00 (-10.41%)
+2. BTC/USD: $74,308.79 → $66,571.00 (-10.41%)
+3. BTC/USD: $74,332.65 → $66,571.00 (-10.44%)
+4. BTC/USD: $74,319.47 → $66,571.00 (-10.43%)
+5. BTC/USD: $74,094.64 → $66,571.00 (-10.15%)
+6. ETH/USD: $2,325.28 → $2,020.84 (-13.09%)
+
+⚠️ RISK PARAMETER VIOLATIONS:
+1. Daily trade limit: 10 trades executed vs 2 maximum (500% over limit) ⚠️
+2. Stop-loss effectiveness: 80% of trades breached stop-loss ⚠️
+3. Position consistency: Varying position sizes (0.000134 to 0.0974) ⚠️
+4. Win rate: 0% (8 losses, 0 wins, 2 active) ⚠️
+5. Strategy adherence: No short positions executed despite strategy ⚠️
+6. Capital allocation: Not following $35/$9 per trade allocation ⚠️
+
+=== DRAWDOWN ANALYSIS ===
+BTC Average Drawdown: -6.25% ⚠️ SIGNIFICANT
+ETH Average Drawdown: -7.50% ⚠️ SIGNIFICANT
+Overall Average Drawdown: -6.85%
+Worst Drawdown: ETH/USD at -13.09% ⚠️ CRITICAL
+BTC Price vs Support: $66,571.00 vs $66,586.70 (-0.02% below)
+
+=== PERFORMANCE IMPACT (SIMULATED) ===
+If $250 capital with actual trades:
+- Active Trades: 2 (20% of portfolio)
+- Stopped Out: 8 (80% of portfolio)
+- Average Drawdown: -6.85%
+- Portfolio Impact: ~$17.11 loss
+- Remaining Capital: ~$232.89
+- Recovery Required: +7.4% to break even
+
+=== MARKET CONTEXT ===
+Current Prices (CoinGecko):
+- BTC: $66,571.00
+- ETH: $2,020.84
+
+Dashboard Support Levels:
+- BTC Support: $66,586.70
+- BTC Resistance: $66,596.58
+- ETH Support: $2,021.47
+- ETH Resistance: $2,021.81
+
+Market Sentiment: BULLISH (from dashboard)
+Trading Signal: BUY (from last analysis at 03:43)
+
+=== STRATEGY ISSUES DETECTED ===
+1. Execution Logic: All trades are LONG positions despite strategy mentioning shorts
+2. Parameter Consistency: Varying position sizes don't match $35/$9 allocation
+3. Risk Management: Stop-loss triggers not being respected in simulation
+4. Trade Frequency: Excessive trading vs daily limits (10 vs 2)
+5. Strategy Adherence: Not following Gemini/Binance split as described
+6. Entry Timing: Most entries at higher prices ($71K-$74K for BTC)
+
+=== URGENT RECOMMENDATIONS ===
+1. 🚨 PAUSE TRADING: Immediately stop automated trading
+2. 🚨 STRATEGY AUDIT: Review execution logic and parameter validation
+3. 🚨 RISK REVIEW: Adjust stop-loss to 7-8% given current volatility
+4. 🚨 POSITION SIZING: Standardize position sizes to match capital allocation
+5. 🚨 BACKTESTING: Test strategy with historical data before resuming
+6. 🚨 MONITORING: Increase monitoring frequency to hourly during market hours
+
+=== SYSTEM STATUS ===
+Dashboard: Operational (http://localhost:5001/)
+Last Analysis: 2026-03-31T03:43:02.404723
+Mode: SIMULATION (no real API keys configured)
+Capital: $250.00 (simulated)
+Risk Parameters: 5% SL, 10% TP, 2 trades/day
+
+=== ALERT TRIGGERS ACTIVE ===
+🔴 STOP-LOSS: 8 triggers (80% of trades) - CRITICAL
+🔴 TRADE LIMIT: 500% over daily limit - CRITICAL
+🟡 DRAWDOWN: 6 positions >8% drawdown - HIGH
+🟢 SYSTEM: Dashboard operational - NORMAL
+🟢 CONNECTIVITY: All endpoints responding - NORMAL
+
+=== ALERT ESCALATION ===
+Previous status (03:58): 4 stop-loss triggers, 2 critical drawdowns
+Current status (04:08): 8 stop-loss triggers, 6 critical drawdowns
+Trend: WORSENING ⚠️
+Escalation: From HIGH to CRITICAL
+
+=== IMMEDIATE ACTIONS REQUIRED ===
+1. MANUAL INTERVENTION: Review all trades and strategy logic
+2. PARAMETER ADJUSTMENT: Update stop-loss, position sizing, daily limits
+3. STRATEGY VALIDATION: Backtest with historical data
+4. SYSTEM PAUSE: Disable automated trading until fixes implemented
+
+=== NEXT STEPS ===
+1. Manual intervention required to review trades
+2. Strategy parameter adjustment needed
+3. Consider switching to paper trading with real API
+4. Set up alert notifications for future breaches
+5. Schedule strategy review meeting
+
+=== END OF CRITICAL ALERT ===
+Previous alert: 2026-03-31 04:03:19
+Monitoring interval: ~5 minutes
+Alert persistence: Critical conditions worsening
+Alert escalation: From HIGH to CRITICAL
