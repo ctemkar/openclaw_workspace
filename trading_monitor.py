@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO,
                               logging.StreamHandler()])
 
 # --- Configuration ---
-FETCH_URL = "http://localhost:5001/"
+FETCH_URL = "http://localhost:5001/status"
 
 # --- Alert parameters (example values) ---
 # These would typically be configured or derived from the fetched data.
@@ -38,45 +38,56 @@ def fetch_and_process_trading_data():
         logging.info(f"Raw data fetched: {json.dumps(data)}")
 
         # 2. Parse the fetched data
-        # Assuming JSON structure like:
+        # Actual JSON structure from /status endpoint:
         # {
-        #   "trading_logs": [...],
-        #   "status_updates": [...],
+        #   "status": "running",
+        #   "timestamp": "2026-03-30T22:42:54.557315",
+        #   "port": 5001,
+        #   "analysis_scheduled": "hourly",
+        #   "capital": 100.0,
         #   "risk_parameters": {
-        #     "capital": ...,
-        #     "stop_loss": ..., # This could be a fixed value or a current loss percentage
-        #     "take_profit": ..., # This could be a fixed value or a current gain percentage
-        #     "current_drawdown": ... # e.g., percentage of capital lost from peak
-        #   }
+        #     "stop_loss": 0.05,
+        #     "take_profit": 0.10,
+        #     "max_trades_per_day": 2
+        #   },
+        #   "trading_pairs": ["BTC/USD", "ETH/USD"],
+        #   "last_analysis": "2026-03-30T22:01:11.445599"
         # }
-        trading_logs = data.get("trading_logs", [])
-        status_updates = data.get("status_updates", [])
+        
+        # For monitoring purposes, we'll use the configured risk parameters
+        # Note: These are the configured thresholds, not current PnL values
         risk_parameters = data.get("risk_parameters", {})
-
-        # Extracting risk parameters, handling potential missing keys
-        capital = risk_parameters.get("capital")
-        # Assuming stop_loss and take_profit in risk_parameters are current PnL percentages relative to entry,
-        # or absolute thresholds. For alert logic, we need to compare to thresholds.
-        # Let's assume risk_parameters["stop_loss"] is the current loss percentage and risk_parameters["take_profit"] is current gain percentage.
-        current_stop_loss_loss_pct = risk_parameters.get("stop_loss") # e.g., -0.02 for 2% loss
-        current_take_profit_gain_pct = risk_parameters.get("take_profit") # e.g., 0.03 for 3% gain
-        current_drawdown_pct = risk_parameters.get("current_drawdown") # e.g., 0.08 for 8% drawdown
+        
+        # Extracting risk parameters
+        capital = data.get("capital")
+        # These are the configured thresholds, not current values
+        stop_loss_threshold = risk_parameters.get("stop_loss")  # 0.05 = 5%
+        take_profit_threshold = risk_parameters.get("take_profit")  # 0.10 = 10%
+        
+        # For actual monitoring, we would need current PnL values
+        # Since we don't have current PnL in the status endpoint,
+        # we'll use placeholder values for demonstration
+        # In a real system, we would fetch actual trade PnL from another endpoint
+        current_stop_loss_loss_pct = None  # Placeholder - would need actual current loss %
+        current_take_profit_gain_pct = None  # Placeholder - would need actual current gain %
+        current_drawdown_pct = None  # Placeholder - would need actual drawdown %
 
         # 3. Log all extracted data
         logging.info("--- Extracted Data ---")
-        for log in trading_logs:
-            logging.info(f"Log: {log}")
-        for status in status_updates:
-            logging.info(f"Status: {status}")
-        if capital is not None:
-            logging.info(f"Capital: {capital}")
-        if current_stop_loss_loss_pct is not None:
-            logging.info(f"Current Stop Loss (Loss %): {current_stop_loss_loss_pct}")
-        if current_take_profit_gain_pct is not None:
-            logging.info(f"Current Take Profit (Gain %): {current_take_profit_gain_pct}")
-        if current_drawdown_pct is not None:
-            logging.info(f"Current Drawdown %: {current_drawdown_pct}")
+        logging.info(f"System Status: {data.get('status')}")
+        logging.info(f"Timestamp: {data.get('timestamp')}")
+        logging.info(f"Capital: ${capital}")
+        logging.info(f"Stop Loss Threshold: {stop_loss_threshold*100 if stop_loss_threshold else 'N/A'}%")
+        logging.info(f"Take Profit Threshold: {take_profit_threshold*100 if take_profit_threshold else 'N/A'}%")
+        logging.info(f"Max Trades/Day: {risk_parameters.get('max_trades_per_day', 'N/A')}")
+        logging.info(f"Trading Pairs: {', '.join(data.get('trading_pairs', []))}")
+        logging.info(f"Last Analysis: {data.get('last_analysis', 'N/A')}")
         logging.info("----------------------")
+        
+        # Note: Current PnL values are not available in the status endpoint
+        # For actual monitoring, we would need to fetch trade data and calculate current PnL
+        if current_stop_loss_loss_pct is None or current_take_profit_gain_pct is None:
+            logging.warning("Current PnL values not available in status endpoint. Alert checks will be limited.")
 
         # 4. Implement alert conditions
         alerts_triggered = []

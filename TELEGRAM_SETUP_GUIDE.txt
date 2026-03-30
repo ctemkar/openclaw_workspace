@@ -1,0 +1,83 @@
+
+    ============================================================
+    TELEGRAM REPORTING TEST
+    ============================================================
+    
+    YOUR TELEGRAM BOT: @MMCashEarner_bot
+    
+    ============================================================
+    STEP 1: START CHAT WITH BOT
+    ============================================================
+    
+    1. Open Telegram app
+    2. Search: @MMCashEarner_bot
+    3. Click "Start" or send: /start
+    4. You should see welcome message
+    
+    ============================================================
+    STEP 2: TEST REPORT RECEIPT
+    ============================================================
+    
+    To test if bot can send you messages:
+    
+    1. In this terminal, run:
+       python3 send_telegram_test.py
+       
+    2. You should receive in Telegram:
+       🤖 TEST MESSAGE FROM TRADING BOT
+       Time: 22:33
+       Status: System ready for trading reports
+       
+    ============================================================
+    STEP 3: CONFIGURE REPORT PREFERENCES
+    ============================================================
+    
+    Send these commands to bot:
+    
+    • /reports on - Enable all reports
+    • /summary daily - Get daily summary at 9 PM
+    • /alerts on - Enable risk alerts
+    • /status hourly - Get hourly status updates
+    
+    ============================================================
+    STEP 4: MONITOR TRADING REPORTS
+    ============================================================
+    
+    Once trading starts, you'll receive:
+    
+    1. 🎯 TRADE EXECUTIONS - Immediately after each trade
+    2. 📊 DAILY SUMMARY - 9 PM daily
+    3. ⚠️ RISK ALERTS - When stop-loss/take-profit hit
+    4. 🤖 SYSTEM STATUS - Hourly updates
+    
+    ============================================================
+    TROUBLESHOOTING:
+    ============================================================
+    
+    If no messages received:
+    
+    1. Check bot status:
+       openclaw channels status --probe
+       
+    2. Restart Telegram connection:
+       openclaw channels restart --channel telegram
+       
+    3. Check logs:
+       openclaw channels logs --follow
+       
+    4. Send test from CLI:
+       openclaw channels telegram test "Test message"
+    
+    ============================================================
+    SECURITY NOTES:
+    ============================================================
+    
+    • Reports show trading activity only
+    • NO API keys or sensitive data
+    • You control report frequency
+    • Can disable anytime with /reports off
+    
+    ============================================================
+    Created: 2026-03-30 22:33:17
+    ============================================================
+    

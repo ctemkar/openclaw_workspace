@@ -1,0 +1,12 @@
+# GEMINI API CONFIGURATION
+# Store your actual API keys in .gemini_key and .gemini_secret files
+# DO NOT commit these files to version control
+
+API_KEY = "YOUR_GEMINI_API_KEY_HERE"
+API_SECRET = "YOUR_GEMINI_SECRET_HERE"
+
+# Permissions needed:
+# - Trader (minimum)
+# - IP restrictions recommended
+
+# Test command: python3 -c "import ccxt; exchange = ccxt.gemini({'apiKey': 'KEY', 'secret': 'SECRET'}); print(exchange.fetch_balance())"

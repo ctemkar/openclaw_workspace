@@ -1,0 +1,6 @@
+{
+  "type": "telegram_test",
+  "message": "\ud83e\udd16 TEST MESSAGE FROM TRADING BOT\n\nTime: 22:34:25\nDate: 2026-03-30\nStatus: System ready for trading reports\n\n\ud83d\udcca Trading System Status:\n\u2022 Capital: $250 configured ($200 Gemini, $50 Binance)\n\u2022 Mode: Dual-exchange (Gemini longs, Binance shorts)\n\u2022 Risk: 5% stop-loss, 10% take-profit\n\u2022 Reports: Telegram enabled\n\n\ud83c\udfaf Next Steps:\n1. Add API keys for real trading\n2. Test with small amounts first\n3. Monitor Telegram for reports\n\nThis is a test. If you receive this, Telegram reporting works!",
+  "timestamp": "2026-03-30T22:34:25.108932",
+  "status": "test"
+}

@@ -1,0 +1,10 @@
+
+# API Keys - DO NOT COMMIT
+.gemini_key
+.gemini_secret
+.binance_key
+.binance_secret
+secure/*.key
+secure/*.secret
+*.log
+__pycache__/

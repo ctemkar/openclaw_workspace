@@ -1,0 +1,52 @@
+{
+  "hooks": {
+    "after_trade": {
+      "action": "send_telegram_trade_report",
+      "data": [
+        "symbol",
+        "side",
+        "price",
+        "amount",
+        "exchange",
+        "reason"
+      ]
+    },
+    "daily_summary": {
+      "action": "send_telegram_daily_report",
+      "time": "21:00",
+      "data": [
+        "total_trades",
+        "total_pnl",
+        "win_rate",
+        "best_trade",
+        "worst_trade"
+      ]
+    },
+    "risk_event": {
+      "action": "send_telegram_risk_alert",
+      "triggers": [
+        "stop_loss",
+        "take_profit",
+        "large_drawdown",
+        "system_error"
+      ]
+    },
+    "system_check": {
+      "action": "send_telegram_status",
+      "frequency": "hourly",
+      "data": [
+        "status",
+        "balance",
+        "open_positions",
+        "next_analysis"
+      ]
+    }
+  },
+  "files": {
+    "telegram_sender": "telegram_report_sender.py",
+    "trading_integration": "integrate_with_trading.py",
+    "configuration": "telegram_reporting_config.json"
+  },
+  "status": "ready_for_setup",
+  "created": "2026-03-30T22:33:17.826787"
+}

@@ -1,0 +1,71 @@
+
+    ============================================================
+    EMERGENCY API KEY SHUTDOWN PROCEDURE
+    ============================================================
+    
+    IF YOU SUSPECT COMPROMISE:
+    
+    STEP 1: IMMEDIATE ACTION (5 minutes)
+    ------------------------------------
+    1. LOGIN to both exchanges
+    2. Go to API Management
+    3. DISABLE/DELETE all trading bot keys
+    4. CHANGE account passwords
+    5. ENABLE 2FA if not already
+    
+    STEP 2: CONTAINMENT (15 minutes)
+    ---------------------------------
+    1. Stop all trading bots:
+       pkill -f trading_server.py
+       pkill -f conservative_crypto_trading.py
+       
+    2. Secure key files:
+       rm -f .gemini_key .gemini_secret
+       rm -f .binance_key .binance_secret
+       
+    3. Check recent trades:
+       • Gemini: Account → Trade History
+       • Binance: Orders → Trade History
+    
+    STEP 3: INVESTIGATION (1 hour)
+    ------------------------------
+    1. Review API usage logs on exchanges
+    2. Check IP addresses that used keys
+    3. Verify no unauthorized withdrawals
+    4. Contact exchange support if suspicious
+    
+    STEP 4: RECOVERY (When safe)
+    ----------------------------
+    1. Create NEW secure API keys
+    2. Update IP restrictions
+    3. Test with small amounts first
+    4. Gradually restore trading
+    
+    ============================================================
+    EXCHANGE SUPPORT CONTACTS:
+    ============================================================
+    
+    GEMINI:
+    • Support: https://support.gemini.com
+    • Emergency: support@gemini.com
+    • Phone: Check website for current
+    
+    BINANCE:
+    • Support: https://www.binance.com/en/support
+    • Live Chat: Available in app
+    • Twitter: @BinanceHelpDesk
+    
+    ============================================================
+    PREVENTION MEASURES:
+    ============================================================
+    
+    1. IP RESTRICTIONS: Most important protection
+    2. SEPARATE ACCOUNTS: Isolate trading funds
+    3. TRADE ALERTS: Get notified of every trade
+    4. REGULAR AUDITS: Check API usage weekly
+    5. KEY ROTATION: Change keys monthly
+    
+    ============================================================
+    Created: 2026-03-30 22:31:03
+    ============================================================
+    

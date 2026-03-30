@@ -68,7 +68,7 @@ def index():
     <head><title>Conservative Crypto Trading System</title></head>
     <body>
         <h1>Conservative Crypto Trading System</h1>
-        <p>Real trading with $100 capital on Gemini</p>
+        <p>Real trading with $100 capital on Gemini/Binance</p>
         
         <h2>Endpoints:</h2>
         <ul>

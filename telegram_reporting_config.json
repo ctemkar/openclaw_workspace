@@ -1,0 +1,44 @@
+{
+  "telegram_reporting": {
+    "enabled": true,
+    "bot": "@MMCashEarner_bot",
+    "recipient": "Your Telegram chat",
+    "reports": {
+      "trade_execution": {
+        "send": true,
+        "format": "\ud83c\udfaf {exchange} {side}: {symbol} at ${price}\n\ud83d\udcb0 Amount: ${amount}\n\ud83d\udcca P&L: ${unrealized_pnl} ({percent}%)",
+        "triggers": [
+          "BUY",
+          "SELL",
+          "SHORT"
+        ]
+      },
+      "daily_summary": {
+        "send": true,
+        "time": "21:00",
+        "format": "\ud83d\udcca DAILY SUMMARY\n\ud83d\udcb0 Capital: ${total}\n\ud83d\udcc8 Trades: {count}\n\ud83c\udfaf P&L: ${pnl} ({percent}%)\n\ud83c\udfc6 Best: {best_trade}\n\u26a0\ufe0f Worst: {worst_trade}"
+      },
+      "risk_alert": {
+        "send": true,
+        "triggers": [
+          "stop_loss_hit",
+          "take_profit_hit",
+          "daily_limit_reached",
+          "large_loss"
+        ],
+        "format": "\u26a0\ufe0f RISK ALERT: {event}\n{details}\nAction: {action}"
+      },
+      "system_status": {
+        "send": true,
+        "frequency": "hourly",
+        "format": "\ud83e\udd16 SYSTEM STATUS\n\u2705 Trading: {status}\n\ud83d\udcb0 Balance: ${balance}\n\ud83d\udcc8 Today: ${today_pnl}\n\ud83d\udd0d Next: {next_analysis}"
+      }
+    },
+    "security": {
+      "no_sensitive_data": true,
+      "mask_balances": false,
+      "encryption": "None (Telegram E2E handles)"
+    }
+  },
+  "created": "2026-03-30T22:33:17.826509"
+}

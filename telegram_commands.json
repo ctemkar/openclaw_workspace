@@ -1,0 +1,27 @@
+{
+  "basic": {
+    "/start": "Initialize bot and get welcome",
+    "/help": "Show all available commands",
+    "/status": "Check trading system status",
+    "/reports": "Configure report settings"
+  },
+  "trading": {
+    "/balance": "Check current balances",
+    "/trades": "Show recent trades",
+    "/positions": "Show open positions",
+    "/pnl": "Show profit/loss summary"
+  },
+  "reports": {
+    "/reports on": "Enable all reports",
+    "/reports off": "Disable all reports",
+    "/summary daily": "Get daily summary at 9 PM",
+    "/alerts on": "Enable risk alerts",
+    "/status hourly": "Get hourly status"
+  },
+  "control": {
+    "/pause": "Pause trading temporarily",
+    "/resume": "Resume trading",
+    "/restart": "Restart trading bot",
+    "/config": "Show current configuration"
+  }
+}

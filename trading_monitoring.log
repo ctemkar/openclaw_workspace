@@ -1,70 +1,83 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-30 21:55:15 (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+Timestamp: 2026-03-30 22:50:05 (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor (408b9c2b-eefa-402d-b7be-9817ee932f36)
 
-=== SYSTEM STATUS ===
-Status: running
-Capital: $1000.00
-Last Analysis: 2026-03-30T21:40:42.376323
-Analysis Schedule: hourly
-Port: 5001
+--- RAW FETCHED CONTENT ---
 
-=== RISK PARAMETERS ===
-Stop-loss: 5.0%
-Take-profit: 10.0%
-Max trades per day: 2
-Trading pairs: BTC/USD, ETH/USD
+1. MAIN PAGE (http://localhost:5001/):
+<html>
+    <head><title>Conservative Crypto Trading System</title></head>
+    <body>
+        <h1>Conservative Crypto Trading System</h1>
+        <p>Real trading with $100 capital on Gemini</p>
+        
+        <h2>Endpoints:</h2>
+        <ul>
+            <li><a href="/status">/status</a> - System status</li>
+            <li><a href="/analysis">/analysis</a> - Run analysis now</li>
+            <li><a href="/trades">/trades</a> - Recent trades</li>
+            <li><a href="/strategy">/strategy</a> - Current strategy</li>
+            <li><a href="/summary">/summary</a> - Trading summary</li>
+        </ul>
+        
+        <h2>Configuration:</h2>
+        <ul>
+            <li>Capital: $100</li>
+            <li>Stop-loss: 5%</li>
+            <li>Take-profit: 10%</li>
+            <li>Max trades/day: 2</li>
+            <li>Pairs: BTC/USD, ETH/USD</li>
+        </ul>
+    </body>
+    </html>
 
-=== RECENT TRADES (Last 10) ===
-1. Time: 10:20:26 | Symbol: BTC/USD | Side: buy | Price: $74,308.00 | Amount: 0.00013458 | Status: filled
-2. Time: 10:18:29 | Symbol: BTC/USD | Side: buy | Price: $74,308.79 | Amount: 0.00013457 | Status: filled
-3. Time: 10:14:36 | Symbol: BTC/USD | Side: buy | Price: $74,332.65 | Amount: 0.00013453 | Status: filled
-4. Time: 10:14:33 | Symbol: BTC/USD | Side: buy | Price: $74,319.47 | Amount: 0.00013455 | Status: filled
-5. Time: 13:39:48 | Symbol: BTC/USD | Side: BUY | Price: $74,094.64 | Quantity: 0.002699 | Reason: Near support level: $73556.12 (current: $74094.64)
-6. Time: 13:39:49 | Symbol: ETH/USD | Side: BUY | Price: $2,325.28 | Quantity: 0.086 | Reason: Near support level: $2308.08 (current: $2325.28)
-7. Time: 00:33:00 | Symbol: BTC/USD | Side: BUY | Price: $71,386.00 | Quantity: 0.002802 | Reason: Near support level: $70896.70 (current: $71386.00)
-8. Time: 00:33:02 | Symbol: ETH/USD | Side: BUY | Price: $2,193.60 | Quantity: 0.0912 | Reason: Near support level: $2167.99 (current: $2193.60)
-9. Time: 21:29:41 | Symbol: BTC/USD | Side: BUY | Price: $67,247.51 | Quantity: 0.002974 | Reason: Near support level: $67110.20 (current: $67247.51)
-10. Time: 21:29:42 | Symbol: ETH/USD | Side: BUY | Price: $2,052.38 | Quantity: 0.0974 | Reason: Near support level: $2033.94 (current: $2052.38)
+2. STATUS ENDPOINT (http://localhost:5001/status):
+{"analysis_scheduled":"hourly","capital":100.0,"last_analysis":"2026-03-30T22:01:11.445599","port":5001,"risk_parameters":{"max_trades_per_day":2,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-30T22:49:55.634353","trading_pairs":["BTC/USD","ETH/USD"]}
 
-=== CURRENT MARKET ANALYSIS ===
-BTC/USD:
-  Current Price: $67,274.80
-  SMA 10: $67,532.33
-  SMA 20: $66,998.74
-  Support: $67,110.20
-  Resistance: $68,136.29
-  Signal: BUY (Confidence: 70%)
-  Status: Max daily trades reached (2/2)
+3. TRADES ENDPOINT (http://localhost:5001/trades):
+{"count":10,"timestamp":"2026-03-30T22:50:05.241541","trades":[{"amount":0.0001345750121117511,"model":"Gemini","price":74308.0,"side":"buy","status":"filled","time":"10:20:26"},{"amount":0.00013457358140268468,"model":"Gemini","price":74308.79,"side":"buy","status":"filled","time":"10:18:29"},{"amount":0.00013453038469636157,"model":"Gemini","price":74332.65,"side":"buy","status":"filled","time":"10:14:36"},{"amount":0.00013455424265000813,"model":"Gemini","price":74319.47,"side":"buy","status":"filled","time":"10:14:33"},{"price":74094.64,"quantity":0.002699,"reason":"Near support level: $73556.12 (current: $74094.64)","side":"BUY","symbol":"BTC/USD","time":"13:39:48"},{"price":2325.28,"quantity":0.086,"reason":"Near support level: $2308.08 (current: $2325.28)","side":"BUY","symbol":"ETH/USD","time":"13:39:49"},{"price":71386.0,"quantity":0.002802,"reason":"Near support level: $70896.70 (current: $71386.00)","side":"BUY","symbol":"BTC/USD","time":"00:33:00"},{"price":2193.6,"quantity":0.0912,"reason":"Near support level: $2167.99 (current: $2193.60)","side":"BUY","symbol":"ETH/USD","time":"00:33:02"},{"price":67247.51,"quantity":0.002974,"reason":"Near support level: $67110.20 (current: $67247.51)","side":"BUY","symbol":"BTC/USD","time":"21:29:41"},{"price":2052.38,"quantity":0.0974,"reason":"Near support level: $2033.94 (current: $2052.38)","side":"BUY","symbol":"ETH/USD","time":"21:29:42"}]}
 
-ETH/USD:
-  Current Price: $2,051.87
-  SMA 10: $2,056.37
-  SMA 20: $2,029.11
-  Support: $2,033.94
-  Resistance: $2,082.48
-  Signal: BUY (Confidence: 70%)
-  Status: Max daily trades reached (2/2)
+4. SUMMARY ENDPOINT (http://localhost:5001/summary):
+<pre>TRADING ANALYSIS REPORT
+Generated: 2026-03-30 22:01:11.445569
+==================================================
 
-=== TRADING SUMMARY ===
-Today's trades executed: 2/2
-Total trades: 6
-Total P&L: $0.00
-Available capital: $1000.00
+============================================================
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+Capital: $100.00 | Stop-loss: 5.0% | Take-profit: 10.0%
+Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
+============================================================
+📊 Today's trades: 2/2
 
-=== CURRENT STRATEGY ===
-Active signal: BUY for ETH/USD
-Price: $2,052.38
-Quantity: 0.0974
-Confidence: 70%
-Reasons: Near support level: $2033.94 (current: $2052.38)
+🔍 Analyzing BTC/USD...
+   Price: $67777.93
+   24h Change: N/A
+   SMA 10: $67553.27
+   SMA 20: $67069.11
+   Support: $67051.55
+   Resistance: $68136.29
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $67051.55 (current: $67777.93)
+   ⏸️ Skipping: Max daily trades reached
 
-=== MONITORING NOTES ===
-- System is running normally
-- Max daily trades reached for both pairs (2/2)
-- Next analysis scheduled in approximately 45 minutes
-- No critical alerts detected
-- All trades appear to be filled successfully
-- Risk parameters are within acceptable limits
+🔍 Analyzing ETH/USD...
+   Price: $2069.87
+   24h Change: N/A
+   SMA 10: $2058.74
+   SMA 20: $2032.87
+   Support: $2039.91
+   Resistance: $2082.48
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $2039.91 (current: $2069.87)
+   ⏸️ Skipping: Max daily trades reached
 
-=== END OF LOG ENTRY ===
+📈 Trading Summary:
+   Today's trades executed: 2/2
+   Total trades: 6
+   Total P&L: $0.00
+   Available capital: $1000.00
+
+✅ Analysis complete. Next run in 1 hour.
+</pre>
+
+=== END OF LOG ===

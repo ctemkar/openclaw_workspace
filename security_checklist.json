@@ -1,0 +1,34 @@
+{
+  "before_creating_keys": [
+    "\u2705 Use separate trading accounts (not main)",
+    "\u2705 Enable 2FA on exchange accounts",
+    "\u2705 Use unique passwords for each exchange",
+    "\u2705 Verify account email/SMS alerts work"
+  ],
+  "key_creation": [
+    "\u2705 Gemini: 'Trader' permission ONLY",
+    "\u2705 Binance: 'Spot & Margin Trading' ONLY",
+    "\u2705 IP Restrictions: Add 127.0.0.1 + your server IP",
+    "\u2705 Name keys: 'OpenClaw-Trading-DATE'",
+    "\u2705 Disable withdrawal permissions"
+  ],
+  "key_storage": [
+    "\u2705 Store in .gemini_key/.gemini_secret files",
+    "\u2705 Store in .binance_key/.binance_secret files",
+    "\u2705 chmod 600 all key files (readable only by you)",
+    "\u2705 NEVER commit to git (already in .gitignore)",
+    "\u2705 Backup encrypted if needed"
+  ],
+  "monitoring": [
+    "\u2705 Enable trade alerts on both exchanges",
+    "\u2705 Check API usage logs daily",
+    "\u2705 Set up separate email for bot alerts",
+    "\u2705 Monitor balance changes"
+  ],
+  "emergency": [
+    "\u2705 Save exchange support contact info",
+    "\u2705 Know how to instantly disable API keys",
+    "\u2705 Have backup funds in cold wallet",
+    "\u2705 Test key disable procedure"
+  ]
+}

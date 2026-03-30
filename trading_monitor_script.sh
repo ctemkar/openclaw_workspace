@@ -39,9 +39,9 @@ STOP_LOSS_HIT=$(echo "$FETCHED_DATA" | grep "STOP_LOSS_HIT=true" > /dev/null && 
 TAKE_PROFIT_HIT=$(echo "$FETCHED_DATA" | grep "TAKE_PROFIT_HIT=true" > /dev/null && echo "true" || echo "false")
 DRAWDOWN_CRITICAL=$(echo "$FETCHED_DATA" | grep "DRAWDOWN_CRITICAL=true" > /dev/null && echo "true" || echo "false")
 
-CAPITAL=$(echo "$FETCHED_DATA" | grep "CAPITAL=" | cut -d' -f2)
-STOP_LOSS=$(echo "$FETCHED_DATA" | grep "STOP_LOSS=" | cut -d' -f2)
-TAKE_PROFIT=$(echo "$FETCHED_DATA" | grep "TAKE_PROFIT=" | cut -d' -f2)
+CAPITAL=$(echo "$FETCHED_DATA" | grep "CAPITAL=" | cut -d= -f2)
+STOP_LOSS=$(echo "$FETCHED_DATA" | grep "STOP_LOSS=" | cut -d= -f2)
+TAKE_PROFIT=$(echo "$FETCHED_DATA" | grep "TAKE_PROFIT=" | cut -d= -f2)
 
 ALERT_TRIGGERED=false
 ALERT_MESSAGE=""

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Conservative Crypto Trading Analysis & Execution
-Real trading with $1,000 capital on Gemini exchange
+REAL trading with $100 capital on Gemini exchange
 Risk parameters: 5% stop-loss, 10% take-profit, max 2 trades per day
 """
 
@@ -14,12 +14,30 @@ import requests
 import numpy as np
 from typing import Dict, List, Optional, Tuple
 
-# Configuration
-CAPITAL = 100.0  # REAL $100 investment
-STOP_LOSS = 0.05  # 5%
-TAKE_PROFIT = 0.10  # 10%
+# ================================================
+# DUAL EXCHANGE CONFIGURATION: $200 Gemini + $50 Binance
+# ================================================
+
+# Capital Allocation
+USE_DUAL_EXCHANGE = True
+GEMINI_CAPITAL = 200.00  # $200 for LONG positions on Gemini
+BINANCE_CAPITAL = 50.00   # $50 for SHORT positions on Binance
+TOTAL_CAPITAL = GEMINI_CAPITAL + BINANCE_CAPITAL
+
+# Exchange Configuration
+EXCHANGE = "gemini"  # Fallback if dual exchange disabled
+
+# Available symbols per exchange
+GEMINI_SYMBOLS = ['BTC/USD', 'ETH/USD', 'SOL/USD']  # Long positions only
+BINANCE_SYMBOLS = ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']  # Short positions only
+
+# Risk Parameters
+STOP_LOSS = 0.05  # 5% for Gemini longs
+TAKE_PROFIT = 0.10  # 10% for Gemini longs
+BINANCE_STOP_LOSS = 0.07  # 7% for Binance shorts (higher risk)
+BINANCE_TAKE_PROFIT = 0.08  # 8% for Binance shorts
 MAX_TRADES_PER_DAY = 2
-SYMBOLS = ['BTC/USD', 'ETH/USD']
+MAX_BINANCE_TRADES_PER_DAY = 1  # More conservative for shorts
 BASE_DIR = "/Users/chetantemkar/.openclaw/workspace/app"
 
 # Files
@@ -27,16 +45,23 @@ TRADES_LOG = os.path.join(BASE_DIR, "completed_trades.json")
 STRATEGY_FILE = os.path.join(BASE_DIR, "llm_strategies.json")
 TRADING_HISTORY = os.path.join(BASE_DIR, "trading_history.json")
 
-def get_api_keys() -> Tuple[Optional[str], Optional[str]]:
-    """Get Gemini API keys from secure files"""
+def get_api_keys(exchange: str = "gemini") -> Tuple[Optional[str], Optional[str]]:
+    """Get exchange API keys from secure files"""
     try:
-        with open(os.path.join(BASE_DIR, ".gemini_key"), "r") as f:
+        if exchange.lower() == "binance":
+            key_file = os.path.join(BASE_DIR, ".binance_key")
+            secret_file = os.path.join(BASE_DIR, ".binance_secret")
+        else:  # default to gemini
+            key_file = os.path.join(BASE_DIR, ".gemini_key")
+            secret_file = os.path.join(BASE_DIR, ".gemini_secret")
+        
+        with open(key_file, "r") as f:
             api_key = f.read().strip()
-        with open(os.path.join(BASE_DIR, ".gemini_secret"), "r") as f:
+        with open(secret_file, "r") as f:
             api_secret = f.read().strip()
         return api_key, api_secret
     except Exception as e:
-        print(f"❌ Error reading API keys: {e}")
+        print(f"❌ Error reading {exchange} API keys: {e}")
         return None, None
 
 def load_trading_history() -> Dict:
