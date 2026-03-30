@@ -1,40 +1,46 @@
-TRADING MONITORING SUMMARY - DATA PROCESSING COMPLETE
-=====================================================
-Timestamp: 2026-03-31 05:28:30 (Asia/Bangkok)
-Event: Scheduled Trading Data Processing
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-31 05:48:52 (Asia/Bangkok)
 
-PROCESSING RESULTS
-------------------
-✅ Trading data successfully fetched and processed
-✅ Comprehensive analysis completed
-✅ Critical issues identified and documented
-✅ Reports generated for review
+SYSTEM STATUS:
+- Dashboard: Active on port 5001
+- Status: Running
+- Last Analysis: 2026-03-31 05:43:18
+- Next Analysis: ~06:43:18
+- API Mode: SIMULATION
 
-KEY FINDINGS
-------------
-1. SYSTEM STATUS: All 5 trading bots running
-2. MARKET DATA: Live prices available (BTC: $66,802, ETH: $2,036)
-3. CRITICAL ISSUES: 2 ETH positions exceed 5% stop-loss
-4. PORTFOLIO: 5.35% drawdown (above warning threshold)
-5. TRADING ACTIVITY: 4 pending buy orders, 0% fill rate
+MARKET DATA:
+- BTC/USD: $66,784.00
+- ETH/USD: $2,034.21
+- ETH Support: $2,033.63
+- BTC Support: $66,784.00
+- Both assets at critical support levels
 
-URGENT ACTIONS REQUIRED
------------------------
-1. Exit ETH positions exceeding stop-loss (-12.50% and -7.25%)
-2. Fix Real Futures Bot configuration error
-3. Review trading strategy (100% buy bias, 0% fill rate)
+ACTIVE POSITIONS: 4 total
+1. ETH/USD: -12.52% (STOP-LOSS TRIGGERED) 🚨
+2. ETH/USD: -7.28% (STOP-LOSS TRIGGERED) 🚨
+3. BTC/USD: -0.69% (Active)
+4. ETH/USD: -0.88% (Active)
 
-FILES GENERATED
----------------
-1. comprehensive_trading_report_20260331_052727.txt
-2. latest_trading_analysis.txt
-3. trading_data_snapshot_20260331_052727.json
-4. trading_data_processing_summary_20260331_0528.md
+CRITICAL ALERTS:
+1. Two ETH positions have triggered 5% stop-loss
+2. ETH showing significant weakness
+3. High ETH concentration (73.6% of deployed capital)
+4. Daily trade limit reached (2/2 trades)
 
-NEXT STEPS
-----------
-- Address critical alerts immediately
-- Review comprehensive report for details
-- Next scheduled check: ~06:22 AM
+PORTFOLIO STATUS:
+- Total Value: $757.23
+- Capital Deployed: $250.00
+- P&L: +$507.23 (+202.9%)
+- Unrealized Loss: -$42.75
+- Overall profitable but ETH positions at risk
 
-STATUS: ✅ DATA PROCESSING COMPLETE - ACTION REQUIRED
+IMMEDIATE ACTIONS:
+1. Execute stop-loss on ETH positions immediately
+2. Verify exchange order execution
+3. Pause new ETH longs until trend reversal
+4. Monitor BTC position closely
+5. Consider activating Binance shorts for hedging
+
+RISK LEVEL: HIGH
+RECOMMENDATION: DEFENSIVE POSTURE
+=== END OF SUMMARY ===

@@ -1,0 +1,59 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-31 05:36:52 (Asia/Bangkok)
+Monitoring Cycle: trading_dashboard_monitor
+
+DASHBOARD STATUS:
+✅ Dashboard active: http://localhost:5001/
+✅ System status: running
+✅ Last analysis: 2026-03-31T04:43:09.187157
+✅ Next analysis due: ~05:43:09
+
+CAPITAL & RISK PARAMETERS:
+- Total capital: $250.00
+- Stop-loss: 5.0%
+- Take-profit: 10.0%
+- Max trades/day: 2
+- Trading pairs: BTC/USD, ETH/USD
+
+MARKET DATA:
+- BTC/USD: $66,737.00
+- ETH/USD: $2,033.05
+
+PORTFOLIO ANALYSIS:
+- Active trades: 4
+- Total portfolio value: $756.75
+- Capital deployed: $250.00
+- Overall P&L: +$506.75 (+202.7%)
+- Portfolio status: PROFITABLE (despite individual losses)
+
+CRITICAL FINDINGS:
+🚨 2 STOP-LOSS TRIGGERS DETECTED:
+1. ETH/USD @ $2,325.28 → $2,033.05 (-12.57%)
+2. ETH/USD @ $2,193.60 → $2,033.05 (-7.32%)
+
+⚠️ 2 POSITIONS REQUIRING CLOSE MONITORING:
+1. BTC/USD @ $67,247.51 → $66,737.00 (-0.76%)
+2. ETH/USD @ $2,052.38 → $2,033.05 (-0.94%)
+
+RISK ASSESSMENT:
+- Risk level: HIGH (multiple stop-loss triggers)
+- ETH weakness: SIGNIFICANT (all positions underwater)
+- BTC stability: MODERATE (holding near entry)
+- Overall portfolio: PROFITABLE but concerning individual performance
+
+RECOMMENDED ACTIONS:
+1. URGENT: Verify stop-loss execution for ETH positions
+2. PAUSE new ETH long positions until trend reversal
+3. MONITOR BTC position closely for potential stop-loss
+4. REVIEW trading strategy effectiveness for ETH pairs
+5. CONSIDER adjusting ETH stop-loss to 3-4% given volatility
+
+LOGS UPDATED:
+✅ trading_monitoring.log - Updated with latest analysis
+✅ critical_alerts.log - Updated with current critical alerts
+
+NEXT MONITORING: Scheduled for next cron cycle
+ALERT STATUS: Critical alerts require immediate attention
+
+SUMMARY: Trading dashboard operational but showing significant ETH weakness with multiple stop-loss triggers. Overall portfolio remains profitable due to earlier gains, but defensive posture recommended.

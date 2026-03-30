@@ -1,68 +1,57 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=======================================
-Timestamp: 2026-03-31 03:38:45 (Asia/Bangkok)
+TRADING DASHBOARD MONITOR SUMMARY
+===================================
+Timestamp: 2026-03-31 05:56:30 (Asia/Bangkok)
 
 SYSTEM STATUS:
-✅ Dashboard operational at http://localhost:5001/
-✅ Last analysis: 2026-03-31T02:42:53.262120
-✅ Capital: $250.00
-✅ Trading pairs: BTC/USD, ETH/USD
-⚠️ Mode: SIMULATION (API credentials needed for real trading)
+✅ Dashboard active on http://localhost:5001/
+✅ Last analysis: 2026-03-31 05:43:18
+✅ Next analysis due: ~06:43:18
+✅ Status: Running
+✅ API Mode: Simulation (real trading requires credentials)
 
-CURRENT MARKET PRICES:
-• BTC/USD: $66,510.00
-• ETH/USD: $2,020.26
+CAPITAL & RISK:
+- Total Capital: $250.00
+- Stop Loss: 5.0%
+- Take Profit: 10.0%
+- Max trades/day: 2
+- Trading pairs: BTC/USD, ETH/USD
 
-TRADING ACTIVITY:
-• Total trades: 10
-• Stop-loss triggers: 8 (5% threshold breached)
-• Take-profit triggers: 0
-• Daily limit: 2 trades (10 trades executed - EXCEEDED)
+ACTIVE POSITIONS (4):
+1. ETH/USD @ $2,325.28 (13:39:49) - LOSS: -12.66% 🚨 STOP-LOSS TRIGGERED
+2. ETH/USD @ $2,193.60 (00:33:02) - LOSS: -7.42% 🚨 STOP-LOSS TRIGGERED  
+3. BTC/USD @ $67,247.51 (21:29:41) - LOSS: -0.80% ⚠️ WATCH
+4. ETH/USD @ $2,052.38 (21:29:42) - LOSS: -1.05% ⚠️ WATCH
+
+PORTFOLIO PERFORMANCE:
+- Total Value: $756.06
+- Capital Deployed: $250.00
+- Portfolio P&L: -$43.86 (-5.5%)
+- ETH Exposure: 75.0% (HIGH CONCENTRATION RISK)
+- BTC Exposure: 25.0%
 
 CRITICAL ALERTS:
-🚨 8 STOP-LOSS TRIGGERS ACTIVATED:
-  - BTC trades: -6.83% to -10.53% loss
-  - ETH trades: -7.90% to -13.12% loss
-  - All breaches exceed 5% stop-loss threshold
+🚨 2 ETH positions below stop-loss levels (5% threshold)
+🚨 High ETH concentration (75% > 70% threshold)
+⚠️ Both BTC and ETH trading below support levels
+⚠️ Market appears bearish despite previous bullish sentiment
 
-🚨 SIGNIFICANT DRAWDOWN:
-  - BTC: -10.53% from peak ($74,332.65)
-  - ETH: -13.12% from peak ($2,325.28)
+CURRENT MARKET PRICES:
+- BTC/USD: $66,713.00 (below support: $66,784.00)
+- ETH/USD: $2,030.83 (below support: $2,033.63)
 
-🚨 DAILY TRADE LIMIT EXCEEDED:
-  - Limit: 2 trades/day
-  - Actual: 10 trades
+IMMEDIATE ACTIONS REQUIRED:
+1. Execute stop-loss on ETH positions immediately
+2. Verify stop-loss orders on exchange
+3. Reduce ETH concentration to <50%
+4. Monitor BTC position closely
+5. Consider activating hedging strategy (Binance shorts)
 
-RISK ASSESSMENT:
-1. Multiple stop-loss breaches (8/10 trades)
-2. Significant portfolio drawdown (10-13%)
-3. Trade limit violation
-4. System in simulation mode (no real capital at risk)
+STRATEGY OVERVIEW:
+- Name: Gemini_Longs_Binance_Shorts
+- Gemini (LONG): $35 per trade, max 2/day
+- Binance (SHORT): $9 per trade, max 1/day
+- Hedging: Binance shorts can hedge Gemini longs
 
-PERFORMANCE METRICS:
-• Total simulated loss: ~$125.00 (50% of capital)
-• Average loss per trade: ~12.5%
-• Worst trade: ETH/USD (-13.12%)
-• Best trade: BTC/USD (-6.83%)
-
-RECOMMENDATIONS:
-1. 🚨 If real trading: Execute stop-loss orders immediately
-2. Review trading strategy and entry timing
-3. Adjust stop-loss levels or position sizing
-4. Pause new entries until market stabilizes
-5. Implement trailing stop-loss for better risk management
-
-NEXT STEPS:
-• Next scheduled analysis: Hourly
-• Monitor support levels: BTC $66,258, ETH $2,015
-• Review market conditions before next trading window
-
-ALERT STATUS SUMMARY:
-🚨 CRITICAL: Multiple stop-loss triggers
-⚠️ WARNING: Significant drawdown
-⚠️ WARNING: Trade limit exceeded
-✅ System operational
-
-Logs Updated:
-• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+NEXT MONITORING: 06:56:30 (1 hour)
+RISK LEVEL: CRITICAL
+URGENCY: HIGH
