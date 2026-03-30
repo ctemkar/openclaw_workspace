@@ -1,62 +1,80 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Timestamp: 2026-03-31 00:37:00 (Asia/Bangkok)
+Monitoring Time: 2026-03-31 01:21:45 (Asia/Bangkok)
+Job ID: trading_dashboard_monitor (cron:8200f3fa-346e-4003-9c64-21968b3bd930)
 
 SYSTEM STATUS:
-• Web Dashboard: RUNNING on port 5001
-• Last Analysis: 2026-03-31T00:32:02 (5 minutes ago)
+• Dashboard: Accessible (http://localhost:5001/)
+• Status: Running
+• Last Analysis: 33 minutes ago (2026-03-31T00:48:41.698451)
 • Analysis Schedule: Hourly
 • Trading Pairs: BTC/USD, ETH/USD
 
-CRITICAL ISSUES IDENTIFIED:
-1. 🚨 Python Runtime Error: TOTAL_CAPITAL variable not defined
-   - Location: conservative_crypto_trading.py line 306
-   - Impact: Analysis cannot complete
-   - Fix: Add "TOTAL_CAPITAL = 250.0" to configuration section
+DATA INCONSISTENCIES DETECTED:
+1. Capital Reporting:
+   - HTML: $250 ($200 Gemini + $50 Binance)
+   - Status endpoint: $250.00
+   - Summary endpoint: $1000 (SANDBOX mode)
+   - Discrepancy: $1000 vs $250
 
-2. 🚨 Data Inconsistency: Capital amount mismatch
-   - Dashboard HTML: $100
-   - Status endpoint: $250
-   - Fix: Update dashboard HTML to show $250
+2. Max Trades Parameter:
+   - HTML: 5 total (3 Gemini + 2 Binance)
+   - Status: 2 max trades per day
+   - Strategy: 2 Gemini + 1 Binance = 3 total
 
-3. 🚨 Strategy Missing: /strategy endpoint returns error
-   - Error: "No strategy file found"
-   - Fix: Create strategy file or implement strategy generation
-
-4. 🚨 Stop-loss Execution Unverified
-   - Multiple positions likely exceed 5% stop-loss threshold
-   - No evidence of stop-loss triggers in trade data
-   - Action: Verify stop-loss order execution
-
-5. 🚨 Position Tracking Missing
-   - No real-time P&L calculation
-   - Cannot determine active positions
-   - Fix: Implement position tracking system
+3. Trading Mode:
+   - Summary: SANDBOX (Simulated)
+   - Other endpoints: No mode indication
 
 TRADING ACTIVITY:
-• Total Trades: 10 (all BUY orders)
-• Last Trade: 21:29 (3+ hours ago)
-• Trade Pattern: Buying into downtrend
-• Price Trend: Decreasing (BTC: $74,308 → $67,247)
+• Total Historical Trades: 10
+• No new trades detected
+• Last trade: 4 hours 52 minutes ago (21:29)
+• Trade Stagnation: System appears inactive
 
-RISK ASSESSMENT:
-• Multiple positions likely underwater
-• Stop-loss thresholds likely exceeded
-• No sell trades or profit-taking visible
-• System trading blind without position tracking
+MARKET ANALYSIS:
+• Current BTC Price: $66,742 (+0.04% from last check)
+• Current ETH Price: $2,038.80 (+0.10% from last check)
+• System Signals: HOLD for both (20% BTC, 0% ETH confidence)
+• Trades Remaining Today: 2
 
-RECOMMENDED IMMEDIATE ACTIONS:
-1. Fix Python error by adding TOTAL_CAPITAL = 250.0
-2. Verify stop-loss order execution
-3. Reconcile capital data ($100 vs $250)
-4. Create strategy file for /strategy endpoint
-5. Consider pausing trading until issues resolved
+🚨 CRITICAL RISK ALERTS:
 
-SYSTEM HEALTH: POOR 🚨
-Multiple critical failures require immediate attention.
+1. STOP-LOSS VIOLATIONS: 8/10 positions exceed 5% stop-loss
+   • 3 positions exceed 10% loss threshold
+   • 6 positions exceed 7% stop-loss
+   • Average loss across all positions: 7.7%
 
-Monitoring logs saved to:
-• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+2. HIGH-RISK POSITIONS:
+   • Gemini BTC @ ~$74,308: 10.2% loss (4 positions)
+   • BTC @ $74,094.64: 10.0% loss
+   • BTC @ $71,386.00: 6.5% loss
+   • ETH @ $2,325.28: 12.3% loss
+   • ETH @ $2,193.60: 7.1% loss
 
-Next monitoring check: 01:37:00
+3. SYSTEM ISSUES:
+   • Appears stuck in SANDBOX mode
+   • No trading activity for 4+ hours
+   • Data inconsistencies across endpoints
+   • Risk management not enforcing stop-losses
+
+ESTIMATED FINANCIAL IMPACT:
+• On $1000 capital: ~$77 unrealized loss
+• On $250 capital: ~$19.25 unrealized loss
+• Risk of further losses if market declines
+
+IMMEDIATE ACTION REQUIRED:
+1. Manual intervention to close positions exceeding 10% loss (3 positions)
+2. Verify if system is actually trading or stuck in simulation
+3. Reconcile data inconsistencies
+4. Review trading strategy performance
+
+LOGS UPDATED:
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+NEXT MONITORING:
+• Scheduled: 5 minutes
+• Critical threshold: Any position exceeding 15% loss
+
+ALERT STATUS: CRITICAL - IMMEDIATE HUMAN INTERVENTION RECOMMENDED

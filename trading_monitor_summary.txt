@@ -1,33 +1,73 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Monitoring Time: 2026-03-31 00:18:52 (Asia/Bangkok)
-Dashboard Status: RUNNING (Port 5001)
+Monitoring Time: 2026-03-31 01:33:41 (Asia/Bangkok)
+Dashboard Status: ACTIVE (http://localhost:5001/)
 
-KEY FINDINGS:
-1. 🚨 CRITICAL: 8 out of 10 positions exceed 5% stop-loss threshold
-2. 🚨 CRITICAL: Maximum drawdown of 11.70% on ETH position
-3. 🚨 CRITICAL: Capital discrepancy ($100 vs $250 vs $1000)
-4. ⚠️ WARNING: No evidence of stop-loss execution
-5. ⚠️ WARNING: Position status unclear (active vs historical)
+SYSTEM STATUS:
+-------------
+• Dashboard: Running
+• Last Analysis: 2026-03-31T00:48:41 (45 minutes ago)
+• Capital: $250 ($200 Gemini longs + $50 Binance shorts)
+• Risk Parameters: 5% stop-loss, 10% take-profit
+• Max trades/day: 2 total (system configured)
+• Mode: SANDBOX (Simulated trading)
+• Trading Pairs: BTC/USD, ETH/USD
 
-RISK ASSESSMENT:
-• Stop-loss triggers: 8 POSITIONS EXCEEDED
-• Take-profit triggers: 0 POSITIONS REACHED  
-• Data consistency: FAILED
-• System availability: PASSED
+CURRENT MARKET PRICES:
+---------------------
+• BTC/USD: $67,300.17
+• ETH/USD: $2,018.43
+
+ACTIVE TRADES ANALYSIS:
+----------------------
+Total Trades: 10 (4 Gemini model, 6 recent trades)
+
+CRITICAL ALERTS (4 STOP-LOSS TRIGGERS):
+---------------------------------------
+1. BTC/USD BUY @ $74,094.64 → Current: $67,300.17 → LOSS: -9.17% (STOP-LOSS TRIGGERED)
+2. ETH/USD BUY @ $2,325.28 → Current: $2,018.43 → LOSS: -13.20% (STOP-LOSS TRIGGERED)
+3. BTC/USD BUY @ $71,386.00 → Current: $67,300.17 → LOSS: -5.72% (STOP-LOSS TRIGGERED)
+4. ETH/USD BUY @ $2,193.60 → Current: $2,018.43 → LOSS: -7.99% (STOP-LOSS TRIGGERED)
+
+ACTIVE POSITIONS (2):
+-------------------
+1. BTC/USD BUY @ $67,247.51 → Current: $67,300.17 → GAIN: +0.08% (ACTIVE)
+2. ETH/USD BUY @ $2,052.38 → Current: $2,018.43 → LOSS: -1.65% (ACTIVE)
+
+PORTFOLIO DRAWDOWN ANALYSIS:
+---------------------------
+• BTC Average Entry: $70,909.38 → Current: $67,300.17 → DRAWDOWN: -5.09%
+• ETH Average Entry: $2,190.42 → Current: $2,018.43 → DRAWDOWN: -7.85%
+
+MARKET CONDITIONS:
+-----------------
+• System Analysis: Neutral market conditions
+• BTC Signal: HOLD (20% confidence)
+• ETH Signal: HOLD (0% confidence)
+• Trades remaining today: 2
+
+STRATEGY OVERVIEW:
+-----------------
+• Name: Gemini_Longs_Binance_Shorts
+• Gemini (LONG): Execute if price near support, RSI < 40, trend bullish
+• Binance (SHORT): Execute if price near resistance, RSI > 60, trend bearish
+• Hedging: Binance shorts can hedge Gemini longs during downturns
+
+LOGGING STATUS:
+--------------
+• Monitoring Log: Updated at /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts: Logged at /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Completed Trades: 10 trades in /Users/chetantemkar/.openclaw/workspace/app/completed_trades.json
 
 RECOMMENDED ACTIONS:
-1. IMMEDIATE: Pause all trading activity
-2. IMMEDIATE: Execute stop-loss orders for positions >5% loss
-3. IMMEDIATE: Verify capital amount and position status
-4. SHORT-TERM: Implement real-time P&L tracking
-5. SHORT-TERM: Add data validation between endpoints
+-------------------
+1. VERIFY stop-loss execution in live trading (system shows SANDBOX mode)
+2. REVIEW trading strategy given current bearish market conditions
+3. CONSIDER reducing position sizes or adjusting stop-loss thresholds
+4. CHECK system transition from SANDBOX to LIVE mode if intended
+5. MONITOR for execution errors in trade logs
 
-ALERT STATUS: CRITICAL - REQUIRES IMMEDIATE ATTENTION
+NEXT MONITORING: Recommended within 30 minutes due to critical alerts
 
-Files Updated:
-• trading_monitoring.log - Complete monitoring report
-• critical_alerts.log - Updated with latest findings
-• trading_monitor_summary.txt - This summary
-
-Next Check: 2026-03-31 01:18:52 (Asia/Bangkok)
+ALERT SEVERITY: MEDIUM-HIGH ⚠️
+ACTION REQUIRED: Within next trading session

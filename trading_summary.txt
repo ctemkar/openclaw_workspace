@@ -1,26 +1,115 @@
-============================================================
-CONSERVATIVE CRYPTO TRADING SUMMARY
-============================================================
-Date: 2026-03-31 00:48:39
-Capital: $1000
-Risk Parameters: 5% stop-loss, 10% take-profit
-Max trades per day: 2
-Mode: SANDBOX (Simulated)
+TRADING ANALYSIS REPORT
+Generated: 2026-03-31 01:42:50.050751
+==================================================
 
-No trades executed in this session.
-MARKET ANALYSIS:
-----------------------------------------
-BTC/USD:
-  Price: $67300.17
-  Signal: HOLD (confidence: 20.00%)
-  Analysis: Neutral market conditions: score=-20
-ETH/USD:
-  Price: $2018.43
-  Signal: HOLD (confidence: 0.00%)
-  Analysis: Neutral market conditions: score=0
+======================================================================
+CONSERVATIVE CRYPTO TRADING SYSTEM
+======================================================================
+Execution Time: 2026-03-31 01:42:45 (UTC+7)
+Capital: $250.00
+Risk Management: 5.0% SL, 10.0% TP
+Position Size: Max 50.0% of capital
+Daily Limit: 2 trades
+API Mode: SIMULATION
+======================================================================
 
-RECOMMENDATION:
+1️⃣  MARKET DATA ANALYSIS
 ----------------------------------------
-Trades remaining today: 2
-Continue monitoring for strong signals with >60% confidence.
-============================================================
+📊 Fetching real-time market data...
+✅ BTC/USD: $66,660.91
+✅ ETH/USD: $2,034.87
+✅ BTC 24h Volume: $19,739,962
+✅ ETH 24h Volume: $9,251,667
+
+2️⃣  SUPPORT/RESISTANCE LEVELS
+----------------------------------------
+✅ BTC Support: $66,667.14
+✅ BTC Resistance: $66,669.56
+✅ ETH Support: $2,034.97
+✅ ETH Resistance: $2,035.11
+
+3️⃣  MARKET SENTIMENT
+----------------------------------------
+✅ Market Sentiment: BULLISH
+
+4️⃣  TRADING ANALYSIS
+----------------------------------------
+✅ Trading Signal: BUY
+✅ Reason: Price within 1% of support ($66667.14)
+
+5️⃣  TRADE EXECUTION
+----------------------------------------
+🎯 TRADE RECOMMENDATION FOUND!
+   Symbol: BTC/USD
+   Entry Price: $66,660.91
+   Position Size: 0.001875
+   Position Value: $125.00
+   Stop Loss: $63,327.86 (5.0%)
+   Take Profit: $73,327.00 (10.0%)
+   Risk/Reward: 1:2.0
+
+🔧 SIMULATED TRADE EXECUTION
+   To execute real trades:
+   1. Get Gemini API credentials from gemini.com
+   2. Set environment variables:
+      export GEMINI_API_KEY='your_api_key'
+      export GEMINI_API_SECRET='your_api_secret'
+   3. Run this script again
+
+======================================================================
+FINAL TRADING SUMMARY
+======================================================================
+
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+====================================
+Analysis Time: 2026-03-31 01:42:50 (UTC+7)
+
+MARKET DATA:
+• BTC/USD: $66,660.91
+• ETH/USD: $2,034.87
+• BTC 24h Volume: $19,739,962
+• ETH 24h Volume: $9,251,667
+• Market Sentiment: BULLISH
+
+SUPPORT/RESISTANCE:
+• BTC Support: $66,667.14
+• BTC Resistance: $66,669.56
+• ETH Support: $2,034.97
+• ETH Resistance: $2,035.11
+
+TRADING DECISION: BUY
+Reason: Price within 1% of support ($66667.14)
+
+TRADE RECOMMENDATION:
+• Symbol: BTC/USD
+• Action: BUY
+• Entry Price: $66,660.91
+• Position Size: 0.001875
+• Position Value: $125.00
+• Stop Loss: $63,327.86 (5.0%)
+• Take Profit: $73,327.00 (10.0%)
+• Risk/Reward Ratio: 1:2.0
+
+EXECUTION STATUS: SIMULATED - API credentials needed
+
+RISK MANAGEMENT PARAMETERS:
+• Capital: $250.00
+• Max Position Size: 50.0% of capital
+• Stop Loss: 5.0%
+• Take Profit: 10.0%
+• Max Daily Trades: 2
+• Strategy: Conservative support-based trading
+
+NEXT STEPS:
+1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
+2. Run analysis again in 6-12 hours
+3. Review market conditions before next trading window
+4. Never risk more than 5% of capital per trade
+
+END OF ANALYSIS
+====================================
+
+
+======================================================================
+SUMMARY READY FOR CRON DELIVERY
+======================================================================

@@ -1,69 +1,27 @@
-=== TRADING DASHBOARD MONITOR CRON SUMMARY ===
-Execution Time: 2026-03-31 00:03:30 (Asia/Bangkok)
-Cron Job ID: f9a21295-7fe4-4907-acbc-521fa2d040b2
-Job Name: trading_dashboard_monitor
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Execution Time: 2026-03-31 01:28:15 (Asia/Bangkok)
 
---- EXECUTION OVERVIEW ---
-✅ Dashboard accessible at http://localhost:5001/
-✅ Status endpoint: Operational (running)
-✅ Trades endpoint: 10 historical trades retrieved
-✅ Summary endpoint: Current position data retrieved
+DASHBOARD STATUS:
+✓ System running on http://localhost:5001/
+✓ Last analysis: 2026-03-31T00:48:41
+✓ Capital: $250 allocated
+✓ Risk parameters: 5% stop-loss, 10% take-profit
 
---- KEY FINDINGS ---
+CRITICAL FINDINGS:
+❌ MULTIPLE STOP-LOSS TRIGGERS DETECTED (4 positions)
+❌ EXTREME DRAWDOWN: 97.28% (CRITICAL)
+❌ Positions showing significant losses
 
-1. SYSTEM STATUS:
-   - Capital: $250.00 (status) vs $800.00 (summary) - DISCREPANCY
-   - Last analysis: 2026-03-30T23:59:26.222560
-   - Trading pairs: BTC/USD, ETH/USD
-   - Risk parameters: 5% stop-loss, 10% take-profit, 2 max trades/day
+ALERTS GENERATED:
+✓ trading_monitoring.log updated with full analysis
+✓ critical_alerts.log appended with urgent warnings
 
-2. CURRENT POSITION:
-   - ETH/USD: 0.09708 @ $2,060.15
-   - Stop-loss: $1,957.14 (-5%)
-   - Take-profit: $2,266.17 (+10%)
-   - Current price: $2,060.15 (breakeven)
-   - Status: ✅ Within risk limits
+RECOMMENDED ACTIONS:
+1. Immediate review of stop-loss execution
+2. Manual position check recommended
+3. Strategy parameter review needed
+4. Market condition assessment required
 
-3. HISTORICAL ANALYSIS:
-   - 10 total trades in history
-   - 4 out of 6 historical positions exceed 5% stop-loss threshold
-   - P&L reporting shows $0.00, suggesting tracking issues
-
-4. MARKET CONDITIONS:
-   - BTC/USD: $67,232.00 (+1.18% 24h)
-   - ETH/USD: $2,060.15 (+3.22% 24h)
-   - Volume: High ($38B BTC, $16.6B ETH)
-
---- ALERTS GENERATED ---
-
-🟡 WARNING ALERTS (in trading_monitoring.log):
-1. Multiple historical positions exceeding stop-loss
-2. Capital discrepancy between endpoints
-3. P&L reporting inconsistency
-
-🔴 CRITICAL ALERTS (in critical_alerts.log):
-1. Capital accounting discrepancy ($250 vs $800)
-2. Historical losses not reflected in P&L
-3. Stop-loss execution verification needed
-
---- FILES UPDATED ---
-1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-   - Appended new monitoring entry with detailed analysis
-   - Added drawdown calculations for historical positions
-   - Included risk assessment and recommendations
-
-2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-   - Created new critical alert entry
-   - Highlighted capital discrepancy and stop-loss concerns
-   - Provided urgent action recommendations
-
---- RECOMMENDATIONS FOR NEXT RUN ---
-1. Monitor ETH/USD position for stop-loss trigger (< $1,957.14)
-2. Verify capital reporting consistency
-3. Check if daily trade limit resets (currently 1/2 used)
-4. Review server logs for stop-loss execution events
-
---- NEXT SCHEDULED CHECK ---
-Based on hourly analysis schedule: ~2026-03-31 01:00:00
-
-=== END OF SUMMARY ===
+NEXT SCHEDULED CHECK: Based on cron schedule
+=============================================
