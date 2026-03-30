@@ -169,3 +169,4 @@ Server running at http://localhost:5001
 127.0.0.1 - - [30/Mar/2026 22:50:05] "GET /trades HTTP/1.1" 200 -
 127.0.0.1 - - [30/Mar/2026 22:50:09] "GET /summary HTTP/1.1" 200 -
 127.0.0.1 - - [30/Mar/2026 22:53:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 23:00:00] "GET / HTTP/1.1" 200 -

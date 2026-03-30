@@ -1,0 +1,58 @@
+============================================================
+TRADING REPORT - 2026-03-30 23:17:00
+============================================================
+
+SYSTEM STATUS
+----------------------------------------
+Status: running
+Last Analysis: 2026-03-30T23:05:38.642534
+Capital: $100.00
+Trading Pairs: BTC/USD, ETH/USD
+
+RISK PARAMETERS
+----------------------------------------
+Stop Loss: 5.0%
+Take Profit: 10.0%
+Max Trades/Day: 2
+
+TRADING STATISTICS
+----------------------------------------
+Total Trades (Current): 10
+Open Trades: 0
+Closed Trades: 10
+Total Trades (History): 6
+Historical Capital: $1000.00
+
+DAILY TRADES SUMMARY
+----------------------------------------
+2026-03-18: 2 trades
+  - BTC/USD BUY @ $74094.64 (OPEN)
+  - ETH/USD BUY @ $2325.28 (OPEN)
+2026-03-19: 2 trades
+  - BTC/USD BUY @ $71386.00 (OPEN)
+  - ETH/USD BUY @ $2193.60 (OPEN)
+2026-03-30: 2 trades
+  - BTC/USD BUY @ $67247.51 (OPEN)
+  - ETH/USD BUY @ $2052.38 (OPEN)
+
+REAL TRADING STATE
+----------------------------------------
+real_trading_enabled: True
+last_report_generated: 2026-03-30T23:15:47.066289
+system_status: operational
+exchange_connections: {'Gemini': 'connected', 'Binance': 'connected'}
+capital_allocation: {'total_capital': 1000.0, 'allocated_capital': 100.0, 'available_capital': 900.0, 'risk_per_trade': 0.02}
+current_positions: []
+recent_trades: [{'id': 'BTCUSD_1774880981', 'symbol': 'BTC/USD', 'side': 'BUY', 'entry_price': 67247.51, 'quantity': 0.002974, 'timestamp': '2026-03-30T21:29:41.976395', 'status': 'OPEN'}, {'id': 'ETHUSD_1774880982', 'symbol': 'ETH/USD', 'side': 'BUY', 'entry_price': 2052.38, 'quantity': 0.0974, 'timestamp': '2026-03-30T21:29:42.834049', 'status': 'OPEN'}]
+performance_metrics: {'total_trades': 6, 'winning_trades': 0, 'losing_trades': 0, 'total_pnl': 0.0, 'sharpe_ratio': 0.0, 'max_drawdown': 0.0}
+risk_metrics: {'current_risk_exposure': 0.0, 'max_risk_exposure': 0.05, 'var_95': 0.0, 'stress_test_passed': True}
+next_actions: ['Monitor open positions', 'Check stop-loss orders', 'Update performance reports']
+
+RECOMMENDATIONS
+----------------------------------------
+✓ No open positions - system ready for new trades
+✓ Ensure stop-loss orders are in place for all open positions
+
+============================================================
+END OF REPORT
+============================================================

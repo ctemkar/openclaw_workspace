@@ -1,0 +1,24 @@
+{
+  "trading_mode": "REAL",
+  "activated_at": "2026-03-30T23:36:15.718928",
+  "capital_allocation": {
+    "total": 250.0,
+    "gemini": 200.0,
+    "binance": 50.0
+  },
+  "trading_pairs": {
+    "gemini": [
+      "BTC/USD",
+      "ETH/USD"
+    ],
+    "binance": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ]
+  },
+  "risk_parameters": {
+    "stop_loss": 0.05,
+    "take_profit": 0.1,
+    "max_daily_trades": 2
+  }
+}

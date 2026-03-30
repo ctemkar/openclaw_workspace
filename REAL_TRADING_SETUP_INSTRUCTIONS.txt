@@ -1,0 +1,53 @@
+
+    REAL TRADING SETUP - $250 CAPITAL
+    
+    CURRENT STATUS: API Keys Not Configured
+    
+    STEP 1: CONFIGURE BINANCE API KEYS
+    -----------------------------------
+    1. Log in to Binance.com
+    2. Go to API Management
+    3. Create new API key with these permissions:
+       - Enable Reading
+       - Enable Spot & Margin Trading
+    4. Copy the API Key and Secret Key
+    5. Save them to:
+       /Users/chetantemkar/.openclaw/workspace/app/secure_keys/.binance_key
+       /Users/chetantemkar/.openclaw/workspace/app/secure_keys/.binance_secret
+    
+    STEP 2: CONFIGURE GEMINI API KEYS
+    ---------------------------------
+    1. Log in to Gemini.com
+    2. Go to Settings → API
+    3. Create new API key with 'Trader' role
+    4. Copy the API Key and Secret Key
+    5. Save them to:
+       /Users/chetantemkar/.openclaw/workspace/app/secure_keys/.gemini_key
+       /Users/chetantemkar/.openclaw/workspace/app/secure_keys/.gemini_secret
+    
+    STEP 3: VERIFY BALANCES
+    -----------------------
+    • Binance: Should have $70+ USDT (you mentioned this)
+    • Gemini: Should have $200+ USD for conservative trading
+    
+    STEP 4: START TRADING
+    ---------------------
+    1. Run: python3 conservative_crypto_trading.py
+    2. Monitor: http://127.0.0.1:5080
+    3. Check status: curl http://127.0.0.1:5001/status
+    
+    SECURITY NOTES:
+    • Never share API keys
+    • Use IP whitelisting
+    • Start with small amounts
+    • Monitor regularly
+    
+    FILES CREATED:
+    1. minimal_trading_config.json - Trading configuration
+    2. simple_trading_monitor.py - Monitoring script
+    
+    NEED HELP?
+    • Check logs in workspace directory
+    • Verify API key permissions
+    • Test with small trade first
+    

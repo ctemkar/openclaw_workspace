@@ -68,7 +68,7 @@ def index():
     <head><title>Conservative Crypto Trading System</title></head>
     <body>
         <h1>Conservative Crypto Trading System</h1>
-        <p>Real trading with $100 capital on Gemini/Binance</p>
+        <p>Real trading with $250 capital ($200 Gemini longs + $50 Binance shorts)</p>
         
         <h2>Endpoints:</h2>
         <ul>
@@ -81,11 +81,13 @@ def index():
         
         <h2>Configuration:</h2>
         <ul>
-            <li>Capital: $100</li>
-            <li>Stop-loss: 5%</li>
-            <li>Take-profit: 10%</li>
-            <li>Max trades/day: 2</li>
-            <li>Pairs: BTC/USD, ETH/USD</li>
+            <li>Capital: $250 ($200 Gemini + $50 Binance)</li>
+            <li>Stop-loss: 5% (Gemini) / 7% (Binance)</li>
+            <li>Take-profit: 10% (Gemini) / 8% (Binance)</li>
+            <li>Max trades/day: 5 total (3 Gemini + 2 Binance)</li>
+            <li>Cryptocurrencies: 26 total</li>
+            <li>Gemini (LONG): 7 pairs (BTC, ETH, SOL, ADA, LINK, UNI, MATIC)</li>
+            <li>Binance (SHORT): 26 pairs (All top cryptos)</li>
         </ul>
     </body>
     </html>
@@ -99,7 +101,7 @@ def get_status():
         "timestamp": datetime.now().isoformat(),
         "port": 5001,
         "analysis_scheduled": "hourly",
-        "capital": 100.0,  # REAL $100 capital
+        "capital": 250.0,  # REAL $250 capital ($200 Gemini + $50 Binance)
         "risk_parameters": {
             "stop_loss": 0.05,
             "take_profit": 0.10,

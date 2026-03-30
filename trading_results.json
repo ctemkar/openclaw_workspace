@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-03-30T23:30:15.856341",
+  "prices": {
+    "BTCUSD": {
+      "last": 67293.56,
+      "bid": 67303.91,
+      "ask": 67303.92,
+      "volume": 275.6198441,
+      "timestamp": "2026-03-30 23:30:13.493766"
+    },
+    "ETHUSD": {
+      "last": 2062.44,
+      "bid": 2062.52,
+      "ask": 2062.53,
+      "volume": 4601.682014,
+      "timestamp": "2026-03-30 23:30:14.546896"
+    }
+  },
+  "sentiment": {
+    "fear_greed": {
+      "value": 8,
+      "classification": "Extreme Fear"
+    },
+    "btc_dominance": 56.0345139264105,
+    "total_market_cap": 2402363722057.2305,
+    "total_volume": 87914140041.5632
+  },
+  "analyses": [
+    {
+      "pair": "BTCUSD",
+      "current_price": 67293.56,
+      "fear_greed": "8 (Extreme Fear)",
+      "signal": "BUY",
+      "reason": "Extreme Fear sentiment (8) - market likely oversold",
+      "risk_level": "LOW",
+      "recommended_action": "VERY_CONSERVATIVE_BUY"
+    },
+    {
+      "pair": "ETHUSD",
+      "current_price": 2062.44,
+      "fear_greed": "8 (Extreme Fear)",
+      "signal": "BUY",
+      "reason": "Extreme Fear sentiment (8) - market likely oversold",
+      "risk_level": "LOW",
+      "recommended_action": "VERY_CONSERVATIVE_BUY"
+    }
+  ],
+  "executed_trades": [
+    {
+      "timestamp": "2026-03-30T23:30:15.856316",
+      "pair": "BTCUSD",
+      "type": "BUY",
+      "entry_price": 67293.56,
+      "position_size": 0.000297,
+      "position_value": 20.0,
+      "stop_loss": 63928.882,
+      "take_profit": 74022.916,
+      "risk_reward_ratio": 2.0,
+      "analysis_reason": "Extreme Fear sentiment (8) - market likely oversold",
+      "status": "SIMULATED_EXECUTED",
+      "simulation": true
+    },
+    {
+      "timestamp": "2026-03-30T23:30:15.856331",
+      "pair": "ETHUSD",
+      "type": "BUY",
+      "entry_price": 2062.44,
+      "position_size": 0.0096,
+      "position_value": 20.0,
+      "stop_loss": 1959.318,
+      "take_profit": 2268.684,
+      "risk_reward_ratio": 2.0,
+      "analysis_reason": "Extreme Fear sentiment (8) - market likely oversold",
+      "status": "SIMULATED_EXECUTED",
+      "simulation": true
+    }
+  ],
+  "trades_today": 2,
+  "max_trades_per_day": 2
+}

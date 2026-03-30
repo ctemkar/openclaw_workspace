@@ -1,0 +1,83 @@
+{
+  "version": "quick_start_1.0",
+  "created": "2026-03-30T23:44:23.918778",
+  "cryptocurrencies": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "ADA",
+    "XRP",
+    "DOT",
+    "DOGE",
+    "AVAX",
+    "MATIC",
+    "LINK",
+    "UNI",
+    "LTC",
+    "ATOM",
+    "ETC",
+    "XLM",
+    "ALGO",
+    "VET",
+    "FIL",
+    "ICP",
+    "XTZ",
+    "EOS",
+    "AAVE",
+    "MKR",
+    "COMP",
+    "SNX",
+    "YFI"
+  ],
+  "capital": {
+    "total": 250.0,
+    "gemini": 200.0,
+    "binance": 50.0
+  },
+  "trading": {
+    "mode": "REAL",
+    "gemini_mode": "LONG",
+    "binance_mode": "SHORT",
+    "max_daily_trades": 5,
+    "scan_interval_minutes": 5
+  },
+  "pairs": {
+    "gemini": [
+      "BTC/USD",
+      "ETH/USD",
+      "SOL/USD",
+      "ADA/USD",
+      "MATIC/USD",
+      "LINK/USD",
+      "UNI/USD"
+    ],
+    "binance": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "ADA/USDT",
+      "XRP/USDT",
+      "DOT/USDT",
+      "DOGE/USDT",
+      "AVAX/USDT",
+      "MATIC/USDT",
+      "LINK/USDT",
+      "UNI/USDT",
+      "LTC/USDT",
+      "ATOM/USDT",
+      "ETC/USDT",
+      "XLM/USDT",
+      "ALGO/USDT",
+      "VET/USDT",
+      "FIL/USDT",
+      "ICP/USDT",
+      "XTZ/USDT",
+      "EOS/USDT",
+      "AAVE/USDT",
+      "MKR/USDT",
+      "COMP/USDT",
+      "SNX/USDT",
+      "YFI/USDT"
+    ]
+  }
+}
