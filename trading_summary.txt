@@ -1,66 +1,115 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-31 22:39:59 (UTC+7)
+TRADING ANALYSIS REPORT
+Generated: 2026-03-31 23:19:19.263305
+==================================================
 
-SYSTEM OVERVIEW:
-- Status: Running normally
-- Dashboard: Accessible at http://localhost:5001/
-- Last Analysis: 2026-03-31T22:19:09 (21 minutes ago)
-- Next Analysis: ~39 minutes (23:19 UTC+7)
+======================================================================
+CONSERVATIVE CRYPTO TRADING SYSTEM
+======================================================================
+Execution Time: 2026-03-31 23:19:14 (UTC+7)
+Capital: $250.00
+Risk Management: 5.0% SL, 10.0% TP
+Position Size: Max 50.0% of capital
+Daily Limit: 2 trades
+API Mode: SIMULATION
+======================================================================
 
-PERFORMANCE METRICS:
-- Current Capital: $533.75
-- Total PnL: -$2.92 (unrealized loss)
-- Open Positions: 8 (all on Binance)
-- Drawdown: 0.55% of capital
-- Overall Return: +113.50% from initial $250 capital
+1️⃣  MARKET DATA ANALYSIS
+----------------------------------------
+📊 Fetching real-time market data...
+✅ BTC/USD: $66,953.13
+✅ ETH/USD: $2,063.42
+✅ BTC 24h Volume: $28,952,983
+✅ ETH 24h Volume: $5,234,863
 
-RECENT CHANGES (since last check):
-- PnL Improvement: +$0.46 (+13.6%)
-- Capital Increase: +$0.15 (+0.03%)
-- Drawdown Decrease: -0.08% (from 0.63% to 0.55%)
+2️⃣  SUPPORT/RESISTANCE LEVELS
+----------------------------------------
+✅ BTC Support: $66,948.20
+✅ BTC Resistance: $66,954.88
+✅ ETH Support: $2,062.30
+✅ ETH Resistance: $2,062.58
 
-RISK ASSESSMENT:
-- Stop-loss Threshold: 5.0% ($26.69) - Current PnL at 10.9% of threshold
-- Take-profit Threshold: 10.0% ($53.38) - No profit to take
-- Critical Drawdown: 5.0% - Current at 0.55% (safe)
-- Position Concentration: 80% ETH/USD, 20% BTC/USD
+3️⃣  MARKET SENTIMENT
+----------------------------------------
+✅ Market Sentiment: NEUTRAL
 
-TRADING ACTIVITY:
-- Recent Trades: 5 total
-- Latest Trade: ETH/USD BUY at $2325.28 (13:39:49)
-- Trade Reason: Near support level $2308.08
-- No new trades since last check
+4️⃣  TRADING ANALYSIS
+----------------------------------------
+✅ Trading Signal: BUY
+✅ Reason: Price within 1% of support ($66948.2)
 
-MARKET ANALYSIS:
-- BTC/USD: $67,095.50
-- ETH/USD: $2,070.76
-- Market Sentiment: NEUTRAL
-- Trading Signal: BUY (Price within 1% of support)
+5️⃣  TRADE EXECUTION
+----------------------------------------
+🎯 TRADE RECOMMENDATION FOUND!
+   Symbol: BTC/USD
+   Entry Price: $66,953.13
+   Position Size: 0.001867
+   Position Value: $125.00
+   Stop Loss: $63,605.47 (5.0%)
+   Take Profit: $73,648.44 (10.0%)
+   Risk/Reward: 1:2.0
 
-TREND ANALYSIS:
-- PnL Trend: IMPROVING (13.6% improvement)
-- Capital Trend: SLIGHT RECOVERY (+0.03%)
-- Previous deterioration trend has reversed
-- Improvement rate: 0.7% PnL improvement per minute
+🔧 SIMULATED TRADE EXECUTION
+   To execute real trades:
+   1. Get Gemini API credentials from gemini.com
+   2. Set environment variables:
+      export GEMINI_API_KEY='your_api_key'
+      export GEMINI_API_SECRET='your_api_secret'
+   3. Run this script again
 
-CRITICAL ALERTS STATUS:
-✅ NO CRITICAL ALERTS DETECTED
-✅ No stop-loss triggers
-✅ No take-profit triggers
-✅ No critical drawdown
-✅ System operating within acceptable risk parameters
+======================================================================
+FINAL TRADING SUMMARY
+======================================================================
 
-WATCH ITEMS:
-⚠️ 8 open short positions exposed to market volatility
-⚠️ Heavy concentration in ETH/USD (80% of recent trades)
-⚠️ Unrealized losses still present (-$2.92)
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+====================================
+Analysis Time: 2026-03-31 23:19:19 (UTC+7)
 
-RECOMMENDATIONS:
-- Continue normal monitoring
-- Watch for continuation of PnL improvement trend
-- Monitor capital for continued stabilization
-- No immediate intervention required
+MARKET DATA:
+• BTC/USD: $66,953.13
+• ETH/USD: $2,063.42
+• BTC 24h Volume: $28,952,983
+• ETH 24h Volume: $5,234,863
+• Market Sentiment: NEUTRAL
 
-SUMMARY:
-The trading system is operating normally with positive performance trends. PnL has improved by 13.6% since the last check, and capital shows slight recovery. All risk parameters are within acceptable limits, and no critical alerts have been triggered. The system continues to maintain a significant overall return of +113.50% from initial capital.
+SUPPORT/RESISTANCE:
+• BTC Support: $66,948.20
+• BTC Resistance: $66,954.88
+• ETH Support: $2,062.30
+• ETH Resistance: $2,062.58
+
+TRADING DECISION: BUY
+Reason: Price within 1% of support ($66948.2)
+
+TRADE RECOMMENDATION:
+• Symbol: BTC/USD
+• Action: BUY
+• Entry Price: $66,953.13
+• Position Size: 0.001867
+• Position Value: $125.00
+• Stop Loss: $63,605.47 (5.0%)
+• Take Profit: $73,648.44 (10.0%)
+• Risk/Reward Ratio: 1:2.0
+
+EXECUTION STATUS: SIMULATED - API credentials needed
+
+RISK MANAGEMENT PARAMETERS:
+• Capital: $250.00
+• Max Position Size: 50.0% of capital
+• Stop Loss: 5.0%
+• Take Profit: 10.0%
+• Max Daily Trades: 2
+• Strategy: Conservative support-based trading
+
+NEXT STEPS:
+1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
+2. Run analysis again in 6-12 hours
+3. Review market conditions before next trading window
+4. Never risk more than 5% of capital per trade
+
+END OF ANALYSIS
+====================================
+
+
+======================================================================
+SUMMARY READY FOR CRON DELIVERY
+======================================================================

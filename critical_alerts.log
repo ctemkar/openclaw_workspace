@@ -1,32 +1,148 @@
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 22:57:14 (UTC+7)
+# CRITICAL ALERTS LOG
+# Timestamp: 2026-03-31T16:12:11.823628 (UTC)
+# Local Time: Tuesday, March 31, 2026 — 11:12 PM (+07)
 
-ALERT STATUS: NO CRITICAL ALERTS DETECTED
+## ALERT STATUS
+CRITICAL_ALERTS_DETECTED=NO
+STOP_LOSS_TRIGGERS=0
+TAKE_PROFIT_TRIGGERS=0
+CRITICAL_DRAWDOWN_ALERTS=0
 
-SYSTEM STATUS CHECK:
-✅ Dashboard accessible: Yes
-✅ System running: Yes
-✅ Capital available: $533.85
-✅ Risk parameters configured: Yes
+## RISK THRESHOLD ANALYSIS
+STOP_LOSS_THRESHOLD_PERCENT=5.0
+STOP_LOSS_THRESHOLD_AMOUNT=26.72
+CURRENT_PNL_PERCENT_OF_STOP_LOSS=10.7
+TAKE_PROFIT_THRESHOLD_PERCENT=10.0
+TAKE_PROFIT_THRESHOLD_AMOUNT=53.45
+CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
+CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
+CURRENT_DRAWDOWN_PERCENT=0.54
+DRAWDOWN_SAFETY_MARGIN_PERCENT=4.46
 
-RISK PARAMETER CHECKS:
-✅ Stop-loss (5%): NOT TRIGGERED (Current PnL: -$2.49, Threshold: -$26.69)
-✅ Take-profit (10%): NOT TRIGGERED (Current PnL: -$2.49, Threshold: +$53.38)
-✅ Critical drawdown (5%): NOT TRIGGERED (Current: 0.55%)
-✅ Position limits: Within limits (8 open positions)
-✅ Capital drawdown: Within limits (0.55% of capital)
+## PERFORMANCE TRENDS
+PNL_IMPROVEMENT_SINCE_LAST_CHECK=+$0.83 (+22.5%)
+CAPITAL_INCREASE_SINCE_LAST_CHECK=+$0.59 (+0.11%)
+DRAWDOWN_DECREASE_SINCE_LAST_CHECK=-0.01%
+TREND_DIRECTION=POSITIVE_IMPROVEMENT
 
-PERFORMANCE ALERTS:
-⚠️ WARNING: Unrealized losses present (-$2.49)
-⚠️ WARNING: Heavy position concentration in ETH/USD (80% of recent trades)
-⚠️ WARNING: 8 open short positions on Binance exposed to market volatility
+## WATCH ITEMS (NON-CRITICAL)
+WATCH_ITEM_1=8 open short positions exposed to market volatility
+WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
+WATCH_ITEM_3=Unrealized losses still present (-$2.86)
+WATCH_ITEM_4=No new trades in last 10+ hours
 
-RECOMMENDATIONS:
-- Continue normal monitoring
-- Watch for continuation of PnL improvement trend
-- Monitor capital for continued stabilization
-- No immediate intervention required
+## SYSTEM STATUS CHECK
+SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
+IMMEDIATE_INTERVENTION_REQUIRED=NO
+CONTINUE_NORMAL_MONITORING=YES
+PERFORMANCE_TREND=IMPROVING
 
-NEXT CHECK: Monitor for any changes in PnL exceeding 2% of capital or approaching stop-loss/take-profit thresholds.
+## END OF LOG - NO CRITICAL ALERTS DETECTED
 
-=== END OF CRITICAL ALERTS LOG ===
+# CRITICAL ALERTS LOG
+# Timestamp: 2026-03-31T16:14:24.867060 (UTC)
+# Local Time: Tuesday, March 31, 2026 — 11:14 PM (+07)
+
+## ALERT STATUS
+CRITICAL_ALERTS_DETECTED=NO
+STOP_LOSS_TRIGGERS=0
+TAKE_PROFIT_TRIGGERS=0
+CRITICAL_DRAWDOWN_ALERTS=0
+
+## RISK THRESHOLD ANALYSIS
+STOP_LOSS_THRESHOLD_PERCENT=5.0
+STOP_LOSS_THRESHOLD_AMOUNT=26.72
+CURRENT_PNL_PERCENT_OF_STOP_LOSS=13.8
+TAKE_PROFIT_THRESHOLD_PERCENT=10.0
+TAKE_PROFIT_THRESHOLD_AMOUNT=53.44
+CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
+CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
+CURRENT_DRAWDOWN_PERCENT=0.69
+DRAWDOWN_SAFETY_MARGIN_PERCENT=4.31
+
+## PERFORMANCE TRENDS (SINCE LAST CHECK)
+PNL_CHANGE=-$0.82 (-28.5% deterioration)
+CAPITAL_CHANGE=-$0.09 (-0.02% decrease)
+DRAWDOWN_CHANGE=+0.15% (worsening)
+TREND_DIRECTION=NEGATIVE_DETERIORATION
+
+## WATCH ITEMS (NON-CRITICAL BUT WORSENING)
+WATCH_ITEM_1=8 open short positions exposed to market volatility
+WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
+WATCH_ITEM_3=Unrealized losses increased to -$3.68
+WATCH_ITEM_4=No new trades in last 10+ hours
+WATCH_ITEM_5=PNL deterioration trend observed (-28.5% since last check)
+WATCH_ITEM_6=Drawdown increased to 0.69% (still safe but worsening)
+
+## SYSTEM STATUS CHECK
+SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
+IMMEDIATE_INTERVENTION_REQUIRED=NO
+CONTINUE_NORMAL_MONITORING=YES
+PERFORMANCE_TREND=DETERIORATING (monitor closely)
+
+## ALERT THRESHOLD STATUS
+STOP_LOSS_TRIGGER_DISTANCE=86.2% remaining (safe)
+TAKE_PROFIT_TRIGGER_DISTANCE=100% remaining (no profit)
+CRITICAL_DRAWDOWN_DISTANCE=86.2% remaining (safe)
+
+## RECOMMENDATIONS
+1. Continue monitoring for continued deterioration
+2. Watch for PnL approaching 50% of stop-loss threshold ($13.36)
+3. Monitor capital stability
+4. No immediate action required but increased vigilance needed
+
+## END OF LOG - NO CRITICAL ALERTS DETECTED BUT DETERIORATION TREND OBSERVED# CRITICAL ALERTS LOG
+# Timestamp: 2026-03-31T16:19:06.369285 (UTC)
+# Local Time: Tuesday, March 31, 2026 — 11:19 PM (+07)
+
+## ALERT STATUS
+CRITICAL_ALERTS_DETECTED=NO
+STOP_LOSS_TRIGGERS=0
+TAKE_PROFIT_TRIGGERS=0
+CRITICAL_DRAWDOWN_ALERTS=0
+
+## RISK THRESHOLD ANALYSIS
+STOP_LOSS_THRESHOLD_PERCENT=5.0
+STOP_LOSS_THRESHOLD_AMOUNT=26.69
+CURRENT_PNL_PERCENT_OF_STOP_LOSS=15.5
+TAKE_PROFIT_THRESHOLD_PERCENT=10.0
+TAKE_PROFIT_THRESHOLD_AMOUNT=53.38
+CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
+CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
+CURRENT_DRAWDOWN_PERCENT=0.77
+DRAWDOWN_SAFETY_MARGIN_PERCENT=4.23
+
+## PERFORMANCE TRENDS (SINCE LAST CHECK)
+PNL_CHANGE=-$0.45 (-12.2% deterioration)
+CAPITAL_CHANGE=-$0.60 (-0.11% decrease)
+DRAWDOWN_CHANGE=+0.08% (worsening)
+TREND_DIRECTION=NEGATIVE_DETERIORATION
+
+## WATCH ITEMS (NON-CRITICAL BUT WORSENING)
+WATCH_ITEM_1=8 open short positions exposed to market volatility
+WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
+WATCH_ITEM_3=Unrealized losses increased to -$4.13
+WATCH_ITEM_4=No new trades in last 10+ hours
+WATCH_ITEM_5=PNL deterioration trend continues (-12.2% since last check)
+WATCH_ITEM_6=Drawdown increased to 0.77% (still safe but worsening)
+WATCH_ITEM_7=Capital showing continued decline trend
+
+## SYSTEM STATUS CHECK
+SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
+IMMEDIATE_INTERVENTION_REQUIRED=NO
+CONTINUE_NORMAL_MONITORING=YES
+PERFORMANCE_TREND=DETERIORATING (monitor closely)
+
+## ALERT THRESHOLD STATUS
+STOP_LOSS_TRIGGER_DISTANCE=84.5% remaining (safe)
+TAKE_PROFIT_TRIGGER_DISTANCE=100% remaining (no profit)
+CRITICAL_DRAWDOWN_DISTANCE=84.6% remaining (safe)
+
+## RECOMMENDATIONS
+1. Continue monitoring for continued deterioration
+2. Watch for PnL approaching 25% of stop-loss threshold ($6.67)
+3. Monitor capital stability - decline trend observed
+4. Consider reviewing trading strategy if deterioration continues
+5. No immediate action required but increased vigilance needed
+
+## END OF LOG - NO CRITICAL ALERTS DETECTED BUT DETERIORATION TREND CONTINUES
