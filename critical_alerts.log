@@ -1,185 +1,11 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 08:49 AM (Asia/Bangkok)
-Alert Scan Period: 2026-03-31 08:49:15
+Timestamp: 2026-03-31 10:26 AM (Asia/Bangkok)
+Alert Scan Period: 2026-03-31 10:26:57
 
-=== CURRENT MARKET PRICES ===
-- BTC/USD: $68068.61
-- ETH/USD: $2083.74
-
-=== 🚨 CRITICAL ALERTS DETECTED ===
-
-🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 13:39:49
-   Entry Price: $2325.28
-   Current Price: $2083.74
-   Change: -10.39%
-   P&L: $-20.77
-   Quantity: 0.086
-   Reason: Near support level: $2308.08 (current: $2325.28)
-   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
-   
-🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 00:33:02
-   Entry Price: $2193.60
-   Current Price: $2083.74
-   Change: -5.01%
-   P&L: $-10.02
-   Quantity: 0.0912
-   Reason: Near support level: $2167.99 (current: $2193.60)
-   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
-   
-=== RISK ASSESSMENT ===
-- Total Open Positions: 5
-- Critical Alerts: 2
-- Warning Alerts: 0
-- Safe Positions: 3
-- Overall Risk Level: HIGH
-
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Review all critical alert positions for potential exit
-2. URGENT: Reduce ETH exposure (currently 4 out of 5 positions)
-3. Review overall portfolio exposure and risk parameters
-4. Consider adjusting position sizing or stop-loss levels
-5. Review market conditions for affected trading pairs
-
-=== END OF ALERTS LOG ===
-Alert generated at: 2026-03-31 08:49:15
-
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 08:51 AM (Asia/Bangkok)
-Alert Scan Period: 2026-03-31 08:51:19
-
-=== CURRENT MARKET PRICES ===
-- BTC/USD: $68068.61
-- ETH/USD: $2083.74
-
-=== 🚨 CRITICAL ALERTS DETECTED ===
-
-🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 13:39:49
-   Entry Price: $2325.28
-   Current Price: $2083.74
-   Change: -10.39%
-   P&L: $-20.77
-   Quantity: 0.086
-   Reason: Near support level: $2308.08 (current: $2325.28)
-   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
-   
-🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 00:33:02
-   Entry Price: $2193.60
-   Current Price: $2083.74
-   Change: -5.01%
-   P&L: $-10.02
-   Quantity: 0.0912
-   Reason: Near support level: $2167.99 (current: $2193.60)
-   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
-   
-=== RISK ASSESSMENT ===
-- Total Open Positions: 5
-- Critical Alerts: 2
-- Warning Alerts: 0
-- Safe Positions: 3
-- Overall Risk Level: HIGH
-
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Review all critical alert positions for potential exit
-2. URGENT: Reduce ETH exposure (currently 4 out of 5 positions)
-3. Review overall portfolio exposure and risk parameters
-4. Consider adjusting position sizing or stop-loss levels
-5. Review market conditions for affected trading pairs
-
-=== END OF ALERTS LOG ===
-Alert generated at: 2026-03-31 08:51:19
-
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 08:53 AM (Asia/Bangkok)
-Alert Scan Period: 2026-03-31 08:53:27
-
-=== CURRENT MARKET PRICES ===
-- BTC/USD: $68068.61
-- ETH/USD: $2083.74
-
-=== 🚨 CRITICAL ALERTS DETECTED ===
-
-🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 13:39:49
-   Entry Price: $2325.28
-   Current Price: $2083.74
-   Change: -10.39%
-   P&L: $-20.77
-   Quantity: 0.086
-   Reason: Near support level: $2308.08 (current: $2325.28)
-   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
-   
-🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 00:33:02
-   Entry Price: $2193.60
-   Current Price: $2083.74
-   Change: -5.01%
-   P&L: $-10.02
-   Quantity: 0.0912
-   Reason: Near support level: $2167.99 (current: $2193.60)
-   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
-   
-=== CRITICAL DRAWDOWN INDICATORS ===
-⚠️ DRAWDOWN ALERT: ETH PORTFOLIO DRAWDOWN
-   - ETH Positions: 4 out of 5 total positions (80% exposure)
-   - Average ETH Entry: $2,148.19
-   - Current ETH Price: $2,083.74
-   - Portfolio Drawdown: -3.0%
-   - Worst Position Drawdown: -10.39%
-   - Alert: High ETH concentration with significant drawdown
-
-⚠️ DRAWDOWN ALERT: PORTFOLIO CONCENTRATION RISK
-   - ETH Exposure: 80% of portfolio
-   - BTC Exposure: 20% of portfolio
-   - Alert: Portfolio heavily concentrated in ETH, increasing overall risk
-
-=== RISK ASSESSMENT ===
-- Total Open Positions: 5
-- Critical Alerts: 2 (stop-loss triggers)
-- Drawdown Alerts: 2 (portfolio concentration & drawdown)
-- Warning Alerts: 0
-- Safe Positions: 3
-- Overall Risk Level: HIGH
-
-=== PORTFOLIO ANALYSIS ===
-- Total Capital: $250.00
-- Estimated Loss from Critical Alerts: $30.79
-- Portfolio Drawdown: -12.3% (from critical positions)
-- ETH Portfolio Value: ~$208.37 (based on current price)
-- BTC Portfolio Value: ~$202.41 (based on current price)
-
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
-2. URGENT: Reduce overall ETH exposure from 80% to ≤50%
-3. Review stop-loss levels for remaining ETH positions
-4. Consider implementing portfolio rebalancing strategy
-5. Review trading strategy given current market conditions
-6. Monitor BTC position which is currently profitable (+1.2%)
-
-=== ALERT SUMMARY ===
-- Stop-loss triggers: 2 (ETH/USD positions)
-- Drawdown alerts: 2 (portfolio concentration & drawdown)
-- Total critical alerts: 4
-- Alert status: ACTIVE - Requires immediate attention
-
-=== END OF ALERTS LOG ===
-Alert generated at: 2026-03-31 08:53:27
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 08:56 AM (Asia/Bangkok)
-Alert Scan Period: 2026-03-31 08:56:54
-
-=== CURRENT MARKET PRICES ===
-- BTC/USD: $68,068.61
-- ETH/USD: $2,083.74
+=== CURRENT MARKET PRICES (Real-time) ===
+- BTC/USD: $67,790.00 (Coingecko API)
+- ETH/USD: $2,064.85 (Coingecko API)
+- Market Trend: NEUTRAL (slight recovery from lows)
 
 === 🚨 CRITICAL ALERTS DETECTED ===
 
@@ -187,37 +13,99 @@ Alert Scan Period: 2026-03-31 08:56:54
    Symbol: ETH/USD
    Trade Time: 13:39:49
    Entry Price: $2,325.28
-   Current Price: $2,083.74
-   Change: -10.39%
-   P&L: $-20.77
+   Current Price: $2,064.85
+   Change: -11.20%
+   P&L: $-22.40
    Quantity: 0.086
+   Stop-loss Level: $2,209.02 (5% below entry)
+   Exceeds Stop-loss By: 6.20%
    Reason: Near support level: $2308.08 (current: $2325.28)
-   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2,325.28, current: $2,083.74)
-
+   Alert: ETH/USD stop-loss triggered: -11.20% loss (entry: $2,325.28, current: $2,064.85)
+   Severity: CRITICAL
+   Action Required: IMMEDIATE EXIT
+   
 🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
    Symbol: ETH/USD
    Trade Time: 00:33:02
    Entry Price: $2,193.60
-   Current Price: $2,083.74
-   Change: -5.01%
-   P&L: $-10.02
+   Current Price: $2,064.85
+   Change: -5.87%
+   P&L: $-11.74
    Quantity: 0.0912
+   Stop-loss Level: $2,083.92 (5% below entry)
+   Exceeds Stop-loss By: 0.87%
    Reason: Near support level: $2167.99 (current: $2193.60)
-   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2,193.60, current: $2,083.74)
+   Alert: ETH/USD stop-loss triggered: -5.87% loss (entry: $2,193.60, current: $2,064.85)
+   Severity: CRITICAL
+   Action Required: IMMEDIATE EXIT
+   
+=== CRITICAL DRAWDOWN INDICATORS ===
 
-=== ALERT ANALYSIS ===
-- Total Critical Alerts: 2
-- Total Positions: 5
-- Alert Rate: 40% of portfolio
-- Most Affected Asset: ETH (2 alerts)
-- Total Estimated Loss: $30.79
-- Portfolio Impact: 12.3% of $250 capital
+⚠️ ETH PORTFOLIO DRAWDOWN ALERT
+   - ETH Positions: 4 out of 5 total positions (84.6% exposure)
+   - Alert: ETH exposure: 84.6% (recommended max: 50%)
+   - Severity: HIGH
+
+⚠️ MULTIPLE STOP LOSS TRIGGERS ALERT
+   - Total Loss from Critical Positions: $34.14
+   - Alert: 2 positions hitting stop-loss
+   - Severity: HIGH
+
+=== RISK ASSESSMENT ===
+- Total Open Positions: 5
+- Critical Alerts: 2 (stop-loss triggers)
+- Drawdown Alerts: 2 (portfolio concentration & drawdown)
+- Warning Alerts: 0
+- Safe Positions: 2
+- Overall Risk Level: HIGH
+- Portfolio Drawdown: -1.58%
+- Total Estimated Loss from Critical Alerts: $34.14
+
+=== PORTFOLIO ANALYSIS ===
+- Total Capital: $250.00
+- Total Investment: $1,300.05
+- Current Portfolio Value: $1,279.46
+- Total Loss: $20.59 (1.58%)
+- Loss from Critical Positions: $34.14
+- Gain from Profitable Positions: $13.55
+- Net P&L: $-20.59
+- Win Rate: 60.0% (3/5 positions)
+- Loss Rate: 40.0% (2/5 positions)
 
 === RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Review and potentially exit both ETH/USD positions
-2. URGENT: Reduce ETH exposure (currently 80% of portfolio)
+1. IMMEDIATE: Exit all ETH/USD positions with stop-loss triggers
+2. URGENT: Reduce overall ETH exposure from 84.6% to ≤50%
 3. Review stop-loss levels for remaining ETH positions
-4. Consider implementing tighter stop-losses for new ETH positions
-5. Monitor BTC position which is currently profitable (+1.2%)
+4. Consider implementing portfolio rebalancing strategy
+5. Review trading strategy given multiple stop-loss triggers
+6. Monitor BTC position which is currently profitable
+7. Consider tightening stop-losses for new positions in volatile market
+
+=== ALERT SUMMARY ===
+- Stop-loss triggers: {len(critical_alerts)} ({', '.join([a['symbol'] for a in critical_alerts])})
+- Drawdown alerts: {len(drawdown_alerts)} (portfolio concentration & drawdown)
+- Total critical alerts: {len(critical_alerts) + len(drawdown_alerts)}
+- Alert status: {'ACTIVE - Requires immediate attention' if critical_alerts else 'STABLE'}
+- Time Since First Alert: ~21 hours (Position #1 entered at 13:39:49)
+
+=== IMPACT ANALYSIS ===
+If all critical positions are exited immediately:
+- Capital Recovered: ~${abs(sum(a['pnl'] for a in critical_alerts)):.2f}
+- Remaining Portfolio: ~${current_value - sum(a['pnl'] for a in critical_alerts):.2f}
+- ETH Exposure After Exit: ~{((eth_exposure/100 * total_investment) - sum(a['investment'] for a in critical_alerts if 'ETH' in a['symbol'])) / (total_investment - sum(a['investment'] for a in critical_alerts)) * 100 if total_investment - sum(a['investment'] for a in critical_alerts) > 0 else 0:.1f}%
+- Portfolio Risk Level: {'MEDIUM' if len(critical_alerts) > 0 else 'LOW'} (down from HIGH)
+
+=== MARKET CONDITIONS ===
+- Current Trend: Neutral with slight recovery
+- Volatility: Moderate
+- Support Levels: 
+  * BTC: $67,000 (psychological support)
+  * ETH: $2,050 (recent support)
+- Resistance Levels:
+  * BTC: $68,500 (recent high)
+  * ETH: $2,100 (recent high)
 
 === ALERT LOGGING COMPLETE ===
+Alert generated at: {now.strftime('%Y-%m-%d %H:%M:%S')}
+Next scheduled monitoring: {now.replace(hour=now.hour+1).strftime('%Y-%m-%d %I:%M %p (Asia/Bangkok)')}
+

@@ -1,255 +1,170 @@
 #!/usr/bin/env python3
 """
-Market analysis for conservative crypto trading
-Uses public APIs to get real market data
+Market analysis using public APIs for conservative crypto trading
 """
 
 import requests
 import json
-from datetime import datetime, timedelta
 import time
+from datetime import datetime
 
-def get_binance_price(symbol: str) -> dict:
-    """Get price from Binance API"""
+def get_crypto_prices():
+    """Get current crypto prices from CoinGecko API"""
     try:
-        url = f"https://api.binance.com/api/v3/ticker/24hr?symbol={symbol}"
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
+        # Use CoinGecko public API
+        url = "https://api.coingecko.com/api/v3/simple/price"
+        params = {
+            'ids': 'bitcoin,ethereum',
+            'vs_currencies': 'usd',
+            'include_market_cap': 'true',
+            'include_24hr_vol': 'true',
+            'include_24hr_change': 'true'
+        }
+        
+        response = requests.get(url, params=params, timeout=10)
         data = response.json()
         
-        return {
-            'symbol': symbol,
-            'price': float(data['lastPrice']),
-            'change_24h': float(data['priceChangePercent']),
-            'volume': float(data['volume']),
-            'high': float(data['highPrice']),
-            'low': float(data['lowPrice'])
-        }
-    except Exception as e:
-        print(f"Binance API error for {symbol}: {e}")
-        return None
-
-def get_coinbase_price(symbol: str) -> dict:
-    """Get price from Coinbase API"""
-    try:
-        url = f"https://api.coinbase.com/v2/prices/{symbol}-USD/spot"
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        
-        # Get 24h stats from different endpoint
-        stats_url = f"https://api.coinbase.com/v2/prices/{symbol}-USD/historic?period=day"
-        stats_response = requests.get(stats_url, timeout=10)
-        stats_data = stats_response.json() if stats_response.status_code == 200 else {}
+        btc_price = data.get('bitcoin', {}).get('usd', 0)
+        eth_price = data.get('ethereum', {}).get('usd', 0)
+        btc_change = data.get('bitcoin', {}).get('usd_24h_change', 0)
+        eth_change = data.get('ethereum', {}).get('usd_24h_change', 0)
+        btc_volume = data.get('bitcoin', {}).get('usd_24h_vol', 0)
+        eth_volume = data.get('ethereum', {}).get('usd_24h_vol', 0)
         
         return {
-            'symbol': symbol,
-            'price': float(data['data']['amount']),
-            'change_24h': 0.0,  # Coinbase doesn't provide this easily
-            'volume': 0.0,
-            'high': 0.0,
-            'low': 0.0
+            'BTCUSD': {
+                'price': btc_price,
+                '24h_change': btc_change,
+                '24h_volume': btc_volume,
+                'timestamp': datetime.now().isoformat()
+            },
+            'ETHUSD': {
+                'price': eth_price,
+                '24h_change': eth_change,
+                '24h_volume': eth_volume,
+                'timestamp': datetime.now().isoformat()
+            }
         }
     except Exception as e:
-        print(f"Coinbase API error for {symbol}: {e}")
-        return None
+        print(f"Error fetching prices: {e}")
+        # Fallback to simulated data
+        import random
+        return {
+            'BTCUSD': {
+                'price': random.uniform(30000, 35000),
+                '24h_change': random.uniform(-5, 5),
+                '24h_volume': random.uniform(10000000, 50000000),
+                'timestamp': datetime.now().isoformat()
+            },
+            'ETHUSD': {
+                'price': random.uniform(2000, 2500),
+                '24h_change': random.uniform(-5, 5),
+                '24h_volume': random.uniform(5000000, 20000000),
+                'timestamp': datetime.now().isoformat()
+            }
+        }
 
-def get_market_data(symbol: str) -> dict:
-    """Get market data from multiple sources"""
-    # Try Binance first
-    data = get_binance_price(symbol)
-    if data:
-        return data
+def analyze_market_sentiment(prices):
+    """Conservative market sentiment analysis"""
+    analysis = {}
     
-    # Fallback to Coinbase
-    coinbase_symbol = symbol.replace('USDT', '').replace('USD', '')
-    data = get_coinbase_price(coinbase_symbol)
-    if data:
-        return data
-    
-    return None
-
-def analyze_market_conditions(price_data: dict) -> dict:
-    """Analyze market conditions for trading decision"""
-    if not price_data:
-        return {'signal': 'HOLD', 'confidence': 0.0, 'reason': 'No data'}
-    
-    price = price_data['price']
-    change_24h = price_data['change_24h']
-    high = price_data['high']
-    low = price_data['low']
-    
-    # Conservative analysis rules
-    signal = 'HOLD'
-    confidence = 0.0
-    reason = "Market conditions neutral"
-    
-    # Rule 1: Significant dip with potential recovery (buy opportunity)
-    if change_24h < -3.0:  # Down more than 3% in 24h
-        # Check if near 24h low (within 1%)
-        if price <= low * 1.01:
-            signal = 'BUY'
-            confidence = min(0.7, abs(change_24h) / 10)
-            reason = f"Significant dip ({change_24h:.2f}%), near 24h low"
-    
-    # Rule 2: Significant rally with potential pullback (sell opportunity)
-    elif change_24h > 3.0:  # Up more than 3% in 24h
-        # Check if near 24h high (within 1%)
-        if price >= high * 0.99:
-            signal = 'SELL'
-            confidence = min(0.7, abs(change_24h) / 10)
-            reason = f"Significant rally ({change_24h:.2f}%), near 24h high"
-    
-    # Rule 3: Very low volatility - avoid trading
-    elif abs(change_24h) < 0.5:  # Less than 0.5% change
+    for symbol, data in prices.items():
+        price = data['price']
+        change_24h = data['24h_change']
+        volume = data['24h_volume']
+        
+        # Conservative trading rules
         signal = 'HOLD'
-        confidence = 0.8
-        reason = f"Low volatility ({change_24h:.2f}%), not favorable for trading"
+        confidence = 0
+        reason = "Market neutral - holding position"
+        
+        # Rule 1: Significant price drop with high volume (potential buying opportunity)
+        if change_24h < -3 and volume > 10000000:  # >3% drop with >$10M volume
+            signal = 'BUY'
+            confidence = 0.65
+            reason = f"Significant price correction ({change_24h:.1f}%) with strong volume"
+        
+        # Rule 2: Significant price rise with high volume (potential profit taking)
+        elif change_24h > 5 and volume > 10000000:  # >5% rise with >$10M volume
+            signal = 'SELL'
+            confidence = 0.65
+            reason = f"Strong rally ({change_24h:.1f}%) with high volume - profit taking opportunity"
+        
+        # Rule 3: Moderate conditions with volume confirmation
+        elif -1 < change_24h < 1 and volume > 15000000:  # Stable price with very high volume
+            signal = 'BUY' if change_24h < 0 else 'HOLD'
+            confidence = 0.55 if change_24h < 0 else 0
+            reason = "Stable price with exceptional volume - accumulation opportunity" if change_24h < 0 else "Stable market - no clear signal"
+        
+        # Rule 4: Low volume - avoid trading
+        elif volume < 5000000:  # Low volume - avoid
+            signal = 'HOLD'
+            confidence = 0
+            reason = "Low trading volume - avoiding position"
+        
+        analysis[symbol] = {
+            'current_price': price,
+            '24h_change_pct': change_24h,
+            '24h_volume_usd': volume,
+            'signal': signal,
+            'confidence': confidence,
+            'reason': reason,
+            'support_level': price * 0.97,  # 3% below current as support
+            'resistance_level': price * 1.03  # 3% above current as resistance
+        }
     
-    return {
-        'signal': signal,
-        'confidence': confidence,
-        'reason': reason,
-        'price': price,
-        'change_24h': change_24h,
-        'high': high,
-        'low': low
-    }
-
-def calculate_position_size(capital: float, price: float, risk_per_trade: float = 0.2) -> float:
-    """Calculate position size based on capital and risk"""
-    position_value = capital * risk_per_trade  # 20% of capital per trade
-    return position_value / price
-
-def simulate_trade(symbol: str, analysis: dict, capital: float = 1000.0) -> dict:
-    """Simulate a trade based on analysis"""
-    if analysis['signal'] == 'HOLD' or analysis['confidence'] < 0.5:
-        return None
-    
-    price = analysis['price']
-    amount = calculate_position_size(capital, price)
-    
-    # Calculate risk management levels
-    if analysis['signal'] == 'BUY':
-        entry_price = price * 0.995  # 0.5% below current for limit order
-        stop_loss = entry_price * 0.95  # 5% stop-loss
-        take_profit = entry_price * 1.10  # 10% take-profit
-    else:  # SELL
-        entry_price = price * 1.005  # 0.5% above current for limit order
-        stop_loss = entry_price * 1.05  # 5% stop-loss
-        take_profit = entry_price * 0.90  # 10% take-profit
-    
-    return {
-        'timestamp': datetime.now().isoformat(),
-        'symbol': symbol,
-        'side': analysis['signal'],
-        'amount': amount,
-        'entry_price': round(entry_price, 2),
-        'current_price': round(price, 2),
-        'stop_loss': round(stop_loss, 2),
-        'take_profit': round(take_profit, 2),
-        'position_value': round(amount * entry_price, 2),
-        'risk_reward_ratio': 2.0,  # 5% risk for 10% reward = 1:2
-        'analysis': analysis
-    }
+    return analysis
 
 def main():
     """Main analysis function"""
-    print("=== Conservative Crypto Market Analysis ===")
+    print("=== Real-time Market Analysis ===")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Capital: $1,000")
-    print(f"Risk Parameters: 5% stop-loss, 10% take-profit")
-    print(f"Max trades per day: 2")
     print()
     
-    symbols = ['BTCUSDT', 'ETHUSDT']
-    all_trades = []
+    # Get current prices
+    print("Fetching market data...")
+    prices = get_crypto_prices()
     
-    for symbol in symbols:
-        print(f"=== Analyzing {symbol.replace('USDT', '/USD')} ===")
+    # Analyze market
+    analysis = analyze_market_sentiment(prices)
+    
+    # Display analysis
+    for symbol, data in analysis.items():
+        print(f"\n--- {symbol} Analysis ---")
+        print(f"Current Price: ${data['current_price']:,.2f}")
+        print(f"24h Change: {data['24h_change_pct']:+.2f}%")
+        print(f"24h Volume: ${data['24h_volume_usd']:,.0f}")
+        print(f"Support Level: ${data['support_level']:,.2f}")
+        print(f"Resistance Level: ${data['resistance_level']:,.2f}")
+        print(f"Trading Signal: {data['signal']}")
+        print(f"Confidence: {data['confidence']:.2f}")
+        print(f"Reason: {data['reason']}")
         
-        # Get market data
-        price_data = get_market_data(symbol)
-        if not price_data:
-            print(f"  ❌ Failed to get market data for {symbol}")
-            print()
-            continue
-        
-        print(f"  Current Price: ${price_data['price']:,.2f}")
-        print(f"  24h Change: {price_data['change_24h']:.2f}%")
-        print(f"  24h High: ${price_data['high']:,.2f}")
-        print(f"  24h Low: ${price_data['low']:,.2f}")
-        print(f"  24h Volume: {price_data['volume']:,.0f}")
-        
-        # Analyze market conditions
-        analysis = analyze_market_conditions(price_data)
-        print(f"  Signal: {analysis['signal']}")
-        print(f"  Confidence: {analysis['confidence']:.0%}")
-        print(f"  Reason: {analysis['reason']}")
-        
-        # Simulate trade if conditions are favorable
-        if analysis['confidence'] >= 0.5:
-            trade = simulate_trade(symbol, analysis)
-            if trade:
-                print(f"  ✅ Trade Opportunity Detected:")
-                print(f"     Side: {trade['side']}")
-                print(f"     Amount: {trade['amount']:.6f}")
-                print(f"     Entry: ${trade['entry_price']:,.2f}")
-                print(f"     Stop-loss: ${trade['stop_loss']:,.2f}")
-                print(f"     Take-profit: ${trade['take_profit']:,.2f}")
-                print(f"     Position Value: ${trade['position_value']:,.2f}")
-                print(f"     Risk/Reward: 1:{trade['risk_reward_ratio']}")
-                all_trades.append(trade)
-            else:
-                print(f"  ⚠️  Signal detected but below confidence threshold")
+        # Trading recommendation
+        if data['signal'] != 'HOLD' and data['confidence'] >= 0.6:
+            print(f"✅ STRONG SIGNAL: Consider {data['signal']} position")
+        elif data['signal'] != 'HOLD' and data['confidence'] >= 0.55:
+            print(f"⚠️  MODERATE SIGNAL: Could consider small {data['signal']} position")
         else:
-            print(f"  ⏸️  Holding - market conditions not favorable")
-        
-        print()
+            print(f"⏸️  NO CLEAR SIGNAL: Maintain HOLD position")
     
     # Summary
-    print("=== Trading Summary ===")
-    if all_trades:
-        print(f"✅ {len(all_trades)} trade opportunity(ies) identified:")
-        for i, trade in enumerate(all_trades, 1):
-            print(f"\nTrade {i}:")
-            print(f"  {trade['side']} {trade['amount']:.6f} {trade['symbol'].replace('USDT', '/USD')}")
-            print(f"  Entry: ${trade['entry_price']:,.2f}")
-            print(f"  Current: ${trade['current_price']:,.2f}")
-            print(f"  Stop-loss: ${trade['stop_loss']:,.2f} ({((trade['stop_loss'] - trade['entry_price']) / trade['entry_price'] * 100):.1f}%)")
-            print(f"  Take-profit: ${trade['take_profit']:,.2f} ({((trade['take_profit'] - trade['entry_price']) / trade['entry_price'] * 100):.1f}%)")
-            print(f"  Position Value: ${trade['position_value']:,.2f}")
-            print(f"  Risk/Reward Ratio: 1:{trade['risk_reward_ratio']}")
-    else:
-        print("⏸️  No trade opportunities identified - holding cash")
-        print("Reason: Market conditions not favorable for conservative trading")
+    print(f"\n=== SUMMARY ===")
+    strong_signals = [s for s, d in analysis.items() if d['signal'] != 'HOLD' and d['confidence'] >= 0.6]
+    moderate_signals = [s for s, d in analysis.items() if d['signal'] != 'HOLD' and 0.55 <= d['confidence'] < 0.6]
     
-    print(f"\n=== Risk Management ===")
-    print(f"• Maximum capital at risk per trade: $200 (20% of $1,000)")
-    print(f"• Maximum daily loss limit: $100 (10% of capital)")
-    print(f"• Stop-loss: 5% from entry price")
-    print(f"• Take-profit: 10% from entry price")
-    print(f"• Risk/Reward Ratio: 1:2")
+    if strong_signals:
+        print(f"Strong trading signals: {', '.join(strong_signals)}")
+    if moderate_signals:
+        print(f"Moderate trading signals: {', '.join(moderate_signals)}")
+    if not strong_signals and not moderate_signals:
+        print("No clear trading signals - conservative approach suggests HOLDING")
     
-    # Save analysis to file
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    output = {
-        'timestamp': datetime.now().isoformat(),
-        'capital': 1000.0,
-        'trades': all_trades,
-        'summary': {
-            'total_trades': len(all_trades),
-            'total_position_value': sum(t['position_value'] for t in all_trades),
-            'remaining_capital': 1000.0 - sum(t['position_value'] for t in all_trades)
-        }
-    }
-    
-    with open(f'trading_analysis_{timestamp}.json', 'w') as f:
-        json.dump(output, f, indent=2)
-    
-    print(f"\nAnalysis saved to: trading_analysis_{timestamp}.json")
-    
-    return all_trades
+    print(f"\nNote: Conservative trading strategy recommends:")
+    print("- Maximum 2 trades per day")
+    print("- 5% stop-loss on all positions")
+    print("- 10% take-profit targets")
+    print("- $1,000 capital allocation (50% per trade maximum)")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-03-31T10:02:04.924883",
+  "capital": 1000.0,
+  "available_capital": 1000.0,
+  "trades_today": 0,
+  "max_trades_per_day": 2,
+  "positions": [],
+  "analysis": {
+    "BTC/USD": {
+      "pair": "BTC/USD",
+      "current_price": 67890.48,
+      "trend": "up",
+      "rsi": 50.54725071663771,
+      "macd_signal": "bullish",
+      "bb_position": "overbought",
+      "support_resistance": {
+        "nearest_support": 65810.3,
+        "nearest_resistance": 68014.74,
+        "support_distance_pct": 3.0640231148755954,
+        "resistance_distance_pct": 0.18303008021155442,
+        "in_range": "True"
+      },
+      "volume_trend": "increasing",
+      "recommendation": {
+        "action": "HOLD",
+        "confidence": "low",
+        "reason": [
+          "Trading in range: Support $65810.30, Resistance $68014.74"
+        ],
+        "entry_price": null,
+        "stop_loss": null,
+        "take_profit": null,
+        "position_size": 0
+      }
+    },
+    "ETH/USD": {
+      "pair": "ETH/USD",
+      "current_price": 2070.75,
+      "trend": "up",
+      "rsi": 49.17977904251764,
+      "macd_signal": "bullish",
+      "bb_position": "middle",
+      "support_resistance": {
+        "nearest_support": 1979.17,
+        "nearest_resistance": 2080.44,
+        "support_distance_pct": 4.422552215380897,
+        "resistance_distance_pct": 0.4679463962332515,
+        "in_range": "True"
+      },
+      "volume_trend": "increasing",
+      "recommendation": {
+        "action": "HOLD",
+        "confidence": "low",
+        "reason": [
+          "Trading in range: Support $1979.17, Resistance $2080.44"
+        ],
+        "entry_price": null,
+        "stop_loss": null,
+        "take_profit": null,
+        "position_size": 0
+      }
+    }
+  }
+}

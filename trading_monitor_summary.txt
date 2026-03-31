@@ -1,106 +1,78 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Monitoring Time: Tuesday, March 31st, 2026 — 8:56 AM (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+Timestamp: 2026-03-31 10:12 AM (Asia/Bangkok)
+Monitoring Period: 2026-03-31 10:12:48
 
-SYSTEM STATUS
--------------
-• Status: Running
-• Capital: $250.00
-• Analysis Schedule: Hourly
-• Last Analysis: 2026-03-31T08:48:13.358163
-• Trading Pairs: BTC/USD, ETH/USD
+SYSTEM STATUS:
+✅ Dashboard running on http://localhost:5001/
+✅ Last analysis: 2026-03-31T10:08:42.745259
+✅ Capital: $250.00
+✅ Risk Parameters: 5% stop-loss, 10% take-profit
+✅ Max trades/day: 2
 
-RISK PARAMETERS
----------------
-• Max Trades Per Day: 2
-• Stop-loss: 5.0%
-• Take-profit: 10.0%
+PORTFOLIO ANALYSIS:
+📊 Total Positions: 5
+📊 ETH Positions: 4 (84.6% exposure)
+📊 BTC Positions: 1 (15.4% exposure)
+📊 Total Investment: $1,300.05
+📊 Current Value: $1,284.45
+📊 Total P&L: -$15.60 (-1.20%)
 
-TRADING ACTIVITY
-----------------
-Total Open Positions: 5 trades
+CRITICAL ALERTS DETECTED (2):
+🚨 ALERT #1: ETH/USD STOP-LOSS TRIGGERED
+   Position: ETH/USD #1 (13:39:49)
+   Loss: -10.82% (entry: $2,325.28, current: $2,073.66)
+   Exceeds stop-loss by: 5.82%
+   P&L: -$21.64
+   Action: IMMEDIATE EXIT REQUIRED
 
-Recent Trades:
-1. ETH/USD BUY at 13:39:49 - $2,325.28 (0.086 qty)
-2. ETH/USD BUY at 00:33:02 - $2,193.60 (0.0912 qty)  
-3. BTC/USD BUY at 21:29:41 - $67,247.51 (0.002974 qty)
-4. ETH/USD BUY at 21:29:42 - $2,052.38 (0.0974 qty)
-5. ETH/USD BUY at 07:24:00 - $2,021.51 (0.2474 qty)
+🚨 ALERT #2: ETH/USD STOP-LOSS TRIGGERED
+   Position: ETH/USD #2 (00:33:02)
+   Loss: -5.47% (entry: $2,193.60, current: $2,073.66)
+   Exceeds stop-loss by: 0.47%
+   P&L: -$10.94
+   Action: IMMEDIATE EXIT REQUIRED
 
-MARKET DATA
------------
-• BTC/USD: $68,068.61
-• ETH/USD: $2,083.74
-• BTC 24h Volume: $15,460,187
-• ETH 24h Volume: $9,250,732
-• Market Sentiment: BULLISH
+DRAWDOWN INDICATORS (3):
+⚠️ High ETH concentration: 84.6% exposure (recommended max: 50%)
+⚠️ Portfolio drawdown: -3.47% on ETH positions
+⚠️ Multiple stop-loss triggers: 2 out of 5 positions (40%)
 
-🚨 CRITICAL ALERTS DETECTED (2)
-----------------------------
-ALERT #1: ETH/USD STOP-LOSS TRIGGERED
-• Trade Time: 13:39:49
-• Entry Price: $2,325.28
-• Current Price: $2,083.74
-• Loss: -10.39% (exceeds 5% stop-loss)
-• Position Size: 0.086 ETH
-• P&L: -$20.77
-• Reason: Near support level: $2,308.08
+PERFORMANCE METRICS:
+📈 Win Rate: 60% (3/5 positions profitable)
+📉 Loss Rate: 40% (2/5 positions at stop-loss)
+💰 Average Win: +$5.66
+💸 Average Loss: -$16.29
+⚖️ Risk/Reward Ratio: 1:0.35 (unfavorable)
 
-ALERT #2: ETH/USD STOP-LOSS TRIGGERED  
-• Trade Time: 00:33:02
-• Entry Price: $2,193.60
-• Current Price: $2,083.74
-• Loss: -5.01% (at stop-loss threshold)
-• Position Size: 0.0912 ETH
-• P&L: -$10.02
-• Reason: Near support level: $2,167.99
+MARKET CONDITIONS:
+🌡️ BTC/USD: $67,921.00 (+1.00% from entry)
+🌡️ ETH/USD: $2,073.66 (mixed performance)
+📊 Market Sentiment: Neutral with slight recovery
+📈 Trend: BTC slightly bullish, ETH mixed
 
-RISK ASSESSMENT
----------------
-• Total Positions: 5
-• Critical Alerts: 2 (40% of portfolio)
-• Warning Alerts: 0
-• Safe Positions: 3
-• Overall Risk Level: HIGH
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
+2. URGENT: Reduce ETH exposure from 84.6% to ≤50%
+3. Review trading strategy given multiple stop-loss triggers
+4. Implement portfolio rebalancing
+5. Monitor BTC position (currently +1.00%)
 
-PORTFOLIO ANALYSIS
-------------------
-• ETH Exposure: 4 out of 5 positions (80%)
-• BTC Exposure: 1 out of 5 positions (20%)
-• Average ETH Entry: $2,148.19
-• Current ETH Price: $2,083.74 (-3.0% from average)
-• Average BTC Entry: $67,247.51
-• Current BTC Price: $68,068.61 (+1.2% from average)
+RISK ASSESSMENT:
+🔴 Overall Risk Level: HIGH
+🔴 Critical Alerts: 2 (stop-loss triggers)
+🟡 Drawdown Alerts: 3
+🟢 Safe Positions: 3
+📉 Portfolio Drawdown: -1.20%
 
-STRATEGY OVERVIEW
------------------
-• Name: Gemini_Longs_Binance_Shorts
-• Description: Gemini for conservative longs, Binance for opportunistic shorts
-• Gemini (LONG): Execute if price near support, RSI < 40, trend bullish
-• Binance (SHORT): Execute if price near resistance, RSI > 60, trend bearish
-• Hedging: Binance shorts can hedge Gemini longs during downturns
+LOGGING COMPLETE:
+✅ Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+✅ Critical alerts logged: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+⏰ Next scheduled monitoring: 2026-03-31 11:12 AM (Asia/Bangkok)
 
-LOGGING STATUS
---------------
-• Trading logs updated: ✓ /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical alerts logged: ✓ /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Alert details: 2 stop-loss triggers detected on ETH/USD positions
+SUMMARY:
+The trading dashboard is operational with 5 active positions. Two ETH positions have triggered stop-loss alerts and require immediate attention. Portfolio shows high ETH concentration (84.6%) exceeding recommended limits. Overall portfolio is down -1.20% with mixed performance across positions. Immediate action recommended to exit losing positions and rebalance portfolio.
 
-RECOMMENDED ACTIONS
--------------------
-1. IMMEDIATE: Review and potentially exit both ETH/USD positions with stop-loss triggers
-2. URGENT: Reduce ETH exposure (currently 80% of portfolio)
-3. Review stop-loss levels for remaining ETH positions
-4. Consider rebalancing portfolio to reduce concentration risk
-5. Monitor BTC position which is currently profitable (+1.2%)
-
-NEXT STEPS
-----------
-• System will perform next analysis within 6-12 hours
-• Monitor ETH price action for potential recovery or further decline
-• Consider implementing tighter stop-losses for new ETH positions
-• Review trading strategy given current market conditions
-
-END OF SUMMARY
-==============
+=====================================
+End of Monitoring Summary
+Generated: 2026-03-31 10:12:48

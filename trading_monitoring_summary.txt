@@ -1,113 +1,89 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-31 07:52:00 (Asia/Bangkok)
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-31 10:21:45 (Asia/Bangkok)
 
-SYSTEM STATUS
--------------
-✅ Dashboard: Operational on http://localhost:5001/
-✅ Last Analysis: 2026-03-31 07:33:39 (18 minutes ago)
-✅ Capital: $250.00
-✅ Risk Parameters: 5% stop-loss, 10% take-profit
-✅ Trading Mode: SIMULATION (no real execution)
-✅ Analysis Schedule: Hourly
+=== SYSTEM STATUS ===
+• Dashboard: Running on http://localhost:5001/
+• Status: Active and operational
+• Capital: $250.00 allocated
+• Analysis Schedule: Hourly
+• Last Analysis: 2026-03-31T10:18:43.494747
+• Trading Pairs: BTC/USD, ETH/USD
 
-MARKET DATA
------------
-• BTC/USD: $67,169.00
-• ETH/USD: $2,035.57
-• Market Sentiment: NEUTRAL
-• Trading Signal: BUY (Price within 1% of support)
+=== RISK PARAMETERS ===
+• Stop-loss: 5% on all positions
+• Take-profit: 10% target
+• Max trades per day: 2
+• Max capital per trade: 50% ($500)
 
-TRADING ACTIVITY
-----------------
-• Total Historical Trades: 5
-• Trades Today: 1 (ETH/USD at 07:24:00)
-• Daily Trade Limit: 2 (1 used, 1 remaining)
-• Most Recent Trade: ETH/USD BUY 0.2474 @ $2,021.51
+=== PORTFOLIO ANALYSIS ===
+Total Positions: 5 trades
+Total Investment: $1,300.05
+Current Portfolio Value: $1,281.57
+Total P&L: -$18.48 (-1.42%)
 
-ACTIVE POSITIONS ANALYSIS
--------------------------
-1. ETH/USD @ $2,325.28 (13:39:49) - Current: $2,035.57 (-12.46%) 🚨 STOP-LOSS TRIGGERED
-2. ETH/USD @ $2,193.60 (00:33:02) - Current: $2,035.57 (-7.20%) 🚨 STOP-LOSS TRIGGERED
-3. ETH/USD @ $2,052.38 (21:29:42) - Current: $2,035.57 (-0.82%) ⚠️ NEAR STOP-LOSS
-4. ETH/USD @ $2,021.51 (07:24:00) - Current: $2,035.57 (+0.70%) ✅ PROFITABLE
-5. BTC/USD @ $67,247.51 (21:29:41) - Current: $67,169.00 (-0.12%) ✅ NORMAL
+=== CRITICAL ALERTS DETECTED ===
+🚨 CRITICAL ALERT #1: ETH/USD STOP-LOSS TRIGGERED
+   • Position: ETH/USD BUY @ $2,325.28 (13:39:49)
+   • Current Price: $2,068.60
+   • Loss: -11.04% ($-22.07)
+   • Stop-loss Level: $2,209.02 (5% below entry)
+   • Exceeds Stop-loss By: 6.04%
+   • Status: REQUIRES IMMEDIATE EXIT
 
-CRITICAL ALERTS DETECTED
-------------------------
-🚨 2 STOP-LOSS TRIGGERS ACTIVE:
-1. ETH/USD position at $2,325.28: Loss -12.46% (Stop-loss exceeded by 7.46%)
-   • Stop-loss level: $2,209.02 (-5%)
-   • Current: $2,035.57
-   • Loss amount: -$24.91
+🚨 CRITICAL ALERT #2: ETH/USD STOP-LOSS TRIGGERED
+   • Position: ETH/USD BUY @ $2,193.60 (00:33:02)
+   • Current Price: $2,068.60
+   • Loss: -5.70% ($-11.40)
+   • Stop-loss Level: $2,083.92 (5% below entry)
+   • Exceeds Stop-loss By: 0.70%
+   • Status: REQUIRES IMMEDIATE EXIT
 
-2. ETH/USD position at $2,193.60: Loss -7.20% (Stop-loss exceeded by 2.20%)
-   • Stop-loss level: $2,083.92 (-5%)
-   • Current: $2,035.57
-   • Loss amount: -$14.42
+=== PORTFOLIO RISK ASSESSMENT ===
+• Overall Risk Level: HIGH
+• Critical Alerts: 2 positions (40% of portfolio)
+• Profitable Positions: 3 positions (60% of portfolio)
+• Portfolio Drawdown: -1.42%
+• Concentration Risk: HIGH (84.6% ETH exposure)
+• Market Risk: MEDIUM
 
-⚠️ 1 POSITION NEAR STOP-LOSS:
-1. ETH/USD position at $2,052.38: Loss -0.82% (4.18% from stop-loss)
-   • Stop-loss level: $1,949.76 (-5%)
-   • Current: $2,035.57
-   • Loss amount: -$1.64
+=== POSITION BREAKDOWN ===
+1. ETH/USD @ $2,325.28: -11.04% (STOP-LOSS TRIGGERED) ⚠️
+2. ETH/USD @ $2,193.60: -5.70% (STOP-LOSS TRIGGERED) ⚠️
+3. BTC/USD @ $67,247.51: +0.88% ✅
+4. ETH/USD @ $2,052.38: +0.79% ✅
+5. ETH/USD @ $2,021.51: +2.33% ✅
 
-RISK ASSESSMENT
----------------
-• Risk Level: HIGH
-• Worst Drawdown: -12.46%
-• Total Loss on Triggered Positions: -$39.33
-• Position Exposure: High (2 stop-loss triggers, 1 near stop-loss)
-• System Mode: Simulation (no automatic execution)
+=== PERFORMANCE METRICS ===
+• Win Rate: 60% (3/5 positions profitable)
+• Loss Rate: 40% (2/5 positions at stop-loss)
+• Average Win: +$5.66
+• Average Loss: -$16.29
+• Risk/Reward Ratio: 1:0.35 (unfavorable)
 
-TRADING STRATEGY
-----------------
-• Name: Gemini_Longs_Binance_Shorts
-• Description: Gemini for conservative longs, Binance for opportunistic shorts
-• Gemini Execution: LONG if price near support, RSI < 40, trend bullish ($35/trade, max 2/day)
-• Binance Execution: SHORT if price near resistance, RSI > 60, trend bearish ($9/trade, max 1/day)
+=== MARKET CONDITIONS ===
+• BTC Current Price: $67,842.00 (+1.26% 24h change)
+• ETH Current Price: $2,068.60 (+1.94% 24h change)
+• Market Sentiment: Neutral with slight recovery
+• Trading Signal: HOLD (no clear entry signals)
 
-SYSTEM HEALTH
--------------
-• Dashboard Uptime: Confirmed running
-• Data Consistency: Good (dashboard matches API data)
-• System Stability: Stable
-• Real Trading: Not enabled (simulation only)
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
+2. URGENT: Reduce ETH exposure from 84.6% to ≤50%
+3. Review stop-loss levels for remaining positions
+4. Implement portfolio rebalancing strategy
+5. Review trading strategy given multiple stop-loss triggers
+6. Monitor BTC position which remains profitable
 
-IMMEDIATE ACTION REQUIRED
--------------------------
-1. 🚨 REVIEW STOP-LOSS TRIGGERS IMMEDIATELY
-2. Consider closing losing ETH positions to prevent further losses
-3. Review trading strategy and risk parameters for ETH/USD
-4. Check market conditions for ETH/USD
-5. Consider hedging with Binance shorts
-6. Review position sizing and entry timing
+=== LOGGING STATUS ===
+• Monitoring Log: Updated at /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts: Logged at /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Alert Count: 2 critical stop-loss triggers logged
 
-RECOMMENDATIONS
----------------
-1. Enable real trading with Gemini API credentials for execution
-2. Consider adjusting stop-loss levels for future trades
-3. Monitor drawdown levels closely
-4. Consider implementing trailing stop-loss
-5. Review trade entry criteria for ETH/USD
-6. Check if Binance short execution is active for hedging
+=== NEXT STEPS ===
+• Next Scheduled Analysis: ~10:48 AM (hourly schedule)
+• Monitor for new trading signals
+• Watch for market volatility changes
+• Review strategy adherence and risk management
 
-NEXT STEPS
-----------
-• Next analysis scheduled: Hourly
-• Monitor for additional stop-loss triggers
-• Review system logs for any execution errors
-• Consider running manual analysis via /analysis endpoint
-
-FINAL STATUS
-------------
-🔴 TRADING SYSTEM AT RISK
-🚨 2 critical stop-loss alerts detected
-⚠️ 1 position near stop-loss level
-⚠️ System running in simulation mode (no automatic execution)
-✅ Dashboard operational and responsive
-✅ Market data fetching working correctly
-
-=====================================
-End of monitoring summary
-=====================================
+=== SUMMARY ===
+The trading dashboard is operational with 5 active positions. Two ETH positions have triggered stop-loss alerts and require immediate attention. The portfolio shows a slight drawdown of -1.42% with high concentration in ETH. Risk management protocols are active and logging critical alerts appropriately.
