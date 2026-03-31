@@ -34,5 +34,41 @@
     "signal_strength": 2.143,
     "status": "EXECUTED",
     "risk_notes": "Capital at risk: $10.22"
+  },
+  {
+    "timestamp": "2026-03-31T08:03:19.842660",
+    "exchange": "binance_futures",
+    "symbol": "DOT/USDT",
+    "side": "sell",
+    "type": "SHORT",
+    "order_id": "31696269378",
+    "entry_price": 1.242,
+    "executed_price": 1.242,
+    "amount": 13.890598548309178,
+    "position_value": 17.252123397,
+    "leverage": 2,
+    "stop_loss": 1.27926,
+    "take_profit": 1.1799,
+    "signal_strength": 2.282,
+    "status": "EXECUTED",
+    "risk_notes": "Capital at risk: $8.63"
+  },
+  {
+    "timestamp": "2026-03-31T08:05:20.926095",
+    "exchange": "binance_futures",
+    "symbol": "DOT/USDT",
+    "side": "sell",
+    "type": "SHORT",
+    "order_id": "31696295514",
+    "entry_price": 1.241,
+    "executed_price": 1.24,
+    "amount": 11.827011534246573,
+    "position_value": 14.677321313999999,
+    "leverage": 2,
+    "stop_loss": 1.2782300000000002,
+    "take_profit": 1.17895,
+    "signal_strength": 2.206,
+    "status": "EXECUTED",
+    "risk_notes": "Capital at risk: $7.34"
   }
 ]

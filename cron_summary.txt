@@ -1,49 +1,66 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-31 07:14:00 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Monitoring Time: 2026-03-31 08:10:20 (Asia/Bangkok)
 
-🔴 CRITICAL SYSTEM FAILURE DETECTED
+SYSTEM STATUS:
+✅ Trading system is RUNNING
+✅ Last analysis: 2026-03-31 08:01:25
+✅ Analysis scheduled: Hourly
+✅ Capital: $250.00
+✅ Active trading pairs: BTC/USD, ETH/USD
 
-1. TRADING BOTS STATUS: ALL STOPPED
-   - No Python processes found for any trading bots
-   - 26 Crypto Bot last activity: 07:01:43 (12+ minutes ago)
-   - Complete trading system failure
+TRADING ACTIVITY:
+• Total trades: 5
+• Active positions: 3
+• Stopped out positions: 2 (ETH/USD)
+• Daily trade limit: 2 (not exceeded)
 
-2. DASHBOARD STATUS: OPERATIONAL BUT INACCURATE
-   - Running on port 5002 (PID: 78515)
-   - Capital display error: Shows $0.00 vs actual $542.27
-   - Data source configuration issue
+MARKET CONDITIONS:
+• BTC/USD: $67,181.16
+• ETH/USD: $2,036.59
+• Market sentiment: BULLISH
+• Trading signal: BUY (BTC near support)
 
-3. MARKET CONDITIONS: HIGHLY FAVORABLE
-   - BTC/USD: $66,611.07 (+1.2%)
-   - ETH/USD: $2,021.77 (+0.8%)
-   - SOL/USD: $145.32 (+2.5%)
-   - Missed profit opportunities increasing
+CRITICAL ALERTS DETECTED: 4
+=====================================
+🚨 URGENT CONCERNS:
 
-4. TRADING ACTIVITY: NONE
-   - 0 trades today (0/3 maximum)
-   - No active positions
-   - No stop-loss/take-profit triggers
+1. STOP-LOSS VIOLATIONS:
+   • ETH/USD trade (13:39:49): -12.42% loss (5% stop-loss triggered)
+   • ETH/USD trade (00:33:02): -7.16% loss (5% stop-loss triggered)
 
-5. RISK ASSESSMENT: CRITICAL
-   - Operational risk: CRITICAL (complete system failure)
-   - Data integrity risk: CRITICAL (incorrect capital display)
-   - Trading risk: LOW (no active trades)
-   - System risk: CRITICAL (multiple failures)
+2. SIGNIFICANT DRAWDOWN:
+   • Portfolio drawdown: -14.86% (exceeds 5% threshold)
+   • Total P&L loss: -$37.15
+   • Risk level: HIGH
 
-=== IMMEDIATE ACTIONS REQUIRED ===
-1. 🔴 RESTART ALL TRADING BOTS
-2. 🔴 FIX DASHBOARD CAPITAL DISPLAY
-3. 🔴 INVESTIGATE 26 CRYPTO BOT CRASH
-4. 🔴 IMPLEMENT PROCESS MONITORING
+3. ETH POSITION CONCERNS:
+   • 2 out of 4 ETH positions have hit stop-loss
+   • ETH showing consistent downward pressure
 
-=== ALERTS GENERATED ===
-- Trading monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-- Critical alerts log updated: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-- Alert level: CRITICAL - Immediate intervention required
+ACTIVE POSITIONS STATUS:
+1. BTC/USD (21:29:41): -0.10% P&L (stable)
+2. ETH/USD (21:29:42): -0.77% P&L (stable)
+3. ETH/USD (07:24:00): +0.75% P&L (profitable)
 
-=== NEXT STEPS ===
-System administrator must manually intervene to restart trading system and fix configuration issues.
+RISK ASSESSMENT:
+• Current risk: HIGH (multiple stop-loss triggers)
+• Portfolio health: POOR (14.86% drawdown)
+• ETH strategy: NEEDS REVIEW
+• BTC strategy: ACCEPTABLE
 
-=== MONITORING COMPLETE ===
-Cron job ID: f86bf643-20c9-4dc3-a408-dfa3fb68fef8
-Status: CRITICAL FAILURE - ESCALATION REQUIRED
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Pause new ETH positions
+2. REVIEW: ETH trading strategy and stop-loss levels
+3. MONITOR: BTC position for profit-taking opportunities
+4. CONSIDER: Adjusting stop-loss from 5% to 7-8% for crypto volatility
+5. VERIFY: If hedging strategy (Binance shorts) is active
+
+NEXT STEPS:
+• System will continue hourly monitoring
+• Next analysis scheduled for ~09:01
+• Critical alerts logged to: critical_alerts.log
+• Monitoring data logged to: trading_monitoring.log
+
+SUMMARY:
+The trading system is operational but experiencing significant losses in ETH positions. Two ETH trades have triggered stop-losses, resulting in a 14.86% portfolio drawdown. Immediate review of ETH strategy and risk parameters is recommended. BTC positions remain stable with minimal drawdown.

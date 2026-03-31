@@ -1,54 +1,97 @@
-=== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 07:59:45 (Asia/Bangkok)
-Alert Level: HIGH
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-31 08:24:53 (Asia/Bangkok)
+Alert Source: Trading Dashboard Monitor (cron:8ee096c1-4bc1-4c09-82e5-82edc6faa4ab)
 
-=== ALERT 1: MULTIPLE POSITIONS BELOW STOP-LOSS LEVELS ===
-⚠️ CRITICAL: ETH positions showing significant unrealized losses
+CRITICAL ALERT SUMMARY:
 
-Trade Details:
-1. ETH/USD BUY @ $2,325.28 (0.086 ETH)
-   Current Price: $2,033.24
-   Loss: -12.56%
-   Stop-Loss Threshold: 5% ($2,209.02)
-   Status: STOP-LOSS WOULD BE TRIGGERED (-7.56% beyond threshold)
+⚠️ URGENT: 2 ETH POSITIONS BELOW STOP-LOSS LEVELS
+===================================================
 
-2. ETH/USD BUY @ $2,193.60 (0.0912 ETH)
-   Current Price: $2,033.24
-   Loss: -7.31%
-   Stop-Loss Threshold: 5% ($2,083.92)
-   Status: STOP-LOSS WOULD BE TRIGGERED (-2.31% beyond threshold)
+1. POSITION DETAILS:
 
-Impact: These positions represent approximately $200 in unrealized losses
-Risk: Continuing drawdown could significantly impact portfolio
+   a) ETH/USD BUY at $2,325.28 (Trade #1 - 13:39:49)
+      - Quantity: 0.086 ETH
+      - Entry Price: $2,325.28
+      - Current Price: $2,047.52 (live market)
+      - Drawdown: -11.95%
+      - Stop-loss Level: $2,209.02 (5% below entry)
+      - Current vs Stop-loss: -7.31% BELOW
+      - Estimated Loss: ~$23.90
+      - STATUS: CRITICAL - REQUIRES IMMEDIATE ATTENTION
 
-=== ALERT 2: SYSTEM IN SIMULATION MODE ===
-⚠️ WARNING: Trading system is operating in SIMULATION mode
-- No real API execution detected
-- Stop-loss/take-profit orders are not being executed
-- Trades shown are simulated entries only
-- Real capital is not at risk in current configuration
+   b) ETH/USD BUY at $2,193.60 (Trade #2 - 00:33:02)
+      - Quantity: 0.0912 ETH
+      - Entry Price: $2,193.60
+      - Current Price: $2,047.52 (live market)
+      - Drawdown: -6.66%
+      - Stop-loss Level: $2,083.92 (5% below entry)
+      - Current vs Stop-loss: -1.75% BELOW
+      - Estimated Loss: ~$13.32
+      - STATUS: CRITICAL - REQUIRES ATTENTION
 
-=== ALERT 3: PORTFOLIO CONCENTRATION ===
-⚠️ NOTICE: High concentration in ETH positions
-- ETH positions: 4 out of 5 total trades (80%)
-- Total ETH exposure: 0.5210 ETH (~$1,059.50)
-- Lack of diversification increases risk
-- Consider rebalancing or adding other assets
+2. SYSTEM STATUS ALERTS:
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Review ETH market conditions and consider manual intervention
-2. SYSTEM: Switch to real trading mode if ready to execute (requires API credentials)
-3. RISK MANAGEMENT: Implement position sizing limits per asset
-4. DIVERSIFICATION: Consider adding more BTC or other crypto exposure
-5. MONITORING: Set up real-time alerting for price movements beyond thresholds
+   ⚠️ CRITICAL: Trading System in SIMULATION MODE
+   - No real API credentials configured (GEMINI_API_KEY, GEMINI_API_SECRET)
+   - Stop-loss orders are NOT executing automatically
+   - Manual intervention required for risk management
+   - Total capital at risk: ~$37.22
 
-=== ALERT VERIFICATION ===
-Current ETH Price: $2,033.24
-Critical Thresholds Breached:
-- Trade 1: Entry $2,325.28, 5% SL = $2,209.02 (Current: -12.56%)
-- Trade 2: Entry $2,193.60, 5% SL = $2,083.92 (Current: -7.31%)
+   ⚠️ WARNING: ETH Market Showing Significant Decline
+   - Current ETH price: $2,047.52 (live)
+   - 2 out of 4 ETH positions in critical drawdown
+   - ETH showing -11.95% and -6.66% drawdown from entries
+   - Market may be experiencing correction or trend reversal
 
-Note: Since system is in simulation mode, no actual stop-loss orders have been executed.
-Real trading would have closed these positions at approximately 5% loss each.
+3. MARKET CONTEXT:
+   - BTC/USD: $67,456.00 (+0.41% from dashboard price)
+   - ETH/USD: $2,047.52 (+0.54% from dashboard price)
+   - BTC position: Safe (+0.31%, above stop-loss)
+   - Other ETH positions: Mixed (1 profitable, 1 safe small drawdown)
 
-=== END OF CRITICAL ALERTS ===
+4. IMMEDIATE ACTION REQUIRED:
+
+   ⚠️ URGENT PRIORITY:
+   1. MANUAL POSITION REVIEW - Check ETH positions #1 and #2
+   2. DECISION POINT: Exit manually or adjust stop-loss?
+   3. MARKET ANALYSIS: Review ETH/USD trend, support levels, and market news
+   4. RISK ASSESSMENT: Determine if this is temporary dip or sustained decline
+
+   ⚠️ SYSTEM CONFIGURATION:
+   1. Configure real API credentials for automated trading
+   2. Enable real stop-loss order execution
+   3. Consider adjusting ETH risk parameters (wider stop-loss for volatility)
+   4. Implement trailing stop-loss or dynamic risk management
+
+5. RISK ASSESSMENT METRICS:
+   - Risk Level: HIGH (2 critical positions, simulation mode)
+   - Action Required: IMMEDIATE
+   - Portfolio Health: POOR (40% positions critical)
+   - System Health: POOR (simulation mode only)
+   - Market Conditions: MIXED (BTC stable, ETH declining)
+
+6. MONITORING RECOMMENDATIONS:
+   - Next dashboard check: 09:01:25 (36 minutes)
+   - Monitor ETH price movement closely (next 1-2 hours critical)
+   - Check BTC position for any deterioration
+   - Consider manual analysis if ETH drops below $2,040
+   - Review trading strategy for ETH pairs (consider reducing exposure)
+
+7. POSITION-SPECIFIC RECOMMENDATIONS:
+   - Position #1 ($2,325.28): Consider manual exit if ETH drops below $2,040
+   - Position #2 ($2,193.60): Consider manual exit if ETH drops below $2,035
+   - Monitor positions #4 and #5 closely (currently safe/profitable)
+   - BTC position appears stable for now
+
+=== END OF CRITICAL ALERTS ====== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 08:29:05
+Alerts Found: 3
+
+• STOP-LOSS: ETH/USD at 13:39:49 - Entry: $2325.28, Current: $2021.51, P&L: -13.06%
+• STOP-LOSS: ETH/USD at 00:33:02 - Entry: $2193.60, Current: $2021.51, P&L: -7.85%
+• CRITICAL DRAWDOWN: Worst position at -13.06%
+
+=== END ALERTS ===
+
+2026-03-31 08:32:57,106 - WARNING - TRADE LIMIT REACHED: 5/2 trades today. No more trades will be executed.
+2026-03-31 08:32:57,106 - WARNING - HIGH EXPOSURE DETECTED: $1,300.05 (520.0% of capital) invested. Consider reducing position sizes.

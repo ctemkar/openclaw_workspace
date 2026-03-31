@@ -1,49 +1,57 @@
-TRADING MONITOR SUMMARY - 2026-03-31 06:51:30 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Monitoring Time: 2026-03-31 08:14:45 (UTC+7)
+Dashboard Status: ✅ RUNNING (http://localhost:5001/)
 
-✅ SYSTEM STATUS:
-- Dashboard: Running on http://localhost:5001/
-- Last Analysis: 2026-03-31T06:43:27.231752
-- Capital: $250.00
-- Risk Parameters: 5.0% SL, 10.0% TP, Max 2 trades/day
-- Execution Mode: SIMULATION (API credentials needed)
+SYSTEM OVERVIEW:
+• Capital: $250.00
+• Risk Parameters: 5% Stop Loss, 10% Take Profit
+• Max Trades/Day: 2
+• Last Analysis: 2026-03-31 08:01:25
+• Trading Pairs: BTC/USD, ETH/USD
 
-📊 MARKET DATA:
-- BTC/USD: $66,689.00
-- ETH/USD: $2,023.37
-- Market Sentiment: BULLISH
-- Trading Signal: BUY
+MARKET DATA:
+• BTC/USD: $67,140.00 (Current)
+• ETH/USD: $2,036.10 (Current)
+• Market Sentiment: BULLISH
+• Trading Signal: BUY (Price within 1% of support)
 
-📈 PORTFOLIO STATUS:
-- Total Trades: 4 (3 ETH, 1 BTC)
-- Total Investment: $799.93
-- Current Value: $755.84
-- Portfolio P&L: -5.51% (-$44.09)
-- Drawdown: Acceptable (5.51% < 10% threshold)
+TRADE ANALYSIS (5 Active Trades):
+1. ETH/USD: -12.44% 🚨 STOP-LOSS TRIGGERED
+2. ETH/USD: -7.18% 🚨 STOP-LOSS TRIGGERED  
+3. BTC/USD: -0.16% (Stable)
+4. ETH/USD: -0.79% (Minor loss)
+5. ETH/USD: +0.72% (Profitable)
 
-⚠️ CRITICAL ALERTS:
-1. STOP-LOSS TRIGGERED: ETH/USD at $2325.28 → $2023.37 (-12.98%)
-2. STOP-LOSS TRIGGERED: ETH/USD at $2193.60 → $2023.37 (-7.76%)
-3. 50% of trades (2/4) have triggered stop-losses
-4. All ETH positions (3/3) are in loss
-5. BTC position approaching stop-loss (-0.83%, stop-loss at -5.0%)
+PORTFOLIO PERFORMANCE:
+• Total Investment: $1,300.05
+• Total P&L: -$37.53 (-2.89%)
+• Portfolio Value: $1,262.52
 
-🔍 RISK ASSESSMENT:
-- Portfolio concentration: 75% ETH exposure
-- Strategy conflict: Bullish sentiment vs bearish price action
-- System mode: Simulation (no real execution)
-- Risk level: MEDIUM (monitor closely)
+CRITICAL ALERTS: ⚠️ 2 STOP-LOSS TRIGGERS
+1. ETH/USD trade entered at $2,325.28 hit stop-loss at $2,209.02
+2. ETH/USD trade entered at $2,193.60 hit stop-loss at $2,083.92
 
-📋 RECOMMENDED ACTIONS:
-1. Review ETH market conditions for bearish pressure
-2. Check stop-loss execution logic (simulation mode)
-3. Monitor BTC position as it approaches stop-loss
-4. Review trading strategy given sentiment/price conflict
-5. Consider reducing ETH exposure or adding hedging
+RISK ASSESSMENT:
+• Overall Risk: MEDIUM (2.89% portfolio drawdown)
+• ETH Positions: HIGH RISK (multiple stop-loss triggers)
+• BTC Position: LOW RISK (near breakeven)
+• System Health: GOOD (dashboard operational)
 
-📁 LOGS UPDATED:
-- trading_monitoring.log: Full monitoring details
-- critical_alerts.log: Critical risk alerts
+RECOMMENDATIONS:
+1. Review ETH trading strategy - support levels may need adjustment
+2. Consider tighter stop-loss (3-4%) for ETH trades
+3. Monitor BTC position for potential exit if trend reverses
+4. Review support/resistance calculation accuracy
 
-🔄 NEXT CHECK: Hourly (next analysis scheduled)
+NEXT STEPS:
+• Next scheduled analysis: ~09:01 (hourly)
+• Monitor critical_alerts.log for immediate alerts
+• Review trading_monitoring.log for detailed analysis
 
-=== MONITORING COMPLETE ===
+FILES UPDATED:
+✅ trading_monitoring.log - Complete monitoring data
+✅ critical_alerts.log - 2 stop-loss alerts saved
+✅ This summary for cron delivery
+
+SYSTEM STATUS: OPERATIONAL WITH MEDIUM RISK ALERTS
