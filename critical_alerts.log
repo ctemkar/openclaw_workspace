@@ -1,97 +1,223 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 08:24:53 (Asia/Bangkok)
-Alert Source: Trading Dashboard Monitor (cron:8ee096c1-4bc1-4c09-82e5-82edc6faa4ab)
+Timestamp: 2026-03-31 08:49 AM (Asia/Bangkok)
+Alert Scan Period: 2026-03-31 08:49:15
 
-CRITICAL ALERT SUMMARY:
+=== CURRENT MARKET PRICES ===
+- BTC/USD: $68068.61
+- ETH/USD: $2083.74
 
-⚠️ URGENT: 2 ETH POSITIONS BELOW STOP-LOSS LEVELS
-===================================================
+=== 🚨 CRITICAL ALERTS DETECTED ===
 
-1. POSITION DETAILS:
+🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 13:39:49
+   Entry Price: $2325.28
+   Current Price: $2083.74
+   Change: -10.39%
+   P&L: $-20.77
+   Quantity: 0.086
+   Reason: Near support level: $2308.08 (current: $2325.28)
+   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
+   
+🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 00:33:02
+   Entry Price: $2193.60
+   Current Price: $2083.74
+   Change: -5.01%
+   P&L: $-10.02
+   Quantity: 0.0912
+   Reason: Near support level: $2167.99 (current: $2193.60)
+   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
+   
+=== RISK ASSESSMENT ===
+- Total Open Positions: 5
+- Critical Alerts: 2
+- Warning Alerts: 0
+- Safe Positions: 3
+- Overall Risk Level: HIGH
 
-   a) ETH/USD BUY at $2,325.28 (Trade #1 - 13:39:49)
-      - Quantity: 0.086 ETH
-      - Entry Price: $2,325.28
-      - Current Price: $2,047.52 (live market)
-      - Drawdown: -11.95%
-      - Stop-loss Level: $2,209.02 (5% below entry)
-      - Current vs Stop-loss: -7.31% BELOW
-      - Estimated Loss: ~$23.90
-      - STATUS: CRITICAL - REQUIRES IMMEDIATE ATTENTION
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review all critical alert positions for potential exit
+2. URGENT: Reduce ETH exposure (currently 4 out of 5 positions)
+3. Review overall portfolio exposure and risk parameters
+4. Consider adjusting position sizing or stop-loss levels
+5. Review market conditions for affected trading pairs
 
-   b) ETH/USD BUY at $2,193.60 (Trade #2 - 00:33:02)
-      - Quantity: 0.0912 ETH
-      - Entry Price: $2,193.60
-      - Current Price: $2,047.52 (live market)
-      - Drawdown: -6.66%
-      - Stop-loss Level: $2,083.92 (5% below entry)
-      - Current vs Stop-loss: -1.75% BELOW
-      - Estimated Loss: ~$13.32
-      - STATUS: CRITICAL - REQUIRES ATTENTION
+=== END OF ALERTS LOG ===
+Alert generated at: 2026-03-31 08:49:15
 
-2. SYSTEM STATUS ALERTS:
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-31 08:51 AM (Asia/Bangkok)
+Alert Scan Period: 2026-03-31 08:51:19
 
-   ⚠️ CRITICAL: Trading System in SIMULATION MODE
-   - No real API credentials configured (GEMINI_API_KEY, GEMINI_API_SECRET)
-   - Stop-loss orders are NOT executing automatically
-   - Manual intervention required for risk management
-   - Total capital at risk: ~$37.22
+=== CURRENT MARKET PRICES ===
+- BTC/USD: $68068.61
+- ETH/USD: $2083.74
 
-   ⚠️ WARNING: ETH Market Showing Significant Decline
-   - Current ETH price: $2,047.52 (live)
-   - 2 out of 4 ETH positions in critical drawdown
-   - ETH showing -11.95% and -6.66% drawdown from entries
-   - Market may be experiencing correction or trend reversal
+=== 🚨 CRITICAL ALERTS DETECTED ===
 
-3. MARKET CONTEXT:
-   - BTC/USD: $67,456.00 (+0.41% from dashboard price)
-   - ETH/USD: $2,047.52 (+0.54% from dashboard price)
-   - BTC position: Safe (+0.31%, above stop-loss)
-   - Other ETH positions: Mixed (1 profitable, 1 safe small drawdown)
+🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 13:39:49
+   Entry Price: $2325.28
+   Current Price: $2083.74
+   Change: -10.39%
+   P&L: $-20.77
+   Quantity: 0.086
+   Reason: Near support level: $2308.08 (current: $2325.28)
+   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
+   
+🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 00:33:02
+   Entry Price: $2193.60
+   Current Price: $2083.74
+   Change: -5.01%
+   P&L: $-10.02
+   Quantity: 0.0912
+   Reason: Near support level: $2167.99 (current: $2193.60)
+   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
+   
+=== RISK ASSESSMENT ===
+- Total Open Positions: 5
+- Critical Alerts: 2
+- Warning Alerts: 0
+- Safe Positions: 3
+- Overall Risk Level: HIGH
 
-4. IMMEDIATE ACTION REQUIRED:
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review all critical alert positions for potential exit
+2. URGENT: Reduce ETH exposure (currently 4 out of 5 positions)
+3. Review overall portfolio exposure and risk parameters
+4. Consider adjusting position sizing or stop-loss levels
+5. Review market conditions for affected trading pairs
 
-   ⚠️ URGENT PRIORITY:
-   1. MANUAL POSITION REVIEW - Check ETH positions #1 and #2
-   2. DECISION POINT: Exit manually or adjust stop-loss?
-   3. MARKET ANALYSIS: Review ETH/USD trend, support levels, and market news
-   4. RISK ASSESSMENT: Determine if this is temporary dip or sustained decline
+=== END OF ALERTS LOG ===
+Alert generated at: 2026-03-31 08:51:19
 
-   ⚠️ SYSTEM CONFIGURATION:
-   1. Configure real API credentials for automated trading
-   2. Enable real stop-loss order execution
-   3. Consider adjusting ETH risk parameters (wider stop-loss for volatility)
-   4. Implement trailing stop-loss or dynamic risk management
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-31 08:53 AM (Asia/Bangkok)
+Alert Scan Period: 2026-03-31 08:53:27
 
-5. RISK ASSESSMENT METRICS:
-   - Risk Level: HIGH (2 critical positions, simulation mode)
-   - Action Required: IMMEDIATE
-   - Portfolio Health: POOR (40% positions critical)
-   - System Health: POOR (simulation mode only)
-   - Market Conditions: MIXED (BTC stable, ETH declining)
+=== CURRENT MARKET PRICES ===
+- BTC/USD: $68068.61
+- ETH/USD: $2083.74
 
-6. MONITORING RECOMMENDATIONS:
-   - Next dashboard check: 09:01:25 (36 minutes)
-   - Monitor ETH price movement closely (next 1-2 hours critical)
-   - Check BTC position for any deterioration
-   - Consider manual analysis if ETH drops below $2,040
-   - Review trading strategy for ETH pairs (consider reducing exposure)
+=== 🚨 CRITICAL ALERTS DETECTED ===
 
-7. POSITION-SPECIFIC RECOMMENDATIONS:
-   - Position #1 ($2,325.28): Consider manual exit if ETH drops below $2,040
-   - Position #2 ($2,193.60): Consider manual exit if ETH drops below $2,035
-   - Monitor positions #4 and #5 closely (currently safe/profitable)
-   - BTC position appears stable for now
+🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 13:39:49
+   Entry Price: $2325.28
+   Current Price: $2083.74
+   Change: -10.39%
+   P&L: $-20.77
+   Quantity: 0.086
+   Reason: Near support level: $2308.08 (current: $2325.28)
+   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2325.28, current: $2083.74)
+   
+🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 00:33:02
+   Entry Price: $2193.60
+   Current Price: $2083.74
+   Change: -5.01%
+   P&L: $-10.02
+   Quantity: 0.0912
+   Reason: Near support level: $2167.99 (current: $2193.60)
+   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2193.60, current: $2083.74)
+   
+=== CRITICAL DRAWDOWN INDICATORS ===
+⚠️ DRAWDOWN ALERT: ETH PORTFOLIO DRAWDOWN
+   - ETH Positions: 4 out of 5 total positions (80% exposure)
+   - Average ETH Entry: $2,148.19
+   - Current ETH Price: $2,083.74
+   - Portfolio Drawdown: -3.0%
+   - Worst Position Drawdown: -10.39%
+   - Alert: High ETH concentration with significant drawdown
 
-=== END OF CRITICAL ALERTS ====== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 08:29:05
-Alerts Found: 3
+⚠️ DRAWDOWN ALERT: PORTFOLIO CONCENTRATION RISK
+   - ETH Exposure: 80% of portfolio
+   - BTC Exposure: 20% of portfolio
+   - Alert: Portfolio heavily concentrated in ETH, increasing overall risk
 
-• STOP-LOSS: ETH/USD at 13:39:49 - Entry: $2325.28, Current: $2021.51, P&L: -13.06%
-• STOP-LOSS: ETH/USD at 00:33:02 - Entry: $2193.60, Current: $2021.51, P&L: -7.85%
-• CRITICAL DRAWDOWN: Worst position at -13.06%
+=== RISK ASSESSMENT ===
+- Total Open Positions: 5
+- Critical Alerts: 2 (stop-loss triggers)
+- Drawdown Alerts: 2 (portfolio concentration & drawdown)
+- Warning Alerts: 0
+- Safe Positions: 3
+- Overall Risk Level: HIGH
 
-=== END ALERTS ===
+=== PORTFOLIO ANALYSIS ===
+- Total Capital: $250.00
+- Estimated Loss from Critical Alerts: $30.79
+- Portfolio Drawdown: -12.3% (from critical positions)
+- ETH Portfolio Value: ~$208.37 (based on current price)
+- BTC Portfolio Value: ~$202.41 (based on current price)
 
-2026-03-31 08:32:57,106 - WARNING - TRADE LIMIT REACHED: 5/2 trades today. No more trades will be executed.
-2026-03-31 08:32:57,106 - WARNING - HIGH EXPOSURE DETECTED: $1,300.05 (520.0% of capital) invested. Consider reducing position sizes.
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
+2. URGENT: Reduce overall ETH exposure from 80% to ≤50%
+3. Review stop-loss levels for remaining ETH positions
+4. Consider implementing portfolio rebalancing strategy
+5. Review trading strategy given current market conditions
+6. Monitor BTC position which is currently profitable (+1.2%)
+
+=== ALERT SUMMARY ===
+- Stop-loss triggers: 2 (ETH/USD positions)
+- Drawdown alerts: 2 (portfolio concentration & drawdown)
+- Total critical alerts: 4
+- Alert status: ACTIVE - Requires immediate attention
+
+=== END OF ALERTS LOG ===
+Alert generated at: 2026-03-31 08:53:27
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-31 08:56 AM (Asia/Bangkok)
+Alert Scan Period: 2026-03-31 08:56:54
+
+=== CURRENT MARKET PRICES ===
+- BTC/USD: $68,068.61
+- ETH/USD: $2,083.74
+
+=== 🚨 CRITICAL ALERTS DETECTED ===
+
+🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 13:39:49
+   Entry Price: $2,325.28
+   Current Price: $2,083.74
+   Change: -10.39%
+   P&L: $-20.77
+   Quantity: 0.086
+   Reason: Near support level: $2308.08 (current: $2325.28)
+   Alert: ETH/USD stop-loss triggered: -10.39% loss (entry: $2,325.28, current: $2,083.74)
+
+🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
+   Symbol: ETH/USD
+   Trade Time: 00:33:02
+   Entry Price: $2,193.60
+   Current Price: $2,083.74
+   Change: -5.01%
+   P&L: $-10.02
+   Quantity: 0.0912
+   Reason: Near support level: $2167.99 (current: $2193.60)
+   Alert: ETH/USD stop-loss triggered: -5.01% loss (entry: $2,193.60, current: $2,083.74)
+
+=== ALERT ANALYSIS ===
+- Total Critical Alerts: 2
+- Total Positions: 5
+- Alert Rate: 40% of portfolio
+- Most Affected Asset: ETH (2 alerts)
+- Total Estimated Loss: $30.79
+- Portfolio Impact: 12.3% of $250 capital
+
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review and potentially exit both ETH/USD positions
+2. URGENT: Reduce ETH exposure (currently 80% of portfolio)
+3. Review stop-loss levels for remaining ETH positions
+4. Consider implementing tighter stop-losses for new ETH positions
+5. Monitor BTC position which is currently profitable (+1.2%)
+
+=== ALERT LOGGING COMPLETE ===

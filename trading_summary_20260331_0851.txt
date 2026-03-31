@@ -1,6 +1,6 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Monitoring Time: Tuesday, March 31st, 2026 — 8:56 AM (Asia/Bangkok)
+Monitoring Time: Tuesday, March 31st, 2026 — 8:51 AM (Asia/Bangkok)
 Dashboard URL: http://localhost:5001/
 
 SYSTEM STATUS
@@ -22,11 +22,11 @@ TRADING ACTIVITY
 Total Open Positions: 5 trades
 
 Recent Trades:
-1. ETH/USD BUY at 13:39:49 - $2,325.28 (0.086 qty)
-2. ETH/USD BUY at 00:33:02 - $2,193.60 (0.0912 qty)  
-3. BTC/USD BUY at 21:29:41 - $67,247.51 (0.002974 qty)
-4. ETH/USD BUY at 21:29:42 - $2,052.38 (0.0974 qty)
-5. ETH/USD BUY at 07:24:00 - $2,021.51 (0.2474 qty)
+1. ETH/USD BUY at 13:39:49 - $2325.28 (0.086 qty)
+2. ETH/USD BUY at 00:33:02 - $2193.60 (0.0912 qty)  
+3. BTC/USD BUY at 21:29:41 - $67247.51 (0.002974 qty)
+4. ETH/USD BUY at 21:29:42 - $2052.38 (0.0974 qty)
+5. ETH/USD BUY at 07:24:00 - $2021.51 (0.2474 qty)
 
 MARKET DATA
 -----------
@@ -36,25 +36,25 @@ MARKET DATA
 • ETH 24h Volume: $9,250,732
 • Market Sentiment: BULLISH
 
-🚨 CRITICAL ALERTS DETECTED (2)
+CRITICAL ALERTS DETECTED (2)
 ----------------------------
-ALERT #1: ETH/USD STOP-LOSS TRIGGERED
+🚨 ALERT #1: ETH/USD STOP-LOSS TRIGGERED
 • Trade Time: 13:39:49
 • Entry Price: $2,325.28
 • Current Price: $2,083.74
 • Loss: -10.39% (exceeds 5% stop-loss)
 • Position Size: 0.086 ETH
 • P&L: -$20.77
-• Reason: Near support level: $2,308.08
+• Reason: Near support level: $2308.08
 
-ALERT #2: ETH/USD STOP-LOSS TRIGGERED  
+🚨 ALERT #2: ETH/USD STOP-LOSS TRIGGERED  
 • Trade Time: 00:33:02
 • Entry Price: $2,193.60
 • Current Price: $2,083.74
 • Loss: -5.01% (at stop-loss threshold)
 • Position Size: 0.0912 ETH
 • P&L: -$10.02
-• Reason: Near support level: $2,167.99
+• Reason: Near support level: $2167.99
 
 RISK ASSESSMENT
 ---------------
@@ -73,20 +73,6 @@ PORTFOLIO ANALYSIS
 • Average BTC Entry: $67,247.51
 • Current BTC Price: $68,068.61 (+1.2% from average)
 
-STRATEGY OVERVIEW
------------------
-• Name: Gemini_Longs_Binance_Shorts
-• Description: Gemini for conservative longs, Binance for opportunistic shorts
-• Gemini (LONG): Execute if price near support, RSI < 40, trend bullish
-• Binance (SHORT): Execute if price near resistance, RSI > 60, trend bearish
-• Hedging: Binance shorts can hedge Gemini longs during downturns
-
-LOGGING STATUS
---------------
-• Trading logs updated: ✓ /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical alerts logged: ✓ /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Alert details: 2 stop-loss triggers detected on ETH/USD positions
-
 RECOMMENDED ACTIONS
 -------------------
 1. IMMEDIATE: Review and potentially exit both ETH/USD positions with stop-loss triggers
@@ -94,6 +80,12 @@ RECOMMENDED ACTIONS
 3. Review stop-loss levels for remaining ETH positions
 4. Consider rebalancing portfolio to reduce concentration risk
 5. Monitor BTC position which is currently profitable (+1.2%)
+
+LOGGING STATUS
+--------------
+• Trading logs updated: ✓ /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts logged: ✓ /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Alert details: 2 stop-loss triggers detected on ETH/USD positions
 
 NEXT STEPS
 ----------
