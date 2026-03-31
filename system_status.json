@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-31T19:40:00.000000",
+  "timestamp": "2026-03-31T19:48:00.000000",
   "system_status": "ACTIVE",
   "trading_status": "ACTIVE",
   "capital": {
@@ -10,24 +10,47 @@
     "btc_value": 397.37417102,
     "pnl": -415.3233487791941,
     "pnl_percent": -43.85866048832235,
-    "notes": "Initial capital based on total BTC purchases ($946.97). Previous $250 was incorrect system tracking. Current loss due to BTC price drop from average buy price."
+    "notes": "CUMULATIVE LOSS - NEVER RESETS. Initial capital based on total BTC purchases ($946.97). This -43.86% loss represents total historical performance and stays regardless of position closures. Recovery requires +78.1% return from current level.",
+    "recovery_target": 946.97,
+    "recovery_needed": 415.3233487791941,
+    "recovery_percent_needed": 78.1
   },
   "positions": {
-    "open": 2,
+    "open": 7,
     "closed": 0,
-    "total_trades_today": 2
+    "total_trades_today": 7,
+    "details": {
+      "gemini_long": 2,
+      "binance_short": 5
+    }
   },
-  "risk_status": "HIGH",
+  "trading_bots": {
+    "26_crypto_trader": {
+      "status": "ACTIVE",
+      "pid": 40259,
+      "mode": "AGGRESSIVE",
+      "trades_executed": 5,
+      "positions": ["ETH short", "SOL short", "XRP short", "ADA short", "DOT short"],
+      "capital_allocation": {
+        "gemini": 134.27,
+        "binance": 50.00
+      }
+    },
+    "other_bots": ["fixed_gemini_trader", "simple_real_trader", "real_futures_trading_bot", "fixed_futures_bot"]
+  },
+  "risk_status": "VERY HIGH",
   "issues_fixed": [
     "Capital mismatch resolved",
     "Position tracking repaired",
     "Daily trades verified",
     "Logging system corrected",
-    "Initial capital corrected from $250 to $946.97"
+    "Initial capital corrected from $250 to $946.97",
+    "26-crypto bot activated"
   ],
   "next_actions": [
-    "Trading system activated",
-    "Monitor performance",
-    "BTC average buy: $67,205, current: $66,376 (1.2% loss)"
+    "26-crypto bot executing trades (5 shorts opened)",
+    "Monitor aggressive trading performance",
+    "BTC average buy: $67,205, current: $66,376 (1.2% loss)",
+    "Dashboard: http://localhost:5002"
   ]
 }
