@@ -1,86 +1,95 @@
-TRADING DASHBOARD MONITORING REPORT
-=====================================
-Execution Time: 2026-03-31 10:48:47 (Asia/Bangkok)
-Monitoring Period: Cron job execution
+TRADING DASHBOARD MONITORING SUMMARY - 2026-03-31 11:16 AM
+==========================================================
 
-SYSTEM STATUS
--------------
-✓ Dashboard Status: RUNNING
-✓ Capital: $250.00
-✓ Last Analysis: 2026-03-31T10:34:08.221628
-✓ Risk Parameters:
-   - Stop-loss: 5.0%
-   - Take-profit: 10.0%
-   - Max daily trades: 2
-✓ Trading Pairs: BTC/USD, ETH/USD
+SYSTEM STATUS:
+✅ Dashboard: Running on http://localhost:5001/
+✅ Status: Active with hourly analysis
+💰 Capital: $250.00
+⚖️ Risk Parameters: 5% stop-loss, 10% take-profit
+📈 Trading Pairs: BTC/USD, ETH/USD
+🔄 Last Analysis: 2026-03-31 11:01:21
 
-MARKET DATA
------------
-• BTC/USD: $67,667.37
-• ETH/USD: $2,064.36
+PORTFOLIO ANALYSIS:
+• Total Positions: 5
+• ETH Positions: 4 (84.3% exposure - HIGH RISK)
+• BTC Positions: 1 (15.7% exposure)
+• Total Investment: $1,300.05
+• Current Value: $1,279.74
+• Total P&L: -$20.31 (-1.56% drawdown)
+
+CRITICAL ALERTS: 🚨 2 STOP-LOSS TRIGGERS
+1. ETH/USD #1 (13:39:49): -11.26% loss, exceeds 5% stop-loss by 6.26%
+   • Entry: $2,325.28, Current: $2,063.46
+   • Loss: $22.50
+   • Time Open: ~21.6 hours beyond stop-loss
+
+2. ETH/USD #2 (00:33:02): -5.93% loss, exceeds 5% stop-loss by 0.93%
+   • Entry: $2,193.60, Current: $2,063.46
+   • Loss: $11.85
+   • Time Open: ~10.7 hours beyond stop-loss
+
+PROFITABLE POSITIONS: ✅ 3 POSITIONS
+1. BTC/USD (21:29:41): +0.51% ($1.02 profit)
+2. ETH/USD (21:29:42): +0.54% ($1.08 profit)
+3. ETH/USD (07:24:00): +2.08% ($10.39 profit)
+
+MARKET CONDITIONS:
+• BTC/USD: $67,590.00 (+0.30% 24h)
+• ETH/USD: $2,063.46 (+0.96% 24h)
 • Market Sentiment: BULLISH
-• Trading Decision: BUY (BTC/USD)
+• ETH Recovery: Insufficient to recover losing positions
 
-TRADE ANALYSIS
---------------
-Total Active Trades: 5
+RISK ASSESSMENT:
+⚠️ Overall Risk Level: HIGH
+⚠️ Concentration Risk: HIGH (84.3% ETH exposure)
+⚠️ System Risk: HIGH (stop-loss execution failure)
+⚠️ Market Risk: MEDIUM (ETH recovering slowly)
+✅ Simulation Mode: No real financial risk
 
-CRITICAL ALERTS DETECTED: 2 STOP-LOSS TRIGGERS
+SYSTEM ISSUES IDENTIFIED:
+1. 🚨 STOP-LOSS EXECUTION FAILURE: Positions remain open beyond triggers
+2. ⚠️ HIGH CONCENTRATION: 84.3% ETH exposure (recommended max: 50%)
+3. 🔧 POSITION SIZING: Inconsistent position sizing
+4. 📊 RISK MANAGEMENT: Gaps in simulation mode
 
-🚨 CRITICAL ALERT #1: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 13:39:49
-   Entry Price: $2,325.28
-   Current Price: $2,064.36
-   P&L: -11.22%
-   Loss Amount: -$22.44
-   Position Value: $199.97
-   Stop-loss Threshold: -5.0% (Exceeded by 6.22%)
-   Reason: Near support level: $2308.08 (current: $2325.28)
+URGENT ACTIONS REQUIRED:
+1. 🚨 IMMEDIATE: Manually exit both ETH positions with stop-loss triggers
+2. ⚠️ URGENT: Reduce ETH exposure from 84.3% to ≤50%
+3. 🔧 SYSTEM FIX: Debug and fix stop-loss execution mechanism
+4. 📊 STRATEGY REVIEW: Review trading strategy and position sizing
 
-🚨 CRITICAL ALERT #2: STOP_LOSS_TRIGGERED
-   Symbol: ETH/USD
-   Trade Time: 00:33:02
-   Entry Price: $2,193.60
-   Current Price: $2,064.36
-   P&L: -5.89%
-   Loss Amount: -$11.79
-   Position Value: $200.06
-   Stop-loss Threshold: -5.0% (Exceeded by 0.89%)
-   Reason: Near support level: $2167.99 (current: $2193.60)
+PERFORMANCE METRICS:
+• Win Rate: 60% (3/5 positions profitable)
+• Loss Rate: 40% (2/5 positions at loss)
+• Average Win: $4.16
+• Average Loss: $17.18
+• Risk/Reward Ratio: 0.24 (poor)
+• Portfolio Drawdown: -1.56%
 
-RISK EXPOSURE SUMMARY
----------------------
-• Total Capital: $250.00
-• Total Position Value at Risk: $400.03 (160% of capital - OVEREXPOSED)
-• Total Losses from Critical Alerts: -$34.23
-• Remaining ETH Positions: 3 additional ETH trades (not yet at stop-loss)
+TAKE-PROFIT ANALYSIS:
+• No positions have reached take-profit levels
+• Closest: ETH position #5 needs +7.76% to reach take-profit
+• Farthest: ETH position #1 needs +23.96% to reach take-profit
 
-DRAWDOWN ANALYSIS
------------------
-⚠️ SIGNIFICANT DRAWDOWN DETECTED:
-   - ETH/USD positions showing 5.89% to 11.22% losses
-   - Stop-loss levels (5%) exceeded on 2 positions
-   - Market sentiment remains BULLISH despite ETH price decline
-   - Potential market divergence warning
+FILES UPDATED:
+1. trading_monitoring.log - Full monitoring report with current data
+2. critical_alerts.log - Critical alerts appended with latest data
+3. monitoring_summary.txt - This summary report
 
-RECOMMENDED ACTIONS
--------------------
-1. IMMEDIATE: Exit both ETH/USD positions that have triggered stop-loss
-2. REVIEW: All remaining ETH positions for additional risk
-3. ADJUST: Consider reducing position sizes or increasing stop-loss buffer
-4. MONITOR: BTC/USD position at $67,247.51 (currently profitable at $67,667.37)
-5. SYSTEM: Check if trading signals are aligning with actual market movements
+NEXT MONITORING:
+• Scheduled: Next hourly analysis at ~12:01 (44 minutes)
+• Critical alerts will continue until positions are closed
+• System remains in simulation mode
 
-LOGGING STATUS
---------------
-✓ Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-✓ Critical alerts logged: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-✓ Alert severity: CRITICAL (requires immediate attention)
+RECOMMENDATIONS:
+1. Fix stop-loss execution before enabling real trading
+2. Implement portfolio concentration limits
+3. Add trailing stop-loss functionality
+4. Create backtesting framework
+5. Develop real-time risk monitoring dashboard
 
-NEXT SCHEDULED CHECK
---------------------
-Based on hourly analysis schedule, next check at ~11:34 AM
+SAFETY NOTE: System is in SIMULATION mode - no actual financial risk. However, these issues must be addressed before any real trading is enabled.
 
-END OF REPORT
-=============
+==========================================================
+Monitoring completed: 2026-03-31 11:19:22
+Next scheduled monitoring: Hourly cron job
