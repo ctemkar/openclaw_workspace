@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-31",
+  "trades": [
+    {
+      "id": "73771276533525717",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "price": 67939.01,
+      "amount": 0.003991,
+      "value": 271.13,
+      "stop_loss": 64542.06,
+      "take_profit": 74732.91,
+      "timestamp": "2026-03-31T09:26:52.324390",
+      "status": "closed"
+    },
+    {
+      "id": "73771276534151015",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "price": 67801.63,
+      "amount": 0.00199,
+      "value": 134.93,
+      "stop_loss": 64411.55,
+      "take_profit": 74581.79,
+      "timestamp": "2026-03-31T09:34:15.292325",
+      "status": "closed"
+    }
+  ]
+}

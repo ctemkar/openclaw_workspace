@@ -1,80 +1,113 @@
 #!/usr/bin/env python3
+"""Check real market data from public APIs"""
+
+import requests
 import json
 import datetime
 
-# Load completed trades
-with open('completed_trades.json', 'r') as f:
-    trades = json.load(f)
+def get_crypto_prices():
+    """Get real crypto prices from CoinGecko API"""
+    try:
+        # CoinGecko free API
+        url = "https://api.coingecko.com/api/v3/simple/price"
+        params = {
+            'ids': 'bitcoin,ethereum',
+            'vs_currencies': 'usd',
+            'include_24hr_change': 'true'
+        }
+        
+        response = requests.get(url, params=params, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            return {
+                'BTC': {
+                    'price': data['bitcoin']['usd'],
+                    'change': data['bitcoin']['usd_24h_change']
+                },
+                'ETH': {
+                    'price': data['ethereum']['usd'],
+                    'change': data['ethereum']['usd_24h_change']
+                }
+            }
+    except Exception as e:
+        print(f"Error fetching from CoinGecko: {e}")
+    
+    return None
 
-# Calculate position
-total_btc = sum(trade['amount'] for trade in trades if trade['side'] == 'buy')
-total_cost = sum(trade['amount'] * trade['price'] for trade in trades if trade['side'] == 'buy')
-avg_price = total_cost / total_btc if total_btc > 0 else 0
+def get_binance_data():
+    """Get data from Binance public API"""
+    try:
+        symbols = ['BTCUSDT', 'ETHUSDT']
+        results = {}
+        
+        for symbol in symbols:
+            url = f"https://api.binance.com/api/v3/ticker/24hr"
+            params = {'symbol': symbol}
+            response = requests.get(url, params=params, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                results[symbol.replace('USDT', 'USD')] = {
+                    'price': float(data['lastPrice']),
+                    'change': float(data['priceChangePercent']),
+                    'high': float(data['highPrice']),
+                    'low': float(data['lowPrice']),
+                    'volume': float(data['volume'])
+                }
+        
+        return results
+    except Exception as e:
+        print(f"Error fetching from Binance: {e}")
+    
+    return None
 
-print('=== MARKET ANALYSIS ===')
-print(f'Time: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
-print()
+def main():
+    print("Fetching real market data...")
+    print("=" * 50)
+    
+    # Try CoinGecko first
+    print("\n1. CoinGecko API:")
+    cg_data = get_crypto_prices()
+    if cg_data:
+        for coin, data in cg_data.items():
+            print(f"{coin}: ${data['price']:,.2f} ({data['change']:+.2f}%)")
+    else:
+        print("Failed to fetch from CoinGecko")
+    
+    # Try Binance
+    print("\n2. Binance API:")
+    binance_data = get_binance_data()
+    if binance_data:
+        for symbol, data in binance_data.items():
+            print(f"{symbol}: ${data['price']:,.2f} ({data['change']:+.2f}%)")
+            print(f"  24h Range: ${data['low']:,.2f} - ${data['high']:,.2f}")
+            print(f"  Volume: {data['volume']:,.2f}")
+    else:
+        print("Failed to fetch from Binance")
+    
+    # Calculate support/resistance levels
+    print("\n3. Support/Resistance Analysis:")
+    if binance_data:
+        for symbol, data in binance_data.items():
+            current = data['price']
+            # Simple support/resistance based on 24h range
+            support = data['low'] * 0.99  # 1% below low
+            resistance = data['high'] * 1.01  # 1% above high
+            
+            print(f"\n{symbol}:")
+            print(f"  Current: ${current:,.2f}")
+            print(f"  24h Low: ${data['low']:,.2f}")
+            print(f"  24h High: ${data['high']:,.2f}")
+            print(f"  Calculated Support: ${support:,.2f}")
+            print(f"  Calculated Resistance: ${resistance:,.2f}")
+            
+            # Check if current price is near support/resistance
+            if current < data['low'] * 1.02:  # Within 2% of low
+                print(f"  → Price near 24h low - potential BUY zone")
+            elif current > data['high'] * 0.98:  # Within 2% of high
+                print(f"  → Price near 24h high - potential SELL zone")
+            else:
+                print(f"  → Price in middle range - wait for clearer signal")
 
-# Use last trade price as current market proxy
-current_price = trades[0]['price'] if trades else 0
-print(f'Current Market Price (proxy): ${current_price:,.2f}')
-print(f'Average Entry Price: ${avg_price:,.2f}')
-print(f'Price Difference: ${current_price - avg_price:,.2f}')
-print(f'Price Change %: {(current_price/avg_price - 1)*100:.4f}%')
-print()
-
-# Check different stop-loss levels
-print('=== STOP-LOSS ANALYSIS ===')
-stop_loss_levels = [0.0003, 0.001, 0.01, 0.02, 0.03]  # 0.03%, 0.1%, 1%, 2%, 3%
-
-for sl_pct in stop_loss_levels:
-    sl_price = avg_price * (1 - sl_pct)
-    distance_pct = (current_price - sl_price) / avg_price * 100
-    status = "✅ ABOVE" if current_price > sl_price else "🚨 BELOW"
-    print(f'{sl_pct*100:.3f}% stop-loss (${sl_price:,.2f}): {status} {distance_pct:.4f}%')
-
-print()
-
-# Check take-profit levels
-print('=== TAKE-PROFIT ANALYSIS ===')
-tp_levels = [0.02, 0.03, 0.05, 0.10]  # 2%, 3%, 5%, 10%
-
-for tp_pct in tp_levels:
-    tp_price = avg_price * (1 + tp_pct)
-    distance_pct = (tp_price - current_price) / avg_price * 100
-    status = "🎯 REACHED" if current_price >= tp_price else "📈 NEEDED"
-    print(f'{tp_pct*100:.1f}% take-profit (${tp_price:,.2f}): {status} {distance_pct:.4f}%')
-
-print()
-
-# Volatility analysis
-print('=== VOLATILITY ASSESSMENT ===')
-# Typical crypto volatility ranges
-if abs(current_price - avg_price) / avg_price < 0.001:  # < 0.1%
-    print('✅ Low volatility - Position stable')
-elif abs(current_price - avg_price) / avg_price < 0.01:  # < 1%
-    print('⚠️  Moderate volatility - Normal crypto movement')
-elif abs(current_price - avg_price) / avg_price < 0.03:  # < 3%
-    print('⚠️  High volatility - Monitor closely')
-else:
-    print('🚨 Extreme volatility - High risk')
-
-print()
-
-# Recommendations
-print('=== RECOMMENDATIONS ===')
-price_change = (current_price - avg_price) / avg_price * 100
-
-if price_change < -0.5:
-    print('1. Position showing loss - Consider stop-loss adjustment')
-elif price_change > 1.5:
-    print('1. Position approaching profit - Consider take-profit strategy')
-else:
-    print('1. Position stable - Continue monitoring')
-
-print('2. For crypto trading, consider 1-2% stop-loss (not 0.03%)')
-print('3. Set realistic take-profit targets (2-5% for crypto)')
-print('4. Monitor market conditions for volatility changes')
-
-print()
-print('=== ANALYSIS COMPLETE ===')
+if __name__ == "__main__":
+    main()

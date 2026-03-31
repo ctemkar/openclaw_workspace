@@ -413,4 +413,4 @@ class AggressiveTradingStrategy:
                     "current_price": current_price,
                     "entry_price": current_price,
                     "stop_loss": current_price * (1 - STOP_LOSS_PERCENT/100),
-                    "take_profit":
+                    "take_profit": current_price * (1 + TAKE_PROFIT_PERC

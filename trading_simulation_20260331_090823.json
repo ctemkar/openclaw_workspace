@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-03-31T09:08:23.904597",
+  "capital": 1000.0,
+  "pairs_analyzed": [
+    {
+      "pair": "BTCUSD",
+      "current_price": 125753.04652549286,
+      "bid": 125727.89591618776,
+      "ask": 125778.19713479796,
+      "support_levels": [
+        124500.0,
+        123800.0,
+        122000.0
+      ],
+      "resistance_levels": [
+        126000.0,
+        127200.0,
+        128500.0
+      ],
+      "momentum": "BULLISH",
+      "volatility": 2.248645483865745,
+      "signal": "BUY",
+      "signal_reason": "Near support ($124,500.00), bullish momentum",
+      "confidence": 61
+    },
+    {
+      "pair": "ETHUSD",
+      "current_price": 8283.579518040835,
+      "bid": 8281.922802137227,
+      "ask": 8285.236233944443,
+      "support_levels": [
+        8150.0,
+        8050.0,
+        7900.0
+      ],
+      "resistance_levels": [
+        8350.0,
+        8450.0,
+        8600.0
+      ],
+      "momentum": "NEUTRAL",
+      "volatility": 2.544153126522072,
+      "signal": "HOLD",
+      "signal_reason": "No clear signal",
+      "confidence": 0
+    }
+  ],
+  "signals_generated": [
+    {
+      "symbol": "BTCUSD",
+      "current_price": 125753.04652549286,
+      "action": "BUY",
+      "reason": "Near support ($124,500.00), bullish momentum",
+      "confidence": 61,
+      "entry_price": 125753.04652549286,
+      "stop_loss": 119465.39419921821,
+      "take_profit": 138328.35117804215,
+      "position_size": 0.003180837451273289
+    },
+    {
+      "symbol": "ETHUSD",
+      "current_price": 8283.579518040835,
+      "action": "HOLD",
+      "reason": "No clear signal",
+      "confidence": 0,
+      "entry_price": 0,
+      "stop_loss": 0,
+      "take_profit": 0,
+      "position_size": 0
+    }
+  ],
+  "trades_executed": [
+    {
+      "symbol": "BTCUSD",
+      "side": "buy",
+      "amount": 0.003180837451273289,
+      "price": 125753.04652549286,
+      "value": 400.0,
+      "stop_loss": 119465.39419921821,
+      "take_profit": 138328.35117804215,
+      "status": "SIMULATED_EXECUTION",
+      "timestamp": "2026-03-31T09:08:23.904625",
+      "order_id": "SIM-1774922903-BTCUSD"
+    }
+  ],
+  "market_conditions": {
+    "total_pairs": 2,
+    "analysis_time": "2026-03-31T09:08:23.904641",
+    "risk_level": "CONSERVATIVE",
+    "trading_allowed": true,
+    "trades_today": 1,
+    "trades_remaining": 1
+  },
+  "risk_assessment": "CONSERVATIVE"
+}

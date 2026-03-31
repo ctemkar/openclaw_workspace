@@ -1,98 +1,115 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Monitoring Time: Tuesday, March 31st, 2026 — 8:47 AM (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+TRADING ANALYSIS REPORT
+Generated: 2026-03-31 09:33:58.631061
+==================================================
 
-SYSTEM STATUS
--------------
-• Status: Running
-• Capital: $250.00
-• Analysis Schedule: Hourly
-• Last Analysis: 2026-03-31T08:33:48.500623
-• Trading Pairs: BTC/USD, ETH/USD
+======================================================================
+CONSERVATIVE CRYPTO TRADING SYSTEM
+======================================================================
+Execution Time: 2026-03-31 09:33:53 (UTC+7)
+Capital: $250.00
+Risk Management: 5.0% SL, 10.0% TP
+Position Size: Max 50.0% of capital
+Daily Limit: 2 trades
+API Mode: SIMULATION
+======================================================================
 
-RISK PARAMETERS
----------------
-• Max Trades Per Day: 2
-• Stop-loss: 5.0%
-• Take-profit: 10.0%
+1️⃣  MARKET DATA ANALYSIS
+----------------------------------------
+📊 Fetching real-time market data...
+✅ BTC/USD: $67,807.55
+✅ ETH/USD: $2,071.62
+✅ BTC 24h Volume: $26,830,789
+✅ ETH 24h Volume: $9,246,073
 
-TRADING ACTIVITY
-----------------
-Total Open Positions: 5 trades
+2️⃣  SUPPORT/RESISTANCE LEVELS
+----------------------------------------
+✅ BTC Support: $67,786.04
+✅ BTC Resistance: $67,801.66
+✅ ETH Support: $2,070.34
+✅ ETH Resistance: $2,070.50
 
-Recent Trades:
-1. ETH/USD BUY at 13:39:49 - $2325.28 (0.086 qty)
-2. ETH/USD BUY at 00:33:02 - $2193.60 (0.0912 qty)  
-3. BTC/USD BUY at 21:29:41 - $67247.51 (0.002974 qty)
-4. ETH/USD BUY at 21:29:42 - $2052.38 (0.0974 qty)
-5. ETH/USD BUY at 07:24:00 - $2021.51 (0.2474 qty)
+3️⃣  MARKET SENTIMENT
+----------------------------------------
+✅ Market Sentiment: BULLISH
 
-MARKET DATA
------------
-• BTC/USD: $68,068.61
-• ETH/USD: $2,083.74
-• BTC 24h Volume: $15,460,187
-• ETH 24h Volume: $9,250,732
+4️⃣  TRADING ANALYSIS
+----------------------------------------
+✅ Trading Signal: BUY
+✅ Reason: Price within 1% of support ($67786.04)
+
+5️⃣  TRADE EXECUTION
+----------------------------------------
+🎯 TRADE RECOMMENDATION FOUND!
+   Symbol: BTC/USD
+   Entry Price: $67,807.55
+   Position Size: 0.001843
+   Position Value: $125.00
+   Stop Loss: $64,417.17 (5.0%)
+   Take Profit: $74,588.31 (10.0%)
+   Risk/Reward: 1:2.0
+
+🔧 SIMULATED TRADE EXECUTION
+   To execute real trades:
+   1. Get Gemini API credentials from gemini.com
+   2. Set environment variables:
+      export GEMINI_API_KEY='your_api_key'
+      export GEMINI_API_SECRET='your_api_secret'
+   3. Run this script again
+
+======================================================================
+FINAL TRADING SUMMARY
+======================================================================
+
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+====================================
+Analysis Time: 2026-03-31 09:33:58 (UTC+7)
+
+MARKET DATA:
+• BTC/USD: $67,807.55
+• ETH/USD: $2,071.62
+• BTC 24h Volume: $26,830,789
+• ETH 24h Volume: $9,246,073
 • Market Sentiment: BULLISH
 
-CRITICAL ALERTS DETECTED (2)
-----------------------------
-🚨 ALERT #1: ETH/USD STOP-LOSS TRIGGERED
-• Trade Time: 13:39:49
-• Entry Price: $2,325.28
-• Current Price: $2,083.74
-• Loss: -10.39% (exceeds 5% stop-loss)
-• Position Size: 0.086 ETH
-• P&L: -$20.77
-• Reason: Near support level: $2308.08
+SUPPORT/RESISTANCE:
+• BTC Support: $67,786.04
+• BTC Resistance: $67,801.66
+• ETH Support: $2,070.34
+• ETH Resistance: $2,070.50
 
-🚨 ALERT #2: ETH/USD STOP-LOSS TRIGGERED  
-• Trade Time: 00:33:02
-• Entry Price: $2,193.60
-• Current Price: $2,083.74
-• Loss: -5.01% (at stop-loss threshold)
-• Position Size: 0.0912 ETH
-• P&L: -$10.02
-• Reason: Near support level: $2167.99
+TRADING DECISION: BUY
+Reason: Price within 1% of support ($67786.04)
 
-RISK ASSESSMENT
----------------
-• Total Positions: 5
-• Critical Alerts: 2 (40% of portfolio)
-• Warning Alerts: 0
-• Safe Positions: 3
-• Overall Risk Level: HIGH
+TRADE RECOMMENDATION:
+• Symbol: BTC/USD
+• Action: BUY
+• Entry Price: $67,807.55
+• Position Size: 0.001843
+• Position Value: $125.00
+• Stop Loss: $64,417.17 (5.0%)
+• Take Profit: $74,588.31 (10.0%)
+• Risk/Reward Ratio: 1:2.0
 
-PORTFOLIO ANALYSIS
-------------------
-• ETH Exposure: 4 out of 5 positions (80%)
-• BTC Exposure: 1 out of 5 positions (20%)
-• Average ETH Entry: $2,148.19
-• Current ETH Price: $2,083.74 (-3.0% from average)
-• Average BTC Entry: $67,247.51
-• Current BTC Price: $68,068.61 (+1.2% from average)
+EXECUTION STATUS: SIMULATED - API credentials needed
 
-RECOMMENDED ACTIONS
--------------------
-1. IMMEDIATE: Review and potentially exit both ETH/USD positions with stop-loss triggers
-2. URGENT: Reduce ETH exposure (currently 80% of portfolio)
-3. Review stop-loss levels for remaining ETH positions
-4. Consider rebalancing portfolio to reduce concentration risk
-5. Monitor BTC position which is currently profitable (+1.2%)
+RISK MANAGEMENT PARAMETERS:
+• Capital: $250.00
+• Max Position Size: 50.0% of capital
+• Stop Loss: 5.0%
+• Take Profit: 10.0%
+• Max Daily Trades: 2
+• Strategy: Conservative support-based trading
 
-LOGGING STATUS
---------------
-• Trading logs updated: ✓ /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical alerts logged: ✓ /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Alert details: 2 stop-loss triggers detected on ETH/USD positions
+NEXT STEPS:
+1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
+2. Run analysis again in 6-12 hours
+3. Review market conditions before next trading window
+4. Never risk more than 5% of capital per trade
 
-NEXT STEPS
-----------
-• System will perform next analysis within 6-12 hours
-• Monitor ETH price action for potential recovery or further decline
-• Consider implementing tighter stop-losses for new ETH positions
-• Review trading strategy given current market conditions
+END OF ANALYSIS
+====================================
 
-END OF SUMMARY
-==============
+
+======================================================================
+SUMMARY READY FOR CRON DELIVERY
+======================================================================
