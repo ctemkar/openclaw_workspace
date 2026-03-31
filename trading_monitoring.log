@@ -1,131 +1,86 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-04-01 04:56:07 (Asia/Bangkok)
-Dashboard URL: http://localhost:5009/
+=== TRADING PERFORMANCE MONITORING REPORT ===
+Timestamp: 2026-04-01 04:58:30 (Asia/Bangkok)
+Data Source: Bot logs, dashboard analysis, critical alerts
 
-DASHBOARD CONTENT:
-<!doctype html>
-<html lang=en>
-<head>
-    <meta charset=utf-8>
-    <title>Real Trading P&L Dashboard</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-        .section { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .section-title { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .data-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; }
-        .data-value { font-size: 2em; font-weight: bold; margin: 10px 0; }
-        .positive { color: #27ae60; }
-        .negative { color: #e74c3c; }
-        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 10px 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #f2f2f2; }
-        .timestamp { color: #7f8c8d; font-size: 0.9em; text-align: right; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📊 Real Trading P&L Dashboard</h1>
-            <p>NO HARCODED VALUES - REAL DATA ONLY</p>
-            <div class="timestamp">Last updated: 2026-04-01 04:56:07</div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">📈 CUMULATIVE PERFORMANCE (NEVER RESETS)</h2>
-            <div class="data-grid">
-                <div class="data-card">
-                    <h3>Initial Capital</h3>
-                    <div class="data-value">$946.97</div>
-                    <p>Total investment</p>
-                </div>
-                <div class="data-card">
-                    <h3>Current Value</h3>
-                    <div class="data-value">$531.65</div>
-                    <p>Portfolio value now</p>
-                </div>
-                <div class="data-card">
-                    <h3>Cumulative P&L</h3>
-                    <div class="data-value negative">
-                        $-415.32 (-43.9%)
-                    </div>
-                    <p>Never resets</p>
-                </div>
-            </div>
-            <p><strong>Recovery needed:</strong> $415.32 (78.1%) to break even</p>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">🔵 REAL-TIME P&L (NO HARDCODED VALUES)</h2>
-            
-            <div class="data-grid">
-                <div class="data-card">
-                    <h3>♊ GEMINI P&L</h3>
-                    <div class="data-value positive">
-                        $+2.06
-                    </div>
-                    <p>Real-time calculation</p>
-                    <p><small>5 SOL positions</small></p>
-                    <p><small>Status: OK (5 positions)</small></p>
-                </div>
-                <div class="data-card">
-                    <h3>₿ BINANCE P&L</h3>
-                    <div class="data-value negative">
-                        $-1.00
-                    </div>
-                    <p>3 open positions</p>
-                    <p><small>7 closed SHORTS: $-2.17</small></p>
-                </div>
-                <div class="data-card">
-                    <h3>📊 TOTAL OPEN P&L</h3>
-                    <div class="data-value positive">
-                        $+1.06
-                    </div>
-                    <p>All open positions</p>
-                    <p><small>Gemini + Binance combined</small></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">💰 CAPITAL ALLOCATION</h2>
-            <div class="data-grid">
-                <div class="data-card">
-                    <h3>Total Capital</h3>
-                    <div class="data-value">$531.65</div>
-                    <p>Across all exchanges</p>
-                </div>
-                <div class="data-card">
-                    <h3>Gemini</h3>
-                    <div class="data-value">$412.03</div>
-                    <p>77.5% of total</p>
-                </div>
-                <div class="data-card">
-                    <h3>Binance</h3>
-                    <div class="data-value">$119.62</div>
-                    <p>22.5% of total</p>
-                </div>
-            </div>
-            <p><strong>Deployed:</strong> $265.80 (50.0%) | 
-               <strong>Available:</strong> $265.85</p>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">📝 DATA QUALITY & STATUS</h2>
-            <div class="warning">
-                <h3>⚠️ IMPORTANT: NO HARCODED VALUES</h3>
-                <p>This dashboard uses <strong>REAL DATA ONLY</strong>. No values are hardcoded or simulated.</p>
-                <p><strong>Data Status:</strong> REAL_DATA_ONLY_NO_HARDCODING</p>
-                <p><strong>Gemini:</strong> OK (5 positions)</p>
-                <p><strong>Binance:</strong> OK (3 open, 7 closed shorts)</p>
-                <p><strong>If data is unavailable, it shows as unavailable - never guessed or hardcoded.</strong></p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+EXECUTIVE SUMMARY:
+- Trading bot operational but severely limited
+- Binance completely blocked (geographic restrictions)
+- Gemini-only trading with limited opportunities
+- Critical historical drawdown of 43.9%
 
-=== END OF DASHBOARD CONTENT ===
+BOT STATUS:
+- Process: PID 541 (running since 04:24)
+- Mode: AGGRESSIVE
+- Cycle: 7 completed at 04:59:52
+- Opportunities found: 12 total (all cycles)
+- Trading frequency: 5-minute cycles (300 seconds)
+
+TRADING PARAMETERS (from bot configuration):
+- Gemini Capital: $134.27
+- Binance Capital: $134.27 (blocked)
+- Leverage: 1x (reduced from 3x for safety)
+- Position Size: 10% of capital
+- Long Threshold: 1.0% drop (Gemini)
+- Short Threshold: 1.0% drop (Binance)
+- Stop Loss: 3% (tighter from 5%)
+- Take Profit: 5% (reduced from 10%)
+
+EXCHANGE STATUS:
+1. GEMINI:
+   - Status: ✅ Connected
+   - Positions: 5 active (all SOL positions according to alerts)
+   - P&L: +$2.06 (positive)
+   - Issues: No recent trade executions detected in logs
+
+2. BINANCE:
+   - Status: ❌ BLOCKED (geographic restrictions - Thailand)
+   - Error: "Service unavailable from a restricted location"
+   - P&L: -$1.00 (negative)
+   - Closed Shorts: -$2.17 loss
+   - Issues: All trade attempts failing with:
+     * "Margin is insufficient" (code -2019)
+     * "Invalid symbol status" (code -4140)
+
+TRADE EXECUTION ANALYSIS:
+- Total opportunities identified: 12 (across 7 cycles)
+- Successful trades: 0 (all Binance trades failing)
+- Gemini trades: No execution attempts found in recent logs
+- Primary issue: Binance geographic blockade preventing all trading
+
+RISK ASSESSMENT:
+
+CRITICAL RISKS:
+1. **SEVERE DRAWDOWN**: -43.9% cumulative loss ($415.32 loss from $946.97 initial)
+2. **EXCHANGE BLOCKAGE**: Binance completely unavailable in Thailand
+3. **CAPITAL DEPLOYMENT**: 50% of remaining capital deployed ($265.80 of $531.65)
+4. **POSITION CONCENTRATION**: High concentration in SOL positions
+
+MODERATE RISKS:
+1. **LIMITED TRADING**: Only Gemini operational with $134.27 capital
+2. **NO STOP-LOSS ORDERS**: Dashboard shows no explicit stop-loss orders
+3. **DATA QUALITY**: Real data confirmed, but trading severely limited
+
+PERFORMANCE METRICS:
+- Current Portfolio Value: $531.65
+- Initial Capital: $946.97
+- Total Loss: -$415.32 (-43.9%)
+- Recovery Required: 78.1% gain to break even
+- Gemini Performance: +$2.06 (small positive)
+- Binance Performance: -$3.17 total (-$1.00 open, -$2.17 closed)
+
+ALERT STATUS:
+- Stop-loss triggers: NONE DETECTED (no stop-loss orders shown)
+- Take-profit triggers: NONE DETECTED
+- Drawdown status: CRITICAL (-43.9%)
+- Exchange connectivity: CRITICAL (Binance blocked)
+
+RECOMMENDATIONS:
+1. **IMMEDIATE**: Implement VPN solution for Binance access
+2. **IMMEDIATE**: Set explicit stop-loss orders for all positions
+3. **HIGH PRIORITY**: Reduce position concentration (diversify from SOL)
+4. **MEDIUM PRIORITY**: Explore alternative exchanges available in Thailand
+5. **MONITORING**: Continue close monitoring given critical drawdown
+
+NEXT MONITORING CHECK: 05:03 AM (next bot cycle completion)
+
+=== END OF MONITORING REPORT ===
