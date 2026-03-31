@@ -11512,3 +11512,5 @@ BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixe
 Click to open Dashboard:
 http://127.0.0.1:5001
 
+STATUS: [OK] API is UP
+BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixed_futures_bot.py

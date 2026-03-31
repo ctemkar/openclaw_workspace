@@ -1,179 +1,11 @@
-=== CRITICAL ALERTS - 2026-03-31 20:48:21 ===
-⚠️ ALERT STATUS UPDATE - P&L WORSENING CONTINUES, CAPITAL DECREASE CONTINUES ⚠️
-
-1. 🔴 BINANCE P&L WARNING - CONTINUING DETERIORATION
-   Status: CRITICAL - IMMEDIATE ATTENTION NEEDED
-   Issue: Binance showing -$5.243 unrealized loss on 8 open SHORT positions (worsened from -$4.75)
-   Timeline:
-     - 20:32:00: -$3.04 (from previous alert)
-     - 20:34:53: -$3.97 (worsened by $0.93)
-     - 20:35:29: -$4.12 (worsened by $0.15 more)
-     - 20:39:06: -$4.10 (slight improvement of $0.02)
-     - 20:42:45: -$4.75 (worsened by $0.65 more)
-     - 20:48:21: -$5.243 (worsened by $0.493 more, total -$2.203 in ~16 minutes)
-   Details:
-     - Open Positions: 8 (all Binance SHORT)
-     - Unrealized Loss: -$5.243 (worsened by $2.203 total in ~16 minutes)
-     - Realized P&L: $0.00
-     - Total Trades: 8
-   Impact: Loss CONTINUING, needs IMMEDIATE attention
-   Action Required: Monitor P&L movement CLOSELY, consider position adjustments NOW
-
-2. 🔴 CAPITAL DECREASE WARNING - CONTINUING
-   Status: CRITICAL - IMMEDIATE ATTENTION NEEDED
-   Issue: Capital decreased by $0.22 (from $532.24 to $532.02) - CONTINUING
-   Details:
-     - Previous Capital: $532.24
-     - Current Capital: $532.02
-     - Decrease: -$0.22 (-0.04%)
-     - Overall Growth: Still +112.8% from initial $250
-   Impact: Capital decrease CONTINUING (total -$1.34 from $533.36), concerning trend
-   Action Required: URGENT investigation of capital decrease cause
-
-3. 🟡 UNLIMITED TRADING RISK WARNING
-   Status: WARNING - HIGH RISK SETTING
-   Issue: Max trades per day set to 999 (effectively unlimited)
-   Risk: Potential for over-trading, excessive risk exposure
-   Current Setting: 999 trades/day
-   Recommended: 2-5 trades/day for conservative strategy
-   Action Required: Review and potentially limit daily trades
-
-4. 🟢 CAPITAL GROWTH POSITIVE
-   Status: POSITIVE - EXCELLENT PERFORMANCE
-   Achievement: +112.8% capital growth from initial $250
-   Initial Capital: $250.00
-   Current Capital: $532.02
-   Growth: +$282.02 (+112.8%)
-   Trend: POSITIVE overall but showing CONTINUING decrease
-   Action: Continue monitoring, maintain conservative approach
-
-5. 🟢 DASHBOARD ACCESS OPERATIONAL
-   Status: NORMAL - FULLY OPERATIONAL
-   Port: 5001
-   Status: Running and responsive
-   Endpoints: All endpoints accessible (/status, /trades, /summary, etc.)
-   Action: Continue regular monitoring
-
-6. 🟢 NO STOP-LOSS OR TAKE-PROFIT TRIGGERS
-   Status: NORMAL - ALL POSITIONS HEALTHY
-   Stop-loss Level: 5.0% (none triggered)
-   Take-profit Level: 10.0% (none triggered)
-   Positions: 8 open SHORT positions all above stop-loss levels
-   Action: Continue monitoring
-
-=== PERFORMANCE SUMMARY ===
-Capital Status: 🟢 EXCELLENT ($532.02, +112.8% growth) but decreasing CONTINUING
-P&L Status: 🔴 WORSENING CONTINUING (-$5.243 unrealized, worsened by $2.203 in ~16 minutes)
-Trading Activity: 🟢 ACTIVE (5 recent trades, 8 open positions)
-Risk Exposure: 🟡 MODERATE (unlimited trading setting)
-System Health: 🟢 OPERATIONAL (dashboard accessible)
-Drawdown Status: 🟢 NONE (capital still significantly increased)
-
-=== TRADING ACTIVITY ANALYSIS ===
-Recent Trades (last 24 hours):
-1. ETH/USD BUY 0.086 @ $2325.28 (13:39:49) - Near support level
-2. ETH/USD BUY 0.0912 @ $2193.60 (00:33:02) - Near support level
-3. BTC/USD BUY 0.002974 @ $67247.51 (21:29:41) - Near support level
-4. ETH/USD BUY 0.0974 @ $2052.38 (21:29:42) - Near support level
-5. ETH/USD BUY 0.2474 @ $2021.51 (07:24:00) - Conservative entry
-
-Open Positions: 8 Binance SHORT positions
-Position Health: All above stop-loss levels (no immediate triggers)
-Market Conditions: NEUTRAL sentiment (from previous analysis)
-Trading Signal: BUY BTC/USD detected (from /summary endpoint)
-
-=== RISK ASSESSMENT DETAILS ===
-Stop-loss Monitoring: 
-  ✅ No positions within 1% of 5% stop-loss
-Take-profit Monitoring:
-  ✅ No positions within 1% of 10% take-profit
-Drawdown Monitoring:
-  ✅ POSITIVE: +112.8% capital growth (no drawdown)
-Capital Monitoring:
-  🔴 CRITICAL: Capital decreased by $0.22 (from $532.24 to $532.02) - CONTINUING
-P&L Monitoring:
-  🔴 CRITICAL: -$5.243 unrealized loss on Binance positions (worsened by $2.203 in ~16 minutes)
-Trading Limit Monitoring:
-  🟡 WARNING: 999 trades/day (unlimited - high risk)
-Configuration Monitoring:
-  🟢 NORMAL: Other parameters aligned (5% SL, 10% TP)
-
-=== RECOMMENDED ACTIONS ===
-P1 (HIGH PRIORITY - 0-1 HOUR):
-1. 🔴 MONITOR BINANCE P&L: Watch -$5.243 unrealized loss for further deterioration (CONTINUING)
-2. 🔴 INVESTIGATE CAPITAL DECREASE: URGENT - Determine why capital dropped $0.22 (CONTINUING)
-3. 🟡 REVIEW TRADING LIMITS: Consider reducing from 999 to 5-10 trades/day
-4. 🟢 VERIFY POSITION HEALTH: Confirm all 8 positions still above stop-loss levels
-
-P2 (MEDIUM PRIORITY - 1-7 DAYS):
-5. 🟢 MAINTAIN STRATEGY: Continue successful approach (+112.8% growth)
-6. 🟢 REGULAR MONITORING: Continue hourly checks via cron job
-7. 🟢 DOCUMENT SUCCESS: Record successful trading patterns
-
-P3 (LOW PRIORITY - ONGOING):
-8. 🟢 SYSTEM OPTIMIZATION: Consider performance improvements
-9. 🟢 RISK ADJUSTMENT: Fine-tune parameters based on performance
-
-=== POSITIVE INDICATORS ===
-1. ✅ Capital Growth: +112.8% from initial $250
-2. ✅ Active Trading: 5 recent trades executed
-3. ✅ Dashboard Access: Full monitoring capability operational
-4. ✅ No Stop-loss Triggers: All positions healthy
-5. ✅ Market Analysis: Regular analysis running (hourly)
-
-=== CONCERNS TO MONITOR ===
-1. Binance P&L: -$5.243 unrealized loss on 8 positions (worsened by $2.203 in ~16 minutes)
-2. Capital Decrease: $0.22 drop (from $532.24 to $532.02) - CONTINUING
-3. Unlimited Trading: 999 trades/day setting (high risk)
-4. Position Concentration: 8 open SHORT positions on Binance
-5. P&L Trend: Negative movement CONTINUING (-$3.04 → -$5.243 in ~16 minutes)
-
-=== NEXT STEPS ===
-1. Immediate (0-15 minutes): Monitor Binance P&L for further changes (CONTINUING)
-2. Immediate (0-15 minutes): URGENT investigation of capital decrease (CONTINUING)
-3. Short-term (1 hour): Review and potentially adjust trading limits
-4. Ongoing (hourly): Continue cron job monitoring
-5. Weekly: Comprehensive performance review
-
-=== ALERT PRIORITY ===
-P1 (High): Binance P&L monitoring (CONTINUING negative trend), Capital decrease investigation (CONTINUING)
-P2 (Medium): Trading limit review, Position health verification
-P3 (Low): System optimization
-
-=== MONITORING STATUS ===
-Last Check: 2026-03-31 20:48:21 (Asia/Bangkok)
-Next Check: ~21:48 (hourly schedule)
-Monitoring Method: Cron job (trading_dashboard_monitor)
-Data Sources: Dashboard API endpoints (/status, /trades, /summary)
-
-=== SYSTEM HEALTH SCORE ===
-Overall: 3/10 (FAIR with CRITICAL warnings)
-- Capital Health: 6/10 (+112.8% growth but decreasing CONTINUING)
-- P&L Health: 2/10 (-$5.243 unrealized loss, CONTINUING negative trend)
-- Trading Activity: 8/10 (active but unlimited setting risky)
-- Process Health: 9/10 (running and accessible)
-- Configuration Health: 7/10 (unlimited trading concern)
-- Dashboard Health: 10/10 (fully operational)
-
-=== FINAL ASSESSMENT ===
-🔴 TRADING SYSTEM PERFORMING WELL OVERALL BUT WITH CONTINUING P&L DETERIORATION AND CONTINUING CAPITAL DECREASE
-Key Success: +112.8% capital growth from initial $250
-Key Concerns: 
-  1. Binance -$5.243 unrealized loss (CONTINUING: -$2.203 worse in ~16 minutes)
-  2. Capital decreased by $0.22 (CONTINUING decrease, total -$1.34 from $533.36, investigation URGENT)
-  3. Unlimited trading setting (review needed)
-  4. P&L negative trend CONTINUING
-
-Recommendation: Continue current strategy with URGENT monitoring of Binance positions, IMMEDIATE investigation of capital decrease (continuing), consider daily trade limits, and prepare for potential position adjustments if P&L continues to worsen.
-
-=== END OF CRITICAL ALERTS ====== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 20:53:00 (Asia/Bangkok)
-Alert Level: HIGH
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 20:58:00 (Asia/Bangkok)
+Alert Level: HIGH - MULTIPLE CRITICAL ISSUES
 
 ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
 - Symbol: ETH/USD
 - Entry Price: $2,325.28
-- Current Price: $2,068.66
+- Current Price: $2,068.66 (from CoinGecko)
 - Loss: -11.04%
 - Position Size: 0.086 ETH
 - Trade Time: 13:39:49
@@ -182,12 +14,12 @@ ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
 - Loss Exceeds Stop-Loss By: 6.04%
 - Action Required: Exit position immediately or adjust stop-loss
 - Position Value: $177.90 (from $199.97 investment)
-- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION
+- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION - URGENT ACTION NEEDED
 
 ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
 - Symbol: ETH/USD
 - Entry Price: $2,193.60
-- Current Price: $2,068.66
+- Current Price: $2,068.66 (from CoinGecko)
 - Loss: -5.70%
 - Position Size: 0.0912 ETH
 - Trade Time: 00:33:02
@@ -196,7 +28,7 @@ ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
 - Loss Exceeds Stop-Loss By: 0.70%
 - Action Required: Exit position or adjust stop-loss
 - Position Value: $188.66 (from $200.06 investment)
-- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION
+- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION - URGENT ACTION NEEDED
 
 ALERT 3: DATA DISCREPANCY - POSITION COUNT MISMATCH
 - System Reports: 8 open positions
@@ -204,7 +36,7 @@ ALERT 3: DATA DISCREPANCY - POSITION COUNT MISMATCH
 - Missing Positions: 3 positions not listed
 - Issue: Inconsistent data between status and trades endpoints
 - Risk: Cannot monitor all positions effectively
-- Action Required: Investigate data source consistency
+- Action Required: Investigate data source consistency IMMEDIATELY
 - Impact: ⚠️ HIGH - Incomplete position monitoring
 
 ALERT 4: EXECUTION MODE CONFLICT
@@ -212,26 +44,46 @@ ALERT 4: EXECUTION MODE CONFLICT
 - Summary States: "EXECUTION STATUS: SIMULATED - API credentials needed"
 - Conflict Level: HIGH
 - Risk: Unclear if trades are real or simulated
-- Action Required: Verify actual trading mode immediately
+- Action Required: Verify actual trading mode IMMEDIATELY
 - Impact: ⚠️ HIGH - Could lead to unexpected real losses
 
 ALERT 5: CAPITAL SURGE INVESTIGATION NEEDED
 - Earlier Today (16:15): $175.53 capital
-- Current (20:53): $532.18 capital
-- Increase: +$356.65 (+203.3%)
+- Current (20:58): $531.78 capital
+- Increase: +$356.25 (+203.0%)
 - Timeframe: ~4.5 hours
 - Issue: Unusually large capital increase requires investigation
 - Possible Causes: New deposits, profitable trades not listed, data error
-- Action Required: Investigate capital source and validity
-- Impact: ⚠️ MEDIUM - Need to verify capital increase legitimacy
+- Action Required: Investigate capital source and validity IMMEDIATELY
+- Impact: ⚠️ MEDIUM-HIGH - Need to verify capital increase legitimacy
+
+ALERT 6: BINANCE P&L WORSENING CONTINUES
+- Current P&L: -$5.652 (unrealized)
+- Previous P&L (20:48): -$5.243
+- Worsened By: $0.409 (-7.8% worse)
+- Open Positions: 8 (all Binance SHORT)
+- Timeline (last 26 minutes): -$3.04 → -$5.652 (-$2.612 total)
+- Trend: 🔴 CONTINUING NEGATIVE
+- Action Required: Monitor closely, consider position adjustments
+- Impact: ⚠️ HIGH - Continuing losses
+
+ALERT 7: CAPITAL DECREASE CONTINUES
+- Previous Capital (20:53): $532.18
+- Current Capital: $531.78
+- Decrease: -$0.40 (-0.08%)
+- Overall Trend: Capital decreasing from $533.36 earlier
+- Total Decrease: -$1.58 from peak
+- Action Required: Investigate capital decrease cause
+- Impact: ⚠️ MEDIUM - Concerning trend
 
 === SYSTEM STATUS SUMMARY ===
-- Current Capital: $532.18 (up 112.87% from initial $250.00)
+- Current Capital: $531.78 (up 112.7% from initial $250.00)
 - Open Positions: 8 (per status endpoint)
 - Listed Trades: 5 (per trades endpoint)
-- Total P&L (system): -$5.40
+- Total P&L (system): -$5.652
 - Trading Mode: CONFLICTING (REAL vs SIMULATION)
 - Last Analysis: 2026-03-31 20:18:54
+- Next Analysis: ~21:18 (hourly schedule)
 
 === PORTFOLIO ANALYSIS ===
 - Listed Trades Investment: $1,300.05
@@ -241,31 +93,41 @@ ALERT 5: CAPITAL SURGE INVESTIGATION NEEDED
 - Stop-Loss Violations: 2 trades (40%)
 - Asset Concentration: 80% ETH, 20% BTC
 
-=== IMMEDIATE ACTIONS REQUIRED ===
-1. URGENT: Address 2 stop-loss violated ETH positions
-2. URGENT: Investigate capital surge from $175.53 to $532.18
+=== IMMEDIATE ACTIONS REQUIRED (PRIORITY ORDER) ===
+1. URGENT: Address 2 stop-loss violated ETH positions (exceeding 5% threshold)
+2. URGENT: Investigate capital surge from $175.53 to $531.78
 3. HIGH: Resolve data discrepancy (8 positions vs 5 trades)
 4. HIGH: Clarify execution mode (REAL vs SIMULATION)
-5. MEDIUM: Review asset concentration (80% ETH)
+5. HIGH: Monitor Binance P&L (-$5.652 and worsening)
+6. MEDIUM: Investigate capital decrease trend (-$1.58 from peak)
+7. MEDIUM: Review asset concentration (80% ETH)
+8. LOW: Review unlimited trading setting (999 trades/day)
 
 === RISK ASSESSMENT ===
-Overall Risk Level: MEDIUM-HIGH
-- Data Integrity Risk: HIGH (position count mismatch)
-- Execution Risk: HIGH (mode uncertainty)
-- Position Risk: MEDIUM (2 stop-loss violations)
-- Capital Risk: LOW (capital increased significantly)
-- Compliance Risk: MEDIUM (stop-loss rules violated)
+Overall Risk Level: HIGH
+- Data Integrity Risk: HIGH (position count mismatch, mode conflict)
+- Execution Risk: HIGH (stop-loss violations, mode uncertainty)
+- Position Risk: HIGH (2 stop-loss violations, P&L worsening)
+- Capital Risk: MEDIUM (capital increased but decreasing trend)
+- Compliance Risk: HIGH (stop-loss rules violated)
 
 === ALERT GENERATION DETAILS ===
-- Monitoring Source: OpenClaw Cron Job
+- Monitoring Source: OpenClaw Cron Job (trading_dashboard_monitor)
 - Dashboard: http://localhost:5001/
-- Price Source: CoinGecko API
-- Analysis Time: 2026-03-31 20:53:00
+- Price Source: CoinGecko API (for position valuation)
+- Analysis Time: 2026-03-31 20:58:00
 - Alert Thresholds:
-  • Stop-Loss: 5%
-  • Take-Profit: 10%
-  • Capital Change Warning: ±10% in 4 hours
-  • Data Consistency: Any discrepancy
-- Current Status: 5 active alerts requiring attention
+  • Stop-Loss: 5% (2 violations detected)
+  • Take-Profit: 10% (none detected)
+  • Capital Change Warning: ±10% in 4 hours (203% increase detected)
+  • Data Consistency: Any discrepancy (3 issues detected)
+- Current Status: 7 active alerts requiring attention
+
+=== PERFORMANCE METRICS ===
+- Capital Growth: +112.7% (excellent but decreasing)
+- Trade Success Rate: 40% (2/5 profitable)
+- Stop-Loss Compliance: 60% (3/5 within limits)
+- Data Consistency: 0% (multiple discrepancies)
+- System Health: 5/10 (multiple critical issues)
 
 --- End of Critical Alerts ---
