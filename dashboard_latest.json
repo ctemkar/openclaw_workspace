@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-03-31T09:21:33.620667",
+  "last_updated": "2026-03-31T23:29:02.616740",
   "status": "active",
   "report_available": true,
   "latest_report": "trading_report_2026-03-31_09-21-33.txt",
   "trading_state": {
     "system_status": "running",
-    "capital": 250.0,
+    "capital": 100.0,
     "open_positions": 0,
-    "total_trades": 5
+    "total_trades": 10
   },
   "real_trading": {
     "enabled": true,
@@ -26,7 +26,6 @@
   "next_update": "hourly",
   "alerts": [
     "No open positions - ready for new trades",
-    "Real trading mode is enabled",
-    "Latest report generated: trading_report_2026-03-31_09-21-33.txt"
+    "Real trading mode is enabled"
   ]
 }

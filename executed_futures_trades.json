@@ -142,5 +142,41 @@
     "signal_strength": 4.11,
     "status": "EXECUTED",
     "risk_notes": "Capital at risk: $8.74"
+  },
+  {
+    "timestamp": "2026-03-31T23:43:59.833604",
+    "exchange": "binance_futures",
+    "symbol": "SOL/USDT",
+    "side": "sell",
+    "type": "SHORT",
+    "order_id": "206515710896",
+    "entry_price": 82.5,
+    "executed_price": 82.53,
+    "amount": 0.08276859519999999,
+    "position_value": 6.8284091039999995,
+    "leverage": 2,
+    "stop_loss": 84.97500000000001,
+    "take_profit": 78.375,
+    "signal_strength": 1.786,
+    "status": "EXECUTED",
+    "risk_notes": "Capital at risk: $3.41"
+  },
+  {
+    "timestamp": "2026-03-31T23:46:00.637617",
+    "exchange": "binance_futures",
+    "symbol": "SOL/USDT",
+    "side": "sell",
+    "type": "SHORT",
+    "order_id": "206516238893",
+    "entry_price": 82.48,
+    "executed_price": 82.41,
+    "amount": 0.07571728890640156,
+    "position_value": 6.2451619890000005,
+    "leverage": 2,
+    "stop_loss": 84.9544,
+    "take_profit": 78.356,
+    "signal_strength": 1.856,
+    "status": "EXECUTED",
+    "risk_notes": "Capital at risk: $3.12"
   }
 ]

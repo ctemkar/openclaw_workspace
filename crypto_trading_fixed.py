@@ -23,16 +23,8 @@ class ConservativeCryptoTrader:
         self.today_trades = 0
         self.today_date = datetime.now().date()
         
-        # Initialize exchange (using Gemini as requested)
+        # Initialize exchange
         try:
-            # Note: For real trading, you would need to set up API keys
-            # self.exchange = ccxt.gemini({
-            #     'apiKey': 'YOUR_API_KEY',
-            #     'secret': 'YOUR_SECRET',
-            #     'enableRateLimit': True,
-            # })
-            
-            # For demonstration, we'll use a public exchange connection
             self.exchange = ccxt.binance({
                 'enableRateLimit': True,
             })
@@ -151,7 +143,6 @@ class ConservativeCryptoTrader:
             return []
         
         signals = []
-        current_time = datetime.now()
         
         # Check if we've reached daily trade limit
         if self.today_date != datetime.now().date():
@@ -167,7 +158,7 @@ class ConservativeCryptoTrader:
         btc_price = btc['price']
         
         # Conservative BTC trading logic
-        if btc['sentiment'] == "OVERSOLD" and btc['rsi'] < 35:
+        if btc['sentiment'] == "OVERSOLD" and btc['rsi'] and btc['rsi'] < 35:
             # Buy signal: oversold condition
             position_size = (self.capital * self.risk_per_trade) / btc_price
             stop_loss_price = btc_price * (1 - self.stop_loss)
@@ -184,7 +175,7 @@ class ConservativeCryptoTrader:
                 'risk_score': 'LOW'
             })
         
-        elif btc['sentiment'] == "OVERBOUGHT" and btc['rsi'] > 75:
+        elif btc['sentiment'] == "OVERBOUGHT" and btc['rsi'] and btc['rsi'] > 75:
             # Sell signal: overbought condition
             position_size = (self.capital * self.risk_per_trade) / btc_price
             stop_loss_price = btc_price * (1 + self.stop_loss)
@@ -206,7 +197,7 @@ class ConservativeCryptoTrader:
         eth_price = eth['price']
         
         # Conservative ETH trading logic
-        if eth['sentiment'] == "OVERSOLD" and eth['rsi'] < 35:
+        if eth['sentiment'] == "OVERSOLD" and eth['rsi'] and eth['rsi'] < 35:
             position_size = (self.capital * self.risk_per_trade) / eth_price
             stop_loss_price = eth_price * (1 - self.stop_loss)
             take_profit_price = eth_price * (1 + self.take_profit)
@@ -222,7 +213,7 @@ class ConservativeCryptoTrader:
                 'risk_score': 'LOW'
             })
         
-        elif eth['sentiment'] == "OVERBOUGHT" and eth['rsi'] > 75:
+        elif eth['sentiment'] == "OVERBOUGHT" and eth['rsi'] and eth['rsi'] > 75:
             position_size = (self.capital * self.risk_per_trade) / eth_price
             stop_loss_price = eth_price * (1 + self.stop_loss)
             take_profit_price = eth_price * (1 - self.take_profit)
@@ -249,27 +240,6 @@ class ConservativeCryptoTrader:
     
     def execute_trade(self, signal):
         """Execute a trade (simulated for demonstration)"""
-        # Note: For real trading, uncomment and configure with actual API keys
-        """
-        try:
-            if signal['action'] == 'BUY':
-                order = self.exchange.create_market_buy_order(
-                    signal['symbol'],
-                    signal['size']
-                )
-            else:  # SELL
-                order = self.exchange.create_market_sell_order(
-                    signal['symbol'],
-                    signal['size']
-                )
-            
-            print(f"Trade executed: {order}")
-            return order
-        except Exception as e:
-            print(f"Error executing trade: {e}")
-            return None
-        """
-        
         # Simulated execution for demonstration
         print(f"\n[SIMULATED TRADE EXECUTION]")
         print(f"Symbol: {signal['symbol']}")
@@ -281,6 +251,9 @@ class ConservativeCryptoTrader:
         print(f"Reason: {signal['reason']}")
         print(f"Risk Score: {signal['risk_score']}")
         
+        # Calculate position value
+        position_value = signal['price'] * signal['size']
+        
         # Simulate order ID
         simulated_order = {
             'id': f"SIM-{int(time.time())}",
@@ -288,7 +261,7 @@ class ConservativeCryptoTrader:
             'side': signal['action'].lower(),
             'price': signal['price'],
             'amount': signal['size'],
-            'cost': signal['price'] * signal['size'],
+            'cost': position_value,
             'status': 'closed',
             'timestamp': datetime.now().isoformat()
         }
@@ -320,8 +293,10 @@ class ConservativeCryptoTrader:
         print(f"  24h Change: {btc['change_24h']:.2f}%")
         print(f"  24h Range: ${btc['low_24h']:,.2f} - ${btc['high_24h']:,.2f}")
         print(f"  Volume: ${btc['volume']:,.0f}")
-        print(f"  SMA(20): ${btc['sma_20']:,.2f}" if btc['sma_20'] else "  SMA(20): N/A")
-        print(f"  RSI(14): {btc['rsi']:.2f}" if btc['rsi'] else "  RSI(14): N/A")
+        if btc['sma_20']:
+            print(f"  SMA(20): ${btc['sma_20']:,.2f}")
+        if btc['rsi']:
+            print(f"  RSI(14): {btc['rsi']:.2f}")
         print(f"  Support: ${btc['support']:,.2f}")
         print(f"  Resistance: ${btc['resistance']:,.2f}")
         print(f"  Sentiment: {btc['sentiment']}")
@@ -333,8 +308,10 @@ class ConservativeCryptoTrader:
         print(f"  24h Change: {eth['change_24h']:.2f}%")
         print(f"  24h Range: ${eth['low_24h']:,.2f} - ${eth['high_24h']:,.2f}")
         print(f"  Volume: ${eth['volume']:,.0f}")
-        print(f"  SMA(20): ${eth['sma_20']:,.2f}" if eth['sma_20'] else "  SMA(20): N/A")
-        print(f"  RSI(14): {eth['rsi']:.2f}" if eth['rsi'] else "  RSI(14): N/A")
+        if eth['sma_20']:
+            print(f"  SMA(20): ${eth['sma_20']:,.2f}")
+        if eth['rsi']:
+            print(f"  RSI(14): {eth['rsi']:.2f}")
         print(f"  Support: ${eth['support']:,.2f}")
         print(f"  Resistance: ${eth['resistance']:,.2f}")
         print(f"  Sentiment: {eth['sentiment']}")
@@ -342,6 +319,8 @@ class ConservativeCryptoTrader:
         # Generate trading signals
         print("\n2. TRADING SIGNAL GENERATION")
         signals = self.generate_trading_signals(market_data)
+        
+        executed_trades = []
         
         if signals:
             print(f"\nGenerated {len(signals)} trading signal(s):")
@@ -365,6 +344,7 @@ class ConservativeCryptoTrader:
                     print(f"  Order ID: {order.get('id', 'N/A')}")
                     print(f"  Status: {order.get('status', 'N/A')}")
                     print(f"  Cost: ${order.get('cost', 0):.2f}")
+                    executed_trades.append(order)
                 else:
                     print("Trade execution failed.")
         else:
@@ -375,5 +355,40 @@ class ConservativeCryptoTrader:
         print("\n" + "=" * 60)
         print("TRADING SUMMARY")
         print("=" * 60)
-        summary = {
-            '
+        print(f"Analysis Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Capital: ${self.capital:,}")
+        print(f"Trades Executed Today: {self.today_trades}/{self.max_trades_per_day}")
+        print(f"Total Trades Executed: {len(executed_trades)}")
+        
+        if executed_trades:
+            total_cost = sum(trade.get('cost', 0) for trade in executed_trades)
+            print(f"Total Position Value: ${total_cost:.2f}")
+            print(f"Remaining Capital: ${self.capital - total_cost:.2f}")
+        
+        print("\nRECOMMENDATIONS:")
+        if not signals:
+            print("1. Maintain current positions (if any)")
+            print("2. Wait for better entry points")
+            print("3. Monitor support/resistance levels")
+            print("4. Next analysis in 1-4 hours")
+        
+        return {
+            'market_data': market_data,
+            'signals': signals,
+            'executed_trades': executed_trades,
+            'summary': {
+                'capital': self.capital,
+                'trades_today': self.today_trades,
+                'max_trades_per_day': self.max_trades_per_day,
+                'total_trades': len(executed_trades)
+            }
+        }
+
+def main():
+    """Main function to run the trading analysis"""
+    trader = ConservativeCryptoTrader(capital=1000)
+    result = trader.run_analysis()
+    return result
+
+if __name__ == "__main__":
+    main()

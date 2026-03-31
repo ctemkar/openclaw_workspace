@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-31T21:30:00.000000",
+  "timestamp": "2026-03-31T23:47:00.000000",
   "system_status": "ACTIVE",
   "trading_status": "ACTIVE",
   "capital": {
     "initial": 946.97,
     "current": 531.6466512208059,
-    "free_usd": 0.15,
+    "free_usd": 30.849999999999998,
     "binance_futures_equity": 76.54,
     "binance_futures_unrealized_pnl": -3.84,
     "btc_holdings": 0.0,
@@ -18,8 +18,8 @@
     "recovery_percent_needed": 78.1
   },
   "positions": {
-    "open": 5,
-    "closed": 2,
+    "open": 4,
+    "closed": 3,
     "total_trades_today": 7,
     "details": {
       "gemini_long": 0,
@@ -35,17 +35,23 @@
   },
   "trading_bots": {
     "26_crypto_trader": {
-      "status": "ACTIVE_BUT_CAPITAL_CONSTRAINED",
-      "pid": 40259,
+      "status": "ACTIVE_RESTARTED",
+      "pid": 60976,
       "mode": "AGGRESSIVE",
       "trades_executed": 5,
-      "positions": ["SOL short (-4.57%)", "DOT short (-7.11%)", "ETH short (-5.20%)", "XRP short (-3.87%)", "ADA short (-4.31%)"],
+      "positions": [
+        "SOL short (-4.57%)",
+        "DOT short (-7.11%)",
+        "ETH short (-5.20%)",
+        "XRP short (-3.87%)",
+        "ADA short (-4.31%)"
+      ],
       "capital_allocation": {
         "invested_in_positions": 230.82,
         "available_for_new_trades": 0.15,
         "total_futures_equity": 76.54
       },
-      "notes": "5 SHORT positions ACTIVE but all LOSING (-$3.84 total). Only $0.15 available for new trades - bot cannot execute more positions. Need to transfer funds or close positions."
+      "notes": "5 SHORT positions ACTIVE but all LOSING (-$3.84 total). Bot crashed and was restarted at 23:46. Only $0.15 available for new trades - bot cannot execute more positions. Need to transfer funds or close positions."
     },
     "other_bots": "KILLED"
   },
@@ -58,7 +64,8 @@
     "Initial capital corrected from $250 to $946.97",
     "26-crypto bot activated",
     "BTC sale recorded - positions updated",
-    "REAL Binance positions identified (all losing)"
+    "REAL Binance positions identified (all losing)",
+    "26-crypto bot restarted after crash"
   ],
   "next_actions": [
     "5 Binance SHORT positions ACTIVE but LOSING (-$3.84 total)",
