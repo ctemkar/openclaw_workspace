@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-FIXED Trading Bot - With PROPER logging and monitoring
+FIXED Trading Bot WITH SAFETY FEATURES
+Includes: Crash detection, news monitoring, technical indicators, social media alerts
 """
 
 import ccxt
@@ -11,17 +12,7 @@ import logging
 from datetime import datetime, timedelta
 import sys
 
-# Add safety monitor
-sys.path.append('.')
-try:
-    from safety_monitor import safety_monitor
-    SAFETY_ENABLED = True
-    logger.info("✅ Safety Monitor loaded")
-except ImportError as e:
-    SAFETY_ENABLED = False
-    logger.warning(f"⚠️ Safety Monitor not available: {e}")
-
-print("🚀 FIXED TRADING BOT STARTING")
+print("🚀 FIXED TRADING BOT WITH SAFETY FEATURES")
 print("="*60)
 
 # Setup logging
@@ -29,11 +20,22 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('fixed_bot_accurate.log'),
+        logging.FileHandler('fixed_bot_safe.log'),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
+
+# Try to load simple safety monitor (no TA-Lib dependency)
+try:
+    # Add current directory to path
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    from simple_safety_monitor import simple_safety_monitor as safety_monitor
+    SAFETY_ENABLED = True
+    logger.info("✅ Simple Safety Monitor loaded (Crash detection, Basic indicators)")
+except ImportError as e:
+    SAFETY_ENABLED = False
+    logger.warning(f"⚠️ Safety Monitor not available: {e}")
 
 # Load API keys
 try:
@@ -67,6 +69,7 @@ SYMBOLS = ['BTC/USD', 'ETH/USD', 'SOL/USD']  # Focus on major pairs
 trades_today = 0
 last_trade_date = datetime.now().date()
 portfolio_snapshot = {}
+price_history = {symbol: [] for symbol in SYMBOLS}
 
 def get_real_portfolio():
     """Get REAL portfolio from Gemini"""
@@ -90,6 +93,23 @@ def get_real_portfolio():
     except Exception as e:
         logger.error(f"❌ Failed to get portfolio: {e}")
         return None
+
+def run_safety_checks(symbol, current_price):
+    """Run advanced safety checks before trading"""
+    if not SAFETY_ENABLED:
+        return {'trade_allowed': True, 'suggested_action': 'NORMAL', 'alerts': []}
+    
+    # Get price history for this symbol
+    hist = price_history.get(symbol, [])
+    
+    # Run safety checks
+    safety_result = safety_monitor.run_safety_checks(
+        symbol=symbol,
+        current_price=current_price,
+        price_history=hist[-100:] if len(hist) >= 100 else hist  # Last 100 prices
+    )
+    
+    return safety_result
 
 def save_trade_accurate(trade):
     """Save trade with ACCURATE data and multiple backups"""
@@ -150,7 +170,7 @@ def save_trade_accurate(trade):
         return False
 
 def execute_trade(symbol, signal, price, reason):
-    """Execute trade with PROPER logging"""
+    """Execute trade with PROPER logging and safety checks"""
     global trades_today, last_trade_date
     
     # Check if new day
@@ -165,6 +185,23 @@ def execute_trade(symbol, signal, price, reason):
         logger.warning(f"Max trades per day ({MAX_TRADES_PER_DAY}) reached")
         return None
     
+    # Run SAFETY CHECKS before trading
+    safety_result = run_safety_checks(symbol, price)
+    
+    if not safety_result['trade_allowed']:
+        logger.error(f"🚨 TRADING HALTED by Safety Monitor!")
+        for alert in safety_result['alerts']:
+            if alert['severity'] in ['CRITICAL', 'HIGH']:
+                logger.error(f"   {alert['message']}")
+        return None
+    
+    if safety_result['suggested_action'] == 'REDUCE_RISK':
+        logger.warning(f"⚠️ Safety Monitor suggests reducing risk")
+        # Reduce position size by 50% when risk is high
+        risk_multiplier = 0.5
+    else:
+        risk_multiplier = 1.0
+    
     # Get balance
     try:
         balance = exchange.fetch_balance()
@@ -177,8 +214,8 @@ def execute_trade(symbol, signal, price, reason):
         logger.error(f"❌ Balance check failed: {e}")
         return None
     
-    # Calculate position size (SMALL for safety)
-    position_value = TRADING_CAPITAL * RISK_PER_TRADE  # $2 risk
+    # Calculate position size (SMALL for safety) with risk multiplier
+    position_value = TRADING_CAPITAL * RISK_PER_TRADE * risk_multiplier  # Adjusted for risk
     quantity = position_value / price
     
     # Make it even smaller (50%)
@@ -193,6 +230,8 @@ def execute_trade(symbol, signal, price, reason):
     logger.info(f"   Quantity: {quantity:.6f}")
     logger.info(f"   Value: ${quantity * price:.2f}")
     logger.info(f"   Reason: {reason}")
+    if risk_multiplier < 1.0:
+        logger.info(f"   ⚠️ Reduced size: {risk_multiplier*100:.0f}% due to safety alerts")
     
     try:
         # Execute trade
@@ -213,6 +252,7 @@ def execute_trade(symbol, signal, price, reason):
             'fees': order.get('fee', {}).get('cost', 0),
             'status': order['status'],
             'reason': reason,
+            'safety_alerts': [a['message'] for a in safety_result['alerts'] if a['severity'] in ['CRITICAL', 'HIGH']],
             'order_info': order
         }
         
@@ -231,7 +271,7 @@ def execute_trade(symbol, signal, price, reason):
         return None
 
 def trading_cycle():
-    """One trading cycle"""
+    """One trading cycle with safety checks"""
     logger.info(f"\n📊 TRADING CYCLE - {datetime.now().strftime('%H:%M:%S')}")
     
     # Get REAL portfolio
@@ -241,7 +281,7 @@ def trading_cycle():
         logger.info(f"   Cash: ${portfolio['cash']:.2f}")
         logger.info(f"   BTC: {portfolio['btc']:.6f} (${portfolio['btc_value']:.2f})")
     
-    # Check for VERY STRONG SELL signals first (priority!)
+    # Check symbols
     for symbol in SYMBOLS:
         try:
             ticker = exchange.fetch_ticker(symbol)
@@ -254,7 +294,12 @@ def trading_cycle():
                 # Fallback: use previous close or current price
                 change_24h = 0.0
             
-            volume = ticker.get('quoteVolume', 0)
+            # Update price history for technical analysis
+            if symbol in price_history:
+                price_history[symbol].append(price)
+                # Keep only last 200 prices
+                if len(price_history[symbol]) > 200:
+                    price_history[symbol] = price_history[symbol][-200:]
             
             logger.info(f"🔍 {symbol}: ${price:.2f} ({change_24h:+.1f}%)")
             
@@ -275,10 +320,6 @@ def trading_cycle():
                 # If dropping fast from our entry (>5% down)
                 if current_pnl_percent < -5.0:
                     strong_sell_signals.append(f"🚨 POSITION LOSS: BTC down {abs(current_pnl_percent):.1f}% from entry")
-            
-            # 3. High volume sell-off (if volume data available)
-            if volume > 100000000:  # $100M+ volume (adjust as needed)
-                strong_sell_signals.append(f"🚨 HIGH VOLUME: Unusual trading activity")
             
             # Execute STRONG SELL if any signals detected
             if strong_sell_signals:
@@ -320,13 +361,23 @@ def trading_cycle():
 def main():
     """Main trading loop"""
     logger.info("="*70)
-    logger.info("🚀 FIXED TRADING BOT STARTED")
+    logger.info("🚀 FIXED TRADING BOT WITH SAFETY FEATURES")
+    logger.info("="*70)
     logger.info(f"💰 Real Portfolio: ~${REAL_PORTFOLIO_VALUE:.2f}")
     logger.info(f"🎯 Trading Capital: ${TRADING_CAPITAL:.2f}")
     logger.info(f"⚖️ Risk: {RISK_PER_TRADE*100}% per trade (${TRADING_CAPITAL * RISK_PER_TRADE:.2f})")
     logger.info(f"🛑 Stop-loss: {STOP_LOSS*100}%")
     logger.info(f"🎯 Take-profit: {TAKE_PROFIT*100}%")
     logger.info(f"📊 Max trades/day: {MAX_TRADES_PER_DAY}")
+    
+    if SAFETY_ENABLED:
+        logger.info("✅ SIMPLE SAFETY FEATURES ENABLED:")
+        logger.info("   1. Market crash detection (Flash crash protection)")
+        logger.info("   2. Basic technical indicators (Moving averages, volatility)")
+        logger.info("   3. Price action monitoring (Extreme moves)")
+    else:
+        logger.warning("⚠️ Safety features NOT available")
+    
     logger.info("="*70)
     
     cycle = 0

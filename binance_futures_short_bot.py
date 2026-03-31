@@ -211,27 +211,27 @@ def execute_futures_short(exchange, analysis, usdt_balance):
         logger.info(f"   Would short {amount:.6f} contracts at ${current_price:.4f}")
         logger.info(f"   With {LEVERAGE}x leverage (${position_value:.2f} position)")
         
-        # UNCOMMENT FOR REAL TRADING (with proper risk management):
-        # try:
-        #     # Set leverage first
-        #     exchange.set_leverage(LEVERAGE, symbol)
-        #     
-        #     # Place short order
-        #     order = exchange.create_order(
-        #         symbol=symbol,
-        #         type='market',
-        #         side='sell',
-        #         amount=amount
-        #     )
-        #     
-        #     trade_data['status'] = 'EXECUTED'
-        #     trade_data['order_id'] = order['id']
-        #     logger.info(f"✅ REAL SHORT ORDER EXECUTED: {order['id']}")
-        #     
-        # except Exception as e:
-        #     logger.error(f"❌ Trade execution failed: {e}")
-        #     trade_data['status'] = 'FAILED'
-        #     trade_data['error'] = str(e)
+        # ✅ REAL TRADING ENABLED (with proper risk management):
+        try:
+            # Set leverage first
+            exchange.set_leverage(LEVERAGE, symbol)
+            
+            # Place short order
+            order = exchange.create_order(
+                symbol=symbol,
+                type='market',
+                side='sell',
+                amount=amount
+            )
+            
+            trade_data['status'] = 'EXECUTED'
+            trade_data['order_id'] = order['id']
+            logger.info(f"✅ REAL SHORT ORDER EXECUTED: {order['id']}")
+            
+        except Exception as e:
+            logger.error(f"❌ Trade execution failed: {e}")
+            trade_data['status'] = 'FAILED'
+            trade_data['error'] = str(e)
         
         return trade_data
         
@@ -251,9 +251,9 @@ def main():
     logger.info(f"Stop-loss: {STOP_LOSS*100:.0f}%, Take-profit: {TAKE_PROFIT*100:.0f}%")
     logger.info(f"Scan interval: {SCAN_INTERVAL} seconds")
     logger.info("=" * 70)
-    logger.info("⚠️  CURRENTLY IN SIMULATION MODE")
-    logger.info("   Trades are planned but not executed")
-    logger.info("   Uncomment code for real trading")
+    logger.info("🚨 REAL TRADING MODE - ACTIVE")
+    logger.info("   Trades WILL be executed on Binance Futures")
+    logger.info("   Using 3x leverage for short positions")
     logger.info("=" * 70)
     
     # Initialize Binance Futures
