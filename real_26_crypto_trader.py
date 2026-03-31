@@ -41,13 +41,13 @@ GEMINI_CRYPTOS = [
     'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI'
 ]
 
-# Trading parameters - USING FULL BALANCE!
-GEMINI_CAPITAL = 134.27  # FULL $134.27 cash balance for Gemini LONG
-BINANCE_CAPITAL = 50.00  # Increased to $50 for Binance SHORT (futures)
+# Trading parameters - USING ENTIRE $134.27 CASH BALANCE!
+GEMINI_CAPITAL = 134.27  # ENTIRE $134.27 cash balance for Gemini LONG
+BINANCE_CAPITAL = 134.27 # ALSO ENTIRE $134.27 for Binance SHORT (futures) - MORE AGGRESSIVE!
 LEVERAGE = 3             # 3x leverage for Binance
-POSITION_SIZE = 0.20     # Increased to 20% of capital per trade (MORE AGGRESSIVE!)
-LONG_THRESHOLD = 2.5     # Reduced to 2.5% drop for LONG (buy dip sooner)
-SHORT_THRESHOLD = 0.5    # Reduced to 0.5% drop for SHORT (short sooner)
+POSITION_SIZE = 0.25     # Increased to 25% of capital per trade (MAXIMUM AGGRESSIVE!)
+LONG_THRESHOLD = 2.0     # Reduced to 2.0% drop for LONG (buy dip even sooner)
+SHORT_THRESHOLD = 0.3    # Reduced to 0.3% drop for SHORT (short even sooner)
 STOP_LOSS = 0.05         # 5% stop-loss
 TAKE_PROFIT = 0.10       # Increased to 10% take-profit
 SCAN_INTERVAL = 180      # 3 minutes (faster cycles)

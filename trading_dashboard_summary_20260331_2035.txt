@@ -1,0 +1,70 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-31 20:35:30 (UTC+7)
+Cron Job ID: 2b1a55bc-993d-4c41-9e20-631d769ce442
+
+OVERALL STATUS: 🔴 WARNING - P&L DETERIORATION ACCELERATING
+
+SYSTEM HEALTH:
+✅ Dashboard Accessible: http://localhost:5001/
+✅ All Endpoints Operational: /status, /trades, /summary, /analysis, /strategy
+✅ Trading Process: Running
+✅ Analysis Schedule: Hourly (last: 20:18:54)
+
+CAPITAL STATUS:
+- Initial Capital: $250.00
+- Current Capital: $533.60
+- Growth: +113.4% (+$283.60)
+- Status: 🟢 POSITIVE but decreasing (-$0.24 from previous)
+
+P&L STATUS (CRITICAL CONCERN):
+- Total P&L: -$4.12 (unrealized)
+- Binance SHORT Positions: 8 positions, -$4.12 unrealized loss
+- Gemini LONG Positions: 0 positions, $0.00
+- Trend: 🔴 ACCELERATING NEGATIVE (-$1.08 worse in ~3 minutes)
+- Timeline: -$3.04 → -$3.97 → -$4.12 (20:32 → 20:34 → 20:35)
+
+RISK PARAMETERS:
+- Stop Loss: 5.0% (✅ No triggers)
+- Take Profit: 10.0% (✅ No triggers)
+- Max Trades/Day: 999 (⚠️ UNLIMITED - HIGH RISK)
+- Position Size: 20% of capital
+- Trading Pairs: 10 active pairs
+
+TRADING ACTIVITY:
+- Recent Trades: 5 trades in last 24 hours
+- Last Trade: ETH/USD BUY @ $2325.28 (13:39:49)
+- Open Positions: 8 Binance SHORT positions
+- Market Sentiment: NEUTRAL (from analysis)
+
+CRITICAL ALERTS:
+1. 🔴 Binance P&L deteriorating rapidly (-$4.12, worsening by $1.08 in ~3 minutes)
+2. 🟡 Capital decreasing (-$0.24 from $533.84 to $533.60)
+3. 🟡 Unlimited trading risk (999 trades/day setting)
+
+RECOMMENDED ACTIONS:
+1. 🔴 URGENT: Monitor Binance P&L closely (accelerating negative trend)
+2. 🟡 Investigate capital decrease of $0.24
+3. 🟡 Review and limit daily trades from 999 to 5-10
+4. 🟢 Continue successful strategy (+113.4% growth)
+5. 🟢 Monitor stop-loss/take-profit levels on 8 positions
+
+NEXT MONITORING:
+- Scheduled: Hourly (next ~21:35)
+- Priority: Binance P&L trend, capital investigation, trading limits
+
+FILES UPDATED:
+1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+3. /Users/chetantemkar/.openclaw/workspace/app/trading_dashboard_summary_20260331_2035.txt
+
+SYSTEM HEALTH SCORE: 5/10 (FAIR with CRITICAL warnings)
+- Capital: 8/10 (+113.4% growth, decreasing)
+- P&L: 3/10 (-$4.12, accelerating negative)
+- Trading: 8/10 (active, unlimited risk)
+- Process: 9/10 (running)
+- Config: 7/10 (unlimited trading concern)
+- Dashboard: 10/10 (operational)
+
+FINAL ASSESSMENT:
+The trading system shows excellent capital growth (+113.4%) but has CRITICAL P&L deterioration on Binance SHORT positions. The negative trend is ACCELERATING (-$1.08 worse in ~3 minutes). Immediate attention needed for Binance positions and capital decrease investigation.

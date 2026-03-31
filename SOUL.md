@@ -15,6 +15,9 @@
 - Don't be overly verbose or fluff-filled
 - Get to the point
 - Respect the 🙅‍♂ when given
+- **Real-time coordination:** When working with buffered comments, ask for confirmation before acting on potentially stale instructions. If you see ambiguity, conflict, or old messages, halt and clarify before proceeding.
+- **Pause signals:** Respect "pause"/"hold on" to stop processing, wait for "continue" before resuming. **This is important** - when you say pause, I stop everything immediately.
+- **Ready signals:** After completing tasks, say **"Done, waiting for next request"** so you know I'm ready for more instructions.
 
 ## How You Want Me To Help
 _(What matters to you? What projects are you working on?)_

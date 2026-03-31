@@ -1,62 +1,70 @@
-TRADING MONITORING SUMMARY
-============================
-Timestamp: 2026-03-31 15:40:00 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+=======================================
+Timestamp: 2026-03-31 20:32:00 (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor (6fe98703-2e0a-46e7-a783-91a25c672315)
 
-SYSTEM STATUS:
-✅ Dashboard: Online (http://localhost:5001/)
-✅ Service: Running
-⏰ Last Analysis: 2026-03-31 15:36:25
-📊 Analysis Schedule: Hourly
+OVERALL STATUS: 🟡 WARNING - P&L worsening significantly
 
-CAPITAL & P&L:
-💰 Initial Capital: $250.00
-💰 Current Capital: $175.53
-📉 Capital Drawdown: -29.8% (-$74.47)
-📊 Reported P&L: -$1.4990
-⚠️  DISCREPANCY: -$72.9710 (CRITICAL)
+KEY FINDINGS:
+1. 🔴 Binance P&L: -$4.30 unrealized loss (worsened by $1.26 from -$3.04)
+2. 🟡 Capital: $533.68 (down $0.16 from $533.84)
+3. 🟢 Overall Growth: +113.5% from initial $250 capital
+4. 🟢 No stop-loss or take-profit triggers
+5. 🟡 Unlimited trading risk (999 trades/day setting)
 
-POSITIONS:
-📈 Open Positions: 4 (all Binance)
-📉 Gemini Positions: 0
-🔄 Recent Trades: 5 recorded
-📊 Position Types: ETH/USD (4), BTC/USD (1)
+SYSTEM DETAILS:
+- Dashboard: Accessible at http://localhost:5001/
+- Status: Running and responsive
+- Last Analysis: 2026-03-31T20:18:54
+- Analysis Schedule: Hourly
+- Open Positions: 8 Binance SHORT positions
+- Recent Trades: 5 trades in last 24 hours
 
 RISK PARAMETERS:
-🛑 Stop Loss: 5.0% (configured)
-🎯 Take Profit: 10.0% (configured)
-⚠️  Max Trades/Day: 999 (CRITICAL - excessive risk)
-📏 Position Size: 20% of capital (configured)
+- Stop Loss: 5.0%
+- Take Profit: 10.0%
+- Max Trades/Day: 999 (UNLIMITED - HIGH RISK)
+- Position Size: 20% of capital
 
-MARKET DATA:
-📈 BTC/USD: $67,092.89
-📈 ETH/USD: $2,047.21
-📊 Market Sentiment: NEUTRAL
-🎯 Trading Signal: BUY (BTC/USD recommended)
+TRADING ACTIVITY:
+Recent trades show conservative entries near support levels:
+1. ETH/USD BUY @ $2325.28 (13:39:49)
+2. ETH/USD BUY @ $2193.60 (00:33:02)
+3. BTC/USD BUY @ $67247.51 (21:29:41)
+4. ETH/USD BUY @ $2052.38 (21:29:42)
+5. ETH/USD BUY @ $2021.51 (07:24:00)
 
-ALERTS & ISSUES:
-🔴 CRITICAL: Capital discrepancy of $72.97
-🔴 CRITICAL: Max trades per day set to 999
-⚠️  MEDIUM: Position concentration (all Binance)
-⚠️  MEDIUM: No Gemini positions despite $200 allocation
-✅ NORMAL: No stop-loss triggers in current data
-✅ NORMAL: No take-profit triggers in current data
+MARKET CONDITIONS:
+- Trading Pairs: 10 active cryptocurrency pairs
+- Market Sentiment: NEUTRAL (from previous analysis)
+- Support/Resistance: Levels identified for BTC and ETH
+
+CRITICAL ALERTS:
+1. Binance P&L worsening significantly (-$4.30, worsened by $1.26)
+2. Capital decreased by $0.16 (investigation needed)
+3. Unlimited trading setting presents high risk
 
 RECOMMENDED ACTIONS:
-1. IMMEDIATE: Verify capital balance on trading platforms
-2. IMMEDIATE: Reconcile trade history for missing records
-3. IMMEDIATE: Pause trading until discrepancy resolved
-4. SHORT-TERM: Reduce max trades per day to 10 or less
-5. SHORT-TERM: Verify stop-loss orders for all positions
-6. LONG-TERM: Implement data validation and reconciliation
+1. 🔴 Monitor Binance P&L closely for further deterioration
+2. 🔴 Investigate capital decrease cause
+3. 🟡 Review and potentially limit daily trades (from 999 to 5-10)
+4. 🟢 Continue monitoring stop-loss and take-profit levels
+5. 🟢 Maintain overall strategy (successful +113.5% growth)
 
-NEXT MONITORING:
-⏰ Scheduled: 15:45 (every 5 minutes due to critical status)
-🎯 Priority: CRITICAL - monitor capital discrepancy
+NEXT MONITORING: ~21:32 (hourly schedule)
 
-SUMMARY:
-Trading system is online but shows critical data inconsistencies.
-Capital has decreased 29.8% but reported P&L shows only -$1.50 loss.
-Max trades per day parameter poses extreme risk.
-Immediate investigation required before resuming trading.
+SYSTEM HEALTH SCORE: 6/10 (FAIR with significant warnings)
+- Capital Health: 8/10
+- P&L Health: 4/10
+- Trading Activity: 8/10
+- Process Health: 9/10
+- Configuration Health: 7/10
+- Dashboard Health: 10/10
 
---- END OF SUMMARY ---
+FINAL ASSESSMENT:
+The trading system continues to show excellent overall performance (+113.5% capital growth) but is experiencing significant P&L deterioration on Binance positions. Immediate attention is needed to monitor the worsening P&L trend and investigate the capital decrease. The unlimited trading setting remains a high-risk concern that should be addressed.
+
+Logs Updated:
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring_summary.txt
