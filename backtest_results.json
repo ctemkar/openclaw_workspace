@@ -1,0 +1,23 @@
+{
+  "old_strategy": {
+    "name": "OLD - Overly Aggressive",
+    "position_size": 0.25,
+    "short_threshold": 0.3,
+    "leverage": 3,
+    "stop_loss": 0.05,
+    "take_profit": 0.1,
+    "max_positions": 10
+  },
+  "new_strategy": {
+    "name": "NEW - Conservative",
+    "position_size": 0.1,
+    "short_threshold": 3.0,
+    "leverage": 1,
+    "stop_loss": 0.03,
+    "take_profit": 0.05,
+    "max_positions": 3
+  },
+  "old_results": {
+    "trades": [
+      {
+        "timestamp": 

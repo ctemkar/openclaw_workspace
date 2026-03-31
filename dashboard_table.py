@@ -202,13 +202,13 @@ def main():
             'symbol': trade['symbol'],
             'exchange': 'Binance',
             'type': trade['type'],
-            'price': trade['current_price'],
+            'price': trade['entry_price'],
             'timestamp': trade['execution_time'],
-            'pnl_dollar': pnl_dollar,
-            'pnl_percent': pnl_percent,
+            'pnl_dollar': trade.get('unrealized_pnl', 0),
+            'pnl_percent': trade.get('pnl_percent', 0),
             'status': trade['status'],
             'side': trade['side'],
-            'amount': trade['amount']
+            'amount': trade.get('position_size', 0)
         })
     
     # Sort by time (newest first)

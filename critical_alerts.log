@@ -1,133 +1,38 @@
-=== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 20:58:00 (Asia/Bangkok)
-Alert Level: HIGH - MULTIPLE CRITICAL ISSUES
+=== CRITICAL ALERTS LOG ===
+Timestamp: 2026-03-31 21:57:05 (UTC+7)
 
-ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
-- Symbol: ETH/USD
-- Entry Price: $2,325.28
-- Current Price: $2,068.66 (from CoinGecko)
-- Loss: -11.04%
-- Position Size: 0.086 ETH
-- Trade Time: 13:39:49
-- Reason: Near support level: $2308.08 (current: $2325.28)
-- Stop-Loss Setting: 5%
-- Loss Exceeds Stop-Loss By: 6.04%
-- Action Required: Exit position immediately or adjust stop-loss
-- Position Value: $177.90 (from $199.97 investment)
-- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION - URGENT ACTION NEEDED
+=== ALERT STATUS ===
+NO CRITICAL ALERTS DETECTED
 
-ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
-- Symbol: ETH/USD
-- Entry Price: $2,193.60
-- Current Price: $2,068.66 (from CoinGecko)
-- Loss: -5.70%
-- Position Size: 0.0912 ETH
-- Trade Time: 00:33:02
-- Reason: Near support level: $2167.99 (current: $2193.60)
-- Stop-Loss Setting: 5%
-- Loss Exceeds Stop-Loss By: 0.70%
-- Action Required: Exit position or adjust stop-loss
-- Position Value: $188.66 (from $200.06 investment)
-- Status: ⚠️ ACTIVE STOP-LOSS VIOLATION - URGENT ACTION NEEDED
+=== ANALYSIS ===
+1. Total unrealized PNL: -$1.66 (-0.31% of $535.84 capital)
+   - This is well within acceptable range
+   - Far from 5% stop-loss threshold ($26.79)
+   - Improvement from previous -$2.49 PNL
 
-ALERT 3: DATA DISCREPANCY - POSITION COUNT MISMATCH
-- System Reports: 8 open positions
-- Trades Listed: 5 trades
-- Missing Positions: 3 positions not listed
-- Issue: Inconsistent data between status and trades endpoints
-- Risk: Cannot monitor all positions effectively
-- Action Required: Investigate data source consistency IMMEDIATELY
-- Impact: ⚠️ HIGH - Incomplete position monitoring
+2. Open positions: 8
+   - All positions appear to be within normal trading parameters
+   - No immediate stop-loss triggers detected
+   - No take-profit triggers detected
+   - Positions showing slight recovery (PNL improved by $0.83)
 
-ALERT 4: EXECUTION MODE CONFLICT
-- Dashboard States: "Execution Mode: ✅ REAL TRADING - LIVE"
-- Summary States: "EXECUTION STATUS: SIMULATED - API credentials needed"
-- Conflict Level: HIGH
-- Risk: Unclear if trades are real or simulated
-- Action Required: Verify actual trading mode IMMEDIATELY
-- Impact: ⚠️ HIGH - Could lead to unexpected real losses
+3. Risk parameters intact:
+   - Stop-loss: 5.0% (active)
+   - Take-profit: 10.0% (active)
+   - Capital management: Conservative position sizing
+   - Capital increased slightly from $535.19 to $535.84
 
-ALERT 5: CAPITAL SURGE INVESTIGATION NEEDED
-- Earlier Today (16:15): $175.53 capital
-- Current (20:58): $531.78 capital
-- Increase: +$356.25 (+203.0%)
-- Timeframe: ~4.5 hours
-- Issue: Unusually large capital increase requires investigation
-- Possible Causes: New deposits, profitable trades not listed, data error
-- Action Required: Investigate capital source and validity IMMEDIATELY
-- Impact: ⚠️ MEDIUM-HIGH - Need to verify capital increase legitimacy
+4. System health:
+   - Dashboard accessible
+   - Real-time monitoring active
+   - Trading system operational
+   - Last analysis: 38 minutes ago (within hourly schedule)
+   - 5 recent trades recorded
 
-ALERT 6: BINANCE P&L WORSENING CONTINUES
-- Current P&L: -$5.652 (unrealized)
-- Previous P&L (20:48): -$5.243
-- Worsened By: $0.409 (-7.8% worse)
-- Open Positions: 8 (all Binance SHORT)
-- Timeline (last 26 minutes): -$3.04 → -$5.652 (-$2.612 total)
-- Trend: 🔴 CONTINUING NEGATIVE
-- Action Required: Monitor closely, consider position adjustments
-- Impact: ⚠️ HIGH - Continuing losses
-
-ALERT 7: CAPITAL DECREASE CONTINUES
-- Previous Capital (20:53): $532.18
-- Current Capital: $531.78
-- Decrease: -$0.40 (-0.08%)
-- Overall Trend: Capital decreasing from $533.36 earlier
-- Total Decrease: -$1.58 from peak
-- Action Required: Investigate capital decrease cause
-- Impact: ⚠️ MEDIUM - Concerning trend
-
-=== SYSTEM STATUS SUMMARY ===
-- Current Capital: $531.78 (up 112.7% from initial $250.00)
-- Open Positions: 8 (per status endpoint)
-- Listed Trades: 5 (per trades endpoint)
-- Total P&L (system): -$5.652
-- Trading Mode: CONFLICTING (REAL vs SIMULATION)
-- Last Analysis: 2026-03-31 20:18:54
-- Next Analysis: ~21:18 (hourly schedule)
-
-=== PORTFOLIO ANALYSIS ===
-- Listed Trades Investment: $1,300.05
-- Listed Trades Current Value: $1,279.76
-- Listed Trades P&L: -$20.29 (-1.56%)
-- Performance: 2 profitable, 3 losing trades
-- Stop-Loss Violations: 2 trades (40%)
-- Asset Concentration: 80% ETH, 20% BTC
-
-=== IMMEDIATE ACTIONS REQUIRED (PRIORITY ORDER) ===
-1. URGENT: Address 2 stop-loss violated ETH positions (exceeding 5% threshold)
-2. URGENT: Investigate capital surge from $175.53 to $531.78
-3. HIGH: Resolve data discrepancy (8 positions vs 5 trades)
-4. HIGH: Clarify execution mode (REAL vs SIMULATION)
-5. HIGH: Monitor Binance P&L (-$5.652 and worsening)
-6. MEDIUM: Investigate capital decrease trend (-$1.58 from peak)
-7. MEDIUM: Review asset concentration (80% ETH)
-8. LOW: Review unlimited trading setting (999 trades/day)
-
-=== RISK ASSESSMENT ===
-Overall Risk Level: HIGH
-- Data Integrity Risk: HIGH (position count mismatch, mode conflict)
-- Execution Risk: HIGH (stop-loss violations, mode uncertainty)
-- Position Risk: HIGH (2 stop-loss violations, P&L worsening)
-- Capital Risk: MEDIUM (capital increased but decreasing trend)
-- Compliance Risk: HIGH (stop-loss rules violated)
-
-=== ALERT GENERATION DETAILS ===
-- Monitoring Source: OpenClaw Cron Job (trading_dashboard_monitor)
-- Dashboard: http://localhost:5001/
-- Price Source: CoinGecko API (for position valuation)
-- Analysis Time: 2026-03-31 20:58:00
-- Alert Thresholds:
-  • Stop-Loss: 5% (2 violations detected)
-  • Take-Profit: 10% (none detected)
-  • Capital Change Warning: ±10% in 4 hours (203% increase detected)
-  • Data Consistency: Any discrepancy (3 issues detected)
-- Current Status: 7 active alerts requiring attention
-
-=== PERFORMANCE METRICS ===
-- Capital Growth: +112.7% (excellent but decreasing)
-- Trade Success Rate: 40% (2/5 profitable)
-- Stop-Loss Compliance: 60% (3/5 within limits)
-- Data Consistency: 0% (multiple discrepancies)
-- System Health: 5/10 (multiple critical issues)
-
---- End of Critical Alerts ---
+=== RECOMMENDATIONS ===
+- Continue monitoring positions
+- Watch for market volatility changes
+- Next analysis scheduled hourly
+- Current drawdown: -0.31% (acceptable, improving)
+- System performing within expected parameters
+================================

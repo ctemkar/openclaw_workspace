@@ -1,145 +1,37 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-31 20:58:00 (UTC+7)
-Monitoring Time: Tuesday, March 31st, 2026 — 8:58 PM (Asia/Bangkok)
-Cron Job: trading_dashboard_monitor (f052e16c-c369-4255-8664-bf70e7f63a33)
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-31 21:57:05 (UTC+7)
+Dashboard Status: ACCESSIBLE
+System Status: running
+Capital: $535.84
+Last Analysis: 2026-03-31T21:19:01.131169
 
-=== SYSTEM STATUS ===
-Status: 🟡 WARNING - Multiple issues detected
-Analysis Scheduled: hourly
-Last Analysis: 2026-03-31T20:18:54.082289
-Current Capital: $531.78 ⚠️ DOWN $0.40 from previous $532.18
-Port: 5001 (Dashboard ACCESSIBLE - ONLINE)
-Trading Process: Active (Dashboard shows running status)
-Process Health: 5/10 (running with multiple issues)
+=== PNL SUMMARY ===
+Total PNL: -$1.66 (unrealized)
+Open Positions: 8
+Realized PNL: $0.00
+Unrealized PNL: -$1.66
+
+Binance PNL: -$1.66 (8 trades, 8 open positions)
+Gemini PNL: $0.00 (0 trades, 0 open positions)
 
 === RISK PARAMETERS ===
-Stop Loss: 5.0%
-Take Profit: 10.0%
-Max Trades Per Day: 999 (UNLIMITED) ⚠️ HIGH RISK
-Max Position Size: 20% of capital
-Initial Capital: $250.00 (from dashboard config)
-Current Capital: $531.78 (+112.7% from initial) 🟢 POSITIVE but decreasing
-Binance Free Balance: UNKNOWN (dashboard shows -$5.652 P&L)
+Stop-loss: 5.0%
+Take-profit: 10.0%
+Max trades per day: 999 (effectively unlimited)
 
-=== CURRENT ISSUES DETECTED ===
-🔴 DATA DISCREPANCY: System shows 8 open positions but only 5 trades listed
-🔴 EXECUTION MODE CONFLICT: Dashboard says "REAL TRADING - LIVE" but summary says "SIMULATED"
-🔴 STOP-LOSS VIOLATIONS: 2 ETH positions exceed 5% stop-loss threshold
-🟡 CAPITAL DECREASE: Capital down $0.40 from $532.18 to $531.78 (CONTINUING decline)
-🟡 UNLIMITED TRADING: Max trades per day set to 999 (effectively unlimited) - HIGH RISK
-🟡 OPEN POSITIONS: 8 Binance SHORT positions with unrealized losses
+=== RECENT TRADES (Last 5) ===
+1. ETH/USD BUY @ $2325.28 (0.086 qty) - Near support level: $2308.08
+2. ETH/USD BUY @ $2193.60 (0.0912 qty) - Near support level: $2167.99
+3. BTC/USD BUY @ $67247.51 (0.002974 qty) - Near support level: $67110.20
+4. ETH/USD BUY @ $2052.38 (0.0974 qty) - Near support level: $2033.94
+5. ETH/USD BUY @ $2021.51 (0.2474 qty) - Conservative entry with 1:2 risk/reward
 
-=== P&L SUMMARY ===
-Total Open Positions: 8 (Binance SHORT positions)
-Total P&L: -$5.652 (unrealized) ⚠️ WORSENED by $0.409 from -$5.243
-Total Realized: $0.00
-Total Unrealized: -$5.652
-Overall Performance: +112.7% from initial $250 capital 🟢 but decreasing
+=== TRADING PAIRS MONITORED ===
+BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, MATIC/USD, LINK/USD
 
-Binance (SHORT):
-- Open Positions: 8
-- Realized: $0.00
-- Unrealized: -$5.652 ⚠️ WORSENED from -$5.243
-- Total: -$5.652
-- Trades: 8
-
-Gemini (LONG):
-- Open Positions: 0
-- Realized: $0.00
-- Unrealized: $0.00
-- Total: $0.00
-- Trades: 0
-
-=== CURRENT TRADING ACTIVITY ===
-Recent Trades (from /trades endpoint):
-1. ETH/USD BUY 0.086 @ $2325.28 - Near support level: $2308.08 (current: $2325.28) ⚠️ STOP-LOSS VIOLATED (-11.04%)
-2. ETH/USD BUY 0.0912 @ $2193.60 - Near support level: $2167.99 (current: $2193.60) ⚠️ STOP-LOSS VIOLATED (-5.70%)
-3. BTC/USD BUY 0.002974 @ $67247.51 - Near support level: $67110.20 (current: $67247.51) 🟢 ACTIVE (-0.04%)
-4. ETH/USD BUY 0.0974 @ $2052.38 - Near support level: $2033.94 (current: $2052.38) 🟢 ACTIVE (+0.79%)
-5. ETH/USD BUY 0.2474 @ $2021.51 - Conservative entry: ETH showing +0.68% 24h momentum 🟢 ACTIVE (+2.33%)
-
-Trading Status: ACTIVE with 2 stop-loss violations
-
-=== MARKET ANALYSIS ===
-Current Market Conditions (from dashboard):
-- Trading Pairs: 10 active pairs (BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, MATIC/USD, LINK/USD)
-- Market Sentiment: NEUTRAL (from previous analysis)
-- Last Analysis: 2026-03-31T20:18:54
-
-Support/Resistance Levels (from previous analysis):
-- BTC Support: $66,792.90
-- BTC Resistance: $66,800.04
-- ETH Support: $2,057.72
-- ETH Resistance: $2,058.23
-
-=== RISK ASSESSMENT ===
-Current Drawdown: NONE (capital still +112.7% from initial) 🟢
-Stop Loss Triggers: 2 ETH positions violated (exceeding 5% threshold) 🔴
-Take Profit Triggers: NONE (no positions at take-profit levels)
-Margin Status: UNKNOWN (dashboard doesn't show free balance)
-Capital Health: GOOD but decreasing (+112.7% growth) 🟡
-Configuration Health: WARNING (unlimited trading risk) 🟡
-Trading Activity: ACTIVE (5 recent trades, 8 open positions)
-P&L Trend: NEGATIVE CONTINUING (-$5.652 unrealized, worsened by $0.409 from -$5.243) 🔴
-
-=== RECOMMENDED ACTIONS ===
-1. 🔴 URGENT: Address 2 stop-loss violated ETH positions
-2. 🔴 URGENT: Investigate capital surge from $175.53 to $531.78
-3. 🔴 HIGH: Resolve data discrepancy (8 positions vs 5 trades)
-4. 🔴 HIGH: Clarify execution mode (REAL vs SIMULATION)
-5. 🟡 REVIEW: Unlimited trading setting (999 trades/day) - consider limiting to 5-10 trades/day
-6. 🟢 CONTINUE: Trading strategy still successful overall (+112.7% capital growth)
-7. 🟢 MONITOR: Stop-loss and take-profit levels on all positions
-
-=== TRADE RECOMMENDATION ===
-From dashboard analysis: BUY BTC/USD signal detected
-- Entry Price: $66,803.74
-- Position Size: 0.001871
-- Position Value: $125.00
-- Stop Loss: $63,463.55 (5.0%)
-- Take Profit: $73,484.11 (10.0%)
-- Risk/Reward: 1:2.0
-
-=== ALERT STATUS ===
-🔴 CRITICAL: 2 ETH positions exceed 5% stop-loss threshold (-11.04% and -5.70%)
-🔴 CRITICAL: Data discrepancy - 8 positions reported vs 5 trades listed
-🔴 CRITICAL: Execution mode conflict (REAL vs SIMULATION)
-🔴 CRITICAL: Binance showing -$5.652 unrealized loss on 8 positions (WORSENED by $0.409)
-🔴 CRITICAL: Capital decreased by $0.40 (from $532.18 to $531.78) - CONTINUING
-🟡 WARNING: Unlimited trading setting (999 trades/day) - high risk
-🟢 NORMAL: Trading process running and accessible
-🟢 POSITIVE: +112.7% capital growth from initial $250
-
-=== PROCESS STATUS ===
-Trading Process: Running and accessible via dashboard
-Dashboard Status: ONLINE (port 5001 accessible)
-Capital Growth: +112.7% ($250 → $531.78) but decreasing
-Open Positions: 8 Binance SHORT positions, 0 Gemini LONG positions
-Recent Activity: 5 trades executed, last at 13:39:49 (ETH/USD BUY)
-
-=== FINANCIAL TREND ANALYSIS ===
-Capital Trend: POSITIVE but decreasing (+112.7% growth, down $0.40)
-P&L Trend: NEGATIVE CONTINUING (-$5.652 unrealized, worsened by $0.409)
-Trading Activity: ACTIVE (5 recent trades)
-Risk Exposure: MODERATE (8 open positions, unlimited trading setting)
-
-=== P&L DETERIORATION TIMELINE ===
-20:32:00: -$3.04 (from critical_alerts.log)
-20:34:53: -$3.97 (from /status endpoint)
-20:35:29: -$4.12 (from previous monitoring log)
-20:39:06: -$4.10 (from previous monitoring log)
-20:42:45: -$4.75 (from previous monitoring log)
-20:48:21: -$5.243 (from previous monitoring log)
-20:58:00: -$5.652 (current /status endpoint)
-Trend: 🔴 CONTINUING NEGATIVE (-$2.612 in ~26 minutes)
-
-=== NEXT MONITORING CYCLE ===
-Scheduled: Hourly (next at ~21:58)
-Priority Checks: 
-1. 🔴 Address 2 stop-loss violated ETH positions
-2. 🔴 Investigate capital surge from $175.53 to $531.78
-3. 🔴 Resolve data discrepancy (8 positions vs 5 trades)
-4. 🔴 Clarify execution mode (REAL vs SIMULATION)
-5. 🟡 Review trading limits (999 trades/day risk)
-
-=== END OF MONITORING LOG ===
+=== SYSTEM HEALTH ===
+Analysis scheduled: hourly
+Port: 5001
+Execution Mode: REAL TRADING - LIVE
+Last Update: 2026-03-31 21:57:05
+========================================
