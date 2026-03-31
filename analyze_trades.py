@@ -1,137 +1,234 @@
 #!/usr/bin/env python3
 import json
-import datetime
+import requests
+from datetime import datetime
 import sys
 
-# Current market prices (from CoinGecko API)
-current_prices = {
-    "BTC/USD": 67842.0,
-    "ETH/USD": 2068.6
-}
-
-# Risk parameters from dashboard
-risk_params = {
-    "stop_loss": 0.05,  # 5%
-    "take_profit": 0.10  # 10%
-}
-
-# Trades data from /trades endpoint
-trades_data = {
-    "count": 5,
-    "timestamp": "2026-03-31T10:20:11.393607",
-    "trades": [
-        {"price": 2325.28, "quantity": 0.086, "reason": "Near support level: $2308.08 (current: $2325.28)", "side": "BUY", "symbol": "ETH/USD", "time": "13:39:49"},
-        {"price": 2193.6, "quantity": 0.0912, "reason": "Near support level: $2167.99 (current: $2193.60)", "side": "BUY", "symbol": "ETH/USD", "time": "00:33:02"},
-        {"price": 67247.51, "quantity": 0.002974, "reason": "Near support level: $67110.20 (current: $67247.51)", "side": "BUY", "symbol": "BTC/USD", "time": "21:29:41"},
-        {"price": 2052.38, "quantity": 0.0974, "reason": "Near support level: $2033.94 (current: $2052.38)", "side": "BUY", "symbol": "ETH/USD", "time": "21:29:42"},
-        {"price": 2021.51, "quantity": 0.2474, "reason": "Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)", "side": "BUY", "symbol": "ETH/USD", "time": "07:24:00"}
-    ]
-}
+def fetch_current_prices():
+    """Fetch current market prices from the dashboard"""
+    try:
+        # Get summary data to extract current prices
+        response = requests.get('http://localhost:5001/summary', timeout=10)
+        if response.status_code == 200:
+            content = response.text
+            # Extract BTC and ETH prices from summary
+            btc_price = None
+            eth_price = None
+            
+            for line in content.split('\n'):
+                if 'BTC/USD:' in line and '$' in line:
+                    parts = line.split('$')
+                    if len(parts) > 1:
+                        btc_price = float(parts[1].replace(',', '').strip())
+                elif 'ETH/USD:' in line and '$' in line:
+                    parts = line.split('$')
+                    if len(parts) > 1:
+                        eth_price = float(parts[1].replace(',', '').strip())
+            
+            return {'BTC/USD': btc_price, 'ETH/USD': eth_price}
+    except Exception as e:
+        print(f"Error fetching prices: {e}")
+    
+    return {'BTC/USD': 67667.37, 'ETH/USD': 2064.36}  # Fallback to last known prices
 
 def analyze_trades():
-    alerts = []
-    critical_alerts = []
+    """Analyze existing trades for stop-loss/take-profit triggers"""
+    try:
+        # Fetch current trades
+        response = requests.get('http://localhost:5001/trades', timeout=10)
+        if response.status_code != 200:
+            print("Failed to fetch trades")
+            return []
+        
+        trades_data = response.json()
+        trades = trades_data.get('trades', [])
+        
+        # Fetch current prices
+        current_prices = fetch_current_prices()
+        
+        alerts = []
+        
+        for trade in trades:
+            symbol = trade.get('symbol', '')
+            entry_price = trade.get('price', 0)
+            quantity = trade.get('quantity', 0)
+            side = trade.get('side', 'BUY')
+            reason = trade.get('reason', '')
+            time = trade.get('time', '')
+            
+            current_price = current_prices.get(symbol, 0)
+            
+            if not current_price or not entry_price:
+                continue
+            
+            # Calculate P&L percentage
+            if side == 'BUY':
+                pnl_pct = ((current_price - entry_price) / entry_price) * 100
+            else:  # SHORT
+                pnl_pct = ((entry_price - current_price) / entry_price) * 100
+            
+            # Check for stop-loss (5%) or take-profit (10%) triggers
+            stop_loss_pct = -5.0  # 5% stop-loss
+            take_profit_pct = 10.0  # 10% take-profit
+            
+            alert = None
+            if pnl_pct <= stop_loss_pct:
+                alert = {
+                    'type': 'STOP_LOSS_TRIGGERED',
+                    'symbol': symbol,
+                    'entry_price': entry_price,
+                    'current_price': current_price,
+                    'pnl_pct': pnl_pct,
+                    'quantity': quantity,
+                    'side': side,
+                    'time': time,
+                    'reason': reason,
+                    'threshold': f'{stop_loss_pct}%',
+                    'position_value': entry_price * quantity
+                }
+            elif pnl_pct >= take_profit_pct:
+                alert = {
+                    'type': 'TAKE_PROFIT_TRIGGERED',
+                    'symbol': symbol,
+                    'entry_price': entry_price,
+                    'current_price': current_price,
+                    'pnl_pct': pnl_pct,
+                    'quantity': quantity,
+                    'side': side,
+                    'time': time,
+                    'reason': reason,
+                    'threshold': f'{take_profit_pct}%',
+                    'position_value': entry_price * quantity
+                }
+            elif pnl_pct <= -3.0:  # Warning for approaching stop-loss
+                alert = {
+                    'type': 'APPROACHING_STOP_LOSS',
+                    'symbol': symbol,
+                    'entry_price': entry_price,
+                    'current_price': current_price,
+                    'pnl_pct': pnl_pct,
+                    'quantity': quantity,
+                    'side': side,
+                    'time': time,
+                    'reason': reason,
+                    'warning': f'Only {abs(pnl_pct - stop_loss_pct):.1f}% from stop-loss',
+                    'position_value': entry_price * quantity
+                }
+            
+            if alert:
+                alerts.append(alert)
+        
+        return alerts
     
-    print("=== TRADING POSITION ANALYSIS ===")
-    print(f"Analysis Time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Current Prices: BTC=${current_prices['BTC/USD']:,.2f}, ETH=${current_prices['ETH/USD']:,.2f}")
-    print(f"Risk Parameters: Stop-loss={risk_params['stop_loss']*100}%, Take-profit={risk_params['take_profit']*100}%")
+    except Exception as e:
+        print(f"Error analyzing trades: {e}")
+        return []
+
+def check_system_health():
+    """Check system health and risk parameters"""
+    try:
+        response = requests.get('http://localhost:5001/status', timeout=10)
+        if response.status_code != 200:
+            return {'status': 'ERROR', 'message': 'Dashboard not responding'}
+        
+        status_data = response.json()
+        
+        # Check if system is running
+        if status_data.get('status') != 'running':
+            return {'status': 'WARNING', 'message': f"System status: {status_data.get('status')}"}
+        
+        # Check last analysis time
+        last_analysis = status_data.get('last_analysis', '')
+        if last_analysis:
+            try:
+                last_time = datetime.fromisoformat(last_analysis.replace('Z', '+00:00'))
+                current_time = datetime.now(last_time.tzinfo) if last_time.tzinfo else datetime.now()
+                hours_since = (current_time - last_time).total_seconds() / 3600
+                
+                if hours_since > 2:
+                    return {
+                        'status': 'WARNING',
+                        'message': f'Last analysis was {hours_since:.1f} hours ago',
+                        'last_analysis': last_analysis
+                    }
+            except:
+                pass
+        
+        return {'status': 'HEALTHY', 'data': status_data}
+    
+    except Exception as e:
+        return {'status': 'ERROR', 'message': f'Health check failed: {e}'}
+
+def main():
+    """Main analysis function"""
+    print("=== TRADING DASHBOARD MONITORING ANALYSIS ===")
+    print(f"Analysis Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
     
-    total_investment = 0
-    total_current_value = 0
+    # Check system health
+    print("1. SYSTEM HEALTH CHECK")
+    health = check_system_health()
+    print(f"   Status: {health.get('status')}")
+    if health.get('message'):
+        print(f"   Message: {health.get('message')}")
+    print()
     
-    for i, trade in enumerate(trades_data['trades']):
-        symbol = trade['symbol']
-        entry_price = trade['price']
-        quantity = trade['quantity']
-        side = trade['side']
-        time = trade['time']
-        
-        current_price = current_prices.get(symbol)
-        if not current_price:
-            print(f"Warning: No current price for {symbol}")
-            continue
-        
-        # Calculate P&L
-        investment = entry_price * quantity
-        current_value = current_price * quantity
-        pnl = current_value - investment
-        pnl_percent = (pnl / investment) * 100
-        
-        total_investment += investment
-        total_current_value += current_value
-        
-        # Check stop-loss and take-profit
-        stop_loss_price = entry_price * (1 - risk_params['stop_loss'])
-        take_profit_price = entry_price * (1 + risk_params['take_profit'])
-        
-        print(f"Trade {i+1}: {symbol} {side} @ ${entry_price:,.2f}")
-        print(f"  Quantity: {quantity}, Investment: ${investment:,.2f}")
-        print(f"  Current Price: ${current_price:,.2f}, Current Value: ${current_value:,.2f}")
-        print(f"  P&L: ${pnl:,.2f} ({pnl_percent:+.2f}%)")
-        print(f"  Stop-loss: ${stop_loss_price:,.2f} ({risk_params['stop_loss']*100}% below entry)")
-        print(f"  Take-profit: ${take_profit_price:,.2f} ({risk_params['take_profit']*100}% above entry)")
-        
-        # Check for alerts
-        if current_price <= stop_loss_price:
-            alert_msg = f"🚨 STOP-LOSS TRIGGERED: {symbol} at ${current_price:,.2f} (entry: ${entry_price:,.2f}, stop-loss: ${stop_loss_price:,.2f})"
-            critical_alerts.append(alert_msg)
-            print(f"  ⚠️  {alert_msg}")
-        elif current_price >= take_profit_price:
-            alert_msg = f"🎯 TAKE-PROFIT TRIGGERED: {symbol} at ${current_price:,.2f} (entry: ${entry_price:,.2f}, take-profit: ${take_profit_price:,.2f})"
-            alerts.append(alert_msg)
-            print(f"  ✅ {alert_msg}")
-        elif pnl_percent < -3:
-            alert_msg = f"⚠️  Drawdown Warning: {symbol} down {abs(pnl_percent):.2f}% (entry: ${entry_price:,.2f}, current: ${current_price:,.2f})"
-            alerts.append(alert_msg)
-            print(f"  ⚠️  {alert_msg}")
-        elif pnl_percent > 5:
-            alert_msg = f"📈 Profit Alert: {symbol} up {pnl_percent:.2f}% (entry: ${entry_price:,.2f}, current: ${current_price:,.2f})"
-            alerts.append(alert_msg)
-            print(f"  📈 {alert_msg}")
-        
-        print()
+    # Analyze trades
+    print("2. TRADE ANALYSIS")
+    alerts = analyze_trades()
     
-    # Overall portfolio analysis
-    total_pnl = total_current_value - total_investment
-    total_pnl_percent = (total_pnl / total_investment * 100) if total_investment > 0 else 0
+    if not alerts:
+        print("   No stop-loss or take-profit triggers detected")
+        print("   All positions within safe parameters")
+    else:
+        print(f"   ⚠️  Found {len(alerts)} alert(s):")
+        for i, alert in enumerate(alerts, 1):
+            print(f"   {i}. {alert['type']}")
+            print(f"      Symbol: {alert['symbol']}")
+            print(f"      Side: {alert['side']}")
+            print(f"      Entry: ${alert['entry_price']:.2f}")
+            print(f"      Current: ${alert['current_price']:.2f}")
+            print(f"      P&L: {alert['pnl_pct']:.2f}%")
+            print(f"      Position Value: ${alert['position_value']:.2f}")
+            if alert.get('warning'):
+                print(f"      Warning: {alert['warning']}")
+            print()
     
-    print("=== PORTFOLIO SUMMARY ===")
-    print(f"Total Investment: ${total_investment:,.2f}")
-    print(f"Total Current Value: ${total_current_value:,.2f}")
-    print(f"Total P&L: ${total_pnl:,.2f} ({total_pnl_percent:+.2f}%)")
+    # Get current market summary
+    print("3. MARKET SUMMARY")
+    try:
+        response = requests.get('http://localhost:5001/summary', timeout=10)
+        if response.status_code == 200:
+            content = response.text
+            lines = content.split('\n')
+            
+            # Extract key information
+            for line in lines[:50]:  # First 50 lines should contain summary
+                if 'BTC/USD:' in line or 'ETH/USD:' in line or 'Market Sentiment:' in line:
+                    print(f"   {line.strip()}")
+                if 'TRADING DECISION:' in line:
+                    print(f"   {line.strip()}")
+                    break
+    except:
+        print("   Could not fetch market summary")
     
-    # Check for critical drawdown
-    if total_pnl_percent < -7:
-        critical_msg = f"🚨 CRITICAL DRAWDOWN: Portfolio down {abs(total_pnl_percent):.2f}% (${abs(total_pnl):,.2f})"
-        critical_alerts.append(critical_msg)
-        print(f"⚠️  {critical_msg}")
-    elif total_pnl_percent < -3:
-        alert_msg = f"⚠️  Portfolio Drawdown: Down {abs(total_pnl_percent):.2f}% (${abs(total_pnl):,.2f})"
-        alerts.append(alert_msg)
-        print(f"⚠️  {alert_msg}")
+    print()
+    print("=== ANALYSIS COMPLETE ===")
     
-    return alerts, critical_alerts, total_investment, total_current_value, total_pnl_percent
+    # Return alerts for logging
+    return alerts, health
 
-if __name__ == "__main__":
-    alerts, critical_alerts, total_inv, total_val, total_pnl_pct = analyze_trades()
+if __name__ == '__main__':
+    alerts, health = main()
     
-    # Log to monitoring file
-    with open("/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log", "a") as f:
-        f.write(f"\n{'='*60}\n")
-        f.write(f"Monitoring Check: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Portfolio Value: ${total_val:,.2f} (P&L: {total_pnl_pct:+.2f}%)\n")
-        f.write(f"Alerts: {len(alerts)}, Critical: {len(critical_alerts)}\n")
-        for alert in alerts:
-            f.write(f"  - {alert}\n")
-        for critical in critical_alerts:
-            f.write(f"  ⚠️ {critical}\n")
+    # Prepare data for logging
+    result = {
+        'timestamp': datetime.now().isoformat(),
+        'health_status': health.get('status'),
+        'health_message': health.get('message'),
+        'alerts_count': len(alerts),
+        'alerts': alerts,
+        'critical': len([a for a in alerts if 'TRIGGERED' in a['type']]) > 0
+    }
     
-    # Log critical alerts to separate file
-    if critical_alerts:
-        with open("/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log", "a") as f:
-            f.write(f"\n{'='*60}\n")
-            f.write(f"Critical Alert: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            for critical in critical_alerts:
-                f.write(f"{critical}\n")
+    print(json.dumps(result, indent=2))

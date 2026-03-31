@@ -1,66 +1,42 @@
-TRADING ANALYSIS SUMMARY - 2026-03-31 03:03:30
-==================================================
 
-SYSTEM STATUS:
-✅ Dashboard: Accessible at http://localhost:5001/
-✅ Status: Running
-✅ Capital: $250.00
-✅ Last Analysis: 2026-03-31T02:42:53.262120
-✅ Next Analysis: Hourly
-✅ Trading Pairs: BTC/USD, ETH/USD
+CRYPTO TRADING ANALYSIS REPORT
+Date: 2026-03-31 10:53:41
 
-MARKET DATA:
-• BTC/USD: $66,242.82 (Below support: $66,258.22)
-• ETH/USD: $2,015.21 (At support: $2,014.96)
-• Market Sentiment: BULLISH (Contradicts price action)
-• BTC 24h Volume: $20,026,747
-• ETH 24h Volume: $9,396,305
+TRADING PARAMETERS:
+- Capital: $1,000
+- Risk Management: 5% stop-loss, 10% take-profit
+- Daily Limit: Maximum 2 trades
+- Strategy: Conservative (only clear opportunities)
 
-TRADE PERFORMANCE ANALYSIS:
-• Total Trades Analyzed: 10
-• Stop-Loss Triggers: 8 (80% FAILURE RATE)
-• Active Trades: 2 (20%)
-• Average Loss on Stopped Trades: -9.82%
-• Stop-Loss Threshold: 5.0%
-• Excess Loss Beyond Stop-Loss: 4.82% (Nearly double)
+MARKET ANALYSIS:
 
-PORTFOLIO ASSESSMENT:
-• Estimated Entry Value: ~$20,400
-• Estimated Current Value: ~$18,167
-• Total P&L: -$2,233 (-10.95%)
-• Maximum Drawdown: -13.33% (ETH trade)
+BTC/USD:
+  Current Price: $67,696.71
+  24h Change: +0.00%
+  Market Sentiment: BEARISH
+  Trading Signal: SELL
+  Signal Reason: Price near strong resistance (0.00% away) with bearish sentiment
 
-CRITICAL ISSUES IDENTIFIED:
-1. 🚨 80% stop-loss trigger rate (extremely high)
-2. 🚨 Stop-loss orders not executing at 5% threshold (actual losses ~10%)
-3. 🚨 Entry timing flawed - buying at resistance, not support
-4. 🚨 Market sentiment indicator inaccurate (bullish vs bearish reality)
-5. 🚨 Portfolio showing significant drawdown (-10.95%)
+ETH/USD:
+  Current Price: $2,066.22
+  24h Change: +0.00%
+  Market Sentiment: BULLISH
+  Trading Signal: BUY
+  Signal Reason: Price near strong support (0.00% away) with bullish sentiment
 
-RECOMMENDED ACTIONS:
-1. ⚠️ IMMEDIATE: Pause all trading activity
-2. ⚠️ Investigate stop-loss order execution
-3. ⚠️ Audit entry criteria and market data feeds
-4. ⚠️ Review sentiment analysis accuracy
-5. ⚠️ Consider tightening risk parameters
+TRADING RECOMMENDATIONS:
+Total Opportunities: 2/2 trades recommended
 
-SYSTEM RECOMMENDATION (Current):
-• Action: BUY BTC/USD
-• Entry: $66,242.82
-• Position: 0.001887 BTC ($125.00)
-• Stop Loss: $62,930.68 (5%)
-• Take Profit: $72,867.10 (10%)
-• Risk/Reward: 1:2.0
+Recommended Actions:
+- SELL BTC/USD at $67,696.71
+  Position: 0.007386 BTC ($500.00)
+  Stop Loss: 5% ($71,081.55)
+  Take Profit: 10% ($60,927.04)
+- BUY ETH/USD at $2,066.22
+  Position: 0.241988 ETH ($500.00)
+  Stop Loss: 5% ($1,962.91)
+  Take Profit: 10% ($2,272.84)
 
-WARNING: Given current system issues, new trade recommendations should be treated with extreme caution until root causes are resolved.
-
-MONITORING LOGS UPDATED:
-• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-
-NEXT MONITORING CYCLE: 04:00:00 (Hourly)
-
-ALERT STATUS: 🔴 CRITICAL - Immediate intervention recommended
-
-==================================================
-ANALYSIS COMPLETE
+NEXT ANALYSIS:
+Next scheduled analysis will run according to cron schedule.
+Current trades used today: 0/2

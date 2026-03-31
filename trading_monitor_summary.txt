@@ -1,78 +1,74 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Timestamp: 2026-03-31 10:12 AM (Asia/Bangkok)
-Monitoring Period: 2026-03-31 10:12:48
+Timestamp: 2026-03-31 10:40 AM (Asia/Bangkok)
+Monitoring Period: 2026-03-31 10:40:30
 
 SYSTEM STATUS:
-✅ Dashboard running on http://localhost:5001/
-✅ Last analysis: 2026-03-31T10:08:42.745259
+✅ Trading system is RUNNING
 ✅ Capital: $250.00
-✅ Risk Parameters: 5% stop-loss, 10% take-profit
-✅ Max trades/day: 2
+✅ Analysis scheduled: HOURLY
+✅ Last analysis: 2026-03-31T10:34:08.221628
+✅ Risk parameters active: Stop-loss 5%, Take-profit 10%, Max 2 trades/day
 
-PORTFOLIO ANALYSIS:
-📊 Total Positions: 5
-📊 ETH Positions: 4 (84.6% exposure)
-📊 BTC Positions: 1 (15.4% exposure)
-📊 Total Investment: $1,300.05
-📊 Current Value: $1,284.45
-📊 Total P&L: -$15.60 (-1.20%)
+TRADING ACTIVITY:
+📊 Total trades: 5 positions open
+📊 ETH positions: 4 (84.6% exposure)
+📊 BTC positions: 1 (15.4% exposure)
+📊 Total investment: $1,300.05
+📊 Current portfolio value: $1,278.30
+📊 Net P&L: -$21.75 (-1.67%)
 
-CRITICAL ALERTS DETECTED (2):
-🚨 ALERT #1: ETH/USD STOP-LOSS TRIGGERED
-   Position: ETH/USD #1 (13:39:49)
-   Loss: -10.82% (entry: $2,325.28, current: $2,073.66)
-   Exceeds stop-loss by: 5.82%
-   P&L: -$21.64
-   Action: IMMEDIATE EXIT REQUIRED
+CRITICAL ALERTS DETECTED:
+🚨 2 STOP-LOSS TRIGGERS:
+   1. ETH/USD #1: -11.27% loss (entry: $2,325.28, current: $2,063.20)
+   2. ETH/USD #2: -5.94% loss (entry: $2,193.60, current: $2,063.20)
 
-🚨 ALERT #2: ETH/USD STOP-LOSS TRIGGERED
-   Position: ETH/USD #2 (00:33:02)
-   Loss: -5.47% (entry: $2,193.60, current: $2,073.66)
-   Exceeds stop-loss by: 0.47%
-   P&L: -$10.94
-   Action: IMMEDIATE EXIT REQUIRED
-
-DRAWDOWN INDICATORS (3):
-⚠️ High ETH concentration: 84.6% exposure (recommended max: 50%)
-⚠️ Portfolio drawdown: -3.47% on ETH positions
-⚠️ Multiple stop-loss triggers: 2 out of 5 positions (40%)
-
-PERFORMANCE METRICS:
-📈 Win Rate: 60% (3/5 positions profitable)
-📉 Loss Rate: 40% (2/5 positions at stop-loss)
-💰 Average Win: +$5.66
-💸 Average Loss: -$16.29
-⚖️ Risk/Reward Ratio: 1:0.35 (unfavorable)
+🚨 PORTFOLIO CONCENTRATION RISK:
+   - ETH exposure: 84.6% (recommended max: 50%)
+   - Severity: HIGH
 
 MARKET CONDITIONS:
-🌡️ BTC/USD: $67,921.00 (+1.00% from entry)
-🌡️ ETH/USD: $2,073.66 (mixed performance)
-📊 Market Sentiment: Neutral with slight recovery
-📈 Trend: BTC slightly bullish, ETH mixed
-
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
-2. URGENT: Reduce ETH exposure from 84.6% to ≤50%
-3. Review trading strategy given multiple stop-loss triggers
-4. Implement portfolio rebalancing
-5. Monitor BTC position (currently +1.00%)
+📈 BTC/USD: $67,702.00 (+0.68% from entry)
+📈 ETH/USD: $2,063.20 (mixed performance)
+📈 Market sentiment: BULLISH (per latest analysis)
+📈 Support/Resistance levels active
 
 RISK ASSESSMENT:
-🔴 Overall Risk Level: HIGH
-🔴 Critical Alerts: 2 (stop-loss triggers)
-🟡 Drawdown Alerts: 3
-🟢 Safe Positions: 3
-📉 Portfolio Drawdown: -1.20%
+⚠️ Overall Risk Level: HIGH
+⚠️ Critical alerts: 2 stop-loss triggers
+⚠️ Drawdown alerts: 1 concentration risk
+⚠️ Portfolio drawdown: -1.67%
 
-LOGGING COMPLETE:
-✅ Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-✅ Critical alerts logged: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-⏰ Next scheduled monitoring: 2026-03-31 11:12 AM (Asia/Bangkok)
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Exit ETH/USD positions #1 & #2 (stop-loss triggered)
+2. URGENT: Reduce ETH exposure from 84.6% to ≤50%
+3. Review stop-loss levels for all positions
+4. Consider portfolio rebalancing strategy
+5. Review trading strategy given current market conditions
 
-SUMMARY:
-The trading dashboard is operational with 5 active positions. Two ETH positions have triggered stop-loss alerts and require immediate attention. Portfolio shows high ETH concentration (84.6%) exceeding recommended limits. Overall portfolio is down -1.20% with mixed performance across positions. Immediate action recommended to exit losing positions and rebalance portfolio.
+PERFORMANCE METRICS:
+📊 Win Rate: 60.0% (3/5 positions profitable)
+📊 Loss Rate: 40.0% (2/5 positions at loss)
+📊 Average Win: $+4.24
+📊 Average Loss: $-17.22
+📊 Risk/Reward Ratio: 4.06
 
-=====================================
-End of Monitoring Summary
-Generated: 2026-03-31 10:12:48
+LATEST TRADING SIGNAL:
+✅ Trading Decision: BUY
+✅ Recommended Symbol: BTC/USD
+✅ Entry Price: $67,812.52
+✅ Position Size: 0.001843
+✅ Position Value: $125.00
+✅ Stop Loss: $64,421.89 (5.0%)
+✅ Take Profit: $74,593.77 (10.0%)
+✅ Risk/Reward: 1:2.0
+✅ Execution Status: SIMULATED (API credentials needed)
+
+NEXT STEPS:
+1. Monitor critical positions for immediate action
+2. Review portfolio allocation
+3. Consider implementing tighter risk management
+4. Next scheduled monitoring: 2026-03-31 11:40 AM (Asia/Bangkok)
+
+ALERT STATUS: ACTIVE - REQUIRES IMMEDIATE ATTENTION
+===================================================
