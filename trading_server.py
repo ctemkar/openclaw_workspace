@@ -9,6 +9,7 @@ import subprocess
 import json
 import os
 import time
+import re
 from datetime import datetime
 from threading import Thread
 import schedule
@@ -48,6 +49,56 @@ def run_trading_analysis():
     except Exception as e:
         print(f"[{datetime.now()}] Analysis failed: {e}")
         return False
+
+def get_real_capital():
+    """Get REAL balances from exchanges"""
+    try:
+        total = 0
+        
+        # Try to get Gemini balance
+        try:
+            import ccxt
+            with open(os.path.join(BASE_DIR, "secure_keys/.gemini_key"), 'r') as f:
+                gemini_key = f.read().strip()
+            with open(os.path.join(BASE_DIR, "secure_keys/.gemini_secret"), 'r') as f:
+                gemini_secret = f.read().strip()
+            
+            gemini = ccxt.gemini({
+                'apiKey': gemini_key,
+                'secret': gemini_secret,
+                'enableRateLimit': True
+            })
+            
+            gemini_balance = gemini.fetch_balance()
+            gemini_usd = gemini_balance['free'].get('USD', 0)
+            total += gemini_usd
+            print(f"[{datetime.now()}] Gemini balance: ${gemini_usd:.2f}")
+        except Exception as e:
+            print(f"[{datetime.now()}] Could not fetch Gemini balance: {e}")
+            gemini_usd = 0
+        
+        # Try to get Binance balance (estimate from logs)
+        try:
+            binance_log = os.path.join(BASE_DIR, "binance_bot1.log")
+            if os.path.exists(binance_log):
+                with open(binance_log, 'r') as f:
+                    lines = f.readlines()[-10:]  # Last 10 lines
+                    for line in reversed(lines):
+                        if "Free USDT:" in line:
+                            import re
+                            match = re.search(r'Free USDT:\s*\$\s*([\d.]+)', line)
+                            if match:
+                                binance_usd = float(match.group(1))
+                                total += binance_usd
+                                print(f"[{datetime.now()}] Binance balance: ${binance_usd:.2f}")
+                                break
+        except Exception as e:
+            print(f"[{datetime.now()}] Could not estimate Binance balance: {e}")
+        
+        return round(total, 2)
+    except Exception as e:
+        print(f"[{datetime.now()}] Error getting real capital: {e}")
+        return 0.0
 
 def schedule_analysis():
     """Schedule hourly analysis"""
@@ -101,7 +152,7 @@ def get_status():
         "timestamp": datetime.now().isoformat(),
         "port": 5001,
         "analysis_scheduled": "hourly",
-        "capital": 250.0,  # REAL $250 capital ($200 Gemini + $50 Binance)
+        "capital": get_real_capital(),  # REAL balances only
         "risk_parameters": {
             "stop_loss": 0.05,
             "take_profit": 0.10,

@@ -1,58 +1,76 @@
-TRADING DASHBOARD MONITORING REPORT
-====================================
-Monitoring Time: 2026-03-31 11:53:55 (Asia/Bangkok)
-Dashboard Status: ✅ RUNNING
-Last Analysis: 2026-03-31 11:34:18
+TRADING DASHBOARD MONITORING SUMMARY
+========================================
+Time: 2026-03-31 12:52:52 (Asia/Bangkok)
+Dashboard Status: Running
+Last Analysis: 2026-03-31T12:48:22.910449
 
-CAPITAL & RISK PARAMETERS:
-• Total Capital: $250.00
-• Stop Loss: 5.0%
-• Take Profit: 10.0%
-• Max Daily Trades: 2
+CRITICAL FINDINGS:
+==================
+1. 🚨 CAPITAL REDUCTION: Capital decreased from $250.00 to $175.53 (-29.79%)
+2. 🚨 EXTREME LEVERAGE: 740.67% capital utilization ($1,300.05 invested vs $175.53 capital)
+3. 🚨 STOP-LOSS TRIGGERED: 2 ETH positions beyond 5% stop-loss levels
+4. 🚨 DAILY LIMIT VIOLATION: 5 trades executed vs 2 allowed limit
 
-MARKET DATA:
-• BTC/USD: $67,560.76
-• ETH/USD: $2,059.05
-• Market Sentiment: BULLISH
+PORTFOLIO STATUS:
+=================
+- Total Trades: 5
+- Active Trades: 3
+- Stopped Trades: 2
+- Total Investment: $1,300.05
+- Total P&L: $-20.37 (-1.57%)
+- Current Portfolio Value: $1,279.68
+- Capital: $175.53 (DECREASED)
+- Drawdown: -1.57%
 
-PORTFOLIO ANALYSIS:
-• Total Investment: $1,300.05
-• Current Value: $1,275.75
-• Total P&L: -$24.30 (-1.87%)
-• Capital Utilization: 520.0% (⚠️ EXCESSIVE)
+POSITION ANALYSIS:
+==================
+1. ETH/USD @ $2,325.28: -11.16% (STOP-LOSS TRIGGERED)
+2. ETH/USD @ $2,193.60: -5.83% (STOP-LOSS TRIGGERED)
+3. BTC/USD @ $67,247.51: +0.66% (ACTIVE)
+4. ETH/USD @ $2,052.38: +0.65% (ACTIVE)
+5. ETH/USD @ $2,021.51: +2.19% (ACTIVE)
 
-ACTIVE TRADES: 5 positions
-• ETH/USD: 4 trades (2 at stop-loss)
-• BTC/USD: 1 trade (+0.47%)
+MARKET CONDITIONS:
+==================
+- BTC Price: $67,690.00
+- ETH Price: $2,065.78
+- Market Sentiment: NEUTRAL
+- Last Analysis: 12:48:22
 
-CRITICAL ALERTS DETECTED: 2
-1. 🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05
-   - Entry: $2,325.28, SL: $2,209.02
-   - P&L: -11.45%
-   - Time: 13:39:49
-
-2. 🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05
-   - Entry: $2,193.60, SL: $2,083.92
-   - P&L: -6.13%
-   - Time: 00:33:02
+IMMEDIATE ACTIONS REQUIRED:
+===========================
+1. 🚨 Investigate capital reduction from $250 to $175.53
+2. 🚨 Close 2 loss-making ETH positions immediately
+3. 🚨 Pause all new trading activity
+4. 🚨 Reduce position sizing to emergency levels (5% max per trade)
+5. 🚨 Verify trading system execution mode (simulation vs real)
 
 RISK ASSESSMENT:
-• Portfolio Drawdown: -1.87%
-• 40% of positions at stop-loss
-• Excessive leverage (520% of capital)
-• Market volatility affecting ETH positions
+================
+- Risk Level: EXTREME (8 critical alerts)
+- Capital Utilization: 740.67% (CRITICAL)
+- Stop-loss Effectiveness: 40% (2/5 positions triggered)
+- Position Concentration: 80% ETH, 20% BTC
+- Daily Limit Compliance: VIOLATED (5/2 trades)
 
 RECOMMENDATIONS:
-1. IMMEDIATE ACTION REQUIRED: Review stop-loss triggered positions
-2. Reduce position sizes to manage risk
-3. Consider adjusting stop-loss levels for remaining positions
-4. Review trading strategy given multiple ETH stop-loss triggers
-5. Monitor market conditions for recovery opportunities
+================
+1. Emergency capital protection measures needed
+2. Implement real-time capital monitoring
+3. Add maximum leverage limits (200% max)
+4. Review and fix stop-loss execution
+5. Investigate potential system errors or capital leakage
 
-NEXT SCHEDULED ANALYSIS: Hourly
-LOG FILES UPDATED:
-• trading_monitoring.log - Latest portfolio data
-• critical_alerts.log - Stop-loss triggers and recommendations
+NEXT STEPS:
+===========
+1. Review trading system logs for errors
+2. Check API connectivity and account balances
+3. Verify position sizing calculations
+4. Implement automated risk controls
+5. Schedule emergency system review
 
-====================================
-MONITORING COMPLETE
+Monitoring logs updated:
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+Next scheduled monitoring: Hourly (approx 47 minutes)

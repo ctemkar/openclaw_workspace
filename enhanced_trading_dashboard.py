@@ -316,13 +316,13 @@ def get_bot_status():
     """Check status of all trading bots"""
     bots = []
     
-    # Bot definitions
+    # Bot definitions - UPDATED to match actual running bots
     bot_definitions = [
-        {"name": "Real Gemini Trader", "process_name": "real_gemini_trader.py"},
+        {"name": "Gemini Long Trader", "process_name": "simple_real_trader.py"},
         {"name": "Trading Server", "process_name": "trading_server.py"},
-        {"name": "26 Crypto Live Bot", "process_name": "improved_26_crypto_bot.py"},
-        {"name": "Binance Futures Bot", "process_name": "binance_futures_short_bot.py"},
-        {"name": "Simple Crypto Bot", "process_name": "simple_26_crypto_bot"},
+        {"name": "26 Crypto Monitor", "process_name": "improved_26_crypto_bot.py"},
+        {"name": "Binance Futures Bot", "process_name": "fixed_futures_bot.py"},
+        {"name": "Binance Futures Bot 2", "process_name": "real_futures_trading_bot.py"},
     ]
     
     for proc in psutil.process_iter(['pid', 'name', 'cmdline', 'cpu_percent', 'memory_info']):

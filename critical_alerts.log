@@ -1,31 +1,96 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 11:53:55
+Timestamp: 2026-03-31 12:52:52
 
-CRITICAL ALERTS (2):
-🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05 (entry: $2,325.28, SL: $2,209.02, P&L: -11.45%)
-🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05 (entry: $2,193.60, SL: $2,083.92, P&L: -6.13%)
+CRITICAL ALERTS (8):
+🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,065.78 (Entry: $2,325.28)
+⚠️ SIGNIFICANT DRAWDOWN: ETH/USD down 11.16% (Entry: $2,325.28, Current: $2,065.78)
+🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,065.78 (Entry: $2,193.60)
+⚠️ SIGNIFICANT DRAWDOWN: ETH/USD down 5.83% (Entry: $2,193.60, Current: $2,065.78)
+⚠️ HIGH CAPITAL UTILIZATION: $1,300.05 invested (740.67% of $175.53 capital) - CRITICAL
+⚠️ DAILY TRADE LIMIT VIOLATION: 5 trades vs 2 allowed
+🚨 CAPITAL REDUCTION ALERT: Capital decreased from $250.00 to $175.53 (-29.79%) - CRITICAL
+⚠️ EXTREME LEVERAGE RISK: 740.67% capital utilization indicates extreme leverage
 
 PORTFOLIO STATUS:
-- Total P&L: $-24.30 (-1.87%)
-- Current Value: $1,275.75
-- Capital at Risk: $1,300.05
-- Capital Utilization: 520.0% (excessive)
+- Total Investment: $1,300.05
+- Total P&L: $-20.37 (-1.57%)
+- Current Portfolio Value: $1,279.68
+- Capital Utilization: 740.67% (EXTREME RISK - CRITICAL)
+- Portfolio Drawdown: -1.57%
+- Active Trades: 3
+- Stopped Trades: 2
+- Capital: $175.53 (DECREASED -29.79% from $250.00)
 
-DRAWDOWN ANALYSIS:
-- Portfolio drawdown: -1.87%
-- 2 out of 5 trades at stop-loss (40%)
-- ETH positions showing significant losses
-- BTC position slightly positive (+0.47%)
+POSITION ANALYSIS:
+1. ETH/USD @ $2,325.28: -11.16% (STOP-LOSS TRIGGERED)
+   - Entry: $2,325.28, Current: $2,065.78
+   - Loss: $-22.30, Stop-loss exceeded by -6.49%
+   - Reason: Near support level: $2308.08 (current: $2325.28)
+2. ETH/USD @ $2,193.60: -5.83% (STOP-LOSS TRIGGERED)
+   - Entry: $2,193.60, Current: $2,065.78
+   - Loss: $-11.65, Stop-loss exceeded by -0.87%
+   - Reason: Near support level: $2167.99 (current: $2193.60)
+3. BTC/USD @ $67,247.51: +0.66% (ACTIVE)
+   - Entry: $67,247.51, Current: $67,690.00
+   - Profit: $1.32, Stop-loss: $63,885.13
+   - Reason: Near support level: $67110.20 (current: $67247.51)
+4. ETH/USD @ $2,052.38: +0.65% (ACTIVE)
+   - Entry: $2,052.38, Current: $2,065.78
+   - Profit: $1.31, Stop-loss: $1,949.76
+   - Reason: Near support level: $2033.94 (current: $2052.38)
+5. ETH/USD @ $2,021.51: +2.19% (ACTIVE)
+   - Entry: $2,021.51, Current: $2,065.78
+   - Profit: $10.52, Stop-loss: $1,920.43
+   - Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Review and potentially close stop-loss triggered positions
-2. Reduce position sizes to align with $250 capital (currently 520% over-leveraged)
-3. Consider tightening stop-loss levels for remaining positions
-4. Review trading strategy - multiple ETH positions hitting stop-loss suggests strategy may need adjustment
-5. Check market conditions for potential recovery opportunities
+MARKET CONDITIONS:
+- BTC Price: $67,690.00
+- ETH Price: $2,065.78
+- Market Sentiment: NEUTRAL (per dashboard)
+- Volatility: High (ETH positions showing significant losses)
+- Last Analysis: 2026-03-31T12:48:22.910449
+- Dashboard Status: Running
+
+CRITICAL FINDINGS:
+1. 🚨 CAPITAL REDUCTION: Capital dropped from $250.00 to $175.53 (-29.79%)
+   - Possible causes: Unrealized losses, system errors, or execution issues
+   - Impact: Extreme leverage risk increased from 520% to 740%
+2. 🚨 EXTREME LEVERAGE: 740.67% capital utilization
+   - This indicates trading with 7.4x leverage relative to available capital
+   - Extreme risk of margin call or complete capital loss
+3. 🚨 MULTIPLE STOP-LOSS VIOLATIONS: 2 ETH positions beyond stop-loss levels
+   - Stop-loss not being executed in real trading
+   - System may be in simulation mode only
+4. 🚨 DAILY LIMIT EXCEEDED: 5 trades vs 2 allowed
+   - Risk management rules being violated
+
+IMMEDIATE ACTIONS REQUIRED:
+1. 🚨 EMERGENCY CAPITAL INVESTIGATION: Investigate why capital dropped from $250 to $175.53
+2. 🚨 CLOSE ALL LOSS-MAKING POSITIONS: Close ETH positions at 13:39:49 and 00:33:02 IMMEDIATELY
+3. 🚨 PAUSE ALL TRADING ACTIVITY: Stop all new trades until capital situation resolved
+4. 🚨 REDUCE POSITION SIZING: Implement emergency 5% max capital per trade rule ($8.78 max per trade)
+5. 🚨 VERIFY TRADING MODE: Check if system is in simulation vs real trading mode
+6. 🚨 IMPLEMENT CAPITAL PROTECTION: Set minimum capital threshold of $200 with auto-pause
+
+URGENT SYSTEM CHECKS NEEDED:
+1. Check trading system logs for execution errors
+2. Verify API connectivity and account balances
+3. Review position sizing calculations
+4. Check for any unauthorized trades or system errors
+5. Verify stop-loss execution mechanism
+6. Review capital allocation logic
+
+LONG-TERM RECOMMENDATIONS:
+1. Implement real-time capital monitoring with alerts
+2. Add maximum leverage limits (e.g., max 200% capital utilization)
+3. Implement daily loss limits (e.g., max 10% daily loss)
+4. Add position correlation limits (max 50% in single asset)
+5. Implement tiered stop-loss system
+6. Add automated position reduction when capital utilization exceeds limits
 
 === END CRITICAL ALERTS ===
-=== CRITICAL ALERTS - 2026-03-31 11:57:28 ===
-🚨 STOP-LOSS TRIGGERED: ETH/USD BUY @ $2325.28 - Current: $2059.05 (-11.45% loss) - Time: 13:39:49
-🚨 STOP-LOSS TRIGGERED: ETH/USD BUY @ $2193.60 - Current: $2059.05 (-6.13% loss) - Time: 00:33:02
-============================================================
+Trading monitor check completed successfully at 2026-03-31T12:52:52.000000. 
+CRITICAL SITUATION DETECTED: Capital reduction (-29.79%) and extreme leverage (740.67%).
+Dashboard Status: Running, Last Analysis: 2026-03-31T12:48:22.910449
+Next scheduled analysis: Hourly (approx 47 minutes from now)
+EMERGENCY ACTION REQUIRED: Trading system shows signs of capital leakage or execution errors.

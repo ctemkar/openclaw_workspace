@@ -45,14 +45,14 @@ exchange = ccxt.gemini({
     'enableRateLimit': True,
 })
 
-# TRADING PARAMETERS
-TOTAL_CAPITAL = 542.27  # Your actual balance
-TRADING_CAPITAL = 100.00  # Amount to actively trade
-RISK_PER_TRADE = 0.02  # 2% risk per trade
-STOP_LOSS = 0.03  # 3% stop-loss
-TAKE_PROFIT = 0.06  # 6% take-profit
-MAX_TRADES_PER_DAY = 3
-SYMBOLS = ['BTC/USD', 'ETH/USD']
+# TRADING PARAMETERS - REAL MONEY ONLY
+TOTAL_CAPITAL = 134.27  # REAL Gemini balance
+TRADING_CAPITAL = 50.00  # Conservative: trade only $50 of $134
+RISK_PER_TRADE = 0.01  # 1% risk per trade (safer)
+STOP_LOSS = 0.02  # 2% stop-loss (tighter)
+TAKE_PROFIT = 0.04  # 4% take-profit (more frequent)
+MAX_TRADES_PER_DAY = 5  # More opportunities
+SYMBOLS = ['BTC/USD', 'ETH/USD', 'SOL/USD']  # Add SOL for more opportunities
 
 # State
 trades_today = 0
@@ -244,11 +244,13 @@ def main():
                 logger.info(f"🎯 Signal: {signal} ({confidence:.0%} confidence)")
                 logger.info(f"   Reason: {reason}")
                 
-                # Execute if good opportunity
-                if (signal == "BUY" and change < -2.5) or (signal == "SELL" and change > 5.0):
+                # Execute if good opportunity - MORE ACTIVE THRESHOLDS
+                if (signal == "BUY" and change < -1.0) or (signal == "SELL" and change > 2.5):
                     trade = execute_safe_trade(symbol, signal, price, confidence, reason)
                     if trade:
                         logger.info(f"💰 REAL TRADE COMPLETED!")
+                        # Wait 1 minute after trade to avoid rapid trading
+                        time.sleep(60)
         
         logger.info(f"\n📈 Summary: Trades today: {trades_today}/{MAX_TRADES_PER_DAY}")
         logger.info(f"⏰ Next check in 3 minutes...")
