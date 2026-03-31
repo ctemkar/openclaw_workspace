@@ -1,31 +1,31 @@
-# TRADING MONITORING LOG
-# Timestamp: 2026-03-31T16:12:11.823628 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:12 PM (+07)
+# TRADING MONITORING LOG - UPDATE
+# Timestamp: 2026-04-01T01:57:57+0700
+# Local Time: Wednesday, April 1, 2026 — 1:57 AM (+07)
 
 ## SYSTEM STATUS
 STATUS=running
-CAPITAL=534.46
-LAST_ANALYSIS=2026-03-31T22:41:37.577735
+CAPITAL=111.71
+LAST_ANALYSIS=2026-04-01T01:19:36.489915
 ANALYSIS_SCHEDULE=hourly
 PORT=5001
 
 ## PERFORMANCE METRICS
-TOTAL_PNL=-2.8627589957359927
-TOTAL_PNL_USD=-$2.86
-OPEN_POSITIONS=8
+TOTAL_PNL=-7.635098816647472
+TOTAL_PNL_USD=-$7.64
+OPEN_POSITIONS=10
 REALIZED_PNL=0.0
-UNREALIZED_PNL=-2.8627589957359927
-DRAWDOWN_PERCENT=0.54
-OVERALL_RETURN_PERCENT=113.78
+UNREALIZED_PNL=-7.635098816647472
+DRAWDOWN_PERCENT=55.32
+OVERALL_RETURN_PERCENT=-3.05
 INITIAL_CAPITAL=250.0
 
 ## EXCHANGE BREAKDOWN
 ### BINANCE
-BINANCE_OPEN_POSITIONS=8
+BINANCE_OPEN_POSITIONS=10
 BINANCE_REALIZED_PNL=0.0
-BINANCE_TOTAL_PNL=-2.8627589957359927
-BINANCE_TRADES=8
-BINANCE_UNREALIZED_PNL=-2.8627589957359927
+BINANCE_TOTAL_PNL=-7.635098816647472
+BINANCE_TRADES=10
+BINANCE_UNREALIZED_PNL=-7.635098816647472
 
 ### GEMINI
 GEMINI_OPEN_POSITIONS=0
@@ -81,259 +81,115 @@ TRADE_5_PRICE=2021.51
 TRADE_5_QUANTITY=0.2474
 TRADE_5_REASON=Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
 
+## CURRENT MARKET PRICES (FROM COINGECKO)
+BTC_CURRENT_PRICE=67750.0
+ETH_CURRENT_PRICE=2096.72
+
 ## POSITION CONCENTRATION
 ETH_CONCENTRATION_PERCENT=80.0
 BTC_CONCENTRATION_PERCENT=20.0
 
 ## TREND ANALYSIS (SINCE LAST CHECK)
-PNL_IMPROVEMENT=+$0.83 (+22.5% improvement)
-CAPITAL_INCREASE=+$0.59 (+0.11% increase)
-DRAWDOWN_DECREASE=-0.01% (from 0.55% to 0.54%)
-PNL_TREND=CONTINUED_IMPROVEMENT
-CAPITAL_TREND=CONTINUED_RECOVERY
+# Note: Last check was at 2026-04-01T01:53:45 with capital=111.71, PNL=-7.44
+CAPITAL_CHANGE=$0.00 (from $111.71 to $111.71 - stable)
+PNL_CHANGE=-$0.19 (from -$7.44 to -$7.64 - WORSENING)
+DRAWDOWN_CHANGE=0.0% (from 55.32% to 55.32% - stable)
+PNL_TREND=WORSENING (losses increased by $0.19)
+CAPITAL_TREND=STABLE
 
 ## MARKET ANALYSIS
-BTC_PRICE=67095.50
-ETH_PRICE=2070.76
+# Based on summary endpoint: BTC=$67,696.96, ETH=$2,101.49
+BTC_PRICE=67696.96
+ETH_PRICE=2101.49
 MARKET_SENTIMENT=NEUTRAL
 TRADING_SIGNAL=BUY
+
+## RISK ASSESSMENT
+STOP_LOSS_THRESHOLD=12.50 (5% of capital)
+CURRENT_PNL_VS_STOP_LOSS=61.1% of threshold (BELOW threshold)
+TAKE_PROFIT_THRESHOLD=25.00 (10% of capital)
+CURRENT_PNL_VS_TAKE_PROFIT=N/A (negative P&L)
+CRITICAL_DRAWDOWN_THRESHOLD=5.0%
+CURRENT_DRAWDOWN=55.32% (EXCEEDS 5% threshold by 50.32%)
+
+## ALERT STATUS
+STOP_LOSS_TRIGGERED=NO (Current P&L: -$7.64, Threshold: $12.50)
+TAKE_PROFIT_TRIGGERED=NO
+CRITICAL_DRAWDOWN=YES ⚠️ CRITICAL
+SYSTEM_OPERATIONAL=YES
+
+## POSITION ANALYSIS
+# Checking if any positions might be near stop-loss/take-profit:
+# Recent trades entry prices vs current market prices:
+# ETH/USD trades: 2325.28, 2193.6, 2052.38, 2021.51
+# Current ETH price: 2096.72
+# BTC/USD trade: 67247.51
+# Current BTC price: 67750.0
+
+# ETH positions:
+# Trade 1 (2325.28): Current 2096.72 = -9.83% (BELOW stop-loss of -5%) ⚠️
+# Trade 2 (2193.6): Current 2096.72 = -4.42% (APPROACHING stop-loss) ⚠️
+# Trade 3 (2052.38): Current 2096.72 = +2.16% (profitable)
+# Trade 4 (2021.51): Current 2096.72 = +3.72% (profitable)
+
+# BTC position:
+# Trade 5 (67247.51): Current 67750.0 = +0.75% (slightly profitable)
+
+## STOP-LOSS ANALYSIS
+# Trade 1 (ETH @ 2325.28): Stop-loss would be at 2209.02 (5% below entry)
+# Current price 2096.72 is 9.83% below entry - STOP-LOSS TRIGGERED ⚠️
+# Trade 2 (ETH @ 2193.6): Stop-loss would be at 2083.92 (5% below entry)
+# Current price 2096.72 is 4.42% below entry - APPROACHING STOP-LOSS ⚠️
+
+## TAKE-PROFIT ANALYSIS
+# Trade 3 (ETH @ 2052.38): Take-profit would be at 2257.62 (10% above entry)
+# Current price 2096.72 is 2.16% above entry - far from take-profit
+# Trade 4 (ETH @ 2021.51): Take-profit would be at 2223.66 (10% above entry)
+# Current price 2096.72 is 3.72% above entry - far from take-profit
+# Trade 5 (BTC @ 67247.51): Take-profit would be at 73972.26 (10% above entry)
+# Current price 67750.0 is 0.75% above entry - far from take-profit
+
+## CONCERNING OBSERVATIONS
+1. ⚠️ CRITICAL DRAWDOWN: Current drawdown (55.32%) exceeds 5% critical threshold by 50.32%
+2. P&L WORSENING: Losses increased by $0.19 since last check (4 minutes ago)
+3. Capital stable at $111.71 (no change)
+4. 10 open short positions continue to show unrealized losses
+5. No new trades in last 10+ hours
+6. Overall return: -3.05% from initial $250 capital
+7. Market signal is BUY but positions are mixed (some profitable, some losing)
+8. ⚠️ STOP-LOSS TRIGGERED: Trade 1 (ETH @ 2325.28) is at -9.83%, exceeding 5% stop-loss
+9. ⚠️ STOP-LOSS APPROACHING: Trade 2 (ETH @ 2193.6) is at -4.42%, close to 5% stop-loss
+10. Stop-loss NOT triggered overall: Current P&L (-$7.64) is below 5% threshold ($12.50)
+
+## RECOMMENDATIONS
+1. ⚠️ CRITICAL DRAWDOWN: Exceeds 5% threshold by 50.32% - immediate review required
+2. ⚠️ INDIVIDUAL STOP-LOSS TRIGGERED: Trade 1 (ETH @ 2325.28) at -9.83% exceeds 5% stop-loss
+3. ⚠️ INDIVIDUAL STOP-LOSS APPROACHING: Trade 2 (ETH @ 2193.6) at -4.42% close to 5% stop-loss
+4. P&L worsening trend: Losses increased by $0.19 since last check
+5. Close losing positions (Trade 1 & 2) to prevent further losses
+6. Review risk parameters - current 5% stop-loss may be too tight for current volatility
+7. Consider pausing new trades until positions are reviewed
+8. Evaluate if market conditions warrant strategy adjustment
+9. Monitor closely - P&L showed worsening trend
 
 ## END OF LOG
 
-# TRADING MONITORING LOG
-# Timestamp: 2026-03-31T16:14:24.867060 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:14 PM (+07)
+--- Raw Fetch (2026-04-01T01:57:57+0700) ---
+{"analysis_scheduled":"hourly","capital":111.71,"last_analysis":"2026-04-01T01:19:36.489915","pnl":{"binance":{"open_positions":10,"realized":0.0,"total":-7.635098816647472,"trades":10,"unrealized":-7.635098816647472},"gemini":{"open_positions":0,"realized":0.0,"total":0.0,"trades":0,"unrealized":0.0},"total":{"open_positions":10,"realized":0.0,"total":-7.635098816647472,"unrealized":-7.635098816647472}},"port":5001,"risk_parameters":{"max_trades_per_day":999,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-04-01T01:57:31.035649","trading_pairs":["BTC/USD","ETH/USD","SOL/USD","ADA/USD","XRP/USD","DOT/USD","DOGE/USD","AVAX/USD","MATIC/USD","LINK/USD"]}
 
-## SYSTEM STATUS
-STATUS=running
-CAPITAL=534.37
-LAST_ANALYSIS=2026-03-31T22:41:37.577735
-ANALYSIS_SCHEDULE=hourly
-PORT=5001
-
-## PERFORMANCE METRICS
-TOTAL_PNL=-3.6789823901668246
-TOTAL_PNL_USD=-$3.68
-OPEN_POSITIONS=8
-REALIZED_PNL=0.0
-UNREALIZED_PNL=-3.6789823901668246
-DRAWDOWN_PERCENT=0.69
-OVERALL_RETURN_PERCENT=113.75
-INITIAL_CAPITAL=250.0
-
-## EXCHANGE BREAKDOWN
-### BINANCE
-BINANCE_OPEN_POSITIONS=8
-BINANCE_REALIZED_PNL=0.0
-BINANCE_TOTAL_PNL=-3.6789823901668246
-BINANCE_TRADES=8
-BINANCE_UNREALIZED_PNL=-3.6789823901668246
-
-### GEMINI
-GEMINI_OPEN_POSITIONS=0
-GEMINI_REALIZED_PNL=0.0
-GEMINI_TOTAL_PNL=0.0
-GEMINI_TRADES=0
-GEMINI_UNREALIZED_PNL=0.0
-
-## RISK PARAMETERS
-STOP_LOSS_PERCENT=5.0
-TAKE_PROFIT_PERCENT=10.0
-MAX_TRADES_PER_DAY=999
-POSITION_SIZE_PERCENT=20.0
-
-## TRADING PAIRS
-TRADING_PAIRS_COUNT=10
-TRADING_PAIRS=BTC/USD,ETH/USD,SOL/USD,ADA/USD,XRP/USD,DOT/USD,DOGE/USD,AVAX/USD,MATIC/USD,LINK/USD
-
-## RECENT TRADES (LAST 5)
-TRADE_COUNT=5
-TRADE_1_TIME=13:39:49
-TRADE_1_SYMBOL=ETH/USD
-TRADE_1_SIDE=BUY
-TRADE_1_PRICE=2325.28
-TRADE_1_QUANTITY=0.086
-TRADE_1_REASON=Near support level: $2308.08 (current: $2325.28)
-
-TRADE_2_TIME=00:33:02
-TRADE_2_SYMBOL=ETH/USD
-TRADE_2_SIDE=BUY
-TRADE_2_PRICE=2193.6
-TRADE_2_QUANTITY=0.0912
-TRADE_2_REASON=Near support level: $2167.99 (current: $2193.60)
-
-TRADE_3_TIME=21:29:41
-TRADE_3_SYMBOL=BTC/USD
-TRADE_3_SIDE=BUY
-TRADE_3_PRICE=67247.51
-TRADE_3_QUANTITY=0.002974
-TRADE_3_REASON=Near support level: $67110.20 (current: $67247.51)
-
-TRADE_4_TIME=21:29:42
-TRADE_4_SYMBOL=ETH/USD
-TRADE_4_SIDE=BUY
-TRADE_4_PRICE=2052.38
-TRADE_4_QUANTITY=0.0974
-TRADE_4_REASON=Near support level: $2033.94 (current: $2052.38)
-
-TRADE_5_TIME=07:24:00
-TRADE_5_SYMBOL=ETH/USD
-TRADE_5_SIDE=BUY
-TRADE_5_PRICE=2021.51
-TRADE_5_QUANTITY=0.2474
-TRADE_5_REASON=Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
-
-## POSITION CONCENTRATION
-ETH_CONCENTRATION_PERCENT=80.0
-BTC_CONCENTRATION_PERCENT=20.0
-
-## TREND ANALYSIS (SINCE LAST CHECK)
-PNL_CHANGE=-$0.82 (-28.5% deterioration)
-CAPITAL_CHANGE=-$0.09 (-0.02% decrease)
-DRAWDOWN_CHANGE=+0.15% (from 0.54% to 0.69%)
-PNL_TREND=DETERIORATION
-CAPITAL_TREND=SLIGHT_DECLINE
-
-## MARKET ANALYSIS
-BTC_PRICE=67095.50
-ETH_PRICE=2070.76
-MARKET_SENTIMENT=NEUTRAL
-TRADING_SIGNAL=BUY
-
-## RISK ASSESSMENT
-STOP_LOSS_THRESHOLD=26.72 (5% of capital)
-CURRENT_PNL_VS_STOP_LOSS=13.8% of threshold
-TAKE_PROFIT_THRESHOLD=53.44 (10% of capital)
-CURRENT_PNL_VS_TAKE_PROFIT=6.9% of threshold
-CRITICAL_DRAWDOWN_THRESHOLD=5.0%
-CURRENT_DRAWDOWN=0.69% (SAFE)
-
-## ALERT STATUS
-STOP_LOSS_TRIGGERED=NO
-TAKE_PROFIT_TRIGGERED=NO
-CRITICAL_DRAWDOWN=NO
-SYSTEM_OPERATIONAL=YES
-
-## END OF LOGTue Mar 31 23:18:11 +07 2026: Raw data fetched.
-{"analysis_scheduled":"hourly","capital":533.62,"last_analysis":"2026-03-31T22:41:37.577735","pnl":{"binance":{"open_positions":8,"realized":0.0,"total":-4.203900174533732,"trades":8,"unrealized":-4.203900174533732},"gemini":{"open_positions":0,"realized":0.0,"total":0.0,"trades":0,"unrealized":0.0},"total":{"open_positions":8,"realized":0.0,"total":-4.203900174533732,"unrealized":-4.203900174533732}},"port":5001,"risk_parameters":{"max_trades_per_day":999,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-31T23:18:06.223216","trading_pairs":["BTC/USD","ETH/USD","SOL/USD","ADA/USD","XRP/USD","DOT/USD","DOGE/USD","AVAX/USD","MATIC/USD","LINK/USD"]}
---------------------
-# TRADING MONITORING LOG
-# Timestamp: 2026-03-31T16:19:06.369285 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:19 PM (+07)
-
-## SYSTEM STATUS
-STATUS=running
-CAPITAL=533.77
-LAST_ANALYSIS=2026-03-31T23:19:19.263354
-ANALYSIS_SCHEDULE=hourly
-PORT=5001
-
-## PERFORMANCE METRICS
-TOTAL_PNL=-4.1270554291505155
-TOTAL_PNL_USD=-$4.13
-OPEN_POSITIONS=8
-REALIZED_PNL=0.0
-UNREALIZED_PNL=-4.1270554291505155
-DRAWDOWN_PERCENT=0.77
-OVERALL_RETURN_PERCENT=113.51
-INITIAL_CAPITAL=250.0
-
-## EXCHANGE BREAKDOWN
-### BINANCE
-BINANCE_OPEN_POSITIONS=8
-BINANCE_REALIZED_PNL=0.0
-BINANCE_TOTAL_PNL=-4.1270554291505155
-BINANCE_TRADES=8
-BINANCE_UNREALIZED_PNL=-4.1270554291505155
-
-### GEMINI
-GEMINI_OPEN_POSITIONS=0
-GEMINI_REALIZED_PNL=0.0
-GEMINI_TOTAL_PNL=0.0
-GEMINI_TRADES=0
-GEMINI_UNREALIZED_PNL=0.0
-
-## RISK PARAMETERS
-STOP_LOSS_PERCENT=5.0
-TAKE_PROFIT_PERCENT=10.0
-MAX_TRADES_PER_DAY=999
-POSITION_SIZE_PERCENT=20.0
-
-## TRADING PAIRS
-TRADING_PAIRS_COUNT=10
-TRADING_PAIRS=BTC/USD,ETH/USD,SOL/USD,ADA/USD,XRP/USD,DOT/USD,DOGE/USD,AVAX/USD,MATIC/USD,LINK/USD
-
-## RECENT TRADES (LAST 5)
-TRADE_COUNT=5
-TRADE_1_TIME=13:39:49
-TRADE_1_SYMBOL=ETH/USD
-TRADE_1_SIDE=BUY
-TRADE_1_PRICE=2325.28
-TRADE_1_QUANTITY=0.086
-TRADE_1_REASON=Near support level: $2308.08 (current: $2325.28)
-
-TRADE_2_TIME=00:33:02
-TRADE_2_SYMBOL=ETH/USD
-TRADE_2_SIDE=BUY
-TRADE_2_PRICE=2193.6
-TRADE_2_QUANTITY=0.0912
-TRADE_2_REASON=Near support level: $2167.99 (current: $2193.60)
-
-TRADE_3_TIME=21:29:41
-TRADE_3_SYMBOL=BTC/USD
-TRADE_3_SIDE=BUY
-TRADE_3_PRICE=67247.51
-TRADE_3_QUANTITY=0.002974
-TRADE_3_REASON=Near support level: $67110.20 (current: $67247.51)
-
-TRADE_4_TIME=21:29:42
-TRADE_4_SYMBOL=ETH/USD
-TRADE_4_SIDE=BUY
-TRADE_4_PRICE=2052.38
-TRADE_4_QUANTITY=0.0974
-TRADE_4_REASON=Near support level: $2033.94 (current: $2052.38)
-
-TRADE_5_TIME=07:24:00
-TRADE_5_SYMBOL=ETH/USD
-TRADE_5_SIDE=BUY
-TRADE_5_PRICE=2021.51
-TRADE_5_QUANTITY=0.2474
-TRADE_5_REASON=Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
-
-## POSITION CONCENTRATION
-ETH_CONCENTRATION_PERCENT=80.0
-BTC_CONCENTRATION_PERCENT=20.0
-
-## TREND ANALYSIS (SINCE LAST CHECK)
-PNL_CHANGE=-$0.45 (-12.2% deterioration)
-CAPITAL_CHANGE=-$0.60 (-0.11% decrease)
-DRAWDOWN_CHANGE=+0.08% (from 0.69% to 0.77%)
-PNL_TREND=CONTINUED_DETERIORATION
-CAPITAL_TREND=CONTINUED_DECLINE
-
-## MARKET ANALYSIS
-BTC_PRICE=66953.13
-ETH_PRICE=2063.42
-MARKET_SENTIMENT=NEUTRAL
-TRADING_SIGNAL=BUY
-
-## RISK ASSESSMENT
-STOP_LOSS_THRESHOLD=26.69 (5% of capital)
-CURRENT_PNL_VS_STOP_LOSS=15.5% of threshold
-TAKE_PROFIT_THRESHOLD=53.38 (10% of capital)
-CURRENT_PNL_VS_TAKE_PROFIT=7.7% of threshold (negative)
-CRITICAL_DRAWDOWN_THRESHOLD=5.0%
-CURRENT_DRAWDOWN=0.77% (SAFE)
-
-## ALERT STATUS
-STOP_LOSS_TRIGGERED=NO
-TAKE_PROFIT_TRIGGERED=NO
-CRITICAL_DRAWDOWN=NO
-SYSTEM_OPERATIONAL=YES
-
-## END OF LOGTue Mar 31 23:23:28 +0700 2026: Raw data fetched.
-{"analysis_scheduled":"hourly","capital":533.77,"last_analysis":"2026-03-31T23:19:19.263354","pnl":{"binance":{"open_positions":8,"realized":0.0,"total":-4.1270554291505155,"trades":8,"unrealized":-4.1270554291505155},"gemini":{"open_positions":0,"realized":0.0,"total":0.0,"trades":0,"unrealized":0.0},"total":{"open_positions":8,"realized":0.0,"total":-4.1270554291505155,"unrealized":-4.1270554291505155}},"port":5001,"risk_parameters":{"max_trades_per_day":999,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-03-31T23:20:06.369285","trading_pairs":["BTC/USD","ETH/USD","SOL/USD","ADA/USD","XRP/USD","DOT/USD","DOGE/USD","AVAX/USD","MATIC/USD","LINK/USD"]}
---------------------
---- Raw Fetch (2026-04-01T00:54:40.845233) ---
-{"analysis_scheduled":"hourly","capital":592.61,"last_analysis":"2026-04-01T00:39:34.670635","pnl":{"binance":{"open_positions":10,"realized":0.0,"total":-6.403073981400103,"trades":10,"unrealized":-6.403073981400103},"gemini":{"open_positions":0,"realized":0.0,"total":0.0,"trades":0,"unrealized":0.0},"total":{"open_positions":10,"realized":0.0,"total":-6.403073981400103,"unrealized":-6.403073981400103}},"port":5001,"risk_parameters":{"max_trades_per_day":999,"stop_loss":0.05,"take_profit":0.1},"status":"running","timestamp":"2026-04-01T00:54:34.854184","trading_pairs":["BTC/USD","ETH/USD","SOL/USD","ADA/USD","XRP/USD","DOT/USD","DOGE/USD","AVAX/USD","MATIC/USD","LINK/USD"]}
-
+=== Trading Dashboard Monitor - Wed Apr  1 01:57:57 +07 2026 ===
+Timestamp: 2026-04-01T01:57:57+0700
+Capital: 111.71
+Total P&L: -7.64 (unrealized)
+Drawdown: 55.32% (EXCEEDS 5% critical threshold by 50.32%)
+Open Positions: 10 (all Binance shorts)
+Risk Parameters: Stop-loss 5%, Take-profit 10%
+Recent Trades: 5 trades recorded (4 ETH/USD, 1 BTC/USD)
+Status: System running, analysis scheduled hourly
+Last Analysis: 2026-04-01T01:19:36.489915
+⚠️ CRITICAL: Drawdown (55.32%) exceeds 5% critical threshold by 50.32%
+⚠️ STOP-LOSS TRIGGERED: Trade 1 (ETH @ 2325.28) at -9.83% exceeds 5% stop-loss
+⚠️ STOP-LOSS APPROACHING: Trade 2 (ETH @ 2193.6) at -4.42% close to 5% stop-loss
+⚠️ WARNING: P&L worsening trend - losses increased by $0.19 since last check
+✅ Overall stop-loss NOT triggered: Current P&L (-$7.64) below 5% threshold ($12.50)
+=== End of Monitor Entry ===

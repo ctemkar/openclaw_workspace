@@ -1,0 +1,11 @@
+{
+  "gemini_total": 531.65,
+  "binance_total": 154.02,
+  "total_capital": 685.67,
+  "deployed": 265.825,
+  "available_gemini": 265.825,
+  "available_binance": 154.02,
+  "position_count": 5,
+  "avg_position_value": 53.165,
+  "last_updated": "2026-04-01T01:22:49.705678"
+}

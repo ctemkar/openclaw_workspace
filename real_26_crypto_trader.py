@@ -41,15 +41,15 @@ GEMINI_CRYPTOS = [
     'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI'
 ]
 
-# Trading parameters - IMPROVED BASED ON BACKTESTING
-# OLD: SHORT_THRESHOLD = 0.3 (caught noise, lost money)
-# NEW: SHORT_THRESHOLD = 3.0 (catches real trends)
+# Trading parameters - ADJUSTED TO 1.0% THRESHOLDS
+# OLD: SHORT_THRESHOLD = 3.0 (too high, no trades)
+# NEW: SHORT_THRESHOLD = 1.0 (balanced approach)
 GEMINI_CAPITAL = 134.27  # Gemini cash balance
 BINANCE_CAPITAL = 134.27 # Binance Futures capital
 LEVERAGE = 1             # REDUCED from 3x to 1x (SAFER)
 POSITION_SIZE = 0.10     # REDUCED from 25% to 10% of capital (BETTER RISK)
-LONG_THRESHOLD = 3.0     # INCREASED from 2.0% to 3.0% (REAL DIPS)
-SHORT_THRESHOLD = 3.0    # INCREASED from 0.3% to 3.0% (REAL MOVES)
+LONG_THRESHOLD = 1.0     # ADJUSTED from 3.0% to 1.0% (BALANCED)
+SHORT_THRESHOLD = 1.0    # ADJUSTED from 3.0% to 1.0% (BALANCED)
 STOP_LOSS = 0.03         # TIGHTER from 5% to 3% stop-loss
 TAKE_PROFIT = 0.05       # REDUCED from 10% to 5% take-profit
 SCAN_INTERVAL = 300      # INCREASED from 180 to 300 seconds (5 min)

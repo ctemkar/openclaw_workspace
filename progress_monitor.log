@@ -11659,3 +11659,60 @@ BOT: [OK] 1 BOT RUNNING: full_capital_bot.py
 Click to open Dashboard:
 http://127.0.0.1:5005
 
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_simple.py
+   Strategy: Gemini LONG (0.5% dips) - USING BINANCE PRICE DATA
+   Capital:  Gemini,  Binance
+   Status: Bought SOL at .27, scanning for more dips
+--- Progress Monitor: Wed Apr  1 01:10:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5006
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_simple.py
+   Strategy: Gemini LONG (0.5% dips) - USING BINANCE PRICE DATA
+   Capital:  Gemini,  Binance
+   Status: Bought SOL at .27, scanning for more dips
+--- Progress Monitor: Wed Apr  1 01:20:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 01:30:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Wed Apr  1 01:40:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 01:50:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 02:00:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+

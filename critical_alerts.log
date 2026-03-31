@@ -1,148 +1,147 @@
-# CRITICAL ALERTS LOG
-# Timestamp: 2026-03-31T16:12:11.823628 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:12 PM (+07)
+=== ONGOING CRITICAL DRAWDOWN ALERT - Wed Apr  1 01:49:33 +07 2026 ===
+Timestamp: 2026-04-01T01:49:33+0700
+⚠️ ⚠️ ⚠️ CRITICAL DRAWDOWN PERSISTS! ⚠️ ⚠️ ⚠️
 
-## ALERT STATUS
-CRITICAL_ALERTS_DETECTED=NO
-STOP_LOSS_TRIGGERS=0
-TAKE_PROFIT_TRIGGERS=0
-CRITICAL_DRAWDOWN_ALERTS=0
+ALERT DETAILS:
+- Current Capital: $111.71
+- Current P&L: -$7.79 (unrealized)
+- 5% Stop-loss Threshold: $12.50
+- P&L vs Threshold: 62.3% (BELOW threshold - stop-loss NOT triggered)
+- Drawdown: 55.32% (EXCEEDS 5% CRITICAL THRESHOLD by 50.32%)
+- Open Positions: 10 (all Binance shorts)
+- Initial Capital: $250.00
+- Overall Return: -3.12%
 
-## RISK THRESHOLD ANALYSIS
-STOP_LOSS_THRESHOLD_PERCENT=5.0
-STOP_LOSS_THRESHOLD_AMOUNT=26.72
-CURRENT_PNL_PERCENT_OF_STOP_LOSS=10.7
-TAKE_PROFIT_THRESHOLD_PERCENT=10.0
-TAKE_PROFIT_THRESHOLD_AMOUNT=53.45
-CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
-CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
-CURRENT_DRAWDOWN_PERCENT=0.54
-DRAWDOWN_SAFETY_MARGIN_PERCENT=4.46
+SYSTEM STATUS:
+- Trading System: Running
+- Last Analysis: 2026-04-01T01:19:36.489915
+- Analysis Schedule: Hourly
+- Trading Pairs: 10 pairs (BTC/USD, ETH/USD, etc.)
+- Market Signal: BUY (contradiction with losing positions)
 
-## PERFORMANCE TRENDS
-PNL_IMPROVEMENT_SINCE_LAST_CHECK=+$0.83 (+22.5%)
-CAPITAL_INCREASE_SINCE_LAST_CHECK=+$0.59 (+0.11%)
-DRAWDOWN_DECREASE_SINCE_LAST_CHECK=-0.01%
-TREND_DIRECTION=POSITIVE_IMPROVEMENT
+TREND ANALYSIS:
+- Capital: Stable at $111.71 (no change from last check)
+- P&L: Worsened by $0.54 since last check (from -$7.25 to -$7.79)
+- Drawdown: Stable at 55.32% (remains critically high)
+- No new trades in last 10+ hours
+- P&L trend: WORSENING (losses increased)
 
-## WATCH ITEMS (NON-CRITICAL)
-WATCH_ITEM_1=8 open short positions exposed to market volatility
-WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
-WATCH_ITEM_3=Unrealized losses still present (-$2.86)
-WATCH_ITEM_4=No new trades in last 10+ hours
+KEY OBSERVATIONS:
+1. ⚠️ CRITICAL DRAWDOWN PERSISTS: 55.32% exceeds 5% threshold by 50.32%
+2. Stop-loss NOT triggered: Current P&L (-$7.79) below 5% threshold ($12.50)
+3. P&L worsening: Losses increased by $0.54 since last check
+4. System appears "stuck": No new trades in 10+ hours despite market BUY signal
+5. Capital stable: No change in capital, suggesting no position adjustments
 
-## SYSTEM STATUS CHECK
-SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
-IMMEDIATE_INTERVENTION_REQUIRED=NO
-CONTINUE_NORMAL_MONITORING=YES
-PERFORMANCE_TREND=IMPROVING
+IMMEDIATE CONCERNS:
+1. System shows contradictory signals: Market says BUY but positions are losing
+2. No corrective action taken despite persistent critical drawdown
+3. P&L continues to worsen (trend negative)
+4. Heavy concentration in crypto shorts (10 positions, mostly ETH/BTC)
+5. No position management evident (capital unchanged)
 
-## END OF LOG - NO CRITICAL ALERTS DETECTED
+RECOMMENDED ACTIONS:
+1. ⚠️ REVIEW TRADING STRATEGY: Contradiction between market signal (BUY) and position performance (losing)
+2. CONSIDER POSITION REDUCTION: Close 50-70% of open positions to reduce exposure
+3. PAUSE NEW TRADES: Until strategy contradiction is resolved
+4. ADJUST RISK PARAMETERS: Consider increasing stop-loss to 7-8% if continuing to trade
+5. MANUAL INTERVENTION: May be required if automated system is "stuck"
+6. MONITOR CLOSELY: Hourly monitoring continues to show deterioration
 
-# CRITICAL ALERTS LOG
-# Timestamp: 2026-03-31T16:14:24.867060 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:14 PM (+07)
+SYSTEM HEALTH CHECK:
+- ✅ API Connectivity: Working (dashboard accessible)
+- ✅ System Status: Running
+- ✅ Analysis Schedule: Hourly (next analysis due soon)
+- ⚠️ Position Management: Appears inactive (no changes in 10+ hours)
+- ⚠️ Risk Controls: Stop-loss not triggered but drawdown critical
+- ⚠️ Strategy Alignment: Contradiction detected
 
-## ALERT STATUS
-CRITICAL_ALERTS_DETECTED=NO
-STOP_LOSS_TRIGGERS=0
-TAKE_PROFIT_TRIGGERS=0
-CRITICAL_DRAWDOWN_ALERTS=0
+NEXT STEPS:
+1. Acknowledge this persistent critical condition
+2. Decide on manual intervention vs. automated adjustment
+3. Review trading logic for the contradiction
+4. Consider temporary system pause if losses continue
+5. Document any strategy adjustments made
 
-## RISK THRESHOLD ANALYSIS
-STOP_LOSS_THRESHOLD_PERCENT=5.0
-STOP_LOSS_THRESHOLD_AMOUNT=26.72
-CURRENT_PNL_PERCENT_OF_STOP_LOSS=13.8
-TAKE_PROFIT_THRESHOLD_PERCENT=10.0
-TAKE_PROFIT_THRESHOLD_AMOUNT=53.44
-CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
-CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
-CURRENT_DRAWDOWN_PERCENT=0.69
-DRAWDOWN_SAFETY_MARGIN_PERCENT=4.31
+WARNING: The system shows signs of being in a "holding pattern" with worsening losses. Without intervention, this critical drawdown may persist or worsen further.
 
-## PERFORMANCE TRENDS (SINCE LAST CHECK)
-PNL_CHANGE=-$0.82 (-28.5% deterioration)
-CAPITAL_CHANGE=-$0.09 (-0.02% decrease)
-DRAWDOWN_CHANGE=+0.15% (worsening)
-TREND_DIRECTION=NEGATIVE_DETERIORATION
+=== End of Critical Alert ===
 
-## WATCH ITEMS (NON-CRITICAL BUT WORSENING)
-WATCH_ITEM_1=8 open short positions exposed to market volatility
-WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
-WATCH_ITEM_3=Unrealized losses increased to -$3.68
-WATCH_ITEM_4=No new trades in last 10+ hours
-WATCH_ITEM_5=PNL deterioration trend observed (-28.5% since last check)
-WATCH_ITEM_6=Drawdown increased to 0.69% (still safe but worsening)
+=== CRITICAL DRAWDOWN UPDATE - IMPROVEMENT DETECTED - Wed Apr  1 01:53:45 +07 2026 ===
+Timestamp: 2026-04-01T01:53:45+0700
+⚠️ CRITICAL DRAWDOWN CONTINUES BUT SHOWS IMPROVEMENT ⚠️
 
-## SYSTEM STATUS CHECK
-SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
-IMMEDIATE_INTERVENTION_REQUIRED=NO
-CONTINUE_NORMAL_MONITORING=YES
-PERFORMANCE_TREND=DETERIORATING (monitor closely)
+ALERT DETAILS:
+- Current Capital: $111.71 (unchanged)
+- Current P&L: -$7.44 (unrealized) - IMPROVED by $0.35
+- 5% Stop-loss Threshold: $12.50
+- P&L vs Threshold: 59.5% (BELOW threshold - stop-loss NOT triggered)
+- Drawdown: 55.32% (EXCEEDS 5% CRITICAL THRESHOLD by 50.32%)
+- Open Positions: 10 (all Binance shorts)
+- Initial Capital: $250.00
+- Overall Return: -2.97% (improved from -3.12%)
 
-## ALERT THRESHOLD STATUS
-STOP_LOSS_TRIGGER_DISTANCE=86.2% remaining (safe)
-TAKE_PROFIT_TRIGGER_DISTANCE=100% remaining (no profit)
-CRITICAL_DRAWDOWN_DISTANCE=86.2% remaining (safe)
+SYSTEM STATUS:
+- Trading System: Running
+- Last Analysis: 2026-04-01T01:19:36.489915 (34 minutes ago)
+- Analysis Schedule: Hourly (next analysis due in ~26 minutes)
+- Trading Pairs: 10 pairs (BTC/USD, ETH/USD, etc.)
+- Market Signal: BUY
 
-## RECOMMENDATIONS
-1. Continue monitoring for continued deterioration
-2. Watch for PnL approaching 50% of stop-loss threshold ($13.36)
-3. Monitor capital stability
-4. No immediate action required but increased vigilance needed
+POSITION ANALYSIS (INDIVIDUAL):
+1. ETH/USD @ 2325.28: Current 2098.71 = -9.75% (BELOW 5% STOP-LOSS)
+2. ETH/USD @ 2193.6: Current 2098.71 = -4.33% (APPROACHING 5% STOP-LOSS)
+3. ETH/USD @ 2052.38: Current 2098.71 = +2.26% (PROFITABLE)
+4. ETH/USD @ 2021.51: Current 2098.71 = +3.82% (PROFITABLE)
+5. BTC/USD @ 67247.51: Current 67809.0 = +0.84% (SLIGHTLY PROFITABLE)
 
-## END OF LOG - NO CRITICAL ALERTS DETECTED BUT DETERIORATION TREND OBSERVED# CRITICAL ALERTS LOG
-# Timestamp: 2026-03-31T16:19:06.369285 (UTC)
-# Local Time: Tuesday, March 31, 2026 — 11:19 PM (+07)
+KEY FINDINGS:
+1. ⚠️ CRITICAL DRAWDOWN PERSISTS: 55.32% still exceeds 5% threshold by 50.32%
+2. POSITIVE DEVELOPMENT: P&L improved by $0.35 (losses decreased)
+3. MIXED POSITION PERFORMANCE: Some positions profitable, some losing
+4. ONE POSITION BELOW STOP-LOSS: ETH @ 2325.28 is at -9.75% (below 5% stop-loss)
+5. ANOTHER APPROACHING STOP-LOSS: ETH @ 2193.6 at -4.33% (close to 5% stop-loss)
 
-## ALERT STATUS
-CRITICAL_ALERTS_DETECTED=NO
-STOP_LOSS_TRIGGERS=0
-TAKE_PROFIT_TRIGGERS=0
-CRITICAL_DRAWDOWN_ALERTS=0
+IMMEDIATE CONCERNS:
+1. ⚠️ POSITION AT -9.75%: This exceeds the 5% stop-loss parameter - should have been closed
+2. System may not be monitoring individual position stop-losses
+3. Critical drawdown persists despite P&L improvement
+4. No position adjustments made (capital unchanged)
 
-## RISK THRESHOLD ANALYSIS
-STOP_LOSS_THRESHOLD_PERCENT=5.0
-STOP_LOSS_THRESHOLD_AMOUNT=26.69
-CURRENT_PNL_PERCENT_OF_STOP_LOSS=15.5
-TAKE_PROFIT_THRESHOLD_PERCENT=10.0
-TAKE_PROFIT_THRESHOLD_AMOUNT=53.38
-CURRENT_PNL_PERCENT_OF_TAKE_PROFIT=0.0
-CRITICAL_DRAWDOWN_THRESHOLD_PERCENT=5.0
-CURRENT_DRAWDOWN_PERCENT=0.77
-DRAWDOWN_SAFETY_MARGIN_PERCENT=4.23
+URGENT ACTIONS NEEDED:
+1. ⚠️ CLOSE LOSS-MAKING POSITION: ETH @ 2325.28 (-9.75%) exceeds stop-loss
+2. MONITOR ETH @ 2193.6 (-4.33%): Close if reaches -5%
+3. REVIEW STOP-LOSS LOGIC: System may not be checking individual positions
+4. CONSIDER PARTIAL PROFIT TAKING: On profitable positions (ETH @ 2052.38, 2021.51)
+5. ADJUST POSITION SIZING: Current 20% per trade may be too aggressive
 
-## PERFORMANCE TRENDS (SINCE LAST CHECK)
-PNL_CHANGE=-$0.45 (-12.2% deterioration)
-CAPITAL_CHANGE=-$0.60 (-0.11% decrease)
-DRAWDOWN_CHANGE=+0.08% (worsening)
-TREND_DIRECTION=NEGATIVE_DETERIORATION
+SYSTEM INTEGRITY CHECK:
+- ✅ API Connectivity: Working
+- ✅ System Status: Running
+- ⚠️ Stop-loss Enforcement: FAILING (position at -9.75% not closed)
+- ⚠️ Position Management: Inactive (no adjustments)
+- ⚠️ Risk Monitoring: Individual position stop-losses not enforced
+- ✅ Market Data: Current prices available (BTC: $67,809, ETH: $2,098.71)
 
-## WATCH ITEMS (NON-CRITICAL BUT WORSENING)
-WATCH_ITEM_1=8 open short positions exposed to market volatility
-WATCH_ITEM_2=Heavy concentration in ETH/USD (80% of recent trades)
-WATCH_ITEM_3=Unrealized losses increased to -$4.13
-WATCH_ITEM_4=No new trades in last 10+ hours
-WATCH_ITEM_5=PNL deterioration trend continues (-12.2% since last check)
-WATCH_ITEM_6=Drawdown increased to 0.77% (still safe but worsening)
-WATCH_ITEM_7=Capital showing continued decline trend
+CRITICAL WARNING:
+The system appears to have a stop-loss enforcement failure. A position at -9.75% should have been automatically closed at -5%. This indicates either:
+1. Stop-loss logic bug
+2. Position monitoring disabled
+3. API execution failure
+4. Risk parameter misconfiguration
 
-## SYSTEM STATUS CHECK
-SYSTEM_OPERATING_WITHIN_RISK_PARAMETERS=YES
-IMMEDIATE_INTERVENTION_REQUIRED=NO
-CONTINUE_NORMAL_MONITORING=YES
-PERFORMANCE_TREND=DETERIORATING (monitor closely)
+RECOMMENDED RESPONSE:
+1. IMMEDIATE: Manually close ETH position at 2325.28 (-9.75%)
+2. INVESTIGATE: Stop-loss enforcement failure
+3. PAUSE: All new trades until stop-loss logic verified
+4. AUDIT: All open positions against current market prices
+5. DOCUMENT: This stop-loss failure for system improvement
 
-## ALERT THRESHOLD STATUS
-STOP_LOSS_TRIGGER_DISTANCE=84.5% remaining (safe)
-TAKE_PROFIT_TRIGGER_DISTANCE=100% remaining (no profit)
-CRITICAL_DRAWDOWN_DISTANCE=84.6% remaining (safe)
+NEXT MONITORING:
+Scheduled for next hourly analysis (~26 minutes). Will check if:
+1. Stop-loss failure persists
+2. P&L continues to improve
+3. Any position adjustments made
+4. System addresses the critical drawdown
 
-## RECOMMENDATIONS
-1. Continue monitoring for continued deterioration
-2. Watch for PnL approaching 25% of stop-loss threshold ($6.67)
-3. Monitor capital stability - decline trend observed
-4. Consider reviewing trading strategy if deterioration continues
-5. No immediate action required but increased vigilance needed
-
-## END OF LOG - NO CRITICAL ALERTS DETECTED BUT DETERIORATION TREND CONTINUESTrading monitor check completed successfully at 2026-04-01T00:54:40.846114. No critical alerts.
+=== End of Critical Alert Update ===

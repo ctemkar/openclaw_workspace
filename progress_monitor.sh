@@ -10,8 +10,9 @@ echo "--- Progress Monitor: $(date) ---"
 
 if [ -f "$PORT_FILE" ]; then
     CURRENT_PORT=$(cat "$PORT_FILE")
-    echo "Click to open Dashboard:"
+    echo "Click to open REAL-TIME Dashboard:"
     echo "http://127.0.0.1:$CURRENT_PORT"
+    echo "(Auto-refreshes every 10 seconds)"
     echo ""
     
     if ! curl -s "http://127.0.0.1:$CURRENT_PORT" > /dev/null; then
@@ -27,10 +28,10 @@ fi
 BOTS_RUNNING=0
 BOT_LIST=""
 
-# Check for current fixed bot
-if ps aux | grep -v grep | grep "fixed_bot_simple.py" > /dev/null; then
+# Check for current common bot
+if ps aux | grep -v grep | grep "fixed_bot_common.py" > /dev/null; then
     BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST fixed_bot_simple.py"
+    BOT_LIST="$BOT_LIST fixed_bot_common.py"
 fi
 
 # Check for old bots (should not be running)
@@ -41,11 +42,11 @@ fi
 
 if [ $BOTS_RUNNING -eq 0 ]; then
     echo "BOT: [CRITICAL] NO TRADING BOTS RUNNING"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"fixed_bot_simple.py"* ]]; then
+elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"fixed_bot_common.py"* ]]; then
     echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
-    echo "   Strategy: Gemini LONG (0.5% dips) - USING BINANCE PRICE DATA"
+    echo "   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER"
     echo "   Capital: $531 Gemini, $154 Binance"
-    echo "   Status: Bought SOL at $82.27, scanning for more dips"
+    echo "   Status: Using single source of truth for all data"
 elif [[ "$BOT_LIST" == *"OLD_BOT_STILL_RUNNING"* ]]; then
     echo "BOT: [WARN] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
     echo "   Old bots still running - may conflict"
