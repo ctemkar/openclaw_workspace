@@ -1,80 +1,57 @@
-=== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 13:12:49 (Asia/Bangkok)
+🚨 CRITICAL TRADING ALERT 🚨
+Timestamp: 2026-03-31 13:56:50 (Asia/Bangkok)
+Alert ID: DRAWDOWN_CRITICAL_20260331_1356
 
-CRITICAL ALERTS (9):
-🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,057.76 (Entry: $2,325.28)
-⚠️ SIGNIFICANT DRAWDOWN: ETH/USD down 11.51% (Entry: $2,325.28, Current: $2,057.76)
-🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,057.76 (Entry: $2,193.60)
-⚠️ SIGNIFICANT DRAWDOWN: ETH/USD down 6.19% (Entry: $2,193.60, Current: $2,057.76)
-⚠️ HIGH CAPITAL UTILIZATION: $1,300.05 invested (740.67% of $175.53 capital) - CRITICAL
-⚠️ DAILY TRADE LIMIT VIOLATION: 5 trades vs 2 allowed
-🚨 CAPITAL REDUCTION ALERT: Capital decreased from $250.00 to $175.53 (-29.79%) - CRITICAL
-⚠️ EXTREME LEVERAGE RISK: 740.67% capital utilization indicates extreme leverage
-⚠️ POSITION CONCENTRATION: 80% ETH exposure creates high correlation risk
+=== ALERT DETAILS ===
+Severity: CRITICAL
+Type: Capital Drawdown Exceeded
+System: Conservative Crypto Trading System
+Dashboard: http://localhost:5001/
 
-PORTFOLIO STATUS:
-- Total Investment: $1,300.05
-- Total P&L: $-25.29 (-1.95%)
-- Current Portfolio Value: $1,274.76
-- Capital Utilization: 740.67% (EXTREME RISK - CRITICAL)
-- Portfolio Drawdown: -1.95%
-- Active Trades: 3
-- Stopped Trades: 2
+=== CURRENT METRICS ===
+• Initial Capital: $250.00
+• Current Capital: $175.53
+• Drawdown Percentage: 29.79% ⚠️
+• Total P&L: -$1.62 (unrealized)
+• Open Positions: 4 (all showing losses)
+• Positions at Risk: 4/4
 
-POSITION DETAILS:
-1. ETH/USD @ $2,325.28: -11.51% (STOP-LOSS TRIGGERED)
-   - Loss: $-23.00
-   - Stop-loss: $2,209.02 (5.0%)
-   - Current: $2,057.76
+=== RISK THRESHOLDS BREACHED ===
+1. Conservative trading systems typically limit drawdown to 10-15%
+2. Current drawdown (29.79%) exceeds safe operating parameters
+3. Multiple open positions with unrealized losses
+4. High concentration risk (all positions in Binance)
 
-2. ETH/USD @ $2,193.60: -6.19% (STOP-LOSS TRIGGERED)
-   - Loss: $-12.39
-   - Stop-loss: $2,083.92 (5.0%)
-   - Current: $2,057.76
+=== TRADING CONTEXT ===
+• Last analysis: 2026-03-31T13:37:42
+• Recent trades: 5 BUY positions (all based on support levels)
+• Market conditions: Neutral sentiment per last analysis
+• Stop-loss configured: 5-7% per position
+• Take-profit configured: 8-10% per position
 
-3. BTC/USD @ $67,247.51: +0.31% (ACTIVE)
-   - Gain: $+0.61
-   - Stop-loss: $63,885.13 (5.0%)
-   - Take-profit: $73,972.26 (10.0%)
-   - Current: $67,453.00
+=== IMMEDIATE ACTIONS RECOMMENDED ===
+1. 🛑 CONSIDER PAUSING NEW TRADES until drawdown is addressed
+2. 🔍 Review all open positions for stop-loss execution
+3. 📉 Consider partial exits on worst-performing positions
+4. ⚙️ Review and potentially adjust:
+   - Position sizing methodology
+   - Support level detection logic
+   - Risk management parameters
+5. 📊 Conduct thorough post-mortem analysis of drawdown causes
 
-4. ETH/USD @ $2,052.38: +0.26% (ACTIVE)
-   - Gain: $+0.52
-   - Stop-loss: $1,949.76 (5.0%)
-   - Take-profit: $2,257.62 (10.0%)
-   - Current: $2,057.76
+=== SYSTEM STATUS ===
+• Trading system: Running
+• Dashboard: Accessible
+• API connectivity: Presumed functional (no errors detected)
+• Schedule: Hourly analysis active
 
-5. ETH/USD @ $2,021.51: +1.79% (ACTIVE)
-   - Gain: $+8.97
-   - Stop-loss: $1,920.43 (5.0%)
-   - Take-profit: $2,223.66 (10.0%)
-   - Current: $2,057.76
+=== ALERT TRIGGER CRITERIA ===
+This alert was triggered because:
+1. Drawdown > 25% from initial capital
+2. Multiple open positions with losses
+3. High concentration in single exchange (Binance)
 
-RISK ANALYSIS:
-• Leverage Risk: EXTREME (740.67% utilization)
-• Concentration Risk: HIGH (80% ETH exposure)
-• Compliance Risk: HIGH (daily limit violation)
-• Capital Risk: HIGH (29.79% capital reduction)
-• Stop-loss Risk: MEDIUM (40% effectiveness)
-
-IMMEDIATE ACTIONS REQUIRED:
-1. CLOSE losing ETH positions ($2,325.28 and $2,193.60) to realize $-35.39 loss
-2. REDUCE position sizes to maximum 20% of capital ($35.11 per trade)
-3. PAUSE all new trading activity
-4. REBALANCE portfolio to maximum 50% ETH exposure
-5. REVIEW and ADJUST risk parameters
-
-SYSTEM STATUS:
-• Dashboard: http://localhost:5001/ - RUNNING
-• Last Analysis: 2026-03-31T13:04:54.962105
-• Next Analysis: ~30 minutes
-• Monitoring Active: YES
-
-ALERT SEVERITY: CRITICAL - IMMEDIATE ATTENTION REQUIRED
-======================================== CRITICAL TRADING ALERTS ===
-Time: 2026-03-31 13:19:29 (Asia/Bangkok)
-
-2026-03-31 13:19:29 - STOP-LOSS TRIGGERED: ETH/USD @ $2,325.28, Current: $2,057.38, Loss: -11.52%
-2026-03-31 13:19:29 - STOP-LOSS TRIGGERED: ETH/USD @ $2,193.60, Current: $2,057.38, Loss: -6.21%
-2026-03-31 13:19:29 - EXTREME CAPITAL UTILIZATION: 740.64% (Investment: $1,300.05, Capital: $175.53)
-
+=== FOLLOW-UP REQUIRED ===
+Manual intervention recommended within 24 hours.
+Next automated check: 14:37 local time.
+======================================================================

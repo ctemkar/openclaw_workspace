@@ -51,8 +51,11 @@ TRADING_CAPITAL = 50.00  # Conservative: trade only $50 of $134
 RISK_PER_TRADE = 0.01  # 1% risk per trade (safer)
 STOP_LOSS = 0.02  # 2% stop-loss (tighter)
 TAKE_PROFIT = 0.04  # 4% take-profit (more frequent)
-MAX_TRADES_PER_DAY = 5  # More opportunities
-SYMBOLS = ['BTC/USD', 'ETH/USD', 'SOL/USD']  # Add SOL for more opportunities
+MAX_TRADES_PER_DAY = 999  # No daily limit - trade as needed
+SYMBOLS = [
+    'BTC/USD', 'ETH/USD', 'SOL/USD', 'ADA/USD', 'XRP/USD',
+    'DOT/USD', 'DOGE/USD', 'AVAX/USD', 'MATIC/USD', 'LINK/USD'
+]  # 10+ trading pairs for more opportunities
 
 # State
 trades_today = 0
@@ -244,8 +247,8 @@ def main():
                 logger.info(f"🎯 Signal: {signal} ({confidence:.0%} confidence)")
                 logger.info(f"   Reason: {reason}")
                 
-                # Execute if good opportunity - MORE ACTIVE THRESHOLDS
-                if (signal == "BUY" and change < -1.0) or (signal == "SELL" and change > 2.5):
+                # Execute if good opportunity - VERY ACTIVE THRESHOLDS
+                if (signal == "BUY" and change < -0.5) or (signal == "SELL" and change > 1.5):
                     trade = execute_safe_trade(symbol, signal, price, confidence, reason)
                     if trade:
                         logger.info(f"💰 REAL TRADE COMPLETED!")

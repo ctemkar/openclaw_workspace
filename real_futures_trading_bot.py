@@ -25,19 +25,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Cryptocurrencies for futures trading (filtered to avoid errors)
+# Cryptocurrencies for futures trading - MORE ACTIVE PAIRS
 FUTURES_CRYPTOS = [
     "BTC", "ETH", "SOL", "ADA", "XRP", "DOT", "DOGE",
     "AVAX", "MATIC", "LINK", "UNI", "LTC", "ATOM", "ETC",
     "XLM", "ALGO", "VET", "FIL", "ICP", "XTZ", 
-    "AAVE", "MKR", "COMP", "SNX", "YFI"
+    "AAVE", "MKR", "COMP", "SNX", "YFI", "SAND", "MANA",
+    "GALA", "APE", "ENS", "IMX", "RUNE", "CRV", "1INCH"
 ]
 
-# Trading parameters - ACTIVE SHORTING
-SHORT_THRESHOLD = 0.5    # 0.5% drop for SHORT (more active)
+# Trading parameters - VERY ACTIVE SHORTING
+SHORT_THRESHOLD = 0.3    # 0.3% drop for SHORT (very active)
 RSI_OVERBOUGHT = 65      # RSI > 65 considered overbought
 SCAN_INTERVAL = 120      # 120 seconds (2 minutes)
-MAX_DAILY_TRADES = 3     # Max 3 trades per day (more opportunities)
+MAX_DAILY_TRADES = 999  # No daily limit - close positions as needed
 LEVERAGE = 2             # 2x leverage (conservative)
 POSITION_SIZE = 0.10     # 10% of capital per trade (smaller, more trades)
 STOP_LOSS = 0.02         # 2% stop-loss (tighter)

@@ -101,8 +101,11 @@ def get_real_capital():
         return 0.0
 
 def calculate_pnl():
-    """Calculate P&L for all exchanges with real-time prices"""
+    """Calculate P&L for all exchanges using position monitor"""
     try:
+        # Import position monitor functions
+        from position_monitor import load_open_positions, calculate_position_pnl
+        
         pnl_data = {
             "gemini": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
             "binance": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
@@ -113,79 +116,62 @@ def calculate_pnl():
         import ccxt
         binance = ccxt.binance()
         
+        # Load all positions
+        open_positions = load_open_positions()
+        
+        # Separate by exchange and calculate P&L
+        for position in open_positions:
+            exchange = position['exchange']
+            symbol = position['symbol']
+            
+            # Get current price
+            try:
+                ticker = binance.fetch_ticker(symbol)
+                current_price = ticker['last']
+                
+                # Calculate P&L
+                pnl_info = calculate_position_pnl(position, current_price)
+                
+                # Update exchange P&L data
+                if exchange == 'gemini':
+                    pnl_data["gemini"]["unrealized"] += pnl_info['pnl']
+                    pnl_data["gemini"]["open_positions"] += 1
+                elif exchange == 'binance_futures':
+                    pnl_data["binance"]["unrealized"] += pnl_info['pnl']
+                    pnl_data["binance"]["open_positions"] += 1
+                    
+            except Exception as e:
+                print(f"[{datetime.now()}] Error calculating P&L for {symbol}: {e}")
+        
+        # Count total trades (including closed ones)
         # Check Gemini trades
         gemini_trades_file = os.path.join(BASE_DIR, "real_trades_history.json")
         if os.path.exists(gemini_trades_file):
             with open(gemini_trades_file, 'r') as f:
                 trades = json.load(f)
-            
             pnl_data["gemini"]["trades"] = len(trades)
             
-            # Calculate Gemini P&L with current prices
+            # Calculate realized P&L for closed Gemini trades
             for trade in trades:
-                status = trade.get('status', 'open')
-                entry_price = trade.get('price', 0)
-                quantity = trade.get('quantity', 0)
-                symbol = trade.get('symbol', '')
-                
-                if status == 'closed':
-                    exit_price = trade.get('exit_price', entry_price * 1.02)  # Assume 2% profit if not specified
+                if trade.get('status') == 'closed':
+                    entry_price = trade.get('price', 0)
+                    exit_price = trade.get('exit_price', entry_price * 1.02)
+                    quantity = trade.get('quantity', 0)
                     pnl = (exit_price - entry_price) * quantity
                     pnl_data["gemini"]["realized"] += pnl
-                else:
-                    # Get current price for unrealized P&L
-                    try:
-                        if symbol:
-                            # Convert Gemini symbol to Binance format if needed
-                            if 'USD' in symbol:
-                                symbol_ccxt = symbol.replace('USD', 'USDT')
-                                ticker = binance.fetch_ticker(symbol_ccxt)
-                                current_price = ticker['last']
-                                
-                                # Calculate unrealized P&L
-                                pnl = (current_price - entry_price) * quantity
-                                pnl_data["gemini"]["unrealized"] += pnl
-                                pnl_data["gemini"]["open_positions"] += 1
-                    except:
-                        pass
         
         # Check Binance futures trades
         binance_trades_file = os.path.join(BASE_DIR, "executed_futures_trades.json")
         if os.path.exists(binance_trades_file):
             with open(binance_trades_file, 'r') as f:
                 trades = json.load(f)
+            pnl_data["binance"]["trades"] = len(trades)
             
-            # Calculate Binance futures P&L with current prices
+            # Calculate realized P&L for closed Binance trades
             for trade in trades:
-                pnl = trade.get('pnl', 0)
-                status = trade.get('status', 'OPEN')
-                entry_price = trade.get('entry_price', 0)
-                symbol = trade.get('symbol', '')
-                side = trade.get('side', 'sell')  # SHORT positions are 'sell'
-                
-                pnl_data["binance"]["trades"] += 1
-                
-                if status == 'CLOSED':
+                if trade.get('status') == 'CLOSED':
+                    pnl = trade.get('pnl', 0)
                     pnl_data["binance"]["realized"] += pnl
-                else:
-                    # Calculate unrealized P&L for open SHORT positions
-                    try:
-                        if symbol and entry_price > 0:
-                            ticker = binance.fetch_ticker(symbol)
-                            current_price = ticker['last']
-                            
-                            # For SHORT positions: profit when price goes down
-                            if side == 'sell':
-                                # SHORT: profit = (entry_price - current_price) * position_size
-                                # Simplified calculation
-                                price_change_pct = (entry_price - current_price) / entry_price
-                                position_value = trade.get('position_value', 10)  # Default $10
-                                unrealized_pnl = position_value * price_change_pct * 2  # 2x leverage
-                                
-                                pnl_data["binance"]["unrealized"] += unrealized_pnl
-                                pnl_data["binance"]["open_positions"] += 1
-                    except Exception as e:
-                        print(f"[{datetime.now()}] Error calculating Binance unrealized P&L: {e}")
         
         # Calculate totals
         pnl_data["gemini"]["total"] = pnl_data["gemini"]["realized"] + pnl_data["gemini"]["unrealized"]
@@ -263,9 +249,12 @@ def get_status():
         "risk_parameters": {
             "stop_loss": 0.05,
             "take_profit": 0.10,
-            "max_trades_per_day": 2
+            "max_trades_per_day": 999  # No limit  # Total: Gemini(4) + Binance(2) = 6
         },
-        "trading_pairs": ["BTC/USD", "ETH/USD"]
+        "trading_pairs": [
+            "BTC/USD", "ETH/USD", "SOL/USD", "ADA/USD", "XRP/USD",
+            "DOT/USD", "DOGE/USD", "AVAX/USD", "MATIC/USD", "LINK/USD"
+        ]
     }
     
     # Check if analysis is running

@@ -1,519 +1,321 @@
 [
   {
-    "timestamp": "2026-03-31T13:03:39.034436",
+    "timestamp": "2026-03-31T13:36:04.726781",
+    "exchange": "binance",
+    "pair": "FIL/USDT",
+    "signal": "SHORT",
+    "price": 0.83,
+    "change": -0.836,
+    "strength": 0.836
+  },
+  {
+    "timestamp": "2026-03-31T13:36:05.399650",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.6,
+    "change": -3.35,
+    "strength": 3.35
+  },
+  {
+    "timestamp": "2026-03-31T13:37:15.391365",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3254,
+    "change": -1.938,
+    "strength": 1.938
+  },
+  {
+    "timestamp": "2026-03-31T13:37:15.505936",
     "exchange": "binance",
     "pair": "DOT/USDT",
     "signal": "SHORT",
-    "price": 1.245,
-    "change": -1.659,
-    "strength": 1.659
+    "price": 1.24,
+    "change": -1.899,
+    "strength": 1.899
   },
   {
-    "timestamp": "2026-03-31T13:03:39.151640",
+    "timestamp": "2026-03-31T13:37:15.619740",
     "exchange": "binance",
     "pair": "DOGE/USDT",
     "signal": "SHORT",
     "price": 0.09128,
-    "change": -2.27,
-    "strength": 2.27
+    "change": -1.723,
+    "strength": 1.723
   },
   {
-    "timestamp": "2026-03-31T13:03:39.936993",
+    "timestamp": "2026-03-31T13:37:16.407824",
     "exchange": "binance",
     "pair": "ETC/USDT",
     "signal": "SHORT",
     "price": 8.13,
-    "change": -1.215,
-    "strength": 1.215
+    "change": -0.854,
+    "strength": 0.854
   },
   {
-    "timestamp": "2026-03-31T13:03:40.053469",
+    "timestamp": "2026-03-31T13:37:16.523151",
     "exchange": "binance",
     "pair": "XLM/USDT",
     "signal": "SHORT",
-    "price": 0.1677,
-    "change": -0.945,
-    "strength": 0.945
-  },
-  {
-    "timestamp": "2026-03-31T13:03:40.391889",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.659,
-    "strength": 1.659
-  },
-  {
-    "timestamp": "2026-03-31T13:03:41.065709",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.72,
-    "change": -2.957,
-    "strength": 2.957
-  },
-  {
-    "timestamp": "2026-03-31T13:04:50.483962",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2441,
-    "change": -1.374,
-    "strength": 1.374
-  },
-  {
-    "timestamp": "2026-03-31T13:04:50.594666",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3171,
-    "change": -2.833,
-    "strength": 2.833
-  },
-  {
-    "timestamp": "2026-03-31T13:04:50.703659",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.246,
-    "change": -1.735,
-    "strength": 1.735
-  },
-  {
-    "timestamp": "2026-03-31T13:04:50.815603",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09128,
-    "change": -2.28,
-    "strength": 2.28
-  },
-  {
-    "timestamp": "2026-03-31T13:04:51.601454",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.215,
-    "strength": 1.215
-  },
-  {
-    "timestamp": "2026-03-31T13:04:51.718481",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
-    "change": -1.063,
-    "strength": 1.063
-  },
-  {
-    "timestamp": "2026-03-31T13:04:52.060879",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -2.123,
-    "strength": 2.123
-  },
-  {
-    "timestamp": "2026-03-31T13:04:52.749022",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.69,
-    "change": -3.068,
-    "strength": 3.068
-  },
-  {
-    "timestamp": "2026-03-31T13:06:02.230912",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2442,
-    "change": -1.333,
-    "strength": 1.333
-  },
-  {
-    "timestamp": "2026-03-31T13:06:02.340041",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3168,
-    "change": -2.862,
-    "strength": 2.862
-  },
-  {
-    "timestamp": "2026-03-31T13:06:02.450411",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.247,
-    "change": -1.423,
-    "strength": 1.423
-  },
-  {
-    "timestamp": "2026-03-31T13:06:02.561913",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.0912,
-    "change": -2.324,
-    "strength": 2.324
-  },
-  {
-    "timestamp": "2026-03-31T13:06:03.515066",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.215,
-    "strength": 1.215
-  },
-  {
-    "timestamp": "2026-03-31T13:06:03.625133",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
-    "change": -0.946,
-    "strength": 0.946
-  },
-  {
-    "timestamp": "2026-03-31T13:06:03.993625",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.891,
-    "strength": 1.891
-  },
-  {
-    "timestamp": "2026-03-31T13:06:04.649208",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.72,
-    "change": -2.904,
-    "strength": 2.904
-  },
-  {
-    "timestamp": "2026-03-31T13:07:14.552395",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2442,
-    "change": -1.214,
-    "strength": 1.214
-  },
-  {
-    "timestamp": "2026-03-31T13:07:14.666000",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3211,
-    "change": -2.523,
-    "strength": 2.523
-  },
-  {
-    "timestamp": "2026-03-31T13:07:14.778414",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.246,
-    "change": -1.502,
-    "strength": 1.502
-  },
-  {
-    "timestamp": "2026-03-31T13:07:14.889273",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09124,
-    "change": -2.281,
-    "strength": 2.281
-  },
-  {
-    "timestamp": "2026-03-31T13:07:15.674141",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.095,
-    "strength": 1.095
-  },
-  {
-    "timestamp": "2026-03-31T13:07:15.787276",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1676,
-    "change": -0.887,
-    "strength": 0.887
-  },
-  {
-    "timestamp": "2026-03-31T13:07:16.114099",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.775,
-    "strength": 1.775
-  },
-  {
-    "timestamp": "2026-03-31T13:07:16.783291",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.72,
-    "change": -2.904,
-    "strength": 2.904
-  },
-  {
-    "timestamp": "2026-03-31T13:08:26.372511",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2442,
-    "change": -1.134,
-    "strength": 1.134
-  },
-  {
-    "timestamp": "2026-03-31T13:08:26.492059",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.321,
-    "change": -2.516,
-    "strength": 2.516
-  },
-  {
-    "timestamp": "2026-03-31T13:08:26.605613",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.246,
-    "change": -1.58,
-    "strength": 1.58
-  },
-  {
-    "timestamp": "2026-03-31T13:08:26.723076",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09126,
-    "change": -2.207,
-    "strength": 2.207
-  },
-  {
-    "timestamp": "2026-03-31T13:08:27.512060",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.095,
-    "strength": 1.095
-  },
-  {
-    "timestamp": "2026-03-31T13:08:27.626696",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1676,
-    "change": -0.887,
-    "strength": 0.887
-  },
-  {
-    "timestamp": "2026-03-31T13:08:28.153076",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.542,
-    "strength": 1.542
-  },
-  {
-    "timestamp": "2026-03-31T13:08:28.834779",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.72,
-    "change": -2.904,
-    "strength": 2.904
-  },
-  {
-    "timestamp": "2026-03-31T13:09:38.584916",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2443,
-    "change": -1.053,
-    "strength": 1.053
-  },
-  {
-    "timestamp": "2026-03-31T13:09:38.702705",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3212,
-    "change": -2.487,
-    "strength": 2.487
-  },
-  {
-    "timestamp": "2026-03-31T13:09:38.819692",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.246,
-    "change": -1.424,
-    "strength": 1.424
-  },
-  {
-    "timestamp": "2026-03-31T13:09:38.942905",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09124,
-    "change": -2.124,
-    "strength": 2.124
-  },
-  {
-    "timestamp": "2026-03-31T13:09:39.723445",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.095,
-    "strength": 1.095
-  },
-  {
-    "timestamp": "2026-03-31T13:09:39.887204",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
-    "change": -0.888,
-    "strength": 0.888
-  },
-  {
-    "timestamp": "2026-03-31T13:09:40.414807",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.542,
-    "strength": 1.542
-  },
-  {
-    "timestamp": "2026-03-31T13:09:41.094179",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.68,
-    "change": -3.123,
-    "strength": 3.123
-  },
-  {
-    "timestamp": "2026-03-31T13:10:51.103781",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2444,
-    "change": -0.972,
-    "strength": 0.972
-  },
-  {
-    "timestamp": "2026-03-31T13:10:51.220105",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3211,
-    "change": -2.394,
-    "strength": 2.394
-  },
-  {
-    "timestamp": "2026-03-31T13:10:51.333486",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.245,
-    "change": -1.503,
-    "strength": 1.503
-  },
-  {
-    "timestamp": "2026-03-31T13:10:51.449214",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09121,
-    "change": -2.083,
-    "strength": 2.083
-  },
-  {
-    "timestamp": "2026-03-31T13:10:52.240729",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.095,
-    "strength": 1.095
-  },
-  {
-    "timestamp": "2026-03-31T13:10:52.357243",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
+    "price": 0.1674,
     "change": -0.829,
     "strength": 0.829
   },
   {
-    "timestamp": "2026-03-31T13:10:52.706076",
+    "timestamp": "2026-03-31T13:37:17.543350",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.62,
+    "change": -3.24,
+    "strength": 3.24
+  },
+  {
+    "timestamp": "2026-03-31T13:38:27.252078",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3257,
+    "change": -1.974,
+    "strength": 1.974
+  },
+  {
+    "timestamp": "2026-03-31T13:38:27.380353",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.24,
+    "change": -1.976,
+    "strength": 1.976
+  },
+  {
+    "timestamp": "2026-03-31T13:38:27.501540",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09133,
+    "change": -1.69,
+    "strength": 1.69
+  },
+  {
+    "timestamp": "2026-03-31T13:38:28.288637",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.13,
+    "change": -0.854,
+    "strength": 0.854
+  },
+  {
+    "timestamp": "2026-03-31T13:38:28.401580",
+    "exchange": "binance",
+    "pair": "XLM/USDT",
+    "signal": "SHORT",
+    "price": 0.1674,
+    "change": -0.829,
+    "strength": 0.829
+  },
+  {
+    "timestamp": "2026-03-31T13:38:28.925130",
     "exchange": "binance",
     "pair": "FIL/USDT",
     "signal": "SHORT",
     "price": 0.83,
-    "change": -1.542,
-    "strength": 1.542
+    "change": -0.836,
+    "strength": 0.836
   },
   {
-    "timestamp": "2026-03-31T13:10:53.774157",
+    "timestamp": "2026-03-31T13:38:29.606050",
     "exchange": "binance",
     "pair": "COMP/USDT",
     "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.964,
-    "strength": 2.964
+    "price": 17.62,
+    "change": -3.24,
+    "strength": 3.24
   },
   {
-    "timestamp": "2026-03-31T13:12:03.756532",
+    "timestamp": "2026-03-31T13:39:39.114938",
     "exchange": "binance",
     "pair": "XRP/USDT",
     "signal": "SHORT",
-    "price": 1.3219,
-    "change": -2.32,
-    "strength": 2.32
+    "price": 1.326,
+    "change": -1.894,
+    "strength": 1.894
   },
   {
-    "timestamp": "2026-03-31T13:12:03.868202",
+    "timestamp": "2026-03-31T13:39:39.229909",
     "exchange": "binance",
     "pair": "DOT/USDT",
     "signal": "SHORT",
-    "price": 1.246,
-    "change": -1.424,
-    "strength": 1.424
+    "price": 1.241,
+    "change": -1.82,
+    "strength": 1.82
   },
   {
-    "timestamp": "2026-03-31T13:12:03.983314",
+    "timestamp": "2026-03-31T13:39:39.339999",
     "exchange": "binance",
     "pair": "DOGE/USDT",
     "signal": "SHORT",
-    "price": 0.09124,
-    "change": -1.892,
-    "strength": 1.892
+    "price": 0.09132,
+    "change": -1.605,
+    "strength": 1.605
   },
   {
-    "timestamp": "2026-03-31T13:12:04.763028",
+    "timestamp": "2026-03-31T13:39:40.125064",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.12,
+    "change": -0.976,
+    "strength": 0.976
+  },
+  {
+    "timestamp": "2026-03-31T13:39:40.240087",
+    "exchange": "binance",
+    "pair": "XLM/USDT",
+    "signal": "SHORT",
+    "price": 0.1673,
+    "change": -0.889,
+    "strength": 0.889
+  },
+  {
+    "timestamp": "2026-03-31T13:39:41.240343",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.6,
+    "change": -3.244,
+    "strength": 3.244
+  },
+  {
+    "timestamp": "2026-03-31T13:40:50.779114",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3279,
+    "change": -1.797,
+    "strength": 1.797
+  },
+  {
+    "timestamp": "2026-03-31T13:40:50.889839",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.243,
+    "change": -1.739,
+    "strength": 1.739
+  },
+  {
+    "timestamp": "2026-03-31T13:40:51.000106",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.0914,
+    "change": -1.551,
+    "strength": 1.551
+  },
+  {
+    "timestamp": "2026-03-31T13:40:51.772340",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.13,
+    "change": -0.854,
+    "strength": 0.854
+  },
+  {
+    "timestamp": "2026-03-31T13:40:52.894636",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.62,
+    "change": -3.134,
+    "strength": 3.134
+  },
+  {
+    "timestamp": "2026-03-31T13:42:02.587411",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3221,
+    "change": -2.175,
+    "strength": 2.175
+  },
+  {
+    "timestamp": "2026-03-31T13:42:02.701514",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.242,
+    "change": -1.818,
+    "strength": 1.818
+  },
+  {
+    "timestamp": "2026-03-31T13:42:02.817142",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09136,
+    "change": -1.531,
+    "strength": 1.531
+  },
+  {
+    "timestamp": "2026-03-31T13:42:03.605014",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.13,
+    "change": -0.854,
+    "strength": 0.854
+  },
+  {
+    "timestamp": "2026-03-31T13:42:03.718545",
+    "exchange": "binance",
+    "pair": "XLM/USDT",
+    "signal": "SHORT",
+    "price": 0.1674,
+    "change": -0.829,
+    "strength": 0.829
+  },
+  {
+    "timestamp": "2026-03-31T13:42:04.757920",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.65,
+    "change": -3.075,
+    "strength": 3.075
+  },
+  {
+    "timestamp": "2026-03-31T13:43:14.342459",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.322,
+    "change": -2.19,
+    "strength": 2.19
+  },
+  {
+    "timestamp": "2026-03-31T13:43:14.457654",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.243,
+    "change": -1.739,
+    "strength": 1.739
+  },
+  {
+    "timestamp": "2026-03-31T13:43:14.573039",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09136,
+    "change": -1.467,
+    "strength": 1.467
+  },
+  {
+    "timestamp": "2026-03-31T13:43:15.340286",
     "exchange": "binance",
     "pair": "ETC/USDT",
     "signal": "SHORT",
@@ -522,52 +324,52 @@
     "strength": 0.974
   },
   {
-    "timestamp": "2026-03-31T13:12:05.216942",
+    "timestamp": "2026-03-31T13:43:15.452227",
     "exchange": "binance",
-    "pair": "FIL/USDT",
+    "pair": "XLM/USDT",
     "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.425,
-    "strength": 1.425
+    "price": 0.1675,
+    "change": -0.829,
+    "strength": 0.829
   },
   {
-    "timestamp": "2026-03-31T13:12:05.908903",
+    "timestamp": "2026-03-31T13:43:16.444998",
     "exchange": "binance",
     "pair": "COMP/USDT",
     "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.964,
-    "strength": 2.964
+    "price": 17.65,
+    "change": -3.075,
+    "strength": 3.075
   },
   {
-    "timestamp": "2026-03-31T13:13:15.742117",
+    "timestamp": "2026-03-31T13:44:26.982413",
     "exchange": "binance",
     "pair": "XRP/USDT",
     "signal": "SHORT",
-    "price": 1.3213,
-    "change": -2.372,
-    "strength": 2.372
+    "price": 1.322,
+    "change": -2.226,
+    "strength": 2.226
   },
   {
-    "timestamp": "2026-03-31T13:13:15.852680",
+    "timestamp": "2026-03-31T13:44:27.097404",
     "exchange": "binance",
     "pair": "DOT/USDT",
     "signal": "SHORT",
-    "price": 1.245,
-    "change": -1.425,
-    "strength": 1.425
+    "price": 1.244,
+    "change": -1.738,
+    "strength": 1.738
   },
   {
-    "timestamp": "2026-03-31T13:13:15.963220",
+    "timestamp": "2026-03-31T13:44:27.213953",
     "exchange": "binance",
     "pair": "DOGE/USDT",
     "signal": "SHORT",
-    "price": 0.09122,
-    "change": -1.787,
-    "strength": 1.787
+    "price": 0.09139,
+    "change": -1.424,
+    "strength": 1.424
   },
   {
-    "timestamp": "2026-03-31T13:13:16.738283",
+    "timestamp": "2026-03-31T13:44:28.009701",
     "exchange": "binance",
     "pair": "ETC/USDT",
     "signal": "SHORT",
@@ -576,327 +378,525 @@
     "strength": 1.095
   },
   {
-    "timestamp": "2026-03-31T13:13:16.850439",
+    "timestamp": "2026-03-31T13:44:29.131926",
     "exchange": "binance",
-    "pair": "XLM/USDT",
+    "pair": "COMP/USDT",
     "signal": "SHORT",
-    "price": 0.1676,
+    "price": 17.65,
+    "change": -3.075,
+    "strength": 3.075
+  },
+  {
+    "timestamp": "2026-03-31T13:45:39.920939",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3227,
+    "change": -2.16,
+    "strength": 2.16
+  },
+  {
+    "timestamp": "2026-03-31T13:45:40.038627",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.245,
+    "change": -1.814,
+    "strength": 1.814
+  },
+  {
+    "timestamp": "2026-03-31T13:45:40.154312",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09143,
+    "change": -1.381,
+    "strength": 1.381
+  },
+  {
+    "timestamp": "2026-03-31T13:45:40.946957",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.14,
+    "change": -0.973,
+    "strength": 0.973
+  },
+  {
+    "timestamp": "2026-03-31T13:45:42.079815",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.65,
+    "change": -3.075,
+    "strength": 3.075
+  },
+  {
+    "timestamp": "2026-03-31T13:46:52.553375",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3228,
+    "change": -2.145,
+    "strength": 2.145
+  },
+  {
+    "timestamp": "2026-03-31T13:46:52.666507",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.246,
+    "change": -1.735,
+    "strength": 1.735
+  },
+  {
+    "timestamp": "2026-03-31T13:46:52.776620",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.0915,
+    "change": -1.294,
+    "strength": 1.294
+  },
+  {
+    "timestamp": "2026-03-31T13:46:53.556364",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.14,
+    "change": -0.973,
+    "strength": 0.973
+  },
+  {
+    "timestamp": "2026-03-31T13:46:54.672827",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.64,
+    "change": -3.13,
+    "strength": 3.13
+  },
+  {
+    "timestamp": "2026-03-31T13:48:04.186058",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3227,
+    "change": -2.174,
+    "strength": 2.174
+  },
+  {
+    "timestamp": "2026-03-31T13:48:04.302377",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.246,
+    "change": -1.812,
+    "strength": 1.812
+  },
+  {
+    "timestamp": "2026-03-31T13:48:04.415308",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09146,
+    "change": -1.327,
+    "strength": 1.327
+  },
+  {
+    "timestamp": "2026-03-31T13:48:05.205204",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.14,
+    "change": -0.973,
+    "strength": 0.973
+  },
+  {
+    "timestamp": "2026-03-31T13:48:08.521368",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.64,
+    "change": -3.13,
+    "strength": 3.13
+  },
+  {
+    "timestamp": "2026-03-31T13:49:19.039069",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3227,
+    "change": -2.138,
+    "strength": 2.138
+  },
+  {
+    "timestamp": "2026-03-31T13:49:19.156723",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.245,
+    "change": -1.891,
+    "strength": 1.891
+  },
+  {
+    "timestamp": "2026-03-31T13:49:19.276204",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09147,
+    "change": -1.284,
+    "strength": 1.284
+  },
+  {
+    "timestamp": "2026-03-31T13:49:20.063995",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.15,
+    "change": -0.852,
+    "strength": 0.852
+  },
+  {
+    "timestamp": "2026-03-31T13:49:21.187776",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.63,
+    "change": -3.185,
+    "strength": 3.185
+  },
+  {
+    "timestamp": "2026-03-31T13:50:30.699772",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3233,
+    "change": -2.087,
+    "strength": 2.087
+  },
+  {
+    "timestamp": "2026-03-31T13:50:30.812684",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.246,
+    "change": -1.89,
+    "strength": 1.89
+  },
+  {
+    "timestamp": "2026-03-31T13:50:30.930021",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09149,
+    "change": -1.273,
+    "strength": 1.273
+  },
+  {
+    "timestamp": "2026-03-31T13:50:31.716128",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.15,
+    "change": -0.852,
+    "strength": 0.852
+  },
+  {
+    "timestamp": "2026-03-31T13:50:32.871123",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.63,
+    "change": -3.185,
+    "strength": 3.185
+  },
+  {
+    "timestamp": "2026-03-31T13:51:42.705270",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3238,
+    "change": -2.071,
+    "strength": 2.071
+  },
+  {
+    "timestamp": "2026-03-31T13:51:42.819902",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.245,
+    "change": -1.969,
+    "strength": 1.969
+  },
+  {
+    "timestamp": "2026-03-31T13:51:42.936483",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09154,
+    "change": -1.219,
+    "strength": 1.219
+  },
+  {
+    "timestamp": "2026-03-31T13:51:43.734363",
+    "exchange": "binance",
+    "pair": "ETC/USDT",
+    "signal": "SHORT",
+    "price": 8.14,
+    "change": -0.973,
+    "strength": 0.973
+  },
+  {
+    "timestamp": "2026-03-31T13:51:44.192951",
+    "exchange": "binance",
+    "pair": "FIL/USDT",
+    "signal": "SHORT",
+    "price": 0.836,
+    "change": -1.065,
+    "strength": 1.065
+  },
+  {
+    "timestamp": "2026-03-31T13:51:44.876509",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.62,
+    "change": -3.187,
+    "strength": 3.187
+  },
+  {
+    "timestamp": "2026-03-31T13:52:54.675060",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3231,
+    "change": -2.123,
+    "strength": 2.123
+  },
+  {
+    "timestamp": "2026-03-31T13:52:54.791236",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.246,
+    "change": -1.967,
+    "strength": 1.967
+  },
+  {
+    "timestamp": "2026-03-31T13:52:54.907623",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09156,
+    "change": -1.187,
+    "strength": 1.187
+  },
+  {
+    "timestamp": "2026-03-31T13:52:56.159698",
+    "exchange": "binance",
+    "pair": "FIL/USDT",
+    "signal": "SHORT",
+    "price": 0.837,
+    "change": -1.064,
+    "strength": 1.064
+  },
+  {
+    "timestamp": "2026-03-31T13:52:56.834881",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.62,
+    "change": -3.187,
+    "strength": 3.187
+  },
+  {
+    "timestamp": "2026-03-31T13:54:06.466289",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3243,
+    "change": -1.991,
+    "strength": 1.991
+  },
+  {
+    "timestamp": "2026-03-31T13:54:06.582084",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.247,
+    "change": -1.734,
+    "strength": 1.734
+  },
+  {
+    "timestamp": "2026-03-31T13:54:06.697526",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09159,
+    "change": -1.101,
+    "strength": 1.101
+  },
+  {
+    "timestamp": "2026-03-31T13:54:09.545160",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.62,
+    "change": -3.187,
+    "strength": 3.187
+  },
+  {
+    "timestamp": "2026-03-31T13:55:19.416168",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.325,
+    "change": -1.939,
+    "strength": 1.939
+  },
+  {
+    "timestamp": "2026-03-31T13:55:19.533698",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.25,
+    "change": -1.497,
+    "strength": 1.497
+  },
+  {
+    "timestamp": "2026-03-31T13:55:19.653809",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09169,
+    "change": -1.015,
+    "strength": 1.015
+  },
+  {
+    "timestamp": "2026-03-31T13:55:21.585802",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.63,
+    "change": -3.132,
+    "strength": 3.132
+  },
+  {
+    "timestamp": "2026-03-31T13:56:30.945001",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3255,
+    "change": -1.931,
+    "strength": 1.931
+  },
+  {
+    "timestamp": "2026-03-31T13:56:31.056214",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.25,
+    "change": -1.497,
+    "strength": 1.497
+  },
+  {
+    "timestamp": "2026-03-31T13:56:31.167980",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09176,
+    "change": -0.993,
+    "strength": 0.993
+  },
+  {
+    "timestamp": "2026-03-31T13:56:33.098375",
+    "exchange": "binance",
+    "pair": "COMP/USDT",
+    "signal": "SHORT",
+    "price": 17.66,
+    "change": -2.967,
+    "strength": 2.967
+  },
+  {
+    "timestamp": "2026-03-31T13:57:42.660305",
+    "exchange": "binance",
+    "pair": "XRP/USDT",
+    "signal": "SHORT",
+    "price": 1.3241,
+    "change": -1.991,
+    "strength": 1.991
+  },
+  {
+    "timestamp": "2026-03-31T13:57:42.772561",
+    "exchange": "binance",
+    "pair": "DOT/USDT",
+    "signal": "SHORT",
+    "price": 1.251,
+    "change": -1.418,
+    "strength": 1.418
+  },
+  {
+    "timestamp": "2026-03-31T13:57:42.888878",
+    "exchange": "binance",
+    "pair": "DOGE/USDT",
+    "signal": "SHORT",
+    "price": 0.09171,
+    "change": -1.025,
+    "strength": 1.025
+  },
+  {
+    "timestamp": "2026-03-31T13:57:44.291211",
+    "exchange": "binance",
+    "pair": "FIL/USDT",
+    "signal": "SHORT",
+    "price": 0.838,
     "change": -0.828,
     "strength": 0.828
   },
   {
-    "timestamp": "2026-03-31T13:13:17.180764",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.829,
-    "change": -1.777,
-    "strength": 1.777
-  },
-  {
-    "timestamp": "2026-03-31T13:13:17.846218",
+    "timestamp": "2026-03-31T13:57:45.707136",
     "exchange": "binance",
     "pair": "COMP/USDT",
     "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.964,
-    "strength": 2.964
+    "price": 17.66,
+    "change": -2.86,
+    "strength": 2.86
   },
   {
-    "timestamp": "2026-03-31T13:14:27.458958",
-    "exchange": "binance",
-    "pair": "ADA/USDT",
-    "signal": "SHORT",
-    "price": 0.2447,
-    "change": -0.851,
-    "strength": 0.851
-  },
-  {
-    "timestamp": "2026-03-31T13:14:27.575507",
+    "timestamp": "2026-03-31T13:58:55.618539",
     "exchange": "binance",
     "pair": "XRP/USDT",
     "signal": "SHORT",
-    "price": 1.3205,
-    "change": -2.46,
-    "strength": 2.46
+    "price": 1.324,
+    "change": -2.028,
+    "strength": 2.028
   },
   {
-    "timestamp": "2026-03-31T13:14:27.691728",
+    "timestamp": "2026-03-31T13:58:55.735401",
     "exchange": "binance",
     "pair": "DOT/USDT",
     "signal": "SHORT",
-    "price": 1.244,
-    "change": -1.582,
-    "strength": 1.582
+    "price": 1.251,
+    "change": -1.341,
+    "strength": 1.341
   },
   {
-    "timestamp": "2026-03-31T13:14:27.807236",
+    "timestamp": "2026-03-31T13:58:55.854632",
     "exchange": "binance",
     "pair": "DOGE/USDT",
     "signal": "SHORT",
-    "price": 0.09119,
-    "change": -1.841,
-    "strength": 1.841
+    "price": 0.09168,
+    "change": -1.09,
+    "strength": 1.09
   },
   {
-    "timestamp": "2026-03-31T13:14:28.608231",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.12,
-    "change": -1.337,
-    "strength": 1.337
-  },
-  {
-    "timestamp": "2026-03-31T13:14:29.243514",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.829,
-    "change": -1.777,
-    "strength": 1.777
-  },
-  {
-    "timestamp": "2026-03-31T13:14:30.283001",
+    "timestamp": "2026-03-31T13:58:57.747118",
     "exchange": "binance",
     "pair": "COMP/USDT",
     "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.964,
-    "strength": 2.964
-  },
-  {
-    "timestamp": "2026-03-31T13:15:40.671680",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3213,
-    "change": -2.458,
-    "strength": 2.458
-  },
-  {
-    "timestamp": "2026-03-31T13:15:40.784784",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.244,
-    "change": -1.504,
-    "strength": 1.504
-  },
-  {
-    "timestamp": "2026-03-31T13:15:40.900613",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09123,
-    "change": -1.829,
-    "strength": 1.829
-  },
-  {
-    "timestamp": "2026-03-31T13:15:41.687488",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.12,
-    "change": -1.217,
-    "strength": 1.217
-  },
-  {
-    "timestamp": "2026-03-31T13:15:42.127561",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.659,
-    "strength": 1.659
-  },
-  {
-    "timestamp": "2026-03-31T13:15:42.789099",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.804,
-    "strength": 2.804
-  },
-  {
-    "timestamp": "2026-03-31T13:16:52.839107",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3207,
-    "change": -2.474,
-    "strength": 2.474
-  },
-  {
-    "timestamp": "2026-03-31T13:16:52.948576",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.245,
-    "change": -1.425,
-    "strength": 1.425
-  },
-  {
-    "timestamp": "2026-03-31T13:16:53.059975",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09119,
-    "change": -1.904,
-    "strength": 1.904
-  },
-  {
-    "timestamp": "2026-03-31T13:16:54.018267",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.095,
-    "strength": 1.095
-  },
-  {
-    "timestamp": "2026-03-31T13:16:54.127795",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
-    "change": -0.829,
-    "strength": 0.829
-  },
-  {
-    "timestamp": "2026-03-31T13:16:54.464764",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.659,
-    "strength": 1.659
-  },
-  {
-    "timestamp": "2026-03-31T13:16:55.319929",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.804,
-    "strength": 2.804
-  },
-  {
-    "timestamp": "2026-03-31T13:18:05.104230",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3205,
-    "change": -2.409,
-    "strength": 2.409
-  },
-  {
-    "timestamp": "2026-03-31T13:18:05.220640",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.245,
-    "change": -1.425,
-    "strength": 1.425
-  },
-  {
-    "timestamp": "2026-03-31T13:18:05.337198",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.0912,
-    "change": -1.84,
-    "strength": 1.84
-  },
-  {
-    "timestamp": "2026-03-31T13:18:06.124478",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.13,
-    "change": -1.215,
-    "strength": 1.215
-  },
-  {
-    "timestamp": "2026-03-31T13:18:06.244186",
-    "exchange": "binance",
-    "pair": "XLM/USDT",
-    "signal": "SHORT",
-    "price": 0.1675,
-    "change": -0.829,
-    "strength": 0.829
-  },
-  {
-    "timestamp": "2026-03-31T13:18:06.581104",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.83,
-    "change": -1.659,
-    "strength": 1.659
-  },
-  {
-    "timestamp": "2026-03-31T13:18:07.265444",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.804,
-    "strength": 2.804
-  },
-  {
-    "timestamp": "2026-03-31T13:19:16.794606",
-    "exchange": "binance",
-    "pair": "XRP/USDT",
-    "signal": "SHORT",
-    "price": 1.3214,
-    "change": -2.278,
-    "strength": 2.278
-  },
-  {
-    "timestamp": "2026-03-31T13:19:16.908596",
-    "exchange": "binance",
-    "pair": "DOT/USDT",
-    "signal": "SHORT",
-    "price": 1.244,
-    "change": -1.426,
-    "strength": 1.426
-  },
-  {
-    "timestamp": "2026-03-31T13:19:17.024478",
-    "exchange": "binance",
-    "pair": "DOGE/USDT",
-    "signal": "SHORT",
-    "price": 0.09122,
-    "change": -1.713,
-    "strength": 1.713
-  },
-  {
-    "timestamp": "2026-03-31T13:19:17.805759",
-    "exchange": "binance",
-    "pair": "ETC/USDT",
-    "signal": "SHORT",
-    "price": 8.12,
-    "change": -1.217,
-    "strength": 1.217
-  },
-  {
-    "timestamp": "2026-03-31T13:19:18.435191",
-    "exchange": "binance",
-    "pair": "FIL/USDT",
-    "signal": "SHORT",
-    "price": 0.829,
-    "change": -1.544,
-    "strength": 1.544
-  },
-  {
-    "timestamp": "2026-03-31T13:19:19.102001",
-    "exchange": "binance",
-    "pair": "COMP/USDT",
-    "signal": "SHORT",
-    "price": 17.68,
-    "change": -2.857,
-    "strength": 2.857
+    "price": 17.66,
+    "change": -2.86,
+    "strength": 2.86
   }
 ]

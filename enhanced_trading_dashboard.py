@@ -234,7 +234,37 @@ DASHBOARD_TEMPLATE = '''
                 </div>
                 <p><strong>Realized:</strong> ${{ pnl_data.total.realized|round(2) }}</p>
                 <p><strong>Unrealized:</strong> ${{ pnl_data.total.unrealized|round(2) }}</p>
-                <p><strong>Gemini Trades:</strong> {{ pnl_data.gemini.trades }} | <strong>Binance Trades:</strong> {{ pnl_data.binance.trades }}</p>
+                <p><strong>Open Positions:</strong> {{ pnl_data.total.open_positions }}</p>
+                
+                <div style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                    <h4 style="margin-top: 0; color: #4fc3f7;">📊 Exchange Breakdown</h4>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <!-- Gemini Column -->
+                        <div>
+                            <strong>Gemini (Spot):</strong>
+                            <div style="font-size: 12px;">
+                                <div>Trades: {{ pnl_data.gemini.trades }}</div>
+                                <div>Open: {{ pnl_data.gemini.open_positions }}</div>
+                                <div>P&L: <span class="{{ 'positive' if pnl_data.gemini.total > 0 else 'negative' if pnl_data.gemini.total < 0 else '' }}">${{ pnl_data.gemini.total|round(2) }}</span></div>
+                                <div>Realized: ${{ pnl_data.gemini.realized|round(2) }}</div>
+                                <div>Unrealized: ${{ pnl_data.gemini.unrealized|round(2) }}</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Binance Column -->
+                        <div>
+                            <strong>Binance (Futures):</strong>
+                            <div style="font-size: 12px;">
+                                <div>Trades: {{ pnl_data.binance.trades }}</div>
+                                <div>Open: {{ pnl_data.binance.open_positions }}</div>
+                                <div>P&L: <span class="{{ 'positive' if pnl_data.binance.total > 0 else 'negative' if pnl_data.binance.total < 0 else '' }}">${{ pnl_data.binance.total|round(2) }}</span></div>
+                                <div>Realized: ${{ pnl_data.binance.realized|round(2) }}</div>
+                                <div>Unrealized: ${{ pnl_data.binance.unrealized|round(2) }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Bot Status Card -->
