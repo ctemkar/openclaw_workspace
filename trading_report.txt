@@ -1,0 +1,50 @@
+=== TRADING DASHBOARD MONITORING REPORT ===
+Timestamp: 2026-03-31 11:51:37
+Monitor Run: Cron job 45e48409-8420-430a-b091-7e4f06e9e458
+
+SYSTEM STATUS:
+- Dashboard: Running on http://localhost:5001/
+- Last Analysis: 2026-03-31 11:34:18 (UTC+7)
+- Capital: $250.00
+- Risk Parameters: 5% Stop-loss, 10% Take-profit
+- Max Daily Trades: 2
+
+PORTFOLIO ANALYSIS:
+- Total Active Trades: 5
+- Total Invested: $1,300.05 (520.3% of capital - EXCESSIVE LEVERAGE)
+- Current Portfolio Value: $1,275.75
+- Total P&L: $-24.30 (-9.72% of capital)
+- Available Capital: $-1,025.75 (NEGATIVE - OVERLEVERAGED)
+
+CRITICAL FINDINGS:
+🔴 2 STOP-LOSS TRIGGERS DETECTED:
+  1. ETH/USD trade at 13:39:49: -11.45% loss (Entry: $2,325.28, Current: $2,059.05)
+  2. ETH/USD trade at 00:33:02: -6.13% loss (Entry: $2,193.60, Current: $2,059.05)
+
+🔴 PORTFOLIO DRAWDOWN ALERT:
+  - Total portfolio loss: -9.72% of capital
+  - Exceeds 5% maximum acceptable drawdown
+
+🔴 CAPITAL UTILIZATION ALERT:
+  - 520.3% of capital deployed (EXTREME OVERLEVERAGE)
+  - Negative available capital: $-1,025.75
+
+RISK ASSESSMENT:
+- Risk Level: CRITICAL
+- Multiple risk parameters violated
+- Stop-loss triggers indicate poor trade timing
+- Extreme leverage exposes system to margin calls
+
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Close losing positions to prevent further losses
+2. REDUCE LEVERAGE: Decrease position sizes to <100% of capital
+3. REVIEW STRATEGY: Analyze why stop-losses were triggered
+4. PAUSE TRADING: Consider temporary halt until market conditions improve
+5. CAPITAL PRESERVATION: Focus on protecting remaining capital
+
+NEXT MONITORING:
+- Scheduled for next hourly check
+- Will track recovery or further deterioration
+- Alert if portfolio loss exceeds 10%
+
+=== END REPORT ===

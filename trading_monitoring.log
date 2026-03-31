@@ -1,77 +1,91 @@
-=== TRADING MONITORING UPDATE - 2026-03-31 11:39 AM ===
-Monitoring Time: 2026-03-31 11:39:18
-Dashboard Status: ✅ RUNNING (port 5001)
+=== TRADING MONITORING LOG ===
+Timestamp: 2026-03-31 11:53:55
+Dashboard Status: Running
 Last Analysis: 2026-03-31T11:34:18.045835
 Capital: $250.00
-Risk Parameters: 5% stop-loss, 10% take-profit
-Trading Pairs: BTC/USD, ETH/USD
+Risk Parameters: 5% SL, 10% TP, Max 2 trades/day
 
-=== CURRENT MARKET DATA ===
-BTC/USD: $67,560.76 (+0.47% from last trade)
-ETH/USD: $2,059.05 (+0.33% from last trade)
-Market Sentiment: BULLISH
+MARKET DATA:
+- BTC/USD: $67,560.76
+- ETH/USD: $2,059.05
+- Market Sentiment: BULLISH
 
-=== CRITICAL ALERTS STATUS ===
-🚨 STOP-LOSS TRIGGERS: 2 positions (UNCHANGED)
-1. ETH/USD #1 (13:39:49): -11.45% loss, exceeds stop-loss by 6.45%
-2. ETH/USD #2 (00:33:02): -6.13% loss, exceeds stop-loss by 1.13%
+PORTFOLIO SUMMARY:
+- Total Investment: $1,300.05
+- Current Value: $1,275.75
+- Total P&L: $-24.30 (-1.87%)
+- Capital Utilization: 520.0%
 
-=== PORTFOLIO STATUS ===
-Total Positions: 5
-ETH Exposure: 84.3% (HIGH concentration risk - UNCHANGED)
-Current Portfolio Value: $1,275.75
-Total P&L: -$24.30 (-1.90%)
-Profitable Positions: 3 (60%)
-Losing Positions: 2 (40%)
+ACTIVE TRADES: 5
+- ETH/USD: 4 trades (2 at stop-loss)
+- BTC/USD: 1 trade (slightly positive)
 
-=== POSITION DETAILS ===
-1. ETH/USD (13:39:49): -11.45% ($-22.90) - 🚨 CRITICAL
-2. ETH/USD (00:33:02): -6.13% ($-12.27) - 🚨 CRITICAL  
-3. BTC/USD (21:29:41): +0.47% ($+0.93) - ✅ PROFITABLE
-4. ETH/USD (21:29:42): +0.32% ($+0.65) - ✅ PROFITABLE
-5. ETH/USD (07:24:00): +1.86% ($+9.29) - ✅ PROFITABLE
+ALERTS: 3
+🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05 (entry: $2,325.28, SL: $2,209.02, P&L: -11.45%)
+🚨 STOP-LOSS TRIGGERED: ETH/USD at $2,059.05 (entry: $2,193.60, SL: $2,083.92, P&L: -6.13%)
+⚠️ HIGH CAPITAL UTILIZATION: 520.0% of $250.00 capital used
 
-=== TAKE-PROFIT STATUS ===
-No take-profit triggers (10% target not reached)
-Closest to TP: ETH/USD (07:24:00) at +1.86% (8.14% to target)
+RISK ASSESSMENT:
+- Portfolio Drawdown: -1.87%
+- Critical Alerts: 2 stop-loss triggers
+- Market Conditions: Bullish but volatile
+- Recommendation: Review stop-loss levels, consider reducing position sizes
 
-=== RISK ASSESSMENT ===
-Overall Risk Level: HIGH
-Concentration Risk: HIGH (84.3% ETH exposure)
-Market Risk: MEDIUM (ETH showing slight recovery)
-Stop-loss Execution: FAILED (positions remain open)
-Maximum Drawdown: 11.45% (HIGH)
-Portfolio Drawdown: 0.00% (ACCEPTABLE)
+=== END LOG ===
+=== TRADING DASHBOARD MONITORING REPORT ===
+Time: 2026-03-31 11:57:28
+Dashboard Status: running
+Last Analysis: 2026-03-31T11:34:18.045835
+Capital: $250.00
+Current Prices: BTC=$67560.76, ETH=$2059.05
 
-=== URGENT ACTIONS REQUIRED ===
-1. 🚨 IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
-2. ⚠️ URGENT: Reduce ETH exposure from 84.3% to ≤50%
-3. 🔧 Review stop-loss execution mechanism
-4. 📊 Implement portfolio rebalancing
+Risk Parameters:
+- Stop Loss: 5.0%
+- Take Profit: 10.0%
+- Max Trades/Day: 2
 
-=== SYSTEM PERFORMANCE ===
-Dashboard Uptime: ✅ Operational
-API Connectivity: ✅ Active
-Analysis Frequency: Hourly
-Trading Mode: SIMULATION (no real financial risk)
-Last Trade Signal: BUY BTC/USD at $67,560.76
+TRADE ANALYSIS:
 
-=== MARKET CONDITIONS ===
-Trend: Bullish but weakening
-Volatility: Low to Moderate
-Liquidity: High
-Support Levels Holding: Yes
-Resistance Levels: Near current prices
+Trade: ETH/USD BUY @ $2325.28 (13:39:49)
+  Quantity: 0.086
+  Reason: Near support level: $2308.08 (current: $2325.28)
+  Current: $2059.05
+  P&L: $-22.90 (-11.45%)
+  ⚠️  STOP-LOSS TRIGGERED!
+Trade: ETH/USD BUY @ $2193.60 (00:33:02)
+  Quantity: 0.0912
+  Reason: Near support level: $2167.99 (current: $2193.60)
+  Current: $2059.05
+  P&L: $-12.27 (-6.13%)
+  ⚠️  STOP-LOSS TRIGGERED!
+Trade: BTC/USD BUY @ $67247.51 (21:29:41)
+  Quantity: 0.002974
+  Reason: Near support level: $67110.20 (current: $67247.51)
+  Current: $67560.76
+  P&L: $0.93 (0.47%)
+Trade: ETH/USD BUY @ $2052.38 (21:29:42)
+  Quantity: 0.0974
+  Reason: Near support level: $2033.94 (current: $2052.38)
+  Current: $2059.05
+  P&L: $0.65 (0.32%)
+Trade: ETH/USD BUY @ $2021.51 (07:24:00)
+  Quantity: 0.2474
+  Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
+  Current: $2059.05
+  P&L: $9.29 (1.86%)
 
-=== NEXT MONITORING CHECK ===
-Scheduled: 12:34 PM (55 minutes)
-Critical Alerts: Will persist until positions closed
-System Status: Requires manual intervention for risk management
+=== PORTFOLIO SUMMARY ===
+Total Trades: 5
+Profitable Trades: 3
+Losing Trades: 2
+Total P&L: $-24.30
+Capital: $250.00
+Current Portfolio Value: $1275.75
+Drawdown: 0.00%
 
-=== SUMMARY ===
-The trading system remains operational but with critical risk management failures.
-Two positions have exceeded stop-loss thresholds and remain open.
-ETH concentration risk remains dangerously high at 84.3%.
-Market conditions show slight recovery but insufficient to recover losses.
-Immediate manual intervention required for basic risk control.
-System remains in simulation mode - no real financial risk.
+=== ALERT SUMMARY ===
+Total Alerts: 2
+1. 🚨 STOP-LOSS TRIGGERED: ETH/USD BUY @ $2325.28 - Current: $2059.05 (-11.45% loss) - Time: 13:39:49
+2. 🚨 STOP-LOSS TRIGGERED: ETH/USD BUY @ $2193.60 - Current: $2059.05 (-6.13% loss) - Time: 00:33:02
+
+============================================================
