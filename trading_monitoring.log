@@ -1,86 +1,104 @@
-=== TRADING PERFORMANCE MONITORING REPORT ===
-Timestamp: 2026-04-01 04:58:30 (Asia/Bangkok)
-Data Source: Bot logs, dashboard analysis, critical alerts
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-04-01 05:55:00 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/ (NOT RUNNING - Port 5001 inactive)
 
-EXECUTIVE SUMMARY:
-- Trading bot operational but severely limited
-- Binance completely blocked (geographic restrictions)
-- Gemini-only trading with limited opportunities
-- Critical historical drawdown of 43.9%
+=== DASHBOARD STATUS ===
+Dashboard Status: ❌ NOT RUNNING (Port 5001 inactive)
+Last Dashboard Activity: 2026-03-31 13:24:50 (from trading_server_enhanced.log)
+Alternative Dashboard Ports Checked: 5007, 5008, 5009 (all inactive at current time)
 
-BOT STATUS:
-- Process: PID 541 (running since 04:24)
-- Mode: AGGRESSIVE
-- Cycle: 7 completed at 04:59:52
-- Opportunities found: 12 total (all cycles)
-- Trading frequency: 5-minute cycles (300 seconds)
+=== TRADING BOT STATUS ===
+Trading Bot: ⚠️ STATUS UNKNOWN (Last known activity: 05:48:54 from previous logs)
+Bot Type: Enhanced 26-Crypto Trading Bot
+Last Known Cycle: Cycle 1 completed at 05:48:54
+Gemini Status: UNKNOWN (needs verification)
+Binance Status: UNKNOWN (needs verification)
 
-TRADING PARAMETERS (from bot configuration):
-- Gemini Capital: $134.27
-- Binance Capital: $134.27 (blocked)
-- Leverage: 1x (reduced from 3x for safety)
-- Position Size: 10% of capital
-- Long Threshold: 1.0% drop (Gemini)
-- Short Threshold: 1.0% drop (Binance)
-- Stop Loss: 3% (tighter from 5%)
-- Take Profit: 5% (reduced from 10%)
+=== P&L SUMMARY (FROM LATEST DATA) ===
+Initial Capital: $946.97
+Current Capital: $531.65 (needs real-time verification)
+Cumulative P&L: -$415.32 (-43.86%)
+Daily P&L: UNKNOWN (needs current data)
+Available Capital: CRITICALLY LOW - $3.64 (from previous logs, needs verification)
 
-EXCHANGE STATUS:
-1. GEMINI:
-   - Status: ✅ Connected
-   - Positions: 5 active (all SOL positions according to alerts)
-   - P&L: +$2.06 (positive)
-   - Issues: No recent trade executions detected in logs
+=== RECENT TRADING ACTIVITY (FROM PREVIOUS LOGS) ===
+Last Known Trading Cycle: Cycle 1 (05:48:47 - 05:48:54)
+Cycle Duration: 7.0 seconds
+Opportunities Detected: 1
+- MKR: -3.40% drop (Short signal) - FAILED: Invalid symbol status
 
-2. BINANCE:
-   - Status: ❌ BLOCKED (geographic restrictions - Thailand)
-   - Error: "Service unavailable from a restricted location"
-   - P&L: -$1.00 (negative)
-   - Closed Shorts: -$2.17 loss
-   - Issues: All trade attempts failing with:
-     * "Margin is insufficient" (code -2019)
-     * "Invalid symbol status" (code -4140)
+Recent Position Management:
+1. ADA/USDT SHORT position CLOSED at 05:48:51
+   - Close Price: $0.2400
+   - P&L: -0.46%
+   - Reason: Capital freeing (low available capital)
 
-TRADE EXECUTION ANALYSIS:
-- Total opportunities identified: 12 (across 7 cycles)
-- Successful trades: 0 (all Binance trades failing)
-- Gemini trades: No execution attempts found in recent logs
-- Primary issue: Binance geographic blockade preventing all trading
+=== CURRENT OPEN POSITIONS (FROM LATEST SUMMARY) ===
+From Trading Summary (02:34:29):
+1. GEMINI BUY SOL/USD - 0.646635 SOL @ $82.22
+2. GEMINI BUY SOL/USD - 0.645206 SOL @ $82.40
+3. GEMINI BUY SOL/USD - 0.645731 SOL @ $82.33
+4. GEMINI BUY SOL/USD - 0.645034 SOL @ $82.42
+5. GEMINI BUY SOL/USD - 0.644956 SOL @ $82.43
 
-RISK ASSESSMENT:
+Total Open Positions: 5
+Total Position Value: $265.82
+Average Position Size: $53.16
 
-CRITICAL RISKS:
-1. **SEVERE DRAWDOWN**: -43.9% cumulative loss ($415.32 loss from $946.97 initial)
-2. **EXCHANGE BLOCKAGE**: Binance completely unavailable in Thailand
-3. **CAPITAL DEPLOYMENT**: 50% of remaining capital deployed ($265.80 of $531.65)
-4. **POSITION CONCENTRATION**: High concentration in SOL positions
+=== TRADE EXECUTION ISSUES (FROM PREVIOUS LOGS) ===
+Recent Failures:
+1. MKR/USDT Short: ❌ FAILED - "Invalid symbol status for opening position"
+2. MATIC/USDT: ❌ ERROR - "binance does not have market symbol MATIC/USDT"
 
-MODERATE RISKS:
-1. **LIMITED TRADING**: Only Gemini operational with $134.27 capital
-2. **NO STOP-LOSS ORDERS**: Dashboard shows no explicit stop-loss orders
-3. **DATA QUALITY**: Real data confirmed, but trading severely limited
+Persistent Issues:
+1. Margin Insufficiency: Multiple historical failures
+2. Binance Symbol Status: Invalid symbol status errors
+3. Geographic Restrictions: Binance limitations (from previous logs)
+4. Low Available Capital: $3.64 - severely limiting new trades
 
-PERFORMANCE METRICS:
-- Current Portfolio Value: $531.65
-- Initial Capital: $946.97
-- Total Loss: -$415.32 (-43.9%)
-- Recovery Required: 78.1% gain to break even
-- Gemini Performance: +$2.06 (small positive)
-- Binance Performance: -$3.17 total (-$1.00 open, -$2.17 closed)
+=== RISK PARAMETERS ===
+From Previous Logs:
+- Leverage: 1x (reduced from 3x)
+- Position Size: Based on available capital
+- Stop-Loss: 3%
+- Take-Profit: 5%
+- Scan Interval: 300 seconds (5 minutes)
 
-ALERT STATUS:
-- Stop-loss triggers: NONE DETECTED (no stop-loss orders shown)
-- Take-profit triggers: NONE DETECTED
-- Drawdown status: CRITICAL (-43.9%)
-- Exchange connectivity: CRITICAL (Binance blocked)
+=== SYSTEM HEALTH ===
+Trading Bot Process: ⚠️ STATUS UNKNOWN (Last known active 05:48:54)
+Dashboard Process: ❌ INACTIVE (Port 5001 not responding)
+Log Files: ⚠️ NEEDS VERIFICATION
+Trade History: ⚠️ NEEDS VERIFICATION
 
-RECOMMENDATIONS:
-1. **IMMEDIATE**: Implement VPN solution for Binance access
-2. **IMMEDIATE**: Set explicit stop-loss orders for all positions
-3. **HIGH PRIORITY**: Reduce position concentration (diversify from SOL)
-4. **MEDIUM PRIORITY**: Explore alternative exchanges available in Thailand
-5. **MONITORING**: Continue close monitoring given critical drawdown
+=== CRITICAL CONCERNS ===
+1. EXTREMELY LOW CAPITAL: $3.64 available - trading severely constrained
+2. DASHBOARD OFFLINE: No real-time monitoring interface
+3. BINANCE ISSUES: Multiple symbol and margin problems
+4. CAPITAL DEPLETION: -43.86% cumulative drawdown
+5. POSITION MANAGEMENT: ADA position closed at loss to free capital
 
-NEXT MONITORING CHECK: 05:03 AM (next bot cycle completion)
+=== RECOMMENDATIONS ===
+1. URGENT: Verify current trading bot status
+2. URGENT: Check available capital via API
+3. Investigate and fix Binance symbol status issues
+4. Restart trading dashboard on port 5001
+5. Review and adjust risk parameters given low capital
+6. Consider consolidating or closing remaining positions
 
-=== END OF MONITORING REPORT ===
+=== NEXT SCHEDULED CHECK ===
+Next trading cycle: UNKNOWN (should run every 5 minutes)
+Next monitoring: Continuous monitoring active
+Alert Threshold: Immediate alert if capital drops below $1.00
+
+=== DATA SOURCES USED ===
+1. trading_summary_latest.txt (02:34:29)
+2. trading_monitoring_summary_20260401_0444.txt (04:44:21)
+3. trading_monitoring.log (05:54:28)
+4. critical_alerts.log (05:54:28)
+
+=== MONITORING NOTES ===
+• Dashboard at port 5001 is offline
+• Real-time data unavailable due to dashboard outage
+• Using cached/latest available data from previous logs
+• Critical alerts from previous monitoring still active
+• System requires manual intervention for status verification

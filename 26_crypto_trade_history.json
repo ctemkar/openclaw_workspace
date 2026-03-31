@@ -209,10 +209,14 @@
     "leverage": 1,
     "stop_loss": 0.246067,
     "take_profit": 0.226955,
-    "status": "OPEN",
+    "status": "CLOSED",
     "order_id": "63798080945",
     "entry_price": 0.2389,
-    "execution_time": "2026-04-01T00:47:14.720340"
+    "execution_time": "2026-04-01T00:47:14.720340",
+    "close_price": 0.24,
+    "close_time": "2026-04-01T05:48:51.039091",
+    "realized_pnl": -0.0709175387191287,
+    "notes": "AUTOMATICALLY CLOSED"
   },
   {
     "exchange": "binance",

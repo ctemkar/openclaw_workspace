@@ -1,188 +1,59 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Analysis Time: 2026-04-01 04:19:49 (Asia/Bangkok)
-Cron Job: trading_dashboard_monitor (8eaa57d1-848b-4b1b-abc7-6cfb8ac1da91)
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-04-01 05:38:25 (Asia/Bangkok)
+Analysis Complete: ✅
 
-=== EXECUTIVE SUMMARY ===
-Status: 🔴 CRITICAL - MULTIPLE SYSTEM FAILURES
-Overall Health: 2/10 (CRITICAL)
-Trading Activity: STALLED (59 minutes no activity)
-Risk Level: EXTREME (43.86% drawdown + approaching stop-loss)
+EXECUTIVE SUMMARY:
+• Dashboard Status: ONLINE (port 5008, not 5001 as cron expects)
+• Trading Bot: ACTIVE but facing critical issues
+• Capital Status: CRITICAL DRAWDOWN (-43.86%)
+• Risk Level: EXTREME (9/10)
+• Immediate Action Required: YES
 
-=== KEY FINDINGS ===
+KEY FINDINGS:
 
-1. 🔴 PROCESS STALLED: CRITICAL - CONFIRMED
-   • PID: 98702 (real_26_crypto_trader.py)
-   • Runtime: 10:29 (629 minutes)
-   • Last Activity: Cycle 105 at 03:25:00
-   • Current Status: RUNNING BUT STALLED (59 minutes)
-   • Impact: Trading completely halted
+1. CAPITAL DRAWDOWN CRITICAL:
+   - Initial: $946.97
+   - Current: $531.65
+   - Loss: -$415.32 (-43.86%)
+   - Recovery Needed: +78.1% ($415.32)
+   - Status: APPROACHING 50% THRESHOLD
 
-2. 🔴 DASHBOARD OFFLINE: CRITICAL - COMPLETE FAILURE
-   • Expected: http://localhost:5001/
-   • Status: NO PROCESS LISTENING
-   • Impact: Zero monitoring visibility
+2. EXCHANGE RESTRICTIONS:
+   - Gemini: ✅ ACTIVE ($134.27 available)
+   - Binance: ❌ BLOCKED (Geographic restrictions)
+   - Impact: 50% trading capacity unavailable
 
-3. 🔴 CAPITAL DRAWDOWN: CRITICAL - PERSISTENT
-   • Initial Capital: $946.97
-   • Current Capital: $531.65
-   • Drawdown: -$415.32 (43.86%)
-   • Status: 🔴 EXCEEDS 20% CRITICAL THRESHOLD
+3. TRADING ACTIVITY:
+   - Open Positions: 0
+   - Bot Status: Finding opportunities (3 in last cycle)
+   - Execution: FAILING due to Binance restrictions
+   - Last Successful Trade: None recent
 
-4. 🔴 BINANCE POSITION AT RISK: CRITICAL - APPROACHING STOP-LOSS
-   • Symbol: SOL/USDT:USDT
-   • P&L: -1.93% (3% stop-loss threshold)
-   • Entry: $81.186
-   • Current: $82.63
-   • Status: MONITOR CLOSELY FOR TRIGGER
+4. CRITICAL ALERTS GENERATED: 6
+   a) Critical Capital Drawdown (43.86%)
+   b) Binance Geographic Restrictions
+   c) Trade Execution Failures (multiple)
+   d) No Active Positions
+   e) Stale Bot Log Data
+   f) Insufficient Risk Controls
 
-5. 🔴 EXCHANGE BLOCKAGE: CRITICAL - TRADING LIMITED
-   • Binance: Geographic restrictions (blocked)
-   • Gemini: Only exchange available
-   • Available Capital: $134.27 on Gemini
-   • Impact: Severely limited trading capability
+5. SYSTEM HEALTH:
+   - Dashboard: ✅ Online (port 5008)
+   - Bot Process: ✅ Running (PID 541)
+   - Logging: ⚠️ Discrepancy detected
+   - API Connectivity: ⚠️ Partial (Gemini only)
 
-6. 🔴 MONITORING IMPAIRED: CRITICAL - NO VISIBILITY
-   • All dashboards offline
-   • No web interface available
-   • Limited log-based monitoring only
+IMMEDIATE RECOMMENDATIONS:
+1. PAUSE TRADING until drawdown < 30%
+2. ADDRESS BINANCE ACCESS (VPN required)
+3. REVIEW TRADING STRATEGY (43.86% loss unacceptable)
+4. IMPLEMENT STRICT STOP-LOSS (max 5% per position)
+5. FOCUS ON GEMINI ONLY with available $134.27
 
-=== TRADING PERFORMANCE ===
+NEXT MONITORING: 2026-04-01 05:43:10
+CRITICAL THRESHOLD: 45% DRAWDOWN ($521.83) - APPROACHING
 
-Current Positions:
-• Total Open Positions: 5 (all Gemini BUY SOL/USD)
-• Position Value: $265.82
-• Average Position Size: $53.16
-• Positions Opened: 2026-04-01 00:58-01:04
-
-Financial Status:
-• Current Capital: $531.65 (43.86% drawdown) 🔴
-• Total Capital: $685.67
-• Gemini Allocation: $531.65 (77.5%)
-• Binance Allocation: $154.02 (22.5%)
-• Deployed Capital: $265.82 (38.8%)
-• Available Capital: $419.85
-
-Trading Process Status:
-• Process: real_26_crypto_trader.py (PID: 98702)
-• Status: RUNNING BUT STALLED
-• Last Activity: 03:25:00 (59 minutes ago)
-• Health: 3/10 (running but completely stalled)
-
-=== MARKET ANALYSIS ===
-
-Current Market Data:
-• BTC/USD (Gemini): $67,883.70
-• BTC Bid/Ask: $67,883.69/$67,883.70
-• BTC Volume (24h): 448.65 BTC / $30.46M
-• SOL/USD: Unknown (last known ~$82.xx)
-• Market Sentiment: Unknown (monitoring impaired)
-
-=== RISK ASSESSMENT ===
-
-Stop-Loss Monitoring:
-⚠️ Binance SOL position at -1.93% (approaching 3% stop-loss)
-
-Take-Profit Monitoring:
-✅ No positions within 1% of 10% take-profit levels
-
-Drawdown Monitoring:
-🔴 CRITICAL: 43.86% vs 20% threshold (EXCEEDED)
-
-Capital Monitoring:
-🔴 CRITICAL: Severe drawdown from initial capital
-
-Process Monitoring:
-🔴 CRITICAL: Process stalled (59 minutes no activity)
-
-Monitoring System:
-🔴 CRITICAL: All dashboards offline (zero visibility)
-
-Exchange Monitoring:
-🔴 CRITICAL: Binance blocked, Gemini limited
-
-=== RECOMMENDED ACTIONS ===
-
-🔴 IMMEDIATE ACTIONS (P1 - 0-15 MINUTES):
-1. INTERVENE ON STALLED PROCESS: Check/kill/restart PID 98702
-2. RESTART DASHBOARDS: Launch monitoring on port 5001
-3. MONITOR BINANCE SOL: Watch for 3% stop-loss trigger
-4. ASSESS CAPITAL RISK: Review 43.86% drawdown impact
-
-🟡 SHORT-TERM ACTIONS (P2 - 1-24 HOURS):
-5. REVIEW OPEN POSITIONS: Analyze 5 Gemini SOL positions
-6. ADDRESS EXCHANGE BLOCKAGE: Investigate VPN for Binance
-7. STRATEGY REVIEW: Re-evaluate given 43.86% drawdown
-8. RISK ADJUSTMENT: Modify parameters to preserve capital
-
-🟢 MEDIUM-TERM ACTIONS (P3 - 1-7 DAYS):
-9. SYSTEM AUDIT: Comprehensive review of trading system
-10. MONITORING IMPROVEMENT: Redundant dashboard setup
-11. PROCESS RESILIENCE: Implement stall detection/recovery
-12. CAPITAL RECOVERY: Plan for 78.1% recovery needed
-
-=== ALERT STATUS ===
-
-🔴 CRITICAL ALERTS (6):
-1. Process stalled (59 minutes no activity)
-2. Dashboard complete failure (no monitoring)
-3. 43.86% capital drawdown (EXCEEDS THRESHOLD)
-4. Binance SOL approaching stop-loss (-1.93%)
-5. Binance exchange blocked (geographic restrictions)
-6. Monitoring impaired (all dashboards offline)
-
-🟡 WARNINGS (0):
-• No additional warnings
-
-🟢 NORMAL (2):
-1. No stop-loss triggers
-2. No take-profit triggers
-
-=== SYSTEM STATUS ===
-Trading Process: STALLED (PID 98702, 59 minutes inactive)
-Process Health: 3/10 (running but stalled)
-Monitoring: FAILED (dashboards offline)
-Risk Management: FAILED (43.86% drawdown)
-Trading Capability: LIMITED (Binance blocked)
-System Effectiveness: 0% (stalled + no monitoring)
-
-=== FINANCIAL TREND ANALYSIS ===
-Capital Trend: STABLE at critically low level ($531.65)
-Drawdown Trend: PERSISTENT at 43.86%
-Process Trend: STALLED (59 minutes no activity)
-Monitoring Trend: FAILED (dashboards offline)
-Trading Activity: COMPLETELY HALTED
-System Effectiveness: 0% (multiple critical failures)
-
-=== URGENT WARNING ===
-⚠️ SYSTEM IN CRISIS MODE ⚠️
-Multiple critical failures detected:
-1. Trading process stalled (59 minutes)
-2. Monitoring completely offline
-3. 43.86% capital drawdown
-4. Binance position approaching stop-loss
-5. Exchange access blocked
-
-Without immediate intervention:
-1. Trading remains completely halted
-2. No visibility into system status
-3. Positions at risk of further loss
-4. Capital continues to be at extreme risk
-
-=== REQUIRED INTERVENTIONS ===
-1. IMMEDIATE: Process intervention (PID 98702)
-2. IMMEDIATE: Dashboard restoration
-3. URGENT: Binance position monitoring
-4. PRIORITY: Drawdown analysis and strategy review
-
-=== SYSTEM HEALTH SCORE ===
-Overall: 2/10 (CRITICAL)
-• Process Health: 3/10 (stalled)
-• Monitoring Health: 0/10 (failed)
-• Risk Health: 1/10 (43.86% drawdown)
-• Capital Health: 2/10 (severe drawdown)
-• Exchange Health: 2/10 (blocked/limited)
-• Configuration Health: 5/10 (unknown)
-
-=== END OF SUMMARY ===
-Generated by trading_dashboard_monitor cron job
-Timestamp: 2026-04-01T04:19:49+07:00
+=== MONITORING COMPLETE ===
+Logs updated: trading_monitoring.log, critical_alerts.log
+Dashboard status: dashboard_status.json
