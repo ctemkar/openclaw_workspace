@@ -1,23 +1,26 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 21:57:05 (UTC+7)
+Timestamp: 2026-03-31 21:58:30 (UTC+7)
 Dashboard Status: ACCESSIBLE
 System Status: running
 Capital: $535.84
 Last Analysis: 2026-03-31T21:19:01.131169
 
 === PNL SUMMARY ===
-Total PNL: -$1.66 (unrealized)
+Total PNL: -$2.16 (unrealized)
 Open Positions: 8
 Realized PNL: $0.00
-Unrealized PNL: -$1.66
+Unrealized PNL: -$2.16
+PNL Percentage: -0.40%
 
-Binance PNL: -$1.66 (8 trades, 8 open positions)
+Binance PNL: -$2.16 (8 trades, 8 open positions)
 Gemini PNL: $0.00 (0 trades, 0 open positions)
 
 === RISK PARAMETERS ===
-Stop-loss: 5.0%
-Take-profit: 10.0%
+Stop-loss: 5.0% ($26.79 threshold)
+Take-profit: 10.0% ($53.58 threshold)
 Max trades per day: 999 (effectively unlimited)
+Current PNL vs Stop-loss: 8.0% of threshold
+Current PNL vs Take-profit: 4.0% of threshold
 
 === RECENT TRADES (Last 5) ===
 1. ETH/USD BUY @ $2325.28 (0.086 qty) - Near support level: $2308.08
@@ -33,5 +36,5 @@ BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, MATIC/
 Analysis scheduled: hourly
 Port: 5001
 Execution Mode: REAL TRADING - LIVE
-Last Update: 2026-03-31 21:57:05
+Last Update: 2026-03-31 21:58:30
 ========================================
