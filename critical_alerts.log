@@ -1,101 +1,82 @@
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 06:26:35 (Asia/Bangkok)
-Monitoring URL: http://localhost:5001/
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 06:57:45 (Asia/Bangkok)
 
-=== CRITICAL ALERTS DETECTED ===
-🚨 **CRITICAL ALERT 1: STOP-LOSS TRIGGERED**
-- Position: ETH/USD BUY @ $2,325.28
-- Current Price: $2,021.97
-- Drawdown: -13.05%
-- Stop Loss Level: $2,209.02 (-5.0%)
-- Beyond Stop Loss: -8.05%
-- Time Since Entry: Multiple hours
-- Action Required: IMMEDIATE
+🔴 ALERT 1: STOP-LOSS TRIGGERED
+Symbol: ETH/USD
+Entry Price: $2,325.28
+Current Price: $2,024.55
+Loss Percentage: -12.94%
+Loss Amount: -$25.87
+Stop-loss Level: 5.0% ($2,209.02)
+Status: STOP-LOSS EXCEEDED BY 7.94%
+Time Since Entry: Unknown (check trade timestamp)
+Action Required: Review trade execution and consider position adjustment
 
-🚨 **CRITICAL ALERT 2: STOP-LOSS TRIGGERED**
-- Position: ETH/USD BUY @ $2,193.60
-- Current Price: $2,021.97
-- Drawdown: -7.83%
-- Stop Loss Level: $2,083.92 (-5.0%)
-- Beyond Stop Loss: -2.83%
-- Time Since Entry: Multiple hours
-- Action Required: IMMEDIATE
+🔴 ALERT 2: STOP-LOSS TRIGGERED
+Symbol: ETH/USD
+Entry Price: $2,193.60
+Current Price: $2,024.55
+Loss Percentage: -7.71%
+Loss Amount: -$15.42
+Stop-loss Level: 5.0% ($2,083.92)
+Status: STOP-LOSS EXCEEDED BY 2.71%
+Time Since Entry: Unknown (check trade timestamp)
+Action Required: Review trade execution and consider position adjustment
 
-⚠️ **WARNING ALERT 1: DAILY TRADE LIMIT EXCEEDED**
-- Max Daily Trades: 2
-- Historical Trades: 4
-- Exceeded By: 2 trades
-- Risk: Potential over-trading and increased exposure
+⚠️ WARNING: PORTFOLIO CONCENTRATION RISK
+Issue: All 3 ETH positions are in loss (100% of ETH trades)
+Total ETH Loss: -$44.01 across 3 positions
+ETH represents 75% of total trades (3 out of 4)
 
-⚠️ **WARNING ALERT 2: HIGH CAPITAL UTILIZATION**
-- Total Capital: $250.00
-- Capital Used: $799.93
-- Utilization: 320.0%
-- Risk: Excessive leverage/position sizing
+⚠️ WARNING: STRATEGY CONFLICT
+Market Sentiment: BULLISH (from dashboard)
+Actual Price Action: BEARISH for ETH (all positions down)
+Trading Signal: BUY (conflict with current losses)
+Portfolio Performance: -5.71% overall
 
-=== CURRENT MARKET CONDITIONS ===
-- BTC/USD: $66,609.34 (down -0.27% from last check)
-- ETH/USD: $2,021.97 (down -0.62% from last check)
-- Market Sentiment: NEUTRAL (changed from BULLISH)
-- BTC Support: $66,624.74
-- ETH Support: $2,022.04
+⚠️ WARNING: NO PROFITABLE TRADES
+Status: 0 out of 4 trades have reached take-profit targets
+All trades are currently in loss
+Maximum loss: -12.94% (ETH/USD)
+Minimum loss: -0.82% (BTC/USD)
 
-=== POSITION ANALYSIS ===
-**ACTIVE POSITIONS:**
-1. ETH/USD @ $2,325.28: 🚨 CRITICAL (-13.05%)
-2. ETH/USD @ $2,193.60: 🚨 CRITICAL (-7.83%)
-3. BTC/USD @ $67,247.51: ✅ NORMAL (-0.95%)
-4. ETH/USD @ $2,052.38: ✅ NORMAL (-1.48%)
+⚠️ WARNING: BTC POSITION APPROACHING STOP-LOSS
+Symbol: BTC/USD
+Entry Price: $67,247.51
+Current Price: $66,695.00
+Current Loss: -0.82%
+Stop-loss Level: -5.0% ($63,885.13)
+Distance to Stop-loss: 4.18% remaining
+Risk: Medium (monitor closely)
 
-**STOP-LOSS STATUS:**
-- 2 of 4 positions have triggered stop-loss
-- Both are ETH positions with significant drawdown
-- No take-profit triggers detected
+=== MARKET CONTEXT ===
+Current ETH Price: $2,024.55
+Current BTC Price: $66,695.00
+Market Sentiment: BULLISH (conflict with price action)
+Trading Signal: BUY (conflict with current losses)
+Portfolio Drawdown: -5.71% (Acceptable < 10%)
 
 === RISK ASSESSMENT ===
-**HIGH RISK FACTORS:**
-1. Multiple stop-loss triggers (2 positions)
-2. High capital utilization (320%)
-3. Exceeded daily trade limits
-4. Market sentiment turning neutral
-
-**MODERATE RISK FACTORS:**
-1. BTC position approaching support
-2. Overall market volatility
-
-**LOW RISK FACTORS:**
-1. System operating in simulation mode
-2. Regular analysis schedule maintained
+Total Portfolio Loss: -5.71%
+Drawdown Status: Acceptable (below 10% critical threshold)
+Number of Triggered Stop-losses: 2 out of 4 trades (50%)
+Most Affected Asset: ETH (all 3 positions in loss)
+System Mode: SIMULATION (no real trades executed)
+Risk Level: MEDIUM (monitor closely)
 
 === RECOMMENDED ACTIONS ===
-**IMMEDIATE (Within 1 hour):**
-1. Exit ETH positions at $2,325.28 and $2,193.60 to limit losses
-2. Review and adjust position sizing rules
-3. Reset daily trade counter
+1. IMMEDIATE: Review ETH market conditions and news for bearish pressure
+2. Check if stop-loss orders would have been executed (system is in SIMULATION mode)
+3. Consider tightening stop-loss on remaining BTC position (currently -0.82%)
+4. Review trading strategy given conflict between bullish sentiment and bearish price action
+5. Consider reducing ETH exposure or implementing hedging strategy
+6. Verify dashboard analysis logic for market sentiment calculation
+7. Monitor BTC position closely as it approaches stop-loss threshold
+8. Consider pausing new BUY signals until market direction confirms bullish sentiment
 
-**SHORT-TERM (Within 24 hours):**
-1. Review trading strategy effectiveness
-2. Consider tightening stop-loss to 3-4% for volatile markets
-3. Implement position size limits based on total capital
+=== ALERT GENERATED BY ===
+Trading Dashboard Monitor Cron Job
+Job ID: trading_dashboard_monitor
+Next Check: Hourly
 
-**LONG-TERM (Within 1 week):**
-1. Backtest strategy with current market conditions
-2. Consider adding hedging strategies
-3. Review risk management framework
-
-=== SYSTEM STATUS ===
-- Trading System: Running normally
-- Last Analysis: 2026-03-31T06:26:08.175455 (fresh)
-- Analysis Schedule: Hourly (functioning)
-- Execution Mode: SIMULATION (no real funds at risk)
-- Next Scheduled Analysis: ~07:26 (1 hour from now)
-
-=== ALERT THRESHOLDS STATUS ===
-- Critical Alert: Stop-loss trigger (5% drawdown) → **2 TRIGGERED**
-- Warning Alert: 3% drawdown on any position → **4 TRIGGERED**
-- Information Alert: Take-profit trigger (10% gain) → **0 TRIGGERED**
-
-=== MONITORING SUMMARY ===
-The trading system is experiencing significant stress with 2 stop-loss triggers and excessive capital utilization. While operating in simulation mode protects real funds, these alerts indicate serious issues with the current trading strategy and risk management approach. Immediate review of position management and risk parameters is recommended.
-
-=== END OF CRITICAL ALERTS LOG ===
+=== END OF CRITICAL ALERTS ===

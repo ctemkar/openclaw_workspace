@@ -1,80 +1,75 @@
 TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Monitoring Time: 2026-03-31 01:21:45 (Asia/Bangkok)
-Job ID: trading_dashboard_monitor (cron:8200f3fa-346e-4003-9c64-21968b3bd930)
+======================================
+Timestamp: 2026-03-31 06:29:05 (Asia/Bangkok)
+Monitoring Interval: 06:26 - 06:29
+
+EXECUTIVE SUMMARY:
+------------------
+⚠️  SYSTEM STATUS: OPERATIONAL WITH CRITICAL ALERTS
+🔴  RISK LEVEL: HIGH
+💰  CAPITAL: $250.00 (simulation mode)
+📊  POSITIONS: 4 total (2 critical, 2 normal)
+
+CRITICAL FINDINGS:
+------------------
+1. **STOP-LOSS TRIGGERS**: 2 ETH positions have exceeded 5% stop-loss
+   - ETH @ $2,325.28: -12.98% (beyond stop by -7.98%)
+   - ETH @ $2,193.60: -7.75% (beyond stop by -2.75%)
+
+2. **CAPITAL UTILIZATION**: 320% ($799.93 used vs $250.00 capital)
+   - Excessive position sizing
+   - Risk of over-leverage
+
+3. **TRADE LIMIT VIOLATION**: 4 historical trades vs 2 daily limit
+   - Exceeded by 2 trades
+   - Potential over-trading
+
+MARKET CONDITIONS:
+------------------
+- BTC/USD: $66,645.82 (+0.06% from previous)
+- ETH/USD: $2,023.54 (+0.08% from previous)
+- Market Sentiment: NEUTRAL
+- Support Levels: BTC $66,647.72, ETH $2,023.29
+
+TRADING RECOMMENDATION:
+-----------------------
+Current Signal: BUY (BTC/USD)
+Recommended Action: BTC BUY @ $66,645.82
+Position Size: 0.001876 ($125.00)
+Stop Loss: $63,313.53 (-5.0%)
+Take Profit: $73,310.40 (+10.0%)
 
 SYSTEM STATUS:
-• Dashboard: Accessible (http://localhost:5001/)
-• Status: Running
-• Last Analysis: 33 minutes ago (2026-03-31T00:48:41.698451)
-• Analysis Schedule: Hourly
-• Trading Pairs: BTC/USD, ETH/USD
+--------------
+- ✅ Dashboard: Accessible at http://localhost:5001/
+- ✅ Analysis: Running hourly (last: 06:28:45)
+- ✅ Endpoints: All functional (status, trades, strategy, summary)
+- ⚠️  Mode: SIMULATION (no real trades executed)
+- ⚠️  Risk Management: Needs review and adjustment
 
-DATA INCONSISTENCIES DETECTED:
-1. Capital Reporting:
-   - HTML: $250 ($200 Gemini + $50 Binance)
-   - Status endpoint: $250.00
-   - Summary endpoint: $1000 (SANDBOX mode)
-   - Discrepancy: $1000 vs $250
-
-2. Max Trades Parameter:
-   - HTML: 5 total (3 Gemini + 2 Binance)
-   - Status: 2 max trades per day
-   - Strategy: 2 Gemini + 1 Binance = 3 total
-
-3. Trading Mode:
-   - Summary: SANDBOX (Simulated)
-   - Other endpoints: No mode indication
-
-TRADING ACTIVITY:
-• Total Historical Trades: 10
-• No new trades detected
-• Last trade: 4 hours 52 minutes ago (21:29)
-• Trade Stagnation: System appears inactive
-
-MARKET ANALYSIS:
-• Current BTC Price: $66,742 (+0.04% from last check)
-• Current ETH Price: $2,038.80 (+0.10% from last check)
-• System Signals: HOLD for both (20% BTC, 0% ETH confidence)
-• Trades Remaining Today: 2
-
-🚨 CRITICAL RISK ALERTS:
-
-1. STOP-LOSS VIOLATIONS: 8/10 positions exceed 5% stop-loss
-   • 3 positions exceed 10% loss threshold
-   • 6 positions exceed 7% stop-loss
-   • Average loss across all positions: 7.7%
-
-2. HIGH-RISK POSITIONS:
-   • Gemini BTC @ ~$74,308: 10.2% loss (4 positions)
-   • BTC @ $74,094.64: 10.0% loss
-   • BTC @ $71,386.00: 6.5% loss
-   • ETH @ $2,325.28: 12.3% loss
-   • ETH @ $2,193.60: 7.1% loss
-
-3. SYSTEM ISSUES:
-   • Appears stuck in SANDBOX mode
-   • No trading activity for 4+ hours
-   • Data inconsistencies across endpoints
-   • Risk management not enforcing stop-losses
-
-ESTIMATED FINANCIAL IMPACT:
-• On $1000 capital: ~$77 unrealized loss
-• On $250 capital: ~$19.25 unrealized loss
-• Risk of further losses if market declines
-
-IMMEDIATE ACTION REQUIRED:
-1. Manual intervention to close positions exceeding 10% loss (3 positions)
-2. Verify if system is actually trading or stuck in simulation
-3. Reconcile data inconsistencies
-4. Review trading strategy performance
-
-LOGS UPDATED:
-• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+IMMEDIATE ACTIONS REQUIRED:
+---------------------------
+1. Address 2 critical stop-loss triggers on ETH positions
+2. Review and fix capital utilization rules (currently 320%)
+3. Enforce daily trade limits (2 trades/day)
+4. Consider strategy adjustment given current market conditions
 
 NEXT MONITORING:
-• Scheduled: 5 minutes
-• Critical threshold: Any position exceeding 15% loss
+----------------
+Scheduled: ~07:28 (59 minutes from now)
+Will check: Price movements, new alerts, system status
 
-ALERT STATUS: CRITICAL - IMMEDIATE HUMAN INTERVENTION RECOMMENDED
+FILES UPDATED:
+--------------
+1. trading_monitoring.log - Full monitoring details
+2. critical_alerts.log - Critical alerts and recommendations
+3. trading_monitoring_summary.txt - This executive summary
+
+ALERT STATUS:
+-------------
+🔴 CRITICAL: 2 alerts (stop-loss triggers)
+⚠️  WARNING: 2 alerts (capital utilization, trade limits)
+✅ NORMAL: System operation, analysis schedule
+
+END OF SUMMARY
+==============

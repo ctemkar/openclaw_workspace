@@ -1,57 +1,49 @@
-TRADING DASHBOARD MONITOR SUMMARY
-===================================
-Timestamp: 2026-03-31 05:56:30 (Asia/Bangkok)
+TRADING MONITOR SUMMARY - 2026-03-31 06:51:30 (Asia/Bangkok)
 
-SYSTEM STATUS:
-✅ Dashboard active on http://localhost:5001/
-✅ Last analysis: 2026-03-31 05:43:18
-✅ Next analysis due: ~06:43:18
-✅ Status: Running
-✅ API Mode: Simulation (real trading requires credentials)
+✅ SYSTEM STATUS:
+- Dashboard: Running on http://localhost:5001/
+- Last Analysis: 2026-03-31T06:43:27.231752
+- Capital: $250.00
+- Risk Parameters: 5.0% SL, 10.0% TP, Max 2 trades/day
+- Execution Mode: SIMULATION (API credentials needed)
 
-CAPITAL & RISK:
-- Total Capital: $250.00
-- Stop Loss: 5.0%
-- Take Profit: 10.0%
-- Max trades/day: 2
-- Trading pairs: BTC/USD, ETH/USD
+📊 MARKET DATA:
+- BTC/USD: $66,689.00
+- ETH/USD: $2,023.37
+- Market Sentiment: BULLISH
+- Trading Signal: BUY
 
-ACTIVE POSITIONS (4):
-1. ETH/USD @ $2,325.28 (13:39:49) - LOSS: -12.66% 🚨 STOP-LOSS TRIGGERED
-2. ETH/USD @ $2,193.60 (00:33:02) - LOSS: -7.42% 🚨 STOP-LOSS TRIGGERED  
-3. BTC/USD @ $67,247.51 (21:29:41) - LOSS: -0.80% ⚠️ WATCH
-4. ETH/USD @ $2,052.38 (21:29:42) - LOSS: -1.05% ⚠️ WATCH
+📈 PORTFOLIO STATUS:
+- Total Trades: 4 (3 ETH, 1 BTC)
+- Total Investment: $799.93
+- Current Value: $755.84
+- Portfolio P&L: -5.51% (-$44.09)
+- Drawdown: Acceptable (5.51% < 10% threshold)
 
-PORTFOLIO PERFORMANCE:
-- Total Value: $756.06
-- Capital Deployed: $250.00
-- Portfolio P&L: -$43.86 (-5.5%)
-- ETH Exposure: 75.0% (HIGH CONCENTRATION RISK)
-- BTC Exposure: 25.0%
+⚠️ CRITICAL ALERTS:
+1. STOP-LOSS TRIGGERED: ETH/USD at $2325.28 → $2023.37 (-12.98%)
+2. STOP-LOSS TRIGGERED: ETH/USD at $2193.60 → $2023.37 (-7.76%)
+3. 50% of trades (2/4) have triggered stop-losses
+4. All ETH positions (3/3) are in loss
+5. BTC position approaching stop-loss (-0.83%, stop-loss at -5.0%)
 
-CRITICAL ALERTS:
-🚨 2 ETH positions below stop-loss levels (5% threshold)
-🚨 High ETH concentration (75% > 70% threshold)
-⚠️ Both BTC and ETH trading below support levels
-⚠️ Market appears bearish despite previous bullish sentiment
+🔍 RISK ASSESSMENT:
+- Portfolio concentration: 75% ETH exposure
+- Strategy conflict: Bullish sentiment vs bearish price action
+- System mode: Simulation (no real execution)
+- Risk level: MEDIUM (monitor closely)
 
-CURRENT MARKET PRICES:
-- BTC/USD: $66,713.00 (below support: $66,784.00)
-- ETH/USD: $2,030.83 (below support: $2,033.63)
+📋 RECOMMENDED ACTIONS:
+1. Review ETH market conditions for bearish pressure
+2. Check stop-loss execution logic (simulation mode)
+3. Monitor BTC position as it approaches stop-loss
+4. Review trading strategy given sentiment/price conflict
+5. Consider reducing ETH exposure or adding hedging
 
-IMMEDIATE ACTIONS REQUIRED:
-1. Execute stop-loss on ETH positions immediately
-2. Verify stop-loss orders on exchange
-3. Reduce ETH concentration to <50%
-4. Monitor BTC position closely
-5. Consider activating hedging strategy (Binance shorts)
+📁 LOGS UPDATED:
+- trading_monitoring.log: Full monitoring details
+- critical_alerts.log: Critical risk alerts
 
-STRATEGY OVERVIEW:
-- Name: Gemini_Longs_Binance_Shorts
-- Gemini (LONG): $35 per trade, max 2/day
-- Binance (SHORT): $9 per trade, max 1/day
-- Hedging: Binance shorts can hedge Gemini longs
+🔄 NEXT CHECK: Hourly (next analysis scheduled)
 
-NEXT MONITORING: 06:56:30 (1 hour)
-RISK LEVEL: CRITICAL
-URGENCY: HIGH
+=== MONITORING COMPLETE ===
