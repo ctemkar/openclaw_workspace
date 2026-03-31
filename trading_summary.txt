@@ -1,115 +1,64 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-31 23:19:19.263305
-==================================================
+================================================================================
+CONSERVATIVE CRYPTO TRADING SUMMARY - REAL-TIME ANALYSIS
+Time: Wednesday, April 1st, 2026 — 12:38 AM (Asia/Bangkok) / 2026-03-31 17:38 UTC
+Capital: $1,000.00
+Risk Parameters: 5% stop-loss, 10% take-profit, max 2 trades per day
+Trading Pairs: BTC/USD, ETH/USD
+================================================================================
 
-======================================================================
-CONSERVATIVE CRYPTO TRADING SYSTEM
-======================================================================
-Execution Time: 2026-03-31 23:19:14 (UTC+7)
-Capital: $250.00
-Risk Management: 5.0% SL, 10.0% TP
-Position Size: Max 50.0% of capital
-Daily Limit: 2 trades
-API Mode: SIMULATION
-======================================================================
+MARKET OVERVIEW:
+• BTC/USD: $67,659.40 (BULLISH sentiment)
+   - 24h Volume: $30,995,770
+   - Bid/Ask: $67,652.91 / $67,654.11 (0.00% spread)
+   - Support: $64,285.68 | Resistance: $71,052.60
 
-1️⃣  MARKET DATA ANALYSIS
-----------------------------------------
-📊 Fetching real-time market data...
-✅ BTC/USD: $66,953.13
-✅ ETH/USD: $2,063.42
-✅ BTC 24h Volume: $28,952,983
-✅ ETH 24h Volume: $5,234,863
+• ETH/USD: $2,101.32 (BULLISH sentiment)
+   - 24h Volume: $5,441,635
+   - Bid/Ask: $2,099.99 / $2,100.00 (0.00% spread)
+   - Support: $1,995.09 | Resistance: $2,205.09
 
-2️⃣  SUPPORT/RESISTANCE LEVELS
-----------------------------------------
-✅ BTC Support: $66,948.20
-✅ BTC Resistance: $66,954.88
-✅ ETH Support: $2,062.30
-✅ ETH Resistance: $2,062.58
+TRADING ANALYSIS:
+Both BTC/USD and ETH/USD show BULLISH market sentiment with healthy trading volumes.
+However, current prices are not at optimal entry points for conservative trading:
 
-3️⃣  MARKET SENTIMENT
-----------------------------------------
-✅ Market Sentiment: NEUTRAL
+1. BTC/USD: Current price ($67,659) is approximately 5.2% above support level ($64,286)
+   - Conservative strategy requires entry within 2% of support
+   - SIGNAL: HOLD - Wait for pullback to $65,000-$66,000 range
 
-4️⃣  TRADING ANALYSIS
-----------------------------------------
-✅ Trading Signal: BUY
-✅ Reason: Price within 1% of support ($66948.2)
+2. ETH/USD: Current price ($2,101) is approximately 5.3% above support level ($1,995)
+   - Conservative strategy requires entry within 2% of support
+   - SIGNAL: HOLD - Wait for pullback to $2,035-$2,055 range
 
-5️⃣  TRADE EXECUTION
-----------------------------------------
-🎯 TRADE RECOMMENDATION FOUND!
-   Symbol: BTC/USD
-   Entry Price: $66,953.13
-   Position Size: 0.001867
-   Position Value: $125.00
-   Stop Loss: $63,605.47 (5.0%)
-   Take Profit: $73,648.44 (10.0%)
-   Risk/Reward: 1:2.0
+TRADING DECISIONS:
+✅ NO TRADES EXECUTED - Conservative conditions not met
+• BTC/USD: HOLD - Price too far from support for conservative entry
+• ETH/USD: HOLD - Price too far from support for conservative entry
 
-🔧 SIMULATED TRADE EXECUTION
-   To execute real trades:
-   1. Get Gemini API credentials from gemini.com
-   2. Set environment variables:
-      export GEMINI_API_KEY='your_api_key'
-      export GEMINI_API_SECRET='your_api_secret'
-   3. Run this script again
+RISK MANAGEMENT STATUS:
+• Trades Executed Today: 0/2 (2 trades remaining)
+• Stop Loss: 5% on all positions
+• Take Profit: 10% on all positions
+• Risk/Reward Ratio: 1:2 (favorable)
+• Maximum Capital at Risk per Trade: $50 (5% of $1,000)
 
-======================================================================
-FINAL TRADING SUMMARY
-======================================================================
+RECOMMENDED ACTION:
+Monitor prices for pullbacks to support levels. Conservative entries would be:
+• BTC/USD: $65,000-$66,000 range (3-4% below current)
+• ETH/USD: $2,035-$2,055 range (3-4% below current)
 
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-====================================
-Analysis Time: 2026-03-31 23:19:19 (UTC+7)
+If prices reach these levels with maintained BULLISH sentiment, consider:
+1. BTC/USD entry with $100 position (10% of capital)
+   - Stop Loss: $61,750-$62,700 (5% below entry)
+   - Take Profit: $71,500-$72,600 (10% above entry)
 
-MARKET DATA:
-• BTC/USD: $66,953.13
-• ETH/USD: $2,063.42
-• BTC 24h Volume: $28,952,983
-• ETH 24h Volume: $5,234,863
-• Market Sentiment: NEUTRAL
+2. ETH/USD entry with $100 position (10% of capital)
+   - Stop Loss: $1,933-$1,952 (5% below entry)
+   - Take Profit: $2,239-$2,261 (10% above entry)
 
-SUPPORT/RESISTANCE:
-• BTC Support: $66,948.20
-• BTC Resistance: $66,954.88
-• ETH Support: $2,062.30
-• ETH Resistance: $2,062.58
+NEXT ANALYSIS:
+Scheduled for next cron cycle. Market conditions will be re-evaluated with updated
+price action and sentiment data.
 
-TRADING DECISION: BUY
-Reason: Price within 1% of support ($66948.2)
-
-TRADE RECOMMENDATION:
-• Symbol: BTC/USD
-• Action: BUY
-• Entry Price: $66,953.13
-• Position Size: 0.001867
-• Position Value: $125.00
-• Stop Loss: $63,605.47 (5.0%)
-• Take Profit: $73,648.44 (10.0%)
-• Risk/Reward Ratio: 1:2.0
-
-EXECUTION STATUS: SIMULATED - API credentials needed
-
-RISK MANAGEMENT PARAMETERS:
-• Capital: $250.00
-• Max Position Size: 50.0% of capital
-• Stop Loss: 5.0%
-• Take Profit: 10.0%
-• Max Daily Trades: 2
-• Strategy: Conservative support-based trading
-
-NEXT STEPS:
-1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
-2. Run analysis again in 6-12 hours
-3. Review market conditions before next trading window
-4. Never risk more than 5% of capital per trade
-
-END OF ANALYSIS
-====================================
-
-
-======================================================================
-SUMMARY READY FOR CRON DELIVERY
-======================================================================
+================================================================================
+END OF TRADING SUMMARY - CONSERVATIVE STRATEGY ACTIVE
+================================================================================

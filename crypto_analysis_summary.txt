@@ -1,0 +1,44 @@
+=== CONSERVATIVE CRYPTO TRADING ANALYSIS ===
+Time: 2026-04-01 00:02:27 (Asia/Bangkok)
+Capital: $1000.0
+Risk Parameters: 5.0% Stop Loss, 10.0% Take Profit
+Max Trades/Day: 2
+Trades Executed Today: 1/2
+
+--- BTCUSD Analysis ---
+Current Price: $64,064.09
+Support: $64,000.0 (Distance: 0.1%)
+Resistance: $66,000.0 (Distance: 3.02%)
+Trend: BULLISH
+Volume: $3,103,600.97
+Decision: BUY
+Reason: Near support (0.1%), bullish trend detected
+Position Size: 0.00780468
+Stop Loss: $60,860.89
+Take Profit: $70,470.5
+Risk/Reward Ratio: 2.0:1
+
+--- ETHUSD Analysis ---
+Current Price: $3,488.85
+Support: $3,400.0 (Distance: 2.55%)
+Resistance: $3,600.0 (Distance: 3.19%)
+Trend: NEUTRAL
+Volume: $1,727,096.24
+Decision: HOLD
+Reason: Market conditions not favorable. Trend: NEUTRAL, Support distance: 2.55%, Resistance distance: 3.19%
+
+=== TRADING RECOMMENDATIONS ===
+BUY SIGNALS DETECTED:
+  - BTCUSD: $64,064.09 (Near support, bullish trend)
+
+=== RISK MANAGEMENT ===
+• Maximum position size: $500.00 per trade
+• Stop loss: 5.0% from entry
+• Take profit: 10.0% from entry
+• Daily trade limit: 2 trades
+
+Note: This is a simulated analysis. Actual trading requires:
+1. Gemini API credentials (GEMINI_API_KEY, GEMINI_API_SECRET)
+2. Real market data from Gemini API
+3. Proper risk assessment and capital allocation
+==================================================

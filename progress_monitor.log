@@ -11620,3 +11620,42 @@ BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixe
 Click to open Dashboard:
 http://127.0.0.1:5001
 
+STATUS: [OK] API is UP
+BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixed_futures_bot.py
+--- Progress Monitor: Wed Apr  1 00:10:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5001
+
+STATUS: [OK] API is UP
+BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixed_futures_bot.py
+--- Progress Monitor: Wed Apr  1 00:20:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5001
+
+STATUS: [OK] API is UP
+BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixed_futures_bot.py
+--- Progress Monitor: Wed Apr  1 00:30:01 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5001
+
+STATUS: [OK] API is UP
+BOT: [OK] 3 BOTS RUNNING: simple_real_trader.py real_futures_trading_bot.py fixed_futures_bot.py
+--- Progress Monitor: Wed Apr  1 00:40:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5005
+
+STATUS: [OK] API is UP
+BOT: [WARN] 2 BOTS RUNNING: full_capital_bot.py (old_bot)
+   Multiple bots detected - may conflict
+--- Progress Monitor: Wed Apr  1 00:50:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5005
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: full_capital_bot.py
+   Strategy: Gemini LONG (1.5% dips), Binance SHORT (3.0% dips)
+   Capital:  total deployed
+--- Progress Monitor: Wed Apr  1 01:00:00 +07 2026 ---
+Click to open Dashboard:
+http://127.0.0.1:5005
+

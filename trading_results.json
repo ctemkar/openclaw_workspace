@@ -1,41 +1,52 @@
 {
-  "timestamp": "2026-03-31T07:21:12.912311",
+  "timestamp": "2026-04-01T00:38:45.357448",
   "capital": 1000.0,
-  "trades_today": 0,
-  "max_trades_per_day": 2,
-  "market_data": {
-    "BTCUSD": {
-      "price": 67271.91,
-      "24h_change": 0.0,
-      "volume": 63882.0784551,
-      "high": 0.0,
-      "low": 0.0
+  "prices": {},
+  "sentiment": {
+    "btcusd": {
+      "sentiment": "BULLISH",
+      "volume_usd": "$30,995,770",
+      "spread_percent": "0.00%",
+      "bid": "$67,652.91",
+      "ask": "$67,654.11"
     },
-    "ETHUSD": {
-      "price": 2019.02,
-      "24h_change": 0.0,
-      "volume": 2114.81038488,
-      "high": 0.0,
-      "low": 0.0
+    "ethusd": {
+      "sentiment": "BULLISH",
+      "volume_usd": "$5,441,635",
+      "spread_percent": "0.00%",
+      "bid": "$2,099.99",
+      "ask": "$2,100.00"
     }
   },
-  "analysis": {
-    "sentiment": {
-      "btc_trend": "neutral",
-      "eth_trend": "neutral",
-      "overall_sentiment": "neutral",
-      "recommendation": "hold"
+  "support_resistance": {
+    "btcusd": {
+      "support": 64285.68,
+      "resistance": 71052.6,
+      "current": 67669.14
     },
-    "BTCUSD": {
-      "support": 0.0,
-      "resistance": 0.0,
-      "current_position": "middle"
-    },
-    "ETHUSD": {
-      "support": 0.0,
-      "resistance": 0.0,
-      "current_position": "middle"
+    "ethusd": {
+      "support": 1995.09,
+      "resistance": 2205.09,
+      "current": 2100.09
     }
   },
-  "trades_executed": []
+  "trading_signals": [
+    {
+      "pair": "btcusd",
+      "price": 67659.4,
+      "signal": "HOLD",
+      "should_trade": false,
+      "position_size": 0.0,
+      "sentiment": "BULLISH"
+    },
+    {
+      "pair": "ethusd",
+      "price": 2101.32,
+      "signal": "HOLD",
+      "should_trade": false,
+      "position_size": 0.0,
+      "sentiment": "BULLISH"
+    }
+  ],
+  "executed_trades": []
 }
