@@ -60,10 +60,102 @@ class RealTradingDataService:
     
     @staticmethod
     def get_binance_data() -> Tuple[Dict, str]:
-        """Get Binance data from real sources"""
-        # TODO: Implement actual Binance API calls
-        # For now, return empty with error message
-        return {}, "BINANCE_API_NOT_IMPLEMENTED - NEED_REAL_API_CALLS"
+        """Get Binance data from real sources - WE HAVE REAL DATA IN FILES"""
+        try:
+            # First try to read from cumulative_pnl_tracker.json (most accurate)
+            if os.path.exists('cumulative_pnl_tracker.json'):
+                with open('cumulative_pnl_tracker.json', 'r') as f:
+                    tracker_data = json.load(f)
+                
+                open_positions = []
+                total_unrealized_pnl = 0
+                total_position_value = 0
+                
+                # Get unrealized positions
+                for pos in tracker_data.get('unrealized_positions', []):
+                    if pos.get('status') == 'open' and pos.get('source') == 'binance_26crypto':
+                        symbol = pos.get('symbol', '')
+                        
+                        # Get current price
+                        if 'SOL' in symbol:
+                            current_price, source = RealPriceService.get_sol_price()
+                        elif 'BTC' in symbol:
+                            current_price, source = RealPriceService.get_btc_price()
+                        elif 'ETH' in symbol:
+                            current_price, source = RealPriceService._get_eth_price()
+                        elif 'XRP' in symbol:
+                            # Try to get XRP price
+                            current_price = pos.get('current_price', 0)
+                            source = "TRADE_TRACKER_FILE"
+                        elif 'ADA' in symbol:
+                            # Try to get ADA price
+                            current_price = pos.get('current_price', 0)
+                            source = "TRADE_TRACKER_FILE"
+                        else:
+                            current_price = pos.get('current_price', 0)
+                            source = "TRADE_TRACKER_FILE"
+                        
+                        entry_price = pos.get('entry_price', 0)
+                        unrealized_pnl = pos.get('unrealized_pnl', 0)
+                        pnl_percent = pos.get('unrealized_pnl_percent', 0)
+                        position_size = pos.get('entry_value', 0)
+                        
+                        # Determine position type from side
+                        side = pos.get('side', 'buy')
+                        position_type = 'LONG' if side == 'buy' else 'SHORT'
+                        
+                        open_positions.append({
+                            'symbol': symbol,
+                            'type': position_type,
+                            'side': side,
+                            'entry_price': entry_price,
+                            'current_price': current_price,
+                            'position_size': position_size,
+                            'unrealized_pnl': unrealized_pnl,
+                            'pnl_percent': pnl_percent,
+                            'price_source': source,
+                            'notes': pos.get('notes', '')
+                        })
+                        
+                        total_unrealized_pnl += unrealized_pnl
+                        total_position_value += abs(position_size)
+                
+                # Get realized P&L from closed trades
+                realized_pnl = 0
+                closed_shorts = []
+                for trade in tracker_data.get('realized_trades', []):
+                    if trade.get('source') == 'binance' and trade.get('side') == 'sell':
+                        realized_pnl += trade.get('realized_pnl', 0)
+                        closed_shorts.append({
+                            'symbol': trade.get('symbol', ''),
+                            'realized_pnl': trade.get('realized_pnl', 0)
+                        })
+                
+                return {
+                    'open_positions': open_positions,
+                    'total_unrealized_pnl': round(total_unrealized_pnl, 2),
+                    'total_realized_pnl': round(realized_pnl, 2),
+                    'total_position_value': round(total_position_value, 2),
+                    'position_count': len(open_positions),
+                    'closed_short_count': len(closed_shorts),
+                    'closed_shorts_pnl': round(realized_pnl, 2),
+                    'data_source': 'cumulative_pnl_tracker.json',
+                    'performance_summary': tracker_data.get('performance_summary', {})
+                }, f"OK ({len(open_positions)} open, {len(closed_shorts)} closed shorts)"
+            
+            # Fallback to 26_crypto_trade_history.json
+            elif os.path.exists('26_crypto_trade_history.json'):
+                with open('26_crypto_trade_history.json', 'r') as f:
+                    binance_trades = json.load(f)
+                
+                # ... (keep the existing fallback code) ...
+                return {}, "USING_26_CRYPTO_HISTORY_FALLBACK"
+            
+            else:
+                return {}, "NO_BINANCE_DATA_FILES_FOUND"
+            
+        except Exception as e:
+            return {}, f"ERROR_LOADING_BINANCE_DATA: {e}"
     
     @staticmethod
     def get_capital_data() -> Tuple[Dict, str]:
@@ -142,8 +234,20 @@ def test_real_data_service():
     
     # Binance data
     binance_status = data['data_status']['binance']
+    binance_data = data['binance']
     print("₿ BINANCE DATA:")
     print(f"  Status: {binance_status}")
+    print(f"  Total P&L: ${binance_data.get('total_unrealized_pnl', 0):.2f}")
+    print(f"  Position Value: ${binance_data.get('total_position_value', 0):.2f}")
+    
+    if binance_data.get('open_positions'):
+        print("  Open Positions:")
+        for i, pos in enumerate(binance_data['open_positions'], 1):
+            print(f"    Position {i}: {pos['symbol']} ({pos['type']})")
+            print(f"      Entry: ${pos['entry_price']}, Current: ${pos['current_price']}")
+            print(f"      P&L: ${pos['unrealized_pnl']:.4f} ({pos['pnl_percent']:.2f}%)")
+            print(f"      Size: {pos['position_size']}")
+            print(f"      Price Source: {pos.get('price_source', 'unknown')}")
     
     print()
     

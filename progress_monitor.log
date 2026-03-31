@@ -11822,3 +11822,8 @@ http://127.0.0.1:5008
 
 STATUS: [OK] API is UP
 BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Wed Apr  1 04:00:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5008
+(Auto-refreshes every 10 seconds)
+

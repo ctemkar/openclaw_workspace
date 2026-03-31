@@ -64,6 +64,7 @@ ERROR PATTERNS:
 3. Margin Issues: "Margin is insufficient" (from previous logs)
 4. Dashboard Accessibility: Port 5001 offline
 5. Process Inactivity: Bot stopped after cycle 20 (2+ hours ago)
+6. SIGTERM Signal: Process receiving termination signals (likely from OpenClaw exec timeout)
 
 PERFORMANCE METRICS:
 ====================
@@ -97,6 +98,7 @@ CRITICAL FINDINGS:
 3. MARGIN INSUFFICIENCY: Blocking all trade attempts
 4. SYMBOL STATUS ERRORS: MKR/USDT invalid on Binance
 5. DASHBOARD OFFLINE: No web monitoring interface
+6. PROCESS TERMINATION: SIGTERM signals detected (likely OpenClaw exec timeout)
 
 RECOMMENDATIONS:
 ================
@@ -124,3 +126,39 @@ NEXT MONITORING CHECK:
 
 LOG COMPLETION TIME: 2026-04-01 03:42:15
 =========================================
+============================================================
+MONITORING CHECK: 2026-04-01 03:55:50
+============================================================
+{
+  "timestamp": "2026-04-01 03:55:32",
+  "binance_status": "Real API needed",
+  "short_positions": 0
+}
+
+Drawdown Analysis: 0.00%
+
+CRITICAL ALERTS:
+  - LOW AVAILABLE CAPITAL: $0.00
+
+============================================================
+MONITORING CHECK: 2026-04-01 03:56:47
+============================================================
+{
+  "timestamp": "2026-04-01 03:56:47",
+  "initial_capital": 946.97,
+  "current_capital": 531.65,
+  "total_capital": 685.67,
+  "gemini_capital": 531.65,
+  "binance_capital": 154.02,
+  "deployed_capital": 265.82,
+  "available_capital": 419.85,
+  "gemini_pnl": 2.16,
+  "short_positions": 0,
+  "drawdown_amount": 415.32000000000005,
+  "drawdown_percent": 43.857777965511055
+}
+
+Drawdown Analysis: 43.86%
+
+CRITICAL ALERTS:
+  - CRITICAL DRAWDOWN: 43.86% (exceeds 20% threshold)

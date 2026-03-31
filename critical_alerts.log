@@ -3,19 +3,20 @@ CRITICAL TRADING ALERTS LOG
 Alert Time: 2026-04-01 03:42:15 (Asia/Bangkok)
 Monitoring Source: Trading log analysis and system status check
 
-🔴 CRITICAL ALERT 1: TRADING BOT INACTIVE - PROCESS STOPPED
-===========================================================
+🔴 CRITICAL ALERT 1: TRADING BOT INACTIVE - PROCESS STOPPED BY SIGTERM
+=======================================================================
 Severity: CRITICAL
 Type: System Failure
-Time Detected: Current analysis (03:42:15)
+Time Detected: Current analysis (03:53:00)
 Details:
 • Last Active Cycle: Cycle 20 at 01:26:05
-• Inactivity Duration: ~2 hours, 16 minutes
+• Inactivity Duration: ~2 hours, 27 minutes
 • Expected Next Cycle: ~01:31:05 (MISSED)
-• Process Status: Appears to have stopped/crashed
+• Termination Signal: SIGTERM detected
+• Error Source: "Exec failed (salty-ti, signal SIGTERM)" - OpenClaw exec tool
+• Likely Cause: OpenClaw exec timeout or resource limit
 • Impact: No trading activity, missed opportunities
-• Error Pattern: No crash logs in recent bot log
-Action Required: IMMEDIATE investigation and restart
+Action Required: IMMEDIATE investigation of OpenClaw exec configuration and restart
 
 🔴 CRITICAL ALERT 2: CAPITAL DRAWDOWN EXCEEDS THRESHOLD
 ========================================================
@@ -153,14 +154,17 @@ From trading_summary_20260331_1231.txt:
    • Stop-loss Setting: 5%
    • Exceedance: 0.95 percentage points
 
-NEW CRITICAL FINDING: PROCESS INACTIVITY
-========================================
-• Detection Time: 03:42:15
-• Issue: Trading bot appears to have stopped/crashed
+NEW CRITICAL FINDING: PROCESS TERMINATED BY SIGTERM
+====================================================
+• Detection Time: 03:53:00
+• Issue: Trading bot terminated by SIGTERM signal
+• Error Message: "Exec failed (salty-ti, signal SIGTERM)"
+• Source: OpenClaw exec tool (session ID: salty-ti*)
 • Last Activity: Cycle 20 at 01:26:05
-• Duration: ~2 hours, 16 minutes of inactivity
+• Duration: ~2 hours, 27 minutes of inactivity
 • Expected Behavior: 5-minute cycles (300 seconds)
-• Missed Cycles: Approximately 27 cycles missed
+• Missed Cycles: Approximately 29 cycles missed
+• Likely Cause: OpenClaw exec timeout or resource limit
 • Urgency: HIGH - No trading activity occurring
 
 IMMEDIATE ACTION PRIORITIES:
@@ -198,3 +202,20 @@ NEXT ALERT CHECK: After bot restart and next trading cycle
 ===========================================================
 • Monitor for: Process restart success, execution capability, margin status
 • Alert if: Bot remains inactive, drawdown worsens, new stop-loss triggers
+============================================================
+CRITICAL ALERT: 2026-04-01 03:55:50
+============================================================
+LOW AVAILABLE CAPITAL: $0.00
+
+Context:
+Drawdown: 0.00%
+Available Capital: $0.00
+
+============================================================
+CRITICAL ALERT: 2026-04-01 03:56:47
+============================================================
+CRITICAL DRAWDOWN: 43.86% (exceeds 20% threshold)
+
+Context:
+Drawdown: 43.86%
+Available Capital: $419.85
