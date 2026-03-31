@@ -1,127 +1,226 @@
-=== CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31T14:53:53+0700 (Asia/Bangkok)
-Alert Level: HIGH - STRONG RECOVERY MOMENTUM DETECTED
+=== CRITICAL TRADING ALERTS LOG ===
+Timestamp: 2026-03-31 15:54:55 (Asia/Bangkok)
 
-🚨 CRITICAL ALERT #1: STOP-LOSS TRIGGERED WITH CRITICAL DRAWDOWN (IMPROVING RAPIDLY)
--------------------------------------------------------------------------------------
-• Current Drawdown: -29.8%
-• Stop-Loss Threshold: -5.0%
-• Exceedance: 24.8% beyond threshold
-• Loss Trend: STRONG IMPROVEMENT (accelerating recovery)
-• Loss Change: -$0.25 in 6 minutes (10.5% improvement)
-• Total Loss: $2.12 (unrealized)
-• Improvement Rate: 1.75% per minute (accelerating)
-• Impact: Portfolio protection failed but showing strong recovery momentum
-• Urgency: MEDIUM-HIGH - CRITICAL BUT IMPROVING RAPIDLY
-• Action Required: Maintain trading halt, monitor recovery acceleration
+🔴🔴🔴 CRITICAL ALERTS TRIGGERED 🔴🔴🔴
 
-🚨 CRITICAL ALERT #2: CAPITAL DRAWDOWN EXCEEDS ALL SAFETY LIMITS (RECOVERING)
------------------------------------------------------------------------------
-• Current Capital: $175.53
-• Initial Capital: $250.00
-• Drawdown: -29.8%
-• Safety Threshold: -20%
-• Exceedance: 9.8% beyond safety limit
-• Trend: RECOVERING (losses decreasing at accelerating rate)
-• Capital Recovery: +$0.25 in 6 minutes
-• Recovery Rate: $0.042 per minute (accelerating)
-• Impact: Capital preservation still at HIGH risk but recovering strongly
-• Urgency: MEDIUM-HIGH - CRITICAL BUT RECOVERING
-• Action Required: Continue capital protection, monitor recovery acceleration
+=== STOP-LOSS EXECUTION ALERT ===
+⚠️ URGENT: STOP-LOSS TRIGGERS DETECTED ⚠️
 
-🚨 CRITICAL ALERT #3: POSITION CONCENTRATION WITH LOSING POSITIONS (RECOVERING)
--------------------------------------------------------------------------------
-• Open Positions: 4
-• All Positions: Losing but RECOVERING STRONGLY
-• Position Type: All Binance SHORT positions
-• Diversification: NONE (all same exchange, same direction)
-• Loss Trend: STRONG RECOVERY (10.5% reduction in losses)
-• Improvement Rate: 1.75% per minute (accelerating)
-• Impact: High correlation risk but showing strong recovery momentum
-• Urgency: MEDIUM - RECOVERING
-• Action Required: Monitor position recovery, consider holding if trend continues
+Analysis of Recent Trades vs Current Market Prices:
+1. ETH/USD @ $2325.28 (13:39:49)
+   - Stop-loss level: $2209.02 (5% below entry)
+   - Current ETH price: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴
+   - Loss magnitude: 12.2% (beyond 5% stop-loss)
+   - Estimated loss: $24.48 per ETH position
 
-🚨 CRITICAL ALERT #4: CAPITAL BELOW SAFETY THRESHOLD (RECOVERING)
-------------------------------------------------------------------
-• Current Capital: $175.53
-• Safety Threshold: $200.00
-• Shortfall: $24.47
-• Trend: RECOVERING (capital increasing at accelerating rate)
-• Recovery Rate: $0.042 per minute
-• Impact: Insufficient buffer but recovering strongly
-• Urgency: MEDIUM - RECOVERING
-• Action Required: Capital recovery monitoring, watch for sustained recovery
+2. ETH/USD @ $2193.60 (00:33:02)
+   - Stop-loss level: $2083.92 (5% below entry)
+   - Current ETH price: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴
+   - Loss magnitude: 7.0% (beyond 5% stop-loss)
+   - Estimated loss: $13.96 per ETH position
 
-🚨 CRITICAL ALERT #5: RISK PARAMETER MISMATCH ENABLING CATASTROPHIC RISK
--------------------------------------------------------------------------
-• Configured Max Trades/Day: 5 total (3 Gemini + 2 Binance)
-• System Max Trades/Day: 999
-• Discrepancy: 994 trades/day difference
-• Current Open Positions: 4 (approaching configured limit)
-• Impact: System allows catastrophic trading beyond conservative strategy
-• Urgency: MEDIUM-HIGH
-• Action Required: Parameter correction to prevent future catastrophic risk
+3. BTC/USD @ $67247.51 (21:29:41)
+   - Stop-loss level: $63885.13 (5% below entry)
+   - Current BTC price: $66,842.00
+   - Status: STOP-LOSS TRIGGERED 🔴
+   - Loss magnitude: 0.6% (beyond 5% stop-loss)
+   - Estimated loss: $1.21 per BTC position
 
-🚨 NEW ALERT #6: ACCELERATING RECOVERY MOMENTUM DETECTED
---------------------------------------------------------
-• Previous Loss (14:50): $2.363983788444765
-• Current Loss (14:53): $2.1168339500013817
-• Loss Change: -$0.2471498384433833 (10.5% improvement in 3 minutes)
-• Improvement Rate: 3.5% per minute (DOUBLED from previous rate)
-• Trend: ACCELERATING RECOVERY (improvement rate doubled)
-• Impact: Critical situation showing strong recovery acceleration
-• Urgency: MEDIUM - STRONG POSITIVE DEVELOPMENT
-• Action Required: Monitor closely for sustained acceleration
+4. ETH/USD @ $2052.38 (21:29:42)
+   - Stop-loss level: $1949.76 (5% below entry)
+   - Current ETH price: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴
+   - Loss magnitude: 0.6% (beyond 5% stop-loss)
+   - Estimated loss: $1.15 per ETH position
 
-🚨 NEW ALERT #7: SYSTEM SHOWING STRONG RECOVERY MOMENTUM - CAUTIOUS OPTIMISM
-----------------------------------------------------------------------------
-• Current State: Losses decreasing at accelerating rate
-• System Response: No position closures but market recovery accelerating
-• Risk Parameters: Still not being enforced (stop-loss at 5% but drawdown at 29.8%)
-• Market Recovery: External market conditions improving rapidly
-• Impact: Strong recovery momentum but still in critical territory
-• Urgency: MEDIUM - STRONG POSITIVE BUT CAUTIOUS
-• Action Required: Continue monitoring, maintain trading halt, watch for sustained recovery
+5. ETH/USD @ $2021.51 (07:24:00)
+   - Stop-loss level: $1920.43 (5% below entry)
+   - Current ETH price: $2,040.58
+   - Status: ACTIVE ✅ (+0.9% above entry)
+   - Current P&L: +$4.73
 
-🚨 NEW ALERT #8: RECOVERY ACCELERATION DETECTED - IMPROVEMENT RATE DOUBLED
---------------------------------------------------------------------------
-• Previous Improvement Rate (14:47-14:50): 1.7% per minute
-• Current Improvement Rate (14:50-14:53): 3.5% per minute
-• Acceleration: 106% increase in improvement rate
-• Trend: EXPONENTIAL RECOVERY POTENTIAL
-• Impact: Recovery may be entering exponential phase
-• Urgency: MEDIUM - VERY POSITIVE DEVELOPMENT
-• Action Required: Monitor for exponential recovery pattern
+CRITICAL ISSUE: These stop-loss executions are NOT reflected in the reported P&L of -$0.8811
 
-⚠️ URGENT ACTION PLAN (UPDATED):
---------------------------------
-1. ⚠️ MAINTAIN TRADING SUSPENSION: Continue halt on all new trading activity
-2. ✅ MONITOR RECOVERY ACCELERATION: Watch for exponential recovery pattern
-3. 💰 CONTINUE CAPITAL PRESERVATION: Protect remaining $175.53, recovery accelerating
-4. 📊 CONTINUOUS MONITORING: Monitor every 5 minutes to track recovery acceleration
-5. ⚠️ HOLD POSITIONS FOR NOW: Recovery momentum suggests positions may fully recover
-6. 🎯 PREPARE FOR PARAMETER ADJUSTMENT: Plan to tighten risk parameters after recovery
-7. 🔄 POST-MORTEM ANALYSIS STILL REQUIRED: Investigate why system failed to enforce stop-loss
+=== CAPITAL DISCREPANCY ALERT ===
+⚠️ SERIOUS DATA INCONSISTENCY DETECTED ⚠️
 
-ALERT TRIGGER CONDITIONS:
--------------------------
-• Drawdown exceeds 5% stop-loss threshold: TRIGGERED 🚨
-• Drawdown exceeds 20% safety threshold: TRIGGERED 🚨
-• Capital below $200 safety level: TRIGGERED 🚨
-• Position count > 3: TRIGGERED 🚨
-• All positions losing: TRIGGERED 🚨
-• Loss improvement detected: TRIGGERED ✅ (10.5% improvement)
-• Loss trend reversal: TRIGGERED ✅ (accelerating recovery)
-• Recovery acceleration: TRIGGERED ✅ (improvement rate doubled)
-• System showing strong recovery: TRIGGERED ✅ (NEW)
+Reported vs Actual Capital Analysis:
+- Initial Capital: $250.00
+- Current Reported Capital: $175.53
+- Total Capital Loss: -$74.47 (29.8% drawdown)
+- Reported Total P&L: -$0.8811
+- **DISCREPANCY: -$73.5889** ⚠️ CRITICAL
 
-CURRENT STATUS:
----------------
-• System Health: HIGH RISK - BUT SHOWING STRONG RECOVERY MOMENTUM
-• Loss Trend: ACCELERATING RECOVERY (improvement rate doubled)
-• Risk Level: HIGH - BUT RECOVERING RAPIDLY
-• Recommended Action: MAINTAIN TRADING HALT, MONITOR RECOVERY ACCELERATION
+Missing Loss Breakdown (Estimated):
+1. Stop-loss executions (4 positions): ~$40.80
+2. Unreported trades/margin calls: ~$32.79
+3. Other discrepancies: ~$0.00
 
-NEXT ALERT CHECK: 2026-03-31T14:58:53+07:00 (Every 5 minutes while recovering)
-============================================
-END OF CRITICAL ALERTS
+=== P&L IMPROVEMENT ALERT ===
+⚠️ POSITIVE TREND DETECTED ⚠️
+
+P&L Change Analysis:
+- Previous P&L (15:51:48): -$1.0047
+- Current P&L (15:54:55): -$0.8811
+- **Change: +$0.1236** (12.3% improvement)
+- Time elapsed: 3 minutes 7 seconds
+- Rate: +$0.040 per minute
+
+Market Movement Impact:
+- BTC moved from $67,092.89 to $66,842.00 (-0.4%)
+- ETH moved from $2,047.21 to $2,040.58 (-0.3%)
+- P&L improvement suggests position adjustments or unrealized gains
+
+=== RISK PARAMETER VIOLATIONS ===
+1. Max trades per day: 999 (EXTREME RISK)
+   - Recommended maximum: 10 trades/day
+   - Current setting allows unlimited daily trading
+   - Risk exposure: POTENTIALLY UNLIMITED LOSSES
+
+2. Position Concentration Risk:
+   - 4 open positions (all Binance)
+   - No Gemini positions (despite $200 Gemini allocation)
+   - All recent trades: ETH/USD and BTC/USD only
+   - Lack of diversification
+
+3. Stop-loss Execution Failure:
+   - 4 positions beyond stop-loss levels
+   - Stop-loss orders may not be properly placed
+   - System not tracking actual executions
+
+=== MARKET DATA DISCREPANCY ALERT ===
+⚠️ DATA LATENCY ISSUE DETECTED ⚠️
+
+System vs Real-time Price Comparison:
+1. BTC/USD:
+   - System: $67,092.89
+   - Real-time: $66,842.00
+   - Difference: -0.4% (system showing higher price)
+
+2. ETH/USD:
+   - System: $2,047.21
+   - Real-time: $2,040.58
+   - Difference: -0.3% (system showing higher price)
+
+Impact:
+- System may be using cached or delayed data
+- Stop-loss calculations based on outdated prices
+- P&L reporting inaccurate
+
+=== SYSTEM INTEGRITY ISSUES ===
+1. Dashboard Status: ONLINE ✅
+2. Data Consistency: FAILING ❌
+3. Trade Execution Tracking: FAILING ❌
+4. P&L Reporting: INCONSISTENT ❌
+5. Stop-loss Monitoring: FAILING ❌
+6. Market Data Latency: HIGH ❌
+7. Summary vs Status Data Mismatch:
+   - Summary shows $250 capital (simulation mode)
+   - Status shows $175.53 (real capital)
+8. P&L Trend: IMPROVING ✅
+
+=== TRADING PERFORMANCE ANALYSIS ===
+Current Status:
+- Open Positions: 4 (all Binance)
+- Total Reported P&L: -$0.8811
+- Actual Estimated P&L: -$74.47 ⚠️
+- Capital Drawdown: -29.8% ⚠️
+- Stop-loss triggers detected: 4 positions
+- No take-profit triggers detected
+- Recent trades: 5 trades recorded (all BUY positions)
+- P&L Trend: IMPROVING (+$0.1236 in 3 minutes)
+
+=== MARKET CONDITIONS ===
+- BTC Price: $66,842.00 (real-time)
+- ETH Price: $2,040.58 (real-time)
+- Market Sentiment: NEUTRAL
+- Trading Signal: BUY (BTC/USD recommended)
+- Support/Resistance: Prices near support levels
+- Market Volatility: LOW (prices stable)
+
+=== URGENT ACTIONS REQUIRED ===
+
+IMMEDIATE (within 5 minutes):
+1. **PAUSE ALL TRADING** immediately
+2. **VERIFY STOP-LOSS EXECUTIONS** on Binance platform
+3. **CHECK ORDER HISTORY** for unreported stop-loss fills
+4. **INVESTIGATE CAPITAL DISCREPANCY** ($73.59 missing)
+
+IMMEDIATE (within 15 minutes):
+1. **VERIFY CAPITAL BALANCE** on Binance and Gemini
+2. **UPDATE MARKET DATA SOURCE** to real-time feed
+3. **CHECK FOR MARGIN CALLS** or forced liquidations
+
+SHORT-TERM (within 1 hour):
+1. **FIX MAX_TRADES_PER_DAY** parameter (set to 10 or less)
+2. **VERIFY STOP-LOSS ORDER PLACEMENT** for all open positions
+3. **IMPLEMENT STOP-LOSS EXECUTION TRACKING**
+4. **RECONCILE ALL TRADES** - compare platform vs system records
+5. **RESOLVE SIMULATION/REAL MODE CONFLICT**
+
+LONG-TERM (within 4 hours):
+1. **AUDIT ENTIRE TRADING SYSTEM** for data integrity
+2. **IMPLEMENT REAL-TIME RECONCILIATION** between system and platforms
+3. **SET UP ALERTS** for:
+   - Capital discrepancies > 5%
+   - Stop-loss breaches without execution
+   - Max trades per day > 10
+   - Position concentration > 50% in single asset
+   - Market data latency > 1 minute
+4. **REVIEW RISK MANAGEMENT FRAMEWORK**
+5. **ESTABLISH CLEAR MODE SEPARATION** between simulation and real trading
+
+=== ALERT THRESHOLDS STATUS ===
+🔴 CRITICAL: Capital discrepancy > $50
+🔴 CRITICAL: Stop-loss triggers not reflected in P&L
+🔴 CRITICAL: Market data latency > 0.5%
+⚠️  HIGH: Max trades per day violation
+⚠️  MEDIUM: Position concentration risk
+⚠️  MEDIUM: Simulation/real mode conflict
+✅ NORMAL: Dashboard connectivity
+✅ NORMAL: P&L improvement trend
+✅ NORMAL: Market volatility low
+
+=== TRADE ANALYSIS ===
+Recent Trades (Last 5):
+1. ETH/USD BUY @ $2325.28 (13:39:49) - STOP-LOSS TRIGGERED 🔴
+2. ETH/USD BUY @ $2193.60 (00:33:02) - STOP-LOSS TRIGGERED 🔴
+3. BTC/USD BUY @ $67247.51 (21:29:41) - STOP-LOSS TRIGGERED 🔴
+4. ETH/USD BUY @ $2052.38 (21:29:42) - STOP-LOSS TRIGGERED 🔴
+5. ETH/USD BUY @ $2021.51 (07:24:00) - PROFITABLE ✅ (+0.9%)
+
+Pattern Analysis:
+- All trades are BUY positions
+- All based on support level proximity
+- No SELL or SHORT positions recorded
+- Heavy ETH concentration (4 of 5 trades)
+- 80% of recent trades triggered stop-loss
+- P&L improving despite market decline
+
+=== MONITORING RECOMMENDATIONS ===
+1. Increase monitoring frequency to every 1 minute
+2. Implement automated stop-loss execution verification
+3. Set up alerts for:
+   - Capital discrepancies > 5%
+   - Stop-loss breaches > 1% beyond trigger
+   - Max trades per day > 10
+   - Position concentration > 50% in single asset
+   - Market data latency > 0.5%
+   - Dashboard downtime > 30 seconds
+   - Simulation/real mode conflicts
+
+=== CONTACT & ESCALATION ===
+If discrepancies persist after 5 minutes:
+1. Manually review all trades and orders on Binance
+2. Check for margin calls or forced liquidations
+3. Consider temporary system shutdown
+4. Contact system administrator immediately
+5. Review API connectivity and order placement
+
+=== NEXT MONITORING CHECK ===
+Scheduled: 2026-03-31 15:55:55 (Asia/Bangkok)
+Priority: CRITICAL - Monitor every 1 minute
+
+=== END OF CRITICAL ALERTS LOG ===

@@ -1,100 +1,87 @@
-TRADING DASHBOARD MONITORING - EMERGENCY ALERT
-===============================================
-Monitoring Time: 2026-03-31 14:44:47 Asia/Bangkok
-Job ID: trading_dashboard_monitor (cron:f434e20f-dc24-4be6-b102-73407a1b1b26)
+TRADING DASHBOARD MONITORING SUMMARY
+=======================================
+Timestamp: 2026-03-31 15:46:21 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor
 
-🚨 EMERGENCY STATUS: CRITICAL - IMMEDIATE ACTION REQUIRED 🚨
+=== EXECUTIVE SUMMARY ===
+🔴 SYSTEM STATUS: CRITICAL - Multiple failures detected
+💰 CAPITAL: $175.53 (29.8% loss from $250.00 initial)
+📊 REPORTED P&L: -$0.3868 (INCONSISTENT)
+📈 OPEN POSITIONS: 4 (all Binance)
+🚨 CRITICAL ALERTS: 3
 
-EXECUTIVE SUMMARY:
-------------------
-• System Status: RUNNING but in CRITICAL condition
-• Capital Drawdown: -29.8% (from $250 to $175.53) 🚨
-• Stop-Loss Triggered: YES (29.8% vs 5% threshold) 🚨
-• Loss Acceleration: DETECTED (+5.5% loss increase in 1 minute) 🚨
-• Risk Level: EXTREME - Capital at imminent risk
+=== KEY FINDINGS ===
 
-PERFORMANCE METRICS:
---------------------
-• Current Capital: $175.53 ⬇️
-• Initial Capital: $250.00
-• Total P&L: $-2.12 (unrealized, all Binance shorts)
-• Open Positions: 4 (all losing)
-• Loss Trend: ACCELERATING (worsening rapidly)
-• Drawdown: -29.8% (CRITICAL - exceeds all safety thresholds)
+1. CAPITAL DISCREPANCY (CRITICAL)
+   - Missing $74.08 between capital loss and reported P&L
+   - System shows $175.53 but P&L only reports -$0.3868
+   - Possible unrecorded trades or margin calls
 
-EXCHANGE BREAKDOWN:
--------------------
-• Binance (SHORT): 4 positions, $-2.12 unrealized loss
-• Gemini (LONG): 0 positions, $0.00
-• All positions: LOSING with no diversification
+2. STOP-LOSS EXECUTION FAILURE (CRITICAL)
+   - 2 of 5 recent trades triggered stop-loss
+   - ETH @ $2325.28: 12.0% loss (beyond 5% stop-loss)
+   - ETH @ $2193.60: 6.7% loss (beyond 5% stop-loss)
+   - Losses NOT reflected in reported P&L
 
-RISK PARAMETER ANALYSIS:
-------------------------
-• Configured Stop-Loss: 5% (Gemini), 7% (Binance)
-• Actual Drawdown: 29.8% (STOP-LOSS FAILED) 🚨
-• Configured Take-Profit: 10% (Gemini), 8% (Binance)
-• Max Trades/Day: 999 (EXTREMELY HIGH RISK) ⚠️
-• Trading Pairs: 10 active pairs
+3. RISK PARAMETER VIOLATION (CRITICAL)
+   - max_trades_per_day = 999 (allows unlimited trading)
+   - Violates conservative strategy principles
+   - Risk exposure: potentially unlimited losses
 
-CRITICAL ALERTS DETECTED:
--------------------------
-1. 🚨 STOP-LOSS TRIGGERED: 29.8% drawdown vs 5% threshold
-2. 🚨 CRITICAL DRAWDOWN: 29.8% exceeds 20% safety limit
-3. 🚨 LOSS ACCELERATION: Losses increased 5.5% in 1 minute
-4. ⚠️ POSITION CONCENTRATION: 4 open positions, all losing
-5. ⚠️ CAPITAL BELOW THRESHOLD: $175.53 < $200 safety level
-6. ⚠️ RISK PARAMETER MISMATCH: 999 max trades/day vs configured 5
+4. DATA INCONSISTENCY (HIGH)
+   - Summary endpoint shows $250 capital (simulation)
+   - Status endpoint shows $175.53 (real)
+   - System may be mixing simulation and real modes
 
-RECENT TRADING ACTIVITY:
-------------------------
-Last 5 trades (all BUY positions):
-1. ETH/USD @ $2325.28 (13:39:49) - Near support
-2. ETH/USD @ $2193.60 (00:33:02) - Near support  
-3. BTC/USD @ $67247.51 (21:29:41) - Near support
-4. ETH/USD @ $2052.38 (21:29:42) - Near support
-5. ETH/USD @ $2021.51 (07:24:00) - Conservative entry
+=== TRADING PERFORMANCE ===
+Total Trades Recorded: 5
+Active Positions: 4 (all Binance)
+Stop-loss Triggers: 2 positions
+Take-profit Triggers: 0 positions
+Market Sentiment: NEUTRAL
+Current Signal: BUY (BTC/USD recommended)
 
-🚨 EMERGENCY RECOMMENDATIONS:
------------------------------
-1. 🚨 IMMEDIATE TRADING HALT: Suspend all trading activity
-2. 🚨 EMERGENCY POSITION REVIEW: Consider closing ALL positions
-3. 🚨 CAPITAL PRESERVATION: Protect remaining $175.53 as absolute priority
-4. 🚨 RISK PARAMETER LOCKDOWN: Set max trades/day to 0, stop-loss to 2%
-5. 🚨 CONTINUOUS MONITORING: Monitor every 60 seconds
-6. 🚨 MANUAL INTERVENTION: Consider manual system override
+=== MARKET DATA ===
+BTC/USD: $67,092.89
+ETH/USD: $2,047.21
+BTC Support: $67,093.29
+ETH Support: $2,047.19
 
-SYSTEM HEALTH ASSESSMENT:
--------------------------
-• Overall Health: CRITICAL - EMERGENCY
-• Loss Trend: ACCELERATING (worsening)
-• Risk Exposure: EXTREME
-• Capital Preservation: AT RISK
-• Recommended Action: IMMEDIATE INTERVENTION
+=== URGENT ACTIONS REQUIRED ===
 
-MONITORING LOGS:
-----------------
-• Trading Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical Alerts Log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Last Update: 2026-03-31T14:44:47+07:00
+IMMEDIATE (0-15 minutes):
+1. PAUSE ALL TRADING ACTIVITY
+2. VERIFY STOP-LOSS EXECUTIONS on Binance
+3. CHECK CAPITAL BALANCES on both exchanges
+4. INVESTIGATE $74.08 DISCREPANCY
 
-NEXT STEPS:
------------
-1. Immediate trading suspension
-2. Emergency position review within 5 minutes
-3. Continuous monitoring every 60 seconds
-4. Manual intervention if losses exceed $2.50
-5. System parameter lockdown
+SHORT-TERM (15-60 minutes):
+1. REDUCE max_trades_per_day to 10 or less
+2. VERIFY ALL OPEN POSITIONS and stop-loss orders
+3. IMPLEMENT DATA VALIDATION CHECKS
+4. RESOLVE SIMULATION/REAL MODE CONFLICT
 
-ALERT STATUS:
--------------
-• Critical Drawdown Alert: ACTIVE 🚨
-• Stop-Loss Triggered Alert: ACTIVE 🚨
-• Loss Acceleration Alert: ACTIVE 🚨
-• Position Concentration Alert: ACTIVE ⚠️
-• Capital Threshold Alert: ACTIVE ⚠️
-• System Health: CRITICAL EMERGENCY 🚨
+=== RECOMMENDATIONS ===
+1. Implement real-time reconciliation between system and exchange data
+2. Add stop-loss execution verification
+3. Set up alerts for capital discrepancies > 5%
+4. Establish clear separation between simulation and real trading modes
+5. Review and tighten risk management parameters
 
-===============================================
-END OF EMERGENCY MONITORING REPORT
-Generated: 2026-03-31 14:44:47 Asia/Bangkok
-===============================================
+=== MONITORING STATUS ===
+Dashboard Connectivity: ✅ ONLINE
+Data Consistency: ❌ FAILING
+Trade Execution Tracking: ❌ FAILING
+P&L Reporting: ❌ INCONSISTENT
+Risk Management: ❌ VIOLATED
+
+=== NEXT STEPS ===
+1. Monitor every 2 minutes until critical issues resolved
+2. Escalate if discrepancies persist beyond 15 minutes
+3. Consider system shutdown if data integrity cannot be verified
+4. Schedule comprehensive audit of trading system
+
+=======================================
+End of Monitoring Summary
+Generated by: trading_dashboard_monitor cron job
+=======================================

@@ -1,101 +1,62 @@
-TRADING DASHBOARD MONITORING SUMMARY
-========================================
-Timestamp: 2026-03-31 14:50:36 (Asia/Bangkok)
-Monitoring Job: trading_dashboard_monitor
+TRADING MONITORING SUMMARY
+============================
+Timestamp: 2026-03-31 15:40:00 (Asia/Bangkok)
 
-SYSTEM OVERVIEW
----------------
-• Dashboard URL: http://localhost:5001/
-• System Status: Running
-• Capital: $175.53 (Initial: $250.00) ⬇️ 29.8% DRAWDOWN
-• Total P&L: $-2.36 (Unrealized)
-• Open Positions: 4 (All Binance Shorts)
-• Last Analysis: 2026-03-31T14:41:34 (9 minutes ago)
-• Next Analysis: Hourly schedule
+SYSTEM STATUS:
+✅ Dashboard: Online (http://localhost:5001/)
+✅ Service: Running
+⏰ Last Analysis: 2026-03-31 15:36:25
+📊 Analysis Schedule: Hourly
 
-PERFORMANCE METRICS
--------------------
-• Drawdown from Initial Capital: 29.8% 🚨 CRITICAL
-• Unrealized Losses: $2.36 ⬇️ IMPROVING
-• Loss Trend: Improving (5.0% reduction in 3 minutes - FIRST POSITIVE SIGN)
-• Position Concentration: 4 open positions (all losing but improving)
-• Exchange Breakdown:
-  - Binance (SHORT): $-2.36 (4 trades, all unrealized)
-  - Gemini (LONG): $0.00 (0 trades)
+CAPITAL & P&L:
+💰 Initial Capital: $250.00
+💰 Current Capital: $175.53
+📉 Capital Drawdown: -29.8% (-$74.47)
+📊 Reported P&L: -$1.4990
+⚠️  DISCREPANCY: -$72.9710 (CRITICAL)
 
-RISK PARAMETERS
----------------
-• Stop Loss: 5.0% (Gemini), 7% (Binance) - NOT BEING ENFORCED
-• Take Profit: 10.0% (Gemini), 8% (Binance)
-• Max Trades/Day: 999 ⚠️ (Extremely high for conservative trading)
-• Trading Pairs: 10 active pairs
+POSITIONS:
+📈 Open Positions: 4 (all Binance)
+📉 Gemini Positions: 0
+🔄 Recent Trades: 5 recorded
+📊 Position Types: ETH/USD (4), BTC/USD (1)
 
-CRITICAL ALERTS DETECTED
-------------------------
-1. 🚨 STOP-LOSS TRIGGERED: Portfolio at -29.8% (below -5.0% threshold)
-2. ⚠️ HIGH DRAWDOWN: 29.8% from initial $250 capital (exceeds 20% safety threshold)
-3. ⚠️ HIGH POSITION COUNT: 4 open positions (concentration risk)
-4. ⚠️ CAPITAL BELOW THRESHOLD: $175.53 (below $200 safety level)
-5. ⚠️ FIRST IMPROVEMENT DETECTED: Losses decreased by 5.0% in 3 minutes
+RISK PARAMETERS:
+🛑 Stop Loss: 5.0% (configured)
+🎯 Take Profit: 10.0% (configured)
+⚠️  Max Trades/Day: 999 (CRITICAL - excessive risk)
+📏 Position Size: 20% of capital (configured)
 
-RECENT TRADING ACTIVITY
------------------------
-Last 5 Trades (all BUY positions):
-1. ETH/USD @ $2325.28 (13:39:49) - Near support level
-2. ETH/USD @ $2193.60 (00:33:02) - Near support level
-3. BTC/USD @ $67247.51 (21:29:41) - Near support level
-4. ETH/USD @ $2052.38 (21:29:42) - Near support level
-5. ETH/USD @ $2021.51 (07:24:00) - Conservative entry
+MARKET DATA:
+📈 BTC/USD: $67,092.89
+📈 ETH/USD: $2,047.21
+📊 Market Sentiment: NEUTRAL
+🎯 Trading Signal: BUY (BTC/USD recommended)
 
-MARKET ANALYSIS
----------------
-• Last Trading Signal: BUY (BTC/USD)
-• Market Sentiment: IMPROVING
-• Loss Trend: FIRST POSITIVE MOVEMENT AFTER ACCELERATING LOSSES
-• Market Conditions: SHOWING EARLY SIGNS OF STABILIZATION
-• Risk Level: EXTREME - BUT IMPROVING
+ALERTS & ISSUES:
+🔴 CRITICAL: Capital discrepancy of $72.97
+🔴 CRITICAL: Max trades per day set to 999
+⚠️  MEDIUM: Position concentration (all Binance)
+⚠️  MEDIUM: No Gemini positions despite $200 allocation
+✅ NORMAL: No stop-loss triggers in current data
+✅ NORMAL: No take-profit triggers in current data
 
-RISK ASSESSMENT
----------------
-⚠️ CRITICAL BUT IMPROVING SITUATION:
-• Critical drawdown of 29.8% still exceeds all safety thresholds
-• Portfolio stop-loss triggered at -29.8% (vs -5.0% threshold)
-• FIRST POSITIVE SIGN: Losses decreased by 5.0% in last 3 minutes
-• Capital preservation still at serious risk but showing stabilization
-• Loss trend reversal detected after accelerating losses
+RECOMMENDED ACTIONS:
+1. IMMEDIATE: Verify capital balance on trading platforms
+2. IMMEDIATE: Reconcile trade history for missing records
+3. IMMEDIATE: Pause trading until discrepancy resolved
+4. SHORT-TERM: Reduce max trades per day to 10 or less
+5. SHORT-TERM: Verify stop-loss orders for all positions
+6. LONG-TERM: Implement data validation and reconciliation
 
-RECOMMENDATIONS
----------------
-1. ⚠️ MAINTAIN TRADING HALT: No new positions until sustained recovery
-2. ⚠️ MONITOR IMPROVEMENT TREND: Watch next 15 minutes for sustained recovery
-3. 💰 CAPITAL PRESERVATION: Protect remaining $175.53 as highest priority
-4. 📊 INCREASE MONITORING FREQUENCY: Every 5 minutes while improving
-5. 🎯 HOLD POSITIONS FOR NOW: If losses continue to improve, consider holding
-6. 🔄 REVIEW RISK PARAMETERS: Plan to tighten stop-loss to 3-4% after recovery
+NEXT MONITORING:
+⏰ Scheduled: 15:45 (every 5 minutes due to critical status)
+🎯 Priority: CRITICAL - monitor capital discrepancy
 
-MONITORING LOGS
----------------
-• Trading Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical Alerts Log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Last Log Entry: 2026-03-31T14:50:36+07:00
+SUMMARY:
+Trading system is online but shows critical data inconsistencies.
+Capital has decreased 29.8% but reported P&L shows only -$1.50 loss.
+Max trades per day parameter poses extreme risk.
+Immediate investigation required before resuming trading.
 
-NEXT STEPS
-----------
-1. Monitor for sustained improvement over next 15 minutes
-2. Check if losses continue to decrease in next monitoring cycle
-3. Watch for any position closures or market recovery
-4. Update risk parameters if drawdown continues to improve
-5. Consider resuming limited trading only after sustained recovery
-
-ALERT STATUS
-------------
-• Critical Drawdown Alert: ACTIVE 🚨
-• Stop-Loss Triggered Alert: ACTIVE 🚨
-• Position Concentration Alert: ACTIVE ⚠️
-• Capital Threshold Alert: ACTIVE ⚠️
-• Improvement Detected Alert: ACTIVE ⚠️
-• System Health: CRITICAL - BUT SHOWING EARLY RECOVERY SIGNS
-
-========================================
-END OF TRADING DASHBOARD MONITORING REPORT
-Monitoring completed at: 2026-03-31 14:50:36 Asia/Bangkok
+--- END OF SUMMARY ---

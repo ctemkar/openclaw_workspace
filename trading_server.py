@@ -225,12 +225,14 @@ def index():
         <h2>Configuration:</h2>
         <ul>
             <li>Capital: $250 ($200 Gemini + $50 Binance)</li>
-            <li>Stop-loss: 5% (Gemini) / 7% (Binance)</li>
-            <li>Take-profit: 10% (Gemini) / 8% (Binance)</li>
-            <li>Max trades/day: 5 total (3 Gemini + 2 Binance)</li>
+            <li>Stop-loss: 5% (ALL trades)</li>
+            <li>Take-profit: 10% (ALL trades)</li>
+            <li>Max trades/day: <strong>UNLIMITED</strong> (trade based on market conditions)</li>
+            <li>Position size: 20% of capital per trade</li>
             <li>Cryptocurrencies: 26 total</li>
             <li>Gemini (LONG): 7 pairs (BTC, ETH, SOL, ADA, LINK, UNI, MATIC)</li>
             <li>Binance (SHORT): 26 pairs (All top cryptos)</li>
+            <li><strong>Execution Mode: ✅ REAL TRADING - LIVE</strong></li>
         </ul>
     </body>
     </html>
@@ -352,8 +354,8 @@ if __name__ == '__main__':
     
     # Start Flask server
     print(f"Starting Conservative Crypto Trading Server on port 5001...")
-    print(f"Capital: $1,000 | Stop-loss: 5% | Take-profit: 10%")
-    print(f"Max trades/day: 2 | Pairs: BTC/USD, ETH/USD")
+    print(f"Capital: $250 (REAL) | Stop-loss: 5% | Take-profit: 10%")
+    print(f"Max trades/day: UNLIMITED | Pairs: 26 cryptocurrencies")
     print(f"Server running at http://localhost:5001")
     
     app.run(host='0.0.0.0', port=5001, debug=False)

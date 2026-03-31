@@ -1,0 +1,102 @@
+TRADING DASHBOARD MONITORING SUMMARY
+========================================
+Timestamp: 2026-03-31 14:59:00 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor
+
+SYSTEM OVERVIEW
+---------------
+• Dashboard URL: http://localhost:5001/
+• System Status: Running
+• Capital: $175.53 (Initial: $250.00) ⬇️ 29.8% DRAWDOWN
+• Total P&L: $-2.24 (Unrealized) ⬇️ DETERIORATING
+• Open Positions: 4 (All Binance Shorts)
+• Last Analysis: 2026-03-31T14:41:34 (18 minutes ago)
+• Next Analysis: Hourly schedule
+
+PERFORMANCE METRICS
+-------------------
+• Drawdown from Initial Capital: 29.8% 🚨 CRITICAL
+• Unrealized Losses: $2.24 ⬇️ DETERIORATING
+• Loss Trend: Deteriorating (5.8% increase in losses in 6 minutes)
+• Position Concentration: 4 open positions (all losing and deteriorating)
+• Exchange Breakdown:
+  - Binance (SHORT): $-2.24 (4 trades, all unrealized, deteriorating)
+  - Gemini (LONG): $0.00 (0 trades)
+
+RISK PARAMETERS
+---------------
+• Stop Loss: 5.0% (Gemini), 7% (Binance) - NOT ENFORCED
+• Take Profit: 10.0% (Gemini), 8% (Binance)
+• Max Trades/Day: 999 ⚠️ (Extremely high for conservative trading)
+• Trading Pairs: 10 active pairs
+
+CRITICAL ALERTS DETECTED
+------------------------
+1. 🚨 STOP-LOSS TRIGGERED: Portfolio at -29.8% (below -5.0% threshold)
+2. 🚨 CRITICAL DRAWDOWN: 29.8% from initial $250 capital (exceeds 20% safety threshold)
+3. 🚨 RECOVERY FAILED: Losses increasing again after brief recovery attempt
+4. 🚨 POSITION CONCENTRATION: 4 open positions (all deteriorating)
+5. 🚨 CAPITAL BELOW THRESHOLD: $175.53 (below $200 safety level)
+6. 🚨 SYSTEM SHOWING NO RECOVERY: No automatic recovery mechanisms activated
+7. 🚨 CAPITAL PRESERVATION AT EXTREME RISK: Immediate action required
+
+RECENT TRADING ACTIVITY
+-----------------------
+Last 5 Trades (all BUY positions):
+1. ETH/USD @ $2325.28 (13:39:49) - Near support level
+2. ETH/USD @ $2193.60 (00:33:02) - Near support level
+3. BTC/USD @ $67247.51 (21:29:41) - Near support level
+4. ETH/USD @ $2052.38 (21:29:42) - Near support level
+5. ETH/USD @ $2021.51 (07:24:00) - Conservative entry
+
+MARKET ANALYSIS
+---------------
+• Last Trading Signal: BUY (BTC/USD)
+• Market Sentiment: DETERIORATING
+• Loss Trend: Deterioration resumed after brief recovery
+• Support/Resistance levels analyzed in last run
+
+RISK ASSESSMENT
+---------------
+🚨 EXTREME RISK LEVEL DETECTED:
+• Critical drawdown of 29.8% exceeds all safety thresholds
+• Portfolio stop-loss triggered at -29.8% (vs -5.0% threshold)
+• Recovery failed - deterioration resumed
+• Capital preservation at extreme risk
+• System showing no automatic recovery mechanisms
+
+RECOMMENDATIONS
+---------------
+1. 🚨 URGENT: Close 2 of 4 positions immediately to reduce exposure
+2. 🚨 MAINTAIN TRADING HALT: No new positions until situation stabilizes
+3. 💰 CAPITAL PRESERVATION: Protect remaining $175.53 as highest priority
+4. 📊 INCREASE MONITORING FREQUENCY: Every 3 minutes given extreme risk
+5. 🎯 MANUAL INTERVENTION REQUIRED: System showing no recovery capability
+6. 🔄 REVIEW RISK PARAMETERS: Tighten stop-loss to 3% after positions closed
+
+MONITORING LOGS
+---------------
+• Trading Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts Log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Last Log Entry: 2026-03-31T14:59:00+0700
+
+NEXT STEPS
+----------
+1. Monitor for next scheduled analysis at ~15:41
+2. Immediate position reduction required
+3. Watch for any system recovery mechanisms
+4. Update risk parameters if deterioration continues
+5. Consider manual intervention to close positions
+
+ALERT STATUS
+------------
+• Critical Drawdown Alert: ACTIVE 🚨
+• Stop-Loss Triggered Alert: ACTIVE 🚨
+• Position Concentration Alert: ACTIVE 🚨
+• Capital Threshold Alert: ACTIVE 🚨
+• Recovery Failed Alert: ACTIVE 🚨
+• System Health: EXTREME RISK - REQUIRES IMMEDIATE INTERVENTION
+
+========================================
+END OF TRADING DASHBOARD MONITORING REPORT
+Monitoring completed at: 2026-03-31 14:59:00 Asia/Bangkok

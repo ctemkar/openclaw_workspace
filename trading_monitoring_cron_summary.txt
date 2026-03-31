@@ -1,0 +1,87 @@
+=== TRADING DASHBOARD MONITORING - CRON SUMMARY ===
+Timestamp: 2026-03-31 15:34:54 (Asia/Bangkok)
+Cron Job ID: 12cf8cce-3050-4419-8e77-a43c7ce7c74f
+
+=== EXECUTIVE SUMMARY ===
+🔴 CRITICAL: Two trading positions have triggered stop-loss levels
+⚠️  WARNING: 29.8% overall capital drawdown from initial $250
+✅ SYSTEM: Dashboard is online but running in SIMULATION mode
+⚠️  RISK: Max trades per day set to 999 (extremely high risk)
+
+=== POSITION ANALYSIS ===
+TOTAL POSITIONS: 5 (4 ETH/USD, 1 BTC/USD)
+TOTAL P&L: -$31.87 (unrealized)
+
+CRITICAL POSITIONS (Stop-loss triggered):
+1. ETH/USD: Entry $2,325.28 → Current $2,047.21 = -11.96% loss ($23.91)
+2. ETH/USD: Entry $2,193.60 → Current $2,047.21 = -6.67% loss ($13.35)
+
+OTHER POSITIONS:
+3. BTC/USD: Entry $67,247.51 → Current $67,092.89 = -0.23% loss ($0.46)
+4. ETH/USD: Entry $2,052.38 → Current $2,047.21 = -0.25% loss ($0.50)
+5. ETH/USD: Entry $2,021.51 → Current $2,047.21 = +1.27% gain ($6.36)
+
+=== CAPITAL STATUS ===
+Initial Capital: $250.00
+Current Capital: $175.53 (dashboard report)
+Total Drawdown: -$74.47 (29.8% of initial capital)
+Unrealized P&L: -$31.87
+Capital Alert Threshold: $150.00 (current: $175.53)
+
+=== RISK PARAMETERS ===
+Stop Loss: 5.0% (TWO VIOLATIONS DETECTED)
+Take Profit: 10.0% (no triggers)
+Max Trades Per Day: 999 ⚠️ (CRITICAL RISK - should be 5-10)
+Position Size Limit: 50% of capital
+Daily Trade Limit: 2 (from dashboard summary)
+
+=== SYSTEM STATUS ===
+Dashboard: ONLINE (http://localhost:5001/)
+Service: Running (PID: 73451)
+Last Analysis: 2026-03-31T15:36:25.493666
+Mode: SIMULATION (not real trading)
+Next Analysis: Hourly schedule
+
+=== ALERT STATUS ===
+🔴 CRITICAL ALERTS (2):
+  1. ETH/USD position at -11.96% (beyond 5% stop-loss)
+  2. ETH/USD position at -6.67% (beyond 5% stop-loss)
+
+⚠️  WARNINGS (3):
+  1. 29.8% overall capital drawdown
+  2. Max trades/day = 999 (extreme risk)
+  3. Simulation mode (no real trading)
+
+✅ NORMAL (1):
+  1. Dashboard service operational
+
+=== RECOMMENDED ACTIONS ===
+IMMEDIATE (within 1 hour):
+1. Manually review and close stop-loss violated positions
+2. Verify if stop-loss orders are actually executing
+3. Check capital allocation across exchanges
+
+SHORT-TERM (within 4 hours):
+1. Reduce max_trades_per_day to 10 or less
+2. Review trading strategy effectiveness
+3. Consider implementing trailing stop-loss
+4. Set capital preservation rules
+
+LONG-TERM (within 24 hours):
+1. Switch to real trading mode if strategy validated
+2. Implement automated alerting for stop-loss breaches
+3. Regular strategy backtesting
+4. Risk parameter review and optimization
+
+=== NEXT MONITORING ===
+Scheduled: 2026-03-31 16:34:54 (Asia/Bangkok)
+Priority: HIGH (due to stop-loss violations)
+Frequency: Consider increasing to every 15 minutes
+
+=== LOG FILES UPDATED ===
+1. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+2. /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+3. /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring_cron_summary.txt
+
+=== END OF SUMMARY ===
+Return code: CRITICAL - Requires immediate attention

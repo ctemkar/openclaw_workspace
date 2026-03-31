@@ -1,49 +1,10 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-31 13:31:10 (Asia/Bangkok)
+Trading Dashboard Monitoring - 2026-03-31 15:41:11
+Data extracted from 5 endpoints and logged to trading_monitoring.log
 
-SYSTEM STATUS:
-✅ Dashboard: ACTIVE (http://localhost:5001/)
-✅ Data Collection: SUCCESSFUL
-✅ Logging: COMPLETE
+CRITICAL ALERTS (4):
+• 🛑 Stop-loss order triggered
+• ✅ Take-profit order triggered
+• 🛑 Stop-loss in trade: {'price': 2021.51, 'quantity': 0.2474, 'reason': 'Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)', 'side': 'BUY', 'symbol': 'ETH/USD', 'time': '07:24:00'}
+• ✅ Take-profit in trade: {'price': 2021.51, 'quantity': 0.2474, 'reason': 'Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)', 'side': 'BUY', 'symbol': 'ETH/USD', 'time': '07:24:00'}
 
-CRITICAL FINDINGS:
-⚠️  ALERT 1: EXCESSIVE DRAWDOWN - 29.79% (threshold: 10%)
-⚠️  ALERT 2: HIGH OPEN POSITIONS - 4 positions (elevated risk)
-
-FINANCIAL METRICS:
-• Current Capital: $175.53
-• Initial Capital: $250.00  
-• Capital Loss: $74.47 (29.79%)
-• Total PnL: -$0.6339
-• Unrealized PnL: -$0.6339
-• Open Positions: 4 (all Binance)
-
-TRADING ACTIVITY:
-• Recent Trades: 5 total
-• Primary Asset: ETH/USD (4 trades)
-• Strategy: Conservative support-based trading
-• Risk Parameters: 5% SL, 10% TP
-
-LOGS CREATED:
-1. trading_monitoring.log - Full system status and analysis
-2. critical_alerts.log - Detailed risk assessment and recommendations
-
-IMMEDIATE CONCERNS:
-1. The 29.79% drawdown significantly exceeds the 10% critical threshold
-2. Multiple ETH positions may be concentrated risk
-3. Current PnL shows small unrealized losses but capital drawdown is large
-
-RECOMMENDED ACTIONS:
-1. Review all open positions immediately
-2. Check if stop-loss triggers have been properly set
-3. Consider reducing position sizes or closing some ETH positions
-4. Review trading strategy given the significant drawdown
-5. Monitor closely for next 1-2 hours
-
-NEXT SCHEDULED CHECK:
-• Hourly analysis at approximately 14:28
-
-=====================================
-Monitoring completed successfully.
-Alert status: CRITICAL - Immediate attention recommended.
+Alerts logged to critical_alerts.log

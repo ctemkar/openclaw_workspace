@@ -1,75 +1,196 @@
-=== TRADING MONITORING LOG ===
-Timestamp: 2026-03-31T14:59:00+0700 (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-31 15:54:55 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/ (RESPONDING)
 
-SYSTEM STATUS:
-- Status: running
-- Last Analysis: 2026-03-31T14:41:34.149144
-- Next Analysis: hourly schedule
-- Port: 5001
+=== SYSTEM STATUS ===
+Status: running
+Capital: $175.53 (CRITICAL: 29.8% loss from initial $250.00)
+Last Analysis: 2026-03-31T15:36:25.493666
+Analysis Schedule: hourly
+Port: 5001
 
-CAPITAL & PERFORMANCE:
-- Current Capital: $175.53
-- Initial Capital: $250.00
-- Drawdown: -29.8% (CRITICAL)
-- Total P&L: $-2.2404088692230597 (unrealized)
+=== P&L ANALYSIS ===
+Total P&L: -$0.8811
+Total Open Positions: 4
+Total Realized P&L: $0.00
+Total Unrealized P&L: -$0.8811
+
+Binance Performance:
 - Open Positions: 4
-- Performance Trend: SLIGHT DETERIORATION (loss increased from $2.12 to $2.24 in 6 minutes - 5.8% deterioration)
+- Realized P&L: $0.00
+- Unrealized P&L: -$0.8811
+- Total P&L: -$0.8811
+- Total Trades: 4
 
-EXCHANGE BREAKDOWN:
-- Binance (SHORT):
-  * Open Positions: 4
-  * Realized P&L: $0.0
-  * Unrealized P&L: $-2.2404088692230597
-  * Total Trades: 4
-- Gemini (LONG):
-  * Open Positions: 0
-  * Realized P&L: $0.0
-  * Unrealized P&L: $0.0
-  * Total Trades: 0
+Gemini Performance:
+- Open Positions: 0
+- Realized P&L: $0.00
+- Unrealized P&L: $0.00
+- Total P&L: $0.00
+- Total Trades: 0
 
-RISK PARAMETERS:
-- Stop Loss: 5.0%
-- Take Profit: 10.0%
-- Max Trades Per Day: 999 (EXTREMELY HIGH)
-- Trading Pairs: 10 active pairs
+=== RISK PARAMETERS ===
+Stop Loss: 5.0%
+Take Profit: 10.0%
+Max Trades Per Day: 999 (CRITICAL: Excessively high risk - potential for unlimited losses)
 
-RECENT TRADES (Last 5):
-1. Time: 13:39:49 | Symbol: ETH/USD | Side: BUY | Price: $2325.28 | Quantity: 0.086 | Reason: Near support level: $2308.08 (current: $2325.28)
-2. Time: 00:33:02 | Symbol: ETH/USD | Side: BUY | Price: $2193.60 | Quantity: 0.0912 | Reason: Near support level: $2167.99 (current: $2193.60)
-3. Time: 21:29:41 | Symbol: BTC/USD | Side: BUY | Price: $67247.51 | Quantity: 0.002974 | Reason: Near support level: $67110.20 (current: $67247.51)
-4. Time: 21:29:42 | Symbol: ETH/USD | Side: BUY | Price: $2052.38 | Quantity: 0.0974 | Reason: Near support level: $2033.94 (current: $2052.38)
-5. Time: 07:24:00 | Symbol: ETH/USD | Side: BUY | Price: $2021.51 | Quantity: 0.2474 | Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
+=== TRADING PAIRS MONITORED ===
+1. BTC/USD
+2. ETH/USD
+3. SOL/USD
+4. ADA/USD
+5. XRP/USD
+6. DOT/USD
+7. DOGE/USD
+8. AVAX/USD
+9. MATIC/USD
+10. LINK/USD
 
-CONFIGURATION (from dashboard):
-- Capital: $250 ($200 Gemini + $50 Binance)
-- Stop-loss: 5% (Gemini) / 7% (Binance)
-- Take-profit: 10% (Gemini) / 8% (Binance)
-- Max trades/day: 5 total (3 Gemini + 2 Binance)
-- Cryptocurrencies: 26 total
-- Gemini (LONG): 7 pairs (BTC, ETH, SOL, ADA, LINK, UNI, MATIC)
-- Binance (SHORT): 26 pairs (All top cryptos)
+=== RECENT TRADES (Last 5) ===
+1. Symbol: ETH/USD
+   Side: BUY
+   Price: $2325.28
+   Quantity: 0.086
+   Time: 13:39:49
+   Reason: Near support level: $2308.08 (current: $2325.28)
 
-ALERT STATUS:
-- Stop-Loss Triggered: YES (29.8% > 5% threshold) 🚨
-- Critical Drawdown: YES (29.8% > 20% safety threshold) 🚨
-- Position Concentration: YES (4 open positions) ⚠️
-- Capital Below Threshold: YES ($175.53 < $200 safety level) ⚠️
-- Loss Deterioration: YES (loss increased by $0.12 in 6 minutes - 5.8% deterioration) 🚨
-- Loss Trend: DETERIORATION (recovery momentum lost)
+2. Symbol: ETH/USD
+   Side: BUY
+   Price: $2193.60
+   Quantity: 0.0912
+   Time: 00:33:02
+   Reason: Near support level: $2167.99 (current: $2193.60)
 
-MARKET ANALYSIS:
-- Last Trading Signal: BUY (BTC/USD)
-- Market Conditions: DETERIORATING (recovery momentum lost)
-- Loss Trend: DETERIORATION (losses increasing again)
-- Risk Level: EXTREME - RECOVERY FAILED, DETERIORATION RESUMED
+3. Symbol: BTC/USD
+   Side: BUY
+   Price: $67247.51
+   Quantity: 0.002974
+   Time: 21:29:41
+   Reason: Near support level: $67110.20 (current: $67247.51)
 
-RECOMMENDATIONS:
-1. 🚨 URGENT: Maintain trading halt - no new positions
-2. 🚨 CONSIDER POSITION REDUCTION: Close 1-2 losing positions to reduce risk
-3. 💰 CAPITAL PRESERVATION: Protect remaining $175.53 as highest priority
-4. 📊 INCREASE MONITORING FREQUENCY: Every 5 minutes until situation stabilizes
-5. 🎯 REVIEW RISK PARAMETERS: Consider tightening stop-loss to 3-4%
-6. 🔄 REDUCE MAX TRADES/DAY: Lower from 999 to 2-3 for conservative trading
+4. Symbol: ETH/USD
+   Side: BUY
+   Price: $2052.38
+   Quantity: 0.0974
+   Time: 21:29:42
+   Reason: Near support level: $2033.94 (current: $2052.38)
 
-=== END OF LOG ENTRY ===
+5. Symbol: ETH/USD
+   Side: BUY
+   Price: $2021.51
+   Quantity: 0.2474
+   Time: 07:24:00
+   Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
+
+=== MARKET DATA FROM SUMMARY ===
+Current Market Prices:
+- BTC/USD: $67,092.89
+- ETH/USD: $2,047.21
+- BTC 24h Volume: $26,056,358
+- ETH 24h Volume: $6,133,399
+
+Support/Resistance Levels:
+- BTC Support: $67,093.29
+- BTC Resistance: $67,100.99
+- ETH Support: $2,047.19
+- ETH Resistance: $2,047.64
+
+Market Sentiment: NEUTRAL
+Trading Signal: BUY
+Trading Recommendation: BTC/USD at $67,092.89
+
+=== REAL-TIME MARKET PRICES (Coingecko) ===
+- BTC/USD: $66,842.00
+- ETH/USD: $2,040.58
+
+=== POSITION ANALYSIS ===
+Based on current data:
+1. Total Capital: $175.53 (down from $250.00 initial - CRITICAL DISCREPANCY)
+2. Current Drawdown: -$0.8811 (0.35% of initial capital)
+3. Open Positions: 4 (all Binance)
+4. No positions appear to have triggered stop-loss yet (according to system)
+5. No take-profit triggers detected
+
+=== STOP-LOSS ANALYSIS (vs Real-time Prices) ===
+Checking recent trades against current market prices:
+
+1. ETH/USD @ $2325.28 (13:39:49)
+   - Stop-loss: $2209.02 (5% below entry)
+   - Current ETH: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴 (12.2% below entry)
+   - Loss: -$24.48 per ETH position
+
+2. ETH/USD @ $2193.60 (00:33:02)
+   - Stop-loss: $2083.92 (5% below entry)
+   - Current ETH: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴 (7.0% below entry)
+   - Loss: -$13.96 per ETH position
+
+3. BTC/USD @ $67247.51 (21:29:41)
+   - Stop-loss: $63885.13 (5% below entry)
+   - Current BTC: $66,842.00
+   - Status: STOP-LOSS TRIGGERED 🔴 (0.6% below entry)
+   - Current P&L: -$1.21
+
+4. ETH/USD @ $2052.38 (21:29:42)
+   - Stop-loss: $1949.76 (5% below entry)
+   - Current ETH: $2,040.58
+   - Status: STOP-LOSS TRIGGERED 🔴 (0.6% below entry)
+   - Current P&L: -$1.15
+
+5. ETH/USD @ $2021.51 (07:24:00)
+   - Stop-loss: $1920.43 (5% below entry)
+   - Current ETH: $2,040.58
+   - Status: ACTIVE ✅ (+0.9% above entry)
+   - Current P&L: +$4.73
+
+=== CRITICAL FINDINGS ===
+1. CAPITAL DISCREPANCY: System shows $175.53 capital but reported P&L is only -$0.8811
+   - Missing $73.65 in losses not accounted for in P&L
+   - Possible unrecorded trades or margin calls
+
+2. STOP-LOSS EXECUTIONS: 4 of 5 recent trades have triggered stop-loss
+   - ETH @ $2325.28: 12.2% loss (beyond 5% stop-loss)
+   - ETH @ $2193.60: 7.0% loss (beyond 5% stop-loss)
+   - BTC @ $67247.51: 0.6% loss (beyond 5% stop-loss)
+   - ETH @ $2052.38: 0.6% loss (beyond 5% stop-loss)
+   - These losses not reflected in reported P&L
+
+3. RISK PARAMETER VIOLATION: max_trades_per_day = 999
+   - Allows unlimited daily trading, violating conservative strategy
+   - Could lead to catastrophic losses
+
+4. INCONSISTENT REPORTING:
+   - Summary shows $250 capital but status shows $175.53
+   - System may be running in simulation mode while showing real capital losses
+
+5. P&L IMPROVEMENT: P&L has improved from -$1.0047 to -$0.8811 since last check
+   - $0.1236 improvement detected
+   - Market movement affecting open positions
+
+6. MARKET PRICE DISCREPANCY:
+   - System shows ETH: $2,047.21, Real-time: $2,040.58 (-0.3% difference)
+   - System shows BTC: $67,092.89, Real-time: $66,842.00 (-0.4% difference)
+   - System data may be delayed or cached
+
+=== ALERT STATUS ===
+🔴 CRITICAL ALERT: Capital discrepancy detected ($73.65 missing)
+🔴 CRITICAL ALERT: 4 stop-loss triggers not reflected in P&L
+🔴 CRITICAL ALERT: Excessive risk parameter (999 trades/day)
+⚠️ WARNING: Inconsistent data between endpoints
+⚠️ WARNING: Market price discrepancies detected
+✅ POSITIVE: P&L improvement trend detected
+
+=== RECOMMENDATIONS ===
+1. IMMEDIATE: Investigate $73.65 capital loss discrepancy
+2. IMMEDIATE: Verify stop-loss executions for all positions
+3. IMMEDIATE: Reduce max_trades_per_day to 5-10 maximum
+4. Check for margin calls or forced liquidations
+5. Consider pausing trading until discrepancies resolved
+6. Implement stop-loss execution verification system
+7. Update market data source for real-time prices
+
+=== END OF MONITORING LOG ===
+============================================================
+Monitoring timestamp: 2026-03-31 15:54:55
+============================================================
