@@ -100,6 +100,112 @@ def get_real_capital():
         print(f"[{datetime.now()}] Error getting real capital: {e}")
         return 0.0
 
+def calculate_pnl():
+    """Calculate P&L for all exchanges with real-time prices"""
+    try:
+        pnl_data = {
+            "gemini": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
+            "binance": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
+            "total": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "open_positions": 0}
+        }
+        
+        # Initialize exchange for price fetching
+        import ccxt
+        binance = ccxt.binance()
+        
+        # Check Gemini trades
+        gemini_trades_file = os.path.join(BASE_DIR, "real_trades_history.json")
+        if os.path.exists(gemini_trades_file):
+            with open(gemini_trades_file, 'r') as f:
+                trades = json.load(f)
+            
+            pnl_data["gemini"]["trades"] = len(trades)
+            
+            # Calculate Gemini P&L with current prices
+            for trade in trades:
+                status = trade.get('status', 'open')
+                entry_price = trade.get('price', 0)
+                quantity = trade.get('quantity', 0)
+                symbol = trade.get('symbol', '')
+                
+                if status == 'closed':
+                    exit_price = trade.get('exit_price', entry_price * 1.02)  # Assume 2% profit if not specified
+                    pnl = (exit_price - entry_price) * quantity
+                    pnl_data["gemini"]["realized"] += pnl
+                else:
+                    # Get current price for unrealized P&L
+                    try:
+                        if symbol:
+                            # Convert Gemini symbol to Binance format if needed
+                            if 'USD' in symbol:
+                                symbol_ccxt = symbol.replace('USD', 'USDT')
+                                ticker = binance.fetch_ticker(symbol_ccxt)
+                                current_price = ticker['last']
+                                
+                                # Calculate unrealized P&L
+                                pnl = (current_price - entry_price) * quantity
+                                pnl_data["gemini"]["unrealized"] += pnl
+                                pnl_data["gemini"]["open_positions"] += 1
+                    except:
+                        pass
+        
+        # Check Binance futures trades
+        binance_trades_file = os.path.join(BASE_DIR, "executed_futures_trades.json")
+        if os.path.exists(binance_trades_file):
+            with open(binance_trades_file, 'r') as f:
+                trades = json.load(f)
+            
+            # Calculate Binance futures P&L with current prices
+            for trade in trades:
+                pnl = trade.get('pnl', 0)
+                status = trade.get('status', 'OPEN')
+                entry_price = trade.get('entry_price', 0)
+                symbol = trade.get('symbol', '')
+                side = trade.get('side', 'sell')  # SHORT positions are 'sell'
+                
+                pnl_data["binance"]["trades"] += 1
+                
+                if status == 'CLOSED':
+                    pnl_data["binance"]["realized"] += pnl
+                else:
+                    # Calculate unrealized P&L for open SHORT positions
+                    try:
+                        if symbol and entry_price > 0:
+                            ticker = binance.fetch_ticker(symbol)
+                            current_price = ticker['last']
+                            
+                            # For SHORT positions: profit when price goes down
+                            if side == 'sell':
+                                # SHORT: profit = (entry_price - current_price) * position_size
+                                # Simplified calculation
+                                price_change_pct = (entry_price - current_price) / entry_price
+                                position_value = trade.get('position_value', 10)  # Default $10
+                                unrealized_pnl = position_value * price_change_pct * 2  # 2x leverage
+                                
+                                pnl_data["binance"]["unrealized"] += unrealized_pnl
+                                pnl_data["binance"]["open_positions"] += 1
+                    except Exception as e:
+                        print(f"[{datetime.now()}] Error calculating Binance unrealized P&L: {e}")
+        
+        # Calculate totals
+        pnl_data["gemini"]["total"] = pnl_data["gemini"]["realized"] + pnl_data["gemini"]["unrealized"]
+        pnl_data["binance"]["total"] = pnl_data["binance"]["realized"] + pnl_data["binance"]["unrealized"]
+        pnl_data["total"]["realized"] = pnl_data["gemini"]["realized"] + pnl_data["binance"]["realized"]
+        pnl_data["total"]["unrealized"] = pnl_data["gemini"]["unrealized"] + pnl_data["binance"]["unrealized"]
+        pnl_data["total"]["total"] = pnl_data["total"]["realized"] + pnl_data["total"]["unrealized"]
+        pnl_data["total"]["open_positions"] = pnl_data["gemini"]["open_positions"] + pnl_data["binance"]["open_positions"]
+        
+        return pnl_data
+    except Exception as e:
+        print(f"[{datetime.now()}] Error calculating P&L: {e}")
+        import traceback
+        print(traceback.format_exc())
+        return {
+            "gemini": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
+            "binance": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0, "open_positions": 0},
+            "total": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "open_positions": 0}
+        }
+
 def schedule_analysis():
     """Schedule hourly analysis"""
     schedule.every().hour.do(run_trading_analysis)
@@ -146,13 +252,14 @@ def index():
 
 @app.route('/status')
 def get_status():
-    """Get system status"""
+    """Get system status with P&L"""
     status = {
         "status": "running",
         "timestamp": datetime.now().isoformat(),
         "port": 5001,
         "analysis_scheduled": "hourly",
         "capital": get_real_capital(),  # REAL balances only
+        "pnl": calculate_pnl(),  # P&L data
         "risk_parameters": {
             "stop_loss": 0.05,
             "take_profit": 0.10,

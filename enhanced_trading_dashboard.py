@@ -88,6 +88,8 @@ DASHBOARD_TEMPLATE = '''
         }
         .trade-buy { border-left-color: #4caf50; }
         .trade-sell { border-left-color: #f44336; }
+        .positive { color: #4caf50; }
+        .negative { color: #f44336; }
         .stat-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -201,6 +203,38 @@ DASHBOARD_TEMPLATE = '''
                 </p>
                 <p><strong>Last Analysis:</strong> {{ system_status.last_analysis }}</p>
                 <p><strong>Trading Pairs:</strong> {{ system_status.trading_pairs|join(', ') }}</p>
+            </div>
+            
+            <!-- P&L Card -->
+            <div class="card">
+                <h3>💰 Profit & Loss</h3>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-value {{ 'positive' if pnl_data.total.total > 0 else 'negative' if pnl_data.total.total < 0 else '' }}">
+                            {{ pnl_data.total.total|round(2) }}$
+                        </div>
+                        <div class="stat-label">Total P&L</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value {{ 'positive' if pnl_data.gemini.total > 0 else 'negative' if pnl_data.gemini.total < 0 else '' }}">
+                            {{ pnl_data.gemini.total|round(2) }}$
+                        </div>
+                        <div class="stat-label">Gemini</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value {{ 'positive' if pnl_data.binance.total > 0 else 'negative' if pnl_data.binance.total < 0 else '' }}">
+                            {{ pnl_data.binance.total|round(2) }}$
+                        </div>
+                        <div class="stat-label">Binance</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">{{ (pnl_data.gemini.trades + pnl_data.binance.trades) }}</div>
+                        <div class="stat-label">Total Trades</div>
+                    </div>
+                </div>
+                <p><strong>Realized:</strong> ${{ pnl_data.total.realized|round(2) }}</p>
+                <p><strong>Unrealized:</strong> ${{ pnl_data.total.unrealized|round(2) }}</p>
+                <p><strong>Gemini Trades:</strong> {{ pnl_data.gemini.trades }} | <strong>Binance Trades:</strong> {{ pnl_data.binance.trades }}</p>
             </div>
             
             <!-- Bot Status Card -->
@@ -458,8 +492,27 @@ def get_recent_logs():
 @app.route('/')
 def dashboard():
     """Render the main dashboard"""
+    system_status = get_system_status()
+    
+    # Get P&L data from trading server
+    try:
+        response = requests.get('http://localhost:5001/status', timeout=5)
+        status_data = response.json()
+        pnl_data = status_data.get("pnl", {
+            "gemini": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0},
+            "binance": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0},
+            "total": {"realized": 0.0, "unrealized": 0.0, "total": 0.0}
+        })
+    except:
+        pnl_data = {
+            "gemini": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0},
+            "binance": {"realized": 0.0, "unrealized": 0.0, "total": 0.0, "trades": 0},
+            "total": {"realized": 0.0, "unrealized": 0.0, "total": 0.0}
+        }
+    
     context = {
-        "system_status": get_system_status(),
+        "system_status": system_status,
+        "pnl_data": pnl_data,
         "bot_status": get_bot_status(),
         "recent_trades": get_recent_trades()[0][:10],  # Last 10 trades
         "total_trades": get_recent_trades()[1],

@@ -33,14 +33,15 @@ FUTURES_CRYPTOS = [
     "AAVE", "MKR", "COMP", "SNX", "YFI"
 ]
 
-# Trading parameters - CONSERVATIVE
-SHORT_THRESHOLD = 1.0   # 1.0% drop for SHORT (more conservative)
-SCAN_INTERVAL = 120      # 120 seconds (2 minutes - slower)
-MAX_DAILY_TRADES = 2     # Max 2 trades per day
-LEVERAGE = 2             # 2x leverage (VERY conservative)
-POSITION_SIZE = 0.15     # 15% of capital per trade
-STOP_LOSS = 0.03         # 3% stop-loss (tight)
-TAKE_PROFIT = 0.05       # 5% take-profit
+# Trading parameters - ACTIVE SHORTING
+SHORT_THRESHOLD = 0.5    # 0.5% drop for SHORT (more active)
+RSI_OVERBOUGHT = 65      # RSI > 65 considered overbought
+SCAN_INTERVAL = 120      # 120 seconds (2 minutes)
+MAX_DAILY_TRADES = 3     # Max 3 trades per day (more opportunities)
+LEVERAGE = 2             # 2x leverage (conservative)
+POSITION_SIZE = 0.10     # 10% of capital per trade (smaller, more trades)
+STOP_LOSS = 0.02         # 2% stop-loss (tighter)
+TAKE_PROFIT = 0.04       # 4% take-profit (quicker profits)
 
 # Track daily trades
 daily_trades_file = os.path.join(BASE_DIR, "daily_trades_counter.json")
@@ -158,10 +159,41 @@ def analyze_futures_pair(exchange, crypto):
         price = ticker['last']
         change = ticker.get('percentage', 0)
         
-        # SHORT signal (price dropping significantly)
-        if change < -SHORT_THRESHOLD:
+        # Get RSI (14-period)
+        try:
+            ohlcv = exchange.fetch_ohlcv(symbol, '1h', limit=15)
+            closes = [x[4] for x in ohlcv]
+            
+            # Calculate RSI
+            if len(closes) >= 15:
+                gains = []
+                losses = []
+                for i in range(1, len(closes)):
+                    diff = closes[i] - closes[i-1]
+                    if diff > 0:
+                        gains.append(diff)
+                        losses.append(0)
+                    else:
+                        gains.append(0)
+                        losses.append(abs(diff))
+                
+                avg_gain = sum(gains[-14:]) / 14
+                avg_loss = sum(losses[-14:]) / 14
+                
+                if avg_loss == 0:
+                    rsi = 100
+                else:
+                    rs = avg_gain / avg_loss
+                    rsi = 100 - (100 / (1 + rs))
+            else:
+                rsi = 50  # Default if not enough data
+        except:
+            rsi = 50  # Default if error
+        
+        # SHORT signal (price dropping AND RSI was overbought)
+        if change < -SHORT_THRESHOLD and rsi > RSI_OVERBOUGHT:
             signal = "SHORT"
-            strength = abs(change)
+            strength = abs(change) + (rsi - 50) / 10  # Combine drop + RSI
         else:
             signal = "HOLD"
             strength = 0
@@ -171,6 +203,7 @@ def analyze_futures_pair(exchange, crypto):
             'crypto': crypto,
             'price': price,
             'change': change,
+            'rsi': round(rsi, 1),
             'signal': signal,
             'strength': strength,
             'timestamp': datetime.now().isoformat()
@@ -371,7 +404,7 @@ def main():
                     analysis = analyze_futures_pair(exchange, crypto)
                     
                     if analysis and analysis['signal'] == 'SHORT':
-                        logger.warning(f"⚡ STRONG SHORT SIGNAL: {analysis['symbol']} down {analysis['change']:.2f}%")
+                        logger.warning(f"⚡ STRONG SHORT SIGNAL: {analysis['symbol']} down {analysis['change']:.2f}% (RSI: {analysis.get('rsi', 'N/A')})")
                         
                         # Check balance and daily limit
                         if free_balance >= 10 and daily_trades < MAX_DAILY_TRADES:
