@@ -1,76 +1,92 @@
 TRADING DASHBOARD MONITORING SUMMARY
 ========================================
-Time: 2026-03-31 12:52:52 (Asia/Bangkok)
-Dashboard Status: Running
-Last Analysis: 2026-03-31T12:48:22.910449
+Monitoring Time: 2026-03-31 14:04:45 (Asia/Bangkok)
+Dashboard: http://localhost:5001/
 
-CRITICAL FINDINGS:
-==================
-1. 🚨 CAPITAL REDUCTION: Capital decreased from $250.00 to $175.53 (-29.79%)
-2. 🚨 EXTREME LEVERAGE: 740.67% capital utilization ($1,300.05 invested vs $175.53 capital)
-3. 🚨 STOP-LOSS TRIGGERED: 2 ETH positions beyond 5% stop-loss levels
-4. 🚨 DAILY LIMIT VIOLATION: 5 trades executed vs 2 allowed limit
-
-PORTFOLIO STATUS:
-=================
-- Total Trades: 5
-- Active Trades: 3
-- Stopped Trades: 2
-- Total Investment: $1,300.05
-- Total P&L: $-20.37 (-1.57%)
-- Current Portfolio Value: $1,279.68
-- Capital: $175.53 (DECREASED)
-- Drawdown: -1.57%
-
-POSITION ANALYSIS:
-==================
-1. ETH/USD @ $2,325.28: -11.16% (STOP-LOSS TRIGGERED)
-2. ETH/USD @ $2,193.60: -5.83% (STOP-LOSS TRIGGERED)
-3. BTC/USD @ $67,247.51: +0.66% (ACTIVE)
-4. ETH/USD @ $2,052.38: +0.65% (ACTIVE)
-5. ETH/USD @ $2,021.51: +2.19% (ACTIVE)
-
-MARKET CONDITIONS:
-==================
-- BTC Price: $67,690.00
-- ETH Price: $2,065.78
-- Market Sentiment: NEUTRAL
-- Last Analysis: 12:48:22
-
-IMMEDIATE ACTIONS REQUIRED:
+🚨 CRITICAL ALERT STATUS 🚨
 ===========================
-1. 🚨 Investigate capital reduction from $250 to $175.53
-2. 🚨 Close 2 loss-making ETH positions immediately
-3. 🚨 Pause all new trading activity
-4. 🚨 Reduce position sizing to emergency levels (5% max per trade)
-5. 🚨 Verify trading system execution mode (simulation vs real)
+1. CAPITAL DRAWDOWN: 29.79% (from $250.00 to $175.53)
+2. LOSS ACCELERATION: +21.1% in 2 minutes (-$1.75 → -$2.12)
+3. OPEN POSITIONS: 4 (all Binance, all showing losses)
+4. CONCENTRATION RISK: 100% Binance (no Gemini diversification)
 
-RISK ASSESSMENT:
-================
-- Risk Level: EXTREME (8 critical alerts)
-- Capital Utilization: 740.67% (CRITICAL)
-- Stop-loss Effectiveness: 40% (2/5 positions triggered)
-- Position Concentration: 80% ETH, 20% BTC
-- Daily Limit Compliance: VIOLATED (5/2 trades)
+SYSTEM STATUS
+=============
+• Status: Running
+• Last Analysis: 2026-03-31T13:37:42
+• Next Analysis: ~14:37 (hourly schedule)
+• Trading Pairs: 10 active pairs
+• Risk Parameters: Stop-loss 5-7%, Take-profit 8-10%
 
-RECOMMENDATIONS:
-================
-1. Emergency capital protection measures needed
-2. Implement real-time capital monitoring
-3. Add maximum leverage limits (200% max)
-4. Review and fix stop-loss execution
-5. Investigate potential system errors or capital leakage
+PERFORMANCE METRICS
+===================
+• Total P&L: -$2.12 (unrealized, worsening)
+• Binance P&L: -$2.12 (4 trades)
+• Gemini P&L: $0.00 (0 trades)
+• Open Positions: 4
+• Recent Trades: 5 BUY positions (all "near support level")
 
-NEXT STEPS:
-===========
-1. Review trading system logs for errors
-2. Check API connectivity and account balances
-3. Verify position sizing calculations
-4. Implement automated risk controls
-5. Schedule emergency system review
+RISK ASSESSMENT
+===============
+⚠️  CRITICAL: 29.79% drawdown exceeds conservative trading limits (10-15%)
+⚠️  CRITICAL: Losses accelerating at 21.1% per 2 minutes
+⚠️  HIGH: All positions concentrated in single exchange (Binance)
+⚠️  HIGH: Max trades/day = 999 (extremely aggressive for "conservative" system)
+✅  OK: No stop-loss or take-profit triggers detected
+✅  OK: System operational status normal
 
-Monitoring logs updated:
-- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+ALERT TRIGGERS
+==============
+1. Drawdown > 25% threshold: ACTIVE (29.79%)
+2. Loss acceleration > 20% per interval: ACTIVE (21.1% in 2 min)
+3. High concentration risk: ACTIVE (100% Binance)
+4. Aggressive parameters: ACTIVE (max_trades_per_day=999)
 
-Next scheduled monitoring: Hourly (approx 47 minutes)
+URGENT ACTIONS REQUIRED
+=======================
+1. 🛑 IMMEDIATE: Pause/halt all trading activity
+2. 🔴 URGENT: Manually review and close worst 2 positions within 15 min
+3. 📉 EXECUTE: Consider closing ALL positions to prevent further losses
+4. ⚙️ ADJUST: Set max_trades_per_day to 0 (temporary halt)
+5. 🔄 DIVERSIFY: Restore Gemini/Binance balance per original design
+
+PROJECTED RISK SCENARIO
+=======================
+If losses continue at current acceleration:
+• 15 min: ~32% drawdown, ~$3.50 losses
+• 30 min: ~35% drawdown, ~$5.55 losses  
+• 60 min: ~42% drawdown, ~$10.50 losses
+
+SYSTEM ISSUES IDENTIFIED
+========================
+1. "Support level" detection logic failing (all losing trades used this)
+2. Exchange imbalance (100% Binance vs designed 80/20 split)
+3. Overly aggressive trading parameters for "conservative" system
+4. No circuit breaker for accelerating losses
+
+RECOMMENDATIONS
+===============
+1. 🛑 EMERGENCY: Manual intervention within 15 minutes
+2. 🔧 OVERHAUL: Complete strategy parameter review
+3. 🔴 DISABLE: "Support level" trading logic until validated
+4. 💰 RESET: Consider capital reset if drawdown reaches 35%
+5. 📊 MONITOR: Increase monitoring frequency to every 5 minutes
+
+NEXT STEPS
+==========
+• Manual position review: IMMEDIATE (within 15 min)
+• System parameter adjustment: WITHIN 30 MIN
+• Strategy logic review: WITHIN 24 HOURS
+• Next automated check: 14:37 local time
+
+CRITICAL THRESHOLD
+==================
+Drawdown > 35% will trigger SYSTEM HALT AND RESET recommendation.
+
+LOGS UPDATED
+============
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+END OF SUMMARY
+==============

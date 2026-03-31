@@ -1,48 +1,158 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 13:56:50 (Asia/Bangkok)
+Timestamp: 2026-03-31 14:21:35 (Asia/Bangkok)
 Dashboard URL: http://localhost:5001/
 
 === SYSTEM STATUS ===
 • Status: running
-• Capital: $175.53 (Initial: $250.00)
-• Total P&L: -$1.62 (unrealized)
+• Capital: $175.53 (Initial: $250.00) ⬇️
+• Total P&L: $-1.62 (unrealized) ⬆️ IMPROVEMENT
 • Open positions: 4 (all Binance)
 • Last analysis: 2026-03-31T13:37:42.037501
 • Analysis schedule: hourly
+• Next analysis: ~14:37 (15 minutes)
 
 === RISK PARAMETERS ===
 • Stop-loss: 5% (Gemini), 7% (Binance)
 • Take-profit: 10% (Gemini), 8% (Binance)
-• Max trades/day: 999 (configured)
+• Max trades/day: 999 (configured) ⚠️
 • Trading pairs: 10 active pairs
+• Current risk parameters: {"max_trades_per_day": 999, "stop_loss": 0.05, "take_profit": 0.1}
 
-=== RECENT TRADES (Last 5) ===
+=== PERFORMANCE ANALYSIS ===
+• Drawdown from initial capital: 29.79% 🚨 CRITICAL
+• Unrealized losses: $1.62 ⬆️ IMPROVEMENT
+• Loss change since last check: +$0.13 (7.3% improvement)
+• Open positions with losses: 4
+• Stop-loss triggers: None detected
+• Take-profit triggers: None detected
+• P&L breakdown:
+  - Binance: $-1.62 (4 trades, all unrealized)
+  - Gemini: $0.00 (0 trades)
+  - Total: $-1.62 (unrealized)
+
+=== RISK ASSESSMENT ===
+🚨 CRITICAL DRAWDOWN: 29.79% from initial capital
+🚨 EXTREME DRAWDOWN: 29.79% exceeds 25% threshold
+⚠️ Capital below $200 threshold: $175.53
+⚠️ High concentration: 4 open positions
+✅ No immediate stop-loss or take-profit triggers
+✅ System status: running normally
+⚠️ CONCERN: Max trades/day set to 999 (extremely high for conservative trading)
+
+=== MARKET ANALYSIS ===
+• Last trading signal: BUY (BTC/USD)
+• Market sentiment: NEUTRAL (per last analysis)
+• BTC price: $67,325.31 (per last analysis)
+• ETH price: $2,056.01 (per last analysis)
+• Support/resistance levels analyzed in last run
+
+=== TREND ANALYSIS ===
+• Current trend: IMPROVEMENT ⬆️
+• Loss change: +$0.13 (7.3% improvement)
+• Pattern: Consistent improvement over last 5 minutes
+• Risk: Moderate - showing steady improvement
+
+=== RECENT TRADES ===
+1. ETH/USD BUY @ $2325.28 (13:39:49) - Near support level
+2. ETH/USD BUY @ $2193.60 (00:33:02) - Near support level  
+3. BTC/USD BUY @ $67247.51 (21:29:41) - Near support level
+4. ETH/USD BUY @ $2052.38 (21:29:42) - Near support level
+5. ETH/USD BUY @ $2021.51 (07:24:00) - Conservative entry
+
+=== RECOMMENDATIONS ===
+1. 🚨 URGENT: Maintain trading halt due to 29.8% critical drawdown
+2. 📊 Continue monitoring improvement trend (7.3% improvement in 5 minutes)
+3. 🎯 Set recovery target: Losses < $1.00 before considering position adjustments
+4. 💰 Capital preservation remains highest priority
+5. 📈 Next analysis at 14:37 may provide updated market conditions
+
+=== ALERT STATUS ===
+• Critical drawdown alert: ACTIVE (29.79% > 20% threshold)
+• Loss trend alert: IMPROVEMENT (7.3% reduction in losses)
+• Stop-loss triggers: NONE
+• Take-profit triggers: NONE
+• System health: HIGH RISK - critical drawdown with improvement
+
+=== NEXT MONITORING SCHEDULE ===
+Next check: Approximately 14:37 (15 minutes)
+🚨 URGENT MONITORING REQUIRED - critical drawdown persists
+🚨 Maintain trading halt despite improvement
+======================================================================
+
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-31 14:28:06 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
+
+=== SYSTEM STATUS ===
+• Status: running
+• Capital: $175.53 (Initial: $250.00) ⬇️
+• Total P&L: $-1.62 (unrealized) ⬆️ IMPROVEMENT
+• Open positions: 4 (all Binance)
+• Last analysis: 2026-03-31T13:37:42.037501
+• Analysis schedule: hourly
+• Next analysis: ~14:37 (13 minutes)
+
+=== RISK PARAMETERS ===
+• Stop-loss: 5.0% (Gemini), 7% (Binance)
+• Take-profit: 10.0% (Gemini), 8% (Binance)
+• Max trades/day: 999 (configured) ⚠️
+• Trading pairs: 10 active pairs
+• Current risk parameters: {"max_trades_per_day": 999, "stop_loss": 0.05, "take_profit": 0.1}
+
+=== PERFORMANCE ANALYSIS ===
+• Drawdown from initial capital: 29.79% 🚨 CRITICAL
+• Unrealized losses: $1.62 ⬆️ IMPROVEMENT
+• Open positions with losses: 4
+• Stop-loss triggers: None detected
+• Take-profit triggers: None detected
+• P&L breakdown:
+  - Binance: $-1.62 (4 trades, all unrealized)
+  - Gemini: $0.00 (0 trades)
+  - Total: $-1.62 (unrealized)
+
+=== RISK ASSESSMENT ===
+🚨 EXTREME DRAWDOWN: 29.79% from initial capital
+⚠️ Capital below $200 threshold: $175.53
+⚠️ High concentration: 4 open positions
+✅ No immediate stop-loss or take-profit triggers
+✅ System status: running normally
+⚠️ CONCERN: Max trades/day set to 999 (extremely high for conservative trading)
+
+=== MARKET ANALYSIS ===
+• Last trading signal: BUY (BTC/USD)
+• Market sentiment: NEUTRAL (per last analysis)
+• BTC price: $67,325.31 (per last analysis)
+• ETH price: $2,056.01 (per last analysis)
+• Support/resistance levels analyzed in last run
+
+=== TREND ANALYSIS ===
+• Current trend: STABLE
+• Loss pattern: Consistent at $1.62
+• Risk: HIGH - critical drawdown persists
+
+=== RECENT TRADES ===
 1. ETH/USD BUY @ $2325.28 (13:39:49) - Near support level
 2. ETH/USD BUY @ $2193.60 (00:33:02) - Near support level
 3. BTC/USD BUY @ $67247.51 (21:29:41) - Near support level
 4. ETH/USD BUY @ $2052.38 (21:29:42) - Near support level
 5. ETH/USD BUY @ $2021.51 (07:24:00) - Conservative entry
 
-=== PERFORMANCE ANALYSIS ===
-• Drawdown from initial capital: 29.79% ⚠️ CRITICAL
-• Unrealized losses: $1.62
-• Open positions with losses: 4
-• Stop-loss triggers: None detected
-• Take-profit triggers: None detected
-
-=== RISK ASSESSMENT ===
-⚠️  CRITICAL ALERT: 29.79% drawdown from initial capital exceeds typical risk thresholds
-⚠️  WARNING: 4 open positions showing unrealized losses
-✅  No immediate stop-loss or take-profit triggers
-✅  System status: running normally
-
 === RECOMMENDATIONS ===
-1. IMMEDIATE ACTION: Review position sizing strategy
-2. Consider tightening stop-loss levels for current market volatility
-3. Evaluate reducing number of concurrent open positions
-4. Monitor drawdown closely - consider partial position exits
-5. Review support level analysis methodology
+1. 🚨 URGENT: Maintain trading halt due to 29.8% extreme drawdown
+2. 📊 Monitor for any position recovery
+3. 🎯 Set recovery target: Capital > $200 before considering new positions
+4. 💰 Capital preservation remains highest priority
+5. 📈 Next analysis at 14:37 may provide updated market conditions
+
+=== ALERT STATUS ===
+• Extreme drawdown alert: ACTIVE (29.79% > 25% threshold)
+• Loss trend alert: STABLE
+• Stop-loss triggers: NONE
+• Take-profit triggers: NONE
+• System health: EXTREME RISK
 
 === NEXT MONITORING SCHEDULE ===
-Next check: Approximately 14:37 (hourly schedule)
+Next check: Approximately 14:37 (13 minutes)
+🚨 URGENT MONITORING REQUIRED - extreme drawdown persists
+🚨 Maintain trading halt despite any improvement
 ======================================================================

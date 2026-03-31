@@ -1,66 +1,60 @@
 TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Monitoring Time: 2026-03-31 08:10:20 (Asia/Bangkok)
+========================================
+Execution Time: 2026-03-31 14:00:31 (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor (b2e858f3-0014-4a07-b84a-2bbedf272816)
 
-SYSTEM STATUS:
-✅ Trading system is RUNNING
-✅ Last analysis: 2026-03-31 08:01:25
-✅ Analysis scheduled: Hourly
-✅ Capital: $250.00
-✅ Active trading pairs: BTC/USD, ETH/USD
+=== DASHBOARD STATUS ===
+✅ Dashboard accessible: http://localhost:5001/
+✅ System status: running
+✅ Last analysis: 2026-03-31T13:37:42.037501
+✅ Analysis schedule: hourly
 
-TRADING ACTIVITY:
-• Total trades: 5
-• Active positions: 3
-• Stopped out positions: 2 (ETH/USD)
-• Daily trade limit: 2 (not exceeded)
+=== CAPITAL & PERFORMANCE ===
+• Initial Capital: $250.00
+• Current Capital: $175.53
+• Capital Drawdown: 29.8% ⚠️ CRITICAL
+• Total P&L: -$1.62 (unrealized)
+• Realized P&L: $0.00
+• Open Positions: 4 (all Binance)
+• Total Trades: 5
 
-MARKET CONDITIONS:
-• BTC/USD: $67,181.16
-• ETH/USD: $2,036.59
-• Market sentiment: BULLISH
-• Trading signal: BUY (BTC near support)
+=== RISK PARAMETERS ===
+• Stop Loss: 5.0%
+• Take Profit: 10.0%
+• Max Trades/Day: 999 (configured)
+• Trading Pairs: 10 active pairs
 
-CRITICAL ALERTS DETECTED: 4
-=====================================
-🚨 URGENT CONCERNS:
+=== RECENT TRADING ACTIVITY ===
+Recent 3 trades (of 5 total):
+1. ETH/USD BUY @ $2325.28 (13:39:49) - Near support level
+2. ETH/USD BUY @ $2193.60 (00:33:02) - Near support level  
+3. BTC/USD BUY @ $67247.51 (21:29:41) - Near support level
 
-1. STOP-LOSS VIOLATIONS:
-   • ETH/USD trade (13:39:49): -12.42% loss (5% stop-loss triggered)
-   • ETH/USD trade (00:33:02): -7.16% loss (5% stop-loss triggered)
+=== ALERT STATUS ===
+🚨 CRITICAL ALERT DETECTED:
+• Capital drawdown exceeds 25% threshold (29.8% actual)
+• Multiple open positions with unrealized losses
+• High concentration in Binance exchange only
 
-2. SIGNIFICANT DRAWDOWN:
-   • Portfolio drawdown: -14.86% (exceeds 5% threshold)
-   • Total P&L loss: -$37.15
-   • Risk level: HIGH
+=== LOGGING STATUS ===
+✅ Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+✅ Critical alerts logged: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
 
-3. ETH POSITION CONCERNS:
-   • 2 out of 4 ETH positions have hit stop-loss
-   • ETH showing consistent downward pressure
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review all open positions for potential stop-loss execution
+2. CONSIDER: Pausing new trades until drawdown is addressed
+3. REVIEW: Position sizing methodology and support level detection logic
+4. ADJUST: Risk management parameters if strategy is too aggressive
+5. ANALYZE: Post-mortem of drawdown causes and trading decisions
 
-ACTIVE POSITIONS STATUS:
-1. BTC/USD (21:29:41): -0.10% P&L (stable)
-2. ETH/USD (21:29:42): -0.77% P&L (stable)
-3. ETH/USD (07:24:00): +0.75% P&L (profitable)
+=== NEXT SCHEDULED CHECK ===
+Next analysis scheduled: ~14:37 local time (hourly schedule)
 
-RISK ASSESSMENT:
-• Current risk: HIGH (multiple stop-loss triggers)
-• Portfolio health: POOR (14.86% drawdown)
-• ETH strategy: NEEDS REVIEW
-• BTC strategy: ACCEPTABLE
+=== SUMMARY ===
+The trading system is operational but showing significant capital drawdown (29.8%). 
+All open positions are in Binance with unrealized losses. 
+Immediate risk management review recommended. 
+No stop-loss or take-profit triggers detected in this check, but capital preservation is critical.
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Pause new ETH positions
-2. REVIEW: ETH trading strategy and stop-loss levels
-3. MONITOR: BTC position for profit-taking opportunities
-4. CONSIDER: Adjusting stop-loss from 5% to 7-8% for crypto volatility
-5. VERIFY: If hedging strategy (Binance shorts) is active
-
-NEXT STEPS:
-• System will continue hourly monitoring
-• Next analysis scheduled for ~09:01
-• Critical alerts logged to: critical_alerts.log
-• Monitoring data logged to: trading_monitoring.log
-
-SUMMARY:
-The trading system is operational but experiencing significant losses in ETH positions. Two ETH trades have triggered stop-losses, resulting in a 14.86% portfolio drawdown. Immediate review of ETH strategy and risk parameters is recommended. BTC positions remain stable with minimal drawdown.
+END OF MONITORING REPORT
+========================================
