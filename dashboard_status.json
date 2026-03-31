@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-03-31T23:57:46.460602",
-  "status": "active",
+  "last_updated": "2026-04-01T04:41:49+07:00",
+  "status": "critical",
   "report_generated": true,
-  "next_update": "hourly"
+  "next_update": "next_cron",
+  "monitoring_summary": {
+    "capital_drawdown": "43.9% (CRITICAL)",
+    "margin_status": "insufficient",
+    "dashboard_access": "offline",
+    "trading_process": "running_with_errors",
+    "risk_level": "extreme",
+    "alerts_generated": 5,
+    "critical_alerts": 2,
+    "health_score": "3/10"
+  },
+  "last_monitoring": {
+    "log_file": "trading_monitoring.log",
+    "critical_alerts": "critical_alerts.log",
+    "analysis_time": "2026-04-01 04:41:49 Asia/Bangkok"
+  }
 }

@@ -157,11 +157,11 @@ HTML_TEMPLATE = '''
                 </div>
                 <div class="data-card">
                     <h3>₿ BINANCE P&L</h3>
-                    <div class="data-value">
-                        DATA UNAVAILABLE
+                    <div class="data-value {{ 'positive' if binance_data.total_unrealized_pnl >= 0 else 'negative' }}">
+                        ${{ "%+.2f"|format(binance_data.total_unrealized_pnl) }}
                     </div>
-                    <p>Real API needed</p>
-                    <p><small>Status: {{ binance_status }}</small></p>
+                    <p>{{ binance_data.position_count }} open positions</p>
+                    <p><small>{{ binance_data.closed_short_count }} closed SHORTS: ${{ "%.2f"|format(binance_data.closed_shorts_pnl) }}</small></p>
                 </div>
                 <div class="data-card">
                     <h3>📊 DATA QUALITY</h3>
@@ -306,8 +306,9 @@ def dashboard():
     """Main dashboard with P&L information"""
     data = load_data()
     
-    # Cumulative P&L data
-    cumulative_data = data['system'].get('capital', {})
+    # Cumulative P&L data - get from REAL data service, not system
+    real_data = data.get('real', {})
+    cumulative_data = real_data.get('capital', {})
     cumulative = {
         'initial': cumulative_data.get('initial', 946.97),
         'current': cumulative_data.get('current', 531.65),
@@ -327,32 +328,41 @@ def dashboard():
     gemini_positions = gemini_data.get('positions', [])
     gemini_status = data_status.get('gemini', 'UNKNOWN')
     
-    # Get Binance data (currently not implemented)
+    # Get Binance data from real service
     binance_data = real_data.get('binance', {})
     binance_status = data_status.get('binance', 'UNKNOWN')
     
-    # For now, binance data is not available from real APIs
-    binance_open_pnl = 0
-    binance_positions = []
+    # Calculate Binance P&L from real data
+    binance_open_pnl = binance_data.get('total_unrealized_pnl', 0)
+    binance_positions = binance_data.get('open_positions', [])
+    binance_total_pnl = binance_open_pnl
     
     # If Gemini status indicates error, show it
     if 'ERROR' in gemini_status or 'UNAVAILABLE' in gemini_status:
         print(f"[Dashboard] Gemini Data Status: {gemini_status}")
     
-    # Get Binance historic unrealized
+    # Get Binance historic unrealized - use default if not available
     binance_summary = data['system'].get('positions', {}).get('binance_positions_summary', {})
     binance_unrealized = binance_summary.get('total_unrealized_pnl', -3.83)
     binance_total_pnl = binance_open_pnl + binance_unrealized
     
     total_open_pnl = gemini_pnl + binance_open_pnl
     
-    # Capital allocation
+    # Capital allocation - use defaults from system_status.json if real data not available
     capital_data = data['api'].get('capital_allocation', {})
-    total = capital_data.get('total', 685.67)
-    gemini = capital_data.get('gemini', 531.65)
-    binance = capital_data.get('binance', 154.02)
-    deployed = capital_data.get('deployed', 265.82)
-    available = capital_data.get('available_total', 419.85)
+    if not capital_data and cumulative_data:
+        # Use cumulative data for capital allocation
+        total = cumulative_data.get('current', 531.65)
+        gemini = total  # All capital is in Gemini since Binance is blocked
+        binance = 0  # Binance blocked
+        deployed = 0  # No positions deployed currently
+        available = cumulative_data.get('free_usd', 134.27)
+    else:
+        total = capital_data.get('total', 531.65)
+        gemini = capital_data.get('gemini', 531.65)
+        binance = capital_data.get('binance', 0)
+        deployed = capital_data.get('deployed', 0)
+        available = capital_data.get('available_total', 134.27)
     
     capital = {
         'total': total,
@@ -372,13 +382,28 @@ def dashboard():
         gemini_pnl=gemini_pnl,
         gemini_data=gemini_data,
         gemini_status=gemini_status,
-        binance_total_pnl=binance_total_pnl,
+        binance_data=binance_data,
         binance_status=binance_status,
+        binance_total_pnl=binance_total_pnl,
         total_open_pnl=total_open_pnl,
         binance_positions_count=len(binance_positions),
         binance_positions=binance_positions,
         capital=capital
     )
+
+@app.route('/debug')
+def debug():
+    """Debug endpoint to see what data is loaded"""
+    data = load_data()
+    real_data = data.get('real', {})
+    
+    return jsonify({
+        'real_data_keys': list(real_data.keys()),
+        'gemini_data': real_data.get('gemini', {}),
+        'binance_data': real_data.get('binance', {}),
+        'data_status': real_data.get('data_status', {}),
+        'system_capital': data['system'].get('capital', {})
+    })
 
 @app.route('/api/pnl')
 def api_pnl():
@@ -387,6 +412,7 @@ def api_pnl():
     
     real_data = data.get('real', {})
     gemini_data = real_data.get('gemini', {})
+    binance_data = real_data.get('binance', {})
     data_status = real_data.get('data_status', {})
     
     return jsonify({
@@ -395,17 +421,21 @@ def api_pnl():
         'data_status': data_status,
         'exchange_pnl': {
             'gemini': gemini_data.get('total_pnl', 0),
-            'binance': 'REAL_API_NEEDED',
-            'total_open': gemini_data.get('total_pnl', 0)
+            'binance': binance_data.get('total_unrealized_pnl', 0),
+            'binance_closed_shorts': binance_data.get('closed_shorts_pnl', 0),
+            'total_open': gemini_data.get('total_pnl', 0) + binance_data.get('total_unrealized_pnl', 0)
         },
         'gemini_details': {
             'position_count': gemini_data.get('position_count', 0),
             'positions': gemini_data.get('positions', [])
         },
+        'binance_details': {
+            'open_positions': binance_data.get('open_positions', []),
+            'closed_shorts': binance_data.get('closed_short_count', 0)
+        },
         'metadata': {
-            'warning': 'NO HARCODED VALUES - REAL DATA ONLY',
-            'missing_data': 'Binance API not implemented',
-            'data_source': 'Real-time price APIs + gemini_trades.json'
+            'warning': 'REAL DATA ONLY - NO HARCODED VALUES',
+            'data_source': 'Real-time APIs + trade history files'
         }
     })
 

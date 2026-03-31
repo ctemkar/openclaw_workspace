@@ -1,164 +1,131 @@
-TRADING MONITORING LOG
-=======================
-Analysis Time: 2026-04-01 03:42:15 (Asia/Bangkok)
-Dashboard Status: OFFLINE (http://localhost:5001/ not accessible)
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-04-01 04:56:07 (Asia/Bangkok)
+Dashboard URL: http://localhost:5009/
 
-SYSTEM STATUS:
-==============
-• Trading Process: INACTIVE (last cycle at 01:26:05, ~2 hours ago)
-• Last Cycle: Cycle 20 completed at 01:26:05
-• Next Cycle: MISSED (should have been ~01:31:05)
-• Total Opportunities Found: 33 signals detected
-• Process Status: Appears to have stopped after cycle 20
+DASHBOARD CONTENT:
+<!doctype html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <title>Real Trading P&L Dashboard</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .section { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .section-title { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .data-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; }
+        .data-value { font-size: 2em; font-weight: bold; margin: 10px 0; }
+        .positive { color: #27ae60; }
+        .negative { color: #e74c3c; }
+        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f2f2f2; }
+        .timestamp { color: #7f8c8d; font-size: 0.9em; text-align: right; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Real Trading P&L Dashboard</h1>
+            <p>NO HARCODED VALUES - REAL DATA ONLY</p>
+            <div class="timestamp">Last updated: 2026-04-01 04:56:07</div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">📈 CUMULATIVE PERFORMANCE (NEVER RESETS)</h2>
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>Initial Capital</h3>
+                    <div class="data-value">$946.97</div>
+                    <p>Total investment</p>
+                </div>
+                <div class="data-card">
+                    <h3>Current Value</h3>
+                    <div class="data-value">$531.65</div>
+                    <p>Portfolio value now</p>
+                </div>
+                <div class="data-card">
+                    <h3>Cumulative P&L</h3>
+                    <div class="data-value negative">
+                        $-415.32 (-43.9%)
+                    </div>
+                    <p>Never resets</p>
+                </div>
+            </div>
+            <p><strong>Recovery needed:</strong> $415.32 (78.1%) to break even</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">🔵 REAL-TIME P&L (NO HARDCODED VALUES)</h2>
+            
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>♊ GEMINI P&L</h3>
+                    <div class="data-value positive">
+                        $+2.06
+                    </div>
+                    <p>Real-time calculation</p>
+                    <p><small>5 SOL positions</small></p>
+                    <p><small>Status: OK (5 positions)</small></p>
+                </div>
+                <div class="data-card">
+                    <h3>₿ BINANCE P&L</h3>
+                    <div class="data-value negative">
+                        $-1.00
+                    </div>
+                    <p>3 open positions</p>
+                    <p><small>7 closed SHORTS: $-2.17</small></p>
+                </div>
+                <div class="data-card">
+                    <h3>📊 TOTAL OPEN P&L</h3>
+                    <div class="data-value positive">
+                        $+1.06
+                    </div>
+                    <p>All open positions</p>
+                    <p><small>Gemini + Binance combined</small></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">💰 CAPITAL ALLOCATION</h2>
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>Total Capital</h3>
+                    <div class="data-value">$531.65</div>
+                    <p>Across all exchanges</p>
+                </div>
+                <div class="data-card">
+                    <h3>Gemini</h3>
+                    <div class="data-value">$412.03</div>
+                    <p>77.5% of total</p>
+                </div>
+                <div class="data-card">
+                    <h3>Binance</h3>
+                    <div class="data-value">$119.62</div>
+                    <p>22.5% of total</p>
+                </div>
+            </div>
+            <p><strong>Deployed:</strong> $265.80 (50.0%) | 
+               <strong>Available:</strong> $265.85</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">📝 DATA QUALITY & STATUS</h2>
+            <div class="warning">
+                <h3>⚠️ IMPORTANT: NO HARCODED VALUES</h3>
+                <p>This dashboard uses <strong>REAL DATA ONLY</strong>. No values are hardcoded or simulated.</p>
+                <p><strong>Data Status:</strong> REAL_DATA_ONLY_NO_HARDCODING</p>
+                <p><strong>Gemini:</strong> OK (5 positions)</p>
+                <p><strong>Binance:</strong> OK (3 open, 7 closed shorts)</p>
+                <p><strong>If data is unavailable, it shows as unavailable - never guessed or hardcoded.</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
-TRADING LOGS EXTRACTED (RECENT CYCLES 16-20):
-=============================================
-All cycles show identical pattern:
-
-CYCLE 16-20 (01:05-01:26):
-• Signal: BINANCE SHORT on MKR/USDT
-• Price: $1650.1000
-• 24h Change: -3.40%
-• Position Size: 0.008137 contracts
-• Position Value: $13.43 (1x leverage)
-• Capital at Risk: $13.43
-• Stop-loss: $1699.6030 (+3%)
-• Take-profit: $1567.5950 (-5%)
-• Status: FAILED - "Invalid symbol status for opening position"
-• Error Code: -4140 (Binance symbol status error)
-
-STATUS UPDATES:
-===============
-• Trading Bot: INACTIVE since 01:26:05 (2+ hours)
-• Consistent SHORT signals on MKR/USDT detected across cycles 16-20
-• All execution attempts failing due to "Invalid symbol status" (Binance error -4140)
-• MATIC/USDT symbol error persists: "binance does not have market symbol MATIC/USDT"
-• Cycle duration: ~12 seconds average (efficient processing)
-• Trading strategy: 26-crypto automated trading with 5-minute cycles
-
-RISK PARAMETERS (FROM PREVIOUS MONITORING):
-===========================================
-1. Capital Management:
-   • Initial Capital: $946.97 (from previous summary)
-   • Current Capital: $531.58 (43.9% drawdown - CRITICAL)
-   • Drawdown: -$415.39 (43.9% vs 20% threshold)
-
-2. Position Limits:
-   • Max Trades/Day (Config): 2
-   • Max Trades/Day (Monitoring): 999 (MISMATCH - WARNING)
-
-3. Risk Controls:
-   • Stop-loss: 5% (standard)
-   • Take-profit: 10% (standard)
-   • Position Sizing: Based on available capital
-   • Leverage: 1x (conservative)
-
-4. Trading Restrictions:
-   • Margin Status: INSUFFICIENT (preventing new trades)
-   • Symbol Restrictions: MKR/USDT status invalid, MATIC/USDT not available
-
-ERROR PATTERNS:
-===============
-1. Symbol Status Errors: "Invalid symbol status for opening position" (MKR/USDT, Binance error -4140)
-2. Symbol Availability: "binance does not have market symbol MATIC/USDT"
-3. Margin Issues: "Margin is insufficient" (from previous logs)
-4. Dashboard Accessibility: Port 5001 offline
-5. Process Inactivity: Bot stopped after cycle 20 (2+ hours ago)
-6. SIGTERM Signal: Process receiving termination signals (likely from OpenClaw exec timeout)
-
-PERFORMANCE METRICS:
-====================
-• Total Signals Detected: 33 opportunities
-• Successful Executions: 0 (recent cycles)
-• Failed Executions: Multiple due to symbol/margin issues
-• Cycle Efficiency: ~12 seconds per cycle
-• Market Coverage: 26 cryptos on Binance, 16 on Gemini
-• Uptime: Bot appears to have stopped after 2+ hours
-
-SYSTEM HEALTH INDICATORS:
-=========================
-• Process Continuity: ❌ INACTIVE (stopped after cycle 20)
-• Signal Generation: ✅ Active (when running)
-• Execution Capability: ❌ Blocked (symbol/margin issues)
-• Risk Management: ⚠️ Compromised (43.9% drawdown)
-• Configuration: ⚠️ Mismatch (trade limits)
-• Dashboard: ❌ Offline (port 5001)
-
-STOP-LOSS/TAKE-PROFIT MONITORING:
-=================================
-• No active positions in recent logs (all failed executions)
-• No stop-loss or take-profit triggers detected in current cycle
-• Historical stop-loss events: 2 ETH positions (from previous summary)
-• Historical drawdown events: 2 ETH beyond stop-loss (from previous summary)
-
-CRITICAL FINDINGS:
-==================
-1. TRADING BOT INACTIVE: Process appears to have stopped ~2 hours ago
-2. CAPITAL DRAWDOWN: 43.9% (exceeds 20% threshold)
-3. MARGIN INSUFFICIENCY: Blocking all trade attempts
-4. SYMBOL STATUS ERRORS: MKR/USDT invalid on Binance
-5. DASHBOARD OFFLINE: No web monitoring interface
-6. PROCESS TERMINATION: SIGTERM signals detected (likely OpenClaw exec timeout)
-
-RECOMMENDATIONS:
-================
-IMMEDIATE ACTIONS (0-1 HOUR):
-1. Restart trading bot process
-2. Investigate why bot stopped after cycle 20
-3. Check system logs for crash/error details
-
-SHORT-TERM ACTIONS (1-24 HOURS):
-4. Resolve margin insufficiency issue
-5. Investigate MKR/USDT symbol status on Binance
-6. Restart dashboard on port 5001
-7. Fix configuration parameter mismatch
-
-LONG-TERM ACTIONS (1-7 DAYS):
-8. Comprehensive strategy review given 43.9% drawdown
-9. System audit and risk parameter adjustment
-10. Implement process monitoring and auto-restart
-
-NEXT MONITORING CHECK:
-======================
-• Immediate: Investigate bot inactivity
-• Scheduled: After bot restart
-• Focus: Process continuity, execution success, margin status
-
-LOG COMPLETION TIME: 2026-04-01 03:42:15
-=========================================
-============================================================
-MONITORING CHECK: 2026-04-01 03:55:50
-============================================================
-{
-  "timestamp": "2026-04-01 03:55:32",
-  "binance_status": "Real API needed",
-  "short_positions": 0
-}
-
-Drawdown Analysis: 0.00%
-
-CRITICAL ALERTS:
-  - LOW AVAILABLE CAPITAL: $0.00
-
-============================================================
-MONITORING CHECK: 2026-04-01 03:56:47
-============================================================
-{
-  "timestamp": "2026-04-01 03:56:47",
-  "initial_capital": 946.97,
-  "current_capital": 531.65,
-  "total_capital": 685.67,
-  "gemini_capital": 531.65,
-  "binance_capital": 154.02,
-  "deployed_capital": 265.82,
-  "available_capital": 419.85,
-  "gemini_pnl": 2.16,
-  "short_positions": 0,
-  "drawdown_amount": 415.32000000000005,
-  "drawdown_percent": 43.857777965511055
-}
-
-Drawdown Analysis: 43.86%
-
-CRITICAL ALERTS:
-  - CRITICAL DRAWDOWN: 43.86% (exceeds 20% threshold)
+=== END OF DASHBOARD CONTENT ===
