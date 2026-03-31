@@ -1,5 +1,5 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 17:49:45 (Asia/Bangkok)
+Timestamp: 2026-03-31 18:23:13 (Asia/Bangkok)
 Alert Level: CRITICAL
 
 🚨 URGENT: MULTIPLE CRITICAL ISSUES DETECTED 🚨
@@ -7,216 +7,79 @@ Alert Level: CRITICAL
 ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
 - Symbol: ETH/USD
 - Entry Price: $2,325.28
-- Current Price: $2,023.63
-- Loss: -12.97% ($25.94) ⬆️ IMPROVING
-- Position Size: 0.086 ETH
-- Trade Time: 13:39:49
-- Stop-Loss Setting: 5% ($2,209.02)
-- Loss Exceeds Stop-Loss By: 7.97%
-- Status: 🔴 CRITICAL - Immediate action required
-- Action Required: Exit position immediately
-- Position Value: $174.03
-- Time in Loss: ~4 hours 10 minutes
-- Last Update: 2026-03-31 17:49:45
-- Trend: ⬆️ IMPROVING - Loss decreased from -13.08% to -12.97%
-- Alert Priority: HIGHEST
+- Current Price: $2,035.58
+- Drawdown: -12.5%
+- Stop-Loss Level: -5% ($2,209.02)
+- Status: ❌ STOP-LOSS VIOLATED (Should have been executed at -5%)
+- Time Since Trigger: ~4.5 hours (since ~13:45)
+- Recommended Action: IMMEDIATE MANUAL CLOSE
 
 ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
 - Symbol: ETH/USD
 - Entry Price: $2,193.60
-- Current Price: $2,023.63
-- Loss: -7.75% ($15.50) ⬆️ IMPROVING
-- Position Size: 0.0912 ETH
-- Trade Time: 00:33:02
-- Stop-Loss Setting: 5% ($2,083.92)
-- Loss Exceeds Stop-Loss By: 2.75%
-- Status: 🔴 CRITICAL - Immediate action required
-- Action Required: Exit position immediately
-- Position Value: $184.56
-- Time in Loss: ~17 hours 16 minutes
-- Last Update: 2026-03-31 17:49:45
-- Trend: ⬆️ IMPROVING - Loss decreased from -7.87% to -7.75%
-- Alert Priority: HIGHEST
+- Current Price: $2,035.58
+- Drawdown: -7.2%
+- Stop-Loss Level: -5% ($2,083.92)
+- Status: ❌ STOP-LOSS VIOLATED (Should have been executed at -5%)
+- Time Since Trigger: ~17.8 hours (since ~00:30)
+- Recommended Action: IMMEDIATE MANUAL CLOSE
 
-ALERT 3: CAPITAL DEPLETION - CRITICAL LEVEL ⬆️ SLIGHT IMPROVEMENT
+ALERT 3: CAPITAL DRAWDOWN CRITICAL (WORSENING)
 - Initial Capital: $250.00
-- Current Capital: $135.71
-- Capital Loss: $114.29 (45.7%) ⬆️ IMPROVING
-- Status: 🔴 CRITICAL - Trading should be paused
-- Threshold: 20% (exceeded by 25.7%)
-- Action Required: Pause all trading until capital restored
-- Trend: ⬆️ SLIGHT IMPROVEMENT - Capital increased from $135.64 to $135.71 (+$0.07 in 5 minutes)
-- Alert Priority: HIGHEST
+- Current Capital: $134.27
+- Drawdown: -46.3% (CRITICAL LEVEL - WORSENING from 45.7%)
+- Risk Limit Violation: Typically 20-25% max drawdown
+- Timeframe: Since system start
+- Impact: System has lost nearly half of initial capital
+- Recommended Action: PAUSE ALL TRADING, FULL SYSTEM AUDIT
 
-ALERT 4: DATA INCONSISTENCY - CAPITAL VS P&L MISMATCH
-- Capital Shows: $135.71 (45.7% loss from $250)
-- P&L Shows: $0.9725 (positive)
-- Status: 🔴 CRITICAL - Cannot both be true
-- Issue: Capital tracking vs P&L tracking mismatch
-- Action Required: Investigate data tracking system
-- Impact: Unreliable performance metrics
-- Trend: ⬆️ IMPROVING - P&L increased from $0.7490 to $0.9725 while capital improved
-- Alert Priority: HIGH
-
-ALERT 5: EXECUTION MODE CONFLICT
+ALERT 4: EXECUTION MODE CONFLICT
 - Dashboard Claims: "REAL TRADING - LIVE"
 - Summary Indicates: "SIMULATED - API credentials needed"
-- Status: 🔴 CRITICAL - Unclear if losses are real
-- Risk: Potential real financial loss vs simulation discrepancy
-- Action Required: Verify API connectivity and execution mode
-- Impact: High uncertainty in risk assessment
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: HIGH
+- Status: ❌ CONFLICTING INFORMATION
+- Risk: Trading may not be executing stop-loss/take-profit orders
+- Impact: Positions not being managed according to risk parameters
+- Recommended Action: VERIFY API CONNECTIONS AND EXECUTION MODE
 
-ALERT 6: STRATEGY EXECUTION ERROR
-- Strategy: Gemini_Longs_Binance_Shorts
-- Expected: Binance should execute SHORT positions
-- Actual: All 5 trades are BUY positions
-- Status: 🔴 CRITICAL - Strategy not being followed
-- Risk: Taking opposite positions to intended strategy
-- Action Required: Investigate and fix strategy execution logic
-- Impact: Potentially catastrophic if market moves against positions
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: HIGHEST
+ALERT 5: RISK PARAMETER VIOLATION
+- Configured Stop-Loss: 5%
+- Actual Drawdowns: Up to 12.5% (ETH Position #1)
+- Configured Max Trades/Day: 999 (UNLIMITED - HIGH RISK)
+- Actual Risk Exposure: 4 open positions, multiple stop-loss violations
+- Impact: Risk management system not functioning
+- Recommended Action: REDUCE MAX TRADES TO 2-5, ENFORCE STRICT STOP-LOSS
 
-ALERT 7: TRADE COUNT MISMATCH
-- Status Endpoint: 4 Binance trades
-- Trades Endpoint: 5 trades total
-- Status: 🔴 CRITICAL - Data inconsistency
-- Issue: Unclear which data source is correct
-- Action Required: Investigate data source discrepancies
-- Impact: Unreliable position tracking
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: HIGH
+ALERT 6: CAPITAL CONTINUES TO DECLINE
+- Previous Capital: $135.82 (at 18:01)
+- Current Capital: $134.27 (at 18:23)
+- Decline: -$1.55 in 22 minutes (-1.1%)
+- Trend: 🔴 ACCELERATING LOSSES
+- Impact: System losing money even without new trades
+- Recommended Action: INVESTIGATE CAPITAL LEAKAGE/COSTS
 
-ALERT 8: POSITION SIZING VIOLATION
-- Rule: 20% of capital per trade
-- Violation: Position #5 is 0.2474 ETH at ~$500.65 value
-- This represents: 200% of initial capital ($250)
-- Status: 🔴 CRITICAL - Extreme overexposure
-- Risk: Single position can wipe out entire capital
-- Action Required: Review and fix position sizing logic
-- Impact: High concentration risk
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: HIGH
+=== IMMEDIATE ACTION REQUIRED ===
+1. PAUSE ALL TRADING ACTIVITY
+2. MANUALLY CLOSE POSITIONS WITH STOP-LOSS VIOLATIONS:
+   - ETH @ $2,325.28 (Position #1)
+   - ETH @ $2,193.60 (Position #2)
+3. VERIFY EXECUTION MODE (Real vs Simulated)
+4. REVIEW AND FIX RISK MANAGEMENT SYSTEM
+5. AUDIT CAPITAL AND P&L CALCULATIONS
+6. REDUCE MAX DAILY TRADES FROM 999 TO 2-5
 
-ALERT 9: PORTFOLIO CONCENTRATION
-- ETH Concentration: 80% of trades (4 out of 5)
-- BTC Concentration: 20% of trades (1 out of 5)
-- Status: 🔴 CRITICAL - Extreme lack of diversification
-- Risk: Sector-specific downturn can wipe portfolio
-- Action Required: Implement diversification rules
-- Recommended: Max 30% per asset, 15% per sector
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: MEDIUM
+=== ESCALATION PATH ===
+- Level 1: System Administrator (Immediate)
+- Level 2: Risk Management Team (Within 1 hour)
+- Level 3: Trading Operations Director (Within 4 hours)
 
-ALERT 10: DAILY TRADE LIMIT VIOLATION
-- Setting: 999 trades/day (UNLIMITED)
-- Status: 🔴 CRITICAL - No trading frequency control
-- Risk: Overtrading, emotional trading, rapid capital depletion
-- Action Required: Set realistic daily limits (e.g., 2-5 trades/day)
-- Recommended: 2 trades/day for conservative strategy
-- Trend: 🔴 PERSISTENT - Still unresolved
-- Alert Priority: MEDIUM
+=== ALERT STATUS ===
+- Active Alerts: 6
+- Highest Severity: CRITICAL
+- Time to Resolution: URGENT (Within 1 hour)
+- System Impact: HIGH (Capital at risk, risk management failing)
 
-ALERT 11: PERFORMANCE METRICS IMPROVING ⬆️
-- Total Trades: 5
-- Profitable Trades: 1 (20%) ⬆️ IMPROVING
-- Loss-making Trades: 4 (80%) ⬆️ IMPROVING
-- Win Rate: 20% ⬆️ IMPROVING
-- Loss Rate: 80% ⬆️ IMPROVING
-- Status: 🔴 CRITICAL - Strategy underperformance
-- Risk: Strategy may be flawed or market conditions unfavorable
-- Action Required: Review trading strategy and market conditions
-- Recommended: Pause trading until strategy reviewed
-- Trend: ⬆️ IMPROVING - 1 position now in profit
-- Alert Priority: HIGH
+=== MONITORING CONTINUES ===
+Next check: 2026-03-31 19:00:00 (Asia/Bangkok)
+Alert persistence: Will remain CRITICAL until all issues resolved
 
-ALERT 12: MARKET NEGATIVE MOMENTUM ⬆️ SLIGHT IMPROVEMENT
-- BTC 24h Change: -1.68% (negative) 
-- ETH 24h Change: -1.38% (negative) 
-- Status: 🔴 CRITICAL - Strong downward pressure on positions
-- Risk: Positions may continue to lose value rapidly
-- Action Required: Consider reducing exposure or hedging
-- Impact: 4 positions losing value, 2 already at critical loss levels
-- Trend: ⬆️ SLIGHT IMPROVEMENT - Prices increased slightly from last check
-- Alert Priority: HIGH
-
-ALERT 13: CAPITAL STABILIZATION ⬆️ NEW
-- Capital Change: +$0.07 in 5 minutes (+0.05%)
-- Rate: +$0.84/hour extrapolated
-- Status: 🔴 CRITICAL - Capital still at dangerous level
-- Risk: Capital at 45.7% loss level
-- Action Required: Continue monitoring capital trend
-- Impact: System showing slight improvement but still critical
-- Trend: ⬆️ IMPROVING - First positive change observed
-- Alert Priority: HIGH
-
-=== ESCALATION PROTOCOL ===
-Level 1 (Immediate - Within 5 minutes):
-1. Exit positions #1 and #2 (stop-loss triggered)
-2. Pause all new trading
-3. Investigate capital tracking system
-4. Investigate data inconsistency (Capital vs P&L)
-
-Level 2 (Within 15 minutes):
-1. Verify execution mode (REAL vs SIMULATION)
-2. Review and fix position sizing logic
-3. Investigate trade count mismatch
-4. Implement portfolio diversification rules
-
-Level 3 (Within 1 hour):
-1. Complete strategy review
-2. Update risk parameters
-3. Fix data tracking system
-4. Resume trading with new safeguards
-
-=== ALERT SUMMARY ===
-- Critical Alerts: 13 (🔴)
-- High Alerts: 0
-- Total Active Alerts: 13
-- System Status: 🔴 CRITICAL - Requires immediate intervention
-
-=== CURRENT MARKET DATA ===
-- BTC Price: $66,240.00 (up $14.00 from last check)
-- ETH Price: $2,023.63 (up $2.55 from last check)
-- BTC 24h Change: -1.68% (negative momentum)
-- ETH 24h Change: -1.38% (negative momentum)
-- Market Sentiment: NEUTRAL (per last analysis)
-- ETH Support: $2,019.17 (ETH trading above support)
-- BTC Support: $66,167.87 (BTC trading above support)
-
-=== PORTFOLIO IMPACT ===
-- Total Portfolio Value: $1,253.34
-- Capital Deployed: $1,300.05
-- Portfolio P&L: -$46.71 (-3.59%) ⬆️ IMPROVING
-- Total Unrealized Loss: -$46.71
-- ETH Exposure: 84.3% (EXTREME CONCENTRATION RISK)
-- BTC Exposure: 15.7%
-- Capital Reduction Impact: $114.29 loss (45.7% of initial capital) ⬆️ SLIGHT IMPROVEMENT
-
-=== IMMEDIATE ACTIONS REQUIRED ===
-1. 🔴 EXIT POSITIONS #1 & #2: Stop-loss triggered, immediate exit required
-2. 🔴 PAUSE ALL TRADING: Capital depletion at critical level (45.7% loss)
-3. 🔴 INVESTIGATE CAPITAL TRACKING: Data inconsistency between capital and P&L
-4. 🔴 VERIFY EXECUTION MODE: Confirm if trading is real or simulated
-5. 🔴 FIX STRATEGY EXECUTION: Ensure Binance executes SHORTS not BUYS
-6. 🔴 REDUCE ETH EXPOSURE: From 84.3% to <50%
-7. 🔴 REVIEW POSITION SIZING: Fix 200% capital violation
-8. 🔴 SET DAILY LIMITS: Change from 999 to 2-5 trades/day
-
-=== NEXT STEPS ===
-1. Monitor positions #3, #4, #5 for stop-loss triggers
-2. Wait for next analysis at ~18:39 PM
-3. Check for system updates or configuration changes
-4. Review system logs for trade executions
-5. Verify API connectivity and credentials
-
-=== END OF CRITICAL ALERTS ===
-Generated by: Trading Dashboard Monitor Cron Job
-Next Update: 2026-03-31 17:54:45 (5 minutes)
-============================================================
-CRITICAL ALERT: 2026-03-31 17:55:28
-============================================================
-CRITICAL: High drawdown detected: 45.80% (above 10% threshold)
-
+END OF CRITICAL ALERTS

@@ -3,14 +3,14 @@
   "initial_capital": 946.97,
   "current_capital": 134.27248020080586,
   "btc_holdings": 0.005981,
-  "btc_value": 396.53240508,
-  "total_value": 530.8048852808058,
+  "btc_value": 398.25559099,
+  "total_value": 532.5280711908058,
   "risk_parameters": {
     "stop_loss": 0.05,
     "take_profit": 0.1,
     "max_trades_per_day": 2,
     "max_position_size": 0.2
   },
-  "last_updated": "2026-03-31T17:59:13.983488",
+  "last_updated": "2026-03-31T18:24:21.118296",
   "notes": "Repaired by system repair script. Based on actual Gemini data. Initial capital corrected from $250 to $946.97 (total BTC purchases)."
 }
