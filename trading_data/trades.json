@@ -12,11 +12,11 @@
     "status": "open",
     "id": "trade_000001",
     "saved_at": "2026-04-01T01:14:14.158183",
-    "current_price": 82.763,
-    "current_value": 53.51741583351577,
-    "unrealized_pl": 0.3524158335157762,
-    "unrealized_pl_percent": 0.6628718772045072,
-    "last_price_update": "2026-04-01T02:59:25.007731"
+    "current_price": 82.925,
+    "current_value": 53.62217063173514,
+    "unrealized_pl": 0.457170631735139,
+    "unrealized_pl_percent": 0.8599090223551986,
+    "last_price_update": "2026-04-01T03:25:05.359134"
   },
   {
     "exchange": "gemini",
@@ -31,11 +31,11 @@
     "status": "open",
     "id": "trade_000002",
     "saved_at": "2026-04-01T01:14:14.158504",
-    "current_price": 82.763,
-    "current_value": 53.3992098907767,
-    "unrealized_pl": 0.23420989077669874,
-    "unrealized_pl_percent": 0.4405339805825248,
-    "last_price_update": "2026-04-01T02:59:25.007755"
+    "current_price": 82.925,
+    "current_value": 53.50373331310679,
+    "unrealized_pl": 0.3387333131067906,
+    "unrealized_pl_percent": 0.6371359223300788,
+    "last_price_update": "2026-04-01T03:25:05.359152"
   },
   {
     "exchange": "gemini",
@@ -50,11 +50,11 @@
     "status": "open",
     "id": "trade_000003",
     "saved_at": "2026-04-01T01:14:14.158741",
-    "current_price": 82.763,
-    "current_value": 53.4426644844716,
-    "unrealized_pl": 0.27766448447160147,
-    "unrealized_pl_percent": 0.5222693209284257,
-    "last_price_update": "2026-04-01T02:59:25.007763"
+    "current_price": 82.925,
+    "current_value": 53.547272964667876,
+    "unrealized_pl": 0.38227296466787236,
+    "unrealized_pl_percent": 0.7190312511386576,
+    "last_price_update": "2026-04-01T03:25:05.359158"
   },
   {
     "exchange": "gemini",
@@ -69,11 +69,11 @@
     "status": "open",
     "id": "trade_000004",
     "saved_at": "2026-04-01T01:14:14.158969",
-    "current_price": 82.763,
-    "current_value": 53.3849566256582,
-    "unrealized_pl": 0.21995662565820334,
-    "unrealized_pl_percent": 0.41372449103396214,
-    "last_price_update": "2026-04-01T02:59:25.007769"
+    "current_price": 82.925,
+    "current_value": 53.48945214869816,
+    "unrealized_pl": 0.3244521486981632,
+    "unrealized_pl_percent": 0.610273955982632,
+    "last_price_update": "2026-04-01T03:25:05.359163"
   },
   {
     "exchange": "gemini",
@@ -88,10 +88,10 @@
     "status": "open",
     "id": "trade_000005",
     "saved_at": "2026-04-01T01:14:14.159206",
-    "current_price": 82.763,
-    "current_value": 53.37848038383152,
-    "unrealized_pl": 0.2134803838315237,
-    "unrealized_pl_percent": 0.4015430900621064,
-    "last_price_update": "2026-04-01T02:59:25.007780"
+    "current_price": 82.925,
+    "current_value": 53.48296323029891,
+    "unrealized_pl": 0.3179632302989098,
+    "unrealized_pl_percent": 0.5980687111801108,
+    "last_price_update": "2026-04-01T03:25:05.359168"
   }
 ]

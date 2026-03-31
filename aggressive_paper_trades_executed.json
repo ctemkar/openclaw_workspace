@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-03-31T09:56:52.550726",
+  "timestamp": "2026-04-01T03:45:55.635399",
   "paper_balance": 25000.0,
   "trades_executed": [
     {
-      "id": "PAPER_1774925812_9427",
+      "id": "PAPER_1774989955_7952",
       "symbol": "BTCUSD",
       "action": "BUY",
       "entry_price": 67975.67,
@@ -15,7 +15,7 @@
       "potential_reward": 2250.0,
       "risk_reward_ratio": 1.9,
       "leverage": 2.0,
-      "timestamp": "2026-03-31T09:56:52.550610",
+      "timestamp": "2026-04-01T03:45:55.635077",
       "status": "OPEN",
       "conditions": "RSI OK (51.9), Uptrend (56%)",
       "metrics": {
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "PAPER_1774925812_3128",
+      "id": "PAPER_1774989955_7688",
       "symbol": "ETHUSD",
       "action": "BUY",
       "entry_price": 2074.92,
@@ -38,7 +38,7 @@
       "potential_reward": 2250.0,
       "risk_reward_ratio": 1.9,
       "leverage": 2.0,
-      "timestamp": "2026-03-31T09:56:52.550621",
+      "timestamp": "2026-04-01T03:45:55.635086",
       "status": "OPEN",
       "conditions": "RSI OK (50.7), Uptrend (56%)",
       "metrics": {
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "PAPER_1774925812_4824",
+      "id": "PAPER_1774989955_4839",
       "symbol": "SOLUSD",
       "action": "BUY",
       "entry_price": 83.85,
@@ -61,7 +61,7 @@
       "potential_reward": 2250.0,
       "risk_reward_ratio": 1.9,
       "leverage": 2.0,
-      "timestamp": "2026-03-31T09:56:52.550628",
+      "timestamp": "2026-04-01T03:45:55.635093",
       "status": "OPEN",
       "conditions": "RSI OK (45.4), Uptrend (56%)",
       "metrics": {

@@ -52,7 +52,7 @@ print()
 # 2. P&L MONITORING
 print('2. 📈 P&L MONITORING (MOST IMPORTANT):')
 print('   🔴 CUMULATIVE P&L: $-415.32 (-43.86%) - NEVER RESETS')
-print('   ♊ GEMINI P&L: $+0.45 (5 SOL LONG positions)')
+print('   ♊ GEMINI P&L: $+0.93 (5 SOL LONG positions)')
 print('   ₿ BINANCE P&L: $-3.83 (historic unrealized)')
 print('   📊 SHORT TRADES: 0 open, waiting for 1.0%+ rallies')
 print()

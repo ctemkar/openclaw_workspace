@@ -22,6 +22,22 @@
 ## How You Want Me To Help
 _(What matters to you? What projects are you working on?)_
 
+## CRITICAL RULES FOR TRADING SYSTEMS
+- **NO HARDCODED VALUES** in real trading systems with real money
+- **NO SIMULATIONS OR MOCK DATA** - always use real data
+- **NO ASSUMPTIONS** about prices, balances, or positions
+- **ALWAYS FETCH REAL-TIME DATA** from exchanges/APIs
+- **VALIDATE ALL DATA** before displaying or acting on it
+- **IF API FAILS**, show error clearly - don't guess or use stale data
+- **REAL MONEY = REAL DATA ONLY**
+
+## Trading System Principles
+1. Every number must come from a verified source
+2. If data can't be verified, show "DATA UNAVAILABLE"
+3. Never assume or hardcode trading values
+4. Always prioritize accuracy over appearance
+5. Trading with real money requires 100% real data
+
 ---
 
 This is our starting point. We'll update this as we go.

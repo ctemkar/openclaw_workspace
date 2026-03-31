@@ -1,62 +1,87 @@
-TRADING DASHBOARD MONITORING REPORT
+TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Monitoring Time: 2026-03-31 21:39:49 (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/
+Analysis Time: 2026-04-01 03:38:46 (Asia/Bangkok)
 
-SYSTEM STATUS:
-✅ Dashboard accessible: HTTP 200 OK
-✅ All endpoints responsive: /status, /trades, /analysis, /strategy, /summary
-✅ Trading system: RUNNING
-✅ Last analysis: 2026-03-31T21:19:01 (20 minutes ago)
-✅ Analysis schedule: HOURLY
+EXECUTIVE SUMMARY:
+• Status: 🔴 CRITICAL - Multiple severe issues requiring immediate attention
+• Dashboard: OFFLINE (http://localhost:5001/ not accessible)
+• Trading: ACTIVE but BLOCKED by execution issues
+• Overall Health: 3/10 (POOR)
 
-CAPITAL & PERFORMANCE:
-• Total Capital: $531.58
-• Total P&L: -$5.50 (1.03% drawdown)
-• Unrealized P&L: -$5.50
-• Open Positions: 8
-• Realized P&L: $0.00
+KEY FINDINGS:
 
-RISK MANAGEMENT PARAMETERS:
-• Stop Loss: 5.0% (ACTIVE)
-• Take Profit: 10.0% (ACTIVE)
-• Max Trades/Day: 999
-• Position Size: 20% of capital per trade
+1. 🔴 CAPITAL DRAWDOWN: CRITICAL (43.9%)
+   • Initial: $946.97 | Current: $531.58
+   • Loss: -$415.39 (43.9% vs 20% threshold)
+   • Status: EXCEEDS CRITICAL THRESHOLD
 
-RECENT TRADING ACTIVITY (Last 5 trades):
-1. ETH/USD - BUY @ $2,325.28 (13:39:49) - Near support level
-2. ETH/USD - BUY @ $2,193.60 (00:33:02) - Near support level  
-3. BTC/USD - BUY @ $67,247.51 (21:29:41) - Near support level
-4. ETH/USD - BUY @ $2,052.38 (21:29:42) - Near support level
-5. ETH/USD - BUY @ $2,021.51 (07:24:00) - Conservative entry with 5% SL, 10% TP
+2. 🔴 MARGIN INSUFFICIENCY: CRITICAL
+   • Issue: Insufficient margin for new positions
+   • Impact: All trade attempts failing
+   • Error: "Margin is insufficient"
 
-ALERT ANALYSIS:
-✅ NO CRITICAL ALERTS DETECTED
-✅ Drawdown within acceptable limits (1.03% < 10% threshold)
-✅ Unrealized losses minimal (-$5.50 < -$20 threshold)
-✅ Open positions count acceptable (8 < 10 threshold)
-✅ No stop-loss or take-profit triggers detected
+3. 🔴 SYMBOL STATUS ERRORS: CRITICAL
+   • Symbol: MKR/USDT
+   • Error: "Invalid symbol status for opening position"
+   • Impact: 5 consecutive failed execution cycles
 
-TRADING PAIRS MONITORED (10 pairs):
-• BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD
-• DOT/USD, DOGE/USD, AVAX/USD, MATIC/USD, LINK/USD
+4. 🟡 DASHBOARD OFFLINE: WARNING
+   • Port 5001 not responding
+   • No web monitoring interface available
 
-EXECUTION MODE:
-• Gemini (LONG): 7 pairs (BTC, ETH, SOL, ADA, LINK, UNI, MATIC)
-• Binance (SHORT): 26 pairs (All top cryptos)
-• Mode: ✅ REAL TRADING - LIVE
+5. 🟡 CONFIGURATION MISMATCH: WARNING
+   • Max trades/day: Config=2 vs Monitoring=999
+   • Risk: Potential over-trading
 
-LOGGING STATUS:
-✅ Monitoring log updated: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-✅ Critical alerts log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log (no new alerts)
-✅ Previous system check: All core systems operational
+TRADING ACTIVITY:
+• Process: 26-crypto trading bot running
+• Last Cycle: Cycle 20 (01:26:05)
+• Cycle Interval: 5 minutes (~12 seconds duration)
+• Total Signals: 33 opportunities detected
+• Recent Signal: MKR/USDT SHORT (-3.40% 24h change)
+• Execution: 0 successful, multiple failed (symbol/margin issues)
+
+RISK MONITORING:
+• Stop-loss: No immediate triggers (from previous data)
+• Take-profit: No immediate triggers (from previous data)
+• Active Positions: 8 Binance SHORT (from previous summary)
+• Position Health: Requires current verification
+
+HISTORICAL ALERTS (From Previous Session):
+• 2 STOP-LOSS TRIGGERS: ETH/USD positions (-11.29% and -5.95%)
+• 2 CRITICAL DRAWDOWN EVENTS: ETH beyond 5% stop-loss
+• CAPITAL OVERUTILIZATION: 520% of allocated capital
+• DAILY LIMIT VIOLATION: 5 trades vs 2 allowed
+
+CRITICAL ALERTS LOGGED:
+1. Capital drawdown exceeds 20% threshold (43.9%)
+2. Margin insufficiency blocking all trades
+3. Symbol status errors preventing execution
+4. Dashboard offline - monitoring limited
+5. Configuration parameter mismatch
+6. Symbol mapping error (MATIC/USDT)
+
+IMMEDIATE ACTIONS REQUIRED:
+1. STOP TRADING - Halt all trading due to margin insufficiency
+2. DEPOSIT FUNDS - Add margin to enable trading
+3. INVESTIGATE SYMBOL - Check MKR/USDT status on Binance
+4. RESTART DASHBOARD - Bring up monitoring on port 5001
+
+FILES CREATED:
+• trading_monitoring.log - Complete extracted trading data
+• critical_alerts.log - Specific stop-loss/drawdown events
+• This summary - Plain text analysis overview
 
 RECOMMENDATIONS:
-1. Continue hourly monitoring as scheduled
-2. Watch ETH positions closely (multiple ETH trades in recent activity)
-3. Consider diversifying beyond ETH-heavy positions
-4. Next analysis due in ~40 minutes (22:19 local time)
+• Pause trading until margin and symbol issues resolved
+• Conduct thorough strategy review given 43.9% drawdown
+• Fix configuration mismatches and symbol mappings
+• Implement stricter risk controls and position sizing
 
-OVERALL ASSESSMENT: SYSTEM HEALTHY, NO IMMEDIATE ACTION REQUIRED
+NEXT STEPS:
+• Monitor next trading cycle (~01:31:05)
+• Attempt dashboard restart
+• Verify current position status and margin
+
 =====================================
-Monitoring completed successfully at 21:39:49
+Monitoring complete. SYSTEM REQUIRES IMMEDIATE ATTENTION.

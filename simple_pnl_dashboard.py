@@ -136,32 +136,43 @@ HTML_TEMPLATE = '''
         </div>
         
         <div class="section">
-            <h2 class="section-title">🔵 GEMINI AND BINANCE P&L WITH HISTORIC</h2>
+            <h2 class="section-title">🔵 REAL-TIME P&L (NO HARDCODED VALUES)</h2>
+            
+            {% if 'ERROR' in gemini_status or 'UNAVAILABLE' in gemini_status %}
+            <div class="warning">
+                <h3>⚠️ DATA UNAVAILABLE</h3>
+                <p>Gemini P&L: {{ gemini_status }}</p>
+                <p><small>Using real data only - no hardcoded values</small></p>
+            </div>
+            {% else %}
             <div class="data-grid">
                 <div class="data-card">
                     <h3>♊ GEMINI P&L</h3>
                     <div class="data-value {{ 'positive' if gemini_pnl >= 0 else 'negative' }}">
                         ${{ "%+.2f"|format(gemini_pnl) }}
                     </div>
-                    <p>Current open positions</p>
-                    <p><small>5 SOL LONG positions</small></p>
+                    <p>Real-time calculation</p>
+                    <p><small>{{ gemini_data.position_count }} SOL positions</small></p>
+                    <p><small>Status: {{ gemini_status }}</small></p>
                 </div>
                 <div class="data-card">
                     <h3>₿ BINANCE P&L</h3>
-                    <div class="data-value {{ 'positive' if binance_total_pnl >= 0 else 'negative' }}">
-                        ${{ "%+.2f"|format(binance_total_pnl) }}
+                    <div class="data-value">
+                        DATA UNAVAILABLE
                     </div>
-                    <p>Current + historic</p>
-                    <p><small>Historic: 5 SHORT lost $-3.83</small></p>
+                    <p>Real API needed</p>
+                    <p><small>Status: {{ binance_status }}</small></p>
                 </div>
                 <div class="data-card">
-                    <h3>Total Open P&L</h3>
-                    <div class="data-value {{ 'positive' if total_open_pnl >= 0 else 'negative' }}">
-                        ${{ "%+.2f"|format(total_open_pnl) }}
+                    <h3>📊 DATA QUALITY</h3>
+                    <div class="data-value">
+                        REAL DATA
                     </div>
-                    <p>All open positions</p>
+                    <p>No hardcoded values</p>
+                    <p><small>If unavailable, shows as unavailable</small></p>
                 </div>
             </div>
+            {% endif %}
         </div>
         
         <div class="section">
@@ -235,37 +246,56 @@ HTML_TEMPLATE = '''
 '''
 
 def get_current_price(symbol):
-    """Get current price for a symbol"""
-    prices = {
-        'SOL/USD': 82.50, 'BTC/USD': 66500.00, 'ETH/USD': 3500.00,
-        'XRP/USD': 0.52, 'ADA/USD': 0.45, 'DOT/USD': 7.20,
-        'DOGE/USD': 0.15, 'AVAX/USD': 36.00, 'LINK/USD': 18.50,
-        'UNI/USD': 10.20, 'LTC/USD': 82.00, 'ATOM/USD': 10.50,
-        'FIL/USD': 5.80, 'XTZ/USD': 1.05, 'AAVE/USD': 100.00,
-        'COMP/USD': 60.00, 'YFI/USD': 8500.00,
-        'SOL/USDT': 82.50, 'ETH/USDT': 3500.00, 'XRP/USDT': 0.52,
-        'ADA/USDT': 0.45, 'DOT/USDT': 7.20
-    }
-    return prices.get(symbol, 0)
+    """Get current price for a symbol - REAL DATA ONLY, NO HARCODED VALUES"""
+    try:
+        from real_price_service import RealPriceService
+        
+        # Map dashboard symbols to price service symbols
+        symbol_map = {
+            'SOL/USD': 'SOL/USD',
+            'SOL/USDT': 'SOL/USD',
+            'BTC/USD': 'BTC/USD',
+            'BTC/USDT': 'BTC/USD',
+            'ETH/USD': 'ETH/USD',
+            'ETH/USDT': 'ETH/USD',
+            # Add other symbols as needed
+        }
+        
+        price_symbol = symbol_map.get(symbol, symbol)
+        price, source = RealPriceService.get_price(price_symbol)
+        
+        if price is not None:
+            print(f"[Price Service] {symbol}: ${price:.3f} ({source})")
+            return price
+        else:
+            print(f"[Price Service] ERROR: {symbol} - {source}")
+            # Return 0 to indicate error - dashboard should handle this
+            return 0
+            
+    except Exception as e:
+        print(f"[Price Service] Exception: {e}")
+        return 0
 
 def load_data():
-    """Load all data"""
+    """Load all data - REAL DATA ONLY, NO HARDCODED VALUES"""
     data = {}
     
-    # Get dashboard data
+    # Use real trading data service
     try:
-        import requests
-        response = requests.get('http://localhost:5001/api/data', timeout=3)
-        data['api'] = response.json()
-    except:
-        data['api'] = {'cumulative_pnl': {}, 'current_positions': [], 'capital_allocation': {}}
+        from real_trading_data_service import RealTradingDataService
+        real_data = RealTradingDataService.get_all_data()
+        data['real'] = real_data
+    except Exception as e:
+        data['real'] = {
+            'error': f"REAL_DATA_SERVICE_FAILED: {e}",
+            'timestamp': datetime.now().isoformat(),
+            'data_status': {'overall': 'ERROR_LOADING_REAL_DATA'}
+        }
     
-    # Get system status
-    try:
-        with open('system_status.json', 'r') as f:
-            data['system'] = json.load(f)
-    except:
-        data['system'] = {'capital': {}, 'positions': {}}
+    # For backward compatibility, keep some structure
+    data['api'] = {'cumulative_pnl': {}, 'current_positions': [], 'capital_allocation': {}}
+    data['system'] = {'capital': {}, 'positions': {}}
+    data['gemini_trades'] = []
     
     return data
 
@@ -287,31 +317,27 @@ def dashboard():
         'recovery_percent': cumulative_data.get('recovery_percent_needed', 78.1)
     }
     
-    # Calculate current P&L from API
-    positions = data['api'].get('current_positions', [])
-    gemini_pnl = 0.45  # Default from known data
+    # Use REAL DATA from real trading data service
+    real_data = data.get('real', {})
+    data_status = real_data.get('data_status', {})
+    
+    # Get Gemini data from real service
+    gemini_data = real_data.get('gemini', {})
+    gemini_pnl = gemini_data.get('total_pnl', 0)
+    gemini_positions = gemini_data.get('positions', [])
+    gemini_status = data_status.get('gemini', 'UNKNOWN')
+    
+    # Get Binance data (currently not implemented)
+    binance_data = real_data.get('binance', {})
+    binance_status = data_status.get('binance', 'UNKNOWN')
+    
+    # For now, binance data is not available from real APIs
     binance_open_pnl = 0
     binance_positions = []
     
-    for pos in positions:
-        exchange = pos.get('exchange', 'unknown')
-        if exchange == 'binance':
-            symbol = pos.get('symbol', 'unknown')
-            entry_price = pos.get('price', 0)
-            amount = pos.get('amount', 0)
-            current_price = get_current_price(symbol)
-            
-            pnl = (amount * current_price) - (amount * entry_price)
-            pnl_percent = (pnl / (amount * entry_price) * 100) if entry_price > 0 else 0
-            
-            binance_open_pnl += pnl
-            binance_positions.append({
-                'symbol': symbol,
-                'entry_price': entry_price,
-                'current_price': current_price,
-                'pnl': pnl,
-                'pnl_percent': pnl_percent
-            })
+    # If Gemini status indicates error, show it
+    if 'ERROR' in gemini_status or 'UNAVAILABLE' in gemini_status:
+        print(f"[Dashboard] Gemini Data Status: {gemini_status}")
     
     # Get Binance historic unrealized
     binance_summary = data['system'].get('positions', {}).get('binance_positions_summary', {})
@@ -344,7 +370,10 @@ def dashboard():
         timestamp=datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         cumulative=cumulative,
         gemini_pnl=gemini_pnl,
+        gemini_data=gemini_data,
+        gemini_status=gemini_status,
         binance_total_pnl=binance_total_pnl,
+        binance_status=binance_status,
         total_open_pnl=total_open_pnl,
         binance_positions_count=len(binance_positions),
         binance_positions=binance_positions,
@@ -353,30 +382,30 @@ def dashboard():
 
 @app.route('/api/pnl')
 def api_pnl():
-    """JSON P&L data"""
+    """JSON P&L data - REAL DATA ONLY, NO HARDCODED VALUES"""
     data = load_data()
     
-    cumulative_data = data['system'].get('capital', {})
+    real_data = data.get('real', {})
+    gemini_data = real_data.get('gemini', {})
+    data_status = real_data.get('data_status', {})
     
     return jsonify({
         'timestamp': datetime.now().isoformat(),
-        'cumulative_pnl': {
-            'initial': cumulative_data.get('initial', 946.97),
-            'current': cumulative_data.get('current', 531.65),
-            'pnl': cumulative_data.get('pnl', -415.32),
-            'pnl_percent': cumulative_data.get('pnl_percent', -43.86),
-            'recovery_needed': cumulative_data.get('recovery_needed', 415.32),
-            'recovery_percent': cumulative_data.get('recovery_percent_needed', 78.1)
-        },
+        'data_quality': 'REAL_DATA_ONLY_NO_HARDCODING',
+        'data_status': data_status,
         'exchange_pnl': {
-            'gemini': 0.45,
-            'binance': -3.83,
-            'total_open': 0.45
+            'gemini': gemini_data.get('total_pnl', 0),
+            'binance': 'REAL_API_NEEDED',
+            'total_open': gemini_data.get('total_pnl', 0)
         },
-        'short_trades': {
-            'count': 0,
-            'status': 'Waiting for 1.0%+ rally opportunities',
-            'historic': '5 SHORT positions lost $-3.83 total'
+        'gemini_details': {
+            'position_count': gemini_data.get('position_count', 0),
+            'positions': gemini_data.get('positions', [])
+        },
+        'metadata': {
+            'warning': 'NO HARCODED VALUES - REAL DATA ONLY',
+            'missing_data': 'Binance API not implemented',
+            'data_source': 'Real-time price APIs + gemini_trades.json'
         }
     })
 

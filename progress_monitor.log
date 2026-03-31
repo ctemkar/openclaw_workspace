@@ -11776,3 +11776,49 @@ Click to open REAL-TIME Dashboard:
 http://127.0.0.1:5007
 (Auto-refreshes every 10 seconds)
 
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 03:10:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 03:20:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [OK] 1 BOT RUNNING: fixed_bot_common.py
+   Strategy: Gemini LONG (0.5% dips) - COMMON DATA LAYER
+   Capital:  Gemini,  Binance
+   Status: Using single source of truth for all data
+--- Progress Monitor: Wed Apr  1 03:30:01 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Wed Apr  1 03:40:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5008
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Wed Apr  1 03:50:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5008
+(Auto-refreshes every 10 seconds)
+
+STATUS: [OK] API is UP
+BOT: [CRITICAL] NO TRADING BOTS RUNNING

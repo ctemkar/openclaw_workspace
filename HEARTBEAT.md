@@ -1,6 +1,6 @@
 # OpenClaw Heartbeat
-- [✅] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Wed Apr  1 02:14:15 +07 2026 - STATUS: ✅ SYSTEM FULLY OPERATIONAL - All systems running. P&L information displayed in dashboards.)
-- [✅] Task 2: If trading status is stopped, alert user. (Status: ✅ TRADING BOTS ACTIVE - real_26_crypto_trader.py (PID 70943) and fixed_bot_common.py (PID 70944) both running. Last check: 2026-04-01 02:14 Bangkok Time)
-- [✅] Task 3: Run auto_save.sh every hour. (Last run: Wed Apr  1 02:14:15 +07 2026 - Git backup completed successfully with P&L dashboard updates.)
-- [✅] Task 4: Monitor fixed trading bot. (Status: ✅ BOTS ACTIVE - Trading bots running. Dashboard servers: dashboard_common.py (PID 73640) with P&L information, updated_trading_server.py (PID 73162) on port 5001. P&L information now displayed as requested.)
-- [✅] Task 5: Handle Cash Earner Daily Tasks reminder. (Status: ✅ UPDATED DAILY_TASKS.md for March 31, 2026 with 3 CRITICAL tasks: 1) Google Analytics setup, 2) Social media creation, 3) Email list setup. Project stalled for 17+ days, only 13 days left for $100 goal. Created emergency task scripts and templates.)
+- [❌] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Wed Apr  1 02:14:15 +07 2026 - STATUS: ❌ NOT RUNNING FOR 95 MINUTES - System monitoring stalled. Current time: 03:49 Bangkok Time)
+- [⚠️] Task 2: If trading status is stopped, alert user. (Status: ⚠️ TRADING BOT ACTIVE BUT DASHBOARDS OFFLINE - bot_common.py running (last cycle 03:25), but dashboards on ports 5001/5009 offline. Only simple P&L dashboard on port 5008 running.)
+- [❌] Task 3: Run auto_save.sh every hour. (Last run: Wed Apr  1 02:14:15 +07 2026 - ❌ NOT RUNNING FOR 95 MINUTES - Git backup overdue. Current time: 03:49 Bangkok Time)
+- [⚠️] Task 4: Monitor fixed trading bot. (Status: ⚠️ BOT ACTIVE BUT LIMITED MONITORING - Trading bot running, but main dashboards offline. Trading server on port 5001 not responding. Critical drawdown detected: -43.86% cumulative loss.)
+- [❌] Task 5: Handle Cash Earner Daily Tasks reminder. (Status: ❌ DAILY_TASKS.md NOT FOUND - No daily tasks file detected in workspace. Project status unknown.)

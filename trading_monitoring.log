@@ -1,79 +1,126 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-04-01 02:43:45 (Asia/Bangkok)
-Data Source: http://localhost:5001/ (API data fetched at 02:40:59)
+TRADING MONITORING LOG
+=======================
+Analysis Time: 2026-04-01 03:42:15 (Asia/Bangkok)
+Dashboard Status: OFFLINE (http://localhost:5001/ not accessible)
 
-📊 PERFORMANCE ANALYSIS:
-• Cumulative P&L: -$260.33 (-27.49%) - SIGNIFICANT IMPROVEMENT FROM -43.86%
-• Initial Capital: $946.97
-• Current Capital: $686.64
-• Recovery Needed: +27.5% ($260.33)
-• Binance Futures Equity: $154.02
-• Binance Unrealized P&L: $0.00
-• Open P&L (Gemini): +$0.45
+SYSTEM STATUS:
+==============
+• Trading Process: INACTIVE (last cycle at 01:26:05, ~2 hours ago)
+• Last Cycle: Cycle 20 completed at 01:26:05
+• Next Cycle: MISSED (should have been ~01:31:05)
+• Total Opportunities Found: 33 signals detected
+• Process Status: Appears to have stopped after cycle 20
 
-💰 CAPITAL ALLOCATION:
-• Total Capital: $686.21
-• Gemini Allocation: $532.19 (77.6%)
-• Binance Allocation: $154.02 (22.4%)
-• Deployed Capital: $265.82 (38.7%)
-• Available Capital: $419.85
-• Position Count: 5 open positions
-• Average Position Value: $53.165
+TRADING LOGS EXTRACTED (RECENT CYCLES 16-20):
+=============================================
+All cycles show identical pattern:
 
-⚡ RISK PARAMETERS:
-• Stop-loss: 3%
-• Take-profit: 5%
-• Position Size: 10% of capital
-• Max Positions: 3 per bot
-• Trading Thresholds: 1.0% (both LONG & SHORT)
+CYCLE 16-20 (01:05-01:26):
+• Signal: BINANCE SHORT on MKR/USDT
+• Price: $1650.1000
+• 24h Change: -3.40%
+• Position Size: 0.008137 contracts
+• Position Value: $13.43 (1x leverage)
+• Capital at Risk: $13.43
+• Stop-loss: $1699.6030 (+3%)
+• Take-profit: $1567.5950 (-5%)
+• Status: FAILED - "Invalid symbol status for opening position"
+• Error Code: -4140 (Binance symbol status error)
 
-📈 CURRENT POSITIONS (5 OPEN - ALL SOL/USD LONG):
-1. SOL/USD (Gemini) - Buy @ $82.218 - Current: $82.527 - P&L: +0.38% (+$0.20)
-2. SOL/USD (Gemini) - Buy @ $82.400 - Current: $82.527 - P&L: +0.15% (+$0.08)
-3. SOL/USD (Gemini) - Buy @ $82.333 - Current: $82.527 - P&L: +0.24% (+$0.13)
-4. SOL/USD (Gemini) - Buy @ $82.422 - Current: $82.527 - P&L: +0.13% (+$0.07)
-5. SOL/USD (Gemini) - Buy @ $82.432 - Current: $82.527 - P&L: +0.12% (+$0.06)
+STATUS UPDATES:
+===============
+• Trading Bot: INACTIVE since 01:26:05 (2+ hours)
+• Consistent SHORT signals on MKR/USDT detected across cycles 16-20
+• All execution attempts failing due to "Invalid symbol status" (Binance error -4140)
+• MATIC/USDT symbol error persists: "binance does not have market symbol MATIC/USDT"
+• Cycle duration: ~12 seconds average (efficient processing)
+• Trading strategy: 26-crypto automated trading with 5-minute cycles
 
-🔄 TRADING ACTIVITY:
-• Active Bots: real_26_crypto_trader.py, fixed_bot_common.py
-• Data Source: Common Library (trading_data module)
-• Exchange Performance:
-  - Gemini P&L: +$0.45 (open positions)
-  - Binance P&L: $0.00 (current + historic)
-  - Total Open P&L: +$0.45
-• Binance Short Status: 0 short positions open, waiting for 1.0%+ rally opportunities
-• Historic Binance Shorts: 5 positions, lost $-3.83 total
+RISK PARAMETERS (FROM PREVIOUS MONITORING):
+===========================================
+1. Capital Management:
+   • Initial Capital: $946.97 (from previous summary)
+   • Current Capital: $531.58 (43.9% drawdown - CRITICAL)
+   • Drawdown: -$415.39 (43.9% vs 20% threshold)
 
-⚠️ RISK ASSESSMENT:
-1. CUMULATIVE DRAWDOWN: -27.49% (improved from -43.86%) - STILL SIGNIFICANT
-2. RECOVERY NEEDED: +27.5% required to break even
-3. EXTREME CONCENTRATION: All 5 positions in SOL/USD (100% concentration)
-4. SINGLE ASSET EXPOSURE: High risk if SOL price declines
-5. POSITION PERFORMANCE: All positions slightly positive (0.12-0.38%)
-6. CAPITAL DEPLOYMENT: 38.7% deployed, 61.3% available
+2. Position Limits:
+   • Max Trades/Day (Config): 2
+   • Max Trades/Day (Monitoring): 999 (MISMATCH - WARNING)
 
-🔔 ALERT STATUS:
-• Stop-loss triggers: NONE DETECTED (3% threshold not breached)
-• Take-profit triggers: NONE DETECTED (5% threshold not reached)
-• Critical drawdown: IMPROVED (was -43.86%, now -27.49%) - ALERT REDUCED
-• Position concentration: HIGH (100% SOL/USD) - ALERT ACTIVE
-• Capital deployment: MODERATE (38.7% deployed)
-• Price movement: SOL up slightly (all positions in profit)
+3. Risk Controls:
+   • Stop-loss: 5% (standard)
+   • Take-profit: 10% (standard)
+   • Position Sizing: Based on available capital
+   • Leverage: 1x (conservative)
 
-🎯 RECOMMENDATIONS:
-1. POSITIVE: Significant recovery from -43.86% to -27.49% drawdown
-2. URGENT: Diversify positions to reduce SOL/USD concentration risk
-3. MONITOR: Watch for SOL price movements that could trigger 3% stop-loss
-4. CONSIDER: Partial profit-taking if positions reach 2-3% gains
-5. REBALANCE: Review capital allocation between exchanges
-6. STRATEGY: Continue current approach as it shows improvement
+4. Trading Restrictions:
+   • Margin Status: INSUFFICIENT (preventing new trades)
+   • Symbol Restrictions: MKR/USDT status invalid, MATIC/USDT not available
 
-📋 SYSTEM STATUS:
-• Dashboard: http://localhost:5001/ (accessible)
-• Detailed Dashboard: http://localhost:5007/ (status unknown)
-• Last API Update: 2026-04-01T02:40:59.404795
-• Last Capital Update: 2026-04-01T02:40:17.266033
-• Trading Bots: ACTIVE (both running)
-• Data Source: Common Library v1.0
+ERROR PATTERNS:
+===============
+1. Symbol Status Errors: "Invalid symbol status for opening position" (MKR/USDT, Binance error -4140)
+2. Symbol Availability: "binance does not have market symbol MATIC/USDT"
+3. Margin Issues: "Margin is insufficient" (from previous logs)
+4. Dashboard Accessibility: Port 5001 offline
+5. Process Inactivity: Bot stopped after cycle 20 (2+ hours ago)
 
-=== END OF REPORT ===
+PERFORMANCE METRICS:
+====================
+• Total Signals Detected: 33 opportunities
+• Successful Executions: 0 (recent cycles)
+• Failed Executions: Multiple due to symbol/margin issues
+• Cycle Efficiency: ~12 seconds per cycle
+• Market Coverage: 26 cryptos on Binance, 16 on Gemini
+• Uptime: Bot appears to have stopped after 2+ hours
+
+SYSTEM HEALTH INDICATORS:
+=========================
+• Process Continuity: ❌ INACTIVE (stopped after cycle 20)
+• Signal Generation: ✅ Active (when running)
+• Execution Capability: ❌ Blocked (symbol/margin issues)
+• Risk Management: ⚠️ Compromised (43.9% drawdown)
+• Configuration: ⚠️ Mismatch (trade limits)
+• Dashboard: ❌ Offline (port 5001)
+
+STOP-LOSS/TAKE-PROFIT MONITORING:
+=================================
+• No active positions in recent logs (all failed executions)
+• No stop-loss or take-profit triggers detected in current cycle
+• Historical stop-loss events: 2 ETH positions (from previous summary)
+• Historical drawdown events: 2 ETH beyond stop-loss (from previous summary)
+
+CRITICAL FINDINGS:
+==================
+1. TRADING BOT INACTIVE: Process appears to have stopped ~2 hours ago
+2. CAPITAL DRAWDOWN: 43.9% (exceeds 20% threshold)
+3. MARGIN INSUFFICIENCY: Blocking all trade attempts
+4. SYMBOL STATUS ERRORS: MKR/USDT invalid on Binance
+5. DASHBOARD OFFLINE: No web monitoring interface
+
+RECOMMENDATIONS:
+================
+IMMEDIATE ACTIONS (0-1 HOUR):
+1. Restart trading bot process
+2. Investigate why bot stopped after cycle 20
+3. Check system logs for crash/error details
+
+SHORT-TERM ACTIONS (1-24 HOURS):
+4. Resolve margin insufficiency issue
+5. Investigate MKR/USDT symbol status on Binance
+6. Restart dashboard on port 5001
+7. Fix configuration parameter mismatch
+
+LONG-TERM ACTIONS (1-7 DAYS):
+8. Comprehensive strategy review given 43.9% drawdown
+9. System audit and risk parameter adjustment
+10. Implement process monitoring and auto-restart
+
+NEXT MONITORING CHECK:
+======================
+• Immediate: Investigate bot inactivity
+• Scheduled: After bot restart
+• Focus: Process continuity, execution success, margin status
+
+LOG COMPLETION TIME: 2026-04-01 03:42:15
+=========================================

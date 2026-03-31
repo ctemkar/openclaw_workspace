@@ -1,81 +1,200 @@
-🚨 CRITICAL TRADING ALERT - CONCENTRATION RISK 🚨
-Timestamp: 2026-04-01 02:43:45 (Asia/Bangkok)
-Alert Level: HIGH
+CRITICAL TRADING ALERTS LOG
+============================
+Alert Time: 2026-04-01 03:42:15 (Asia/Bangkok)
+Monitoring Source: Trading log analysis and system status check
 
-🔴 CRITICAL ISSUES DETECTED:
+🔴 CRITICAL ALERT 1: TRADING BOT INACTIVE - PROCESS STOPPED
+===========================================================
+Severity: CRITICAL
+Type: System Failure
+Time Detected: Current analysis (03:42:15)
+Details:
+• Last Active Cycle: Cycle 20 at 01:26:05
+• Inactivity Duration: ~2 hours, 16 minutes
+• Expected Next Cycle: ~01:31:05 (MISSED)
+• Process Status: Appears to have stopped/crashed
+• Impact: No trading activity, missed opportunities
+• Error Pattern: No crash logs in recent bot log
+Action Required: IMMEDIATE investigation and restart
 
-1. **EXTREME POSITION CONCENTRATION - 100% SOL/USD**
-   • All 5 open positions in SOL/USD
-   • Total exposure: $265.82 (38.7% of total capital)
-   • No diversification across assets
-   • Single asset vulnerability: If SOL declines, all positions affected
-   • STATUS: CRITICAL - Immediate diversification needed
+🔴 CRITICAL ALERT 2: CAPITAL DRAWDOWN EXCEEDS THRESHOLD
+========================================================
+Severity: CRITICAL
+Type: Drawdown Event
+Time Detected: From previous monitoring summary
+Details:
+• Initial Capital: $946.97
+• Current Capital: $531.58
+• Drawdown Amount: -$415.39
+• Drawdown Percentage: 43.9%
+• Threshold: 20% (CRITICAL level)
+• Status: EXCEEDED by 23.9 percentage points
+• Impact: Severe capital erosion, trading capacity reduced
+Action Required: Capital review and strategy adjustment
 
-2. **CUMULATIVE DRAWDOWN IMPROVEMENT - POSITIVE SIGN**
-   • Previous: -43.86% (CRITICAL)
-   • Current: -27.49% (CAUTION)
-   • Improvement: +16.37 percentage points
-   • Recovery needed: +27.5% ($260.33)
-   • STATUS: IMPROVING - Strategy showing recovery
+🔴 CRITICAL ALERT 3: MARGIN INSUFFICIENCY BLOCKING TRADES
+==========================================================
+Severity: CRITICAL
+Type: Trading Restriction
+Time Detected: Ongoing (from recent trading cycles)
+Details:
+• Issue: Insufficient margin for new positions
+• Impact: All trade attempts failing
+• Error Messages: "Margin is insufficient" (from previous logs)
+• Recent Failed Symbols: BAT/USDT, ENJ/USDT, SUSHI/USDT, CRV/USDT
+• Current Blocked Symbol: MKR/USDT (multiple cycles)
+• Impact: Trading system effectively disabled
+Action Required: Deposit additional margin or reduce existing positions
 
-3. **POSITION PERFORMANCE - ALL SLIGHTLY POSITIVE**
-   • All 5 SOL/USD positions in profit (0.12-0.38%)
-   • Current SOL price: $82.527
-   • Entry prices: $82.218 to $82.432
-   • Stop-loss: 3% (not triggered)
-   • Take-profit: 5% (not reached)
-   • STATUS: STABLE - No immediate triggers
+🔴 CRITICAL ALERT 4: SYMBOL STATUS ERRORS BLOCKING EXECUTION
+=============================================================
+Severity: CRITICAL
+Type: Execution Failure
+Time Detected: Last 5 trading cycles (01:05-01:26)
+Details:
+• Symbol: MKR/USDT
+• Error: "Invalid symbol status for opening position"
+• Error Code: Binance -4140
+• Frequency: Every cycle for MKR signals (Cycles 16-20)
+• Signal Strength: Consistent -3.40% 24h change detected
+• Impact: Valid trading signals cannot be executed
+Action Required: Investigate Binance symbol status for MKR/USDT
 
-4. **CAPITAL ALLOCATION - IMBALANCED BUT IMPROVING**
-   • Gemini: $532.19 (77.6% of total capital)
-   • Binance: $154.02 (22.4% of total capital)
-   • Deployed: $265.82 (38.7% of total)
-   • Available: $419.85 (61.3% of total)
-   • STATUS: MODERATE - Heavy Gemini weighting
+⚠️ WARNING ALERT 5: DASHBOARD OFFLINE - MONITORING LIMITED
+===========================================================
+Severity: WARNING
+Type: System Status
+Time Detected: Current monitoring (03:42:15)
+Details:
+• Expected Dashboard: http://localhost:5001/
+• Status: OFFLINE (cannot access)
+• Port Check: 5001 not responding
+• Impact: No web-based monitoring interface available
+Action Required: Restart trading dashboard server
 
-📊 CURRENT POSITION DETAILS:
-• 5 SOL/USD LONG positions on Gemini
-• All positions bought on 1.0-1.14% dips
-• Entry prices: $82.218, $82.400, $82.333, $82.422, $82.432
-• Current prices: All $82.527
-• Current total value: $265.82
-• Total unrealized P&L: +$0.45 (+0.17%)
+⚠️ WARNING ALERT 6: CONFIGURATION PARAMETER MISMATCH
+=====================================================
+Severity: WARNING
+Type: Configuration Issue
+Time Detected: From previous monitoring summary
+Details:
+• Config Parameter: Max trades per day
+• Config Value: 2 trades/day
+• Monitoring Value: 999 trades/day (effectively unlimited)
+• Discrepancy: 497x difference
+• Risk: Potential over-trading beyond risk limits
+Action Required: Align configuration parameters
 
-⚙️ CURRENT RISK PARAMETERS:
-• Stop-loss: 3% (active monitoring)
-• Take-profit: 5% (active monitoring)
-• Position size: 10% of capital
-• Trading threshold: 1.0% for both LONG & SHORT
-• Max positions: 3 per bot
+⚠️ WARNING ALERT 7: SYMBOL MAPPING ERROR
+=========================================
+Severity: WARNING
+Type: Data Issue
+Time Detected: Ongoing (multiple cycles)
+Details:
+• Symbol: MATIC/USDT
+• Error: "binance does not have market symbol MATIC/USDT"
+• Frequency: Every trading cycle
+• Impact: Incomplete market coverage, wasted processing
+Action Required: Fix symbol mapping or remove MATIC from watchlist
 
-🎯 IMMEDIATE ACTIONS REQUIRED:
-1. **DIVERSIFICATION URGENT**: Reduce SOL/USD concentration by adding other assets
-2. **RISK MANAGEMENT**: Maintain 3% stop-loss on all positions
-3. **PROFIT TAKING**: Consider partial exits at 2-3% gains to lock in profits
-4. **CAPITAL DEPLOYMENT**: Use available $419.85 for diversified opportunities
-5. **CONTINUE MONITORING**: Current strategy showing improvement (-43.86% → -27.49%)
+🟡 ALERT 8: STOP-LOSS/TAKE-PROFIT MONITORING STATUS
+====================================================
+Severity: INFO
+Type: Risk Management
+Time Detected: Current analysis
+Details:
+• Active Positions: None in recent logs (all executions failed)
+• Stop-loss Monitoring: No positions to monitor
+• Take-profit Monitoring: No positions to monitor
+• Historical Events: 2 ETH stop-loss triggers (from previous summary)
+• Current Status: No immediate stop-loss/take-profit triggers
 
-⚠️ MONITORING PRIORITIES:
-1. **SOL PRICE MOVEMENT**: Watch for declines that could trigger 3% stop-loss
-2. **DIVERSIFICATION OPPORTUNITIES**: Look for other assets meeting 1.0% dip criteria
-3. **PROFIT TARGETS**: Monitor for 5% take-profit levels
-4. **CUMULATIVE P&L**: Track further improvement toward break-even
-5. **BINANCE SHORTS**: Watch for 1.0%+ rally opportunities
+🟡 ALERT 9: TRADING PROCESS HEALTH
+===================================
+Severity: INFO
+Type: System Health
+Time Detected: Current analysis
+Details:
+• Process: 26-crypto trading bot
+• Status: INACTIVE (stopped after cycle 20)
+• Last Cycle: Cycle 20 at 01:26:05
+• Inactivity: ~2 hours, 16 minutes
+• Signal Detection: Active when running (33 total opportunities)
+• Execution: Blocked (symbol/margin issues)
+• Overall Health: 2/10 (inactive with multiple critical issues)
 
-🔔 ALERT TRIGGERS ACTIVE:
-• Position concentration > 80%: ✅ TRIGGERED (100% SOL/USD)
-• Drawdown > 40%: ❌ CLEARED (was -43.86%, now -27.49%)
-• Drawdown > 20%: ✅ TRIGGERED (-27.49%)
-• Stop-loss breach: ❌ NOT TRIGGERED
-• Take-profit reached: ❌ NOT TRIGGERED
+RECENT STOP-LOSS EVENTS (FROM HISTORICAL DATA):
+===============================================
+From trading_summary_20260331_1231.txt:
 
-📈 POSITIVE DEVELOPMENTS:
-1. Significant recovery from -43.86% to -27.49% drawdown
-2. All positions currently in profit
-3. $419.85 available capital for new opportunities
-4. Trading strategy showing effectiveness in recovery phase
+1. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,325.28 (-11.29% loss)
+   • Time: Previous trading session
+   • Impact: Realized loss
+   • Status: CLOSED
 
-📋 NEXT STEPS:
-System will continue monitoring every cron cycle. Immediate action needed for diversification. Current strategy should continue as it shows positive results.
+2. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,193.60 (-5.95% loss)
+   • Time: Previous trading session
+   • Impact: Realized loss
+   • Status: CLOSED
 
-=== ALERT GENERATED BY TRADING DASHBOARD MONITOR ===
+RECENT CRITICAL DRAWDOWN EVENTS (FROM HISTORICAL DATA):
+========================================================
+From trading_summary_20260331_1231.txt:
+
+1. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -11.29% (beyond 5% stop-loss)
+   • Symbol: ETH/USD
+   • Drawdown: -11.29%
+   • Stop-loss Setting: 5%
+   • Exceedance: 6.29 percentage points
+
+2. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -5.95% (beyond 5% stop-loss)
+   • Symbol: ETH/USD
+   • Drawdown: -5.95%
+   • Stop-loss Setting: 5%
+   • Exceedance: 0.95 percentage points
+
+NEW CRITICAL FINDING: PROCESS INACTIVITY
+========================================
+• Detection Time: 03:42:15
+• Issue: Trading bot appears to have stopped/crashed
+• Last Activity: Cycle 20 at 01:26:05
+• Duration: ~2 hours, 16 minutes of inactivity
+• Expected Behavior: 5-minute cycles (300 seconds)
+• Missed Cycles: Approximately 27 cycles missed
+• Urgency: HIGH - No trading activity occurring
+
+IMMEDIATE ACTION PRIORITIES:
+============================
+P1 (0-15 MINUTES):
+1. Investigate why trading bot stopped after cycle 20
+2. Restart trading bot process
+3. Check system/error logs for crash details
+
+P2 (15-60 MINUTES):
+4. Resolve margin insufficiency (deposit funds or reduce positions)
+5. Investigate MKR/USDT symbol status on Binance
+6. Restart dashboard on port 5001
+
+P3 (1-24 HOURS):
+7. Fix configuration parameter mismatch
+8. Resolve MATIC/USDT symbol mapping
+9. Implement process monitoring and auto-restart
+
+P4 (1-7 DAYS):
+10. Comprehensive strategy review given 43.9% drawdown
+11. System audit and risk parameter adjustment
+12. Performance analysis and optimization
+
+ALERT SUMMARY:
+==============
+• CRITICAL Alerts: 4 (inactivity, drawdown, margin, symbol status)
+• WARNING Alerts: 3 (dashboard, config, symbol mapping)
+• INFO Alerts: 2 (risk monitoring, process health)
+• Historical Stop-loss Events: 2 (ETH positions)
+• Historical Drawdown Events: 2 (ETH beyond stop-loss)
+• New Critical Issue: Process inactivity (2+ hours)
+
+NEXT ALERT CHECK: After bot restart and next trading cycle
+===========================================================
+• Monitor for: Process restart success, execution capability, margin status
+• Alert if: Bot remains inactive, drawdown worsens, new stop-loss triggers
