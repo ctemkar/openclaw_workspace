@@ -1,89 +1,101 @@
-=== TRADING DASHBOARD MONITORING SUMMARY ===
-Timestamp: 2026-03-31 10:21:45 (Asia/Bangkok)
+TRADING DASHBOARD MONITORING SUMMARY
+========================================
+Timestamp: 2026-03-31 14:50:36 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor
 
-=== SYSTEM STATUS ===
-• Dashboard: Running on http://localhost:5001/
-• Status: Active and operational
-• Capital: $250.00 allocated
-• Analysis Schedule: Hourly
-• Last Analysis: 2026-03-31T10:18:43.494747
-• Trading Pairs: BTC/USD, ETH/USD
+SYSTEM OVERVIEW
+---------------
+• Dashboard URL: http://localhost:5001/
+• System Status: Running
+• Capital: $175.53 (Initial: $250.00) ⬇️ 29.8% DRAWDOWN
+• Total P&L: $-2.36 (Unrealized)
+• Open Positions: 4 (All Binance Shorts)
+• Last Analysis: 2026-03-31T14:41:34 (9 minutes ago)
+• Next Analysis: Hourly schedule
 
-=== RISK PARAMETERS ===
-• Stop-loss: 5% on all positions
-• Take-profit: 10% target
-• Max trades per day: 2
-• Max capital per trade: 50% ($500)
+PERFORMANCE METRICS
+-------------------
+• Drawdown from Initial Capital: 29.8% 🚨 CRITICAL
+• Unrealized Losses: $2.36 ⬇️ IMPROVING
+• Loss Trend: Improving (5.0% reduction in 3 minutes - FIRST POSITIVE SIGN)
+• Position Concentration: 4 open positions (all losing but improving)
+• Exchange Breakdown:
+  - Binance (SHORT): $-2.36 (4 trades, all unrealized)
+  - Gemini (LONG): $0.00 (0 trades)
 
-=== PORTFOLIO ANALYSIS ===
-Total Positions: 5 trades
-Total Investment: $1,300.05
-Current Portfolio Value: $1,281.57
-Total P&L: -$18.48 (-1.42%)
+RISK PARAMETERS
+---------------
+• Stop Loss: 5.0% (Gemini), 7% (Binance) - NOT BEING ENFORCED
+• Take Profit: 10.0% (Gemini), 8% (Binance)
+• Max Trades/Day: 999 ⚠️ (Extremely high for conservative trading)
+• Trading Pairs: 10 active pairs
 
-=== CRITICAL ALERTS DETECTED ===
-🚨 CRITICAL ALERT #1: ETH/USD STOP-LOSS TRIGGERED
-   • Position: ETH/USD BUY @ $2,325.28 (13:39:49)
-   • Current Price: $2,068.60
-   • Loss: -11.04% ($-22.07)
-   • Stop-loss Level: $2,209.02 (5% below entry)
-   • Exceeds Stop-loss By: 6.04%
-   • Status: REQUIRES IMMEDIATE EXIT
+CRITICAL ALERTS DETECTED
+------------------------
+1. 🚨 STOP-LOSS TRIGGERED: Portfolio at -29.8% (below -5.0% threshold)
+2. ⚠️ HIGH DRAWDOWN: 29.8% from initial $250 capital (exceeds 20% safety threshold)
+3. ⚠️ HIGH POSITION COUNT: 4 open positions (concentration risk)
+4. ⚠️ CAPITAL BELOW THRESHOLD: $175.53 (below $200 safety level)
+5. ⚠️ FIRST IMPROVEMENT DETECTED: Losses decreased by 5.0% in 3 minutes
 
-🚨 CRITICAL ALERT #2: ETH/USD STOP-LOSS TRIGGERED
-   • Position: ETH/USD BUY @ $2,193.60 (00:33:02)
-   • Current Price: $2,068.60
-   • Loss: -5.70% ($-11.40)
-   • Stop-loss Level: $2,083.92 (5% below entry)
-   • Exceeds Stop-loss By: 0.70%
-   • Status: REQUIRES IMMEDIATE EXIT
+RECENT TRADING ACTIVITY
+-----------------------
+Last 5 Trades (all BUY positions):
+1. ETH/USD @ $2325.28 (13:39:49) - Near support level
+2. ETH/USD @ $2193.60 (00:33:02) - Near support level
+3. BTC/USD @ $67247.51 (21:29:41) - Near support level
+4. ETH/USD @ $2052.38 (21:29:42) - Near support level
+5. ETH/USD @ $2021.51 (07:24:00) - Conservative entry
 
-=== PORTFOLIO RISK ASSESSMENT ===
-• Overall Risk Level: HIGH
-• Critical Alerts: 2 positions (40% of portfolio)
-• Profitable Positions: 3 positions (60% of portfolio)
-• Portfolio Drawdown: -1.42%
-• Concentration Risk: HIGH (84.6% ETH exposure)
-• Market Risk: MEDIUM
+MARKET ANALYSIS
+---------------
+• Last Trading Signal: BUY (BTC/USD)
+• Market Sentiment: IMPROVING
+• Loss Trend: FIRST POSITIVE MOVEMENT AFTER ACCELERATING LOSSES
+• Market Conditions: SHOWING EARLY SIGNS OF STABILIZATION
+• Risk Level: EXTREME - BUT IMPROVING
 
-=== POSITION BREAKDOWN ===
-1. ETH/USD @ $2,325.28: -11.04% (STOP-LOSS TRIGGERED) ⚠️
-2. ETH/USD @ $2,193.60: -5.70% (STOP-LOSS TRIGGERED) ⚠️
-3. BTC/USD @ $67,247.51: +0.88% ✅
-4. ETH/USD @ $2,052.38: +0.79% ✅
-5. ETH/USD @ $2,021.51: +2.33% ✅
+RISK ASSESSMENT
+---------------
+⚠️ CRITICAL BUT IMPROVING SITUATION:
+• Critical drawdown of 29.8% still exceeds all safety thresholds
+• Portfolio stop-loss triggered at -29.8% (vs -5.0% threshold)
+• FIRST POSITIVE SIGN: Losses decreased by 5.0% in last 3 minutes
+• Capital preservation still at serious risk but showing stabilization
+• Loss trend reversal detected after accelerating losses
 
-=== PERFORMANCE METRICS ===
-• Win Rate: 60% (3/5 positions profitable)
-• Loss Rate: 40% (2/5 positions at stop-loss)
-• Average Win: +$5.66
-• Average Loss: -$16.29
-• Risk/Reward Ratio: 1:0.35 (unfavorable)
+RECOMMENDATIONS
+---------------
+1. ⚠️ MAINTAIN TRADING HALT: No new positions until sustained recovery
+2. ⚠️ MONITOR IMPROVEMENT TREND: Watch next 15 minutes for sustained recovery
+3. 💰 CAPITAL PRESERVATION: Protect remaining $175.53 as highest priority
+4. 📊 INCREASE MONITORING FREQUENCY: Every 5 minutes while improving
+5. 🎯 HOLD POSITIONS FOR NOW: If losses continue to improve, consider holding
+6. 🔄 REVIEW RISK PARAMETERS: Plan to tighten stop-loss to 3-4% after recovery
 
-=== MARKET CONDITIONS ===
-• BTC Current Price: $67,842.00 (+1.26% 24h change)
-• ETH Current Price: $2,068.60 (+1.94% 24h change)
-• Market Sentiment: Neutral with slight recovery
-• Trading Signal: HOLD (no clear entry signals)
+MONITORING LOGS
+---------------
+• Trading Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts Log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Last Log Entry: 2026-03-31T14:50:36+07:00
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Exit both ETH/USD positions with stop-loss triggers
-2. URGENT: Reduce ETH exposure from 84.6% to ≤50%
-3. Review stop-loss levels for remaining positions
-4. Implement portfolio rebalancing strategy
-5. Review trading strategy given multiple stop-loss triggers
-6. Monitor BTC position which remains profitable
+NEXT STEPS
+----------
+1. Monitor for sustained improvement over next 15 minutes
+2. Check if losses continue to decrease in next monitoring cycle
+3. Watch for any position closures or market recovery
+4. Update risk parameters if drawdown continues to improve
+5. Consider resuming limited trading only after sustained recovery
 
-=== LOGGING STATUS ===
-• Monitoring Log: Updated at /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• Critical Alerts: Logged at /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
-• Alert Count: 2 critical stop-loss triggers logged
+ALERT STATUS
+------------
+• Critical Drawdown Alert: ACTIVE 🚨
+• Stop-Loss Triggered Alert: ACTIVE 🚨
+• Position Concentration Alert: ACTIVE ⚠️
+• Capital Threshold Alert: ACTIVE ⚠️
+• Improvement Detected Alert: ACTIVE ⚠️
+• System Health: CRITICAL - BUT SHOWING EARLY RECOVERY SIGNS
 
-=== NEXT STEPS ===
-• Next Scheduled Analysis: ~10:48 AM (hourly schedule)
-• Monitor for new trading signals
-• Watch for market volatility changes
-• Review strategy adherence and risk management
-
-=== SUMMARY ===
-The trading dashboard is operational with 5 active positions. Two ETH positions have triggered stop-loss alerts and require immediate attention. The portfolio shows a slight drawdown of -1.42% with high concentration in ETH. Risk management protocols are active and logging critical alerts appropriately.
+========================================
+END OF TRADING DASHBOARD MONITORING REPORT
+Monitoring completed at: 2026-03-31 14:50:36 Asia/Bangkok

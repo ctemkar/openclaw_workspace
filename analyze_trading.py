@@ -1,208 +1,140 @@
 #!/usr/bin/env python3
 import json
-import datetime
 import sys
+import math
+from datetime import datetime
 
 def analyze_trading_data():
-    # Current data from status endpoint
-    status_data = {
-        'analysis_scheduled': 'hourly',
-        'capital': 175.53,
-        'last_analysis': '2026-03-31T13:37:42.037501',
-        'pnl': {
-            'binance': {
-                'open_positions': 4,
-                'realized': 0.0,
-                'total': -1.6225342731146148,
-                'trades': 4,
-                'unrealized': -1.6225342731146148
-            },
-            'gemini': {
-                'open_positions': 0,
-                'realized': 0.0,
-                'total': 0.0,
-                'trades': 0,
-                'unrealized': 0.0
-            },
-            'total': {
-                'open_positions': 4,
-                'realized': 0.0,
-                'total': -1.6225342731146148,
-                'trades': 4,
-                'unrealized': -1.6225342731146148
-            }
-        },
-        'port': 5001,
-        'risk_parameters': {
-            'max_trades_per_day': 999,
-            'stop_loss': 0.05,
-            'take_profit': 0.1
-        },
-        'status': 'running',
-        'timestamp': '2026-03-31T13:58:08.767444',
-        'trading_pairs': ['BTC/USD', 'ETH/USD', 'SOL/USD', 'ADA/USD', 'XRP/USD', 'DOT/USD', 'DOGE/USD', 'AVAX/USD', 'MATIC/USD', 'LINK/USD']
-    }
-
-    # Trades data
-    trades_data = {
-        'count': 5,
-        'timestamp': '2026-03-31T13:58:18.496322',
-        'trades': [
-            {
-                'price': 2325.28,
-                'quantity': 0.086,
-                'reason': 'Near support level: $2308.08 (current: $2325.28)',
-                'side': 'BUY',
-                'symbol': 'ETH/USD',
-                'time': '13:39:49'
-            },
-            {
-                'price': 2193.6,
-                'quantity': 0.0912,
-                'reason': 'Near support level: $2167.99 (current: $2193.60)',
-                'side': 'BUY',
-                'symbol': 'ETH/USD',
-                'time': '00:33:02'
-            },
-            {
-                'price': 67247.51,
-                'quantity': 0.002974,
-                'reason': 'Near support level: $67110.20 (current: $67247.51)',
-                'side': 'BUY',
-                'symbol': 'BTC/USD',
-                'time': '21:29:41'
-            },
-            {
-                'price': 2052.38,
-                'quantity': 0.0974,
-                'reason': 'Near support level: $2033.94 (current: $2052.38)',
-                'side': 'BUY',
-                'symbol': 'ETH/USD',
-                'time': '21:29:42'
-            },
-            {
-                'price': 2021.51,
-                'quantity': 0.2474,
-                'reason': 'Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)',
-                'side': 'BUY',
-                'symbol': 'ETH/USD',
-                'time': '07:24:00'
-            }
-        ]
-    }
-
-    analysis_output = []
+    # Fetch data from status endpoint
+    import subprocess
+    result = subprocess.run(['curl', '-s', 'http://localhost:5001/status'], 
+                          capture_output=True, text=True)
     
-    analysis_output.append('=== TRADING DASHBOARD ANALYSIS ===')
-    analysis_output.append(f'Timestamp: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
-    analysis_output.append(f'System Status: {status_data["status"]}')
-    analysis_output.append(f'Capital: ${status_data["capital"]:.2f}')
-    analysis_output.append(f'Last Analysis: {status_data["last_analysis"]}')
+    if result.returncode != 0:
+        print("Failed to fetch trading data")
+        return
     
-    # P&L Analysis
-    analysis_output.append('\n=== P&L ANALYSIS ===')
-    total_pnl = status_data['pnl']['total']['total']
-    unrealized_pnl = status_data['pnl']['total']['unrealized']
-    open_positions = status_data['pnl']['total']['open_positions']
+    try:
+        data = json.loads(result.stdout)
+    except json.JSONDecodeError:
+        print("Invalid JSON response")
+        return
     
-    analysis_output.append(f'Total P&L: ${total_pnl:.4f}')
-    analysis_output.append(f'Unrealized P&L: ${unrealized_pnl:.4f}')
-    analysis_output.append(f'Open Positions: {open_positions}')
+    print('=== TRADING DASHBOARD ANALYSIS ===')
+    print(f'Timestamp: {data.get("timestamp", "N/A")}')
+    print(f'Capital: ${data.get("capital", 0):.2f}')
+    print(f'Status: {data.get("status", "unknown")}')
+    print(f'Last Analysis: {data.get("last_analysis", "N/A")}')
     
-    # Binance specific
-    binance_pnl = status_data['pnl']['binance']['total']
-    binance_trades = status_data['pnl']['binance']['trades']
-    analysis_output.append(f'Binance P&L: ${binance_pnl:.4f} ({binance_trades} trades)')
+    print('\n=== P&L SUMMARY ===')
+    pnl = data.get('pnl', {})
+    total_pnl = pnl.get('total', {})
+    print(f'Total P&L: ${total_pnl.get("total", 0):.2f}')
+    print(f'  Unrealized: ${total_pnl.get("unrealized", 0):.2f}')
+    print(f'  Realized: ${total_pnl.get("realized", 0):.2f}')
+    print(f'  Open Positions: {total_pnl.get("open_positions", 0)}')
     
-    # Risk Parameters
-    analysis_output.append('\n=== RISK PARAMETERS ===')
-    analysis_output.append(f'Stop Loss: {status_data["risk_parameters"]["stop_loss"]*100}%')
-    analysis_output.append(f'Take Profit: {status_data["risk_parameters"]["take_profit"]*100}%')
-    analysis_output.append(f'Max Trades/Day: {status_data["risk_parameters"]["max_trades_per_day"]}')
+    print('\n=== EXCHANGE BREAKDOWN ===')
+    gemini = pnl.get('gemini', {})
+    binance = pnl.get('binance', {})
     
-    # Trades Analysis
-    analysis_output.append('\n=== RECENT TRADES ===')
-    analysis_output.append(f'Total Trades: {trades_data["count"]}')
-    for i, trade in enumerate(trades_data['trades'][:3], 1):
-        analysis_output.append(f'{i}. {trade["symbol"]} - {trade["side"]} @ ${trade["price"]:.2f} ({trade["time"]})')
+    print(f'Gemini (LONG):')
+    print(f'  P&L: ${gemini.get("total", 0):.2f}')
+    print(f'  Trades: {gemini.get("trades", 0)}')
+    print(f'  Open Positions: {gemini.get("open_positions", 0)}')
     
-    # Critical Alerts
-    analysis_output.append('\n=== ALERT ANALYSIS ===')
-    alerts = []
+    print(f'Binance (SHORT):')
+    print(f'  P&L: ${binance.get("total", 0):.2f}')
+    print(f'  Trades: {binance.get("trades", 0)}')
+    print(f'  Open Positions: {binance.get("open_positions", 0)}')
+    
+    print('\n=== RISK PARAMETERS ===')
+    risk = data.get('risk_parameters', {})
+    print(f'Stop Loss: {risk.get("stop_loss", 0)*100:.1f}%')
+    print(f'Take Profit: {risk.get("take_profit", 0)*100:.1f}%')
+    print(f'Max Trades/Day: {risk.get("max_trades_per_day", 0)}')
+    
+    # Check for critical conditions
+    print('\n=== ALERT ANALYSIS ===')
     critical_alerts = []
     
-    # Check capital drawdown
-    initial_capital = 250.00
-    current_capital = status_data['capital']
-    drawdown = ((initial_capital - current_capital) / initial_capital) * 100
+    # Get current values
+    total_pnl_value = total_pnl.get('total', 0)
+    capital = data.get('capital', 250.0)
+    initial_capital = 250.0
+    drawdown = (initial_capital - capital) / initial_capital * 100 if initial_capital > 0 else 0
     
-    if drawdown > 10:
-        alert_msg = f'⚠️ CRITICAL: Capital drawdown {drawdown:.1f}% (${initial_capital:.2f} → ${current_capital:.2f})'
-        alerts.append(alert_msg)
-        critical_alerts.append(alert_msg)
-    elif drawdown > 5:
-        alert_msg = f'⚠️ WARNING: Capital drawdown {drawdown:.1f}% (${initial_capital:.2f} → ${current_capital:.2f})'
-        alerts.append(alert_msg)
+    # Alert conditions
+    if total_pnl_value < -10:  # More than $10 loss
+        critical_alerts.append(f'⚠️ SIGNIFICANT LOSS: Total P&L is -${abs(total_pnl_value):.2f}')
     
-    # Check P&L
-    if total_pnl < -20:
-        alert_msg = f'⚠️ CRITICAL: Total P&L loss exceeds $20 (${total_pnl:.2f})'
-        alerts.append(alert_msg)
-        critical_alerts.append(alert_msg)
-    elif total_pnl < -10:
-        alert_msg = f'⚠️ WARNING: Total P&L loss exceeds $10 (${total_pnl:.2f})'
-        alerts.append(alert_msg)
+    if drawdown > 5:  # More than 5% drawdown from initial capital
+        critical_alerts.append(f'⚠️ HIGH DRAWDOWN: {drawdown:.1f}% from initial $250 capital')
     
-    # Check open positions
-    if open_positions > 5:
-        alert_msg = f'⚠️ WARNING: High number of open positions ({open_positions})'
-        alerts.append(alert_msg)
+    if binance.get('total', 0) < -5:  # Binance losses
+        critical_alerts.append(f'⚠️ BINANCE LOSSES: ${abs(binance.get("total", 0)):.2f}')
     
-    # Check if any trades might be near stop-loss
-    if unrealized_pnl < -5:
-        alert_msg = f'⚠️ WARNING: Significant unrealized losses (${unrealized_pnl:.2f})'
-        alerts.append(alert_msg)
+    # Check if we have too many open positions
+    if total_pnl.get('open_positions', 0) > 3:
+        critical_alerts.append(f'⚠️ HIGH POSITION COUNT: {total_pnl.get("open_positions", 0)} open positions')
     
-    if alerts:
-        for alert in alerts:
-            analysis_output.append(alert)
+    # Check if stop-loss or take-profit would be triggered
+    # Based on current P&L vs risk parameters
+    stop_loss_pct = risk.get('stop_loss', 0.05) * 100
+    take_profit_pct = risk.get('take_profit', 0.10) * 100
+    
+    # For each position, we'd need position-specific data
+    # For now, check overall portfolio
+    portfolio_return = (capital - initial_capital) / initial_capital * 100
+    
+    if portfolio_return <= -stop_loss_pct:
+        critical_alerts.append(f'🚨 STOP-LOSS TRIGGERED: Portfolio at {portfolio_return:.1f}% (below -{stop_loss_pct:.1f}%)')
+    
+    if portfolio_return >= take_profit_pct:
+        critical_alerts.append(f'🎯 TAKE-PROFIT TRIGGERED: Portfolio at {portfolio_return:.1f}% (above {take_profit_pct:.1f}%)')
+    
+    if critical_alerts:
+        print('CRITICAL ALERTS FOUND:')
+        for alert in critical_alerts:
+            print(f'  {alert}')
     else:
-        analysis_output.append('✅ No critical alerts detected')
+        print('✅ No critical alerts detected')
     
-    analysis_output.append('\n=== RECOMMENDATIONS ===')
-    if drawdown > 5:
-        analysis_output.append('1. Consider reducing position sizes or taking a break from trading')
-    if open_positions > 3:
-        analysis_output.append('2. Consider closing some positions to manage risk')
-    if total_pnl < 0:
-        analysis_output.append('3. Review trading strategy and consider adjusting stop-loss/take-profit levels')
+    print('\n=== RECOMMENDATIONS ===')
+    if total_pnl_value < 0:
+        print('🔸 Consider reducing position sizes or tightening stop-losses')
+    if binance.get('open_positions', 0) > 0 and binance.get('total', 0) < 0:
+        print('🔸 Review Binance short positions - consider partial exits')
+    if capital < 200:
+        print('🔸 Capital below $200 - consider risk reduction')
+    if total_pnl.get('open_positions', 0) >= 4:
+        print('🔸 High number of open positions - consider consolidating')
     
     # Log to monitoring file
-    monitoring_log = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
-    with open(monitoring_log, 'a') as f:
-        f.write('\n' + '='*60 + '\n')
-        f.write(f'Trading Dashboard Monitor - {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
-        f.write('='*60 + '\n')
-        for line in analysis_output:
-            f.write(line + '\n')
+    log_entry = f"""
+[{datetime.now().isoformat()}] Trading Dashboard Analysis
+Capital: ${capital:.2f}
+Total P&L: ${total_pnl_value:.2f}
+Open Positions: {total_pnl.get('open_positions', 0)}
+Alerts: {len(critical_alerts)}
+Status: {'CRITICAL' if critical_alerts else 'NORMAL'}
+"""
     
-    # Log critical alerts to separate file
+    with open('/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log', 'a') as f:
+        f.write(log_entry)
+    
+    # Log critical alerts separately
     if critical_alerts:
-        critical_log = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
-        with open(critical_log, 'a') as f:
-            f.write('\n' + '='*60 + '\n')
-            f.write(f'CRITICAL ALERTS - {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
-            f.write('='*60 + '\n')
-            for alert in critical_alerts:
-                f.write(alert + '\n')
+        alert_entry = f"""
+[{datetime.now().isoformat()}] CRITICAL ALERTS
+{chr(10).join(critical_alerts)}
+Capital: ${capital:.2f}
+Total P&L: ${total_pnl_value:.2f}
+"""
+        with open('/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log', 'a') as f:
+            f.write(alert_entry)
     
-    return '\n'.join(analysis_output), critical_alerts
+    return critical_alerts, capital, total_pnl_value
 
 if __name__ == '__main__':
-    analysis, critical = analyze_trading_data()
-    print(analysis)
-    
-    if critical:
-        print('\n⚠️ CRITICAL ALERTS LOGGED TO FILE')
-        for alert in critical:
-            print(f'  - {alert}')
+    analyze_trading_data()

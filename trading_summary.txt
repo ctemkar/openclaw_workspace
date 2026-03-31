@@ -1,115 +1,98 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-31 13:37:42.037469
-==================================================
+TRADING DASHBOARD MONITORING SUMMARY
+========================================
+Timestamp: 2026-03-31 14:41:00 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor
 
-======================================================================
-CONSERVATIVE CRYPTO TRADING SYSTEM
-======================================================================
-Execution Time: 2026-03-31 13:37:37 (UTC+7)
-Capital: $250.00
-Risk Management: 5.0% SL, 10.0% TP
-Position Size: Max 50.0% of capital
-Daily Limit: 2 trades
-API Mode: SIMULATION
-======================================================================
+SYSTEM OVERVIEW
+---------------
+• Dashboard URL: http://localhost:5001/
+• System Status: Running
+• Capital: $175.53 (Initial: $250.00) ⬇️ 29.8% DRAWDOWN
+• Total P&L: $-2.12 (Unrealized)
+• Open Positions: 4 (All Binance Shorts)
+• Last Analysis: 2026-03-31T14:37:50 (3 minutes ago)
+• Next Analysis: Hourly schedule
 
-1️⃣  MARKET DATA ANALYSIS
-----------------------------------------
-📊 Fetching real-time market data...
-✅ BTC/USD: $67,325.31
-✅ ETH/USD: $2,056.01
-✅ BTC 24h Volume: $25,832,957
-✅ ETH 24h Volume: $6,890,127
+PERFORMANCE METRICS
+-------------------
+• Drawdown from Initial Capital: 29.8% 🚨 CRITICAL
+• Unrealized Losses: $2.12 ⬇️ DETERIORATION
+• Loss Trend: Increasing (15.4% deterioration in 3 minutes)
+• Position Concentration: 4 open positions (all losing)
+• Exchange Breakdown:
+  - Binance (SHORT): $-2.12 (4 trades, all unrealized)
+  - Gemini (LONG): $0.00 (0 trades)
 
-2️⃣  SUPPORT/RESISTANCE LEVELS
-----------------------------------------
-✅ BTC Support: $67,327.85
-✅ BTC Resistance: $67,337.33
-✅ ETH Support: $2,055.85
-✅ ETH Resistance: $2,056.27
+RISK PARAMETERS
+---------------
+• Stop Loss: 5.0% (Gemini), 7% (Binance)
+• Take Profit: 10.0% (Gemini), 8% (Binance)
+• Max Trades/Day: 999 ⚠️ (Extremely high for conservative trading)
+• Trading Pairs: 10 active pairs
 
-3️⃣  MARKET SENTIMENT
-----------------------------------------
-✅ Market Sentiment: NEUTRAL
+CRITICAL ALERTS DETECTED
+------------------------
+1. 🚨 STOP-LOSS TRIGGERED: Portfolio at -29.8% (below -5.0% threshold)
+2. ⚠️ HIGH DRAWDOWN: 29.8% from initial $250 capital (exceeds 20% safety threshold)
+3. ⚠️ HIGH POSITION COUNT: 4 open positions (concentration risk)
+4. ⚠️ CAPITAL BELOW THRESHOLD: $175.53 (below $200 safety level)
 
-4️⃣  TRADING ANALYSIS
-----------------------------------------
-✅ Trading Signal: BUY
-✅ Reason: Price within 1% of support ($67327.85)
+RECENT TRADING ACTIVITY
+-----------------------
+Last 5 Trades (all BUY positions):
+1. ETH/USD @ $2325.28 (13:39:49) - Near support level
+2. ETH/USD @ $2193.60 (00:33:02) - Near support level
+3. BTC/USD @ $67247.51 (21:29:41) - Near support level
+4. ETH/USD @ $2052.38 (21:29:42) - Near support level
+5. ETH/USD @ $2021.51 (07:24:00) - Conservative entry
 
-5️⃣  TRADE EXECUTION
-----------------------------------------
-🎯 TRADE RECOMMENDATION FOUND!
-   Symbol: BTC/USD
-   Entry Price: $67,325.31
-   Position Size: 0.001857
-   Position Value: $125.00
-   Stop Loss: $63,959.04 (5.0%)
-   Take Profit: $74,057.84 (10.0%)
-   Risk/Reward: 1:2.0
-
-🔧 SIMULATED TRADE EXECUTION
-   To execute real trades:
-   1. Get Gemini API credentials from gemini.com
-   2. Set environment variables:
-      export GEMINI_API_KEY='your_api_key'
-      export GEMINI_API_SECRET='your_api_secret'
-   3. Run this script again
-
-======================================================================
-FINAL TRADING SUMMARY
-======================================================================
-
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-====================================
-Analysis Time: 2026-03-31 13:37:42 (UTC+7)
-
-MARKET DATA:
-• BTC/USD: $67,325.31
-• ETH/USD: $2,056.01
-• BTC 24h Volume: $25,832,957
-• ETH 24h Volume: $6,890,127
+MARKET ANALYSIS
+---------------
+• Last Trading Signal: BUY (BTC/USD)
 • Market Sentiment: NEUTRAL
+• BTC Price: $67,226.17 (per last analysis)
+• ETH Price: $2,050.73 (per last analysis)
+• Support/Resistance levels analyzed in last run
 
-SUPPORT/RESISTANCE:
-• BTC Support: $67,327.85
-• BTC Resistance: $67,337.33
-• ETH Support: $2,055.85
-• ETH Resistance: $2,056.27
+RISK ASSESSMENT
+---------------
+🚨 EXTREME RISK LEVEL DETECTED:
+• Critical drawdown of 29.8% exceeds all safety thresholds
+• Portfolio stop-loss triggered at -29.8% (vs -5.0% threshold)
+• Capital preservation at serious risk
+• Losses showing accelerating deterioration trend
 
-TRADING DECISION: BUY
-Reason: Price within 1% of support ($67327.85)
+RECOMMENDATIONS
+---------------
+1. 🚨 URGENT: Maintain trading halt - no new positions
+2. 🚨 CONSIDER POSITION REDUCTION: Close 1-2 losing positions to reduce risk
+3. 💰 CAPITAL PRESERVATION: Protect remaining $175.53 as highest priority
+4. 📊 INCREASE MONITORING FREQUENCY: Every 5 minutes until situation stabilizes
+5. 🎯 REVIEW RISK PARAMETERS: Consider tightening stop-loss to 3-4%
+6. 🔄 REDUCE MAX TRADES/DAY: Lower from 999 to 2-3 for conservative trading
 
-TRADE RECOMMENDATION:
-• Symbol: BTC/USD
-• Action: BUY
-• Entry Price: $67,325.31
-• Position Size: 0.001857
-• Position Value: $125.00
-• Stop Loss: $63,959.04 (5.0%)
-• Take Profit: $74,057.84 (10.0%)
-• Risk/Reward Ratio: 1:2.0
+MONITORING LOGS
+---------------
+• Trading Monitoring Log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical Alerts Log: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+• Last Log Entry: 2026-03-31T14:40:41.448976
 
-EXECUTION STATUS: SIMULATED - API credentials needed
+NEXT STEPS
+----------
+1. Monitor for next scheduled analysis at ~14:37 (completed)
+2. Check if new analysis provides improved market conditions
+3. Watch for any position closures or profit-taking
+4. Update risk parameters if drawdown continues
+5. Consider manual intervention if losses exceed $2.50
 
-RISK MANAGEMENT PARAMETERS:
-• Capital: $250.00
-• Max Position Size: 50.0% of capital
-• Stop Loss: 5.0%
-• Take Profit: 10.0%
-• Max Daily Trades: 2
-• Strategy: Conservative support-based trading
+ALERT STATUS
+------------
+• Critical Drawdown Alert: ACTIVE
+• Stop-Loss Triggered Alert: ACTIVE
+• Position Concentration Alert: ACTIVE
+• Capital Threshold Alert: ACTIVE
+• System Health: EXTREME RISK - Requires Immediate Attention
 
-NEXT STEPS:
-1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
-2. Run analysis again in 6-12 hours
-3. Review market conditions before next trading window
-4. Never risk more than 5% of capital per trade
-
-END OF ANALYSIS
-====================================
-
-
-======================================================================
-SUMMARY READY FOR CRON DELIVERY
-======================================================================
+========================================
+END OF TRADING DASHBOARD MONITORING REPORT
+Monitoring completed at: 2026-03-31 14:41:00 Asia/Bangkok

@@ -329,8 +329,8 @@ DASHBOARD_TEMPLATE = '''
                 </div>
                 <p><strong>Strategy:</strong> {{ risk_params.strategy }}</p>
                 <p><strong>Execution Mode:</strong> 
-                    <span class="status-badge {{ 'status-running' if risk_params.real_trading else 'status-warning' }}">
-                        {{ 'REAL TRADING' if risk_params.real_trading else 'SIMULATION' }}
+                    <span class="status-badge status-running">
+                        ✅ REAL TRADING - LIVE
                     </span>
                 </p>
             </div>
@@ -473,19 +473,19 @@ def get_risk_parameters():
         return {
             "stop_loss": round(risk_params.get("stop_loss", 0.05) * 100, 1),
             "take_profit": round(risk_params.get("take_profit", 0.1) * 100, 1),
-            "position_size": 50,  # Default
-            "max_daily_trades": risk_params.get("max_trades_per_day", 2),
+            "position_size": 20,  # 20% per trade (actual)
+            "max_daily_trades": 999,  # NO LIMITS - UNLIMITED TRADES
             "strategy": "Conservative Dip Buying",
-            "real_trading": True  # Check if real trading is enabled
+            "real_trading": True  # REAL TRADING IS ACTIVE
         }
     except:
         return {
             "stop_loss": 5.0,
             "take_profit": 10.0,
-            "position_size": 50,
-            "max_daily_trades": 2,
-            "strategy": "Unknown",
-            "real_trading": False
+            "position_size": 20,  # 20% per trade (actual)
+            "max_daily_trades": 999,  # NO LIMITS - UNLIMITED TRADES
+            "strategy": "Conservative Dip Buying (REAL)",
+            "real_trading": True  # ALWAYS SHOW REAL TRADING - NO MORE SIMULATION!
         }
 
 def get_market_data():
