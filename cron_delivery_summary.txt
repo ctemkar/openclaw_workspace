@@ -1,0 +1,55 @@
+TRADING DASHBOARD MONITORING - CRON EXECUTION SUMMARY
+=====================================================
+Execution Time: 2026-03-31 16:20:13 (Asia/Bangkok)
+
+🔴 CRITICAL ALERT: Trading System in Critical State
+
+KEY FINDINGS:
+1. 2 ETH positions have exceeded 5% stop-loss threshold:
+   - Position #1: -12.66% loss ($25.32) - Entry: $2,325.28, Current: $2,030.87
+   - Position #2: -7.42% loss ($14.85) - Entry: $2,193.60, Current: $2,030.87
+
+2. System capital depleted by 29.8%:
+   - Initial: $250.00 → Current: $175.53
+   - Loss: $74.47 (exceeds 20% critical threshold)
+
+3. Execution mode conflict detected:
+   - Dashboard: "REAL TRADING - LIVE"
+   - Summary: "SIMULATED - API credentials needed"
+   - Risk: Unclear if losses are real or simulated
+
+PORTFOLIO STATUS:
+- Total Trades: 5 (4 ETH, 1 BTC)
+- Total Investment: $1,300.05
+- Total Current Value: $1,257.96
+- Total P&L: -$42.09 (-3.24%)
+- Positions at/over Stop-Loss: 2 (40%)
+- Positions in Profit: 1 (20%)
+
+MARKET DATA:
+- BTC/USD: $66,524.00
+- ETH/USD: $2,030.87
+
+IMMEDIATE ACTIONS REQUIRED:
+1. 🔴 Exit ETH positions #1 and #2 immediately (stop-loss triggered)
+2. 🔴 Pause all trading until capital depletion addressed
+3. 🔴 Verify trading mode (REAL vs SIMULATION)
+4. Review position sizing (new trade violates 20% capital rule)
+5. Increase portfolio diversification (80% concentration in ETH)
+
+RISK LEVEL: 🔴 CRITICAL
+- Capital depletion: 29.8% (CRITICAL)
+- Stop-loss violations: 2 positions (CRITICAL)
+- Execution uncertainty: HIGH
+- System compliance: POOR (multiple rule violations)
+
+LOGS UPDATED:
+- Detailed monitoring: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+- Summary report: /Users/chetantemkar/.openclaw/workspace/app/trading_summary_20260331_1620.txt
+
+NEXT MONITORING: ~17:20 PM
+ESCALATION: If not addressed within 1 hour, force stop trading system.
+
+END OF REPORT
+=============

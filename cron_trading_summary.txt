@@ -1,57 +1,64 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
+Timestamp: 2026-03-31 16:31:20 (Asia/Bangkok)
+Monitoring Interval: 4:30 PM - 4:31 PM
 
-SYSTEM STATUS: CRITICAL FAILURE
-- Dashboard: Running on port 5002 (PID: 78515)
-- All trading bots: STOPPED (no processes found)
-- 26 Crypto Bot: Last activity 07:01:43 (29+ minutes ago)
+SYSTEM OVERVIEW:
+• Dashboard Status: ✅ Running
+• Capital: $175.53 (⚠️ Down 29.8% from $250.00 initial)
+• Active Positions: 5 trades (4 ETH, 1 BTC)
+• System Health: 🔴 CRITICAL
 
-CAPITAL & RISK:
-- Dashboard shows: $0.00 (ERROR)
-- Actual balance: $542.27 USD (last update: 07:02:37)
-- Risk parameters: Stop-loss 5.0%, Take-profit 10.0%
-- Position size: 50%, Max trades/day: 2
+CRITICAL ALERTS (3):
+1. 🔴 STOP-LOSS TRIGGERED: ETH Position #1 (-12.93%, exceeds 5% SL by 7.93%)
+2. 🔴 STOP-LOSS TRIGGERED: ETH Position #2 (-7.70%, exceeds 5% SL by 2.70%)
+3. 🔴 CAPITAL DEPLETION: $175.53 (29.8% loss from initial $250.00)
+
+PORTFOLIO PERFORMANCE:
+• Total Investment: $1,300.05
+• Current Value: $1,254.27
+• Total P&L: -$45.83 (-3.53%)
+• Positions in Loss: 4 out of 5 (80%)
+• Positions at/over Stop-Loss: 2 out of 5 (40%)
 
 MARKET CONDITIONS:
-- BTC/USD: $66,611.07 (+1.2%) - BULLISH
-- ETH/USD: $2,021.77 (+0.8%) - BULLISH
-- SOL/USD: $145.32 (+2.5%) - VERY BULLISH
-- Market sentiment: Strongly Bullish
+• BTC: $66,369.00 (down 1.08% from last analysis)
+• ETH: $2,024.67 (down 1.10% from last analysis)
+• Trend: 🔴 Bearish (both assets declining)
 
-TRADING ACTIVITY:
-- Trades today: 0/3 maximum (0%)
-- Active trades: 0
-- Last signals: 2 short signals detected (DOT/USDT, COMP/USDT) at 07:01:43
-- No execution due to bot stoppage
+RISK ASSESSMENT:
+• Overall Risk Level: 🔴 CRITICAL
+• Execution Mode Conflict: Dashboard shows "REAL TRADING" vs Summary shows "SIMULATED"
+• Position Concentration: 80% in ETH (over-concentrated)
+• Position Sizing Violation: New ETH trade is 200% of capital (vs 20% rule)
 
-STOP-LOSS/TAKE-PROFIT STATUS:
-- No triggers (0 active trades)
-- No drawdown indicators (0% drawdown)
-- Risk exposure: 0%
+IMMEDIATE ACTIONS REQUIRED:
+1. 🔴 Exit ETH positions #1 and #2 immediately (stop-loss triggered)
+2. 🔴 Pause all trading until capital depletion addressed
+3. 🔴 Verify actual trading mode (REAL vs SIMULATION)
+4. 🟡 Review position sizing logic
+5. 🟡 Increase portfolio diversification
 
-CRITICAL ISSUES:
-1. All trading bots stopped for 29+ minutes
-2. Capital data mismatch ($0 vs $542.27)
-3. 26 Crypto Bot crashed with NoneType comparison errors
-4. Missed trading opportunities in bullish market
+SYSTEM COMPLIANCE ISSUES:
+• Stop-loss not enforced on 2 positions
+• Position sizing rules violated
+• Capital depletion exceeds warning thresholds
+• Conflicting execution mode information
 
-ROOT CAUSE:
-- 26 Crypto Bot data parsing errors (NoneType comparisons)
-- No auto-recovery mechanisms
-- Possible API connectivity issues
+NEXT STEPS:
+• Next monitoring check: 17:31 PM
+• Next system analysis: ~16:36 PM (hourly schedule)
+• Manual intervention required within 1 hour
 
-RECOMMENDED ACTIONS:
-1. IMMEDIATE: Restart 26 Crypto Live Bot
-2. Fix dashboard capital display
-3. Investigate NoneType comparison errors
-4. Check API connectivity
-5. Implement auto-restart for bots
+ALERT STATUS:
+• Critical Alerts: 3
+• High Priority Alerts: 3
+• Total Active Alerts: 6
 
-FINANCIAL IMPACT:
-- Missed opportunities: 29+ minutes in bullish market
-- Capital utilization: 0%
-- Trading efficiency: 0%
-- System reliability: CRITICAL
+RECOMMENDATION:
+Immediate manual intervention required. Trading system should be paused until critical issues are resolved. Verify if trades are real or simulated to assess actual financial risk.
 
-ALERT STATUS: CRITICAL - Requires immediate manual intervention
+=== END OF SUMMARY ===
+Monitoring logs updated:
+• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log

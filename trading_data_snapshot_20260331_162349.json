@@ -1,0 +1,189 @@
+{
+  "trading_server_status": {
+    "analysis_scheduled": "hourly",
+    "capital": 175.53,
+    "last_analysis": "2026-03-31T15:36:25.493666",
+    "pnl": {
+      "binance": {
+        "open_positions": 4,
+        "realized": 0.0,
+        "total": -0.3867850808976966,
+        "trades": 4,
+        "unrealized": -0.3867850808976966
+      },
+      "gemini": {
+        "open_positions": 0,
+        "realized": 0.0,
+        "total": 0.0,
+        "trades": 0,
+        "unrealized": 0.0
+      },
+      "total": {
+        "open_positions": 4,
+        "realized": 0.0,
+        "total": -0.3867850808976966,
+        "unrealized": -0.3867850808976966
+      }
+    },
+    "port": 5001,
+    "risk_parameters": {
+      "max_trades_per_day": 999,
+      "stop_loss": 0.05,
+      "take_profit": 0.1
+    },
+    "status": "running",
+    "timestamp": "2026-03-31T16:23:43.295339",
+    "trading_pairs": [
+      "BTC/USD",
+      "ETH/USD",
+      "SOL/USD",
+      "ADA/USD",
+      "XRP/USD",
+      "DOT/USD",
+      "DOGE/USD",
+      "AVAX/USD",
+      "MATIC/USD",
+      "LINK/USD"
+    ]
+  },
+  "trading_server_trades": {
+    "count": 5,
+    "timestamp": "2026-03-31T16:23:48.907401",
+    "trades": [
+      {
+        "price": 2325.28,
+        "quantity": 0.086,
+        "reason": "Near support level: $2308.08 (current: $2325.28)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "13:39:49"
+      },
+      {
+        "price": 2193.6,
+        "quantity": 0.0912,
+        "reason": "Near support level: $2167.99 (current: $2193.60)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "00:33:02"
+      },
+      {
+        "price": 67247.51,
+        "quantity": 0.002974,
+        "reason": "Near support level: $67110.20 (current: $67247.51)",
+        "side": "BUY",
+        "symbol": "BTC/USD",
+        "time": "21:29:41"
+      },
+      {
+        "price": 2052.38,
+        "quantity": 0.0974,
+        "reason": "Near support level: $2033.94 (current: $2052.38)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "21:29:42"
+      },
+      {
+        "price": 2021.51,
+        "quantity": 0.2474,
+        "reason": "Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)",
+        "side": "BUY",
+        "symbol": "ETH/USD",
+        "time": "07:24:00"
+      }
+    ]
+  },
+  "market_data": {
+    "btc_usd": 66513,
+    "eth_usd": 2028.32,
+    "timestamp": "2026-03-31T16:23:49.269994"
+  },
+  "bots_status": [
+    {
+      "status": "running",
+      "bot": "26 Crypto Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 15:45:36,766 - INFO - \u26a1 BINANCE SHORT SIGNAL: COMP/USDT",
+      "log_file": "26_crypto_live_trading.log",
+      "log_size_kb": 1286.9287109375
+    },
+    {
+      "status": "running",
+      "bot": "Binance Futures Short Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 07:01:49,669 - INFO - \u2705 FUTURES SHORT PLAN CREATED for COMP/USDT",
+      "log_file": "binance_futures_trading.log",
+      "log_size_kb": 744.732421875
+    },
+    {
+      "status": "running",
+      "bot": "Fixed Futures Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 0,
+      "recent_errors": [],
+      "trades_executed": 1,
+      "balance_info": "2026-03-31 15:42:10,501 - INFO - \ud83d\udcb0 Binance Futures balance:",
+      "log_file": "fixed_futures_trading.log",
+      "log_size_kb": 297.6787109375
+    },
+    {
+      "status": "error",
+      "bot": "Real Futures Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 1,
+      "recent_errors": [
+        "2026-03-31 15:45:34,575 - ERROR - \u274c Trade execution failed: binance {\"code\":-4140,\"msg\":\"Invalid symbol status for opening position.\"}"
+      ],
+      "trades_executed": 1,
+      "balance_info": "2026-03-31 15:45:34,004 - INFO - Setting 2x leverage for MKR/USDT...",
+      "log_file": "real_futures_trading.log",
+      "log_size_kb": 1385.0654296875
+    },
+    {
+      "status": "running",
+      "bot": "Real Trading Bot",
+      "last_activity": "2026-03-31",
+      "errors_count": 2,
+      "recent_errors": [
+        "2026-03-31 15:44:18,190 - ERROR - Market data error for MATIC/USD: gemini does not have market symbol MATIC/USD",
+        "2026-03-31 15:44:15,936 - ERROR - Market data error for ADA/USD: gemini does not have market symbol ADA/USD"
+      ],
+      "trades_executed": 0,
+      "balance_info": "2026-03-31 15:44:14,662 - INFO - \ud83d\udcb0 Balance: $134.27 USD",
+      "log_file": "real_trading.log",
+      "log_size_kb": 129.955078125
+    }
+  ],
+  "process_status": [
+    {
+      "bot": "26 Crypto Bot",
+      "running": false,
+      "process_count": 0
+    },
+    {
+      "bot": "Binance Futures Short Bot",
+      "running": false,
+      "process_count": 0
+    },
+    {
+      "bot": "Fixed Futures Bot",
+      "running": false,
+      "process_count": 0
+    },
+    {
+      "bot": "Real Futures Bot",
+      "running": false,
+      "process_count": 0
+    },
+    {
+      "bot": "Trading Server",
+      "running": true,
+      "process_count": 1
+    }
+  ]
+}

@@ -1,226 +1,171 @@
-=== CRITICAL TRADING ALERTS LOG ===
-Timestamp: 2026-03-31 15:54:55 (Asia/Bangkok)
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 16:55:30 (Asia/Bangkok)
+Alert Level: CRITICAL
 
-🔴🔴🔴 CRITICAL ALERTS TRIGGERED 🔴🔴🔴
+ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
+- Symbol: ETH/USD
+- Entry Price: $2,325.28
+- Current Price: ~$2,025.59 (estimated from last analysis)
+- Loss: ~-12.90%
+- Position Size: 0.086 ETH
+- Trade Time: 13:39:49
+- Stop-Loss Setting: 5%
+- Loss Exceeds Stop-Loss By: ~7.90%
+- Status: 🔴 CRITICAL - Immediate action required
+- Action Required: Exit position immediately
+- Position Value: ~$174.17 (estimated)
+- Time in Loss: ~3 hours 16 minutes
+- Last Update: 2026-03-31 16:52:17
+- Trend: 🔴 PERSISTENT - Still critical
 
-=== STOP-LOSS EXECUTION ALERT ===
-⚠️ URGENT: STOP-LOSS TRIGGERS DETECTED ⚠️
+ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
+- Symbol: ETH/USD
+- Entry Price: $2,193.60
+- Current Price: ~$2,025.59 (estimated from last analysis)
+- Loss: ~-7.67%
+- Position Size: 0.0912 ETH
+- Trade Time: 00:33:02
+- Stop-Loss Setting: 5%
+- Loss Exceeds Stop-Loss By: ~2.67%
+- Status: 🔴 CRITICAL - Immediate action required
+- Action Required: Exit position immediately
+- Position Value: ~$184.71 (estimated)
+- Time in Loss: ~16 hours 22 minutes
+- Last Update: 2026-03-31 16:52:17
+- Trend: 🔴 PERSISTENT - Still critical
 
-Analysis of Recent Trades vs Current Market Prices:
-1. ETH/USD @ $2325.28 (13:39:49)
-   - Stop-loss level: $2209.02 (5% below entry)
-   - Current ETH price: $2,040.58
-   - Status: STOP-LOSS TRIGGERED 🔴
-   - Loss magnitude: 12.2% (beyond 5% stop-loss)
-   - Estimated loss: $24.48 per ETH position
-
-2. ETH/USD @ $2193.60 (00:33:02)
-   - Stop-loss level: $2083.92 (5% below entry)
-   - Current ETH price: $2,040.58
-   - Status: STOP-LOSS TRIGGERED 🔴
-   - Loss magnitude: 7.0% (beyond 5% stop-loss)
-   - Estimated loss: $13.96 per ETH position
-
-3. BTC/USD @ $67247.51 (21:29:41)
-   - Stop-loss level: $63885.13 (5% below entry)
-   - Current BTC price: $66,842.00
-   - Status: STOP-LOSS TRIGGERED 🔴
-   - Loss magnitude: 0.6% (beyond 5% stop-loss)
-   - Estimated loss: $1.21 per BTC position
-
-4. ETH/USD @ $2052.38 (21:29:42)
-   - Stop-loss level: $1949.76 (5% below entry)
-   - Current ETH price: $2,040.58
-   - Status: STOP-LOSS TRIGGERED 🔴
-   - Loss magnitude: 0.6% (beyond 5% stop-loss)
-   - Estimated loss: $1.15 per ETH position
-
-5. ETH/USD @ $2021.51 (07:24:00)
-   - Stop-loss level: $1920.43 (5% below entry)
-   - Current ETH price: $2,040.58
-   - Status: ACTIVE ✅ (+0.9% above entry)
-   - Current P&L: +$4.73
-
-CRITICAL ISSUE: These stop-loss executions are NOT reflected in the reported P&L of -$0.8811
-
-=== CAPITAL DISCREPANCY ALERT ===
-⚠️ SERIOUS DATA INCONSISTENCY DETECTED ⚠️
-
-Reported vs Actual Capital Analysis:
+ALERT 3: SYSTEM CAPITAL DEPLETION
 - Initial Capital: $250.00
-- Current Reported Capital: $175.53
-- Total Capital Loss: -$74.47 (29.8% drawdown)
-- Reported Total P&L: -$0.8811
-- **DISCREPANCY: -$73.5889** ⚠️ CRITICAL
+- Current Capital: $175.53
+- Capital Loss: -$74.47 (-29.8%)
+- Threshold Exceeded: 10% capital loss warning
+- Loss Exceeds Warning By: 19.8%
+- Status: 🔴 CRITICAL - Trading should be paused
+- Action Required: Review risk management, pause trading until resolved
+- Possible Causes: Multiple losing trades, position sizing issues, stop-loss not enforced
+- Last Update: 2026-03-31 16:52:35
+- Trend: 🔴 PERSISTENT - Capital depletion remains critical
 
-Missing Loss Breakdown (Estimated):
-1. Stop-loss executions (4 positions): ~$40.80
-2. Unreported trades/margin calls: ~$32.79
-3. Other discrepancies: ~$0.00
+ALERT 4: EXECUTION MODE CONFLICT
+- Dashboard States: "Execution Mode: ✅ REAL TRADING - LIVE"
+- Summary States: "EXECUTION STATUS: SIMULATED - API credentials needed"
+- Conflict Level: HIGH
+- Risk: Unclear if trades are real or simulated
+- Status: 🔴 CRITICAL - Requires verification
+- Action Required: Verify actual trading mode immediately
+- Impact: Could lead to unexpected real losses if mode is REAL
+- Verification Steps: Check API credentials, trading history, account balances
+- Last Update: 2026-03-31 16:52:17
+- Trend: 🔴 PERSISTENT - Conflict persists
 
-=== P&L IMPROVEMENT ALERT ===
-⚠️ POSITIVE TREND DETECTED ⚠️
+ALERT 5: POSITION SIZING VIOLATION
+- Rule: "Position size: 20% of capital per trade"
+- New Trade (ETH #5): $500.12 investment
+- Initial Capital: $250.00
+- Violation: Trade size is 200% of initial capital (exceeds 20% rule)
+- Status: 🟡 HIGH - Requires review
+- Action Required: Review position sizing logic
+- Risk: Excessive concentration in single position
+- Impact: Increases portfolio risk significantly
+- Last Update: 2026-03-31 16:52:17
+- Trend: 🔴 PERSISTENT - Violation persists
 
-P&L Change Analysis:
-- Previous P&L (15:51:48): -$1.0047
-- Current P&L (15:54:55): -$0.8811
-- **Change: +$0.1236** (12.3% improvement)
-- Time elapsed: 3 minutes 7 seconds
-- Rate: +$0.040 per minute
+=== PORTFOLIO STATUS ===
+- Total Investment (5 trades): ~$1,300.05 (estimated)
+- Total Current Value: ~$1,254.64 (estimated)
+- Total P&L: ~-$45.40 (-3.49%)
+- Active Positions: 5 (1 BTC, 4 ETH)
+- Positions in Loss: 4 (80%)
+- Positions at/over Stop-Loss: 2 (40%)
+- Positions in Profit: 1 (20%)
+- Positions Near Stop-Loss (within 4%): 2 (40%)
+- Portfolio Health: 🔴 POOR
 
-Market Movement Impact:
-- BTC moved from $67,092.89 to $66,842.00 (-0.4%)
-- ETH moved from $2,047.21 to $2,040.58 (-0.3%)
-- P&L improvement suggests position adjustments or unrealized gains
+=== TRADE DISTRIBUTION CONCERN ===
+- ETH Trades: 4 out of 5 (80% concentration)
+- BTC Trades: 1 out of 5 (20%)
+- Issue: Over-concentration in ETH increases portfolio risk
+- Recommended: Increase diversification across assets
+- Target Distribution: Max 40% in any single asset
+- Trend: 🔴 PERSISTENT - Concentration risk persists
 
-=== RISK PARAMETER VIOLATIONS ===
-1. Max trades per day: 999 (EXTREME RISK)
-   - Recommended maximum: 10 trades/day
-   - Current setting allows unlimited daily trading
-   - Risk exposure: POTENTIALLY UNLIMITED LOSSES
-
-2. Position Concentration Risk:
-   - 4 open positions (all Binance)
-   - No Gemini positions (despite $200 Gemini allocation)
-   - All recent trades: ETH/USD and BTC/USD only
-   - Lack of diversification
-
-3. Stop-loss Execution Failure:
-   - 4 positions beyond stop-loss levels
-   - Stop-loss orders may not be properly placed
-   - System not tracking actual executions
-
-=== MARKET DATA DISCREPANCY ALERT ===
-⚠️ DATA LATENCY ISSUE DETECTED ⚠️
-
-System vs Real-time Price Comparison:
-1. BTC/USD:
-   - System: $67,092.89
-   - Real-time: $66,842.00
-   - Difference: -0.4% (system showing higher price)
-
-2. ETH/USD:
-   - System: $2,047.21
-   - Real-time: $2,040.58
-   - Difference: -0.3% (system showing higher price)
-
-Impact:
-- System may be using cached or delayed data
-- Stop-loss calculations based on outdated prices
-- P&L reporting inaccurate
-
-=== SYSTEM INTEGRITY ISSUES ===
-1. Dashboard Status: ONLINE ✅
-2. Data Consistency: FAILING ❌
-3. Trade Execution Tracking: FAILING ❌
-4. P&L Reporting: INCONSISTENT ❌
-5. Stop-loss Monitoring: FAILING ❌
-6. Market Data Latency: HIGH ❌
-7. Summary vs Status Data Mismatch:
-   - Summary shows $250 capital (simulation mode)
-   - Status shows $175.53 (real capital)
-8. P&L Trend: IMPROVING ✅
-
-=== TRADING PERFORMANCE ANALYSIS ===
-Current Status:
-- Open Positions: 4 (all Binance)
-- Total Reported P&L: -$0.8811
-- Actual Estimated P&L: -$74.47 ⚠️
-- Capital Drawdown: -29.8% ⚠️
-- Stop-loss triggers detected: 4 positions
-- No take-profit triggers detected
-- Recent trades: 5 trades recorded (all BUY positions)
-- P&L Trend: IMPROVING (+$0.1236 in 3 minutes)
+=== SYSTEM STATUS ===
+- Trading System: Conservative Crypto Trading System
+- Capital Allocation: $250.00 (initial), $175.53 (current)
+- Stop-Loss Setting: 5%
+- Take-Profit Setting: 10%
+- Max Trades/Day: 999 (UNLIMITED - potential risk)
+- Current Mode: CONFLICTING (REAL vs SIMULATION)
+- Dashboard Status: ✅ ONLINE (Port 5001 responding)
+- Last Analysis: 2026-03-31 16:52:17
+- Next Analysis: ~17:52 PM (hourly schedule)
+- System Health: 🔴 CRITICAL (multiple critical alerts)
 
 === MARKET CONDITIONS ===
-- BTC Price: $66,842.00 (real-time)
-- ETH Price: $2,040.58 (real-time)
-- Market Sentiment: NEUTRAL
-- Trading Signal: BUY (BTC/USD recommended)
-- Support/Resistance: Prices near support levels
-- Market Volatility: LOW (prices stable)
+- BTC Price: $66,311.99 (last analysis 16:52:17)
+- ETH Price: $2,025.59 (last analysis 16:52:17)
+- Market Trend: NEUTRAL (last analysis)
+- Impact on Positions: ETH positions in critical loss, BTC slightly down
+- Risk Level: STILL HIGH - Market volatility continues
 
-=== URGENT ACTIONS REQUIRED ===
+=== IMMEDIATE ACTIONS REQUIRED (Priority Order) ===
+1. 🔴 URGENT: Exit ETH positions #1 and #2 immediately (stop-loss triggered)
+2. 🔴 URGENT: Pause all trading until capital depletion addressed
+3. 🔴 URGENT: Verify trading mode (REAL vs SIMULATION)
+4. 🟡 HIGH: Review and fix position sizing logic
+5. 🟡 MEDIUM: Implement portfolio diversification rules
 
-IMMEDIATE (within 5 minutes):
-1. **PAUSE ALL TRADING** immediately
-2. **VERIFY STOP-LOSS EXECUTIONS** on Binance platform
-3. **CHECK ORDER HISTORY** for unreported stop-loss fills
-4. **INVESTIGATE CAPITAL DISCREPANCY** ($73.59 missing)
+=== RISK ASSESSMENT ===
+Overall Risk Level: 🔴 CRITICAL
+- Capital depletion: 🔴 CRITICAL (29.8% loss)
+- Stop-loss violations: 🔴 CRITICAL (2 positions)
+- Execution mode uncertainty: 🔴 CRITICAL
+- Position concentration: 🟡 HIGH (80% ETH)
+- Position sizing: 🟡 HIGH (rule violations)
+- Dashboard availability: ✅ GOOD (service running)
+- System compliance: 🔴 CRITICAL (multiple rule violations)
+- Operational visibility: ✅ GOOD (dashboard online)
 
-IMMEDIATE (within 15 minutes):
-1. **VERIFY CAPITAL BALANCE** on Binance and Gemini
-2. **UPDATE MARKET DATA SOURCE** to real-time feed
-3. **CHECK FOR MARGIN CALLS** or forced liquidations
+=== ALERT GENERATION DETAILS ===
+- Monitoring Script: trading_dashboard_monitor
+- Source Dashboard: http://localhost:5001/ (✅ ONLINE)
+- Price Source: Last analysis from trading system (16:52:17)
+- Analysis Time: 2026-03-31 16:55:30
+- Alert Thresholds:
+  • Stop-Loss: 5%
+  • Take-Profit: 10%
+  • Capital Depletion Warning: 10%
+  • Critical Capital Loss: 20%
+  • Service Availability: Must respond within 30 seconds
+- Current Status: 5 active alerts, 4 at CRITICAL level
+- Service Status: ✅ DASHBOARD ONLINE
 
-SHORT-TERM (within 1 hour):
-1. **FIX MAX_TRADES_PER_DAY** parameter (set to 10 or less)
-2. **VERIFY STOP-LOSS ORDER PLACEMENT** for all open positions
-3. **IMPLEMENT STOP-LOSS EXECUTION TRACKING**
-4. **RECONCILE ALL TRADES** - compare platform vs system records
-5. **RESOLVE SIMULATION/REAL MODE CONFLICT**
+=== ESCALATION RECOMMENDATIONS ===
+If stop-loss positions not closed within 15 minutes:
+1. Force stop all trading processes
+2. Manual intervention required
+3. System audit needed
+4. Risk parameters review mandatory
+5. Consider complete system restart
 
-LONG-TERM (within 4 hours):
-1. **AUDIT ENTIRE TRADING SYSTEM** for data integrity
-2. **IMPLEMENT REAL-TIME RECONCILIATION** between system and platforms
-3. **SET UP ALERTS** for:
-   - Capital discrepancies > 5%
-   - Stop-loss breaches without execution
-   - Max trades per day > 10
-   - Position concentration > 50% in single asset
-   - Market data latency > 1 minute
-4. **REVIEW RISK MANAGEMENT FRAMEWORK**
-5. **ESTABLISH CLEAR MODE SEPARATION** between simulation and real trading
+If trading mode is REAL and positions remain open:
+1. Immediate manual exit of all positions
+2. Freeze all trading activities
+3. Comprehensive security audit
+4. Financial loss assessment
 
-=== ALERT THRESHOLDS STATUS ===
-🔴 CRITICAL: Capital discrepancy > $50
-🔴 CRITICAL: Stop-loss triggers not reflected in P&L
-🔴 CRITICAL: Market data latency > 0.5%
-⚠️  HIGH: Max trades per day violation
-⚠️  MEDIUM: Position concentration risk
-⚠️  MEDIUM: Simulation/real mode conflict
-✅ NORMAL: Dashboard connectivity
-✅ NORMAL: P&L improvement trend
-✅ NORMAL: Market volatility low
+=== SUMMARY ===
+The trading dashboard monitoring system confirms that the dashboard service is now online. However, the trading system remains in a critical state with multiple rule violations and significant capital depletion (29.8% loss). Two ETH positions continue to exceed stop-loss thresholds and should be closed immediately. The system shows conflicting information about execution mode, which adds uncertainty to the risk assessment. While dashboard visibility has been restored, immediate action is required to address the critical trading issues. All previous critical alerts remain active and unresolved.
+=== STOP-LOSS ALERTS ===
+Timestamp: 2026-03-31 16:55:30
 
-=== TRADE ANALYSIS ===
-Recent Trades (Last 5):
-1. ETH/USD BUY @ $2325.28 (13:39:49) - STOP-LOSS TRIGGERED 🔴
-2. ETH/USD BUY @ $2193.60 (00:33:02) - STOP-LOSS TRIGGERED 🔴
-3. BTC/USD BUY @ $67247.51 (21:29:41) - STOP-LOSS TRIGGERED 🔴
-4. ETH/USD BUY @ $2052.38 (21:29:42) - STOP-LOSS TRIGGERED 🔴
-5. ETH/USD BUY @ $2021.51 (07:24:00) - PROFITABLE ✅ (+0.9%)
+ALERT: ETH/USD position at $2325.28 is at ~-12.90% loss (stop-loss: -5%)
+ALERT: ETH/USD position at $2193.60 is at ~-7.67% loss (stop-loss: -5%)
 
-Pattern Analysis:
-- All trades are BUY positions
-- All based on support level proximity
-- No SELL or SHORT positions recorded
-- Heavy ETH concentration (4 of 5 trades)
-- 80% of recent trades triggered stop-loss
-- P&L improving despite market decline
-
-=== MONITORING RECOMMENDATIONS ===
-1. Increase monitoring frequency to every 1 minute
-2. Implement automated stop-loss execution verification
-3. Set up alerts for:
-   - Capital discrepancies > 5%
-   - Stop-loss breaches > 1% beyond trigger
-   - Max trades per day > 10
-   - Position concentration > 50% in single asset
-   - Market data latency > 0.5%
-   - Dashboard downtime > 30 seconds
-   - Simulation/real mode conflicts
-
-=== CONTACT & ESCALATION ===
-If discrepancies persist after 5 minutes:
-1. Manually review all trades and orders on Binance
-2. Check for margin calls or forced liquidations
-3. Consider temporary system shutdown
-4. Contact system administrator immediately
-5. Review API connectivity and order placement
-
-=== NEXT MONITORING CHECK ===
-Scheduled: 2026-03-31 15:55:55 (Asia/Bangkok)
-Priority: CRITICAL - Monitor every 1 minute
-
-=== END OF CRITICAL ALERTS LOG ===
+RECOMMENDED ACTIONS:
+1. Verify stop-loss execution on exchange
+2. Close positions manually if stop-loss not executed
+3. Review trading strategy and risk parameters
+4. Consider reducing position sizes
+5. Monitor market conditions closely
+==================================================

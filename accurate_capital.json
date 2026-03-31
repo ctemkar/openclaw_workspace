@@ -1,0 +1,40 @@
+{
+  "initial_capital": 540.0,
+  "current_capital": 533.83,
+  "cash": 134.27,
+  "crypto_holdings": {
+    "BTC": {
+      "amount": 0.005981,
+      "average_buy_price": 67876.60926266511,
+      "current_price": 66805.21,
+      "current_value": 399.56,
+      "unrealized_pnl": -6.41,
+      "unrealized_pnl_percent": -1.58
+    }
+  },
+  "today_trades": [
+    {
+      "time": "2026-03-31T09:26:52",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "amount": 0.003991,
+      "price": 67918.89,
+      "cost": 271.06
+    },
+    {
+      "time": "2026-03-31T09:34:15",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "amount": 0.00199,
+      "price": 67790.48,
+      "cost": 134.9
+    }
+  ],
+  "performance": {
+    "total_return": -6.169999999999959,
+    "total_return_percent": -1.142592592592585,
+    "daily_trades": 2,
+    "daily_volume": 405.97
+  },
+  "last_updated": "2026-03-31T16:08:43.102192"
+}
