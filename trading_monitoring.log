@@ -1,91 +1,62 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
-Dashboard Status: ✅ Running on port 5002 (PID: 78515)
-Last Dashboard Update: 2026-03-31 07:30:52
-Capital: $0.00 (dashboard shows 0, but real_trading.log shows $542.27 - CRITICAL DISCREPANCY)
-Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 2, Position size: 50%
+=== TRADING MONITORING LOG ===
+Timestamp: 2026-03-31 07:59:30 (Asia/Bangkok)
+Dashboard Status: Accessible
+System Status: Running
+Last Analysis: 2026-03-31T07:33:39.126630
 
-=== CURRENT MARKET DATA (FROM DASHBOARD API) ===
-BTC/USD: $66,611.07 (+1.2%) - BULLISH
-ETH/USD: $2,021.77 (+0.8%) - BULLISH
-SOL/USD: $145.32 (+2.5%) - VERY BULLISH
-Market Sentiment: Strongly Bullish (all pairs showing gains)
-Trading Signal: 26 Crypto Bot detected 2 short signals (DOT/USDT, COMP/USDT) at 07:01:43
+=== SYSTEM CONFIGURATION ===
+Capital: $250.00
+Risk Parameters:
+  - Stop Loss: 5.0%
+  - Take Profit: 10.0%
+  - Max Trades/Day: 2
+Trading Pairs: BTC/USD, ETH/USD
+Analysis Schedule: Hourly
 
-=== ACTIVE TRADES ===
-Dashboard shows: 0 active trades
-Real trading log shows: 0 trades today (0/3 maximum)
-26 Crypto Bot detected 2 short signals but no execution (bot appears stopped)
+=== CURRENT MARKET PRICES ===
+BTC/USD: $67,081.00
+ETH/USD: $2,033.24
 
-=== PORTFOLIO SUMMARY ===
-Dashboard shows: $0.00 (CRITICAL DISCREPANCY - 100% error)
-Real trading log balance: $542.27 USD (last update: 07:02:37)
-Portfolio P&L: Unknown (dashboard data mismatch)
-Drawdown Status: 0% (no active trades)
+=== RECENT TRADES (Last 5) ===
+1. ETH/USD BUY @ $2,325.28 (0.086 ETH) - Time: 13:39:49
+   Reason: Near support level: $2308.08 (current: $2325.28)
 
-=== BOT STATUS (CONFIRMED VIA PROCESS CHECK) ===
-ALL TRADING BOTS CONFIRMED AS STOPPED (CRITICAL):
-- Real Gemini Trader: STOPPED (no process found)
-- Trading Server: STOPPED (no process found)
-- 26 Crypto Live Bot: STOPPED (no process found, last log at 07:01:43 - 29+ minutes ago)
-- Binance Futures Bot: STOPPED (no process found)
-- Simple Crypto Bot: STOPPED (no process found)
+2. ETH/USD BUY @ $2,193.60 (0.0912 ETH) - Time: 00:33:02
+   Reason: Near support level: $2167.99 (current: $2193.60)
 
-=== 26 CRYPTO BOT STATUS DETAIL ===
-Last Log Entry: 2026-03-31 07:01:43 (Cycle 220)
-Last Signals: 2 short signals detected (DOT/USDT, COMP/USDT)
-Analysis Errors: Multiple 'NoneType' comparison errors in analysis (data parsing issues)
-Process Status: No active Python process found for this bot
-Time Since Last Activity: 29 minutes 37 seconds (CONFIRMED CRASH/STOP)
-Bot Health: CRITICAL - Requires immediate restart
+3. BTC/USD BUY @ $67,247.51 (0.002974 BTC) - Time: 21:29:41
+   Reason: Near support level: $67110.20 (current: $67247.51)
 
-=== PERFORMANCE ANALYSIS ===
-Trades Today: 0 out of 3 maximum
-Daily Target: Not met (0%)
-Capital Utilization: 0% (no active trades)
-Market Conditions: Highly Favorable (all major pairs up 0.8-2.5%)
-Missed Opportunities: SIGNIFICANT (bullish market with no trading activity)
-Time Since Last Trade: Unknown (no trades today)
-Financial Impact: Increasing every minute (missed profit opportunities)
+4. ETH/USD BUY @ $2,052.38 (0.0974 ETH) - Time: 21:29:42
+   Reason: Near support level: $2033.94 (current: $2052.38)
 
-=== RISK MANAGEMENT STATUS ===
-Stop-Loss Triggers: 0 (no active trades)
-Take-Profit Triggers: 0 (no active trades)
-Drawdown Indicators: 0% (no active positions)
-Risk Exposure: 0% (no active trades)
-Position Sizing: 50% (configured but not utilized)
+5. ETH/USD BUY @ $2,021.51 (0.2474 ETH) - Time: 07:24:00
+   Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
 
-=== SYSTEM HEALTH INDICATORS ===
-Dashboard Uptime: 18+ minutes (since 07:13:00)
-Last Real Trading Activity: 07:02:37 (28+ minutes ago)
-Last 26 Crypto Bot Activity: 07:01:43 (29+ minutes ago)
-Data Consistency: POOR (dashboard shows $0 vs actual $542.27)
-System Stability: CRITICAL (all trading bots stopped)
+=== POSITION ANALYSIS ===
+Total ETH Position: 0.5210 ETH
+Total BTC Position: 0.002974 BTC
+Estimated Portfolio Value: ~$1,059.50 (ETH) + ~$199.50 (BTC) = ~$1,259.00
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Restart 26 Crypto Live Bot
-2. IMMEDIATE: Fix dashboard capital display issue
-3. URGENT: Investigate why bots stopped/crashed
-4. HIGH PRIORITY: Check API connectivity and data feeds
-5. MEDIUM: Review error logs for NoneType comparison issues
+=== RISK ASSESSMENT ===
+Current ETH Price vs Entry Prices:
+- Trade 1 ($2,325.28): Current $2,033.24 = -12.56% (BELOW STOP-LOSS)
+- Trade 2 ($2,193.60): Current $2,033.24 = -7.31% (BELOW STOP-LOSS)
+- Trade 4 ($2,052.38): Current $2,033.24 = -0.93% (Within normal range)
+- Trade 5 ($2,021.51): Current $2,033.24 = +0.58% (Profitable)
 
-=== ALERT STATUS ===
-CRITICAL ALERT: All trading bots stopped for 29+ minutes
-CRITICAL ALERT: Capital data mismatch ($0 vs $542.27)
-WARNING: Missed trading opportunities in bullish market
-INFO: No stop-loss or take-profit triggers (no active trades)
+Current BTC Price vs Entry Price:
+- Trade 3 ($67,247.51): Current $67,081.00 = -0.25% (Within normal range)
 
-=== NEXT STEPS ===
-1. Check error logs for root cause analysis
-2. Restart critical trading components
-3. Verify API keys and connectivity
-4. Monitor for system recovery
-5. Update risk parameters if needed
+=== TRADING STRATEGY ===
+Strategy: Gemini_Longs_Binance_Shorts
+Description: Gemini for conservative longs, Binance for opportunistic shorts
+Execution Mode: SIMULATION
+Last Trade Recommendation: BUY BTC/USD @ $66,757.15 (not executed - simulation)
 
-=== MONITORING SUMMARY ===
-Overall System Status: CRITICAL FAILURE
-Trading Activity: NONE (0 trades)
-Bot Health: ALL STOPPED
-Market Conditions: HIGHLY FAVORABLE
-Risk Level: LOW (no active positions)
-Action Required: IMMEDIATE INTERVENTION
+=== MONITORING NOTES ===
+- System appears to be in simulation mode (no real API execution)
+- Multiple ETH positions are currently at a loss
+- Latest analysis recommends BUY on BTC/USD
+- No real-time stop-loss/take-profit execution detected in simulation mode
+- Dashboard functioning normally

@@ -1,65 +1,113 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Timestamp: 2026-03-31 07:00:45 (Asia/Bangkok)
-Monitoring Job: d12f2d3d-5055-4ff2-a4c7-049ab58a43c4
+Timestamp: 2026-03-31 07:52:00 (Asia/Bangkok)
 
-SYSTEM STATUS:
-✅ Dashboard operational at http://localhost:5001/
-✅ Last analysis: 2026-03-31T06:43:27.231752 (17 minutes ago)
+SYSTEM STATUS
+-------------
+✅ Dashboard: Operational on http://localhost:5001/
+✅ Last Analysis: 2026-03-31 07:33:39 (18 minutes ago)
 ✅ Capital: $250.00
-✅ Risk parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 2
-✅ Trading pairs: BTC/USD, ETH/USD
-✅ Strategy: Gemini_Longs_Binance_Shorts
-✅ Execution mode: SIMULATION
+✅ Risk Parameters: 5% stop-loss, 10% take-profit
+✅ Trading Mode: SIMULATION (no real execution)
+✅ Analysis Schedule: Hourly
 
-MARKET DATA:
-• BTC/USD: $66,703.00 (from CoinGecko API)
-• ETH/USD: $2,023.93 (from CoinGecko API)
-• Market sentiment: BULLISH (from dashboard)
-• Trading signal: BUY (from dashboard)
+MARKET DATA
+-----------
+• BTC/USD: $67,169.00
+• ETH/USD: $2,035.57
+• Market Sentiment: NEUTRAL
+• Trading Signal: BUY (Price within 1% of support)
 
-PORTFOLIO ANALYSIS:
-• Total trades: 4
-• Total investment: $799.93
-• Current value: $754.13
-• Portfolio P&L: -5.72% (-$45.80)
-• Drawdown status: Acceptable (5.72% < 10% critical threshold)
+TRADING ACTIVITY
+----------------
+• Total Historical Trades: 5
+• Trades Today: 1 (ETH/USD at 07:24:00)
+• Daily Trade Limit: 2 (1 used, 1 remaining)
+• Most Recent Trade: ETH/USD BUY 0.2474 @ $2,021.51
 
-TRADE PERFORMANCE:
-1. ETH/USD - BUY at $2,325.28: -12.96% (STOP-LOSS TRIGGERED)
-2. ETH/USD - BUY at $2,193.60: -7.74% (STOP-LOSS TRIGGERED)
-3. BTC/USD - BUY at $67,247.51: -0.81% (Active)
-4. ETH/USD - BUY at $2,052.38: -1.39% (Active)
+ACTIVE POSITIONS ANALYSIS
+-------------------------
+1. ETH/USD @ $2,325.28 (13:39:49) - Current: $2,035.57 (-12.46%) 🚨 STOP-LOSS TRIGGERED
+2. ETH/USD @ $2,193.60 (00:33:02) - Current: $2,035.57 (-7.20%) 🚨 STOP-LOSS TRIGGERED
+3. ETH/USD @ $2,052.38 (21:29:42) - Current: $2,035.57 (-0.82%) ⚠️ NEAR STOP-LOSS
+4. ETH/USD @ $2,021.51 (07:24:00) - Current: $2,035.57 (+0.70%) ✅ PROFITABLE
+5. BTC/USD @ $67,247.51 (21:29:41) - Current: $67,169.00 (-0.12%) ✅ NORMAL
 
-CRITICAL ALERTS:
-🔴 2 out of 4 trades (50%) have triggered stop-losses
-🔴 All 3 ETH positions are in loss (100% of ETH trades)
-⚠️  No profitable trades (0 out of 4 reached take-profit)
-⚠️  Strategy conflict: Bullish sentiment vs bearish price action
-⚠️  BTC position approaching stop-loss (-0.81%, stop-loss at -5.0%)
+CRITICAL ALERTS DETECTED
+------------------------
+🚨 2 STOP-LOSS TRIGGERS ACTIVE:
+1. ETH/USD position at $2,325.28: Loss -12.46% (Stop-loss exceeded by 7.46%)
+   • Stop-loss level: $2,209.02 (-5%)
+   • Current: $2,035.57
+   • Loss amount: -$24.91
 
-RISK ASSESSMENT:
-• Risk level: MEDIUM-HIGH
-• Stop-loss triggers: 2/4 trades
-• Portfolio concentration: 75% in ETH (all losing)
-• Drawdown: -5.72% (acceptable)
-• System mode: SIMULATION (no real execution)
+2. ETH/USD position at $2,193.60: Loss -7.20% (Stop-loss exceeded by 2.20%)
+   • Stop-loss level: $2,083.92 (-5%)
+   • Current: $2,035.57
+   • Loss amount: -$14.42
 
-RECOMMENDED ACTIONS:
-1. Review ETH market conditions for bearish pressure
-2. Check stop-loss execution (system is in SIMULATION mode)
-3. Consider tightening stop-loss on BTC position
-4. Review trading strategy given market conflict
-5. Consider reducing ETH exposure or implementing hedging
-6. Verify dashboard sentiment calculation logic
-7. Monitor BTC position closely
-8. Consider pausing new BUY signals until market confirms direction
+⚠️ 1 POSITION NEAR STOP-LOSS:
+1. ETH/USD position at $2,052.38: Loss -0.82% (4.18% from stop-loss)
+   • Stop-loss level: $1,949.76 (-5%)
+   • Current: $2,035.57
+   • Loss amount: -$1.64
 
-NEXT STEPS:
-• Next monitoring check: Hourly
-• Next dashboard analysis: Hourly
-• Critical alerts logged to: critical_alerts.log
-• Monitoring logs saved to: trading_monitoring.log
+RISK ASSESSMENT
+---------------
+• Risk Level: HIGH
+• Worst Drawdown: -12.46%
+• Total Loss on Triggered Positions: -$39.33
+• Position Exposure: High (2 stop-loss triggers, 1 near stop-loss)
+• System Mode: Simulation (no automatic execution)
 
-FINAL STATUS: SYSTEM OPERATIONAL WITH MEDIUM-HIGH RISK ALERTS
-==============================================================
+TRADING STRATEGY
+----------------
+• Name: Gemini_Longs_Binance_Shorts
+• Description: Gemini for conservative longs, Binance for opportunistic shorts
+• Gemini Execution: LONG if price near support, RSI < 40, trend bullish ($35/trade, max 2/day)
+• Binance Execution: SHORT if price near resistance, RSI > 60, trend bearish ($9/trade, max 1/day)
+
+SYSTEM HEALTH
+-------------
+• Dashboard Uptime: Confirmed running
+• Data Consistency: Good (dashboard matches API data)
+• System Stability: Stable
+• Real Trading: Not enabled (simulation only)
+
+IMMEDIATE ACTION REQUIRED
+-------------------------
+1. 🚨 REVIEW STOP-LOSS TRIGGERS IMMEDIATELY
+2. Consider closing losing ETH positions to prevent further losses
+3. Review trading strategy and risk parameters for ETH/USD
+4. Check market conditions for ETH/USD
+5. Consider hedging with Binance shorts
+6. Review position sizing and entry timing
+
+RECOMMENDATIONS
+---------------
+1. Enable real trading with Gemini API credentials for execution
+2. Consider adjusting stop-loss levels for future trades
+3. Monitor drawdown levels closely
+4. Consider implementing trailing stop-loss
+5. Review trade entry criteria for ETH/USD
+6. Check if Binance short execution is active for hedging
+
+NEXT STEPS
+----------
+• Next analysis scheduled: Hourly
+• Monitor for additional stop-loss triggers
+• Review system logs for any execution errors
+• Consider running manual analysis via /analysis endpoint
+
+FINAL STATUS
+------------
+🔴 TRADING SYSTEM AT RISK
+🚨 2 critical stop-loss alerts detected
+⚠️ 1 position near stop-loss level
+⚠️ System running in simulation mode (no automatic execution)
+✅ Dashboard operational and responsive
+✅ Market data fetching working correctly
+
+=====================================
+End of monitoring summary
+=====================================

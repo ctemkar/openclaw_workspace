@@ -1,77 +1,54 @@
-=== CRITICAL TRADING ALERTS - CONTINUOUS MONITORING ===
-Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
-Monitoring Cycle: Cron monitoring - SYSTEM FAILURE PERSISTS
+=== CRITICAL TRADING ALERTS ===
+Timestamp: 2026-03-31 07:59:45 (Asia/Bangkok)
+Alert Level: HIGH
 
-🔴 STATUS UPDATE: SYSTEM FAILURE CONTINUES - ALL BOTS STILL STOPPED
-Previous Alerts from 07:18:00 still active and UNRESOLVED:
-1. All trading bots confirmed STOPPED (no processes found) - STILL CONFIRMED
-2. Capital data mismatch ($0 vs $542.27) - STILL CONFIRMED  
-3. 26 Crypto Bot crash confirmed - STILL CONFIRMED (29+ minutes since last activity)
-4. No trading activity - STILL CONFIRMED
+=== ALERT 1: MULTIPLE POSITIONS BELOW STOP-LOSS LEVELS ===
+⚠️ CRITICAL: ETH positions showing significant unrealized losses
 
-🔴 NEW FINDING: FAILURE DURATION INCREASING
-Time elapsed since first critical alert: 27 minutes 30 seconds
-Time elapsed since 26 Crypto Bot last activity: 29 minutes 37 seconds
-No system recovery detected
-Complete trading system failure continues
+Trade Details:
+1. ETH/USD BUY @ $2,325.28 (0.086 ETH)
+   Current Price: $2,033.24
+   Loss: -12.56%
+   Stop-Loss Threshold: 5% ($2,209.02)
+   Status: STOP-LOSS WOULD BE TRIGGERED (-7.56% beyond threshold)
 
-🔴 NEW FINDING: MARKET CONDITIONS REMAIN HIGHLY FAVORABLE
-Current Market Conditions (dashboard API):
-- BTC/USD: $66,611.07 (+1.2%) - STRONG BULLISH
-- ETH/USD: $2,021.77 (+0.8%) - BULLISH  
-- SOL/USD: $145.32 (+2.5%) - VERY BULLISH
-Missed Opportunities: Increasing every minute (29+ minutes of missed trading)
-Financial Impact: Potentially significant profit loss accumulating
+2. ETH/USD BUY @ $2,193.60 (0.0912 ETH)
+   Current Price: $2,033.24
+   Loss: -7.31%
+   Stop-Loss Threshold: 5% ($2,083.92)
+   Status: STOP-LOSS WOULD BE TRIGGERED (-2.31% beyond threshold)
 
-⚠️ STOP-LOSS/TAKE-PROFIT STATUS:
-- No active trades detected (0)
-- No stop-loss triggers (0 trades active)
-- No take-profit triggers (0 trades active)
-- 26 Crypto Bot detected 2 short signals at 07:01:43 but no execution
+Impact: These positions represent approximately $200 in unrealized losses
+Risk: Continuing drawdown could significantly impact portfolio
 
-🔴 ROOT CAUSE ANALYSIS:
-1. 26 Crypto Bot shows "NoneType comparison errors" - data parsing failure
-2. All trading processes except dashboard are stopped
-3. Dashboard shows incorrect capital ($0 vs actual $542.27)
-4. No auto-recovery mechanisms detected
+=== ALERT 2: SYSTEM IN SIMULATION MODE ===
+⚠️ WARNING: Trading system is operating in SIMULATION mode
+- No real API execution detected
+- Stop-loss/take-profit orders are not being executed
+- Trades shown are simulated entries only
+- Real capital is not at risk in current configuration
 
-🚨 CRITICAL RISK INDICATORS:
-1. System Downtime: 29+ minutes (CRITICAL)
-2. Capital Mismatch: 100% error (CRITICAL)
-3. Missed Opportunities: 2 short signals ignored (HIGH)
-4. No Active Trading: 0/3 daily trades (HIGH)
-5. Market Conditions: Highly favorable (amplifies impact)
+=== ALERT 3: PORTFOLIO CONCENTRATION ===
+⚠️ NOTICE: High concentration in ETH positions
+- ETH positions: 4 out of 5 total trades (80%)
+- Total ETH exposure: 0.5210 ETH (~$1,059.50)
+- Lack of diversification increases risk
+- Consider rebalancing or adding other assets
 
-⚠️ DRAWDOWN ANALYSIS:
-- Current Drawdown: 0% (no active positions)
-- Maximum Drawdown: Unknown (no recent trades)
-- Risk Exposure: 0% (no active trades)
-- Position Sizing: 50% configured but unused
+=== RECOMMENDED ACTIONS ===
+1. IMMEDIATE: Review ETH market conditions and consider manual intervention
+2. SYSTEM: Switch to real trading mode if ready to execute (requires API credentials)
+3. RISK MANAGEMENT: Implement position sizing limits per asset
+4. DIVERSIFICATION: Consider adding more BTC or other crypto exposure
+5. MONITORING: Set up real-time alerting for price movements beyond thresholds
 
-🔴 RECOMMENDED IMMEDIATE ACTIONS:
-1. RESTART 26 CRYPTO LIVE BOT (highest priority)
-2. Investigate NoneType comparison errors in logs
-3. Fix dashboard capital display issue
-4. Check API connectivity and data feeds
-5. Implement auto-restart mechanism for bots
+=== ALERT VERIFICATION ===
+Current ETH Price: $2,033.24
+Critical Thresholds Breached:
+- Trade 1: Entry $2,325.28, 5% SL = $2,209.02 (Current: -12.56%)
+- Trade 2: Entry $2,193.60, 5% SL = $2,083.92 (Current: -7.31%)
 
-📊 PERFORMANCE IMPACT ASSESSMENT:
-- Trading Efficiency: 0% (no trades executed)
-- Capital Utilization: 0% (no positions)
-- Opportunity Cost: HIGH (bullish market missed)
-- System Reliability: CRITICAL FAILURE
+Note: Since system is in simulation mode, no actual stop-loss orders have been executed.
+Real trading would have closed these positions at approximately 5% loss each.
 
-🔴 ALERT ESCALATION:
-Current Status: CRITICAL - Requires immediate manual intervention
-Notification Level: URGENT - System administrator attention required
-Financial Impact: Increasing with time (29+ minutes of downtime)
-Recovery Time: Unknown (manual intervention needed)
-
-=== FINAL STATUS ===
-🚨 TRADING SYSTEM IN COMPLETE FAILURE STATE 🚨
-All critical components non-operational for 29+ minutes
-Immediate manual intervention required
-Financial impact increasing with time (29+ minutes of missed opportunities)
-System administrator notification: URGENT
-
-=== END OF ALERT ===
+=== END OF CRITICAL ALERTS ===

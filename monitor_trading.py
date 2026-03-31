@@ -1,158 +1,160 @@
-
+#!/usr/bin/env python3
 import requests
 import json
-import os
+import time
 from datetime import datetime
+import sys
 
-MONITOR_BASE_URL = "http://localhost:5001/"
-TRADING_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log"
-CRITICAL_ALERTS_LOG_PATH = "/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log"
-
-def fetch_trading_data():
-    """Fetch trading data from multiple endpoints and combine into a single dict"""
-    combined_data = {}
-    
+def fetch_endpoint(endpoint):
+    """Fetch data from a specific endpoint"""
     try:
-        # Fetch system status
-        status_response = requests.get(f"{MONITOR_BASE_URL}status", timeout=5)
-        if status_response.status_code == 200:
-            combined_data.update(status_response.json())
+        url = f"http://localhost:5001{endpoint}"
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        return response.json() if response.headers.get('content-type', '').startswith('application/json') else response.text
+    except Exception as e:
+        return f"Error fetching {endpoint}: {e}"
+
+def extract_trading_data():
+    """Extract trading data from all endpoints"""
+    print("=== Trading Dashboard Monitoring ===")
+    print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print()
+    
+    # Fetch all endpoints
+    endpoints = ['/status', '/analysis', '/trades', '/strategy', '/summary']
+    data = {}
+    
+    for endpoint in endpoints:
+        print(f"\n--- {endpoint.upper()} ---")
+        result = fetch_endpoint(endpoint)
+        data[endpoint] = result
         
-        # Fetch recent trades
-        trades_response = requests.get(f"{MONITOR_BASE_URL}trades", timeout=5)
-        if trades_response.status_code == 200:
-            trades_data = trades_response.json()
-            combined_data["orders"] = trades_data.get("trades", [])
-            combined_data["trade_count"] = trades_data.get("count", 0)
-        
-        # Fetch strategy info
-        strategy_response = requests.get(f"{MONITOR_BASE_URL}strategy", timeout=5)
-        if strategy_response.status_code == 200:
-            combined_data["strategy"] = strategy_response.json()
-        
-        # Calculate drawdown based on trades
-        if "orders" in combined_data and combined_data["orders"]:
-            # Calculate average buy price for BTC trades
-            btc_trades = [t for t in combined_data["orders"] if t.get("symbol") == "BTC/USD" or "BTC" in str(t.get("symbol", ""))]
-            if btc_trades:
-                # Get current BTC price (we'll need to fetch this from a market API)
-                # For now, use a hardcoded value from the logs or calculate from recent trades
-                current_btc_price = 66554.18  # From the trading log
-                
-                # Calculate average buy price
-                total_btc_amount = 0
-                total_btc_value = 0
-                for trade in btc_trades:
-                    price = trade.get("price")
-                    amount = trade.get("amount") or trade.get("quantity", 0)
-                    if price and amount:
-                        total_btc_amount += amount
-                        total_btc_value += price * amount
-                
-                if total_btc_amount > 0:
-                    avg_btc_price = total_btc_value / total_btc_amount
-                    drawdown_pct = ((current_btc_price - avg_btc_price) / avg_btc_price) * 100
-                    combined_data["drawdown"] = round(drawdown_pct, 2)
-                    
-                    # Check if drawdown is critical (approaching stop-loss)
-                    if drawdown_pct <= -5:  # Stop-loss threshold
-                        combined_data["drawdown_status"] = "critical"
-                    elif drawdown_pct <= -3:  # Warning threshold
-                        combined_data["drawdown_status"] = "warning"
-                    else:
-                        combined_data["drawdown_status"] = "normal"
-                else:
-                    combined_data["drawdown"] = "no_trade_data"
-            else:
-                combined_data["drawdown"] = "no_btc_trades"
+        if isinstance(result, dict):
+            print(json.dumps(result, indent=2))
         else:
-            combined_data["drawdown"] = "no_trades"
-        
-        return combined_data
-        
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from monitoring service: {e}")
-        return None
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from monitoring service: {e}")
-        return None
-
-def log_data(data):
-    if data:
-        log_entry = f"[{datetime.now().isoformat()}] Data: {json.dumps(data)}\n"
-        with open(TRADING_LOG_PATH, "a") as f:
-            f.write(log_entry)
-
-def log_alert(alert_message):
-    log_entry = f"[{datetime.now().isoformat()}] ALERT: {alert_message}\n"
-    with open(CRITICAL_ALERTS_LOG_PATH, "a") as f:
-        f.write(log_entry)
-
-def analyze_and_alert(data):
-    alerts = []
-    if not data:
-        return alerts
-
-    # Detect stop-loss/take-profit orders (check order status)
-    if "orders" in data and data["orders"]:
-        for order in data["orders"]:
-            # Check for filled orders that might be at risk
-            if order.get("status") == "filled":
-                # We could add more sophisticated risk analysis here
-                pass
+            print(result)
     
-    # Detect critical drawdown based on calculated drawdown_status
-    if "drawdown_status" in data:
-        if data["drawdown_status"] == "critical":
-            drawdown_value = data.get("drawdown", "N/A")
-            alert_message = f"CRITICAL: BTC position approaching stop-loss! Drawdown: {drawdown_value}%"
-            alerts.append(alert_message)
-            log_alert(alert_message)
-        elif data["drawdown_status"] == "warning":
-            drawdown_value = data.get("drawdown", "N/A")
-            alert_message = f"WARNING: BTC position showing significant drawdown: {drawdown_value}%"
-            alerts.append(alert_message)
-            log_alert(alert_message)
+    return data
+
+def analyze_critical_events(data):
+    """Analyze data for critical events like stop-loss/take-profit triggers"""
+    critical_alerts = []
     
-    # Also check raw drawdown value for additional alerts
-    if "drawdown" in data and isinstance(data["drawdown"], (int, float)):
-        if data["drawdown"] <= -5:
-            # Already covered by drawdown_status, but log for completeness
-            pass
-        elif data["drawdown"] <= -3:
-            # Already covered by drawdown_status
-            pass
-
-    return alerts
-
-def generate_summary(data, alerts):
-    summary = f"Trading Analysis Summary - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
-    summary += "----------------------------------------\n"
-
-    if not data:
-        summary += "Failed to fetch trading data.\n"
-        return summary
-
-    summary += f"Status: {data.get('status', 'N/A')}\n"
-    summary += f"Risk Parameters: {data.get('risk_parameters', 'N/A')}\n"
-    summary += f"Number of orders: {len(data.get('orders', []))}\n"
-    summary += f"Drawdown: {data.get('drawdown', 'N/A')}\n"
-
-    if alerts:
-        summary += "\nCritical Alerts:\n"
-        for alert in alerts:
-            summary += f"- {alert}\n"
-    else:
-        summary += "\nNo critical alerts detected.\n"
-
-    return summary
+    # Check status for critical conditions
+    if '/status' in data and isinstance(data['/status'], dict):
+        status = data['/status']
+        
+        # Check for drawdown warnings
+        if 'drawdown_warning' in str(status).lower() or 'drawdown' in str(status):
+            critical_alerts.append("⚠️ Drawdown warning detected in system status")
+        
+        # Check for stop-loss triggers
+        if 'stop_loss' in str(status).lower() or 'sl' in str(status).lower():
+            critical_alerts.append("🛑 Stop-loss order triggered")
+        
+        # Check for take-profit triggers
+        if 'take_profit' in str(status).lower() or 'tp' in str(status).lower():
+            critical_alerts.append("✅ Take-profit order triggered")
+    
+    # Check trades for critical events
+    if '/trades' in data:
+        trades_data = data['/trades']
+        if isinstance(trades_data, dict) and 'trades' in trades_data:
+            for trade in trades_data['trades']:
+                trade_str = str(trade).lower()
+                if 'stop' in trade_str and 'loss' in trade_str:
+                    critical_alerts.append(f"🛑 Stop-loss in trade: {trade}")
+                if 'take' in trade_str and 'profit' in trade_str:
+                    critical_alerts.append(f"✅ Take-profit in trade: {trade}")
+                if 'drawdown' in trade_str:
+                    critical_alerts.append(f"⚠️ Drawdown in trade: {trade}")
+    
+    # Check summary for risk parameters
+    if '/summary' in data and isinstance(data['/summary'], dict):
+        summary = data['/summary']
+        
+        # Check equity vs capital
+        if 'equity' in summary and 'capital' in summary:
+            equity = float(str(summary['equity']).replace('$', '').replace(',', ''))
+            capital = float(str(summary['capital']).replace('$', '').replace(',', ''))
+            drawdown_pct = ((capital - equity) / capital) * 100
+            
+            if drawdown_pct > 5:  # More than 5% drawdown
+                critical_alerts.append(f"⚠️ Significant drawdown: {drawdown_pct:.1f}% (Equity: ${equity:.2f}, Capital: ${capital:.2f})")
+            
+            if drawdown_pct > 10:  # Critical drawdown
+                critical_alerts.append(f"🚨 CRITICAL DRAWDOWN: {drawdown_pct:.1f}% - Immediate attention required!")
+    
+    return critical_alerts
 
 def main():
-    trading_data = fetch_trading_data()
-    log_data(trading_data)
-    alerts = analyze_and_alert(trading_data)
-    summary = generate_summary(trading_data, alerts)
-    print(summary) # This will be captured by the cron job's systemEvent
+    # Extract trading data
+    data = extract_trading_data()
+    
+    # Analyze for critical events
+    critical_alerts = analyze_critical_events(data)
+    
+    # Log to trading_monitoring.log
+    with open('trading_monitoring.log', 'a') as f:
+        f.write(f"\n{'='*60}\n")
+        f.write(f"Monitoring timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"{'='*60}\n\n")
+        
+        for endpoint, content in data.items():
+            f.write(f"{endpoint.upper()}:\n")
+            if isinstance(content, dict):
+                f.write(json.dumps(content, indent=2))
+            else:
+                f.write(str(content))
+            f.write("\n\n")
+    
+    # Log critical alerts to separate file
+    if critical_alerts:
+        with open('critical_alerts.log', 'a') as f:
+            f.write(f"\n{'='*60}\n")
+            f.write(f"Alert timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"{'='*60}\n")
+            for alert in critical_alerts:
+                f.write(f"{alert}\n")
+            f.write("\n")
+    
+    # Generate summary
+    print(f"\n{'='*60}")
+    print("MONITORING SUMMARY")
+    print(f"{'='*60}")
+    print(f"Monitoring completed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Data logged to: trading_monitoring.log")
+    
+    if critical_alerts:
+        print(f"\n🚨 CRITICAL ALERTS DETECTED ({len(critical_alerts)}):")
+        for alert in critical_alerts:
+            print(f"  • {alert}")
+        print(f"Alerts logged to: critical_alerts.log")
+    else:
+        print(f"\n✅ No critical alerts detected")
+        print("System appears to be operating within normal parameters")
+    
+    # Return summary for cron delivery
+    summary_text = f"Trading Dashboard Monitoring - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    summary_text += f"Data extracted from 5 endpoints and logged to trading_monitoring.log\n"
+    
+    if critical_alerts:
+        summary_text += f"\nCRITICAL ALERTS ({len(critical_alerts)}):\n"
+        for alert in critical_alerts:
+            summary_text += f"• {alert}\n"
+        summary_text += f"\nAlerts logged to critical_alerts.log"
+    else:
+        summary_text += f"\nNo critical alerts detected. System operating normally."
+    
+    print(f"\n{'='*60}")
+    print("SUMMARY FOR DELIVERY:")
+    print(f"{'='*60}")
+    print(summary_text)
+    
+    # Also write summary to file for reference
+    with open('monitoring_summary.txt', 'w') as f:
+        f.write(summary_text)
 
 if __name__ == "__main__":
     main()

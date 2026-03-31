@@ -1,0 +1,10 @@
+Trading Dashboard Monitoring - 2026-03-31 07:39:26
+Data extracted from 5 endpoints and logged to trading_monitoring.log
+
+CRITICAL ALERTS (4):
+• 🛑 Stop-loss order triggered
+• ✅ Take-profit order triggered
+• 🛑 Stop-loss in trade: {'price': 2021.51, 'quantity': 0.2474, 'reason': 'Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)', 'side': 'BUY', 'symbol': 'ETH/USD', 'time': '07:24:00'}
+• ✅ Take-profit in trade: {'price': 2021.51, 'quantity': 0.2474, 'reason': 'Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)', 'side': 'BUY', 'symbol': 'ETH/USD', 'time': '07:24:00'}
+
+Alerts logged to critical_alerts.log
