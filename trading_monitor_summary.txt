@@ -1,60 +1,72 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-31 20:22:20 (Asia/Bangkok)
-Cron Job: trading_dashboard_monitor
+TRADING LOG MONITOR SUMMARY
+============================
+Timestamp: 2026-03-31 22:37:18 (UTC+7)
+Monitoring Job ID: 92c7dbaf-d01b-4244-a01f-9181c4084dc4
 
 SYSTEM STATUS:
-✅ Dashboard accessible on port 5001
-✅ Trading system running
-✅ Last analysis: 2026-03-31T20:18:54
-✅ Analysis scheduled: hourly
+✅ Dashboard accessible: http://localhost:5001/
+✅ System running: Yes
+✅ Last analysis: 2026-03-31T22:19:09 (18 minutes ago)
+✅ Analysis schedule: Hourly
+✅ Port: 5001
 
-CAPITAL PERFORMANCE:
-Initial Capital: $250.00
-Current Capital: $534.19
-Growth: +$284.19 (+113.7%) 🟢 EXCELLENT
-
-TRADING ACTIVITY:
-Recent Trades: 5 trades executed
-Open Positions: 8 Binance SHORT positions
-Last Trade: ETH/USD BUY @ 13:39:49
-
-P&L STATUS:
-Binance Unrealized Loss: -$2.44 (8 positions)
-Binance Realized P&L: $0.00
-Gemini P&L: $0.00 (0 positions)
-Total Unrealized: -$2.44
+CAPITAL & PERFORMANCE:
+- Current Capital: $533.60
+- Initial Capital: $250.00
+- Total Return: +113.44% ($283.60 profit)
+- Current PnL: -$3.38 (unrealized loss)
+- Realized PnL: $0.00
+- Open Positions: 8 (all Binance shorts)
+- Drawdown: 0.63% of capital
 
 RISK PARAMETERS:
-Stop Loss: 5.0% (no triggers)
-Take Profit: 10.0% (no triggers)
-Max Trades/Day: 999 (UNLIMITED - ⚠️ HIGH RISK)
-Position Size: 20% of capital
+- Stop-loss: 5.0% (ALL trades)
+- Take-profit: 10.0% (ALL trades)
+- Max trades/day: 999 (UNLIMITED)
+- Position size: 20% of capital per trade
 
-ALERTS & WARNINGS:
-1. 🟡 Binance showing -$2.44 unrealized loss (monitor closely)
-2. 🟡 Unlimited trading setting (999 trades/day - review recommended)
-3. 🟡 Capital discrepancy: $534.19 vs $530.95 in logs (verify)
-4. 🟢 No stop-loss or take-profit triggers
-5. 🟢 Significant capital growth (+113.7%)
+TRADING ACTIVITY:
+- Recent trades: 5
+- All trades: BUY positions
+- Assets: ETH/USD (4 trades), BTC/USD (1 trade)
+- Last trade: ETH/USD BUY at $2325.28 (13:39:49)
 
-MARKET CONDITIONS:
-Trading Pairs: 10 active pairs
-Market Sentiment: NEUTRAL
-Last Signal: BUY BTC/USD detected
+MARKET ANALYSIS:
+- BTC/USD: $67,095.50
+- ETH/USD: $2,070.76
+- Market sentiment: NEUTRAL
+- Trading signal: BUY
+- Signal reason: Price within 1% of support
 
-RECOMMENDED ACTIONS:
-1. Monitor Binance P&L for -$2.44 loss movement
-2. Review and potentially limit daily trades from 999 to 5-10
-3. Verify capital calculation consistency
-4. Continue successful strategy with regular monitoring
+ALERT STATUS:
+🚫 NO CRITICAL ALERTS
+✅ No stop-loss triggers (PnL at 12.7% of threshold)
+✅ No take-profit triggers (PnL negative)
+✅ No critical drawdown (0.63% vs 5.0% threshold)
+✅ Capital well above initial ($533.60 vs $250.00)
 
-NEXT CHECK: ~21:22 (hourly schedule)
+TREND ANALYSIS:
+⚠️ PnL deterioration: -3.7% (from -$3.26 to -$3.38)
+⚠️ Drawdown increase: +0.02% (from 0.61% to 0.63%)
+⚠️ Capital decline: -0.04% (from $533.82 to $533.60)
+⚠️ Previous recovery momentum has reversed
 
-OVERALL ASSESSMENT: GOOD (7/10)
-- Capital growth excellent (+113.7%)
-- System operational and accessible
-- Minor concerns need monitoring
-- No critical stop-loss triggers
+SYSTEM HEALTH:
+✅ All endpoints responsive
+✅ Risk parameters properly configured
+✅ No API connectivity issues
+✅ Trading pairs: 10 active pairs
+✅ Market data fetching operational
 
-=====================================
+RECOMMENDATIONS:
+1. Continue normal monitoring
+2. Watch PnL deterioration trend
+3. Monitor capital stabilization
+4. Next analysis scheduled in ~42 minutes
+5. No immediate intervention required
+
+LOGS UPDATED:
+- Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+NEXT CHECK: Approximately 42 minutes from now (23:19 UTC+7)

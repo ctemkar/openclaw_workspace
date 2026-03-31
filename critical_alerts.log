@@ -1,38 +1,32 @@
 === CRITICAL ALERTS LOG ===
-Timestamp: 2026-03-31 21:57:05 (UTC+7)
+Timestamp: 2026-03-31 22:57:14 (UTC+7)
 
-=== ALERT STATUS ===
-NO CRITICAL ALERTS DETECTED
+ALERT STATUS: NO CRITICAL ALERTS DETECTED
 
-=== ANALYSIS ===
-1. Total unrealized PNL: -$1.66 (-0.31% of $535.84 capital)
-   - This is well within acceptable range
-   - Far from 5% stop-loss threshold ($26.79)
-   - Improvement from previous -$2.49 PNL
+SYSTEM STATUS CHECK:
+✅ Dashboard accessible: Yes
+✅ System running: Yes
+✅ Capital available: $533.85
+✅ Risk parameters configured: Yes
 
-2. Open positions: 8
-   - All positions appear to be within normal trading parameters
-   - No immediate stop-loss triggers detected
-   - No take-profit triggers detected
-   - Positions showing slight recovery (PNL improved by $0.83)
+RISK PARAMETER CHECKS:
+✅ Stop-loss (5%): NOT TRIGGERED (Current PnL: -$2.49, Threshold: -$26.69)
+✅ Take-profit (10%): NOT TRIGGERED (Current PnL: -$2.49, Threshold: +$53.38)
+✅ Critical drawdown (5%): NOT TRIGGERED (Current: 0.55%)
+✅ Position limits: Within limits (8 open positions)
+✅ Capital drawdown: Within limits (0.55% of capital)
 
-3. Risk parameters intact:
-   - Stop-loss: 5.0% (active)
-   - Take-profit: 10.0% (active)
-   - Capital management: Conservative position sizing
-   - Capital increased slightly from $535.19 to $535.84
+PERFORMANCE ALERTS:
+⚠️ WARNING: Unrealized losses present (-$2.49)
+⚠️ WARNING: Heavy position concentration in ETH/USD (80% of recent trades)
+⚠️ WARNING: 8 open short positions on Binance exposed to market volatility
 
-4. System health:
-   - Dashboard accessible
-   - Real-time monitoring active
-   - Trading system operational
-   - Last analysis: 38 minutes ago (within hourly schedule)
-   - 5 recent trades recorded
+RECOMMENDATIONS:
+- Continue normal monitoring
+- Watch for continuation of PnL improvement trend
+- Monitor capital for continued stabilization
+- No immediate intervention required
 
-=== RECOMMENDATIONS ===
-- Continue monitoring positions
-- Watch for market volatility changes
-- Next analysis scheduled hourly
-- Current drawdown: -0.31% (acceptable, improving)
-- System performing within expected parameters
-================================
+NEXT CHECK: Monitor for any changes in PnL exceeding 2% of capital or approaching stop-loss/take-profit thresholds.
+
+=== END OF CRITICAL ALERTS LOG ===

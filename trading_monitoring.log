@@ -1,40 +1,89 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 21:58:30 (UTC+7)
-Dashboard Status: ACCESSIBLE
-System Status: running
-Capital: $535.84
-Last Analysis: 2026-03-31T21:19:01.131169
+Timestamp: 2026-03-31 22:57:14 (UTC+7)
+Dashboard URL: http://localhost:5001/
 
-=== PNL SUMMARY ===
-Total PNL: -$2.16 (unrealized)
-Open Positions: 8
-Realized PNL: $0.00
-Unrealized PNL: -$2.16
-PNL Percentage: -0.40%
+SYSTEM STATUS:
+- Status: running
+- Capital: $533.85
+- Last Analysis: 2026-03-31T22:41:37.577735
+- Analysis Scheduled: hourly
+- Port: 5001
 
-Binance PNL: -$2.16 (8 trades, 8 open positions)
-Gemini PNL: $0.00 (0 trades, 0 open positions)
+RISK PARAMETERS:
+- Stop-loss: 5% (ALL trades)
+- Take-profit: 10% (ALL trades)
+- Max trades/day: 999 (effectively unlimited)
+- Position size: 20% of capital per trade
 
-=== RISK PARAMETERS ===
-Stop-loss: 5.0% ($26.79 threshold)
-Take-profit: 10.0% ($53.58 threshold)
-Max trades per day: 999 (effectively unlimited)
-Current PNL vs Stop-loss: 8.0% of threshold
-Current PNL vs Take-profit: 4.0% of threshold
+PERFORMANCE METRICS:
+- Total PnL: -$2.494540618000836 (unrealized loss)
+- Open Positions: 8 (all on Binance)
+- Realized PnL: $0.0
+- Unrealized PnL: -$2.494540618000836
+- Total Trades: 8
 
-=== RECENT TRADES (Last 5) ===
-1. ETH/USD BUY @ $2325.28 (0.086 qty) - Near support level: $2308.08
-2. ETH/USD BUY @ $2193.60 (0.0912 qty) - Near support level: $2167.99
-3. BTC/USD BUY @ $67247.51 (0.002974 qty) - Near support level: $67110.20
-4. ETH/USD BUY @ $2052.38 (0.0974 qty) - Near support level: $2033.94
-5. ETH/USD BUY @ $2021.51 (0.2474 qty) - Conservative entry with 1:2 risk/reward
+BREAKDOWN BY EXCHANGE:
+- Binance:
+  * Open Positions: 8
+  * Realized: $0.0
+  * Unrealized: -$2.494540618000836
+  * Total: -$2.494540618000836
+  * Trades: 8
+- Gemini:
+  * Open Positions: 0
+  * Realized: $0.0
+  * Unrealized: $0.0
+  * Total: $0.0
+  * Trades: 0
 
-=== TRADING PAIRS MONITORED ===
-BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, MATIC/USD, LINK/USD
+TRADING PAIRS MONITORED:
+- BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, MATIC/USD, LINK/USD
 
-=== SYSTEM HEALTH ===
-Analysis scheduled: hourly
-Port: 5001
-Execution Mode: REAL TRADING - LIVE
-Last Update: 2026-03-31 21:58:30
-========================================
+RECENT TRADES (5 total):
+1. ETH/USD BUY at $2325.28 (13:39:49)
+   Quantity: 0.086
+   Reason: Near support level: $2308.08 (current: $2325.28)
+
+2. ETH/USD BUY at $2193.60 (00:33:02)
+   Quantity: 0.0912
+   Reason: Near support level: $2167.99 (current: $2193.60)
+
+3. BTC/USD BUY at $67247.51 (21:29:41)
+   Quantity: 0.002974
+   Reason: Near support level: $67110.20 (current: $67247.51)
+
+4. ETH/USD BUY at $2052.38 (21:29:42)
+   Quantity: 0.0974
+   Reason: Near support level: $2033.94 (current: $2052.38)
+
+5. ETH/USD BUY at $2021.51 (07:24:00)
+   Quantity: 0.2474
+   Reason: Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)
+
+SUMMARY FROM DASHBOARD:
+- Current Capital: $533.75
+- Total PnL: -$2.92 (unrealized loss)
+- Drawdown: 0.55% of capital
+- Overall Return: +113.50% from initial $250 capital
+- Recent Changes: PnL improved by +$0.46 (+13.6%), Capital increased by +$0.15 (+0.03%)
+- Position Concentration: 80% ETH/USD, 20% BTC/USD
+- Market Sentiment: NEUTRAL
+- Trading Signal: BUY (Price within 1% of support)
+
+RISK ASSESSMENT:
+- Stop-loss Threshold: 5.0% ($26.69) - Current PnL at 10.9% of threshold
+- Take-profit Threshold: 10.0% ($53.38) - No profit to take
+- Critical Drawdown: 5.0% - Current at 0.55% (safe)
+
+ALERT STATUS:
+- No stop-loss triggers detected
+- No take-profit triggers detected
+- No critical drawdown detected
+- System operating within acceptable risk parameters
+
+WATCH ITEMS:
+- 8 open short positions exposed to market volatility
+- Heavy concentration in ETH/USD (80% of recent trades)
+- Unrealized losses still present (-$2.92)
+
+=== END OF MONITORING LOG ===

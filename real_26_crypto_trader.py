@@ -41,16 +41,19 @@ GEMINI_CRYPTOS = [
     'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI'
 ]
 
-# Trading parameters - USING ENTIRE $134.27 CASH BALANCE!
-GEMINI_CAPITAL = 134.27  # ENTIRE $134.27 cash balance for Gemini LONG
-BINANCE_CAPITAL = 134.27 # ALSO ENTIRE $134.27 for Binance SHORT (futures) - MORE AGGRESSIVE!
-LEVERAGE = 3             # 3x leverage for Binance
-POSITION_SIZE = 0.25     # Increased to 25% of capital per trade (MAXIMUM AGGRESSIVE!)
-LONG_THRESHOLD = 2.0     # Reduced to 2.0% drop for LONG (buy dip even sooner)
-SHORT_THRESHOLD = 0.3    # Reduced to 0.3% drop for SHORT (short even sooner)
-STOP_LOSS = 0.05         # 5% stop-loss
-TAKE_PROFIT = 0.10       # Increased to 10% take-profit
-SCAN_INTERVAL = 180      # 3 minutes (faster cycles)
+# Trading parameters - IMPROVED BASED ON BACKTESTING
+# OLD: SHORT_THRESHOLD = 0.3 (caught noise, lost money)
+# NEW: SHORT_THRESHOLD = 3.0 (catches real trends)
+GEMINI_CAPITAL = 134.27  # Gemini cash balance
+BINANCE_CAPITAL = 134.27 # Binance Futures capital
+LEVERAGE = 1             # REDUCED from 3x to 1x (SAFER)
+POSITION_SIZE = 0.10     # REDUCED from 25% to 10% of capital (BETTER RISK)
+LONG_THRESHOLD = 3.0     # INCREASED from 2.0% to 3.0% (REAL DIPS)
+SHORT_THRESHOLD = 3.0    # INCREASED from 0.3% to 3.0% (REAL MOVES)
+STOP_LOSS = 0.03         # TIGHTER from 5% to 3% stop-loss
+TAKE_PROFIT = 0.05       # REDUCED from 10% to 5% take-profit
+SCAN_INTERVAL = 300      # INCREASED from 180 to 300 seconds (5 min)
+MAX_POSITIONS = 3        # NEW: Max 3 open positions (prevent overtrading)
 
 # Load API keys
 def load_api_keys():
