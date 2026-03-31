@@ -1,75 +1,65 @@
 TRADING DASHBOARD MONITORING SUMMARY
-======================================
-Timestamp: 2026-03-31 06:29:05 (Asia/Bangkok)
-Monitoring Interval: 06:26 - 06:29
-
-EXECUTIVE SUMMARY:
-------------------
-⚠️  SYSTEM STATUS: OPERATIONAL WITH CRITICAL ALERTS
-🔴  RISK LEVEL: HIGH
-💰  CAPITAL: $250.00 (simulation mode)
-📊  POSITIONS: 4 total (2 critical, 2 normal)
-
-CRITICAL FINDINGS:
-------------------
-1. **STOP-LOSS TRIGGERS**: 2 ETH positions have exceeded 5% stop-loss
-   - ETH @ $2,325.28: -12.98% (beyond stop by -7.98%)
-   - ETH @ $2,193.60: -7.75% (beyond stop by -2.75%)
-
-2. **CAPITAL UTILIZATION**: 320% ($799.93 used vs $250.00 capital)
-   - Excessive position sizing
-   - Risk of over-leverage
-
-3. **TRADE LIMIT VIOLATION**: 4 historical trades vs 2 daily limit
-   - Exceeded by 2 trades
-   - Potential over-trading
-
-MARKET CONDITIONS:
-------------------
-- BTC/USD: $66,645.82 (+0.06% from previous)
-- ETH/USD: $2,023.54 (+0.08% from previous)
-- Market Sentiment: NEUTRAL
-- Support Levels: BTC $66,647.72, ETH $2,023.29
-
-TRADING RECOMMENDATION:
------------------------
-Current Signal: BUY (BTC/USD)
-Recommended Action: BTC BUY @ $66,645.82
-Position Size: 0.001876 ($125.00)
-Stop Loss: $63,313.53 (-5.0%)
-Take Profit: $73,310.40 (+10.0%)
+=====================================
+Timestamp: 2026-03-31 07:00:45 (Asia/Bangkok)
+Monitoring Job: d12f2d3d-5055-4ff2-a4c7-049ab58a43c4
 
 SYSTEM STATUS:
---------------
-- ✅ Dashboard: Accessible at http://localhost:5001/
-- ✅ Analysis: Running hourly (last: 06:28:45)
-- ✅ Endpoints: All functional (status, trades, strategy, summary)
-- ⚠️  Mode: SIMULATION (no real trades executed)
-- ⚠️  Risk Management: Needs review and adjustment
+✅ Dashboard operational at http://localhost:5001/
+✅ Last analysis: 2026-03-31T06:43:27.231752 (17 minutes ago)
+✅ Capital: $250.00
+✅ Risk parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 2
+✅ Trading pairs: BTC/USD, ETH/USD
+✅ Strategy: Gemini_Longs_Binance_Shorts
+✅ Execution mode: SIMULATION
 
-IMMEDIATE ACTIONS REQUIRED:
----------------------------
-1. Address 2 critical stop-loss triggers on ETH positions
-2. Review and fix capital utilization rules (currently 320%)
-3. Enforce daily trade limits (2 trades/day)
-4. Consider strategy adjustment given current market conditions
+MARKET DATA:
+• BTC/USD: $66,703.00 (from CoinGecko API)
+• ETH/USD: $2,023.93 (from CoinGecko API)
+• Market sentiment: BULLISH (from dashboard)
+• Trading signal: BUY (from dashboard)
 
-NEXT MONITORING:
-----------------
-Scheduled: ~07:28 (59 minutes from now)
-Will check: Price movements, new alerts, system status
+PORTFOLIO ANALYSIS:
+• Total trades: 4
+• Total investment: $799.93
+• Current value: $754.13
+• Portfolio P&L: -5.72% (-$45.80)
+• Drawdown status: Acceptable (5.72% < 10% critical threshold)
 
-FILES UPDATED:
---------------
-1. trading_monitoring.log - Full monitoring details
-2. critical_alerts.log - Critical alerts and recommendations
-3. trading_monitoring_summary.txt - This executive summary
+TRADE PERFORMANCE:
+1. ETH/USD - BUY at $2,325.28: -12.96% (STOP-LOSS TRIGGERED)
+2. ETH/USD - BUY at $2,193.60: -7.74% (STOP-LOSS TRIGGERED)
+3. BTC/USD - BUY at $67,247.51: -0.81% (Active)
+4. ETH/USD - BUY at $2,052.38: -1.39% (Active)
 
-ALERT STATUS:
--------------
-🔴 CRITICAL: 2 alerts (stop-loss triggers)
-⚠️  WARNING: 2 alerts (capital utilization, trade limits)
-✅ NORMAL: System operation, analysis schedule
+CRITICAL ALERTS:
+🔴 2 out of 4 trades (50%) have triggered stop-losses
+🔴 All 3 ETH positions are in loss (100% of ETH trades)
+⚠️  No profitable trades (0 out of 4 reached take-profit)
+⚠️  Strategy conflict: Bullish sentiment vs bearish price action
+⚠️  BTC position approaching stop-loss (-0.81%, stop-loss at -5.0%)
 
-END OF SUMMARY
-==============
+RISK ASSESSMENT:
+• Risk level: MEDIUM-HIGH
+• Stop-loss triggers: 2/4 trades
+• Portfolio concentration: 75% in ETH (all losing)
+• Drawdown: -5.72% (acceptable)
+• System mode: SIMULATION (no real execution)
+
+RECOMMENDED ACTIONS:
+1. Review ETH market conditions for bearish pressure
+2. Check stop-loss execution (system is in SIMULATION mode)
+3. Consider tightening stop-loss on BTC position
+4. Review trading strategy given market conflict
+5. Consider reducing ETH exposure or implementing hedging
+6. Verify dashboard sentiment calculation logic
+7. Monitor BTC position closely
+8. Consider pausing new BUY signals until market confirms direction
+
+NEXT STEPS:
+• Next monitoring check: Hourly
+• Next dashboard analysis: Hourly
+• Critical alerts logged to: critical_alerts.log
+• Monitoring logs saved to: trading_monitoring.log
+
+FINAL STATUS: SYSTEM OPERATIONAL WITH MEDIUM-HIGH RISK ALERTS
+==============================================================

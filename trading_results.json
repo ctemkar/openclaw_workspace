@@ -1,34 +1,41 @@
 {
-  "timestamp": "2026-03-30T18:36:31.038785",
+  "timestamp": "2026-03-31T07:21:12.912311",
   "capital": 1000.0,
-  "available_capital": 1000.0,
   "trades_today": 0,
   "max_trades_per_day": 2,
-  "open_positions": 0,
-  "symbols_analyzed": [
-    {
-      "symbol": "BTCUSD",
-      "price": 64496.986742624526,
-      "bid": 64432.4897558819,
-      "ask": 64561.483729367144,
-      "volume": 2314482.797602812,
-      "sentiment": "neutral",
-      "should_trade": false,
-      "action": "No clear trading signal",
-      "quantity": 0.0
+  "market_data": {
+    "BTCUSD": {
+      "price": 67271.91,
+      "24h_change": 0.0,
+      "volume": 63882.0784551,
+      "high": 0.0,
+      "low": 0.0
     },
-    {
-      "symbol": "ETHUSD",
-      "price": 3495.430451259331,
-      "bid": 3491.935020808072,
-      "ask": 3498.92588171059,
-      "volume": 1086390.6802280287,
-      "sentiment": "neutral",
-      "should_trade": false,
-      "action": "No clear trading signal",
-      "quantity": 0.0
+    "ETHUSD": {
+      "price": 2019.02,
+      "24h_change": 0.0,
+      "volume": 2114.81038488,
+      "high": 0.0,
+      "low": 0.0
     }
-  ],
-  "trades_executed": [],
-  "closed_trades": []
+  },
+  "analysis": {
+    "sentiment": {
+      "btc_trend": "neutral",
+      "eth_trend": "neutral",
+      "overall_sentiment": "neutral",
+      "recommendation": "hold"
+    },
+    "BTCUSD": {
+      "support": 0.0,
+      "resistance": 0.0,
+      "current_position": "middle"
+    },
+    "ETHUSD": {
+      "support": 0.0,
+      "resistance": 0.0,
+      "current_position": "middle"
+    }
+  },
+  "trades_executed": []
 }

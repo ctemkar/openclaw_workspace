@@ -30,5 +30,13 @@
     "quantity": 0.0974,
     "time": "21:29:42",
     "reason": "Near support level: $2033.94 (current: $2052.38)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2021.51,
+    "quantity": 0.2474,
+    "time": "07:24:00",
+    "reason": "Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)"
   }
 ]

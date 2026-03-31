@@ -1,27 +1,57 @@
 TRADING DASHBOARD MONITORING SUMMARY
 =====================================
-Execution Time: 2026-03-31 01:28:15 (Asia/Bangkok)
+Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
 
-DASHBOARD STATUS:
-✓ System running on http://localhost:5001/
-✓ Last analysis: 2026-03-31T00:48:41
-✓ Capital: $250 allocated
-✓ Risk parameters: 5% stop-loss, 10% take-profit
+SYSTEM STATUS: CRITICAL FAILURE
+- Dashboard: Running on port 5002 (PID: 78515)
+- All trading bots: STOPPED (no processes found)
+- 26 Crypto Bot: Last activity 07:01:43 (29+ minutes ago)
 
-CRITICAL FINDINGS:
-❌ MULTIPLE STOP-LOSS TRIGGERS DETECTED (4 positions)
-❌ EXTREME DRAWDOWN: 97.28% (CRITICAL)
-❌ Positions showing significant losses
+CAPITAL & RISK:
+- Dashboard shows: $0.00 (ERROR)
+- Actual balance: $542.27 USD (last update: 07:02:37)
+- Risk parameters: Stop-loss 5.0%, Take-profit 10.0%
+- Position size: 50%, Max trades/day: 2
 
-ALERTS GENERATED:
-✓ trading_monitoring.log updated with full analysis
-✓ critical_alerts.log appended with urgent warnings
+MARKET CONDITIONS:
+- BTC/USD: $66,611.07 (+1.2%) - BULLISH
+- ETH/USD: $2,021.77 (+0.8%) - BULLISH
+- SOL/USD: $145.32 (+2.5%) - VERY BULLISH
+- Market sentiment: Strongly Bullish
+
+TRADING ACTIVITY:
+- Trades today: 0/3 maximum (0%)
+- Active trades: 0
+- Last signals: 2 short signals detected (DOT/USDT, COMP/USDT) at 07:01:43
+- No execution due to bot stoppage
+
+STOP-LOSS/TAKE-PROFIT STATUS:
+- No triggers (0 active trades)
+- No drawdown indicators (0% drawdown)
+- Risk exposure: 0%
+
+CRITICAL ISSUES:
+1. All trading bots stopped for 29+ minutes
+2. Capital data mismatch ($0 vs $542.27)
+3. 26 Crypto Bot crashed with NoneType comparison errors
+4. Missed trading opportunities in bullish market
+
+ROOT CAUSE:
+- 26 Crypto Bot data parsing errors (NoneType comparisons)
+- No auto-recovery mechanisms
+- Possible API connectivity issues
 
 RECOMMENDED ACTIONS:
-1. Immediate review of stop-loss execution
-2. Manual position check recommended
-3. Strategy parameter review needed
-4. Market condition assessment required
+1. IMMEDIATE: Restart 26 Crypto Live Bot
+2. Fix dashboard capital display
+3. Investigate NoneType comparison errors
+4. Check API connectivity
+5. Implement auto-restart for bots
 
-NEXT SCHEDULED CHECK: Based on cron schedule
-=============================================
+FINANCIAL IMPACT:
+- Missed opportunities: 29+ minutes in bullish market
+- Capital utilization: 0%
+- Trading efficiency: 0%
+- System reliability: CRITICAL
+
+ALERT STATUS: CRITICAL - Requires immediate manual intervention

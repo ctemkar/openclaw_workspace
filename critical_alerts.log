@@ -1,82 +1,77 @@
-=== CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 06:57:45 (Asia/Bangkok)
+=== CRITICAL TRADING ALERTS - CONTINUOUS MONITORING ===
+Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
+Monitoring Cycle: Cron monitoring - SYSTEM FAILURE PERSISTS
 
-🔴 ALERT 1: STOP-LOSS TRIGGERED
-Symbol: ETH/USD
-Entry Price: $2,325.28
-Current Price: $2,024.55
-Loss Percentage: -12.94%
-Loss Amount: -$25.87
-Stop-loss Level: 5.0% ($2,209.02)
-Status: STOP-LOSS EXCEEDED BY 7.94%
-Time Since Entry: Unknown (check trade timestamp)
-Action Required: Review trade execution and consider position adjustment
+🔴 STATUS UPDATE: SYSTEM FAILURE CONTINUES - ALL BOTS STILL STOPPED
+Previous Alerts from 07:18:00 still active and UNRESOLVED:
+1. All trading bots confirmed STOPPED (no processes found) - STILL CONFIRMED
+2. Capital data mismatch ($0 vs $542.27) - STILL CONFIRMED  
+3. 26 Crypto Bot crash confirmed - STILL CONFIRMED (29+ minutes since last activity)
+4. No trading activity - STILL CONFIRMED
 
-🔴 ALERT 2: STOP-LOSS TRIGGERED
-Symbol: ETH/USD
-Entry Price: $2,193.60
-Current Price: $2,024.55
-Loss Percentage: -7.71%
-Loss Amount: -$15.42
-Stop-loss Level: 5.0% ($2,083.92)
-Status: STOP-LOSS EXCEEDED BY 2.71%
-Time Since Entry: Unknown (check trade timestamp)
-Action Required: Review trade execution and consider position adjustment
+🔴 NEW FINDING: FAILURE DURATION INCREASING
+Time elapsed since first critical alert: 27 minutes 30 seconds
+Time elapsed since 26 Crypto Bot last activity: 29 minutes 37 seconds
+No system recovery detected
+Complete trading system failure continues
 
-⚠️ WARNING: PORTFOLIO CONCENTRATION RISK
-Issue: All 3 ETH positions are in loss (100% of ETH trades)
-Total ETH Loss: -$44.01 across 3 positions
-ETH represents 75% of total trades (3 out of 4)
+🔴 NEW FINDING: MARKET CONDITIONS REMAIN HIGHLY FAVORABLE
+Current Market Conditions (dashboard API):
+- BTC/USD: $66,611.07 (+1.2%) - STRONG BULLISH
+- ETH/USD: $2,021.77 (+0.8%) - BULLISH  
+- SOL/USD: $145.32 (+2.5%) - VERY BULLISH
+Missed Opportunities: Increasing every minute (29+ minutes of missed trading)
+Financial Impact: Potentially significant profit loss accumulating
 
-⚠️ WARNING: STRATEGY CONFLICT
-Market Sentiment: BULLISH (from dashboard)
-Actual Price Action: BEARISH for ETH (all positions down)
-Trading Signal: BUY (conflict with current losses)
-Portfolio Performance: -5.71% overall
+⚠️ STOP-LOSS/TAKE-PROFIT STATUS:
+- No active trades detected (0)
+- No stop-loss triggers (0 trades active)
+- No take-profit triggers (0 trades active)
+- 26 Crypto Bot detected 2 short signals at 07:01:43 but no execution
 
-⚠️ WARNING: NO PROFITABLE TRADES
-Status: 0 out of 4 trades have reached take-profit targets
-All trades are currently in loss
-Maximum loss: -12.94% (ETH/USD)
-Minimum loss: -0.82% (BTC/USD)
+🔴 ROOT CAUSE ANALYSIS:
+1. 26 Crypto Bot shows "NoneType comparison errors" - data parsing failure
+2. All trading processes except dashboard are stopped
+3. Dashboard shows incorrect capital ($0 vs actual $542.27)
+4. No auto-recovery mechanisms detected
 
-⚠️ WARNING: BTC POSITION APPROACHING STOP-LOSS
-Symbol: BTC/USD
-Entry Price: $67,247.51
-Current Price: $66,695.00
-Current Loss: -0.82%
-Stop-loss Level: -5.0% ($63,885.13)
-Distance to Stop-loss: 4.18% remaining
-Risk: Medium (monitor closely)
+🚨 CRITICAL RISK INDICATORS:
+1. System Downtime: 29+ minutes (CRITICAL)
+2. Capital Mismatch: 100% error (CRITICAL)
+3. Missed Opportunities: 2 short signals ignored (HIGH)
+4. No Active Trading: 0/3 daily trades (HIGH)
+5. Market Conditions: Highly favorable (amplifies impact)
 
-=== MARKET CONTEXT ===
-Current ETH Price: $2,024.55
-Current BTC Price: $66,695.00
-Market Sentiment: BULLISH (conflict with price action)
-Trading Signal: BUY (conflict with current losses)
-Portfolio Drawdown: -5.71% (Acceptable < 10%)
+⚠️ DRAWDOWN ANALYSIS:
+- Current Drawdown: 0% (no active positions)
+- Maximum Drawdown: Unknown (no recent trades)
+- Risk Exposure: 0% (no active trades)
+- Position Sizing: 50% configured but unused
 
-=== RISK ASSESSMENT ===
-Total Portfolio Loss: -5.71%
-Drawdown Status: Acceptable (below 10% critical threshold)
-Number of Triggered Stop-losses: 2 out of 4 trades (50%)
-Most Affected Asset: ETH (all 3 positions in loss)
-System Mode: SIMULATION (no real trades executed)
-Risk Level: MEDIUM (monitor closely)
+🔴 RECOMMENDED IMMEDIATE ACTIONS:
+1. RESTART 26 CRYPTO LIVE BOT (highest priority)
+2. Investigate NoneType comparison errors in logs
+3. Fix dashboard capital display issue
+4. Check API connectivity and data feeds
+5. Implement auto-restart mechanism for bots
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Review ETH market conditions and news for bearish pressure
-2. Check if stop-loss orders would have been executed (system is in SIMULATION mode)
-3. Consider tightening stop-loss on remaining BTC position (currently -0.82%)
-4. Review trading strategy given conflict between bullish sentiment and bearish price action
-5. Consider reducing ETH exposure or implementing hedging strategy
-6. Verify dashboard analysis logic for market sentiment calculation
-7. Monitor BTC position closely as it approaches stop-loss threshold
-8. Consider pausing new BUY signals until market direction confirms bullish sentiment
+📊 PERFORMANCE IMPACT ASSESSMENT:
+- Trading Efficiency: 0% (no trades executed)
+- Capital Utilization: 0% (no positions)
+- Opportunity Cost: HIGH (bullish market missed)
+- System Reliability: CRITICAL FAILURE
 
-=== ALERT GENERATED BY ===
-Trading Dashboard Monitor Cron Job
-Job ID: trading_dashboard_monitor
-Next Check: Hourly
+🔴 ALERT ESCALATION:
+Current Status: CRITICAL - Requires immediate manual intervention
+Notification Level: URGENT - System administrator attention required
+Financial Impact: Increasing with time (29+ minutes of downtime)
+Recovery Time: Unknown (manual intervention needed)
 
-=== END OF CRITICAL ALERTS ===
+=== FINAL STATUS ===
+🚨 TRADING SYSTEM IN COMPLETE FAILURE STATE 🚨
+All critical components non-operational for 29+ minutes
+Immediate manual intervention required
+Financial impact increasing with time (29+ minutes of missed opportunities)
+System administrator notification: URGENT
+
+=== END OF ALERT ===

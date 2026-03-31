@@ -1,67 +1,91 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 06:57:45 (Asia/Bangkok)
-Dashboard Status: Running
-Last Analysis: 2026-03-31T06:43:27.231752
-Capital: $250.00
-Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 2
+Timestamp: 2026-03-31 07:31:20 (Asia/Bangkok)
+Dashboard Status: ✅ Running on port 5002 (PID: 78515)
+Last Dashboard Update: 2026-03-31 07:30:52
+Capital: $0.00 (dashboard shows 0, but real_trading.log shows $542.27 - CRITICAL DISCREPANCY)
+Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 2, Position size: 50%
 
-=== CURRENT MARKET DATA ===
-BTC/USD: $66,695.00 (from CoinGecko)
-ETH/USD: $2,024.55 (from CoinGecko)
-Market Sentiment: BULLISH (from dashboard)
-Trading Signal: BUY (from dashboard)
+=== CURRENT MARKET DATA (FROM DASHBOARD API) ===
+BTC/USD: $66,611.07 (+1.2%) - BULLISH
+ETH/USD: $2,021.77 (+0.8%) - BULLISH
+SOL/USD: $145.32 (+2.5%) - VERY BULLISH
+Market Sentiment: Strongly Bullish (all pairs showing gains)
+Trading Signal: 26 Crypto Bot detected 2 short signals (DOT/USDT, COMP/USDT) at 07:01:43
 
-=== ACTIVE TRADES (4 total) ===
-1. ETH/USD - BUY at $2,325.28 (0.086 qty) | Value: $199.97
-   Current: $2,024.55 | P&L: -12.94% (-$25.87)
-   Stop-loss: $2,209.02 (5.0%) | 🔴 TRIGGERED
-   Take-profit: $2,557.81 (10.0%)
-
-2. ETH/USD - BUY at $2,193.60 (0.0912 qty) | Value: $200.06
-   Current: $2,024.55 | P&L: -7.71% (-$15.42)
-   Stop-loss: $2,083.92 (5.0%) | 🔴 TRIGGERED
-   Take-profit: $2,412.96 (10.0%)
-
-3. BTC/USD - BUY at $67,247.51 (0.002974 qty) | Value: $199.99
-   Current: $66,695.00 | P&L: -0.82% (-$1.64)
-   Stop-loss: $63,885.13 (5.0%) | 🟢 Active
-   Take-profit: $73,972.26 (10.0%)
-
-4. ETH/USD - BUY at $2,052.38 (0.0974 qty) | Value: $199.90
-   Current: $2,024.55 | P&L: -1.36% (-$2.72)
-   Stop-loss: $1,949.76 (5.0%) | 🟢 Active
-   Take-profit: $2,257.62 (10.0%)
+=== ACTIVE TRADES ===
+Dashboard shows: 0 active trades
+Real trading log shows: 0 trades today (0/3 maximum)
+26 Crypto Bot detected 2 short signals but no execution (bot appears stopped)
 
 === PORTFOLIO SUMMARY ===
-Total Investment: $799.93
-Current Value: $754.31
-Portfolio P&L: -5.71% (-$45.62)
-Drawdown Status: Within acceptable range (5.71% < 10% critical threshold)
+Dashboard shows: $0.00 (CRITICAL DISCREPANCY - 100% error)
+Real trading log balance: $542.27 USD (last update: 07:02:37)
+Portfolio P&L: Unknown (dashboard data mismatch)
+Drawdown Status: 0% (no active trades)
 
-=== ALERTS ===
-🔴 CRITICAL: STOP-LOSS TRIGGERED - ETH/USD at $2,024.55 (entry: $2,325.28, loss: -12.94%)
-🔴 CRITICAL: STOP-LOSS TRIGGERED - ETH/USD at $2,024.55 (entry: $2,193.60, loss: -7.71%)
-⚠️  WARNING: 2 out of 4 trades (50%) have triggered stop-losses
-⚠️  WARNING: All ETH positions are in loss (3 out of 3 trades)
-⚠️  WARNING: BTC position approaching stop-loss (currently -0.82%, stop-loss at -5.0%)
-⚠️  WARNING: No take-profit targets reached (0 out of 4 trades)
-⚠️  WARNING: Strategy conflict - Dashboard shows BULLISH sentiment and BUY signal while portfolio is down -5.71%
+=== BOT STATUS (CONFIRMED VIA PROCESS CHECK) ===
+ALL TRADING BOTS CONFIRMED AS STOPPED (CRITICAL):
+- Real Gemini Trader: STOPPED (no process found)
+- Trading Server: STOPPED (no process found)
+- 26 Crypto Live Bot: STOPPED (no process found, last log at 07:01:43 - 29+ minutes ago)
+- Binance Futures Bot: STOPPED (no process found)
+- Simple Crypto Bot: STOPPED (no process found)
+
+=== 26 CRYPTO BOT STATUS DETAIL ===
+Last Log Entry: 2026-03-31 07:01:43 (Cycle 220)
+Last Signals: 2 short signals detected (DOT/USDT, COMP/USDT)
+Analysis Errors: Multiple 'NoneType' comparison errors in analysis (data parsing issues)
+Process Status: No active Python process found for this bot
+Time Since Last Activity: 29 minutes 37 seconds (CONFIRMED CRASH/STOP)
+Bot Health: CRITICAL - Requires immediate restart
+
+=== PERFORMANCE ANALYSIS ===
+Trades Today: 0 out of 3 maximum
+Daily Target: Not met (0%)
+Capital Utilization: 0% (no active trades)
+Market Conditions: Highly Favorable (all major pairs up 0.8-2.5%)
+Missed Opportunities: SIGNIFICANT (bullish market with no trading activity)
+Time Since Last Trade: Unknown (no trades today)
+Financial Impact: Increasing every minute (missed profit opportunities)
+
+=== RISK MANAGEMENT STATUS ===
+Stop-Loss Triggers: 0 (no active trades)
+Take-Profit Triggers: 0 (no active trades)
+Drawdown Indicators: 0% (no active positions)
+Risk Exposure: 0% (no active trades)
+Position Sizing: 50% (configured but not utilized)
+
+=== SYSTEM HEALTH INDICATORS ===
+Dashboard Uptime: 18+ minutes (since 07:13:00)
+Last Real Trading Activity: 07:02:37 (28+ minutes ago)
+Last 26 Crypto Bot Activity: 07:01:43 (29+ minutes ago)
+Data Consistency: POOR (dashboard shows $0 vs actual $542.27)
+System Stability: CRITICAL (all trading bots stopped)
 
 === RECOMMENDED ACTIONS ===
-1. Review stop-loss execution for ETH trades (system is in SIMULATION mode)
-2. Consider adjusting ETH strategy given current market conditions
-3. Monitor BTC position closely as it approaches stop-loss (currently -0.82%)
-4. Review market sentiment vs actual price action (bullish sentiment but declining prices)
-5. Consider tightening stop-loss on remaining positions or implementing hedging
-6. Review trading analysis logic for potential adjustments
-7. Next analysis scheduled: Hourly
+1. IMMEDIATE: Restart 26 Crypto Live Bot
+2. IMMEDIATE: Fix dashboard capital display issue
+3. URGENT: Investigate why bots stopped/crashed
+4. HIGH PRIORITY: Check API connectivity and data feeds
+5. MEDIUM: Review error logs for NoneType comparison issues
 
-=== SYSTEM STATUS ===
-Trading Pairs: BTC/USD, ETH/USD
-Strategy: Gemini_Longs_Binance_Shorts
-Execution Mode: SIMULATION
-API Status: Credentials needed for real trading
-Dashboard Health: ✅ Operational
-Last Dashboard Update: 2026-03-31 06:43:27 (14 minutes ago)
+=== ALERT STATUS ===
+CRITICAL ALERT: All trading bots stopped for 29+ minutes
+CRITICAL ALERT: Capital data mismatch ($0 vs $542.27)
+WARNING: Missed trading opportunities in bullish market
+INFO: No stop-loss or take-profit triggers (no active trades)
 
-=== END OF LOG ENTRY ===
+=== NEXT STEPS ===
+1. Check error logs for root cause analysis
+2. Restart critical trading components
+3. Verify API keys and connectivity
+4. Monitor for system recovery
+5. Update risk parameters if needed
+
+=== MONITORING SUMMARY ===
+Overall System Status: CRITICAL FAILURE
+Trading Activity: NONE (0 trades)
+Bot Health: ALL STOPPED
+Market Conditions: HIGHLY FAVORABLE
+Risk Level: LOW (no active positions)
+Action Required: IMMEDIATE INTERVENTION
