@@ -1,115 +1,16 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-04-01 01:19:36.489868
-==================================================
+Trading Dashboard Monitoring Summary:
+Timestamp: Wed Apr  1 02:33:10 +07 2026
 
-======================================================================
-CONSERVATIVE CRYPTO TRADING SYSTEM
-======================================================================
-Execution Time: 2026-04-01 01:19:32 (UTC+7)
-Capital: $250.00
-Risk Management: 5.0% SL, 10.0% TP
-Position Size: Max 50.0% of capital
-Daily Limit: 2 trades
-API Mode: SIMULATION
-======================================================================
+--- System Status ---
+Status: 
+Capital: $
+Stop-loss: %
+Take-profit: %
+Trading Pairs: 
 
-1️⃣  MARKET DATA ANALYSIS
-----------------------------------------
-📊 Fetching real-time market data...
-✅ BTC/USD: $67,696.96
-✅ ETH/USD: $2,101.49
-✅ BTC 24h Volume: $31,199,209
-✅ ETH 24h Volume: $5,637,662
+--- Trading Activity ---
+Total Trades: 
 
-2️⃣  SUPPORT/RESISTANCE LEVELS
-----------------------------------------
-✅ BTC Support: $67,695.70
-✅ BTC Resistance: $67,705.75
-✅ ETH Support: $2,102.06
-✅ ETH Resistance: $2,102.39
+--- Critical Alerts ---
+ALERT: System status is '' (expected: 'running')
 
-3️⃣  MARKET SENTIMENT
-----------------------------------------
-✅ Market Sentiment: NEUTRAL
-
-4️⃣  TRADING ANALYSIS
-----------------------------------------
-✅ Trading Signal: BUY
-✅ Reason: Price within 1% of support ($67695.7)
-
-5️⃣  TRADE EXECUTION
-----------------------------------------
-🎯 TRADE RECOMMENDATION FOUND!
-   Symbol: BTC/USD
-   Entry Price: $67,696.96
-   Position Size: 0.001846
-   Position Value: $125.00
-   Stop Loss: $64,312.11 (5.0%)
-   Take Profit: $74,466.66 (10.0%)
-   Risk/Reward: 1:2.0
-
-🔧 SIMULATED TRADE EXECUTION
-   To execute real trades:
-   1. Get Gemini API credentials from gemini.com
-   2. Set environment variables:
-      export GEMINI_API_KEY='your_api_key'
-      export GEMINI_API_SECRET='your_api_secret'
-   3. Run this script again
-
-======================================================================
-FINAL TRADING SUMMARY
-======================================================================
-
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-====================================
-Analysis Time: 2026-04-01 01:19:36 (UTC+7)
-
-MARKET DATA:
-• BTC/USD: $67,696.96
-• ETH/USD: $2,101.49
-• BTC 24h Volume: $31,199,209
-• ETH 24h Volume: $5,637,662
-• Market Sentiment: NEUTRAL
-
-SUPPORT/RESISTANCE:
-• BTC Support: $67,695.70
-• BTC Resistance: $67,705.75
-• ETH Support: $2,102.06
-• ETH Resistance: $2,102.39
-
-TRADING DECISION: BUY
-Reason: Price within 1% of support ($67695.7)
-
-TRADE RECOMMENDATION:
-• Symbol: BTC/USD
-• Action: BUY
-• Entry Price: $67,696.96
-• Position Size: 0.001846
-• Position Value: $125.00
-• Stop Loss: $64,312.11 (5.0%)
-• Take Profit: $74,466.66 (10.0%)
-• Risk/Reward Ratio: 1:2.0
-
-EXECUTION STATUS: SIMULATED - API credentials needed
-
-RISK MANAGEMENT PARAMETERS:
-• Capital: $250.00
-• Max Position Size: 50.0% of capital
-• Stop Loss: 5.0%
-• Take Profit: 10.0%
-• Max Daily Trades: 2
-• Strategy: Conservative support-based trading
-
-NEXT STEPS:
-1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
-2. Run analysis again in 6-12 hours
-3. Review market conditions before next trading window
-4. Never risk more than 5% of capital per trade
-
-END OF ANALYSIS
-====================================
-
-
-======================================================================
-SUMMARY READY FOR CRON DELIVERY
-======================================================================

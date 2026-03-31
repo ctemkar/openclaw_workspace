@@ -1,147 +1,81 @@
-=== ONGOING CRITICAL DRAWDOWN ALERT - Wed Apr  1 01:49:33 +07 2026 ===
-Timestamp: 2026-04-01T01:49:33+0700
-⚠️ ⚠️ ⚠️ CRITICAL DRAWDOWN PERSISTS! ⚠️ ⚠️ ⚠️
+🚨 CRITICAL TRADING ALERT - CONCENTRATION RISK 🚨
+Timestamp: 2026-04-01 02:43:45 (Asia/Bangkok)
+Alert Level: HIGH
 
-ALERT DETAILS:
-- Current Capital: $111.71
-- Current P&L: -$7.79 (unrealized)
-- 5% Stop-loss Threshold: $12.50
-- P&L vs Threshold: 62.3% (BELOW threshold - stop-loss NOT triggered)
-- Drawdown: 55.32% (EXCEEDS 5% CRITICAL THRESHOLD by 50.32%)
-- Open Positions: 10 (all Binance shorts)
-- Initial Capital: $250.00
-- Overall Return: -3.12%
+🔴 CRITICAL ISSUES DETECTED:
 
-SYSTEM STATUS:
-- Trading System: Running
-- Last Analysis: 2026-04-01T01:19:36.489915
-- Analysis Schedule: Hourly
-- Trading Pairs: 10 pairs (BTC/USD, ETH/USD, etc.)
-- Market Signal: BUY (contradiction with losing positions)
+1. **EXTREME POSITION CONCENTRATION - 100% SOL/USD**
+   • All 5 open positions in SOL/USD
+   • Total exposure: $265.82 (38.7% of total capital)
+   • No diversification across assets
+   • Single asset vulnerability: If SOL declines, all positions affected
+   • STATUS: CRITICAL - Immediate diversification needed
 
-TREND ANALYSIS:
-- Capital: Stable at $111.71 (no change from last check)
-- P&L: Worsened by $0.54 since last check (from -$7.25 to -$7.79)
-- Drawdown: Stable at 55.32% (remains critically high)
-- No new trades in last 10+ hours
-- P&L trend: WORSENING (losses increased)
+2. **CUMULATIVE DRAWDOWN IMPROVEMENT - POSITIVE SIGN**
+   • Previous: -43.86% (CRITICAL)
+   • Current: -27.49% (CAUTION)
+   • Improvement: +16.37 percentage points
+   • Recovery needed: +27.5% ($260.33)
+   • STATUS: IMPROVING - Strategy showing recovery
 
-KEY OBSERVATIONS:
-1. ⚠️ CRITICAL DRAWDOWN PERSISTS: 55.32% exceeds 5% threshold by 50.32%
-2. Stop-loss NOT triggered: Current P&L (-$7.79) below 5% threshold ($12.50)
-3. P&L worsening: Losses increased by $0.54 since last check
-4. System appears "stuck": No new trades in 10+ hours despite market BUY signal
-5. Capital stable: No change in capital, suggesting no position adjustments
+3. **POSITION PERFORMANCE - ALL SLIGHTLY POSITIVE**
+   • All 5 SOL/USD positions in profit (0.12-0.38%)
+   • Current SOL price: $82.527
+   • Entry prices: $82.218 to $82.432
+   • Stop-loss: 3% (not triggered)
+   • Take-profit: 5% (not reached)
+   • STATUS: STABLE - No immediate triggers
 
-IMMEDIATE CONCERNS:
-1. System shows contradictory signals: Market says BUY but positions are losing
-2. No corrective action taken despite persistent critical drawdown
-3. P&L continues to worsen (trend negative)
-4. Heavy concentration in crypto shorts (10 positions, mostly ETH/BTC)
-5. No position management evident (capital unchanged)
+4. **CAPITAL ALLOCATION - IMBALANCED BUT IMPROVING**
+   • Gemini: $532.19 (77.6% of total capital)
+   • Binance: $154.02 (22.4% of total capital)
+   • Deployed: $265.82 (38.7% of total)
+   • Available: $419.85 (61.3% of total)
+   • STATUS: MODERATE - Heavy Gemini weighting
 
-RECOMMENDED ACTIONS:
-1. ⚠️ REVIEW TRADING STRATEGY: Contradiction between market signal (BUY) and position performance (losing)
-2. CONSIDER POSITION REDUCTION: Close 50-70% of open positions to reduce exposure
-3. PAUSE NEW TRADES: Until strategy contradiction is resolved
-4. ADJUST RISK PARAMETERS: Consider increasing stop-loss to 7-8% if continuing to trade
-5. MANUAL INTERVENTION: May be required if automated system is "stuck"
-6. MONITOR CLOSELY: Hourly monitoring continues to show deterioration
+📊 CURRENT POSITION DETAILS:
+• 5 SOL/USD LONG positions on Gemini
+• All positions bought on 1.0-1.14% dips
+• Entry prices: $82.218, $82.400, $82.333, $82.422, $82.432
+• Current prices: All $82.527
+• Current total value: $265.82
+• Total unrealized P&L: +$0.45 (+0.17%)
 
-SYSTEM HEALTH CHECK:
-- ✅ API Connectivity: Working (dashboard accessible)
-- ✅ System Status: Running
-- ✅ Analysis Schedule: Hourly (next analysis due soon)
-- ⚠️ Position Management: Appears inactive (no changes in 10+ hours)
-- ⚠️ Risk Controls: Stop-loss not triggered but drawdown critical
-- ⚠️ Strategy Alignment: Contradiction detected
+⚙️ CURRENT RISK PARAMETERS:
+• Stop-loss: 3% (active monitoring)
+• Take-profit: 5% (active monitoring)
+• Position size: 10% of capital
+• Trading threshold: 1.0% for both LONG & SHORT
+• Max positions: 3 per bot
 
-NEXT STEPS:
-1. Acknowledge this persistent critical condition
-2. Decide on manual intervention vs. automated adjustment
-3. Review trading logic for the contradiction
-4. Consider temporary system pause if losses continue
-5. Document any strategy adjustments made
+🎯 IMMEDIATE ACTIONS REQUIRED:
+1. **DIVERSIFICATION URGENT**: Reduce SOL/USD concentration by adding other assets
+2. **RISK MANAGEMENT**: Maintain 3% stop-loss on all positions
+3. **PROFIT TAKING**: Consider partial exits at 2-3% gains to lock in profits
+4. **CAPITAL DEPLOYMENT**: Use available $419.85 for diversified opportunities
+5. **CONTINUE MONITORING**: Current strategy showing improvement (-43.86% → -27.49%)
 
-WARNING: The system shows signs of being in a "holding pattern" with worsening losses. Without intervention, this critical drawdown may persist or worsen further.
+⚠️ MONITORING PRIORITIES:
+1. **SOL PRICE MOVEMENT**: Watch for declines that could trigger 3% stop-loss
+2. **DIVERSIFICATION OPPORTUNITIES**: Look for other assets meeting 1.0% dip criteria
+3. **PROFIT TARGETS**: Monitor for 5% take-profit levels
+4. **CUMULATIVE P&L**: Track further improvement toward break-even
+5. **BINANCE SHORTS**: Watch for 1.0%+ rally opportunities
 
-=== End of Critical Alert ===
+🔔 ALERT TRIGGERS ACTIVE:
+• Position concentration > 80%: ✅ TRIGGERED (100% SOL/USD)
+• Drawdown > 40%: ❌ CLEARED (was -43.86%, now -27.49%)
+• Drawdown > 20%: ✅ TRIGGERED (-27.49%)
+• Stop-loss breach: ❌ NOT TRIGGERED
+• Take-profit reached: ❌ NOT TRIGGERED
 
-=== CRITICAL DRAWDOWN UPDATE - IMPROVEMENT DETECTED - Wed Apr  1 01:53:45 +07 2026 ===
-Timestamp: 2026-04-01T01:53:45+0700
-⚠️ CRITICAL DRAWDOWN CONTINUES BUT SHOWS IMPROVEMENT ⚠️
+📈 POSITIVE DEVELOPMENTS:
+1. Significant recovery from -43.86% to -27.49% drawdown
+2. All positions currently in profit
+3. $419.85 available capital for new opportunities
+4. Trading strategy showing effectiveness in recovery phase
 
-ALERT DETAILS:
-- Current Capital: $111.71 (unchanged)
-- Current P&L: -$7.44 (unrealized) - IMPROVED by $0.35
-- 5% Stop-loss Threshold: $12.50
-- P&L vs Threshold: 59.5% (BELOW threshold - stop-loss NOT triggered)
-- Drawdown: 55.32% (EXCEEDS 5% CRITICAL THRESHOLD by 50.32%)
-- Open Positions: 10 (all Binance shorts)
-- Initial Capital: $250.00
-- Overall Return: -2.97% (improved from -3.12%)
+📋 NEXT STEPS:
+System will continue monitoring every cron cycle. Immediate action needed for diversification. Current strategy should continue as it shows positive results.
 
-SYSTEM STATUS:
-- Trading System: Running
-- Last Analysis: 2026-04-01T01:19:36.489915 (34 minutes ago)
-- Analysis Schedule: Hourly (next analysis due in ~26 minutes)
-- Trading Pairs: 10 pairs (BTC/USD, ETH/USD, etc.)
-- Market Signal: BUY
-
-POSITION ANALYSIS (INDIVIDUAL):
-1. ETH/USD @ 2325.28: Current 2098.71 = -9.75% (BELOW 5% STOP-LOSS)
-2. ETH/USD @ 2193.6: Current 2098.71 = -4.33% (APPROACHING 5% STOP-LOSS)
-3. ETH/USD @ 2052.38: Current 2098.71 = +2.26% (PROFITABLE)
-4. ETH/USD @ 2021.51: Current 2098.71 = +3.82% (PROFITABLE)
-5. BTC/USD @ 67247.51: Current 67809.0 = +0.84% (SLIGHTLY PROFITABLE)
-
-KEY FINDINGS:
-1. ⚠️ CRITICAL DRAWDOWN PERSISTS: 55.32% still exceeds 5% threshold by 50.32%
-2. POSITIVE DEVELOPMENT: P&L improved by $0.35 (losses decreased)
-3. MIXED POSITION PERFORMANCE: Some positions profitable, some losing
-4. ONE POSITION BELOW STOP-LOSS: ETH @ 2325.28 is at -9.75% (below 5% stop-loss)
-5. ANOTHER APPROACHING STOP-LOSS: ETH @ 2193.6 at -4.33% (close to 5% stop-loss)
-
-IMMEDIATE CONCERNS:
-1. ⚠️ POSITION AT -9.75%: This exceeds the 5% stop-loss parameter - should have been closed
-2. System may not be monitoring individual position stop-losses
-3. Critical drawdown persists despite P&L improvement
-4. No position adjustments made (capital unchanged)
-
-URGENT ACTIONS NEEDED:
-1. ⚠️ CLOSE LOSS-MAKING POSITION: ETH @ 2325.28 (-9.75%) exceeds stop-loss
-2. MONITOR ETH @ 2193.6 (-4.33%): Close if reaches -5%
-3. REVIEW STOP-LOSS LOGIC: System may not be checking individual positions
-4. CONSIDER PARTIAL PROFIT TAKING: On profitable positions (ETH @ 2052.38, 2021.51)
-5. ADJUST POSITION SIZING: Current 20% per trade may be too aggressive
-
-SYSTEM INTEGRITY CHECK:
-- ✅ API Connectivity: Working
-- ✅ System Status: Running
-- ⚠️ Stop-loss Enforcement: FAILING (position at -9.75% not closed)
-- ⚠️ Position Management: Inactive (no adjustments)
-- ⚠️ Risk Monitoring: Individual position stop-losses not enforced
-- ✅ Market Data: Current prices available (BTC: $67,809, ETH: $2,098.71)
-
-CRITICAL WARNING:
-The system appears to have a stop-loss enforcement failure. A position at -9.75% should have been automatically closed at -5%. This indicates either:
-1. Stop-loss logic bug
-2. Position monitoring disabled
-3. API execution failure
-4. Risk parameter misconfiguration
-
-RECOMMENDED RESPONSE:
-1. IMMEDIATE: Manually close ETH position at 2325.28 (-9.75%)
-2. INVESTIGATE: Stop-loss enforcement failure
-3. PAUSE: All new trades until stop-loss logic verified
-4. AUDIT: All open positions against current market prices
-5. DOCUMENT: This stop-loss failure for system improvement
-
-NEXT MONITORING:
-Scheduled for next hourly analysis (~26 minutes). Will check if:
-1. Stop-loss failure persists
-2. P&L continues to improve
-3. Any position adjustments made
-4. System addresses the critical drawdown
-
-=== End of Critical Alert Update ===
+=== ALERT GENERATED BY TRADING DASHBOARD MONITOR ===

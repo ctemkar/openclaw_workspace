@@ -1,0 +1,23 @@
+{
+  "status": "delivered",
+  "timestamp": "2026-04-01T02:35:00+07:00",
+  "summary_files": [
+    "trading_summary_20260401_023429.txt",
+    "trading_summary_latest.txt"
+  ],
+  "generated_at": "2026-04-01T02:34:29",
+  "delivery_method": "cron_announcement_system",
+  "data_source": "http://localhost:5001/api/data",
+  "system_status": "active",
+  "key_metrics": {
+    "initial_capital": 946.97,
+    "current_capital": 531.65,
+    "cumulative_pnl": -415.32,
+    "pnl_percent": -43.86,
+    "recovery_needed": 415.32,
+    "recovery_percent": 78.1,
+    "total_positions": 5,
+    "total_position_value": 265.82,
+    "available_capital": 419.85
+  }
+}

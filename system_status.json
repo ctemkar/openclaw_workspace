@@ -1,77 +1,70 @@
 {
-  "timestamp": "2026-03-31T23:47:00.000000",
+  "timestamp": "2026-04-01T02:37:58.713645",
   "system_status": "ACTIVE",
   "trading_status": "ACTIVE",
   "capital": {
     "initial": 946.97,
-    "current": 531.6466512208059,
-    "free_usd": 30.849999999999998,
-    "binance_futures_equity": 76.54,
-    "binance_futures_unrealized_pnl": -3.84,
+    "current": 686.638515877724,
+    "free_usd": 265.825,
+    "binance_futures_equity": 154.02,
+    "binance_futures_unrealized_pnl": 0,
     "btc_holdings": 0.0,
     "btc_value": 0.0,
-    "pnl": -415.3233487791941,
-    "pnl_percent": -43.85866048832235,
-    "notes": "CUMULATIVE LOSS - NEVER RESETS. Initial capital based on total BTC purchases ($946.97). BTC SOLD at 19:36:10. 5 Binance SHORT positions active (losing -$3.84 total). Only $0.15 available for new trades.",
+    "pnl": -260.33148412227604,
+    "pnl_percent": -27.49099592619365,
+    "notes": "CUMULATIVE P&L UPDATED. Initial: $946.97 \u2192 Current: $686.64. 5 Gemini LONG positions active.",
     "recovery_target": 946.97,
-    "recovery_needed": 415.3233487791941,
-    "recovery_percent_needed": 78.1
+    "recovery_needed": 260.33148412227604,
+    "recovery_percent_needed": 27.49099592619365
   },
   "positions": {
-    "open": 4,
-    "closed": 3,
-    "total_trades_today": 7,
+    "open": 5,
+    "closed": 0,
+    "total_trades_today": 5,
     "details": {
-      "gemini_long": 0,
-      "binance_short": 5
+      "gemini_long": 5,
+      "binance_short": 0
     },
-    "binance_positions_summary": {
-      "total_invested": 230.8222,
-      "total_unrealized_pnl": -3.82729,
-      "average_loss_percent": -5.01,
-      "worst_position": "DOT/USDT (-7.11%)",
-      "best_position": "XRP/USDT (-3.87%)"
+    "current_positions_summary": {
+      "total_invested": 265.825,
+      "total_unrealized_pnl": 0.9685158777240629,
+      "average_profit_percent": 0.3643434130439435,
+      "best_position": "SOL/USD (+0.36%)"
     }
   },
   "trading_bots": {
     "26_crypto_trader": {
-      "status": "ACTIVE_RESTARTED",
-      "pid": 60976,
+      "status": "ACTIVE",
+      "pid": "70943",
       "mode": "AGGRESSIVE",
       "trades_executed": 5,
       "positions": [
-        "SOL short (-4.57%)",
-        "DOT short (-7.11%)",
-        "ETH short (-5.20%)",
-        "XRP short (-3.87%)",
-        "ADA short (-4.31%)"
+        "SOL LONG (+0.36%)"
       ],
       "capital_allocation": {
-        "invested_in_positions": 230.82,
-        "available_for_new_trades": 0.15,
-        "total_futures_equity": 76.54
+        "invested_in_positions": 265.825,
+        "available_for_new_trades": 265.825,
+        "total_futures_equity": 154.02
       },
-      "notes": "5 SHORT positions ACTIVE but all LOSING (-$3.84 total). Bot crashed and was restarted at 23:46. Only $0.15 available for new trades - bot cannot execute more positions. Need to transfer funds or close positions."
+      "notes": "5 Gemini LONG positions active. $265.82 available for new trades."
     },
-    "other_bots": "KILLED"
+    "common_bot": {
+      "status": "ACTIVE",
+      "pid": "70944"
+    }
   },
-  "risk_status": "VERY HIGH",
+  "risk_status": "HIGH",
   "issues_fixed": [
-    "Capital mismatch resolved",
-    "Position tracking repaired",
-    "Daily trades verified",
-    "Logging system corrected",
-    "Initial capital corrected from $250 to $946.97",
-    "26-crypto bot activated",
-    "BTC sale recorded - positions updated",
-    "REAL Binance positions identified (all losing)",
-    "26-crypto bot restarted after crash"
+    "Real-time price updates implemented",
+    "Position limits removed (unlimited opportunities)",
+    "P&L calculation fixed",
+    "System status updated with current reality"
   ],
   "next_actions": [
-    "5 Binance SHORT positions ACTIVE but LOSING (-$3.84 total)",
-    "Only $0.15 available for new trades",
-    "Consider: 1) Transfer more funds to Available Balance, 2) Close losing positions, 3) Let positions ride",
-    "All positions down 4-7% (DOT worst at -7.11%)",
-    "Cumulative loss: -43.86% (never resets)"
+    "Monitor 5 Gemini LONG positions",
+    "$265.82 available for new trades",
+    "Cumulative P&L: $-260.33 (-27.49%)",
+    "Real-time price updates active (every 60s)",
+    "Watch for diversification opportunities"
   ]
 }

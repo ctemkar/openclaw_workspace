@@ -1,43 +1,25 @@
 #!/usr/bin/env python3
 import requests
-import time
-
-print("Checking dashboard...")
-time.sleep(2)  # Give it time to start
+import sys
 
 try:
-    response = requests.get("http://localhost:5002", timeout=5)
-    
-    # Look for key sections
+    response = requests.get('http://localhost:5007/', timeout=3)
     html = response.text
     
-    # Find execution mode
-    if "REAL TRADING" in html:
-        print("✅ Dashboard shows: REAL TRADING")
-    elif "SIMULATION" in html:
-        print("❌ Dashboard shows: SIMULATION")
+    if 'P&L INFORMATION' in html:
+        print('✅ P&L INFORMATION section is in dashboard')
+        
+        # Show a preview
+        start = html.find('P&L INFORMATION')
+        preview = html[start:start+500]
+        print('\nPreview:')
+        for line in preview.split('\n'):
+            if 'data-card' in line or 'data-value' in line or 'h3' in line:
+                print(line[:100])
+                
     else:
-        print("⚠️  Could not find execution mode")
-    
-    # Find strategy
-    if "Strategy:" in html:
-        # Extract strategy line
-        lines = html.split('\n')
-        for i, line in enumerate(lines):
-            if "Strategy:" in line:
-                print(f"📊 Strategy: {line.strip()}")
-                # Check next few lines for execution mode
-                for j in range(i, min(i+10, len(lines))):
-                    if "Execution Mode:" in lines[j]:
-                        print(f"🎯 Execution Mode: {lines[j].strip()}")
-                        break
-                break
-    
-    # Check overall
-    if "status-warning" in html and "SIMULATION" not in html:
-        print("✅ No more SIMULATION warnings!")
-    elif "status-running" in html:
-        print("✅ Dashboard shows running status")
+        print('❌ P&L INFORMATION section NOT found')
         
 except Exception as e:
-    print(f"❌ Error checking dashboard: {e}")
+    print(f'❌ Error: {e}')
+    sys.exit(1)

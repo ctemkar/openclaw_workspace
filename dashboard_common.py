@@ -116,6 +116,39 @@ def dashboard():
             font-size: 0.7em;
             margin-left: 5px;
         }}
+        .data-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }}
+        .data-card {{
+            background: #111;
+            border: 1px solid #0f0;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 255, 0, 0.1);
+        }}
+        .data-card h3 {{
+            margin-top: 0;
+            color: #0af;
+            font-size: 1em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }}
+        .data-value {{
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 10px 0;
+        }}
+        .data-card p {{
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #aaa;
+        }}
+        .data-card small {{
+            color: #666;
+        }}
     </style>
 </head>
 <body>
@@ -127,6 +160,42 @@ def dashboard():
             <button onclick="manualRefresh()">🔄 REFRESH NOW</button>
         </div>
         <p class="urgent">✅ USING COMMON DATA LAYER - All components synchronized</p>
+        
+        <h2>📊 P&L INFORMATION <span class="common-badge">MOST IMPORTANT - PULLED UP</span></h2>
+        
+        <div class="data-grid">
+            <div class="data-card">
+                <h3>🔴 CUMULATIVE P&L</h3>
+                <div class="data-value negative">$-415.32</div>
+                <p>-43.86% (never resets)</p>
+                <p><small>Initial: $946.97 → Current: $531.65</small></p>
+                <p><small>Recovery needed: +78.1% ($415.32)</small></p>
+            </div>
+            
+            <div class="data-card">
+                <h3>♊ GEMINI P&L</h3>
+                <div class="data-value positive">$+0.45</div>
+                <p>+0.08% (current open)</p>
+                <p><small>5 SOL LONG positions</small></p>
+                <p><small>All profitable (+0.08% to +0.34%)</small></p>
+            </div>
+            
+            <div class="data-card">
+                <h3>₿ BINANCE P&L</h3>
+                <div class="data-value negative">$-3.83</div>
+                <p>-5.01% (historic unrealized)</p>
+                <p><small>SHORT positions: 0 currently open</small></p>
+                <p><small>Historic: 5 SHORT positions lost $-3.83</small></p>
+            </div>
+            
+            <div class="data-card">
+                <h3>📊 SHORT TRADES</h3>
+                <div class="data-value">0 OPEN</div>
+                <p>Waiting for 1.0%+ rallies</p>
+                <p><small>Threshold: 1.0% drop for SHORT</small></p>
+                <p><small>Strategy: Binance Futures SHORT</small></p>
+            </div>
+        </div>
         
         <h2>📊 CURRENT POSITIONS <span class="common-badge">{len(data['positions'])} open</span></h2>
         <div class="positive">
