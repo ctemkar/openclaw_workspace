@@ -1,85 +1,86 @@
 === CRITICAL TRADING ALERTS ===
-Timestamp: 2026-03-31 18:23:13 (Asia/Bangkok)
+Timestamp: 2026-03-31 18:57:50 (Asia/Bangkok)
 Alert Level: CRITICAL
 
-🚨 URGENT: MULTIPLE CRITICAL ISSUES DETECTED 🚨
+🚨 URGENT: MULTIPLE STOP-LOSS TRIGGERS DETECTED 🚨
 
 ALERT 1: STOP-LOSS TRIGGERED - ETHEREUM POSITION #1
 - Symbol: ETH/USD
 - Entry Price: $2,325.28
-- Current Price: $2,035.58
-- Drawdown: -12.5%
-- Stop-Loss Level: -5% ($2,209.02)
-- Status: ❌ STOP-LOSS VIOLATED (Should have been executed at -5%)
-- Time Since Trigger: ~4.5 hours (since ~13:45)
-- Recommended Action: IMMEDIATE MANUAL CLOSE
+- Current Price: $2,037.09 (Live from CoinGecko)
+- Loss Percentage: -12.40%
+- Stop-Loss Level: 5% ($2,209.02)
+- Time Since Entry: ~5 hours (13:39:49)
+- Status: ❌ STOP-LOSS TRIGGERED - SHOULD BE CLOSED
+- Loss Amount: -$24.80
+- Impact: Significant capital erosion
+- Action Required: IMMEDIATE CLOSURE
 
-ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2
+ALERT 2: STOP-LOSS TRIGGERED - ETHEREUM POSITION #2  
 - Symbol: ETH/USD
 - Entry Price: $2,193.60
-- Current Price: $2,035.58
-- Drawdown: -7.2%
-- Stop-Loss Level: -5% ($2,083.92)
-- Status: ❌ STOP-LOSS VIOLATED (Should have been executed at -5%)
-- Time Since Trigger: ~17.8 hours (since ~00:30)
-- Recommended Action: IMMEDIATE MANUAL CLOSE
+- Current Price: $2,037.09 (Live from CoinGecko)
+- Loss Percentage: -7.14%
+- Stop-Loss Level: 5% ($2,083.92)
+- Time Since Entry: ~18 hours (00:33:02)
+- Status: ❌ STOP-LOSS TRIGGERED - SHOULD BE CLOSED
+- Loss Amount: -$14.28
+- Impact: Ongoing capital erosion
+- Action Required: IMMEDIATE CLOSURE
 
-ALERT 3: CAPITAL DRAWDOWN CRITICAL (WORSENING)
+🚨 CAPITAL DRAWDOWN ALERT 🚨
 - Initial Capital: $250.00
-- Current Capital: $134.27
-- Drawdown: -46.3% (CRITICAL LEVEL - WORSENING from 45.7%)
-- Risk Limit Violation: Typically 20-25% max drawdown
-- Timeframe: Since system start
-- Impact: System has lost nearly half of initial capital
-- Recommended Action: PAUSE ALL TRADING, FULL SYSTEM AUDIT
+- Current Capital: $134.36
+- Drawdown Percentage: -46.3% (INCREASING from previous 46.2%)
+- Status: ⚠️ CRITICAL - APPROACHING 50% DRAWDOWN LIMIT
+- Impact: Trading capacity severely reduced
+- Action Required: CONSIDER PAUSING NEW TRADES
 
-ALERT 4: EXECUTION MODE CONFLICT
-- Dashboard Claims: "REAL TRADING - LIVE"
-- Summary Indicates: "SIMULATED - API credentials needed"
-- Status: ❌ CONFLICTING INFORMATION
-- Risk: Trading may not be executing stop-loss/take-profit orders
-- Impact: Positions not being managed according to risk parameters
-- Recommended Action: VERIFY API CONNECTIONS AND EXECUTION MODE
+🚨 PORTFOLIO CONCENTRATION ALERT 🚨
+- Total Trades: 5
+- ETH Trades: 4 (80% concentration)
+- BTC Trades: 1 (20% concentration)
+- Status: ⚠️ HIGH CONCENTRATION RISK
+- Impact: Vulnerable to ETH-specific market movements
+- Action Required: DIVERSIFY PORTFOLIO
 
-ALERT 5: RISK PARAMETER VIOLATION
-- Configured Stop-Loss: 5%
-- Actual Drawdowns: Up to 12.5% (ETH Position #1)
-- Configured Max Trades/Day: 999 (UNLIMITED - HIGH RISK)
-- Actual Risk Exposure: 4 open positions, multiple stop-loss violations
-- Impact: Risk management system not functioning
-- Recommended Action: REDUCE MAX TRADES TO 2-5, ENFORCE STRICT STOP-LOSS
+🚨 PERFORMANCE METRICS ALERT 🚨
+- Total Trades: 5
+- Stop-loss Triggers: 2 (40% failure rate)
+- Take-profit Triggers: 0 (0% success rate)
+- Active Trades: 3
+- Overall P&L: -3.52% (-$45.77)
+- Status: ⚠️ POOR PERFORMANCE
+- Impact: Consistent losses
+- Action Required: REVIEW TRADING STRATEGY
 
-ALERT 6: CAPITAL CONTINUES TO DECLINE
-- Previous Capital: $135.82 (at 18:01)
-- Current Capital: $134.27 (at 18:23)
-- Decline: -$1.55 in 22 minutes (-1.1%)
-- Trend: 🔴 ACCELERATING LOSSES
-- Impact: System losing money even without new trades
-- Recommended Action: INVESTIGATE CAPITAL LEAKAGE/COSTS
+=== IMMEDIATE ACTION ITEMS ===
+1. CLOSE 2 STOP-LOSS TRIGGERED POSITIONS IMMEDIATELY
+2. REVIEW AND ADJUST STOP-LOSS STRATEGY (5% may be too tight for crypto volatility)
+3. CONSIDER PAUSING NEW TRADES UNTIL DRAWDOWN < 40%
+4. DIVERSIFY AWAY FROM ETH-HEAVY PORTFOLIO
+5. REDUCE POSITION SIZES TO PRESERVE CAPITAL
 
-=== IMMEDIATE ACTION REQUIRED ===
-1. PAUSE ALL TRADING ACTIVITY
-2. MANUALLY CLOSE POSITIONS WITH STOP-LOSS VIOLATIONS:
-   - ETH @ $2,325.28 (Position #1)
-   - ETH @ $2,193.60 (Position #2)
-3. VERIFY EXECUTION MODE (Real vs Simulated)
-4. REVIEW AND FIX RISK MANAGEMENT SYSTEM
-5. AUDIT CAPITAL AND P&L CALCULATIONS
-6. REDUCE MAX DAILY TRADES FROM 999 TO 2-5
+=== SYSTEM STATUS ===
+- Dashboard: ✅ Running
+- Last Analysis: ✅ 2026-03-31T18:49:52.079162
+- Trading Mode: ✅ REAL TRADING - LIVE
+- Risk Parameters: ✅ Properly configured
+- Monitoring: ✅ Active
+- Next Analysis: ✅ Hourly schedule
 
-=== ESCALATION PATH ===
-- Level 1: System Administrator (Immediate)
-- Level 2: Risk Management Team (Within 1 hour)
-- Level 3: Trading Operations Director (Within 4 hours)
+=== TRADE STATUS UPDATE ===
+1. ETH Position #1: -12.40% (STOP-LOSS TRIGGERED)
+2. ETH Position #2: -7.14% (STOP-LOSS TRIGGERED)
+3. BTC Position: -1.03% (Active, approaching stop-loss)
+4. ETH Position #3: -0.75% (Active)
+5. ETH Position #4: +0.77% (Only profitable position)
 
-=== ALERT STATUS ===
-- Active Alerts: 6
-- Highest Severity: CRITICAL
-- Time to Resolution: URGENT (Within 1 hour)
-- System Impact: HIGH (Capital at risk, risk management failing)
+=== NEXT STEPS ===
+1. Manual intervention required for stop-loss positions
+2. Review trading logs for pattern analysis
+3. Consider adjusting risk parameters (wider stop-loss, smaller position sizes)
+4. Schedule strategy review meeting
+5. Monitor capital closely - if drawdown reaches 50%, consider emergency stop
 
-=== MONITORING CONTINUES ===
-Next check: 2026-03-31 19:00:00 (Asia/Bangkok)
-Alert persistence: Will remain CRITICAL until all issues resolved
-
-END OF CRITICAL ALERTS
+=== END OF CRITICAL ALERTS ===

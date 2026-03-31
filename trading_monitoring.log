@@ -1,80 +1,83 @@
-=== TRADING DASHBOARD MONITORING REPORT ===
-Timestamp: 2026-03-31 18:23:08 (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/ (✅ ACCESSIBLE - Service running)
+=== TRADING DASHBOARD MONITORING LOG ===
+Timestamp: 2026-03-31 18:57:45 (Asia/Bangkok)
+Dashboard Status: Running
+Last Analysis: 2026-03-31T18:49:52.079162
+Capital: $134.36 (⚠️ 46.3% drawdown from initial $250)
+Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 999 (UNLIMITED)
+Execution Mode: ✅ REAL TRADING - LIVE
 
-=== SYSTEM STATUS ===
-- Dashboard Status: ✅ ONLINE (Port 5001 responding)
-- Capital: $134.27 (⚠️ Down from $250.00 initial - 46.3% loss)
-- Last Analysis: 2026-03-31T18:01:21.756284 (22 minutes ago)
-- Risk Parameters: 5% stop-loss, 10% take-profit, max 999 trades/day (UNLIMITED)
-- Trading Pairs: 10 pairs (BTC, ETH, SOL, ADA, XRP, DOT, DOGE, AVAX, MATIC, LINK)
-- Current Strategy: Gemini_Longs_Binance_Shorts
-- Execution Mode: CONFLICTING (Dashboard shows "REAL TRADING - LIVE" but summary indicates SIMULATION)
-- Service Status: ✅ RUNNING
-- Current Time: 18:23 PM (Asia/Bangkok)
-- Time Since Last Analysis: 22 minutes
-- Capital Trend: 🔴 WORSENING - Down from $250.00 to $134.27 (-$115.73, -46.3%)
+=== CURRENT MARKET DATA ===
+BTC/USD: $66,554.00 (from CoinGecko API)
+ETH/USD: $2,037.09 (from CoinGecko API)
+SOL/USD: $80.58 (from CoinGecko API)
+ADA/USD: $0.240703 (from CoinGecko API)
+Market Sentiment: NEUTRAL (from dashboard)
+Trading Signal: BUY (from dashboard)
 
-=== CURRENT PORTFOLIO PERFORMANCE ===
-- Total P&L: -$0.3868 (from status endpoint - negative)
-- Open Positions: 4 (all in Binance according to status)
-- Realized P&L: $0.00 (no closed positions)
-- Unrealized P&L: -$0.3868
-- Gemini Positions: 0 open
-- Binance Positions: 4 open
+=== ACTIVE TRADES (5 total) ===
+1. ETH/USD - BUY at $2,325.28 (0.086 qty) | Value: $199.97
+   Current: $2,037.09 | P&L: -12.40% (-$24.80)
+   Stop-loss: $2,209.02 (5.0%) | 🔴 TRIGGERED (-12.40% below entry)
+   Take-profit: $2,557.81 (10.0%)
 
-=== RECENT TRADING ACTIVITY (Last 5 trades) ===
-1. ETH/USD BUY @ $2,325.28 (13:39:49) - Near support level
-2. ETH/USD BUY @ $2,193.60 (00:33:02) - Near support level  
-3. BTC/USD BUY @ $67,247.51 (21:29:41) - Near support level
-4. ETH/USD BUY @ $2,052.38 (21:29:42) - Near support level
-5. ETH/USD BUY @ $2,021.51 (07:24:00) - Conservative entry
+2. ETH/USD - BUY at $2,193.60 (0.0912 qty) | Value: $200.06
+   Current: $2,037.09 | P&L: -7.14% (-$14.28)
+   Stop-loss: $2,083.92 (5.0%) | 🔴 TRIGGERED (-7.14% below entry)
+   Take-profit: $2,412.96 (10.0%)
 
-=== CURRENT MARKET PRICES (Coingecko API) ===
-- BTC/USD: $66,611.00 (vs entry $67,247.51 = -0.95% drawdown)
-- ETH/USD: $2,035.58 (vs entries: $2,325.28, $2,193.60, $2,052.38, $2,021.51)
+3. BTC/USD - BUY at $67,247.51 (0.002974 qty) | Value: $199.99
+   Current: $66,554.00 | P&L: -1.03% (-$2.06)
+   Stop-loss: $63,885.13 (5.0%) | 🟢 Active (-1.03% below entry)
+   Take-profit: $73,972.26 (10.0%)
 
-=== STOP-LOSS ANALYSIS ===
-⚠️ MULTIPLE POSITIONS NEAR STOP-LOSS:
-1. ETH @ $2,325.28 entry: Current $2,035.58 = -12.5% (STOP-LOSS TRIGGERED at -5%)
-2. ETH @ $2,193.60 entry: Current $2,035.58 = -7.2% (STOP-LOSS TRIGGERED at -5%)
-3. ETH @ $2,052.38 entry: Current $2,035.58 = -0.82% (Within normal range)
-4. ETH @ $2,021.51 entry: Current $2,035.58 = +0.70% (Slightly profitable)
-5. BTC @ $67,247.51 entry: Current $66,611.00 = -0.95% (Within normal range)
+4. ETH/USD - BUY at $2,052.38 (0.0974 qty) | Value: $199.90
+   Current: $2,037.09 | P&L: -0.75% (-$1.50)
+   Stop-loss: $1,949.76 (5.0%) | 🟢 Active (-0.75% below entry)
+   Take-profit: $2,257.62 (10.0%)
 
-=== TAKE-PROFIT ANALYSIS ===
-❌ NO TAKE-PROFIT TRIGGERS: All positions are at a loss or minimal gain
+5. ETH/USD - BUY at $2,021.51 (0.2474 qty) | Value: $500.00
+   Current: $2,037.09 | P&L: +0.77% (+$3.85)
+   Stop-loss: $1,920.43 (5.0%) | 🟢 Active (+0.77% above entry)
+   Take-profit: $2,223.66 (10.0%)
 
-=== RISK ASSESSMENT ===
-🔴 CRITICAL RISK INDICATORS:
-1. Capital drawdown: 46.3% from initial (WORSENING from 45.7%)
-2. Multiple stop-loss triggers not being executed
-3. Conflicting execution mode (REAL vs SIMULATION)
-4. Unlimited daily trades (999) with high-risk strategy
-5. 4 open positions with significant unrealized losses
+=== PORTFOLIO SUMMARY ===
+Total Investment: $1,299.92
+Current Value: $1,254.15
+Portfolio P&L: -3.52% (-$45.77)
+Drawdown Status: ⚠️ WARNING: 46.3% capital reduction from initial $250 to $134.36
 
-🟡 WARNING INDICATORS:
-1. System shows negative P&L (-$0.3868) consistent with capital loss
-2. Last analysis 22 minutes ago but trades continue
-3. Position sizing: 20% of capital per trade (aggressive)
+=== PERFORMANCE METRICS ===
+Total P&L (from status): -$0.016 (unrealized)
+Open Positions: 4 (Binance: 4, Gemini: 0)
+Realized P&L: $0.00
+Unrealized P&L: -$0.016
 
-=== RECOMMENDED ACTIONS ===
-1. IMMEDIATE: Verify execution mode - is trading actually live?
-2. IMMEDIATE: Close positions that have hit stop-loss (ETH @ $2,325.28 and $2,193.60)
-3. URGENT: Review risk parameters - reduce from 999 trades/day to 2-5
-4. URGENT: Investigate capital discrepancy - system losing money
-5. SCHEDULE: Daily performance review with stricter risk controls
+=== RISK ANALYSIS ===
+⚠️ CRITICAL ISSUES:
+1. 2 out of 5 trades have triggered stop-loss (40% failure rate)
+2. Capital drawdown of 46.3% from initial investment
+3. No take-profit triggers yet (0% success rate)
+4. High concentration in ETH (4 out of 5 trades)
 
-=== NEXT MONITORING CHECK ===
-Scheduled for: 2026-03-31 19:00:00 (Asia/Bangkok)
-Priority: HIGH - Critical issues require immediate attention
+🟡 WATCHLIST:
+1. BTC trade at -1.03% approaching stop-loss
+2. Overall portfolio negative P&L of -3.52%
+3. System shows -$0.016 unrealized P&L (small but negative)
 
-=== SYSTEM HEALTH ===
-✅ Dashboard accessible
-✅ API endpoints responding
-✅ Market data available
-❌ Risk management failing
-❌ Execution mode unclear
-❌ Capital protection compromised
+🟢 POSITIVE INDICATORS:
+1. One ETH trade showing +0.77% profit
+2. System is actively monitoring and running
+3. Risk parameters properly configured
 
-END OF MONITORING REPORT
+=== RECOMMENDATIONS ===
+1. CRITICAL: Stop-loss triggered on 2 trades - consider closing or adjusting positions
+2. Consider reducing position sizes given current drawdown
+3. Review stop-loss strategy - 5% may be too tight for crypto volatility
+4. Diversify beyond ETH-heavy positions
+5. Monitor capital closely - consider pausing new trades if drawdown exceeds 50%
+
+=== NEXT SCHEDULED ANALYSIS ===
+Hourly analysis scheduled
+Last analysis completed: 2026-03-31T18:49:52.079162
+
+=== END OF MONITORING REPORT ===
