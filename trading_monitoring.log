@@ -1,83 +1,21 @@
-=== TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-03-31 18:57:45 (Asia/Bangkok)
-Dashboard Status: Running
-Last Analysis: 2026-03-31T18:49:52.079162
-Capital: $134.36 (⚠️ 46.3% drawdown from initial $250)
-Risk Parameters: Stop-loss 5.0%, Take-profit 10.0%, Max trades/day: 999 (UNLIMITED)
-Execution Mode: ✅ REAL TRADING - LIVE
-
-=== CURRENT MARKET DATA ===
-BTC/USD: $66,554.00 (from CoinGecko API)
-ETH/USD: $2,037.09 (from CoinGecko API)
-SOL/USD: $80.58 (from CoinGecko API)
-ADA/USD: $0.240703 (from CoinGecko API)
-Market Sentiment: NEUTRAL (from dashboard)
-Trading Signal: BUY (from dashboard)
-
-=== ACTIVE TRADES (5 total) ===
-1. ETH/USD - BUY at $2,325.28 (0.086 qty) | Value: $199.97
-   Current: $2,037.09 | P&L: -12.40% (-$24.80)
-   Stop-loss: $2,209.02 (5.0%) | 🔴 TRIGGERED (-12.40% below entry)
-   Take-profit: $2,557.81 (10.0%)
-
-2. ETH/USD - BUY at $2,193.60 (0.0912 qty) | Value: $200.06
-   Current: $2,037.09 | P&L: -7.14% (-$14.28)
-   Stop-loss: $2,083.92 (5.0%) | 🔴 TRIGGERED (-7.14% below entry)
-   Take-profit: $2,412.96 (10.0%)
-
-3. BTC/USD - BUY at $67,247.51 (0.002974 qty) | Value: $199.99
-   Current: $66,554.00 | P&L: -1.03% (-$2.06)
-   Stop-loss: $63,885.13 (5.0%) | 🟢 Active (-1.03% below entry)
-   Take-profit: $73,972.26 (10.0%)
-
-4. ETH/USD - BUY at $2,052.38 (0.0974 qty) | Value: $199.90
-   Current: $2,037.09 | P&L: -0.75% (-$1.50)
-   Stop-loss: $1,949.76 (5.0%) | 🟢 Active (-0.75% below entry)
-   Take-profit: $2,257.62 (10.0%)
-
-5. ETH/USD - BUY at $2,021.51 (0.2474 qty) | Value: $500.00
-   Current: $2,037.09 | P&L: +0.77% (+$3.85)
-   Stop-loss: $1,920.43 (5.0%) | 🟢 Active (+0.77% above entry)
-   Take-profit: $2,223.66 (10.0%)
-
-=== PORTFOLIO SUMMARY ===
-Total Investment: $1,299.92
-Current Value: $1,254.15
-Portfolio P&L: -3.52% (-$45.77)
-Drawdown Status: ⚠️ WARNING: 46.3% capital reduction from initial $250 to $134.36
-
-=== PERFORMANCE METRICS ===
-Total P&L (from status): -$0.016 (unrealized)
-Open Positions: 4 (Binance: 4, Gemini: 0)
-Realized P&L: $0.00
-Unrealized P&L: -$0.016
-
-=== RISK ANALYSIS ===
-⚠️ CRITICAL ISSUES:
-1. 2 out of 5 trades have triggered stop-loss (40% failure rate)
-2. Capital drawdown of 46.3% from initial investment
-3. No take-profit triggers yet (0% success rate)
-4. High concentration in ETH (4 out of 5 trades)
-
-🟡 WATCHLIST:
-1. BTC trade at -1.03% approaching stop-loss
-2. Overall portfolio negative P&L of -3.52%
-3. System shows -$0.016 unrealized P&L (small but negative)
-
-🟢 POSITIVE INDICATORS:
-1. One ETH trade showing +0.77% profit
-2. System is actively monitoring and running
-3. Risk parameters properly configured
-
-=== RECOMMENDATIONS ===
-1. CRITICAL: Stop-loss triggered on 2 trades - consider closing or adjusting positions
-2. Consider reducing position sizes given current drawdown
-3. Review stop-loss strategy - 5% may be too tight for crypto volatility
-4. Diversify beyond ETH-heavy positions
-5. Monitor capital closely - consider pausing new trades if drawdown exceeds 50%
-
-=== NEXT SCHEDULED ANALYSIS ===
-Hourly analysis scheduled
-Last analysis completed: 2026-03-31T18:49:52.079162
-
-=== END OF MONITORING REPORT ===
+=== Trading Dashboard Analysis - 2026-03-31 19:46:49 ===
+System Status: Total Capital: $175.53, Active Bots: 3, Trades Today: 4/999
+P&L: Total: $0.0, Gemini: $0.0, Binance: $0.0
+Bot Status:
+  - Gemini Long Trader: RUNNING (PID: 39681, Uptime: 0:01:36)
+  - Binance Futures Bot 2: RUNNING (PID: 39693, Uptime: 0:01:30)
+  - Binance Futures Bot: RUNNING (PID: 39705, Uptime: 0:01:25)
+  - Trading Server: STOPPED (PID: N/A, Uptime: N/A)
+  - 26 Crypto Monitor: STOPPED (PID: N/A, Uptime: N/A)
+Risk Parameters: Stop Loss: 5.0%, Take Profit: 10.0%, Position Size: 20%
+Market Data:
+  - BTC/USD: $66611.07 (+1.20%)
+  - ETH/USD: $2021.77 (+0.80%)
+  - SOL/USD: $145.32 (+2.50%)
+Recent Logs:
+  - 2026-03-31 19:42:12,439 - INFO - 🔍 XRP/USD: $1.32 (0.0%)
+  - 2026-03-31 19:42:12,995 - INFO - 🔍 DOT/USD: $1.24 (0.0%)
+  - 2026-03-31 19:42:13,567 - INFO - 🔍 DOGE/USD: $0.09 (0.0%)
+  - 2026-03-31 19:42:14,118 - INFO - 🔍 AVAX/USD: $8.79 (0.0%)
+  - 2026-03-31 19:42:14,118 - ERROR - Market data error for MATIC/USD: gemini does not have market symbol MATIC/USD
+============================================================

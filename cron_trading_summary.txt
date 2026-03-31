@@ -1,64 +1,64 @@
-TRADING DASHBOARD MONITORING SUMMARY
-=====================================
-Timestamp: 2026-03-31 16:31:20 (Asia/Bangkok)
-Monitoring Interval: 4:30 PM - 4:31 PM
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-31 19:12:30 (Asia/Bangkok)
 
-SYSTEM OVERVIEW:
-• Dashboard Status: ✅ Running
-• Capital: $175.53 (⚠️ Down 29.8% from $250.00 initial)
-• Active Positions: 5 trades (4 ETH, 1 BTC)
-• System Health: 🔴 CRITICAL
+🚨 CRITICAL ALERT: CAPITAL BELOW $200 PRESERVATION THRESHOLD 🚨
 
-CRITICAL ALERTS (3):
-1. 🔴 STOP-LOSS TRIGGERED: ETH Position #1 (-12.93%, exceeds 5% SL by 7.93%)
-2. 🔴 STOP-LOSS TRIGGERED: ETH Position #2 (-7.70%, exceeds 5% SL by 2.70%)
-3. 🔴 CAPITAL DEPLETION: $175.53 (29.8% loss from initial $250.00)
+SYSTEM STATUS:
+- Dashboard: ✅ Running at http://localhost:5001/
+- Execution Mode: ✅ REAL TRADING - LIVE
+- Last Analysis: 2026-03-31T19:01:29.808018
+- Next Analysis: ~20:01 (48 minutes)
 
-PORTFOLIO PERFORMANCE:
-• Total Investment: $1,300.05
-• Current Value: $1,254.27
-• Total P&L: -$45.83 (-3.53%)
-• Positions in Loss: 4 out of 5 (80%)
-• Positions at/over Stop-Loss: 2 out of 5 (40%)
+CAPITAL STATUS:
+- Initial Capital: $250.00
+- Current Capital: $199.08
+- Drawdown: -20.4% ($50.92 loss) 🚨 CRITICAL
+- Status: 🚨 BELOW $200 CRITICAL THRESHOLD
+
+PORTFOLIO SUMMARY:
+- Open Positions: 6 (Binance: 6, Gemini: 0)
+- Total Trades: 6 executed
+- Realized P&L: $0.00
+- Unrealized P&L: +$0.3534
+- Portfolio Composition: 80% ETH, 20% BTC 🚨 HIGH CONCENTRATION
+
+TRADE ANALYSIS (5 positions tracked):
+- Profitable: 1 position (+1.0%)
+- Losing: 2 positions (-0.5% to -0.9%)
+- Stop-loss Triggered: 2 positions (-6.9% to -12.2%) 🚨 NOT CLOSED
+- Success Rate: 20% (1/5)
+
+CRITICAL ISSUES DETECTED:
+1. 🚨 Capital below $200 preservation threshold ($199.08)
+2. 🚨 20.4% drawdown from initial capital
+3. 🚨 2 stop-loss triggered positions still open
+4. 🚨 80% portfolio concentration in ETH
+5. 🚨 Unlimited daily trades (999) - overtrading risk
+6. 🚨 No realized profits despite 6 trades
+
+RISK PARAMETERS:
+- Stop-loss: 5.0% (appears too tight for crypto volatility)
+- Take-profit: 10.0%
+- Max daily trades: 999 (UNLIMITED - 🚨 RISKY)
+- Position size: ~$200 per trade
 
 MARKET CONDITIONS:
-• BTC: $66,369.00 (down 1.08% from last analysis)
-• ETH: $2,024.67 (down 1.10% from last analysis)
-• Trend: 🔴 Bearish (both assets declining)
+- BTC: $66,628.00
+- ETH: $2,041.50
+- Market Sentiment: NEUTRAL
+- Trading Signal: BUY (recommends BTC/USD entry)
 
-RISK ASSESSMENT:
-• Overall Risk Level: 🔴 CRITICAL
-• Execution Mode Conflict: Dashboard shows "REAL TRADING" vs Summary shows "SIMULATED"
-• Position Concentration: 80% in ETH (over-concentrated)
-• Position Sizing Violation: New ETH trade is 200% of capital (vs 20% rule)
+EMERGENCY RECOMMENDATIONS:
+1. 🔴 PAUSE ALL NEW TRADES immediately
+2. 🔴 CLOSE stop-loss triggered positions (#1 and #2)
+3. 🔴 REDUCE max daily trades from 999 to 3
+4. 🔴 CONSIDER switching to paper trading mode
+5. 🟡 REVIEW and widen stop-loss to 8-10%
+6. 🟡 DIVERSIFY portfolio (reduce ETH to <40%)
 
-IMMEDIATE ACTIONS REQUIRED:
-1. 🔴 Exit ETH positions #1 and #2 immediately (stop-loss triggered)
-2. 🔴 Pause all trading until capital depletion addressed
-3. 🔴 Verify actual trading mode (REAL vs SIMULATION)
-4. 🟡 Review position sizing logic
-5. 🟡 Increase portfolio diversification
-
-SYSTEM COMPLIANCE ISSUES:
-• Stop-loss not enforced on 2 positions
-• Position sizing rules violated
-• Capital depletion exceeds warning thresholds
-• Conflicting execution mode information
-
-NEXT STEPS:
-• Next monitoring check: 17:31 PM
-• Next system analysis: ~16:36 PM (hourly schedule)
-• Manual intervention required within 1 hour
-
-ALERT STATUS:
-• Critical Alerts: 3
-• High Priority Alerts: 3
-• Total Active Alerts: 6
-
-RECOMMENDATION:
-Immediate manual intervention required. Trading system should be paused until critical issues are resolved. Verify if trades are real or simulated to assess actual financial risk.
+NEXT MONITORING: Hourly (next at ~20:01)
 
 === END OF SUMMARY ===
 Monitoring logs updated:
-• /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
-• /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
