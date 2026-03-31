@@ -1,0 +1,78 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-31 17:39:41 (Asia/Bangkok)
+
+SYSTEM STATUS:
+- Dashboard: ✅ ONLINE (http://localhost:5001/)
+- Service Status: ✅ RUNNING
+- Last Analysis: 2026-03-31T17:39:36 (just completed)
+- Execution Mode: CONFLICTING (REAL TRADING vs SIMULATION)
+
+CAPITAL STATUS:
+- Initial Capital: $250.00
+- Current Capital: $139.32
+- Capital Loss: $110.68 (44.3% depletion)
+- Status: 🔴 CRITICAL - Trading should be paused
+
+PORTFOLIO PERFORMANCE:
+- Total P&L (reported): $0.8490 (positive)
+- Open Positions: 4 (all Binance)
+- Total Historical Trades: 5
+- Win Rate: 20% (1 win, 4 losses)
+- Portfolio P&L (calculated): -$46.87 (-3.61%)
+
+ACTIVE POSITIONS (5):
+1. ETH/USD: 0.086 ETH @ $2,325.28 → Current: $2,023.11 (-13.00%) 🔴 STOP-LOSS TRIGGERED
+2. ETH/USD: 0.0912 ETH @ $2,193.60 → Current: $2,023.11 (-7.77%) 🔴 STOP-LOSS TRIGGERED
+3. BTC/USD: 0.002974 BTC @ $67,247.51 → Current: $66,278.00 (-1.44%) 🟢 ACTIVE
+4. ETH/USD: 0.0974 ETH @ $2,052.38 → Current: $2,023.11 (-1.43%) 🟢 ACTIVE
+5. ETH/USD: 0.2474 ETH @ $2,021.51 → Current: $2,023.11 (+0.08%) 🟢 ACTIVE
+
+CRITICAL ALERTS (8):
+1. 🔴 STOP-LOSS VIOLATIONS: Positions #1 & #2 exceed 5% stop-loss by 8.00% and 2.77%
+2. 🔴 CAPITAL DEPLETION: 44.3% loss from initial capital ($250 → $139.32)
+3. 🔴 DATA INCONSISTENCY: Capital shows $139.32 loss, P&L shows $0.8490 profit
+4. 🔴 EXECUTION MODE CONFLICT: REAL TRADING vs SIMULATION discrepancy
+5. 🔴 STRATEGY ERROR: Binance should SHORT but all trades are BUY
+6. 🔴 TRADE COUNT MISMATCH: Status shows 4 trades, endpoint shows 5 trades
+7. 🔴 POSITION SIZING VIOLATION: Position #5 is 200% of initial capital
+8. 🔴 PORTFOLIO CONCENTRATION: 80% ETH exposure (extreme risk)
+
+MARKET CONDITIONS:
+- BTC Price: $66,278.00 (-1.56% 24h)
+- ETH Price: $2,023.11 (-1.27% 24h)
+- Market Sentiment: NEUTRAL
+- BTC Support: $66,167.87 (current price above)
+- ETH Support: $2,019.17 (current price above)
+
+IMMEDIATE ACTIONS REQUIRED:
+1. 🔴 EXIT positions #1 and #2 immediately (stop-loss triggered)
+2. 🔴 PAUSE all new trading (44.3% capital depletion)
+3. 🔴 INVESTIGATE data inconsistency (capital vs P&L mismatch)
+4. 🔴 VERIFY execution mode (real vs simulated)
+5. 🔴 FIX strategy execution (BUY vs SHORT error)
+
+RISK ASSESSMENT:
+- Overall Risk Level: 🔴 CRITICAL
+- Capital Risk: 🔴 CRITICAL (44.3% depletion)
+- Compliance Risk: 🔴 CRITICAL (multiple violations)
+- Execution Risk: 🔴 CRITICAL (data/strategy errors)
+- Market Risk: 🟡 HIGH (negative momentum)
+- Operational Risk: 🟡 HIGH (data inconsistencies)
+
+NEXT STEPS:
+1. Monitor remaining positions for stop-loss triggers
+2. Next analysis scheduled: ~18:39 PM (60 minutes)
+3. Investigate and resolve critical alerts
+4. Review and update risk management parameters
+
+RECOMMENDATIONS:
+1. Increase monitoring frequency to every 15 minutes
+2. Implement automated stop-loss execution
+3. Add capital depletion alerts at 20%, 30%, 40%
+4. Fix data tracking inconsistencies
+5. Verify API connectivity and credentials
+6. Review and update trading strategy
+
+SYSTEM STATUS: 🔴 CRITICAL - REQUIRES IMMEDIATE INTERVENTION
+============================================================

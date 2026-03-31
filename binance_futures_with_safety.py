@@ -43,12 +43,12 @@ FUTURES_CRYPTOS = [
     "XTZ", "EOS", "COMP", "SNX"
 ]
 
-# Trading parameters
+# Trading parameters - REDUCED FOR AVAILABLE MARGIN
 SHORT_THRESHOLD = 0.8   # 0.8% drop for SHORT
 SCAN_INTERVAL = 60      # 60 seconds
-FUTURES_CAPITAL = 50.00  # $50 for futures shorting
+FUTURES_CAPITAL = 25.00  # REDUCED: $25 for futures shorting (matches available margin)
 LEVERAGE = 3            # 3x leverage (conservative)
-POSITION_SIZE = 0.2     # 20% of capital per trade
+POSITION_SIZE = 0.15    # REDUCED: 15% of capital per trade (was 20%)
 STOP_LOSS = 0.05        # 5% stop-loss
 TAKE_PROFIT = 0.08      # 8% take-profit
 
@@ -254,11 +254,12 @@ def main():
     logger.info("🚀 BINANCE FUTURES SHORT TRADING BOT WITH SAFETY")
     logger.info("=" * 70)
     logger.info(f"SHORT threshold: {SHORT_THRESHOLD}% drop")
-    logger.info(f"Futures capital: ${FUTURES_CAPITAL:.2f}")
+    logger.info(f"Futures capital: ${FUTURES_CAPITAL:.2f} (REDUCED for margin)")
     logger.info(f"Leverage: {LEVERAGE}x (conservative)")
-    logger.info(f"Position size: {POSITION_SIZE*100:.0f}% of capital")
+    logger.info(f"Position size: {POSITION_SIZE*100:.0f}% of capital (REDUCED)")
     logger.info(f"Stop-loss: {STOP_LOSS*100:.0f}%, Take-profit: {TAKE_PROFIT*100:.0f}%")
     logger.info(f"Scan interval: {SCAN_INTERVAL} seconds")
+    logger.info(f"Max per trade: ${FUTURES_CAPITAL * POSITION_SIZE:.2f} (was $10)")
     
     if SAFETY_ENABLED:
         logger.info("✅ SAFETY FEATURES ENABLED:")

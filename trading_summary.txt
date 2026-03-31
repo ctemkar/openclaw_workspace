@@ -1,115 +1,58 @@
-TRADING ANALYSIS REPORT
-Generated: 2026-03-31 17:01:14.005703
-==================================================
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-31 17:55:28 (Asia/Bangkok)
+Dashboard: http://localhost:5001/ (✅ ONLINE)
 
-======================================================================
-CONSERVATIVE CRYPTO TRADING SYSTEM
-======================================================================
-Execution Time: 2026-03-31 17:01:09 (UTC+7)
-Capital: $250.00
-Risk Management: 5.0% SL, 10.0% TP
-Position Size: Max 50.0% of capital
-Daily Limit: 2 trades
-API Mode: SIMULATION
-======================================================================
+SYSTEM STATUS:
+- Dashboard Status: ✅ RUNNING
+- Capital: $135.50 (⚠️ 45.8% drawdown from $250 initial)
+- Last Analysis: 2026-03-31T17:39:36.973070 (16 minutes ago)
+- Risk Parameters: 5% stop-loss, 10% take-profit, 999 trades/day
+- Open Positions: 4
+- Total Trades: 5
 
-1️⃣  MARKET DATA ANALYSIS
-----------------------------------------
-📊 Fetching real-time market data...
-✅ BTC/USD: $66,117.45
-✅ ETH/USD: $2,018.45
-✅ BTC 24h Volume: $26,517,504
-✅ ETH 24h Volume: $5,863,430
+PnL PERFORMANCE:
+- Total PnL: $0.8490 (positive but conflicts with capital loss)
+- Unrealized PnL: $0.8490
+- Realized PnL: $0.0000
 
-2️⃣  SUPPORT/RESISTANCE LEVELS
-----------------------------------------
-✅ BTC Support: $66,097.47
-✅ BTC Resistance: $66,116.81
-✅ ETH Support: $2,018.24
-✅ ETH Resistance: $2,018.72
+ACTIVE TRADES:
+1. ETH/USD - BUY @ $2325.28 (0.086) - 13:39:49
+2. ETH/USD - BUY @ $2193.60 (0.0912) - 00:33:02
+3. BTC/USD - BUY @ $67247.51 (0.002974) - 21:29:41
+4. ETH/USD - BUY @ $2052.38 (0.0974) - 21:29:42
+5. ETH/USD - BUY @ $2021.51 (0.2474) - 07:24:00
 
-3️⃣  MARKET SENTIMENT
-----------------------------------------
-✅ Market Sentiment: NEUTRAL
+CRITICAL ISSUES DETECTED:
+1. 🔴 HIGH DRAWDOWN: 45.8% capital loss (above 10% threshold)
+2. 🔴 DATA INCONSISTENCY: Capital shows $135.50 loss vs PnL shows $0.8490 profit
+3. 🔴 STRATEGY MISMATCH: Binance should execute SHORTS but all trades are BUY
+4. 🔴 EXECUTION MODE CONFLICT: Dashboard claims "REAL TRADING" but summary indicates "SIMULATION"
+5. 🔴 POSITION SIZING VIOLATION: Position #5 is ~200% of initial capital
+6. 🔴 PORTFOLIO CONCENTRATION: 80% ETH exposure (4 out of 5 trades)
 
-4️⃣  TRADING ANALYSIS
-----------------------------------------
-✅ Trading Signal: BUY
-✅ Reason: Price within 1% of support ($66097.47)
+RISK ASSESSMENT:
+- Overall Risk Level: 🔴 CRITICAL
+- Capital Risk: 🔴 CRITICAL (45.8% drawdown)
+- Compliance Risk: 🔴 CRITICAL (Multiple violations)
+- Execution Risk: 🔴 CRITICAL (Strategy mismatch, mode conflict)
+- Market Risk: 🔴 CRITICAL (Negative momentum in BTC/ETH)
 
-5️⃣  TRADE EXECUTION
-----------------------------------------
-🎯 TRADE RECOMMENDATION FOUND!
-   Symbol: BTC/USD
-   Entry Price: $66,117.45
-   Position Size: 0.001891
-   Position Value: $125.00
-   Stop Loss: $62,811.58 (5.0%)
-   Take Profit: $72,729.20 (10.0%)
-   Risk/Reward: 1:2.0
+IMMEDIATE ACTIONS REQUIRED:
+1. 🔴 Exit positions exceeding stop-loss (Positions #1 & #2)
+2. 🔴 Pause all new trading until capital depletion addressed
+3. 🔴 Investigate capital tracking system for data inconsistencies
+4. 🔴 Verify execution mode (REAL vs SIMULATION)
+5. 🔴 Fix strategy execution (Binance should be SHORT not BUY)
+6. 🔴 Review and fix position sizing logic
+7. 🔴 Implement portfolio diversification rules
 
-🔧 SIMULATED TRADE EXECUTION
-   To execute real trades:
-   1. Get Gemini API credentials from gemini.com
-   2. Set environment variables:
-      export GEMINI_API_KEY='your_api_key'
-      export GEMINI_API_SECRET='your_api_secret'
-   3. Run this script again
+MONITORING STATUS:
+- Monitoring logs updated: ✅ trading_monitoring.log
+- Critical alerts logged: ✅ critical_alerts.log
+- Next scheduled analysis: ~18:39 PM (44 minutes)
+- System requires immediate intervention
 
-======================================================================
-FINAL TRADING SUMMARY
-======================================================================
-
-CONSERVATIVE CRYPTO TRADING ANALYSIS
-====================================
-Analysis Time: 2026-03-31 17:01:13 (UTC+7)
-
-MARKET DATA:
-• BTC/USD: $66,117.45
-• ETH/USD: $2,018.45
-• BTC 24h Volume: $26,517,504
-• ETH 24h Volume: $5,863,430
-• Market Sentiment: NEUTRAL
-
-SUPPORT/RESISTANCE:
-• BTC Support: $66,097.47
-• BTC Resistance: $66,116.81
-• ETH Support: $2,018.24
-• ETH Resistance: $2,018.72
-
-TRADING DECISION: BUY
-Reason: Price within 1% of support ($66097.47)
-
-TRADE RECOMMENDATION:
-• Symbol: BTC/USD
-• Action: BUY
-• Entry Price: $66,117.45
-• Position Size: 0.001891
-• Position Value: $125.00
-• Stop Loss: $62,811.58 (5.0%)
-• Take Profit: $72,729.20 (10.0%)
-• Risk/Reward Ratio: 1:2.0
-
-EXECUTION STATUS: SIMULATED - API credentials needed
-
-RISK MANAGEMENT PARAMETERS:
-• Capital: $250.00
-• Max Position Size: 50.0% of capital
-• Stop Loss: 5.0%
-• Take Profit: 10.0%
-• Max Daily Trades: 2
-• Strategy: Conservative support-based trading
-
-NEXT STEPS:
-1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
-2. Run analysis again in 6-12 hours
-3. Review market conditions before next trading window
-4. Never risk more than 5% of capital per trade
-
-END OF ANALYSIS
-====================================
-
-
-======================================================================
-SUMMARY READY FOR CRON DELIVERY
-======================================================================
+ALERT STATUS:
+- Critical Alerts: 6 active
+- System Status: 🔴 CRITICAL - Requires immediate attention
