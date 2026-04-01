@@ -1,0 +1,59 @@
+{
+  "positions": [
+    {
+      "symbol": "ADA/USDT",
+      "contracts": 111.19762160812706,
+      "entry_price": 0.2422,
+      "current_price": 0.2408,
+      "position_value": 26.776387283236996,
+      "unrealized_pnl": 0.07761271676300648,
+      "pnl_percent": 0.2898550724637707
+    },
+    {
+      "symbol": "COMP/USDT",
+      "contracts": 3.5048433741526517,
+      "entry_price": 16.77,
+      "current_price": 16.78,
+      "position_value": 58.8112718182815,
+      "unrealized_pnl": 1.610228181718513,
+      "pnl_percent": 2.7379584422079666
+    },
+    {
+      "symbol": "ENJ/USDT",
+      "contracts": 2005.3641938618894,
+      "entry_price": 0.02012,
+      "current_price": 0.0207,
+      "position_value": 41.51103881294111,
+      "unrealized_pnl": -1.2300388129411077,
+      "pnl_percent": -2.9631607594403104
+    }
+  ],
+  "position_count": 3,
+  "total_value": 127.0986979144596,
+  "total_pnl": 0.45780208554041163,
+  "last_updated": "2026-04-01T19:21:55.466379",
+  "gemini_BTC/USD": {
+    "symbol": "BTC/USD",
+    "exchange": "gemini",
+    "side": "buy",
+    "entry_price": 68293.04,
+    "amount": 0.0009540137618709024,
+    "current_price": 68293.04,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-01T21:46:32.123610",
+    "last_updated": "2026-04-01T21:46:32.123614"
+  },
+  "gemini_ETH/USD": {
+    "symbol": "ETH/USD",
+    "exchange": "gemini",
+    "side": "buy",
+    "entry_price": 2127.57,
+    "amount": 0.030622964226793947,
+    "current_price": 2127.57,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-01T23:20:24.218788",
+    "last_updated": "2026-04-01T23:20:24.218791"
+  }
+}

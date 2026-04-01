@@ -12227,3 +12227,12 @@ Click to open REAL-TIME Dashboard:
 http://127.0.0.1:5008
 (Auto-refreshes every 10 seconds)
 
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Wed Apr  1 12:10:00 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5008
+(Auto-refreshes every 10 seconds)
+
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING

@@ -21,24 +21,56 @@ CRYPTOS = [
 ]
 
 def load_keys(exchange):
-    """Load API keys"""
+    """Load API keys from environment variables"""
     try:
+        # First try to load .env file if python-dotenv is available
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+        except ImportError:
+            # Fallback: manually load .env
+            try:
+                with open('.env', 'r') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith('#') and '=' in line:
+                            key, value = line.split('=', 1)
+                            os.environ[key.strip()] = value.strip()
+            except:
+                pass  # .env file might not exist or can't be read
+        
         if exchange == "binance":
-            key_file = os.path.join(BASE_DIR, ".binance_key")
-            secret_file = os.path.join(BASE_DIR, ".binance_secret")
+            api_key = os.getenv('BINANCE_API_KEY')
+            api_secret = os.getenv('BINANCE_API_SECRET')
         elif exchange == "gemini":
-            key_file = os.path.join(BASE_DIR, ".gemini_key")
-            secret_file = os.path.join(BASE_DIR, ".gemini_secret")
+            api_key = os.getenv('GEMINI_API_KEY')
+            api_secret = os.getenv('GEMINI_API_SECRET')
         else:
             return None, None
         
-        with open(key_file, 'r') as f:
-            api_key = f.read().strip()
-        with open(secret_file, 'r') as f:
-            api_secret = f.read().strip()
+        # Fallback to file reading if env vars not set
+        if not api_key or not api_secret:
+            print(f"⚠️  {exchange} keys not in environment, trying file fallback...")
+            if exchange == "binance":
+                key_file = os.path.join(BASE_DIR, ".binance_key")
+                secret_file = os.path.join(BASE_DIR, ".binance_secret")
+            elif exchange == "gemini":
+                key_file = os.path.join(BASE_DIR, ".gemini_key")
+                secret_file = os.path.join(BASE_DIR, ".gemini_secret")
+            else:
+                return None, None
+            
+            try:
+                with open(key_file, 'r') as f:
+                    api_key = f.read().strip()
+                with open(secret_file, 'r') as f:
+                    api_secret = f.read().strip()
+            except:
+                return None, None
         
         return api_key, api_secret
-    except:
+    except Exception as e:
+        print(f"❌ Error loading {exchange} keys: {e}")
         return None, None
 
 def check_balance(exchange_obj):
@@ -94,10 +126,11 @@ def analyze_symbol(exchange_obj, symbol):
 def main():
     """Main function"""
     print("=" * 70)
-    print("26-CRYPTO TRADING BOT - REAL MODE")
+    print("26-CRYPTO TRADING BOT - REAL MODE (.env SECURE VERSION)")
     print("=" * 70)
     print("Monitoring all 26 top cryptocurrencies")
     print("Dual Exchange: Gemini (LONG on 16 cryptos) + Binance (SHORT on 26 cryptos)")
+    print("SECURITY: Using .env file for API keys (not secure_keys/ directory)")
     print("=" * 70)
     
     # Load API keys

@@ -1,0 +1,22 @@
+{
+  "cumulative": {
+    "total": 610.8,
+    "pnl": -400.0,
+    "pnl_percent": -42.0
+  },
+  "gemini": {
+    "total": 540.0,
+    "free": 540.0,
+    "pnl": -400.0,
+    "pnl_percent": -42.0
+  },
+  "binance": {
+    "total": 70.8,
+    "free": 0.0,
+    "pnl": 0.0,
+    "pnl_percent": 0.0
+  },
+  "deployed": 50.0,
+  "available": 540.0,
+  "last_updated": "2026-04-01T19:18:50.728132"
+}

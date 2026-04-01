@@ -1,101 +1,115 @@
-=== AGGRESSIVE CRYPTO MOMENTUM TRADING EXECUTION SUMMARY ===
-Execution Time: 2026-04-01 03:49:50 UTC
-Paper Trading Balance: $25,000.00
-Leverage: 2.0x
-Risk Parameters: 8% stop-loss, 15% take-profit
-Max Daily Trades: 5
-
-📊 MARKET ANALYSIS RESULTS:
-
-1. BTC/USD Analysis:
-   • Current Price: $68,078.64
-   • 1-Hour Change: +0.47%
-   • Volume Ratio: 1.06x
-   • Volatility (24h): 0.53%
-   • RSI (14): 56.4
-   • Trend Strength: 66.7%
-   • Signal: ULTRA AGGRESSIVE BUY
-   • Position Size: 0.220333 BTC
-   • Position Value: $30,000.00 (with 2x leverage)
-   • Stop-loss: $62,632.35 (-8%)
-   • Take-profit: $78,290.44 (+15%)
-   • Risk: $1,200.00
-   • Potential Reward: $2,250.00
-   • Risk/Reward Ratio: 1:1.9
-
-2. ETH/USD Analysis:
-   • Current Price: $2,105.40
-   • 1-Hour Change: +0.53%
-   • Volume Ratio: 1.07x
-   • Volatility (24h): 0.69%
-   • RSI (14): 61.6
-   • MACD: +9.32 (Bullish)
-   • Trend Strength: 77.8%
-   • Signal: ULTRA AGGRESSIVE BUY
-   • Position Size: 7.124544 ETH
-   • Position Value: $30,000.00 (with 2x leverage)
-   • Stop-loss: $1,936.97 (-8%)
-   • Take-profit: $2,421.21 (+15%)
-   • Risk: $1,200.00
-   • Potential Reward: $2,250.00
-   • Risk/Reward Ratio: 1:1.9
-
-3. SOL/USD Analysis:
-   • Current Price: $82.91
-   • 1-Hour Change: +0.34%
-   • Volume Ratio: 1.04x
-   • Volatility (24h): 0.75%
-   • RSI (14): 47.7
-   • Trend Strength: 77.8%
-   • Signal: ULTRA AGGRESSIVE BUY
-   • Position Size: 180.924907 SOL
-   • Position Value: $30,000.00 (with 2x leverage)
-   • Stop-loss: $76.27 (-8%)
-   • Take-profit: $95.34 (+15%)
-   • Risk: $1,200.00
-   • Potential Reward: $2,250.00
-   • Risk/Reward Ratio: 1:1.9
-
-🎯 TRADING OPPORTUNITIES FOUND: 3 ULTRA AGGRESSIVE BUY SIGNALS
-
-📈 PORTFOLIO SUMMARY:
-   • Total Position Value: $90,000.00 (with 2x leverage)
-   • Total Risk Exposure: $3,600.00
-   • Total Potential Reward: $6,750.00
-   • Risk as % of Paper Balance: 14.4%
-   • Reward as % of Paper Balance: 27.0%
-   • Daily Trades Used: 0/5
-   • Trades Remaining Today: 5
-
-⚡ AGGRESSIVE TRADING PARAMETERS:
-   • Minimum Momentum Threshold: 2.5%
-   • Minimum Volume Ratio: 1.3x
-   • Minimum Volatility: 2.0%
-   • Max Position Size: 80% of capital per trade
-   • Leverage Multiplier: 2.0x
-
-⚠️ IMPORTANT NOTES:
-   • PAPER TRADING ONLY - NO REAL FUNDS AT RISK
-   • All trades are simulated using $25,000 paper balance
-   • Data sourced from CoinGecko API (free tier)
-   • Ultra aggressive strategy - higher risk/reward profile
-   • Stop-loss and take-profit levels pre-calculated
-   • Daily trade limit of 5 trades enforced
-
-✅ EXECUTION STATUS: COMPLETED
-   • Market analysis: Complete
-   • Signal generation: Complete
-   • Position sizing: Complete
-   • Risk calculation: Complete
-   • Paper trading ready: Yes
-
-📋 RECOMMENDED ACTIONS:
-   1. Execute paper trades for all 3 signals
-   2. Monitor positions for stop-loss/take-profit triggers
-   3. Watch for additional momentum opportunities
-   4. Review market conditions hourly
-   5. Maintain strict risk management discipline
+TRADING ANALYSIS REPORT
+Generated: 2026-04-01 17:29:58.550269
+==================================================
 
 ======================================================================
-AGGRESSIVE MOMENTUM TRADING EXECUTION - PAPER TRADING COMPLETE
+CONSERVATIVE CRYPTO TRADING SYSTEM
+======================================================================
+Execution Time: 2026-04-01 17:29:53 (UTC+7)
+Capital: $250.00
+Risk Management: 5.0% SL, 10.0% TP
+Position Size: Max 50.0% of capital
+Daily Limit: 2 trades
+API Mode: SIMULATION
+======================================================================
+
+1️⃣  MARKET DATA ANALYSIS
+----------------------------------------
+📊 Fetching real-time market data...
+✅ BTC/USD: $68,499.41
+✅ ETH/USD: $2,129.50
+✅ BTC 24h Volume: $19,387,569
+✅ ETH 24h Volume: $5,256,536
+
+2️⃣  SUPPORT/RESISTANCE LEVELS
+----------------------------------------
+✅ BTC Support: $68,496.60
+✅ BTC Resistance: $68,505.09
+✅ ETH Support: $2,129.21
+✅ ETH Resistance: $2,129.82
+
+3️⃣  MARKET SENTIMENT
+----------------------------------------
+✅ Market Sentiment: NEUTRAL
+
+4️⃣  TRADING ANALYSIS
+----------------------------------------
+✅ Trading Signal: BUY
+✅ Reason: Price within 1% of support ($68496.6)
+
+5️⃣  TRADE EXECUTION
+----------------------------------------
+🎯 TRADE RECOMMENDATION FOUND!
+   Symbol: BTC/USD
+   Entry Price: $68,499.41
+   Position Size: 0.001825
+   Position Value: $125.00
+   Stop Loss: $65,074.44 (5.0%)
+   Take Profit: $75,349.35 (10.0%)
+   Risk/Reward: 1:2.0
+
+🔧 SIMULATED TRADE EXECUTION
+   To execute real trades:
+   1. Get Gemini API credentials from gemini.com
+   2. Set environment variables:
+      export GEMINI_API_KEY='your_api_key'
+      export GEMINI_API_SECRET='your_api_secret'
+   3. Run this script again
+
+======================================================================
+FINAL TRADING SUMMARY
+======================================================================
+
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+====================================
+Analysis Time: 2026-04-01 17:29:58 (UTC+7)
+
+MARKET DATA:
+• BTC/USD: $68,499.41
+• ETH/USD: $2,129.50
+• BTC 24h Volume: $19,387,569
+• ETH 24h Volume: $5,256,536
+• Market Sentiment: NEUTRAL
+
+SUPPORT/RESISTANCE:
+• BTC Support: $68,496.60
+• BTC Resistance: $68,505.09
+• ETH Support: $2,129.21
+• ETH Resistance: $2,129.82
+
+TRADING DECISION: BUY
+Reason: Price within 1% of support ($68496.6)
+
+TRADE RECOMMENDATION:
+• Symbol: BTC/USD
+• Action: BUY
+• Entry Price: $68,499.41
+• Position Size: 0.001825
+• Position Value: $125.00
+• Stop Loss: $65,074.44 (5.0%)
+• Take Profit: $75,349.35 (10.0%)
+• Risk/Reward Ratio: 1:2.0
+
+EXECUTION STATUS: SIMULATED - API credentials needed
+
+RISK MANAGEMENT PARAMETERS:
+• Capital: $250.00
+• Max Position Size: 50.0% of capital
+• Stop Loss: 5.0%
+• Take Profit: 10.0%
+• Max Daily Trades: 2
+• Strategy: Conservative support-based trading
+
+NEXT STEPS:
+1. Set GEMINI_API_KEY and GEMINI_API_SECRET environment variables for real trading
+2. Run analysis again in 6-12 hours
+3. Review market conditions before next trading window
+4. Never risk more than 5% of capital per trade
+
+END OF ANALYSIS
+====================================
+
+
+======================================================================
+SUMMARY READY FOR CRON DELIVERY
 ======================================================================

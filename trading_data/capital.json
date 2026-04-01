@@ -1,11 +1,13 @@
 {
-  "gemini_total": 533.4705922885069,
-  "binance_total": 154.02,
-  "total_capital": 687.4905922885068,
-  "deployed": 265.825,
-  "available_gemini": 265.825,
-  "available_binance": 154.02,
-  "position_count": 5,
-  "avg_position_value": 53.165,
-  "last_updated": "2026-04-01T03:25:05.360246"
+  "gemini_total": 540.0,
+  "binance_total": 70.8,
+  "total_capital": 610.8,
+  "deployed": 50.0,
+  "available_gemini": 540.0,
+  "available_binance": 0.0,
+  "position_count": 1,
+  "avg_position_value": 50.0,
+  "total_pnl": -400.0,
+  "pnl_percent": -42.0,
+  "last_updated": "2026-04-01T19:18:50.727960"
 }

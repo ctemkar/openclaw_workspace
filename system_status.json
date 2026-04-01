@@ -1,68 +1,106 @@
 {
-  "timestamp": "2026-04-01T10:06:00.000000",
-  "system_status": "ACTIVE",
-  "trading_status": "ACTIVE_WITH_MARGIN_ISSUES",
-  "capital": {
-    "initial": 946.97,
-    "current": 531.65,
-    "free_usd": 134.27,
-    "binance_futures_equity": 0,
-    "binance_futures_unrealized_pnl": 0,
-    "btc_holdings": 0.0,
-    "btc_value": 0.0,
-    "pnl": -415.32,
-    "pnl_percent": -43.86,
-    "notes": "CUMULATIVE P&L UPDATED. Initial: $946.97 → Current: $531.65. Binance partially accessible but with margin issues. Gemini trading available.",
-    "recovery_target": 946.97,
-    "recovery_needed": 415.32,
-    "recovery_percent_needed": 78.1
-  },
-  "positions": {
-    "open": 1,
-    "closed": 7,
-    "total_trades_today": 1,
-    "details": {
-      "gemini_long": 0,
-      "binance_short": 1
+  "api": {
+    "capital_allocation": {
+      "total": 125.83519699398818,
+      "gemini": 14.473002213988185,
+      "binance": 70.90085306,
+      "deployed": 73.338624949,
+      "available_total": 54.97387143398818,
+      "available_gemini": 14.473002213988185,
+      "available_binance": 0.0395275,
+      "position_count": 2,
+      "avg_position_value": 36.6693124745,
+      "pnl": 0.4425883399999999,
+      "pnl_percent": 0.35296206431217203,
+      "last_updated": "2026-04-01T17:35:20.891237",
+      "gemini_holdings": [
+        {
+          "currency": "USD",
+          "amount": 14.473002213988185,
+          "price": 1.0,
+          "value": 14.473002213988185
+        },
+        {
+          "currency": "BTC",
+          "amount": 5e-09,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "ETH",
+          "amount": 9e-07,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "BCH",
+          "amount": 1.134116,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "AMP",
+          "amount": 6.55389178329e-07,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "FTM",
+          "amount": 1e-06,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "SOL",
+          "amount": 0.05986488,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "POL",
+          "amount": 1.543939580891e-07,
+          "price": 0,
+          "value": 0
+        },
+        {
+          "currency": "MON",
+          "amount": 4.21346105793e-07,
+          "price": 0,
+          "value": 0
+        }
+      ]
     },
-    "current_positions_summary": {
-      "total_invested": 13.43,
-      "total_unrealized_pnl": 0,
-      "average_profit_percent": 0,
-      "best_position": "ADA/USDT short"
-    }
-  },
-  "trading_bots": {
-    "26_crypto_trader": {
-      "status": "ACTIVE",
-      "pid": "37929",
-      "mode": "AGGRESSIVE",
-      "trades_executed": 1,
-      "positions": ["ADA/USDT short"],
-      "capital_allocation": {
-        "invested_in_positions": 13.43,
-        "available_for_new_trades": 120.84,
-        "total_futures_equity": 0
+    "cumulative_pnl": {
+      "current": 125.83519699398818,
+      "free_usd": 54.93434393398818,
+      "btc_holdings": 0,
+      "overall_pnl": 0.4425883399999999,
+      "overall_pnl_percent": 0.35296206431217203
+    },
+    "positions": [
+      {
+        "symbol": "ENJ/USDT:USDT",
+        "contracts": 1335.0,
+        "entry_price": 0.0200999850188,
+        "current_price": 0.02068717,
+        "position_value": 27.617371950000003,
+        "unrealized_pnl": -0.78389865,
+        "pnl_percent": -2.7600830295247425
       },
-      "notes": "26-crypto bot restarted at 10:05 AM. Binance partially accessible - 1 trade executed (ADA/USDT short) but margin issues on subsequent trades. Gemini trading active with $134.27 capital."
+      {
+        "symbol": "COMP/USDT:USDT",
+        "contracts": 2.726,
+        "entry_price": 17.2222083639,
+        "current_price": 16.7722865,
+        "position_value": 45.721252999,
+        "unrealized_pnl": 1.22648699,
+        "pnl_percent": 2.7564747497535262
+      }
+    ],
+    "exchange_status": {
+      "gemini": "operational",
+      "binance": "operational"
     }
   },
-  "risk_status": "HIGH",
-  "issues_fixed": [
-    "Bot restarted after stopping at 05:46 AM",
-    "All dashboards restarted",
-    "System fully operational"
-  ],
-  "next_actions": [
-    "Monitor Binance margin issues",
-    "Verify Binance account balance and margin",
-    "$120.84 available for new trades",
-    "Cumulative P&L: $-415.32 (-43.86%)",
-    "Scan interval: 300 seconds (5 minutes)"
-  ],
-  "exchange_status": {
-    "gemini": "ACTIVE",
-    "binance": "PARTIAL_ACCESS_MARGIN_ISSUES",
-    "binance_error": "Margin is insufficient for most trades, but ADA/USDT short executed successfully"
-  }
+  "timestamp": "2026-04-01T22:53:42.425038"
 }

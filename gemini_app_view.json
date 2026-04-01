@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-04-01T23:06:45.953448",
+  "account_status": "checked_via_api",
+  "total_assets": 26,
+  "non_zero_assets": 9,
+  "balances": [
+    {
+      "currency": "USD",
+      "amount": 14.473002213988185,
+      "available": 9.449950647688183,
+      "has_balance": true
+    },
+    {
+      "currency": "BTC",
+      "amount": 5e-09,
+      "available": 5e-09,
+      "has_balance": true
+    },
+    {
+      "currency": "ETH",
+      "amount": 9e-07,
+      "available": 9e-07,
+      "has_balance": true
+    },
+    {
+      "currency": "LTC",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "BCH",
+      "amount": 1.134116,
+      "available": 1.134116,
+      "has_balance": true
+    },
+    {
+      "currency": "DAI",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "LINK",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "AMP",
+      "amount": 6.55389178329e-07,
+      "available": 6.55389178329e-07,
+      "has_balance": true
+    },
+    {
+      "currency": "UNI",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "MATIC",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "FTM",
+      "amount": 1e-06,
+      "available": 1e-06,
+      "has_balance": true
+    },
+    {
+      "currency": "DOGE",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "CHZ",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "DOT",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "GUSD",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "USDC",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "RNDR",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "SHIB",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "SOL",
+      "amount": 0.05986488,
+      "available": 0.05986488,
+      "has_balance": true
+    },
+    {
+      "currency": "AVAX",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "ATOM",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "HNT",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "XRP",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "POL",
+      "amount": 1.543939580891e-07,
+      "available": 1.543939580891e-07,
+      "has_balance": true
+    },
+    {
+      "currency": "SKY",
+      "amount": 0.0,
+      "available": 0.0,
+      "has_balance": false
+    },
+    {
+      "currency": "MON",
+      "amount": 4.21346105793e-07,
+      "available": 4.21346105793e-07,
+      "has_balance": true
+    }
+  ],
+  "usd_balance": 14.473002213988185,
+  "available_usd": 9.449950647688183,
+  "note": "This is what's ACTUALLY in the Gemini account right now"
+}

@@ -1,6 +1,14 @@
 {
-  "status": "waiting",
-  "last_activity": "Completed cycle 105, found 0 opportunities",
-  "next_scan": "2026-04-01T03:25:00.344899",
-  "last_updated": "2026-04-01T03:25:00.344919"
+  "status": "running",
+  "last_cycle": "2026-04-01T17:35:20.892263",
+  "cycle_interval": 300,
+  "position_size_percent": 5,
+  "mode": "aggressive",
+  "exchanges": {
+    "gemini": "operational",
+    "binance": "operational"
+  },
+  "total_trades": 1,
+  "last_trade": "COMP/USDT short",
+  "last_updated": "2026-04-01T17:35:20.892268"
 }

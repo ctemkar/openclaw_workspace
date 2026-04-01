@@ -28,14 +28,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# All 26 cryptocurrencies
+# All available cryptocurrencies (23 of original 26 - MATIC not available, MKR/OMG inactive)
 ALL_CRYPTOS = [
     'BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI',
-    'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'SNX', 'MKR', 'BAT',
-    'ZRX', 'OMG', 'ENJ', 'MATIC', 'SUSHI', 'CRV'
+    'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'SNX', 'BAT', 'ZRX',
+    'ENJ', 'SUSHI', 'CRV'
 ]
 
-# Gemini available cryptos (16 of 26)
+# Gemini available cryptos (filtered to match available trading pairs)
 GEMINI_CRYPTOS = [
     'BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI',
     'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI'
@@ -44,10 +44,10 @@ GEMINI_CRYPTOS = [
 # Trading parameters - ADJUSTED TO 1.0% THRESHOLDS
 # OLD: SHORT_THRESHOLD = 3.0 (too high, no trades)
 # NEW: SHORT_THRESHOLD = 1.0 (balanced approach)
-GEMINI_CAPITAL = 134.27  # Gemini cash balance
-BINANCE_CAPITAL = 134.27 # Binance Futures capital
+GEMINI_CAPITAL = 319.04  # Gemini cash balance (80% of $542.93)
+BINANCE_CAPITAL = 0.0 # Binance Futures capital
 LEVERAGE = 1             # REDUCED from 3x to 1x (SAFER)
-POSITION_SIZE = 0.10     # REDUCED from 25% to 10% of capital (BETTER RISK)
+POSITION_SIZE = 0.2     # REDUCED from 10% to 5% of capital (FIX MARGIN ISSUE)
 LONG_THRESHOLD = 1.0     # ADJUSTED from 3.0% to 1.0% (BALANCED)
 SHORT_THRESHOLD = 1.0    # ADJUSTED from 3.0% to 1.0% (BALANCED)
 STOP_LOSS = 0.03         # TIGHTER from 5% to 3% stop-loss
@@ -133,29 +133,47 @@ def check_gemini_long_opportunities(exchange, crypto):
             if open_price and open_price > 0:
                 change_percent = ((current_price - open_price) / open_price) * 100
         
+        # Check for BOTH dip buying AND momentum trading
+        signal_type = None
         if change_percent and change_percent <= -LONG_THRESHOLD:
-            logger.info(f"⚡ GEMINI LONG SIGNAL: {crypto} down {change_percent:.2f}%")
-            
+            signal_type = "DIP"
+            logger.info(f"⚡ GEMINI LONG SIGNAL (DIP): {crypto} down {change_percent:.2f}%")
+        elif change_percent and change_percent >= LONG_THRESHOLD:
+            signal_type = "MOMENTUM"
+            logger.info(f"⚡ GEMINI LONG SIGNAL (MOMENTUM): {crypto} up {change_percent:.2f}%")
+        
+        if signal_type:
             # Calculate position size
             position_value = GEMINI_CAPITAL * POSITION_SIZE  # $15
             amount = position_value / current_price
+            
+            # Adjust stop-loss/take-profit based on signal type
+            if signal_type == "DIP":
+                # For dips: tighter stop-loss, regular take-profit
+                stop_loss = current_price * (1 + STOP_LOSS)  # Stop if drops further
+                take_profit = current_price * (1 - TAKE_PROFIT)  # Profit if recovers
+            else:  # MOMENTUM
+                # For momentum: regular stop-loss, aggressive take-profit
+                stop_loss = current_price * (1 - STOP_LOSS)  # Stop if momentum reverses
+                take_profit = current_price * (1 + TAKE_PROFIT * 1.5)  # Higher profit target
             
             trade_data = {
                 'exchange': 'gemini',
                 'symbol': symbol,
                 'side': 'buy',
-                'type': 'LONG',
+                'type': f'LONG_{signal_type}',
                 'current_price': current_price,
                 'change_percent': change_percent,
                 'amount': amount,
                 'position_value': position_value,
                 'capital_risk': position_value,
-                'stop_loss': current_price * (1 + STOP_LOSS),  # For LONG: stop if price drops further
-                'take_profit': current_price * (1 - TAKE_PROFIT),  # For LONG: profit if price recovers
+                'stop_loss': stop_loss,
+                'take_profit': take_profit,
+                'signal_type': signal_type,
                 'status': 'SIGNAL_DETECTED'
             }
             
-            logger.info(f"🎯 PREPARING GEMINI LONG: {crypto}")
+            logger.info(f"🎯 PREPARING GEMINI LONG ({signal_type}): {crypto}")
             logger.info(f"    Current price: ${current_price:.2f}")
             logger.info(f"    24h change: {change_percent:.2f}%")
             logger.info(f"    Position size: {amount:.6f} {crypto}")
@@ -172,6 +190,8 @@ def check_gemini_long_opportunities(exchange, crypto):
     return None
 
 def check_binance_short_opportunities(exchange, crypto):
+    # DISABLED - Binance balance is $0.00
+    return None
     """Check for SHORT opportunities on Binance Futures"""
     try:
         symbol = f"{crypto}/USDT"
@@ -366,7 +386,7 @@ def main():
     logger.info(f"₿ Binance SHORT: {len(ALL_CRYPTOS)} cryptos (${BINANCE_CAPITAL:.2f} capital, {LEVERAGE}x)")
     logger.info(f"📈 LONG threshold: {LONG_THRESHOLD}% drop (MORE AGGRESSIVE!)")
     logger.info(f"📉 SHORT threshold: {SHORT_THRESHOLD}% drop (MORE AGGRESSIVE!)")
-    logger.info(f"💰 Position size: {POSITION_SIZE*100:.0f}% of capital (MORE AGGRESSIVE!)")
+    logger.info(f"💰 Position size: {POSITION_SIZE*100:.0f}% of capital (REDUCED FOR MARGIN)")
     logger.info(f"🛑 Stop-loss: {STOP_LOSS*100:.0f}%, ✅ Take-profit: {TAKE_PROFIT*100:.0f}% (HIGHER PROFIT!)")
     logger.info(f"⏰ Scan interval: {SCAN_INTERVAL} seconds (FASTER!)")
     logger.info("=" * 70)

@@ -364,6 +364,10 @@ def dashboard():
         deployed = capital_data.get('deployed', 0)
         available = capital_data.get('available_total', 134.27)
     
+    # Get P&L from capital_data if available
+    pnl = capital_data.get('pnl', 0)
+    pnl_percent = capital_data.get('pnl_percent', 0)
+    
     capital = {
         'total': total,
         'gemini': gemini,
@@ -372,7 +376,9 @@ def dashboard():
         'binance_percent': (binance / total * 100) if total > 0 else 0,
         'deployed': deployed,
         'deployed_percent': (deployed / total * 100) if total > 0 else 0,
-        'available': available
+        'available': available,
+        'pnl': pnl,
+        'pnl_percent': pnl_percent
     }
     
     return render_template_string(

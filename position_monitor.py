@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Position Monitor - Tracks open positions and calculates real-time P&L
+POSITION MONITOR - Checks LLM consensus on current holdings
+Closes positions if LLMs turn negative or show strong sell signals
 """
 
 import json
 import os
 import time
-import ccxt
+import requests
 from datetime import datetime
+import ccxt
 import logging
 
 BASE_DIR = "/Users/chetantemkar/.openclaw/workspace/app"
@@ -23,253 +25,265 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def load_open_positions():
-    """Load all open positions from trade files"""
-    open_positions = []
-    
-    # Check Binance futures trades
-    binance_trades_file = os.path.join(BASE_DIR, "executed_futures_trades.json")
-    if os.path.exists(binance_trades_file):
-        with open(binance_trades_file, 'r') as f:
-            trades = json.load(f)
-        
-        for trade in trades:
-            if trade.get('status') in ['EXECUTED', 'OPEN']:
-                open_positions.append({
-                    'exchange': 'binance_futures',
-                    'symbol': trade['symbol'],
-                    'side': trade['side'],
-                    'type': trade.get('type', 'SHORT'),
-                    'entry_price': trade['entry_price'],
-                    'amount': trade['amount'],
-                    'position_value': trade.get('position_value', 0),
-                    'leverage': trade.get('leverage', 1),
-                    'stop_loss': trade.get('stop_loss', 0),
-                    'take_profit': trade.get('take_profit', 0),
-                    'timestamp': trade['timestamp'],
-                    'trade_data': trade
-                })
-    
-    # Check Gemini trades
-    gemini_trades_file = os.path.join(BASE_DIR, "real_trades_history.json")
-    if os.path.exists(gemini_trades_file):
-        with open(gemini_trades_file, 'r') as f:
-            trades = json.load(f)
-        
-        for trade in trades:
-            if trade.get('status') in ['open', 'executed']:
-                open_positions.append({
-                    'exchange': 'gemini',
-                    'symbol': trade['symbol'],
-                    'side': trade['side'],
-                    'type': 'SPOT',
-                    'entry_price': trade['price'],
-                    'amount': trade['quantity'],
-                    'position_value': trade.get('value', 0),
-                    'leverage': 1,
-                    'timestamp': trade['timestamp'],
-                    'trade_data': trade
-                })
-    
-    return open_positions
+# LLM models to query - ALL 8 MODELS including new additions
+OLLAMA_MODELS = [
+    "glm-4.7-flash:latest",    # Large model, good reasoning
+    "llama3.1:latest",         # Balanced model  
+    "llama3:latest",           # Reliable model
+    "qwen2.5-coder:32b",       # Large coder model
+    "qwen3:latest",            # NEW addition
+    "mistral:latest",          # NEW addition
+    "deepseek-r1:latest",      # NEW addition (reasoning model)
+    "llama3.1:8b"              # Smaller but fast
+]
 
-def calculate_position_pnl(position, current_price):
-    """Calculate P&L for a position"""
-    entry = position['entry_price']
-    amount = position['amount']
-    side = position['side']
-    leverage = position.get('leverage', 1)
+def load_current_positions():
+    """Load current positions from trades.json"""
+    trades_file = os.path.join(BASE_DIR, "trading_data/trades.json")
+    if not os.path.exists(trades_file):
+        return []
     
-    if side == 'buy' or side == 'BUY':
-        # LONG position: profit when price goes up
-        pnl = (current_price - entry) * amount
-        pnl_percent = ((current_price - entry) / entry) * 100
-    else:
-        # SHORT position: profit when price goes down
-        pnl = (entry - current_price) * amount
-        pnl_percent = ((entry - current_price) / entry) * 100
+    with open(trades_file, 'r') as f:
+        trades = json.load(f)
     
-    # Apply leverage for futures
-    if position['exchange'] == 'binance_futures':
-        pnl *= leverage
-        pnl_percent *= leverage
+    # Get unique symbols from current trades
+    positions = {}
+    for trade in trades:
+        symbol = trade.get('symbol', '')
+        exchange = trade.get('exchange', '')
+        if symbol and exchange:
+            key = f"{exchange}:{symbol}"
+            if key not in positions:
+                positions[key] = {
+                    'exchange': exchange,
+                    'symbol': symbol,
+                    'side': trade.get('side', 'buy'),
+                    'entry_price': trade.get('price', 0),
+                    'amount': trade.get('amount', 0),
+                    'value': trade.get('value', 0),
+                    'current_price': trade.get('current_price', trade.get('price', 0)),
+                    'pnl': trade.get('pnl', 0),
+                    'pnl_percent': trade.get('pnl_percent', 0),
+                    'timestamp': trade.get('timestamp', '')
+                }
     
-    return {
-        'pnl': pnl,
-        'pnl_percent': pnl_percent,
-        'current_price': current_price,
-        'value_change': abs(current_price - entry) * amount
-    }
+    return list(positions.values())
 
-def check_position_closure(position, pnl_data):
-    """Check if position should be closed based on stop-loss/take-profit"""
-    current_price = pnl_data['current_price']
-    pnl_percent = pnl_data['pnl_percent']
-    
-    should_close = False
-    close_reason = ""
-    
-    # Check stop-loss
-    stop_loss = position.get('stop_loss', 0)
-    if stop_loss > 0:
-        if position['side'] in ['buy', 'BUY']:
-            # LONG: stop-loss if price drops below stop_loss
-            if current_price <= stop_loss:
-                should_close = True
-                close_reason = f"Stop-loss hit: ${current_price:.4f} <= ${stop_loss:.4f}"
+def get_current_price(exchange_name, symbol):
+    """Get current price from exchange"""
+    try:
+        # Load exchange
+        if exchange_name == 'gemini':
+            with open(os.path.join(BASE_DIR, 'secure_keys/gemini_keys.json')) as f:
+                keys = json.load(f)
+            exchange = ccxt.gemini({
+                'apiKey': keys['api_key'],
+                'secret': keys['api_secret']
+            })
+            # Convert symbol format
+            if '/USDT' in symbol:
+                symbol = symbol.replace('/USDT', '/USD')
+        elif exchange_name == 'binance':
+            with open(os.path.join(BASE_DIR, 'secure_keys/binance_keys.json')) as f:
+                keys = json.load(f)
+            exchange = ccxt.binance({
+                'apiKey': keys['api_key'],
+                'secret': keys['api_secret']
+            })
+            # Convert symbol format
+            if '/USD' in symbol and '/USDT' not in symbol:
+                symbol = symbol.replace('/USD', '/USDT')
         else:
-            # SHORT: stop-loss if price rises above stop_loss
-            if current_price >= stop_loss:
-                should_close = True
-                close_reason = f"Stop-loss hit: ${current_price:.4f} >= ${stop_loss:.4f}"
-    
-    # Check take-profit
-    take_profit = position.get('take_profit', 0)
-    if take_profit > 0:
-        if position['side'] in ['buy', 'BUY']:
-            # LONG: take-profit if price rises above take_profit
-            if current_price >= take_profit:
-                should_close = True
-                close_reason = f"Take-profit hit: ${current_price:.4f} >= ${take_profit:.4f}"
-        else:
-            # SHORT: take-profit if price drops below take_profit
-            if current_price <= take_profit:
-                should_close = True
-                close_reason = f"Take-profit hit: ${current_price:.4f} <= ${take_profit:.4f}"
-    
-    return should_close, close_reason
+            return None
+        
+        ticker = exchange.fetch_ticker(symbol)
+        return ticker['last']
+    except Exception as e:
+        logger.error(f"❌ Error fetching {symbol} price: {e}")
+        return None
 
-def update_trade_status(trade_data, status, exit_price=0, pnl=0):
-    """Update trade status in the trade file"""
-    exchange = trade_data.get('exchange', '')
-    
-    if exchange == 'binance_futures':
-        trades_file = os.path.join(BASE_DIR, "executed_futures_trades.json")
-    elif exchange == 'gemini':
-        trades_file = os.path.join(BASE_DIR, "real_trades_history.json")
-    else:
-        return False
+def query_llm_for_position(model, symbol, current_price, entry_price, pnl_percent):
+    """Ask LLM about current position"""
+    prompt = f"""
+Analyze our current position in {symbol}.
+We are LONG (bought) at entry price: ${entry_price:.4f}
+Current price: ${current_price:.4f}
+Current P&L: {pnl_percent:+.2f}%
+
+Should we:
+1. HOLD (continue holding)
+2. CLOSE (take profit/cut loss)
+3. ADD (buy more)
+
+Consider: Market conditions, risk management, technical analysis.
+Respond ONLY as JSON: {{"action":"HOLD|CLOSE|ADD", "confidence":1-10, "reason":"brief"}}
+"""
     
     try:
-        if os.path.exists(trades_file):
-            with open(trades_file, 'r') as f:
-                trades = json.load(f)
-            
-            # Find and update the trade
-            for i, trade in enumerate(trades):
-                if trade.get('timestamp') == trade_data.get('timestamp'):
-                    trades[i]['status'] = status
-                    if exit_price > 0:
-                        trades[i]['exit_price'] = exit_price
-                    if pnl != 0:
-                        trades[i]['pnl'] = pnl
-                        trades[i]['pnl_percent'] = (pnl / trade_data.get('position_value', 1)) * 100
-                    trades[i]['closed_at'] = datetime.now().isoformat()
-                    
-                    # Save updated trades
-                    with open(trades_file, 'w') as f:
-                        json.dump(trades, f, indent=2)
-                    
-                    logger.info(f"✅ Updated {exchange} trade status to {status}")
-                    return True
+        response = requests.post(
+            'http://localhost:11434/api/generate',
+            json={
+                "model": model,
+                "prompt": prompt,
+                "stream": False,
+                "format": "json"
+            },
+            timeout=15
+        )
         
-        return False
+        if response.status_code == 200:
+            result = response.json()
+            try:
+                analysis = json.loads(result.get('response', '{}'))
+                return {
+                    'model': model,
+                    'action': analysis.get('action', 'HOLD'),
+                    'confidence': analysis.get('confidence', 5),
+                    'reason': analysis.get('reason', 'No reason')
+                }
+            except:
+                return {'model': model, 'action': 'HOLD', 'confidence': 5, 'reason': 'Parse error'}
+        else:
+            logger.error(f"❌ {model} failed: {response.status_code}")
+            return None
+            
     except Exception as e:
-        logger.error(f"Error updating trade status: {e}")
-        return False
+        logger.error(f"❌ Error querying {model}: {e}")
+        return None
+
+def get_llm_consensus_for_position(symbol, current_price, entry_price, pnl_percent):
+    """Get consensus from multiple LLMs about a position"""
+    results = []
+    
+    for model in OLLAMA_MODELS:
+        result = query_llm_for_position(model, symbol, current_price, entry_price, pnl_percent)
+        if result:
+            results.append(result)
+    
+    if not results:
+        return None
+    
+    # Count votes for each action
+    action_counts = {'HOLD': 0, 'CLOSE': 0, 'ADD': 0}
+    total_confidence = 0
+    
+    for result in results:
+        action = result['action']
+        confidence = result['confidence']
+        
+        if action in action_counts:
+            action_counts[action] += 1
+            total_confidence += confidence
+    
+    # Determine consensus
+    max_action = max(action_counts, key=action_counts.get)
+    max_count = action_counts[max_action]
+    total_votes = len(results)
+    
+    consensus = {
+        'symbol': symbol,
+        'current_price': current_price,
+        'entry_price': entry_price,
+        'pnl_percent': pnl_percent,
+        'actions': action_counts,
+        'total_votes': total_votes,
+        'consensus_action': max_action,
+        'consensus_strength': max_count / total_votes if total_votes > 0 else 0,
+        'avg_confidence': total_confidence / total_votes if total_votes > 0 else 0,
+        'details': results
+    }
+    
+    return consensus
+
+def should_close_position(consensus, pnl_percent):
+    """Determine if position should be closed"""
+    # Rule 1: Strong CLOSE consensus (≥75% votes)
+    if consensus['consensus_action'] == 'CLOSE' and consensus['consensus_strength'] >= 0.75:
+        logger.warning(f"🚨 STRONG CLOSE consensus for {consensus['symbol']}: {consensus['consensus_strength']*100:.0f}%")
+        return True
+    
+    # Rule 2: Moderate CLOSE consensus AND losing position
+    if (consensus['consensus_action'] == 'CLOSE' and 
+        consensus['consensus_strength'] >= 0.5 and 
+        pnl_percent < -2.0):  # Down more than 2%
+        logger.warning(f"⚠️ CLOSE consensus + loss for {consensus['symbol']}: {pnl_percent:+.2f}%")
+        return True
+    
+    # Rule 3: High confidence CLOSE regardless of votes
+    close_votes = consensus['actions']['CLOSE']
+    if close_votes > 0:
+        # Check if any CLOSE vote has high confidence (≥8)
+        high_confidence_close = any(
+            r['action'] == 'CLOSE' and r['confidence'] >= 8 
+            for r in consensus['details']
+        )
+        if high_confidence_close:
+            logger.warning(f"⚠️ High-confidence CLOSE vote for {consensus['symbol']}")
+            return True
+    
+    return False
 
 def monitor_positions():
     """Main monitoring loop"""
-    logger.info("🚀 Starting Position Monitor")
-    logger.info("=" * 60)
-    
-    # Initialize exchange connections
-    binance = ccxt.binance()
+    logger.info("=" * 70)
+    logger.info("🧠 POSITION MONITOR - LLM Consensus on Current Holdings")
+    logger.info("=" * 70)
     
     while True:
         try:
-            open_positions = load_open_positions()
+            # Load current positions
+            positions = load_current_positions()
             
-            if not open_positions:
-                logger.info("No open positions to monitor")
-                time.sleep(60)  # Check every minute
+            if not positions:
+                logger.info("📭 No active positions found")
+                time.sleep(300)  # 5 minutes
                 continue
             
-            logger.info(f"📊 Monitoring {len(open_positions)} open positions")
+            logger.info(f"📊 Monitoring {len(positions)} positions")
             
-            total_unrealized_pnl = 0
-            positions_to_close = []
-            
-            for position in open_positions:
+            for position in positions:
                 symbol = position['symbol']
+                exchange = position['exchange']
+                entry_price = position['entry_price']
+                pnl_percent = position['pnl_percent']
                 
-                try:
-                    # Get current price
-                    ticker = binance.fetch_ticker(symbol)
-                    current_price = ticker['last']
-                    
-                    # Calculate P&L
-                    pnl_data = calculate_position_pnl(position, current_price)
-                    
-                    # Check if position should be closed
-                    should_close, close_reason = check_position_closure(position, pnl_data)
-                    
-                    # Log position status
-                    status_symbol = "📈" if pnl_data['pnl'] > 0 else "📉" if pnl_data['pnl'] < 0 else "➖"
-                    logger.info(f"{status_symbol} {symbol} ({position['side']}): "
-                               f"Entry: ${position['entry_price']:.4f}, "
-                               f"Current: ${current_price:.4f}, "
-                               f"P&L: ${pnl_data['pnl']:.2f} ({pnl_data['pnl_percent']:.1f}%)")
-                    
-                    if should_close:
-                        logger.warning(f"⚠️  Should close {symbol}: {close_reason}")
-                        positions_to_close.append({
-                            'position': position,
-                            'current_price': current_price,
-                            'pnl': pnl_data['pnl'],
-                            'reason': close_reason
-                        })
-                    
-                    total_unrealized_pnl += pnl_data['pnl']
-                    
-                except Exception as e:
-                    logger.error(f"Error monitoring {symbol}: {e}")
-            
-            # Log total P&L
-            if total_unrealized_pnl > 0:
-                logger.info(f"💰 Total Unrealized P&L: +${total_unrealized_pnl:.2f}")
-            elif total_unrealized_pnl < 0:
-                logger.info(f"💰 Total Unrealized P&L: -${abs(total_unrealized_pnl):.2f}")
-            else:
-                logger.info(f"💰 Total Unrealized P&L: ${total_unrealized_pnl:.2f}")
-            
-            # Close positions that hit stop-loss/take-profit
-            for close_info in positions_to_close:
-                position = close_info['position']
-                logger.critical(f"🔒 Closing {position['symbol']}: {close_info['reason']}")
+                # Get current price
+                current_price = get_current_price(exchange, symbol)
+                if not current_price:
+                    current_price = position['current_price']
                 
-                # Update trade status (in real trading, would execute close order)
-                success = update_trade_status(
-                    position['trade_data'],
-                    'CLOSED',
-                    close_info['current_price'],
-                    close_info['pnl']
+                # Update P&L
+                if position['side'] == 'buy':  # LONG
+                    new_pnl_percent = ((current_price - entry_price) / entry_price) * 100
+                else:  # SHORT
+                    new_pnl_percent = ((entry_price - current_price) / entry_price) * 100
+                
+                # Get LLM consensus
+                logger.info(f"\n🔍 Analyzing {symbol} (Entry: ${entry_price:.4f}, Current: ${current_price:.4f}, P&L: {new_pnl_percent:+.2f}%)")
+                
+                consensus = get_llm_consensus_for_position(
+                    symbol, current_price, entry_price, new_pnl_percent
                 )
                 
-                if success:
-                    logger.critical(f"✅ Position closed: P&L = ${close_info['pnl']:.2f}")
-                else:
-                    logger.error(f"❌ Failed to update trade status")
+                if consensus:
+                    logger.info(f"   LLM Consensus: {consensus['consensus_action']} ({consensus['consensus_strength']*100:.0f}%)")
+                    logger.info(f"   Votes: HOLD:{consensus['actions']['HOLD']} CLOSE:{consensus['actions']['CLOSE']} ADD:{consensus['actions']['ADD']}")
+                    
+                    # Check if should close
+                    if should_close_position(consensus, new_pnl_percent):
+                        logger.warning(f"   🚨 ACTION REQUIRED: Close {symbol} position!")
+                        # TODO: Implement actual closing logic
+                        # For now, just log the recommendation
+                    
+                    # Log individual model reasons
+                    for detail in consensus['details']:
+                        logger.info(f"   • {detail['model'].split(':')[0]}: {detail['action']} ({detail['confidence']}/10) - {detail['reason'][:50]}...")
             
-            logger.info(f"⏳ Next check in 30 seconds...")
-            logger.info("=" * 60)
-            time.sleep(30)  # Check every 30 seconds
+            logger.info(f"\n⏰ Next check in 5 minutes...")
+            time.sleep(300)  # 5 minutes
             
-        except KeyboardInterrupt:
-            logger.info("\n🛑 Position monitor stopped by user")
-            break
         except Exception as e:
-            logger.error(f"Error in monitor loop: {e}")
+            logger.error(f"❌ Error in monitor: {e}")
             time.sleep(60)
 
 if __name__ == "__main__":

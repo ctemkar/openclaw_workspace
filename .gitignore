@@ -8,3 +8,10 @@ secure/*.key
 secure/*.secret
 *.log
 __pycache__/
+
+# API Key directories - NEVER COMMIT THESE!
+secure_keys/
+keys/
+secrets/
+*.key
+*.secret

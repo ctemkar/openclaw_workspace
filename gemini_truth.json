@@ -1,0 +1,18 @@
+{
+  "gemini_assets_count": 9,
+  "gemini_usd_balance": 14.473002213988185,
+  "gemini_available_usd": 14.473002213988185,
+  "non_zero_assets": [
+    "USD",
+    "BTC",
+    "ETH",
+    "BCH",
+    "AMP",
+    "FTM",
+    "SOL",
+    "POL",
+    "MON"
+  ],
+  "timestamp": "2026-04-01T22:53:42.425415",
+  "note": "Real data from Gemini API - Control UI shows incorrect '2 assets'"
+}

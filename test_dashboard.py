@@ -1,79 +1,61 @@
 #!/usr/bin/env python3
 """
-Test dashboard endpoints
+Simple test dashboard to verify data
 """
 
-import requests
+from flask import Flask, jsonify
 import json
-import time
+import os
 
-def test_dashboard():
-    print("🧪 TESTING DASHBOARD ENDPOINTS")
-    print("=" * 60)
-    
-    # Test main dashboard
-    try:
-        response = requests.get("http://localhost:5004/", timeout=5)
-        print(f"✅ Dashboard HTML: {response.status_code}")
-        
-        # Check for keywords
-        html = response.text
-        if "DOT" in html or "ETH" in html or "SOL" in html:
-            print("   Contains position data")
-        else:
-            print("   ⚠️ May not show position data")
-            
-    except requests.exceptions.RequestException as e:
-        print(f"❌ Dashboard not reachable: {e}")
-    
-    # Test data endpoint if exists
-    try:
-        response = requests.get("http://localhost:5004/data", timeout=5)
-        if response.status_code == 200:
-            data = response.json()
-            print(f"✅ Data endpoint: {len(data)} bytes")
-            
-            # Check if it has our updated data
-            if 'unrealized_positions' in str(data):
-                print("   Contains unrealized positions")
-            else:
-                print("   ⚠️ May have old data")
-    except:
-        print("❌ No data endpoint")
-    
-    # Test the other dashboard
-    try:
-        response = requests.get("http://localhost:5003/", timeout=5)
-        print(f"✅ Dashboard 5003: {response.status_code}")
-    except:
-        print("❌ Dashboard 5003 not reachable")
-    
-    print("\n📊 QUICK CHECK OF UPDATED DATA:")
-    print("-" * 60)
-    
-    # Check our updated tracker file
-    try:
-        with open('cumulative_pnl_tracker.json', 'r') as f:
-            tracker = json.load(f)
-        
-        last_updated = tracker['metadata']['last_updated']
-        positions = tracker.get('unrealized_positions', [])
-        
-        print(f"Tracker last updated: {last_updated}")
-        print(f"Active positions: {len(positions)}")
-        
-        if positions:
-            print("\nCurrent positions:")
-            for pos in positions[:3]:  # Show first 3
-                print(f"  {pos['symbol']}: ${pos['unrealized_pnl']:.2f} ({pos['unrealized_pnl_percent']:.2f}%)")
-        
-        # Check win rate
-        summary = tracker['performance_summary']
-        print(f"\nWin rate: {summary['win_rate']:.1f}%")
-        print(f"Total P&L: ${summary['total_cumulative_pnl']:.2f}")
-        
-    except Exception as e:
-        print(f"Error reading tracker: {e}")
+app = Flask(__name__)
 
-if __name__ == "__main__":
-    test_dashboard()
+@app.route('/')
+def index():
+    # Read system_status.json
+    with open('system_status.json', 'r') as f:
+        data = json.load(f)
+    
+    return jsonify(data)
+
+@app.route('/capital')
+def capital():
+    # Read capital.json
+    with open('trading_data/capital.json', 'r') as f:
+        data = json.load(f)
+    
+    return jsonify(data)
+
+@app.route('/simple')
+def simple():
+    # Simple HTML with data
+    with open('system_status.json', 'r') as f:
+        data = json.load(f)
+    
+    capital_data = data['api']['capital_allocation']
+    
+    html = f"""
+    <html>
+    <head><title>Trading Dashboard Test</title></head>
+    <body>
+        <h1>Trading Dashboard Test</h1>
+        <h2>Real Data (Updated: {capital_data['last_updated']})</h2>
+        <table border="1">
+            <tr><th>Metric</th><th>Value</th></tr>
+            <tr><td>Total Capital</td><td>${capital_data['total']:.2f}</td></tr>
+            <tr><td>Gemini</td><td>${capital_data['gemini']:.2f}</td></tr>
+            <tr><td>Binance</td><td>${capital_data['binance']:.2f}</td></tr>
+            <tr><td>Deployed</td><td>${capital_data['deployed']:.2f}</td></tr>
+            <tr><td>Available</td><td>${capital_data['available_total']:.2f}</td></tr>
+            <tr><td>P&L</td><td>${capital_data['pnl']:.2f}</td></tr>
+            <tr><td>P&L %</td><td>{capital_data['pnl_percent']:.2f}%</td></tr>
+            <tr><td>Positions</td><td>{capital_data['position_count']}</td></tr>
+        </table>
+        <p><em>Note: This shows REAL current data, not stale data.</em></p>
+    </body>
+    </html>
+    """
+    
+    return html
+
+if __name__ == '__main__':
+    app.run(port=5011, debug=True)
