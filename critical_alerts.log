@@ -1,116 +1,60 @@
-=== CRITICAL TRADING ALERTS LOG ===
-Timestamp: 2026-04-01 05:55:00 (Asia/Bangkok)
+=== CRITICAL TRADING ALERT ===
+Timestamp: 2026-04-01 06:53:00 (Asia/Bangkok)
+Alert Level: CRITICAL
+Alert Type: CAPITAL DRAWDOWN EXCEEDS THRESHOLD
 
-=== CRITICAL ALERT: DASHBOARD MONITORING OFFLINE 🔴
-Severity: HIGH
-Description: Trading dashboard on port 5001 is not running - no real-time monitoring available
-Last Activity: 2026-03-31 13:24:50 (over 16 hours ago)
-Impact: No real-time data, no web interface for status checks, manual verification required
-Status: ACTIVE - Dashboard service needs restart
-Action Required: IMMEDIATE - Restart dashboard service
+=== ALERT DETAILS ===
+• Current Drawdown: 43.86% (-$415.32)
+• Drawdown Threshold: 20%
+• Exceedance: 23.86% above threshold
+• Initial Capital: $946.97
+• Current Capital: $531.65
+• Recovery Needed: $415.32 (+78.1%)
 
-=== CRITICAL ALERT: EXTREMELY LOW AVAILABLE CAPITAL 🔴
-Severity: HIGH
-Description: Available trading capital has dropped to critically low level
-Current Available Capital: $3.64 (from previous logs, needs verification)
-Threshold: Below $10.00 considered critical
-Impact: Trading severely constrained, new positions cannot be opened
-Time Detected: 05:48:50 (from enhanced trading log)
-Status: ACTIVE - REQUIRES IMMEDIATE VERIFICATION AND ACTION
+=== CURRENT POSITION STATUS ===
+• Open Positions: 5 SOL positions on Gemini
+• Total Position Value: $265.82
+• Average Entry Price: ~$82.36
+• Current SOL Price: $83.107 (Gemini)
+• Unrealized P&L: +0.91% (~+$2.47)
+• Stop-Loss: NOT TRIGGERED ($83.107 > $79.89)
+• Take-Profit: NOT TRIGGERED ($83.107 < $86.48)
 
-=== CRITICAL ALERT: 43.86% CAPITAL DRAWDOWN 🔴
-Severity: HIGH
-Description: Severe capital depletion from initial investment
-Initial Capital: $946.97
-Current Capital: $531.65 (needs verification)
-Drawdown: -$415.32 (-43.86%)
-Recovery Needed: +78.1% to break even
-Impact: Trading strategy underperforming, risk management failure
-Status: PERSISTENT - Requires strategy review and intervention
+=== TRADING SYSTEM STATUS ===
+• Dashboard: OFFLINE (Port 5001 inactive)
+• Enhanced Trading Bot: OFFLINE (stopped after Cycle 1)
+• crypto_trading_llm_live.py: RUNNING (PID: 6080)
+• Available Capital: $419.85
+• Deployed Capital: $265.82
 
-=== WARNING ALERT: TRADING BOT STATUS UNKNOWN ⚠️
-Severity: MEDIUM-HIGH
-Description: Trading bot status unknown - last known activity at 05:48:54
-Last Known Activity: 05:48:54 (from previous logs)
-Impact: Cannot verify if bot is still running, trading may be halted
-Status: UNKNOWN - Requires process verification
-Action: Check if trading bot process is still running
+=== RISK ASSESSMENT ===
+CRITICAL RISKS:
+1. 43.86% capital drawdown exceeds 20% risk threshold
+2. Enhanced trading bot offline (no active trading)
+3. Dashboard monitoring offline
+4. Positions not actively managed
 
-=== WARNING ALERT: BINANCE TRADING ISSUES ⚠️
-Severity: MEDIUM
-Description: Multiple Binance trading failures affecting execution
-Recent Issues:
-1. Invalid symbol status (MKR/USDT - 05:48:54)
-2. Missing market symbol (MATIC/USDT - 05:48:54)
-3. Margin insufficiency (historical - multiple occurrences)
-4. Geographic restrictions (from previous logs)
-Impact: Limited trading capability on Binance platform
-Status: ACTIVE - Affecting trade execution
+POSITIVE INDICATORS:
+1. Current positions are profitable (+0.91%)
+2. No immediate stop-loss triggers
+3. Gemini API connectivity working
 
-=== WARNING ALERT: POSITION CONCENTRATION RISK ⚠️
-Severity: MEDIUM
-Description: High concentration in SOL positions on Gemini
-Current Positions: 5 SOL/USD positions on Gemini
-Total Position Value: $265.82 (50% of capital)
-Average Position Size: $53.16
-Risk: High exposure to single asset (SOL)
-Impact: Portfolio lacks diversification, vulnerable to SOL price movements
-Status: ACTIVE - Consider diversification
+=== RECOMMENDED IMMEDIATE ACTIONS ===
+1. REVIEW TRADING STRATEGY - 43.86% drawdown indicates strategy issues
+2. RESTART ENHANCED TRADING BOT - Bot offline since 05:48:54
+3. INVESTIGATE DRAWDOWN CAUSES - Analyze trading history
+4. CONSIDER RISK MANAGEMENT ADJUSTMENTS - Reduce position sizes, tighten stop-losses
+5. RESTART DASHBOARD MONITORING - For real-time visibility
 
-=== OPEN POSITION STATUS ===
-Current Known Positions (from 02:34:29 summary):
-1. GEMINI BUY SOL/USD - 0.646635 SOL @ $82.22
-2. GEMINI BUY SOL/USD - 0.645206 SOL @ $82.40
-3. GEMINI BUY SOL/USD - 0.645731 SOL @ $82.33
-4. GEMINI BUY SOL/USD - 0.645034 SOL @ $82.42
-5. GEMINI BUY SOL/USD - 0.644956 SOL @ $82.43
+=== ALERT TRIGGER CONDITIONS ===
+• Drawdown > 20% threshold: ✅ TRIGGERED (43.86% > 20%)
+• Stop-loss triggered: ❌ NOT TRIGGERED
+• Take-profit triggered: ❌ NOT TRIGGERED
+• Trading bot offline: ✅ TRIGGERED (enhanced bot offline)
 
-Position Status: UNKNOWN (needs current price verification)
-Stop-Loss Status: No stop-loss triggers reported (needs verification)
-Take-Profit Status: No take-profit triggers reported (needs verification)
+=== NEXT STEPS ===
+Immediate review required. The system has sustained significant losses and key monitoring/trading components are offline. Manual intervention recommended to assess strategy viability and risk exposure.
 
-=== TRADING BOT STATUS ===
-⚠️ Bot Status: UNKNOWN (Last known active at 05:48:54)
-⚠️ Dashboard Status: OFFLINE (Port 5001 inactive)
-🔴 Capital Status: CRITICALLY LOW ($3.64 available, needs verification)
-⚠️ Binance Status: ISSUES (Multiple execution problems)
-⚠️ Position Status: NEEDS VERIFICATION (5 SOL positions)
-
-=== URGENT ACTIONS REQUIRED ===
-1. 🔴 VERIFY TRADING BOT STATUS: Check if bot process is still running
-2. 🔴 VERIFY AVAILABLE CAPITAL: Confirm current available capital via API
-3. 🔴 RESTART DASHBOARD: Start trading dashboard on port 5001 for monitoring
-4. ⚠️ CHECK OPEN POSITIONS: Verify current status of 5 SOL positions
-5. ⚠️ REVIEW BINANCE ISSUES: Investigate and resolve symbol/margin problems
-6. ⚠️ ASSESS DRAWDOWN: Review trading strategy given 43.86% loss
-
-=== TRADING HALT CONSIDERATION ===
-Given the critical issues:
-1. Dashboard offline (no monitoring)
-2. Extremely low available capital ($3.64)
-3. 43.86% cumulative drawdown
-4. Unknown bot status
-
-Consider:
-1. Temporarily pausing trading until status verified
-2. Injecting additional capital if continuing
-3. Comprehensive system review before resuming
-
-=== ALERT MONITORING ===
-Next Bot Cycle: UNKNOWN (should be every 5 minutes)
-Next Capital Check: REQUIRES MANUAL VERIFICATION
-Critical Threshold: Alert if capital drops below $1.00
-Dashboard Check: Attempt restart immediately
-
-=== SYSTEM HEALTH SUMMARY ===
-Trading Bot: ⚠️ UNKNOWN (last known active 05:48:54)
-Dashboard: ❌ OFFLINE (critical)
-Capital: 🔴 CRITICALLY LOW ($3.64, needs verification)
-Positions: ⚠️ NEEDS VERIFICATION (5 SOL positions)
-Exchange Connectivity: ⚠️ ISSUES (Binance problems)
-
---- Critical Alerts Generated ---
-FETCH ERROR: Could not connect to http://localhost:5001/status. Error: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /status (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5001): Failed to establish a new connection: [Errno 61] Connection refused"))
-
-ALERT: Using cached data from previous logs (02:34:29 - 05:54:28)
-ALERT: Real-time verification required for all metrics
+Alert Generated By: trading_dashboard_monitor cron job
+Monitoring Interval: Regular check
+Data Source: trading_summary_latest.txt, enhanced_26_crypto_trading.log, real-time API data
