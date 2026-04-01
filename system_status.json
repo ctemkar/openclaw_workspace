@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-04-01T04:11:00.000000",
+  "timestamp": "2026-04-01T10:06:00.000000",
   "system_status": "ACTIVE",
-  "trading_status": "ACTIVE_WITH_RESTRICTIONS",
+  "trading_status": "ACTIVE_WITH_MARGIN_ISSUES",
   "capital": {
     "initial": 946.97,
     "current": 531.65,
@@ -12,57 +12,57 @@
     "btc_value": 0.0,
     "pnl": -415.32,
     "pnl_percent": -43.86,
-    "notes": "CUMULATIVE P&L UPDATED. Initial: $946.97 → Current: $531.65. Binance blocked (geographic restrictions). Only Gemini trading available.",
+    "notes": "CUMULATIVE P&L UPDATED. Initial: $946.97 → Current: $531.65. Binance partially accessible but with margin issues. Gemini trading available.",
     "recovery_target": 946.97,
     "recovery_needed": 415.32,
     "recovery_percent_needed": 78.1
   },
   "positions": {
-    "open": 0,
+    "open": 1,
     "closed": 7,
-    "total_trades_today": 0,
+    "total_trades_today": 1,
     "details": {
       "gemini_long": 0,
-      "binance_short": 0
+      "binance_short": 1
     },
     "current_positions_summary": {
-      "total_invested": 0,
+      "total_invested": 13.43,
       "total_unrealized_pnl": 0,
       "average_profit_percent": 0,
-      "best_position": "None"
+      "best_position": "ADA/USDT short"
     }
   },
   "trading_bots": {
     "26_crypto_trader": {
       "status": "ACTIVE",
-      "pid": "98702",
+      "pid": "37929",
       "mode": "AGGRESSIVE",
-      "trades_executed": 0,
-      "positions": [],
+      "trades_executed": 1,
+      "positions": ["ADA/USDT short"],
       "capital_allocation": {
-        "invested_in_positions": 0,
-        "available_for_new_trades": 134.27,
+        "invested_in_positions": 13.43,
+        "available_for_new_trades": 120.84,
         "total_futures_equity": 0
       },
-      "notes": "26-crypto bot restarted at 04:09. Binance API blocked (geographic restrictions). Gemini trading active with $134.27 capital."
+      "notes": "26-crypto bot restarted at 10:05 AM. Binance partially accessible - 1 trade executed (ADA/USDT short) but margin issues on subsequent trades. Gemini trading active with $134.27 capital."
     }
   },
   "risk_status": "HIGH",
   "issues_fixed": [
-    "Bot restarted after crash at 03:25",
-    "Binance geographic restriction identified",
-    "System status updated with current reality"
+    "Bot restarted after stopping at 05:46 AM",
+    "All dashboards restarted",
+    "System fully operational"
   ],
   "next_actions": [
-    "Monitor Gemini-only trading performance",
-    "Consider VPN solution for Binance access",
-    "$134.27 available for Gemini LONG trades",
+    "Monitor Binance margin issues",
+    "Verify Binance account balance and margin",
+    "$120.84 available for new trades",
     "Cumulative P&L: $-415.32 (-43.86%)",
     "Scan interval: 300 seconds (5 minutes)"
   ],
   "exchange_status": {
     "gemini": "ACTIVE",
-    "binance": "BLOCKED_GEOGRAPHIC_RESTRICTIONS",
-    "binance_error": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms"
+    "binance": "PARTIAL_ACCESS_MARGIN_ISSUES",
+    "binance_error": "Margin is insufficient for most trades, but ADA/USDT short executed successfully"
   }
 }

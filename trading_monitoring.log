@@ -1,134 +1,121 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-04-01 09:54:00 (Asia/Bangkok)
-Dashboard URL: http://localhost:5001/ (❌ NOT RUNNING - Port 5001 inactive)
-Alternative Dashboard: http://localhost:5009/ (❌ NOT RUNNING - Dashboard stopped)
+Timestamp: 2026-04-01 10:47:34 (Asia/Bangkok)
+Dashboard URL: http://localhost:5009/ (✅ ACTIVE - Real Trading P&L Dashboard)
+Data Fetch Status: SUCCESS - Real-time dashboard data available
+Monitoring Job: Trading Dashboard Monitor (cron:e0d49d53-4362-4862-8ae3-1bc95c41f7e6)
 
 === DASHBOARD STATUS ===
-Dashboard Status: ❌ ALL DASHBOARDS OFFLINE
-Port Scan Results:
-• Port 5000: ✅ ACTIVE (403 response - ControlCe process, not trading dashboard)
-• Port 5001: ❌ INACTIVE (trading dashboard target)
-• Port 5005: ❌ INACTIVE (positions dashboard was running on Mar 31)
-• Port 5007: ❌ INACTIVE
-• Port 5008: ❌ INACTIVE
-• Port 5009: ❌ INACTIVE (simple dashboard was running earlier)
-Last Dashboard Activity: 2026-04-01 02:30:10 (simple dashboard on port 5009)
-Current Status: All trading dashboards offline - NO REAL-TIME MONITORING
+Target Dashboard Status: ❌ NOT FOUND (Port 5001 not listening)
+Alternative Dashboard Status: ✅ ACTIVE (Real Trading P&L Dashboard on port 5009)
+Dashboard Last Updated: 2026-04-01 10:47:34 (just now)
+Current Status: Dashboard monitoring active on port 5009, but cron job configured for wrong port
 
-=== TRADING BOT STATUS ===
-Trading Bot: ⚠️ POSSIBLY STOPPED WITH CRITICAL GAPS
-• crypto_trading_llm_live.py: ✅ RUNNING (Process ID: 6080) - Last started 6:05 AM, Status: S (sleeping)
-• 26_crypto_bot.log: ⚠️ POSSIBLY STOPPED (Last cycle: Cycle 20 at 01:26:05) - 8.5+ hour gap
-• fixed_bot.log: ⚠️ POSSIBLY STOPPED (Last cycle: Cycle 15 at 01:13:42) - 8.7+ hour gap
-• Enhanced 26-Crypto Trading Bot: ❌ NOT RUNNING (last activity Cycle 16 at 20:38:28 Mar 31)
-• Last Bot Activity in Logs: 2026-04-01 01:26:05 (26_crypto_bot.log Cycle 20)
-• Bot Monitoring Gap: 8.5+ HOURS (CRITICAL)
+=== REAL-TIME DASHBOARD DATA (PORT 5009) ===
+• Dashboard Title: Real Trading P&L Dashboard
+• Last Updated: 2026-04-01 10:47:34 (just now)
+• Initial Capital: $946.97
+• Current Capital: $531.65
+• Cumulative P&L: -$415.32 (-43.9%) 🔴 CRITICAL
+• Recovery Needed: $415.32 (78.1%) to break even
+• Gemini P&L: +$2.97 (5 SOL positions)
+• Binance P&L: -$1.00 (3 open positions, 7 closed shorts: -$2.17)
+• Total Open P&L: +$1.97
+• Gemini Capital: $412.03 (77.5% of total)
+• Binance Capital: $119.62 (22.5% of total)
+• Deployed Capital: $265.80 (50.0%)
+• Available Capital: $265.85
 
-=== BOT ISSUES DETECTED ===
-1. ENHANCED 26-CRYPTO BOT STOPPED (Mar 31 20:38):
-   • Last cycle: Cycle 16 completed
-   • Issues: Binance API errors, insufficient margin
-   • Errors: "Invalid symbol status for opening position" (MKR/USDT)
-   • Errors: "Margin is insufficient" (ENJ/USDT)
-   • Status: Bot stopped after encountering multiple API errors
-
-2. LOW AVAILABLE CAPITAL (CRITICAL):
-   • Gemini Capital: $531.65 (as of 01:37:47)
-   • Available capital: $3.64 (critically low - from fixed_bot.log errors)
-   • Cannot execute new trades (insufficient funds errors)
-   • Trading blocked due to insufficient funds
-
-3. ACTIVE BOT STATUS:
-   • 26_crypto_bot.log: Last cycle 20 at 01:26:05 (8.5+ hour gap - POSSIBLY STOPPED)
-   • fixed_bot.log: Last cycle 15 at 01:13:42 (8.7+ hour gap - POSSIBLY STOPPED)
-   • Last successful trade attempt: None (all attempts failing due to insufficient funds)
-
-=== REAL-TIME MARKET DATA (COINGECKO API) ===
-• Current SOL Price: $82.65 (as of 09:54:00)
-• 24h Change: -1.33%
-• Data Source: CoinGecko API (real-time)
-• Last Bot Price Data: $82.82 (01:20:32, 8.6+ hours ago)
+=== REAL-TIME MARKET DATA ===
+• Current SOL Price: $83.25 (CoinGecko API, 10:47:34)
+• Dashboard SOL Price: $83.06 (estimated from P&L)
+• Price Change: +$0.19 (+0.23% from previous data)
 
 === CAPITAL & P&L ANALYSIS ===
 • Initial Capital: $946.97
-• Current Capital: $531.65 (as of 01:37:47)
+• Current Capital: $531.65
 • Cumulative P&L: -$415.32 (-43.86%) 🔴 CRITICAL
-• Available Capital: $3.64 🔴 CRITICAL
-• Total Capital: $685.67
-• Deployed Capital: $265.82 (5 SOL positions)
-• Cash Reserve: $419.85
+• Available Capital: $265.85 (✅ SUFFICIENT)
+• Total Capital: $531.65
+• Deployed Capital: $265.80 (50.0%)
+• Cash Reserve: $265.85 (50.0%)
 
 === OPEN POSITIONS ANALYSIS ===
-• Asset: SOL/USD (Gemini)
-• Average Entry Price: $82.36
-• Current SOL Price: $82.65 (real-time)
-• Total Position Value: $266.79 (5 positions, 3.227562 SOL)
-• Unrealized P&L: +$0.97 (+0.36%)
-• Position Status: PROFITABLE (below take-profit)
+• Asset: SOL/USD (Gemini) - 5 positions
+• Gemini P&L: +$2.97 (real-time)
+• Binance Positions: 3 open positions, 7 closed shorts (-$2.17)
+• Total Open P&L: +$1.97
+• Position Status: PROFITABLE (small gains)
+
+=== TRADING BOT STATUS ===
+• Active Trading Bot: ✅ real_26_crypto_trader.py (PID: 37929, started 10:05 AM)
+• Bot Status: ✅ ACTIVE - Executing trades (Cycle 9 completed at 10:47:23)
+• Recent Trades: 2 new Binance shorts executed (COMP, ENJ)
+• Bot Performance: 36 total opportunities found, 9 cycles completed
+• Trading Frequency: Every 300 seconds (5 minutes)
 
 === RISK PARAMETERS ANALYSIS ===
-• Stop-Loss Trigger: < $79.89 (3% below entry)
-• Take-Profit Trigger: > $86.48 (5% above entry)
-• Current Price vs Stop-Loss: SAFE (+$2.76 above trigger)
-• Current Price vs Take-Profit: NOT TRIGGERED (-$3.83 below trigger)
-• Distance to Stop-Loss: 3.34%
-• Distance to Take-Profit: 4.63%
+• Current Positions: Profitable (+$1.97 total open P&L)
+• Capital Drawdown: CRITICAL (-43.86%)
+• Available Capital: SUFFICIENT ($265.85)
+• Risk Assessment: MODERATE (positions profitable but overall drawdown severe)
 
-=== EXCHANGE CONNECTIVITY ===
-• Gemini: ⚠️ PARTIAL (API responding but trades failing due to insufficient funds)
-• Binance: ⚠️ ISSUES (API errors, symbol status problems)
-• Last Binance Error: "Invalid symbol status for opening position" (MKR/USDT)
-• Last Gemini Error: "insufficient funds" (01:08:32)
+=== STOP-LOSS/TAKE-PROFIT ANALYSIS ===
+• Current SOL Price: $83.25
+• Estimated Entry Price: $82.63 (Gemini SOL positions)
+• Stop-Loss Level: $80.15 (3% below entry)
+• Take-Profit Level: $86.76 (5% above entry)
+• Current vs Stop-Loss: ✅ SAFE (+$3.10 above, 3.87% buffer)
+• Current vs Take-Profit: ❌ NOT TRIGGERED (-$3.51 below, 4.22% to target)
+• Risk Assessment: LOW (positions safe from stop-loss)
 
-=== SYSTEM CLEANUP OPERATIONS ===
-• Processes: 1 Python process active (crypto_trading_llm_live.py)
-• Status: RUNNING BUT IDLE (STAT: S, sleeping, low CPU usage)
-• Issue: Process may be hung or idle
+=== SYSTEM ISSUES DETECTED ===
+1. 🔴 CRON JOB MISCONFIGURED - Monitoring port 5001 but dashboard runs on port 5009
+2. 🔴 43.86% capital drawdown (exceeds 20% threshold by 23.86%)
+3. ⚠️ Binance API restrictions (some symbols invalid for opening positions)
+4. 🔴 Old trading bots inactive (7.2+ hour gaps in old logs)
 
-=== CRITICAL RISKS DETECTED ===
-1. 🔴 43.86% capital drawdown (exceeds 20% threshold by 23.86%)
-2. 🔴 $3.64 available capital (critically low, cannot execute trades)
-3. 🔴 26_crypto_bot.log possibly stopped (8.5+ hour cycle gap)
-4. 🔴 fixed_bot.log possibly stopped (8.7+ hour cycle gap)
-5. 🔴 Enhanced trading bot offline (since Mar 31 20:38)
-6. 🔴 Dashboard monitoring completely offline
-7. 🔴 Trading capability blocked (insufficient funds)
+=== POSITIVE INDICATORS ===
+1. ✅ Dashboard active on port 5009 with real-time data
+2. ✅ Available capital sufficient ($265.85)
+3. ✅ Current positions profitable (+$1.97 total open P&L)
+4. ✅ Gemini exchange connectivity active
+5. ✅ New trading bot active and executing trades
+6. ✅ SOL price increasing (+$0.19 to $83.25)
 
 === IMMEDIATE ACTIONS REQUIRED ===
-1. 🔴 DEPOSIT ADDITIONAL CAPITAL - Minimum $100 needed immediately
-2. 🔴 CHECK IF 26_crypto_bot.log HAS STOPPED - Investigate 8.5+ hour gap
-3. 🔴 RESTART TRADING DASHBOARD on port 5001 or 5009
-4. 🔴 VERIFY EXCHANGE BALANCES - Manual login to Gemini
-5. 🔴 RESTART TRADING BOTS if stopped
-6. 🔴 INVESTIGATE WHY BOTS STOPPED - Check logs for errors
-7. 🔴 CHECK crypto_trading_llm_live.py STATUS - Process running but idle
+1. 🔴 UPDATE CRON JOB CONFIGURATION - Change monitoring from port 5001 to port 5009
+2. 🔴 ADDRESS CAPITAL DRAWDOWN - 43.86% exceeds risk threshold
+3. ⚠️ INVESTIGATE BINANCE RESTRICTIONS - Some symbols invalid for opening positions
+4. 🔴 CLEAN UP OLD PROCESSES - Stop or remove old bot processes
 
-=== MONITORING RESULTS ===
-• Log File Updated: trading_monitoring.log
-• Critical Alerts Updated: critical_alerts.log
-• Data Sources: 26_crypto_bot.log, fixed_bot.log, real-time CoinGecko API
-• Next Check: IMMEDIATE MANUAL INTERVENTION REQUIRED
+=== PERFORMANCE ANALYSIS ===
+• Trading System Health: 7/10 (GOOD - new bot active, dashboard working)
+• Capital Management: 2/10 (CRITICAL - 43.86% drawdown)
+• Risk Management: 8/10 (GOOD - positions profitable, stop-loss safe)
+• System Monitoring: 5/10 (MODERATE - cron job misconfigured)
+• Overall Performance: 5.5/10 (MODERATE - configuration issues but trading active)
 
-=== OVERALL ASSESSMENT ===
-The trading system is in CRITICAL condition with multiple failures:
-- Severe capital drawdown (43.86%)
-- Extremely low available capital ($3.64) - TRADING BLOCKED
-- Multiple trading bots possibly stopped (8.5+ hour gaps)
-- No real-time dashboard monitoring
-- Exchange API connectivity issues
+=== ALERT STATUS ===
+• Stop-Loss Triggered: ❌ NO (positions profitable, SOL at $83.25 > $80.15)
+• Take-Profit Triggered: ❌ NO (positions still open, SOL at $83.25 < $86.76)
+• Capital Drawdown Alert: ✅ YES (43.86% exceeds 20% threshold)
+• Configuration Alert: ✅ YES (cron job monitoring wrong port)
+• Trading Activity Alert: ✅ YES (new bot active and executing trades)
 
-POSITIVE INDICATORS:
-- Current SOL positions are profitable (+0.36%, +$0.97)
-- Stop-loss is safe (current price $82.65 > $79.89 trigger by $2.76)
-- Cash reserve available ($419.85)
+=== NEXT STEPS ===
+1. Update cron job to monitor port 5009 instead of port 5001
+2. Monitor capital drawdown and consider recovery strategies
+3. Verify Binance connectivity and trading capabilities
+4. Schedule regular health checks every 15 minutes
+5. Monitor new bot performance and position safety
 
-CRITICAL WARNING:
-Trading capability is completely blocked due to insufficient available capital ($3.64). The system cannot execute any new trades until additional capital is deposited. Bot monitoring has 8.6+ hour data gaps, indicating bots may have stopped completely.
-
-IMMEDIATE PRIORITY:
-1. Deposit additional capital (minimum $100)
-2. Verify bot status and restart if stopped
-3. Restore dashboard monitoring
+=== MONITORING COMPLETE ===
+• Data Sources: Dashboard (port 5009), CoinGecko API, log files, process status
+• Analysis Time: 2026-04-01 10:47:34 Asia/Bangkok
+• Next Scheduled Check: 2026-04-01 11:02:34 (15 minutes)
+• Critical Issues: 3
+• Warnings: 1
+• Information: 8
 
 END OF MONITORING LOG
 =====================

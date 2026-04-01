@@ -1,0 +1,120 @@
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-04-01 10:22:30 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor (cron:46d9a8e5-6e29-4d90-a61f-28e3ff265951)
+
+=== DASHBOARD STATUS ===
+• Dashboard URL: http://localhost:5009/ (✅ ACTIVE - Real Trading P&L Dashboard)
+• Last Dashboard Update: 2026-04-01 10:22:02 (28 seconds ago)
+• Dashboard Status: ✅ ACTIVE (HTTP 200)
+• Data Quality: ✅ REAL_DATA_ONLY_NO_HARDCODING
+
+=== REAL-TIME DASHBOARD DATA ===
+• Initial Capital: $946.97
+• Current Capital: $531.65
+• Cumulative P&L: -$415.32 (-43.9%) 🔴 CRITICAL DRAWDOWN
+• Recovery Needed: $415.32 (78.1%) to break even
+• Gemini P&L: +$2.58 (5 SOL positions)
+• Binance P&L: -$1.00 (3 open positions, 7 closed shorts: -$2.17)
+• Total Open P&L: +$1.58
+• Gemini Capital: $412.03 (77.5% of total)
+• Binance Capital: $119.62 (22.5% of total)
+• Deployed Capital: $265.80 (50.0%)
+• Available Capital: $265.85 (50.0%)
+
+=== MARKET DATA ===
+• Current SOL Price (CoinGecko): $83.20
+• Market Status: STABLE (+0.05% from dashboard price)
+
+=== TRADING BOT STATUS ===
+1. crypto_trading_llm_live.py: ✅ RUNNING (PID: 6080, started 6:05 AM)
+   • Status: S (sleeping)
+   • Last Activity: Unknown (process running but bot logs show gaps)
+
+2. real_26_crypto_trader.py: ✅ RUNNING (PID: 37929, started 10:05 AM)
+   • Status: New process started
+   • Last Activity: Checking (needs verification)
+
+3. bot_common.log: 🔴 STOPPED (Last cycle: Cycle 105 at 03:25:00)
+   • Gap: 6.9+ HOURS (CRITICAL)
+   • Last Entry: 2026-04-01 03:25:00
+
+4. 26_crypto_trading.log: 🔴 STOPPED (Last cycle: Cycle 70 at 23:37:13)
+   • Gap: 10.7+ HOURS (CRITICAL)
+   • Last Entry: 2026-03-31 23:37:13
+
+5. fixed_bot.log: 🔴 STOPPED (Last cycle: Cycle 15 at 01:13:42)
+   • Gap: 9.0+ HOURS (CRITICAL)
+   • Last Entry: 2026-04-01 01:13:42
+
+=== CRITICAL ALERTS ANALYSIS ===
+NO IMMEDIATE STOP-LOSS/TAKE-PROFIT TRIGGERS DETECTED:
+• Stop-Loss Status: ✅ SAFE (current SOL price $83.20 > estimated stop-loss $79.89)
+• Take-Profit Status: ❌ NOT TRIGGERED (needs $86.48)
+• No "STOP_LOSS_TRIGGERED" or "TAKE_PROFIT_TRIGGERED" keywords found
+
+CRITICAL DRAWDOWN DETECTED:
+• Current Drawdown: 43.9% (-$415.32) 🔴
+• Threshold Exceeded: 23.9% above 20% limit
+• Status: 🔴 CRITICAL_DRAWDOWN
+
+BOT FAILURE ALERTS:
+• ALL trading bots stopped for 6.9+ hours despite processes running
+• Processes-bots disconnect detected
+• Trading capability: BLOCKED
+
+=== RISK PARAMETERS ===
+• Drawdown Limit: 20% (ACTUAL: 43.9% - EXCEEDED)
+• Available Capital: $265.85 (SUFFICIENT)
+• Position Health: PROFITABLE (+$1.58 total open P&L)
+• Market Risk: LOW (SOL stable at $83.20)
+• System Risk: CRITICAL (bots stopped)
+
+=== IMMEDIATE ACTIONS REQUIRED ===
+1. 🔴 INVESTIGATE BOT-PROCESS DISCONNECT: Why are processes running but bots inactive?
+2. 🔴 RESTART STOPPED BOTS: All major trading bots have stopped
+3. 🔴 VERIFY real_26_crypto_trader.py: Check if new process is actually trading
+4. 🔴 ADDRESS CRITICAL DRAWDOWN: 43.9% loss requires strategy review
+5. 🔴 CHECK API LIMITS: Possible exchange API rate limiting
+
+=== PARADOX DETECTED ===
+• ✅ $265.85 available capital (sufficient for trading)
+• ✅ Exchange connectivity active (positions showing)
+• ✅ Dashboard monitoring active (real-time data)
+• ✅ Multiple trading processes running
+• 🔴 ALL trading bots stopped for 6.9+ hours
+• 🔴 No recent trading activity in logs
+
+Possible causes:
+1. API rate limits reached
+2. Internal bot errors not logged
+3. Trading disabled in configuration
+4. Processes hung or idle
+5. Geographic restrictions (Binance blocked)
+
+=== RECOMMENDATIONS ===
+1. IMMEDIATE: Restart all trading bots
+2. INVESTIGATE: Check bot configuration and API keys
+3. MONITOR: Watch for margin insufficiency errors
+4. REVIEW: Trading strategy given 43.9% drawdown
+5. VERIFY: real_26_crypto_trader.py activity
+
+=== MONITORING RESULTS ===
+• Log File Updated: trading_monitoring.log
+• Critical Alerts Updated: critical_alerts.log
+• Dashboard Data: REAL-TIME (port 5009)
+• Next Check: URGENT BOT RESTART REQUIRED
+
+=== OVERALL STATUS ===
+🟡 MIXED STATUS:
+- ✅ Dashboard active with real-time data
+- ✅ Available capital sufficient
+- ✅ Current positions profitable
+- 🔴 ALL trading bots stopped (6.9+ hour gaps)
+- 🔴 Critical drawdown (43.9%)
+- 🔴 Trading capability compromised
+
+PRIORITY: CRITICAL - Requires immediate bot restart and investigation
+
+=== END OF MONITORING SUMMARY ===
+Generated: 2026-04-01 10:22:30 (Asia/Bangkok)
+Next scheduled check: 5 minutes
