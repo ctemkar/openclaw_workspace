@@ -1,121 +1,77 @@
 === TRADING DASHBOARD MONITORING LOG ===
-Timestamp: 2026-04-01 10:47:34 (Asia/Bangkok)
-Dashboard URL: http://localhost:5009/ (✅ ACTIVE - Real Trading P&L Dashboard)
-Data Fetch Status: SUCCESS - Real-time dashboard data available
-Monitoring Job: Trading Dashboard Monitor (cron:e0d49d53-4362-4862-8ae3-1bc95c41f7e6)
+Timestamp: 2026-04-01 11:57:00 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/ (❌ NOT ACCESSIBLE - Port 5001 inactive)
+Monitoring Job: Trading Dashboard Monitor (cron:63a4c7ca-61f5-4b76-85bf-56ce247da937)
 
-=== DASHBOARD STATUS ===
-Target Dashboard Status: ❌ NOT FOUND (Port 5001 not listening)
-Alternative Dashboard Status: ✅ ACTIVE (Real Trading P&L Dashboard on port 5009)
-Dashboard Last Updated: 2026-04-01 10:47:34 (just now)
-Current Status: Dashboard monitoring active on port 5009, but cron job configured for wrong port
-
-=== REAL-TIME DASHBOARD DATA (PORT 5009) ===
-• Dashboard Title: Real Trading P&L Dashboard
-• Last Updated: 2026-04-01 10:47:34 (just now)
-• Initial Capital: $946.97
-• Current Capital: $531.65
-• Cumulative P&L: -$415.32 (-43.9%) 🔴 CRITICAL
-• Recovery Needed: $415.32 (78.1%) to break even
-• Gemini P&L: +$2.97 (5 SOL positions)
-• Binance P&L: -$1.00 (3 open positions, 7 closed shorts: -$2.17)
-• Total Open P&L: +$1.97
-• Gemini Capital: $412.03 (77.5% of total)
-• Binance Capital: $119.62 (22.5% of total)
-• Deployed Capital: $265.80 (50.0%)
-• Available Capital: $265.85
-
-=== REAL-TIME MARKET DATA ===
-• Current SOL Price: $83.25 (CoinGecko API, 10:47:34)
-• Dashboard SOL Price: $83.06 (estimated from P&L)
-• Price Change: +$0.19 (+0.23% from previous data)
-
-=== CAPITAL & P&L ANALYSIS ===
-• Initial Capital: $946.97
-• Current Capital: $531.65
-• Cumulative P&L: -$415.32 (-43.86%) 🔴 CRITICAL
-• Available Capital: $265.85 (✅ SUFFICIENT)
-• Total Capital: $531.65
-• Deployed Capital: $265.80 (50.0%)
-• Cash Reserve: $265.85 (50.0%)
-
-=== OPEN POSITIONS ANALYSIS ===
-• Asset: SOL/USD (Gemini) - 5 positions
-• Gemini P&L: +$2.97 (real-time)
-• Binance Positions: 3 open positions, 7 closed shorts (-$2.17)
-• Total Open P&L: +$1.97
-• Position Status: PROFITABLE (small gains)
+=== CURRENT SYSTEM STATUS ===
+• Target Dashboard (Port 5001): ❌ NOT RUNNING
+• Gateway Process (Port 5005): ✅ ACTIVE (Python process 59271)
+• ControlCe Process (Port 5000): ✅ ACTIVE (Process 469)
+• Trading Bot: ❌ INACTIVE (Last activity at 01:26:05 - 10+ hours ago)
+• Dashboard Ports 5007-5009: ❌ NOT RUNNING
+• Current Status: NO ACTIVE TRADING DASHBOARDS DETECTED
 
 === TRADING BOT STATUS ===
-• Active Trading Bot: ✅ real_26_crypto_trader.py (PID: 37929, started 10:05 AM)
-• Bot Status: ✅ ACTIVE - Executing trades (Cycle 9 completed at 10:47:23)
-• Recent Trades: 2 new Binance shorts executed (COMP, ENJ)
-• Bot Performance: 36 total opportunities found, 9 cycles completed
-• Trading Frequency: Every 300 seconds (5 minutes)
+• Last Bot Activity: 2026-04-01 01:26:05 (10+ hours ago from 26_crypto_bot.log)
+• Bot Status: ❌ INACTIVE/STOPPED
+• Last Trade Attempt: MKR/USDT short at 01:26:04 (failed due to "Invalid symbol status")
+• Last Error: Binance trade execution failed - "Invalid symbol status for opening position"
+• Total Opportunities Found: 33 (from last log entry)
+• Bot Process: No active trading bot processes detected
 
-=== RISK PARAMETERS ANALYSIS ===
-• Current Positions: Profitable (+$1.97 total open P&L)
-• Capital Drawdown: CRITICAL (-43.86%)
-• Available Capital: SUFFICIENT ($265.85)
-• Risk Assessment: MODERATE (positions profitable but overall drawdown severe)
+=== PORT ANALYSIS ===
+• Port 5000: ✅ LISTENING (ControlCe process 469)
+• Port 5005: ✅ LISTENING (Python gateway.py process 59271)
+• Port 5001: ❌ NOT LISTENING (Target dashboard)
+• Port 5007: ❌ NOT LISTENING (Common dashboard referenced in logs)
+• Port 5008: ❌ NOT LISTENING (Progress monitor reference)
+• Port 5009: ❌ NOT LISTENING (Previous monitoring logs reference)
 
-=== STOP-LOSS/TAKE-PROFIT ANALYSIS ===
-• Current SOL Price: $83.25
-• Estimated Entry Price: $82.63 (Gemini SOL positions)
-• Stop-Loss Level: $80.15 (3% below entry)
-• Take-Profit Level: $86.76 (5% above entry)
-• Current vs Stop-Loss: ✅ SAFE (+$3.10 above, 3.87% buffer)
-• Current vs Take-Profit: ❌ NOT TRIGGERED (-$3.51 below, 4.22% to target)
-• Risk Assessment: LOW (positions safe from stop-loss)
+=== RECENT LOG ACTIVITY ===
+• 26_crypto_bot.log: Last entry at 01:26:05 (10+ hours ago) - Bot stopped
+• Critical Alerts Log: Last updated 11:53:47 (shows system-wide failure)
+• Previous Monitoring Log: Shows 43.86% drawdown and Binance API issues
 
-=== SYSTEM ISSUES DETECTED ===
-1. 🔴 CRON JOB MISCONFIGURED - Monitoring port 5001 but dashboard runs on port 5009
-2. 🔴 43.86% capital drawdown (exceeds 20% threshold by 23.86%)
-3. ⚠️ Binance API restrictions (some symbols invalid for opening positions)
-4. 🔴 Old trading bots inactive (7.2+ hour gaps in old logs)
+=== CRITICAL ISSUES ===
+1. 🔴 NO ACTIVE DASHBOARD - Target port 5001 and all alternatives not responding
+2. 🔴 TRADING BOT INACTIVE - No bot activity for 10+ hours
+3. 🔴 BINANCE TRADING BLOCKED - Last trade attempt failed due to symbol status
+4. 🔴 NO REAL-TIME DATA - Unable to fetch current trading metrics
+5. 🔴 43.86% DRAWDOWN - From previous monitoring (stale data)
 
-=== POSITIVE INDICATORS ===
-1. ✅ Dashboard active on port 5009 with real-time data
-2. ✅ Available capital sufficient ($265.85)
-3. ✅ Current positions profitable (+$1.97 total open P&L)
-4. ✅ Gemini exchange connectivity active
-5. ✅ New trading bot active and executing trades
-6. ✅ SOL price increasing (+$0.19 to $83.25)
+=== STOP-LOSS/TAKE-PROFIT STATUS ===
+• Status: ⚠️ UNKNOWN - No real-time price data available
+• Last Known SOL Price: $83.51 (from previous monitoring log at 11:44:01)
+• Last Known Stop-Loss: $80.10 (3.9% below last known price)
+• Last Known Take-Profit: $86.68 (4.0% above last known price)
+• Current Status: ⚠️ CANNOT VERIFY - No real-time data
 
-=== IMMEDIATE ACTIONS REQUIRED ===
-1. 🔴 UPDATE CRON JOB CONFIGURATION - Change monitoring from port 5001 to port 5009
-2. 🔴 ADDRESS CAPITAL DRAWDOWN - 43.86% exceeds risk threshold
-3. ⚠️ INVESTIGATE BINANCE RESTRICTIONS - Some symbols invalid for opening positions
-4. 🔴 CLEAN UP OLD PROCESSES - Stop or remove old bot processes
+=== CAPITAL STATUS (FROM PREVIOUS LOGS - STALE DATA) ===
+• Initial Capital: $946.97 (from previous monitoring)
+• Current Capital: $531.65 (from previous monitoring - 43.86% drawdown)
+• Cumulative P&L: -$415.32 (-43.86%) 🔴 CRITICAL
+• Available Capital: $265.85 (50% of total)
+• Deployed Capital: $265.80 (50% of total)
+• Recovery Needed: $415.32 (78.1% gain required to break even)
+• Data Age: ⚠️ STALE - From previous monitoring log (11:44:01)
 
-=== PERFORMANCE ANALYSIS ===
-• Trading System Health: 7/10 (GOOD - new bot active, dashboard working)
-• Capital Management: 2/10 (CRITICAL - 43.86% drawdown)
-• Risk Management: 8/10 (GOOD - positions profitable, stop-loss safe)
-• System Monitoring: 5/10 (MODERATE - cron job misconfigured)
-• Overall Performance: 5.5/10 (MODERATE - configuration issues but trading active)
+=== IMMEDIATE ACTIONS NEEDED ===
+1. 🔴 RESTART TRADING BOT - Bot has been inactive for 10+ hours
+2. 🔴 START DASHBOARD - Launch trading dashboard on port 5001 or 5007
+3. 🔴 VERIFY BINANCE API - Check symbol status and geographic restrictions
+4. 🔴 FETCH REAL-TIME DATA - Get current market prices and positions
+5. 🔴 UPDATE MONITORING - Fix cron job to monitor correct ports
 
-=== ALERT STATUS ===
-• Stop-Loss Triggered: ❌ NO (positions profitable, SOL at $83.25 > $80.15)
-• Take-Profit Triggered: ❌ NO (positions still open, SOL at $83.25 < $86.76)
-• Capital Drawdown Alert: ✅ YES (43.86% exceeds 20% threshold)
-• Configuration Alert: ✅ YES (cron job monitoring wrong port)
-• Trading Activity Alert: ✅ YES (new bot active and executing trades)
+=== MONITORING SUMMARY ===
+• Status: CRITICAL - No active dashboards, trading bot inactive
+• Dashboard: ❌ All ports (5001, 5007-5009) not responding
+• Trading: ❌ Inactive for 10+ hours
+• Risk: ⚠️ Unknown (no real-time data)
+• Next Check: IMMEDIATE - System restart required
 
-=== NEXT STEPS ===
-1. Update cron job to monitor port 5009 instead of port 5001
-2. Monitor capital drawdown and consider recovery strategies
-3. Verify Binance connectivity and trading capabilities
-4. Schedule regular health checks every 15 minutes
-5. Monitor new bot performance and position safety
-
-=== MONITORING COMPLETE ===
-• Data Sources: Dashboard (port 5009), CoinGecko API, log files, process status
-• Analysis Time: 2026-04-01 10:47:34 Asia/Bangkok
-• Next Scheduled Check: 2026-04-01 11:02:34 (15 minutes)
-• Critical Issues: 3
-• Warnings: 1
-• Information: 8
-
-END OF MONITORING LOG
-=====================
+=== DATA VALIDATION ===
+• Dashboard data: ❌ Not available
+• Real-time price data: ❌ Not available
+• Trading bot data: ⚠️ Stale (10+ hours old)
+• Exchange connectivity: ⚠️ Unknown
+• System health: 🔴 Critical - Multiple components down
