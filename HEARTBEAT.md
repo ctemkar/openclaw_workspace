@@ -67,8 +67,27 @@
 3. **✅ LLM PREDICTION TRACKING** - 100 decisions saved for accuracy analysis
 4. **✅ MONITORING RESTORED** - Full visibility into system status
 
-📊 CURRENT TIME: Thursday, April 2nd, 2026 — 2:10 AM (Asia/Bangkok)
+📊 CURRENT TIME: Thursday, April 2nd, 2026 — 2:36 AM (Asia/Bangkok)
 📈 SYSTEM STATUS: ✅ **OPERATIONAL** - All systems running, monitoring active
+
+## 🛌 SLEEP MONITORING ACTIVE
+**Sleep Monitor Status:** ✅ **ACTIVE** - Monitoring every 30 minutes
+**Last Check:** 02:35 AM - All critical systems running
+**Emergency Alert:** ✅ **CONFIGURED** - Will alert if critical failures
+**Next Check:** 03:05 AM (30 minute intervals)
+
+### 🎯 MONITORING FOCUS:
+1. **Critical Processes:** Trading bot, LLM bot, all dashboards
+2. **Dashboard Ports:** 5007, 5008, 5009, 5011
+3. **Error Detection:** Automatic alert on critical failures
+4. **Auto-Recovery:** Attempts to restart failed critical systems
+
+### ✅ CURRENT STATUS (02:35 AM CHECK):
+- **All 6 critical processes:** ✅ RUNNING
+- **All 4 dashboard ports:** ✅ RESPONDING  
+- **LLM Predictions:** 56 recorded (active analysis)
+- **CPU Usage:** 8.76% (normal)
+- **Error Count:** 1 (Binance geographic restriction - expected)
 
 ## 🚨 CRITICAL DISCREPANCIES RESOLVED:
 1. **❌ STALE BALANCE DATA FIXED:**
