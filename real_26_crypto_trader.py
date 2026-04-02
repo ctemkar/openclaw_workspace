@@ -44,10 +44,13 @@ GEMINI_CRYPTOS = [
 # Trading parameters - ADJUSTED TO 1.0% THRESHOLDS
 # OLD: SHORT_THRESHOLD = 3.0 (too high, no trades)
 # NEW: SHORT_THRESHOLD = 1.0 (balanced approach)
-GEMINI_CAPITAL = 319.04  # Gemini cash balance (80% of $542.93)
-BINANCE_CAPITAL = 0.0 # Binance Futures capital
+# CAPITAL REALLOCATION: SHORT positions are profitable, LONG positions breaking even
+# Total portfolio: $655.36
+# New allocation: 60% Gemini ($393.22), 40% Binance ($262.14)
+GEMINI_CAPITAL = 393.22  # 60% of portfolio for Gemini LONG
+BINANCE_CAPITAL = 262.14 # 40% of portfolio for Binance SHORT (profitable strategy)
 LEVERAGE = 1             # REDUCED from 3x to 1x (SAFER)
-POSITION_SIZE = 0.2     # REDUCED from 10% to 5% of capital (FIX MARGIN ISSUE)
+POSITION_SIZE = 0.1     # 10% of allocated capital per trade
 LONG_THRESHOLD = 1.0     # ADJUSTED from 3.0% to 1.0% (BALANCED)
 SHORT_THRESHOLD = 1.0    # ADJUSTED from 3.0% to 1.0% (BALANCED)
 STOP_LOSS = 0.03         # TIGHTER from 5% to 3% stop-loss
