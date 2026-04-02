@@ -296,7 +296,7 @@ HTML_TEMPLATE = '''
                     {{ trade.side|upper }}
                 </td>
                 <td>${{ "%.2f"|format(trade.price) }}</td>
-                <td>${{ "%.2f"|format(trade.current_price) }}</td>
+                <td>{% if 'current_price' in trade %}${{ "%.2f"|format(trade.current_price) }}{% else %}N/A{% endif %}</td>
                 <td class="{{ 'positive' if trade.pnl > 0 else 'negative' if trade.pnl < 0 else 'neutral' }}">
                     ${{ "%+.2f"|format(trade.pnl) }}
                 </td>

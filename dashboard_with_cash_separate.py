@@ -272,12 +272,13 @@ HTML_TEMPLATE = '''
                         <td><strong>{{ trade.symbol }}</strong></td>
                         <td class="side-{{ trade.side }}">{{ trade.side|upper }}</td>
                         <td>${{ "%.2f"|format(trade.price) }}</td>
-                        <td>${{ "%.2f"|format(trade.current_price) }}</td>
-                        <td class="{{ 'positive' if trade.pnl > 0 else 'negative' if trade.pnl < 0 else '' }}">
-                            ${{ "%+.2f"|format(trade.pnl) }}
+                        <td>{% if 'current_price' in trade %}${{ "%.2f"|format(trade.current_price) }}{% else %}N/A{% endif %}</td>
+                        <td class="{% if 'pnl' in trade %}{{ 'positive' if trade.pnl > 0 else 'negative' if trade.pnl < 0 else '' }}{% endif %}">
+                            {% if 'pnl' in trade %}${{ "%+.2f"|format(trade.pnl) }}{% else %}N/A{% endif %}
                         </td>
-                        <td class="{{ 'positive' if trade.pnl_percent > 0 else 'negative' if trade.pnl_percent < 0 else '' }}">
-                            {{ "%+.2f"|format(trade.pnl_percent) }}%
+                        <td class="{% if 'pnl_percent' in trade %}{{ 'positive' if trade.pnl_percent > 0 else 'negative' if trade.pnl_percent < 0 else '' }}{% endif %}">
+                            {% if 'pnl_percent' in trade %}{{ "%+.2f"|format(trade.pnl_percent) }}%{% else %}N/A{% endif %}
+                        </td>
                         </td>
                         <td>{{ "%.6f"|format(trade.amount) }}</td>
                         <td>${{ "%.2f"|format(trade.value) }}</td>
