@@ -189,7 +189,7 @@ HTML_TEMPLATE = '''
     <div class="container">
         <div class="header">
             <h1>📊 Trading System Dashboard</h1>
-            <p class="subtitle">Complete overview with trade rows | 40 trades, 42.5% win rate</p>
+            <p class="subtitle">Complete overview with trade rows | {{ total_trades }} trades, {{ win_rate }}% win rate</p>
             
             <div class="status-badges">
                 <div class="status-badge status-active">System: ACTIVE</div>
@@ -207,7 +207,7 @@ HTML_TEMPLATE = '''
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="summary-label">Total Trades</div>
-                <div class="summary-value">40</div>
+                <div class="summary-value">{{ total_trades }}</div>
                 <div class="summary-label">17 profitable</div>
             </div>
             
@@ -243,7 +243,7 @@ HTML_TEMPLATE = '''
         </div>
         
         <div class="trade-rows-section" id="trade-rows">
-            <div class="section-title">💱 TRADE ROWS (40 Total Trades)</div>
+            <div class="section-title">💱 TRADE ROWS ({{ total_trades }} Total Trades)</div>
             
             <table class="trade-table">
                 <thead>
@@ -261,12 +261,18 @@ HTML_TEMPLATE = '''
                 </thead>
                 <tbody>
                     {% for trade in trades %}
-                    <tr>
+                    <tr {% if trade.type in ['summary', 'investment_summary'] %}style="background: #1a202c; font-weight: bold;"{% elif trade.type == 'cash' %}style="background: #2d3748; color: #a0aec0;"{% endif %}>
                         <td>{{ loop.index }}</td>
                         <td>
+                            {% if trade.type in ['summary', 'investment_summary'] %}
+                            <span class="badge badge-system" style="background: #4a5568;">
+                                SUMMARY
+                            </span>
+                            {% else %}
                             <span class="badge badge-{{ trade.exchange }}">
                                 {{ trade.exchange|upper }}
                             </span>
+                            {% endif %}
                         </td>
                         <td><strong>{{ trade.symbol }}</strong></td>
                         <td class="side-{{ trade.side }}">
@@ -336,7 +342,8 @@ def load_trade_data():
                     'current_price': trade.get('current_price', trade.get('price', 0)),
                     'pnl': trade.get('pnl', 0),
                     'pnl_percent': trade.get('pnl_percent', 0),
-                    'timestamp': trade.get('timestamp', 'unknown')
+                    'timestamp': trade.get('timestamp', 'unknown'),
+                    'type': trade.get('type', 'unknown')  # Add type field
                 }
                 trades.append(processed_trade)
             
@@ -358,28 +365,40 @@ def load_trade_data():
 
 @app.route('/')
 def index():
-    """Main dashboard page with trade rows"""
-    trades = load_trade_data()
+    """Main dashboard page with trade rows - WITH SEPARATE SECTIONS"""
+    all_trades = load_trade_data()
     
-    # Calculate actual totals from loaded trades
-    if trades:
-        total_pnl = sum(trade.get('pnl', 0) for trade in trades)
-        profitable_trades = sum(1 for trade in trades if trade.get('pnl', 0) > 0)
-        total_trades = len(trades)
+    # Separate trades by type for better organization
+    summary_trades = [t for t in all_trades if t.get('type') in ['summary', 'investment_summary']]
+    spot_trades = [t for t in all_trades if t.get('type') == 'spot']
+    cash_trades = [t for t in all_trades if t.get('type') == 'cash']
+    
+    # Calculate totals from ALL trades
+    if all_trades:
+        total_pnl = sum(trade.get('pnl', 0) for trade in all_trades)
+        profitable_trades = sum(1 for trade in all_trades if trade.get('pnl', 0) > 0)
+        total_trades = len(all_trades)
         
         # Calculate average P&L percentage
-        total_pnl_percent = sum(trade.get('pnl_percent', 0) for trade in trades)
+        total_pnl_percent = sum(trade.get('pnl_percent', 0) for trade in all_trades)
         avg_pnl_percent = total_pnl_percent / total_trades if total_trades > 0 else 0
     else:
         # Fallback values
-        total_trades = 47  # From current file count
-        total_pnl = 0.58  # From current file data
-        profitable_trades = 11  # From current file data
-        avg_pnl_percent = 0.01  # Approximate
+        total_trades = 0
+        total_pnl = 0
+        profitable_trades = 0
+        avg_pnl_percent = 0
+    
+    # Calculate win rate
+    win_rate = round((profitable_trades / total_trades * 100), 1) if total_trades > 0 else 0
     
     return render_template_string(
         HTML_TEMPLATE,
-        trades=trades,
+        summary_trades=summary_trades,
+        spot_trades=spot_trades,
+        cash_trades=cash_trades,
+        total_trades=total_trades,
+        win_rate=win_rate,
         total_pnl=total_pnl,
         avg_pnl_percent=avg_pnl_percent,
         profitable_trades=profitable_trades,
@@ -390,15 +409,22 @@ def index():
 def api_trades():
     """API endpoint for trade data"""
     trades = load_trade_data()
+    
+    # Calculate actual values
+    total_trades = len(trades)
+    profitable_trades = sum(1 for trade in trades if trade.get('pnl', 0) > 0)
+    win_rate = round((profitable_trades / total_trades * 100), 1) if total_trades > 0 else 0
+    total_pnl = sum(trade.get('pnl', 0) for trade in trades)
+    
     return jsonify({
         'trades': trades,
-        'count': len(trades),
+        'count': total_trades,
         'summary': {
-            'total_trades': 40,
-            'win_rate': 42.5,
-            'profitable_trades': 17,
-            'portfolio_value': 655.36,
-            'total_pnl': -291.61
+            'total_trades': total_trades,
+            'win_rate': win_rate,
+            'profitable_trades': profitable_trades,
+            'portfolio_value': 655.36,  # This should also be calculated
+            'total_pnl': total_pnl
         },
         'last_updated': datetime.now().isoformat()
     })

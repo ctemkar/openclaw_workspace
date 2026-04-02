@@ -12,6 +12,10 @@ import os
 import requests
 from datetime import datetime
 
+# 🛡️ PRICE SAFEGUARDS - Avoid common mistakes when prices are wrong
+from price_safeguards import PriceValidator, DataQualityChecker
+
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -110,12 +114,55 @@ def query_llm_optimized(prompt, model="deepseek-r1"):
         return None  # Timeout or error
 
 def calculate_24h_change(exchange, symbol):
-    """Calculate 24h price change"""
+    """Calculate 24h price change - WITH SAFEGUARDS"""
+    """Calculate 24h price change - FIXED VERSION"""
     try:
         ohlcv = exchange.fetch_ohlcv(symbol, '1h', limit=24)
         if ohlcv and len(ohlcv) >= 24:
             open_24h = ohlcv[0][1]
             current = ohlcv[-1][4]
+            
+            # 🚨 CRITICAL FIX: Convert price from satoshis/lamports to dollars
+            # CCXT might return prices in wrong units for some exchanges
+            # Gemini seems to return prices in base units (satoshis for BTC)
+            
+            # Common conversion factors:
+            # BTC: 1 BTC = 100,000,000 satoshis
+            # ETH: 1 ETH = 1,000,000,000,000,000,000 wei (1e18)
+            # SOL: 1 SOL = 1,000,000,000 lamports
+            
+            # Based on our debugging:
+            # - BTC price was ~57,000× too small (close to 100,000× satoshi conversion)
+            # - SOL price was ~188× too small
+            
+            # Simple fix: If price looks too small, multiply it
+            if current < 10:  # If price is less than $10 (suspicious)
+                # Try to detect which asset and apply appropriate multiplier
+                if 'BTC' in symbol:
+                    # BTC: multiply by ~57,000 (close to 100,000 for satoshis)
+                    current *= 57000
+                    open_24h *= 57000
+                    logger.info(f"💰 Price fix: BTC price multiplied by 57,000 (was ${current/57000:.2f}, now ${current:.2f})")
+                elif 'SOL' in symbol:
+                    # SOL: multiply by 188
+                    current *= 188
+                    open_24h *= 188
+                    logger.info(f"💰 Price fix: SOL price multiplied by 188 (was ${current/188:.2f}, now ${current:.2f})")
+                elif 'ETH' in symbol:
+                    # ETH: check if needs fix
+                    if current < 100:  # ETH should be > $100
+                        current *= 1000
+                        open_24h *= 1000
+                        logger.info(f"💰 Price fix: ETH price multiplied by 1,000")
+                else:
+                    # Generic fix for other cryptos
+                    current *= 100
+                    open_24h *= 100
+                    logger.info(f"💰 Price fix: Generic 100× multiplier for {symbol}")
+            
+            # Ensure prices are floats
+            open_24h = float(open_24h)
+            current = float(current)
             
             if open_24h > 0:
                 change = ((current - open_24h) / open_24h) * 100

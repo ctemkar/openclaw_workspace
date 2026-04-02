@@ -4,6 +4,7 @@ SIMPLE FIXED DASHBOARD - Shows real P&L data with NO hardcoded values
 """
 
 from flask import Flask, jsonify, render_template_string
+from price_safeguards import DataQualityChecker
 import json
 from datetime import datetime
 from real_trading_data_service import RealTradingDataService
@@ -233,6 +234,10 @@ def dashboard():
     try:
         with open('trading_data/trades.json', 'r') as f:
             trades = json.load(f)
+        
+        # 🛡️ Check data quality
+        issues = DataQualityChecker.check_trades(trades)
+        warnings = DataQualityChecker.generate_dashboard_warnings(issues)
         
         # Extract data from trades
         gemini_info = {'investment': 500.00, 'current': 502.88, 'pnl': 2.88, 'pnl_percent': 0.6, 'cash': 492.93, 'position_value': 9.95, 'position_count': 2}
