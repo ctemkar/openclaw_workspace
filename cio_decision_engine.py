@@ -175,22 +175,26 @@ def make_cio_decision(model_results, weighted_consensus):
     if contradictions:
         logger.warning(f"   🚨 {len(contradictions)} CONTRADICTIONS FOUND!")
         
-        # When contradictions exist, be more conservative
+        # When contradictions exist, be LESS conservative - trust majority consensus
         buy_percent = decision_counts['BUY'] / total_models
         sell_percent = decision_counts['SELL'] / total_models
+        hold_percent = decision_counts['HOLD'] / total_models
         
-        if buy_percent >= 0.6:  # Strong buy consensus despite contradictions
+        # Find the strongest signal
+        max_percent = max(buy_percent, sell_percent, hold_percent)
+        
+        if max_percent == buy_percent and buy_percent >= 0.4:  # Lower threshold for BUY
             final_signal = 'BUY'
             confidence = 7
-            reason = f"Strong buy consensus ({buy_percent*100:.0f}%) despite some contradictory comments"
-        elif sell_percent >= 0.6:  # Strong sell consensus despite contradictions
+            reason = f"Buy consensus ({buy_percent*100:.0f}%) despite {len(contradictions)} contradictory comments"
+        elif max_percent == sell_percent and sell_percent >= 0.4:  # Lower threshold for SELL
             final_signal = 'SELL'
             confidence = 7
-            reason = f"Strong sell consensus ({sell_percent*100:.0f}%) despite some contradictory comments"
+            reason = f"Sell consensus ({sell_percent*100:.0f}%) despite {len(contradictions)} contradictory comments"
         else:
             final_signal = 'HOLD'
-            confidence = 8
-            reason = f"Mixed signals with contradictions. {len(contradictions)} models have score-comment mismatches"
+            confidence = 6  # Lower confidence for HOLD
+            reason = f"Mixed signals with {len(contradictions)} contradictions. BUY:{buy_percent*100:.0f}%, SELL:{sell_percent*100:.0f}%, HOLD:{hold_percent*100:.0f}%"
     else:
         # No contradictions - trust the consensus
         if decision_counts['BUY'] > decision_counts['SELL'] and decision_counts['BUY'] > decision_counts['HOLD']:

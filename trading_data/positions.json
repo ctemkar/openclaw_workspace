@@ -55,5 +55,77 @@
     "pnl_percent": 0.0,
     "timestamp": "2026-04-01T23:20:24.218788",
     "last_updated": "2026-04-01T23:20:24.218791"
+  },
+  "binance_BTC/USDT": {
+    "symbol": "BTC/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 66600.0,
+    "amount": 8.265765765765765e-05,
+    "current_price": 66600.0,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.791207",
+    "last_updated": "2026-04-02T13:16:23.791209"
+  },
+  "binance_ETH/USDT": {
+    "symbol": "ETH/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 2050.77,
+    "amount": 0.002684357582761597,
+    "current_price": 2050.77,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.793592",
+    "last_updated": "2026-04-02T13:16:23.793594"
+  },
+  "binance_SOL/USDT": {
+    "symbol": "SOL/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 79.23,
+    "amount": 0.06948125709958348,
+    "current_price": 79.23,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.794192",
+    "last_updated": "2026-04-02T13:16:23.794193"
+  },
+  "binance_ADA/USDT": {
+    "symbol": "ADA/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 0.238,
+    "amount": 23.130252100840337,
+    "current_price": 0.238,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.794755",
+    "last_updated": "2026-04-02T13:16:23.794755"
+  },
+  "binance_DOT/USDT": {
+    "symbol": "DOT/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 1.219,
+    "amount": 4.515996718621821,
+    "current_price": 1.219,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.795305",
+    "last_updated": "2026-04-02T13:16:23.795305"
+  },
+  "binance_LINK/USDT": {
+    "symbol": "LINK/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 8.55,
+    "amount": 0.6438596491228069,
+    "current_price": 8.55,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:16:23.796101",
+    "last_updated": "2026-04-02T13:16:23.796103"
   }
 }

@@ -1,238 +1,162 @@
 #!/usr/bin/env python3
 """
-Check REAL balances on Gemini and Binance
-NO HARDCODED VALUES - REAL DATA ONLY
+Check REAL Gemini and Binance balances via API
 """
 
 import os
-import ccxt
 import json
 from datetime import datetime
 
-# Load API keys
-def load_api_keys():
-    """Load Gemini and Binance API keys"""
-    keys = {}
-    try:
-        # Gemini
-        with open("secure_keys/.gemini_key", "r") as f:
-            keys['gemini_key'] = f.read().strip()
-        with open("secure_keys/.gemini_secret", "r") as f:
-            keys['gemini_secret'] = f.read().strip()
-        print("✅ Gemini API keys loaded")
-    except Exception as e:
-        print(f"❌ Failed to load Gemini keys: {e}")
-        keys['gemini_key'] = None
-        keys['gemini_secret'] = None
+def check_gemini_balance():
+    """Check actual Gemini balance via API"""
+    print("🔵 CHECKING GEMINI ACTUAL BALANCE")
+    print("="*50)
     
     try:
-        # Binance
-        with open("secure_keys/.binance_key", "r") as f:
-            keys['binance_key'] = f.read().strip()
-        with open("secure_keys/.binance_secret", "r") as f:
-            keys['binance_secret'] = f.read().strip()
-        print("✅ Binance API keys loaded")
-    except Exception as e:
-        print(f"❌ Failed to load Binance keys: {e}")
-        keys['binance_key'] = None
-        keys['binance_secret'] = None
-    
-    return keys
-
-def init_exchanges(keys):
-    """Initialize Gemini and Binance exchanges"""
-    exchanges = {}
-    
-    # Initialize Gemini
-    if keys['gemini_key'] and keys['gemini_secret']:
-        exchanges['gemini'] = ccxt.gemini({
-            'apiKey': keys['gemini_key'],
-            'secret': keys['gemini_secret'],
+        # Try to import Gemini API
+        import ccxt
+        gemini = ccxt.gemini({
+            'apiKey': os.environ.get('GEMINI_API_KEY', ''),
+            'secret': os.environ.get('GEMINI_API_SECRET', ''),
             'enableRateLimit': True,
         })
-        print("✅ Gemini exchange initialized")
-    else:
-        exchanges['gemini'] = None
-        print("⚠️ Gemini exchange not available")
+        
+        # Fetch balance
+        balance = gemini.fetch_balance()
+        print(f"💰 Total Balance: ${balance.get('total', {}).get('USD', 0):.2f}")
+        print(f"💵 Free USD: ${balance.get('free', {}).get('USD', 0):.2f}")
+        print(f"📊 Used USD: ${balance.get('used', {}).get('USD', 0):.2f}")
+        
+        # Show crypto holdings
+        print("\n📈 Crypto Holdings:")
+        for currency, amount in balance.get('total', {}).items():
+            if currency != 'USD' and amount > 0:
+                print(f"  {currency}: {amount:.8f}")
+        
+        return balance
+    except Exception as e:
+        print(f"❌ Gemini API Error: {e}")
+        print("⚠️  Using fallback data from logs")
+        
+        # Try to get data from trading bot logs
+        try:
+            with open('real_26_crypto_trading.log', 'r') as f:
+                lines = f.readlines()[-100:]  # Last 100 lines
+                for line in lines:
+                    if 'Gemini cash balance' in line or 'GEMINI_CAPITAL' in line:
+                        print(f"📝 From log: {line.strip()}")
+        except:
+            pass
+        
+        return None
+
+def check_binance_balance():
+    """Check actual Binance balance via API"""
+    print("\n🟡 CHECKING BINANCE ACTUAL BALANCE")
+    print("="*50)
     
-    # Initialize Binance Futures
-    if keys['binance_key'] and keys['binance_secret']:
-        exchanges['binance'] = ccxt.binance({
-            'apiKey': keys['binance_key'],
-            'secret': keys['binance_secret'],
+    try:
+        # Try to import Binance API
+        import ccxt
+        binance = ccxt.binance({
+            'apiKey': os.environ.get('BINANCE_API_KEY', ''),
+            'secret': os.environ.get('BINANCE_API_SECRET', ''),
             'enableRateLimit': True,
             'options': {
-                'defaultType': 'future',
+                'defaultType': 'future',  # For futures trading
             }
         })
-        print("✅ Binance Futures exchange initialized")
-    else:
-        exchanges['binance'] = None
-        print("⚠️ Binance exchange not available")
-    
-    return exchanges
-
-def check_gemini_balances(exchange):
-    """Check REAL Gemini balances"""
-    print("\n" + "="*60)
-    print("♊ GEMINI REAL BALANCES")
-    print("="*60)
-    
-    try:
+        
         # Fetch balance
-        balance = exchange.fetch_balance()
+        balance = binance.fetch_balance()
+        print(f"💰 Total Balance: ${balance.get('total', {}).get('USDT', 0):.2f}")
+        print(f"💵 Free USDT: ${balance.get('free', {}).get('USDT', 0):.2f}")
+        print(f"📊 Used USDT: ${balance.get('used', {}).get('USDT', 0):.2f}")
         
-        # Get total USD value
-        total_usd = balance.get('total', {}).get('USD', 0)
-        free_usd = balance.get('free', {}).get('USD', 0)
-        used_usd = balance.get('used', {}).get('USD', 0)
+        # Show positions
+        print("\n📈 Positions:")
+        positions = binance.fetch_positions()
+        for pos in positions:
+            if float(pos.get('contracts', 0)) > 0:
+                symbol = pos.get('symbol', '')
+                side = pos.get('side', '')
+                contracts = pos.get('contracts', 0)
+                entry_price = pos.get('entryPrice', 0)
+                mark_price = pos.get('markPrice', 0)
+                pnl = pos.get('unrealizedPnl', 0)
+                print(f"  {symbol} {side} x{contracts} @ ${entry_price:.4f} (Mark: ${mark_price:.4f}, P&L: ${pnl:.2f})")
         
-        print(f"💰 Total USD: ${total_usd:.2f}")
-        print(f"💵 Free USD: ${free_usd:.2f}")
-        print(f"📊 Used USD: ${used_usd:.2f}")
-        
-        # Check crypto holdings
-        print("\n📈 Crypto Holdings:")
-        cryptos = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 
-                  'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI']
-        
-        holdings = []
-        for crypto in cryptos:
-            amount = balance.get('total', {}).get(crypto, 0)
-            if amount > 0:
-                # Get current price
-                try:
-                    ticker = exchange.fetch_ticker(f"{crypto}/USD")
-                    price = ticker['last']
-                    value = amount * price
-                    holdings.append({
-                        'crypto': crypto,
-                        'amount': amount,
-                        'price': price,
-                        'value': value
-                    })
-                    print(f"  • {crypto}: {amount:.6f} (${value:.2f})")
-                except Exception as e:
-                    print(f"  • {crypto}: {amount:.6f} (price unavailable)")
-        
-        print(f"\n📊 Total crypto holdings: {len(holdings)} positions")
-        
-        return {
-            'total_usd': total_usd,
-            'free_usd': free_usd,
-            'used_usd': used_usd,
-            'holdings': holdings,
-            'timestamp': datetime.now().isoformat()
-        }
-        
+        return balance
     except Exception as e:
-        print(f"❌ Error fetching Gemini balance: {e}")
-        return None
-
-def check_binance_balances(exchange):
-    """Check REAL Binance Futures balances"""
-    print("\n" + "="*60)
-    print("₿ BINANCE FUTURES REAL BALANCES")
-    print("="*60)
-    
-    try:
-        # Fetch balance
-        balance = exchange.fetch_balance()
+        print(f"❌ Binance API Error: {e}")
+        print("⚠️  Note: Binance may be geographically restricted in Thailand")
         
-        # Get total USD value
-        total_usd = balance.get('total', {}).get('USDT', 0)
-        free_usd = balance.get('free', {}).get('USDT', 0)
-        used_usd = balance.get('used', {}).get('USDT', 0)
-        
-        print(f"💰 Total USDT: ${total_usd:.2f}")
-        print(f"💵 Free USDT: ${free_usd:.2f}")
-        print(f"📊 Used USDT: ${used_usd:.2f}")
-        
-        # Check positions
-        print("\n📈 Open Positions:")
+        # Try to get data from trading bot logs
         try:
-            positions = exchange.fetch_positions()
-            open_positions = []
-            for pos in positions:
-                if float(pos['contracts']) > 0:
-                    symbol = pos['symbol']
-                    side = pos['side']
-                    contracts = float(pos['contracts'])
-                    entry_price = float(pos['entryPrice'])
-                    mark_price = float(pos['markPrice'])
-                    unrealized_pnl = float(pos['unrealizedPnl'])
-                    
-                    open_positions.append({
-                        'symbol': symbol,
-                        'side': side,
-                        'contracts': contracts,
-                        'entry_price': entry_price,
-                        'mark_price': mark_price,
-                        'unrealized_pnl': unrealized_pnl
-                    })
-                    
-                    pnl_color = "🟢" if unrealized_pnl >= 0 else "🔴"
-                    print(f"  • {symbol} {side}: {contracts} contracts")
-                    print(f"    Entry: ${entry_price:.2f}, Mark: ${mark_price:.2f}")
-                    print(f"    P&L: {pnl_color} ${unrealized_pnl:.2f}")
-            
-            print(f"\n📊 Total open positions: {len(open_positions)}")
-            
-            return {
-                'total_usdt': total_usd,
-                'free_usdt': free_usd,
-                'used_usdt': used_usd,
-                'open_positions': open_positions,
-                'timestamp': datetime.now().isoformat()
-            }
-            
-        except Exception as e:
-            print(f"❌ Error fetching positions: {e}")
-            return {
-                'total_usdt': total_usd,
-                'free_usdt': free_usd,
-                'used_usdt': used_usd,
-                'open_positions': [],
-                'timestamp': datetime.now().isoformat()
-            }
+            with open('real_26_crypto_trading.log', 'r') as f:
+                lines = f.readlines()[-100:]  # Last 100 lines
+                for line in lines:
+                    if 'Binance' in line and ('capital' in line.lower() or 'balance' in line.lower()):
+                        print(f"📝 From log: {line.strip()}")
+        except:
+            pass
         
-    except Exception as e:
-        print(f"❌ Error fetching Binance balance: {e}")
         return None
+
+def check_trade_history():
+    """Check actual trade history"""
+    print("\n📊 CHECKING ACTUAL TRADE HISTORY")
+    print("="*50)
+    
+    trade_files = [
+        '26_crypto_trade_history.json',
+        '26_crypto_trade_history_CORRECTED.json',
+        'daily_trades.json'
+    ]
+    
+    for file in trade_files:
+        if os.path.exists(file):
+            try:
+                with open(file, 'r') as f:
+                    trades = json.load(f)
+                
+                if isinstance(trades, list):
+                    print(f"\n📁 {file}: {len(trades)} trades")
+                    # Show recent trades
+                    for i, trade in enumerate(trades[-5:]):  # Last 5 trades
+                        exchange = trade.get('exchange', 'unknown')
+                        symbol = trade.get('symbol', 'unknown')
+                        side = trade.get('side', 'unknown')
+                        entry = trade.get('entry_price', 0)
+                        current = trade.get('current_price', 0)
+                        pnl = trade.get('pnl', 0)
+                        status = trade.get('status', 'unknown')
+                        print(f"  {i+1}. {exchange} {symbol} {side} @ ${entry:.4f} (Now: ${current:.4f}, P&L: ${pnl:.2f}) [{status}]")
+                else:
+                    print(f"📁 {file}: Not a list format")
+            except Exception as e:
+                print(f"❌ Error reading {file}: {e}")
 
 def main():
-    print("🔍 CHECKING REAL BALANCES - NO HARDCODED VALUES")
     print("="*60)
+    print("🔍 CHECKING REAL EXCHANGE DATA - PROACTIVE MONITORING")
+    print("="*60)
+    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print()
     
-    # Load keys
-    keys = load_api_keys()
+    # Check actual balances
+    gemini_balance = check_gemini_balance()
+    binance_balance = check_binance_balance()
     
-    # Initialize exchanges
-    exchanges = init_exchanges(keys)
-    
-    results = {}
-    
-    # Check Gemini
-    if exchanges['gemini']:
-        gemini_data = check_gemini_balances(exchanges['gemini'])
-        results['gemini'] = gemini_data
-    else:
-        print("\n⚠️ Skipping Gemini - exchange not available")
-    
-    # Check Binance
-    if exchanges['binance']:
-        binance_data = check_binance_balances(exchanges['binance'])
-        results['binance'] = binance_data
-    else:
-        print("\n⚠️ Skipping Binance - exchange not available")
-    
-    # Save results
-    with open('real_balances.json', 'w') as f:
-        json.dump(results, f, indent=2)
+    # Check trade history
+    check_trade_history()
     
     print("\n" + "="*60)
-    print("✅ REAL BALANCE CHECK COMPLETE")
-    print("📁 Results saved to real_balances.json")
+    print("🎯 RECOMMENDATIONS:")
+    print("1. Update dashboard with REAL API data, not estimates")
+    print("2. Show actual trade rows from trade history")
+    print("3. Fix P&L calculations with real current prices")
+    print("4. Monitor proactively, not reactively")
     print("="*60)
 
 if __name__ == "__main__":

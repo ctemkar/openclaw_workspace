@@ -327,8 +327,8 @@ def main():
             crypto = consensus['crypto']
             signal = consensus['signal']
             
-            # Only execute STRONG_BUY and STRONG_SELL signals
-            if signal in ["STRONG_BUY", "STRONG_SELL"] and executor:
+            # Execute STRONG_BUY, STRONG_SELL, and SELL signals (test SELL signals)
+            if signal in ["STRONG_BUY", "STRONG_SELL", "SELL"] and executor:
                 price = prices[crypto]['price']
                 confidence = abs(consensus['buy_score'] - consensus['sell_score'])
                 
@@ -361,7 +361,7 @@ def main():
                     'action': consensus['signal'],
                     'buy_score': consensus['buy_score'],
                     'sell_score': consensus['sell_score'],
-                    'executed': consensus['signal'] in ["STRONG_BUY", "STRONG_SELL"]
+                    'executed': consensus['signal'] in ["STRONG_BUY", "STRONG_SELL", "SELL"]
                 }
                 decisions.append(decision)
             
