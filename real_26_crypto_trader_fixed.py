@@ -102,18 +102,28 @@ def load_open_positions():
             # Extract open positions (assuming all trades in file are open)
             open_positions = {}
             for trade in trades:
-                symbol = trade.get('symbol', '').replace('/USD', '').replace('/USDT', '').replace(':USDT', '')
+                symbol = trade.get('symbol', '')
                 exchange = trade.get('exchange', '')
                 side = trade.get('side', '')
                 
                 if symbol and exchange and side:
-                    key = f"{symbol}_{exchange}"
+                    # Clean symbol properly - extract just the crypto name
+                    # Handle formats: ETH/USD, ETH/USDT, ETH:USDT
+                    if '/' in symbol:
+                        base_symbol = symbol.split('/')[0]
+                    elif ':' in symbol:
+                        base_symbol = symbol.split(':')[0]
+                    else:
+                        base_symbol = symbol.replace('USDT', '').replace('USD', '')
+                    
+                    key = f"{base_symbol}_{exchange}"
                     open_positions[key] = {
-                        'symbol': symbol,
+                        'symbol': base_symbol,
                         'exchange': exchange,
                         'side': side,
                         'price': trade.get('price', 0),
-                        'amount': trade.get('amount', 0)
+                        'amount': trade.get('amount', 0),
+                        'original_symbol': symbol  # Keep for debugging
                     }
             
             logger.info(f"📊 Loaded {len(open_positions)} open positions")

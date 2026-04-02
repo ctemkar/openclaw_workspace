@@ -20318,5 +20318,1126 @@
         "net_score": -4
       }
     ]
+  },
+  {
+    "crypto": "ETH",
+    "timestamp": "2026-04-02T15:55:27.981550",
+    "buy_score": 5.06,
+    "sell_score": 6.93,
+    "signal": "BUY",
+    "current_price": 2047.01,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 9,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "llama3",
+        "buy": 6,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 6,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -1
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -6
+      }
+    ]
+  },
+  {
+    "crypto": "SOL",
+    "timestamp": "2026-04-02T15:56:54.020069",
+    "buy_score": 4.0,
+    "sell_score": 6.9,
+    "signal": "SELL",
+    "current_price": 79.07,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -2
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 9,
+        "weight": 0.9,
+        "net_score": -3
+      }
+    ]
+  },
+  {
+    "crypto": "XRP",
+    "timestamp": "2026-04-02T15:58:17.255163",
+    "buy_score": 4.01,
+    "sell_score": 6.54,
+    "signal": "SELL",
+    "current_price": 1.3134,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 5,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -1
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -4
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": -2
+      }
+    ]
+  },
+  {
+    "crypto": "ADA",
+    "timestamp": "2026-04-02T15:59:43.196030",
+    "buy_score": 4.44,
+    "sell_score": 6.64,
+    "signal": "SELL",
+    "current_price": 0.2393,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 5,
+        "sell": 9,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -2
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -4
+      }
+    ]
+  },
+  {
+    "crypto": "DOT",
+    "timestamp": "2026-04-02T16:01:06.225764",
+    "buy_score": 3.89,
+    "sell_score": 6.96,
+    "signal": "SELL",
+    "current_price": 1.216,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -5
+      },
+      {
+        "model": "mistral",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -3
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": -2
+      }
+    ]
+  },
+  {
+    "crypto": "DOGE",
+    "timestamp": "2026-04-02T16:02:33.337549",
+    "buy_score": 4.29,
+    "sell_score": 5.57,
+    "signal": "HOLD",
+    "current_price": 0.09015,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 3,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -3
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 5,
+        "weight": 0.9,
+        "net_score": -1
+      }
+    ]
+  },
+  {
+    "crypto": "AVAX",
+    "timestamp": "2026-04-02T16:04:00.463866",
+    "buy_score": 3.89,
+    "sell_score": 5.87,
+    "signal": "BUY",
+    "current_price": 8.68,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 9,
+        "weight": 1.0,
+        "net_score": -7
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -5
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -2
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 3,
+        "weight": 0.9,
+        "net_score": 1
+      }
+    ]
+  },
+  {
+    "crypto": "LINK",
+    "timestamp": "2026-04-02T16:05:27.936035",
+    "buy_score": 3.47,
+    "sell_score": 6.93,
+    "signal": "SELL",
+    "current_price": 8.51,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 3,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -5
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -5
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -4
+      },
+      {
+        "model": "llama3.1",
+        "buy": 3,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -5
+      }
+    ]
+  },
+  {
+    "crypto": "UNI",
+    "timestamp": "2026-04-02T16:06:55.310341",
+    "buy_score": 4.68,
+    "sell_score": 5.94,
+    "signal": "SELL",
+    "current_price": 3.326,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -4
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 9,
+        "weight": 0.9,
+        "net_score": -3
+      }
+    ]
+  },
+  {
+    "crypto": "BTC",
+    "timestamp": "2026-04-02T16:18:23.267657",
+    "buy_score": 4.49,
+    "sell_score": 6.97,
+    "signal": "SELL",
+    "current_price": 66411.49,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 7,
+        "sell": 8,
+        "weight": 1.1,
+        "net_score": -1
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": -2
+      }
+    ]
+  },
+  {
+    "crypto": "ETH",
+    "timestamp": "2026-04-02T16:19:47.796286",
+    "buy_score": 5.25,
+    "sell_score": 6.82,
+    "signal": "SELL",
+    "current_price": 2043.5,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "qwen3",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 6,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -1
+      },
+      {
+        "model": "llama3.1",
+        "buy": 8,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": 2
+      }
+    ]
+  },
+  {
+    "crypto": "SOL",
+    "timestamp": "2026-04-02T16:21:11.615936",
+    "buy_score": 4.19,
+    "sell_score": 5.94,
+    "signal": "BUY",
+    "current_price": 79.1,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -2
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -6
+      }
+    ]
+  },
+  {
+    "crypto": "XRP",
+    "timestamp": "2026-04-02T16:22:38.334987",
+    "buy_score": 4.74,
+    "sell_score": 6.07,
+    "signal": "SELL",
+    "current_price": 1.3102,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 8,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.1,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -4
+      }
+    ]
+  },
+  {
+    "crypto": "ADA",
+    "timestamp": "2026-04-02T16:24:00.236941",
+    "buy_score": 4.72,
+    "sell_score": 5.99,
+    "signal": "SELL",
+    "current_price": 0.2381,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 8,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 4
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -3
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": -2
+      }
+    ]
+  },
+  {
+    "crypto": "DOT",
+    "timestamp": "2026-04-02T16:25:25.528317",
+    "buy_score": 3.78,
+    "sell_score": 6.76,
+    "signal": "SELL",
+    "current_price": 1.217,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 9,
+        "weight": 1.0,
+        "net_score": -7
+      },
+      {
+        "model": "llama3",
+        "buy": 2,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -6
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -1
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.1,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 3,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -5
+      }
+    ]
+  },
+  {
+    "crypto": "DOGE",
+    "timestamp": "2026-04-02T16:26:55.114057",
+    "buy_score": 4.86,
+    "sell_score": 5.42,
+    "signal": "BUY",
+    "current_price": 0.09012,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 5,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 1
+      },
+      {
+        "model": "llama3",
+        "buy": 7,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 3
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -1
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": -2
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": -2
+      }
+    ]
+  },
+  {
+    "crypto": "AVAX",
+    "timestamp": "2026-04-02T16:28:22.370710",
+    "buy_score": 4.6,
+    "sell_score": 5.93,
+    "signal": "SELL",
+    "current_price": 8.66,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 3,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "qwen3",
+        "buy": 5,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "mistral",
+        "buy": 6,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 2
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.1,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -4
+      }
+    ]
+  },
+  {
+    "crypto": "LINK",
+    "timestamp": "2026-04-02T16:29:45.969016",
+    "buy_score": 3.64,
+    "sell_score": 7.07,
+    "signal": "BUY",
+    "current_price": 8.5,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 9,
+        "weight": 1.0,
+        "net_score": -5
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -3
+      },
+      {
+        "model": "qwen3",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 4,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -3
+      },
+      {
+        "model": "llama3.1",
+        "buy": 2,
+        "sell": 8,
+        "weight": 0.9,
+        "net_score": -6
+      }
+    ]
+  },
+  {
+    "crypto": "UNI",
+    "timestamp": "2026-04-02T16:31:09.811688",
+    "buy_score": 4.43,
+    "sell_score": 7.19,
+    "signal": "SELL",
+    "current_price": 3.325,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "qwen3",
+        "buy": 4,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -4
+      },
+      {
+        "model": "mistral",
+        "buy": 5,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -1
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 3,
+        "sell": 7,
+        "weight": 1.1,
+        "net_score": -4
+      },
+      {
+        "model": "llama3.1",
+        "buy": 4,
+        "sell": 9,
+        "weight": 0.9,
+        "net_score": -5
+      }
+    ]
   }
 ]
