@@ -1,0 +1,120 @@
+[
+  {
+    "id": "970f81f3",
+    "timestamp": "2026-04-02T18:34:32.275635",
+    "category": "system_state",
+    "title": "Current Trading System State",
+    "content": "System reset to reality on 2026-04-02 after dashboard showed fictional data.\n        \nACTUAL STATE:\n- Gemini: $563.08 USD cash + 0.137152 ETH + 0.460077 SOL\n- Binance: $70.15 USDT total, $72.62 free (no positions)\n- P&L: -$14.29 total (ETH -$12.31, SOL -$1.98)\n- Gemini-only bot running with $563 cash\n- All 4 dashboards running with accurate data",
+    "tags": [
+      "reality",
+      "reset",
+      "current_state"
+    ],
+    "priority": "critical",
+    "accessed": 0
+  },
+  {
+    "id": "a3b9cbd9",
+    "timestamp": "2026-04-02T18:34:32.275809",
+    "category": "trading_positions",
+    "title": "Current Gemini Positions with Real P&L",
+    "content": "ETH/USD:\n- Amount: 0.137152\n- Entry: $2,126.63 (weighted average)\n- Current: $2,036.88\n- P&L: -$12.31 (-4.22%)\n- Value: $291.67\n\nSOL/USD:\n- Amount: 0.460077\n- Entry: $83.09 (weighted average)\n- Current: $78.79\n- P&L: -$1.98 (-5.18%)\n- Value: $38.23\n\nTOTAL P&L: -$14.29",
+    "tags": [
+      "gemini",
+      "positions",
+      "pnl",
+      "eth",
+      "sol"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "5de07608",
+    "timestamp": "2026-04-02T18:34:32.275898",
+    "category": "issues_fixed",
+    "title": "Critical Dashboard Bug - Fictional Data",
+    "content": "PROBLEM: Dashboard showed 85 fictional trades with wrong P&L\n- ETH prices were $80-85 off (4% error)\n- Dashboard showed profits when actual was losses\n- Positions didn't match reality\n\nSOLUTION:\n1. Reset dashboard to show only actual positions\n2. Restored real entry prices from backup trades\n3. Calculated real P&L based on actual entry vs current prices\n4. Fixed trades dashboard to show P&L correctly\n\nLESSON: Always verify dashboard data against exchange APIs",
+    "tags": [
+      "dashboard_bug",
+      "data_accuracy",
+      "critical_fix"
+    ],
+    "priority": "critical",
+    "accessed": 0
+  },
+  {
+    "id": "58cfbacc",
+    "timestamp": "2026-04-02T18:34:32.275967",
+    "category": "user_preferences",
+    "title": "User Instructions - Critical Requirements",
+    "content": "USER PREFERENCES:\n1. P&L is the MOST IMPORTANT part of the system\n2. Store important memories on git for context retention\n3. Be proactive, don't wait for explicit instructions\n4. Verify data accuracy before displaying\n5. Use APIs to check reality, don't ask user to check UIs\n6. Trading with real money requires 100% real data\n7. NO hardcoded values in real trading systems\n8. NO simulations or mock data - always use real data",
+    "tags": [
+      "user_prefs",
+      "critical",
+      "instructions"
+    ],
+    "priority": "critical",
+    "accessed": 0
+  },
+  {
+    "id": "5f7b14eb",
+    "timestamp": "2026-04-02T18:34:32.276044",
+    "category": "bot_config",
+    "title": "Gemini-Only Trading Bot Configuration",
+    "content": "CURRENT BOT: gemini_only_trader.py\n- Strategy: Gemini-only (no Binance due to geographic restrictions)\n- Capital: $563.08 USD available\n- Threshold: 1.5% price drop for LONG entries\n- Position size: Conservative (not specified)\n- Scan interval: Every 5 minutes\n- Status: RUNNING\n\nREASON: Binance API blocked in Thailand, using Gemini only",
+    "tags": [
+      "trading_bot",
+      "gemini",
+      "configuration",
+      "running"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "2d720891",
+    "timestamp": "2026-04-02T18:34:32.276108",
+    "category": "dashboard_status",
+    "title": "Dashboard Status and Ports",
+    "content": "ALL 4 DASHBOARDS RUNNING:\n1. Port 5007: Main dashboard with LLM reports\n2. Port 5011: Trades dashboard (shows P&L)\n3. Port 5013: Grouped exchange totals\n4. Port 5014: Real-time prices (critical fix)\n\nACCESS:\n- http://localhost:5007\n- http://localhost:5011\n- http://localhost:5013  \n- http://localhost:5014\n\nSTATUS: All showing accurate data with real P&L",
+    "tags": [
+      "dashboards",
+      "ports",
+      "status",
+      "working"
+    ],
+    "priority": "medium",
+    "accessed": 0
+  },
+  {
+    "id": "e4ad8f9b",
+    "timestamp": "2026-04-02T18:34:32.276207",
+    "category": "git_commits",
+    "title": "Git Commit Strategy for Memory",
+    "content": "GIT COMMIT RULES:\n1. Commit after every significant change\n2. Include context in commit messages\n3. Tag important fixes with [CRITICAL], [FIX], [FEATURE]\n4. Include timestamps and reasoning\n5. Store memory.json in git for persistence\n6. Use descriptive commit messages that explain WHY\n\nEXAMPLE: \"Fixed dashboard P&L calculation - was using current price as entry price, now uses actual entry prices from backup\"",
+    "tags": [
+      "git",
+      "version_control",
+      "memory",
+      "best_practices"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "68c026fe",
+    "timestamp": "2026-04-02T18:34:32.276303",
+    "category": "lessons_learned",
+    "title": "Critical Lessons from Dashboard Bug",
+    "content": "LESSONS LEARNED:\n1. Dashboard data MUST be verified against exchange APIs\n2. P&L calculations require ACTUAL entry prices, not current prices\n3. Historical trade data should be preserved for entry price lookup\n4. System resets should backup old data before clearing\n5. User wants proactive problem identification and fixing\n6. Memory retention is critical - store context in git\n7. Real trading systems require 100% data accuracy\n8. Never assume dashboard data is correct - always verify",
+    "tags": [
+      "lessons",
+      "dashboard",
+      "data_accuracy",
+      "critical"
+    ],
+    "priority": "high",
+    "accessed": 0
+  }
+]

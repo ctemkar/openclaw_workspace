@@ -146,6 +146,12 @@ def trades_dashboard():
         total_pnl = sum(t.get('pnl', 0) for t in trades)
         winning_trades = sum(1 for t in trades if t.get('pnl', 0) > 0)
         win_rate = (winning_trades / total_trades * 100) if total_trades > 0 else 0
+        
+        # Calculate value for each trade (price * amount) if not present
+        for trade in trades:
+            if 'value' not in trade:
+                trade['value'] = trade.get('price', 0) * trade.get('amount', 0)
+        
         avg_trade_size = sum(t.get('value', 0) for t in trades) / total_trades if total_trades > 0 else 0
         
         # Add trade type (SHORT for sell, LONG for buy)

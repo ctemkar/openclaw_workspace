@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-04-02T18:14:58.858587",
+  "closed": [
+    {
+      "symbol": "ENJ/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 670.0,
+      "order_id": "11828731696",
+      "status": "CLOSED"
+    },
+    {
+      "symbol": "DOT/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 31.5,
+      "order_id": "31737796672",
+      "status": "CLOSED"
+    },
+    {
+      "symbol": "ETH/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 0.018,
+      "order_id": "8389766145779805948",
+      "status": "CLOSED"
+    },
+    {
+      "symbol": "COMP/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 0.778,
+      "order_id": "12541706294",
+      "status": "CLOSED"
+    },
+    {
+      "symbol": "XRP/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 20.9,
+      "order_id": "145727514212",
+      "status": "CLOSED"
+    },
+    {
+      "symbol": "LINK/USDT:USDT",
+      "original_side": "long",
+      "close_side": "sell",
+      "contracts": 3.22,
+      "order_id": "48680225394",
+      "status": "CLOSED"
+    }
+  ],
+  "failed": [],
+  "total_closed": 6,
+  "total_failed": 0
+}

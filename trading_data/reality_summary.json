@@ -1,0 +1,14 @@
+{
+  "reset_timestamp": "2026-04-02T18:16:08.059751",
+  "old_trade_count": 85,
+  "new_trade_count": 2,
+  "reality": {
+    "gemini_cash_usd": 563.08,
+    "gemini_eth": 0.00235,
+    "gemini_sol": 0.059865,
+    "binance_total_usdt": 70.15,
+    "binance_free_usdt": 72.62,
+    "open_positions": 0
+  },
+  "backup_file": "/Users/chetantemkar/.openclaw/workspace/app/trading_data/trades_backup.json"
+}

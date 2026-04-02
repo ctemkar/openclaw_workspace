@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-04-02T18:05:49.989440",
+  "actual_positions": {
+    "gemini": {
+      "USD": {
+        "amount": 563.0755526839882,
+        "type": "spot"
+      },
+      "ETH": {
+        "amount": 0.0023499,
+        "type": "spot"
+      },
+      "SOL": {
+        "amount": 0.05986488,
+        "type": "spot"
+      }
+    },
+    "binance": {
+      "ENJ": {
+        "contracts": 670.0,
+        "side": "long",
+        "entry_price": 0.02126,
+        "unrealized_pnl": 0.0262707,
+        "type": "futures"
+      },
+      "DOT": {
+        "contracts": 31.5,
+        "side": "long",
+        "entry_price": 1.214,
+        "unrealized_pnl": -0.063,
+        "type": "futures"
+      },
+      "ETH": {
+        "contracts": 0.018,
+        "side": "long",
+        "entry_price": 2037.87,
+        "unrealized_pnl": -0.0117,
+        "type": "futures"
+      },
+      "COMP": {
+        "contracts": 0.778,
+        "side": "long",
+        "entry_price": 16.42,
+        "unrealized_pnl": -0.00607983,
+        "type": "futures"
+      },
+      "XRP": {
+        "contracts": 20.9,
+        "side": "long",
+        "entry_price": 1.3083,
+        "unrealized_pnl": -0.02299,
+        "type": "futures"
+      },
+      "LINK": {
+        "contracts": 3.22,
+        "side": "long",
+        "entry_price": 8.499,
+        "unrealized_pnl": -0.00592209,
+        "type": "futures"
+      }
+    }
+  },
+  "dashboard_positions": {
+    "gemini": {
+      "ETH": 0.13715198490797093,
+      "XRP": 16.909174835753163,
+      "BTC": 0.0011926981036651948,
+      "SOL": 0.46007698178883716,
+      "LINK": 5.624598207110842
+    },
+    "binance": {
+      "ADA": 272.72226030574245,
+      "COMP": 3.5048433741526517,
+      "ENJ": 2005.3641938618894,
+      "BTC": 0.0005782206773545636,
+      "ETH": 0.018805144794105125,
+      "SOL": 0.4861087364167883,
+      "DOT": 31.57148316217856,
+      "LINK": 3.2223316590836713,
+      "DOGE": 244.23932218698533,
+      "AVAX": 4.424255124728523,
+      "UNI": 11.563684145602686,
+      "XRP": 20.94790390192723
+    }
+  },
+  "mismatches": {
+    "gemini": [
+      "XRP",
+      "USD",
+      "SOL",
+      "BTC",
+      "LINK",
+      "ETH"
+    ],
+    "binance": [
+      "COMP",
+      "XRP",
+      "DOT",
+      "SOL",
+      "BTC",
+      "UNI",
+      "DOGE",
+      "LINK",
+      "ADA",
+      "ETH",
+      "ENJ",
+      "AVAX"
+    ]
+  }
+}
