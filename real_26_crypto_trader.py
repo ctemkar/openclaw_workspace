@@ -128,13 +128,20 @@ def check_gemini_long_opportunities(exchange, crypto):
         ticker = exchange.fetch_ticker(symbol)
         
         current_price = ticker['last']
-        change_percent = ticker['percentage']
         
-        if change_percent is None:
-            # Calculate manually if percentage not available
-            open_price = ticker['open']
-            if open_price and open_price > 0:
-                change_percent = ((current_price - open_price) / open_price) * 100
+        # Gemini doesn't provide percentage or open in ticker, use OHLCV
+        change_percent = None
+        try:
+            # Get 24-hour OHLCV data (1-hour candles for last 24 hours)
+            ohlcv = exchange.fetch_ohlcv(symbol, '1h', limit=24)
+            if ohlcv and len(ohlcv) >= 24:
+                # Open price 24 hours ago
+                open_24h = ohlcv[0][1]  # Open price of first candle
+                if open_24h and open_24h > 0:
+                    change_percent = ((current_price - open_24h) / open_24h) * 100
+                    logger.info(f"📊 {crypto} 24h change calculated: {change_percent:.2f}%")
+        except Exception as e:
+            logger.warning(f"⚠️ Could not calculate 24h change for {crypto}: {e}")
         
         # Check for BOTH dip buying AND momentum trading
         signal_type = None
