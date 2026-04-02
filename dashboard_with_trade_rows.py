@@ -242,14 +242,17 @@ HTML_TEMPLATE = '''
             </div>
         </div>
         
-        <div class="trade-rows-section" id="trade-rows">
-            <div class="section-title">💱 TRADE ROWS ({{ total_trades }} Total Trades)</div>
+        <!-- 🏆 SUMMARY/TOTALS SECTION (Most Important - At the TOP) -->
+        {% if summary_trades %}
+        <div class="trade-rows-section" id="summary-rows">
+            <div class="section-title" style="color: #00ff9d;">🏆 PORTFOLIO TOTALS ({{ summary_trades|length }} Summary Rows)</div>
+            <p style="color: #a0aec0; margin-bottom: 15px;">Overall portfolio performance and exchange totals</p>
             
             <table class="trade-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Exchange</th>
+                        <th>Type</th>
                         <th>Symbol</th>
                         <th>Side</th>
                         <th>Entry Price</th>
@@ -260,19 +263,13 @@ HTML_TEMPLATE = '''
                     </tr>
                 </thead>
                 <tbody>
-                    {% for trade in trades %}
-                    <tr {% if trade.type in ['summary', 'investment_summary'] %}style="background: #1a202c; font-weight: bold;"{% elif trade.type == 'cash' %}style="background: #2d3748; color: #a0aec0;"{% endif %}>
+                    {% for trade in summary_trades %}
+                    <tr style="background: #1a202c; font-weight: bold;">
                         <td>{{ loop.index }}</td>
                         <td>
-                            {% if trade.type in ['summary', 'investment_summary'] %}
                             <span class="badge badge-system" style="background: #4a5568;">
-                                SUMMARY
+                                {% if trade.type == 'summary' %}TOTAL{% else %}EXCHANGE{% endif %}
                             </span>
-                            {% else %}
-                            <span class="badge badge-{{ trade.exchange }}">
-                                {{ trade.exchange|upper }}
-                            </span>
-                            {% endif %}
                         </td>
                         <td><strong>{{ trade.symbol }}</strong></td>
                         <td class="side-{{ trade.side }}">
@@ -293,11 +290,125 @@ HTML_TEMPLATE = '''
                         <td>{{ trade.timestamp[:16] if trade.timestamp != 'unknown' else 'N/A' }}</td>
                     </tr>
                     {% endfor %}
-                    
-                    <!-- TOTALS ROW -->
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        <!-- 💱 ACTUAL TRADES SECTION -->
+        {% if spot_trades %}
+        <div class="trade-rows-section" id="spot-trades">
+            <div class="section-title">💱 ACTUAL TRADES ({{ spot_trades|length }} Spot Trades)</div>
+            <p style="color: #a0aec0; margin-bottom: 15px;">Individual trade positions</p>
+            
+            <table class="trade-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Exchange</th>
+                        <th>Symbol</th>
+                        <th>Side</th>
+                        <th>Entry Price</th>
+                        <th>Current Price</th>
+                        <th>P&L</th>
+                        <th>P&L %</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for trade in spot_trades %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>
+                            <span class="badge badge-{{ trade.exchange }}">
+                                {{ trade.exchange|upper }}
+                            </span>
+                        </td>
+                        <td><strong>{{ trade.symbol }}</strong></td>
+                        <td class="side-{{ trade.side }}">
+                            {% if trade.side == 'buy' %}
+                            ▲ BUY
+                            {% else %}
+                            ▼ SELL
+                            {% endif %}
+                        </td>
+                        <td>${{ "%.4f"|format(trade.entry_price) }}</td>
+                        <td>${{ "%.4f"|format(trade.current_price) }}</td>
+                        <td class="{{ 'positive' if trade.pnl >= 0 else 'negative' }}">
+                            ${{ "%.2f"|format(trade.pnl) }}
+                        </td>
+                        <td class="{{ 'positive' if trade.pnl_percent >= 0 else 'negative' }}">
+                            {{ "%.2f"|format(trade.pnl_percent) }}%
+                        </td>
+                        <td>{{ trade.timestamp[:16] if trade.timestamp != 'unknown' else 'N/A' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        <!-- 💰 CASH SECTION (Optional - Can be hidden) -->
+        {% if cash_trades %}
+        <div class="trade-rows-section" id="cash-rows">
+            <div class="section-title" style="color: #a0aec0;">💰 CASH BALANCES ({{ cash_trades|length }} Entries)</div>
+            <p style="color: #a0aec0; margin-bottom: 15px;">Available cash on exchanges</p>
+            
+            <table class="trade-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Exchange</th>
+                        <th>Symbol</th>
+                        <th>Side</th>
+                        <th>Entry Price</th>
+                        <th>Current Price</th>
+                        <th>P&L</th>
+                        <th>P&L %</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for trade in cash_trades %}
+                    <tr style="background: #2d3748; color: #a0aec0;">
+                        <td>{{ loop.index }}</td>
+                        <td>
+                            <span class="badge" style="background: #4a5568;">
+                                CASH
+                            </span>
+                        </td>
+                        <td><strong>{{ trade.symbol }}</strong></td>
+                        <td class="side-{{ trade.side }}">
+                            {% if trade.side == 'buy' %}
+                            ▲ BUY
+                            {% else %}
+                            ▼ SELL
+                            {% endif %}
+                        </td>
+                        <td>${{ "%.4f"|format(trade.entry_price) }}</td>
+                        <td>${{ "%.4f"|format(trade.current_price) }}</td>
+                        <td class="{{ 'positive' if trade.pnl >= 0 else 'negative' }}">
+                            ${{ "%.2f"|format(trade.pnl) }}
+                        </td>
+                        <td class="{{ 'positive' if trade.pnl_percent >= 0 else 'negative' }}">
+                            {{ "%.2f"|format(trade.pnl_percent) }}%
+                        </td>
+                        <td>{{ trade.timestamp[:16] if trade.timestamp != 'unknown' else 'N/A' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        <!-- 📈 OVERALL TOTALS ROW -->
+        <div class="trade-rows-section">
+            <div class="section-title" style="color: #00ff9d;">📈 OVERALL SUMMARY</div>
+            <table class="trade-table">
+                <tbody>
                     <tr style="background: #2d3748; font-weight: bold; border-top: 2px solid #475569;">
                         <td colspan="6" style="text-align: right; padding-right: 20px;">
-                            <strong>TOTALS ({{ trades|length }} trades):</strong>
+                            <strong>TOTALS ({{ total_trades }} total entries):</strong>
                         </td>
                         <td class="{{ 'positive' if total_pnl >= 0 else 'negative' }}">
                             ${{ "%.2f"|format(total_pnl) }}
@@ -306,7 +417,7 @@ HTML_TEMPLATE = '''
                             {{ "%.2f"|format(avg_pnl_percent) }}%
                         </td>
                         <td>
-                            {{ profitable_trades }}/{{ trades|length }} profitable
+                            {{ profitable_trades }}/{{ total_trades }} profitable
                         </td>
                     </tr>
                 </tbody>

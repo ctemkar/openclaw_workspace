@@ -418,12 +418,17 @@ HTML_TEMPLATE = '''
                     </thead>
                     <tbody>
                         {% for trade in gemini_trades %}
-                        <tr>
+                        <tr {% if trade.type in ['summary', 'investment_summary'] %}style="background: #1a202c; font-weight: bold;"{% endif %}>
                             <td>{{ loop.index }}</td>
                             <td><strong>{{ trade.symbol }}</strong></td>
                             <td class="side-buy">▲ LONG</td>
+                            {% if trade.type in ['summary', 'investment_summary'] %}
+                            <td style="color: #a0aec0; font-style: italic;">SUMMARY</td>
+                            <td style="color: #a0aec0; font-style: italic;">SUMMARY</td>
+                            {% else %}
                             <td>${{ "%.4f"|format(trade.entry_price) }}</td>
                             <td>${{ "%.4f"|format(trade.current_price) }}</td>
+                            {% endif %}
                             <td class="{{ 'positive' if trade.pnl >= 0 else 'negative' }}">
                                 ${{ "%.2f"|format(trade.pnl) }}
                             </td>
@@ -479,12 +484,17 @@ HTML_TEMPLATE = '''
                     </thead>
                     <tbody>
                         {% for trade in binance_trades %}
-                        <tr>
+                        <tr {% if trade.type in ['summary', 'investment_summary'] %}style="background: #1a202c; font-weight: bold;"{% endif %}>
                             <td>{{ loop.index }}</td>
                             <td><strong>{{ trade.symbol }}</strong></td>
                             <td class="side-sell">▼ SHORT</td>
+                            {% if trade.type in ['summary', 'investment_summary'] %}
+                            <td style="color: #a0aec0; font-style: italic;">SUMMARY</td>
+                            <td style="color: #a0aec0; font-style: italic;">SUMMARY</td>
+                            {% else %}
                             <td>${{ "%.4f"|format(trade.entry_price) }}</td>
                             <td>${{ "%.4f"|format(trade.current_price) }}</td>
+                            {% endif %}
                             <td class="{{ 'positive' if trade.pnl >= 0 else 'negative' }}">
                                 ${{ "%.2f"|format(trade.pnl) }}
                             </td>
@@ -536,17 +546,40 @@ def load_trade_data():
             
             # Process trades for display
             for i, trade in enumerate(raw_trades):
-                processed_trade = {
-                    'index': i + 1,
-                    'exchange': trade.get('exchange', 'unknown'),
-                    'symbol': trade.get('symbol', 'unknown').replace(':USDT', '').replace('/USDT', '').replace('/USD', ''),
-                    'side': trade.get('side', 'unknown'),
-                    'entry_price': trade.get('price', 0),
-                    'current_price': trade.get('current_price', trade.get('price', 0)),
-                    'pnl': trade.get('pnl', 0),
-                    'pnl_percent': trade.get('pnl_percent', 0),
-                    'timestamp': trade.get('timestamp', 'unknown')
-                }
+                symbol = trade.get('symbol', 'unknown')
+                trade_type = trade.get('type', 'unknown')
+                
+                # Handle summary/investment rows differently
+                if trade_type in ['summary', 'investment_summary']:
+                    # For summary rows, show investment/current values instead of prices
+                    processed_trade = {
+                        'index': i + 1,
+                        'exchange': trade.get('exchange', 'unknown'),
+                        'symbol': symbol.replace(':USDT', '').replace('/USDT', '').replace('/USD', ''),
+                        'side': trade.get('side', 'unknown'),
+                        'entry_price': 'SUMMARY',  # Mark as summary
+                        'current_price': 'SUMMARY',  # Mark as summary
+                        'investment': trade.get('value', 0),  # Investment amount
+                        'current_value': trade.get('value', 0) + trade.get('pnl', 0),  # Current value
+                        'pnl': trade.get('pnl', 0),
+                        'pnl_percent': trade.get('pnl_percent', 0),
+                        'timestamp': trade.get('timestamp', 'unknown'),
+                        'type': trade_type  # Add type for template
+                    }
+                else:
+                    # Regular trade
+                    processed_trade = {
+                        'index': i + 1,
+                        'exchange': trade.get('exchange', 'unknown'),
+                        'symbol': symbol.replace(':USDT', '').replace('/USDT', '').replace('/USD', ''),
+                        'side': trade.get('side', 'unknown'),
+                        'entry_price': trade.get('price', 0),
+                        'current_price': trade.get('current_price', trade.get('price', 0)),
+                        'pnl': trade.get('pnl', 0),
+                        'pnl_percent': trade.get('pnl_percent', 0),
+                        'timestamp': trade.get('timestamp', 'unknown'),
+                        'type': trade_type  # Add type for template
+                    }
                 trades.append(processed_trade)
             
             print(f"✅ Loaded {len(trades)} trades from trading_data/trades.json")
