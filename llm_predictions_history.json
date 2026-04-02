@@ -10545,5 +10545,64 @@
         "net_score": 6
       }
     ]
+  },
+  {
+    "crypto": "BTC",
+    "timestamp": "2026-04-02T07:40:39.694084",
+    "buy_score": 6.11,
+    "sell_score": 5.42,
+    "signal": "HOLD",
+    "current_price": 68298.56,
+    "model_predictions": [
+      {
+        "model": "glm-4.7-flash",
+        "buy": 5,
+        "sell": 5,
+        "weight": 1.2,
+        "net_score": 0
+      },
+      {
+        "model": "llama3.1",
+        "buy": 6,
+        "sell": 8,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "llama3",
+        "buy": 4,
+        "sell": 6,
+        "weight": 1.0,
+        "net_score": -2
+      },
+      {
+        "model": "qwen3",
+        "buy": 7,
+        "sell": 4,
+        "weight": 1.0,
+        "net_score": 3
+      },
+      {
+        "model": "mistral",
+        "buy": 7,
+        "sell": 3,
+        "weight": 1.0,
+        "net_score": 4
+      },
+      {
+        "model": "deepseek-r1",
+        "buy": 7,
+        "sell": 6,
+        "weight": 1.1,
+        "net_score": 1
+      },
+      {
+        "model": "llama3.1",
+        "buy": 7,
+        "sell": 6,
+        "weight": 0.9,
+        "net_score": 1
+      }
+    ]
   }
 ]
