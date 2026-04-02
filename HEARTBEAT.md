@@ -8,45 +8,54 @@
 ## 🎯 TRADING SYSTEM OPERATIONAL - DASHBOARD FIXED
 **✅ Dashboard restored after syntax error, Actual Trade Rows available**
 
-### 📊 CURRENT STATUS (14:34 PM CHECK):
-1. **🤖 Trading Bot:** ✅ RUNNING (PID 59383, Cycle 25+)
-   - `real_26_crypto_trader.py` - AGGRESSIVE mode
-   - Last scan: ~14:31 PM, next scan imminent
-   - Opportunities found: 0 (scanning 16 Gemini LONG, 23 Binance SHORT)
-   - **Uptime:** Running since 12:17 PM (over 2 hours)
+### 📊 CURRENT STATUS (15:05 PM CHECK):
+1. **🤖 Trading Bot:** ✅ **RUNNING WITH CRITICAL FIX** (PID 65436, Cycle 2+)
+   - `real_26_crypto_trader_fixed.py` - **FIXED: Prevents simultaneous LONG/SHORT**
+   - **Position size:** 5% of capital (reduced from 10% due to margin)
+   - **Last scan:** 15:00 PM, next scan at 15:05 PM
+   - **Opportunities found:** 1 (ALGO SHORT on Binance - failed due to margin)
+   - **Uptime:** Running with critical hedge prevention fix
 
 2. **🧠 LLM Consensus Bot:** ✅ RUNNING WITH FIXES (PID 60434)
    - **CIO Override Fixed:** Now generates SELL signals (not just HOLD)
    - **SELL Execution Enabled:** Bot will execute trades on SELL signals
    - **Predictions:** 303+ recorded (increasing)
+   - **Decisions saved:** 100+ in `llm_consensus_decisions.json`
    - Running since 13:02 PM with all fixes applied
 
-3. **📈 Dashboard Status - WITH TOTALS ROW:**
-   - **Main Dashboard (Port 5007):** ✅ **WITH TOTALS ROW ADDED** - `dashboard_with_trade_rows.py` (UPDATED)
-     - **✅ SHOWS TRADE ROWS:** Complete table with all trades
-     - **✅ SHOWS TOTALS ROW:** Bottom row with totals (47 trades, $0.58 P&L, 11/47 profitable)
+3. **📈 Dashboard Status - WITH GROUPED TOTALS:**
+   - **Grouped Totals Dashboard (Port 5013):** ✅ **NEW** - `dashboard_with_grouped_totals.py`
+     - **✅ SHOWS SEPARATE TOTALS:** Gemini vs Binance grouped separately
+     - **✅ SHOWS EXCHANGE STATS:** Win rates, P&L by exchange
+     - **✅ SHOWS GROUPED TRADES:** Gemini trades separate from Binance trades
+     - **✅ SHOWS OVERALL TOTALS:** Combined statistics
      - **✅ AUTO-REFRESHES:** Every 30 seconds
-     - **✅ TRADE COUNT UPDATING:** Now shows 47 trades (increased from 40)
-   - **Trades Dashboard (Port 5011):** ✅ RUNNING
+   - **Main Dashboard (Port 5007):** ✅ RUNNING - With LLM reports
+   - **Trades Dashboard (Port 5011):** ✅ RUNNING - Shows 55 trades, 20.0% win rate (11/55 profitable)
    - **Actual Trade Rows (Port 5012):** ✅ RUNNING
    - **API Status:** ✅ UP (HTTP 200)
 
-4. **🔄 System:** ✅ **OPERATIONAL WITH LIVE DATA**
-   - **Trading activity INCREASING:** Now **47 total trades** (was 40)
-   - **Performance:** 11/47 profitable (23.4%), total P&L: $0.58
-   - **Main dashboard COMPLETE:** Shows trade rows + totals row
-   - **LLM active:** 303+ predictions recorded
-   - **All critical processes running**
+4. **🔄 System:** ✅ **OPERATIONAL WITH GROUPED REPORTING**
+   - **Trading activity:** **55 total trades** (12 Gemini, 43 Binance)
+   - **Gemini performance:** **58.3% win rate** (7/12 profitable) - **✅ GOOD!**
+   - **Binance performance:** **9.3% win rate** (4/43 profitable) - **🚨 TERRIBLE!**
+   - **Overall:** 20.0% win rate, +$0.58 P&L (Gemini profits offsetting Binance losses)
+   - **CRITICAL FIX APPLIED:** Bot now prevents simultaneous LONG/SHORT on same asset
+   - **Hedge detection:** Active (skipping assets already traded on other exchange)
 
 ### ✅ FIXES APPLIED:
-1. **Main Dashboard WITH TOTALS ROW:** Updated `dashboard_with_trade_rows.py` - shows **totals row at bottom**
-2. **Main Dashboard WITH TRADE ROWS:** Shows complete table with all trades
-3. **Main Dashboard Data UPDATING:** Now shows 47 trades (increased from 40)
-4. **Dashboard Syntax Error Fixed:** Was showing 0.0% win rate, now corrected
-5. **Actual Trade Rows Dashboard:** Created `actual_trades_dashboard.py` on port 5012 - shows real trade data
-6. **CIO Override Logic:** Modified to be less conservative (40% threshold vs 60%)
-7. **SELL Signal Execution:** LLM bot now executes trades on SELL signals (not just STRONG_SELL)
-8. **Capital Allocation:** Fixed earlier (40% Binance SHORT, 60% Gemini LONG)
+1. **🚨 CRITICAL HEDGE PREVENTION:** Created `real_26_crypto_trader_fixed.py` - **prevents simultaneous LONG/SHORT on same asset**
+2. **📊 GROUPED EXCHANGE TOTALS:** Created `dashboard_with_grouped_totals.py` - **shows separate totals for Gemini vs Binance**
+3. **Main Dashboard WITH LLM REPORTS:** Created `dashboard_with_llm_reports.py` - shows LLM ratings + CIO comments
+4. **Main Dashboard WITH TOTALS ROW:** Shows totals row at bottom of trade table
+5. **Main Dashboard WITH TRADE ROWS:** Shows complete table with all trades
+6. **LLM Data Integration:** Reads from `llm_consensus_decisions.json` for buy/sell scores
+7. **CIO Ratings Display:** Shows CIO confidence scores (7/10 average)
+8. **Dashboard Syntax Error Fixed:** Was showing 0.0% win rate, now corrected
+9. **Actual Trade Rows Dashboard:** Created `actual_trades_dashboard.py` on port 5012
+10. **CIO Override Logic:** Modified to be less conservative (40% threshold vs 60%)
+11. **SELL Signal Execution:** LLM bot now executes trades on SELL signals
+12. **Capital Allocation:** Fixed earlier (40% Binance SHORT, 60% Gemini LONG)
 
 ### 📋 MONITORING STATUS:
 - **Progress Monitor:** ✅ Last run 14:08 PM - API UP, BOT RUNNING
@@ -68,13 +77,19 @@
 
 ---
 
-**System Status:** ✅ **OPERATIONAL WITH TOTALS ROW**  
-**Trading:** 🟢 **ACTIVE** (Cycle 25+, 47 trades)  
-**LLM Bot:** 🧠 **RUNNING WITH FIXED CIO** (303+ predictions)  
-**Main Dashboard:** 📊 **WITH TOTALS ROW** (47 trades, $0.58 P&L, 11/47 profitable)  
-**Trades Dashboard:** 📈 **RUNNING** (Port 5011)  
+**System Status:** ✅ **OPERATIONAL WITH GROUPED TOTALS**  
+**Trading:** 🟢 **ACTIVE WITH FIX** (Cycle 2+, 55 trades total)  
+**LLM Bot:** 🧠 **RUNNING WITH FIXED CIO** (100+ decisions, 7/10 confidence)  
+**Grouped Dashboard:** 📊 **WITH SEPARATE TOTALS** (Port 5013 - Gemini vs Binance grouped)  
+**Main Dashboard:** 📊 **WITH LLM REPORTS** (Port 5007 - Trade rows + LLM ratings)  
+**Trades Dashboard:** 📈 **RUNNING** (Port 5011 - 55 trades, 20.0% win rate)  
 **Actual Trade Rows:** 📊 **AVAILABLE** (Port 5012)  
-**Last Update:** 14:34 PM  
-**Uptime:** Trading bot running since 12:17 PM
+**Last Update:** 15:05 PM  
+**Uptime:** Trading bot running with critical fixes
 
-**✅ TOTALS ROW ADDED: Main dashboard (port 5007) now shows complete trade table with totals row at the bottom showing aggregate statistics.**
+**📊 GROUPED TOTALS REVEALED:**
+- **🔵 Gemini (LONG):** 58.3% win rate (7/12 profitable) - **✅ GOOD!**
+- **🟡 Binance (SHORT):** 9.3% win rate (4/43 profitable) - **🚨 TERRIBLE!**
+- **📈 Overall:** 20.0% win rate, +$0.58 P&L (Gemini profits offsetting Binance losses)
+
+**🚨 CRITICAL FIX APPLIED: Trading bot now prevents simultaneous LONG/SHORT on same asset (ETH was both BUY on Gemini and SELL on Binance - now fixed!).**

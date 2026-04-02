@@ -28,10 +28,10 @@ fi
 BOTS_RUNNING=0
 BOT_LIST=""
 
-# Check for current 26-crypto bot
-if ps aux | grep -v grep | grep "real_26_crypto_trader.py" > /dev/null; then
+# Check for current 26-crypto bot (FIXED VERSION)
+if ps aux | grep -v grep | grep "real_26_crypto_trader_fixed.py" > /dev/null; then
     BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST real_26_crypto_trader.py"
+    BOT_LIST="$BOT_LIST real_26_crypto_trader_fixed.py"
 fi
 
 # Check for old bots (should not be running)
@@ -42,12 +42,13 @@ fi
 
 if [ $BOTS_RUNNING -eq 0 ]; then
     echo "BOT: [CRITICAL] NO TRADING BOTS RUNNING"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"real_26_crypto_trader.py"* ]]; then
+elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"real_26_crypto_trader_fixed.py"* ]]; then
     echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
     echo "   Strategy: 26-CRYPTO AGGRESSIVE (Gemini LONG, Binance SHORT)"
-    echo "   Mode: AGGRESSIVE - 10% position size"
-    echo "   Capital: $134 Gemini, Binance BLOCKED (geographic)"
-    echo "   Status: Active since 04:24, scanning every 5 minutes"
+    echo "   Mode: AGGRESSIVE - 5% position size (reduced due to margin)"
+    echo "   Capital: $393 Gemini LONG, $262 Binance SHORT"
+    echo "   Status: FIXED VERSION - Prevents simultaneous LONG/SHORT"
+    echo "   Hedge prevention: Active (skipping BTC, ETH, SOL, XRP, LINK)"
 elif [[ "$BOT_LIST" == *"OLD_BOT_STILL_RUNNING"* ]]; then
     echo "BOT: [WARN] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
     echo "   Old bots still running - may conflict"
