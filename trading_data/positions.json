@@ -60,37 +60,37 @@
     "symbol": "BTC/USDT",
     "exchange": "binance",
     "side": "sell",
-    "entry_price": 66600.0,
-    "amount": 8.265765765765765e-05,
-    "current_price": 66600.0,
+    "entry_price": 66705.45,
+    "amount": 8.252698992361194e-05,
+    "current_price": 66705.45,
     "pnl": 0.0,
     "pnl_percent": 0.0,
-    "timestamp": "2026-04-02T13:16:23.791207",
-    "last_updated": "2026-04-02T13:16:23.791209"
+    "timestamp": "2026-04-02T13:40:43.001523",
+    "last_updated": "2026-04-02T13:40:43.001525"
   },
   "binance_ETH/USDT": {
     "symbol": "ETH/USDT",
     "exchange": "binance",
     "side": "sell",
-    "entry_price": 2050.77,
-    "amount": 0.002684357582761597,
-    "current_price": 2050.77,
+    "entry_price": 2051.94,
+    "amount": 0.002682826983245124,
+    "current_price": 2051.94,
     "pnl": 0.0,
     "pnl_percent": 0.0,
-    "timestamp": "2026-04-02T13:16:23.793592",
-    "last_updated": "2026-04-02T13:16:23.793594"
+    "timestamp": "2026-04-02T13:40:43.003256",
+    "last_updated": "2026-04-02T13:40:43.003257"
   },
   "binance_SOL/USDT": {
     "symbol": "SOL/USDT",
     "exchange": "binance",
     "side": "sell",
-    "entry_price": 79.23,
-    "amount": 0.06948125709958348,
-    "current_price": 79.23,
+    "entry_price": 79.37,
+    "amount": 0.06935869976061483,
+    "current_price": 79.37,
     "pnl": 0.0,
     "pnl_percent": 0.0,
-    "timestamp": "2026-04-02T13:16:23.794192",
-    "last_updated": "2026-04-02T13:16:23.794193"
+    "timestamp": "2026-04-02T13:40:43.003851",
+    "last_updated": "2026-04-02T13:40:43.003851"
   },
   "binance_ADA/USDT": {
     "symbol": "ADA/USDT",
@@ -120,12 +120,36 @@
     "symbol": "LINK/USDT",
     "exchange": "binance",
     "side": "sell",
-    "entry_price": 8.55,
-    "amount": 0.6438596491228069,
-    "current_price": 8.55,
+    "entry_price": 8.57,
+    "amount": 0.6423570595099183,
+    "current_price": 8.57,
     "pnl": 0.0,
     "pnl_percent": 0.0,
-    "timestamp": "2026-04-02T13:16:23.796101",
-    "last_updated": "2026-04-02T13:16:23.796103"
+    "timestamp": "2026-04-02T13:40:43.005677",
+    "last_updated": "2026-04-02T13:40:43.005677"
+  },
+  "binance_DOGE/USDT": {
+    "symbol": "DOGE/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 0.09021,
+    "amount": 61.02427668772863,
+    "current_price": 0.09021,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:40:43.004472",
+    "last_updated": "2026-04-02T13:40:43.004473"
+  },
+  "binance_AVAX/USDT": {
+    "symbol": "AVAX/USDT",
+    "exchange": "binance",
+    "side": "sell",
+    "entry_price": 8.73,
+    "amount": 0.6305841924398625,
+    "current_price": 8.73,
+    "pnl": 0.0,
+    "pnl_percent": 0.0,
+    "timestamp": "2026-04-02T13:40:43.005065",
+    "last_updated": "2026-04-02T13:40:43.005066"
   }
 }
