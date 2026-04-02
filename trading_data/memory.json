@@ -1,7 +1,7 @@
 [
   {
     "id": "970f81f3",
-    "timestamp": "2026-04-02T18:38:51.531997",
+    "timestamp": "2026-04-02T19:46:36.566169",
     "category": "system_state",
     "title": "Current Trading System State",
     "content": "System reset to reality on 2026-04-02 after dashboard showed fictional data.\n        \nACTUAL STATE:\n- Gemini: $563.08 USD cash + 0.137152 ETH + 0.460077 SOL\n- Binance: $70.15 USDT total, $72.62 free (no positions)\n- P&L: -$14.29 total (ETH -$12.31, SOL -$1.98)\n- Gemini-only bot running with $563 cash\n- All 4 dashboards running with accurate data",
@@ -11,7 +11,7 @@
       "current_state"
     ],
     "priority": "critical",
-    "accessed": 1
+    "accessed": 2
   },
   {
     "id": "a3b9cbd9",
@@ -113,6 +113,66 @@
       "dashboard",
       "data_accuracy",
       "critical"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "binance_20260402_190527",
+    "timestamp": "2026-04-02T19:05:27.228168",
+    "category": "issues_fixed",
+    "title": "Binance Geographic Restrictions & $70 Idle USDT",
+    "content": "BINANCE ISSUE: API blocked in Thailand, $70.15 USDT idle.\n\nCURRENT STATUS:\n- Balance: $70.15 USDT\n- Positions: 0 (cleaned up earlier)\n- Issue: Geographic restrictions prevent trading\n\nRECOMMENDED SOLUTION: VPN Solution\n- Withdraw to Gemini for consolidation\n- Or use VPN to access Binance\n\nACTION PLAN: 1. Decide on Binance strategy (VPN vs Withdraw)",
+    "tags": [
+      "binance",
+      "geographic_restrictions",
+      "thailand",
+      "idle_funds"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "cash_correction_20260402_191156",
+    "timestamp": "2026-04-02T19:11:56.555037",
+    "category": "lessons_learned",
+    "title": "CRITICAL: Cash is NOT an investment position",
+    "content": "CRITICAL CORRECTION: Available cash should NOT be listed as an investment position.\n\nMISTAKE: Included $563.08 USD cash in trades.json as if it were a position\nCORRECTION: Cash is available capital for trading, NOT an investment\n\nCORRECT STRUCTURE:\n1. trades.json: Only investment positions (ETH, SOL) + investment summary\n2. available_cash.json: Separate file for cash on hand\n3. Dashboard: Shows cash prominently but separately\n\nLESSON: Always separate:\n- Investment positions (assets bought)\n- Available cash (capital ready to deploy)\n- Investment summary (total money invested)",
+    "tags": [
+      "cash",
+      "correction",
+      "dashboard",
+      "investment_tracking"
+    ],
+    "priority": "critical",
+    "accessed": 0
+  },
+  {
+    "id": "binance_tracking_20260402_192052",
+    "timestamp": "2026-04-02T19:20:52.051946",
+    "category": "system_state",
+    "title": "Binance Investment Tracking Added",
+    "content": "BINANCE INVESTMENT TRACKING ADDED (same as Gemini):\n\nInvestment: $446.97\nCurrent: $70.15 USDT\nP&L: $-376.82\n\nStructure now consistent:\n1. Gemini investment summary\n2. Binance investment summary  \n3. Gemini cash separately\n4. Binance cash separately\n\nTotal investment: $946.97 (Gemini $500 + Binance $447)",
+    "tags": [
+      "binance",
+      "investment_tracking",
+      "consistency",
+      "structure"
+    ],
+    "priority": "high",
+    "accessed": 0
+  },
+  {
+    "id": "gemini_tracking_20260402_192407",
+    "timestamp": "2026-04-02T19:24:07.340980",
+    "category": "system_state",
+    "title": "Gemini Investment Tracking Added",
+    "content": "GEMINI INVESTMENT TRACKING ADDED (same as Binance):\n\nInvestment: $500.00\nCurrent: $502.88\nP&L: $+2.88\nCash: $492.93\n\nStructure now complete:\n1. Total investment summary\n2. Gemini investment summary  \n3. Binance investment summary\n4. Gemini positions\n5. Gemini cash\n6. Binance cash\n\nTotal investment: $946.97 (Gemini $500 + Binance $447)",
+    "tags": [
+      "gemini",
+      "investment_tracking",
+      "consistency",
+      "structure"
     ],
     "priority": "high",
     "accessed": 0

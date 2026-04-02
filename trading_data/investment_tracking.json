@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-02T19:01:00.219916",
+  "total_invested": 484.5385445300001,
+  "total_withdrawn": 474.37149999999974,
+  "net_investment": 10.16704453000034,
+  "breakdown": {
+    "gemini": 484.5385445300001,
+    "binance": 0
+  },
+  "current_portfolio": {
+    "total_value": 573.0274942188682,
+    "cash": 563.0755526839882,
+    "positions": 9.95194153488
+  },
+  "cumulative_pnl": {
+    "amount": 562.8604496888679,
+    "percent": 5536.126531441966
+  },
+  "recovery_needed": 0
+}

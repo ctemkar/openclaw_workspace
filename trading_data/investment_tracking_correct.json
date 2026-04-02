@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-02T19:02:36.804493",
+  "initial_investment": 946.97,
+  "current_portfolio": 573.03,
+  "cumulative_loss": 373.94000000000005,
+  "loss_percentage": 39.488051363823566,
+  "breakdown": {
+    "estimated_gemini_investment": 500.0,
+    "estimated_binance_investment": 446.97,
+    "current_cash": 563.08,
+    "current_positions": 9.95
+  },
+  "recovery_needed": 373.94000000000005,
+  "note": "Based on system memory from earlier HEARTBEAT.md: $946.97 initial investment, -43.86% P&L"
+}

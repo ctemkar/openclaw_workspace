@@ -1,49 +1,29 @@
 {
-  "timestamp": "2026-04-02T18:46:31.835233",
+  "timestamp": "2026-04-02T18:59:14.910476",
   "alerts": [
     {
       "type": "CRITICAL_LOSS",
-      "timestamp": "2026-04-02T18:46:27.911263",
+      "timestamp": "2026-04-02T18:59:11.117820",
       "title": "CRITICAL: 1 positions with >5.0% losses",
       "details": [
         {
           "symbol": "SOL/USD",
-          "pnl_percent": -5.180540797033184,
-          "pnl_amount": -1.9804194427846638,
-          "amount": 0.46007698178883716
+          "pnl_percent": -5.783730397706721,
+          "pnl_amount": -0.2874711537599987,
+          "amount": 0.05986488
         }
       ],
-      "total_pnl": -14.289284423436795
-    },
-    {
-      "type": "DATA_MISMATCH",
-      "timestamp": "2026-04-02T18:46:31.828680",
-      "title": "CRITICAL: 2 data mismatches found",
-      "details": [
-        {
-          "asset": "ETH",
-          "dashboard": 0.13715198490797093,
-          "actual": 0.0023499,
-          "difference_pct": 98.28664528509977
-        },
-        {
-          "asset": "SOL",
-          "dashboard": 0.46007698178883716,
-          "actual": 0.05986488,
-          "difference_pct": 86.98807322043415
-        }
-      ],
-      "message": "Dashboard data does not match exchange reality!"
+      "total_pnl": -0.4935573837599988
     },
     {
       "type": "RISK_EXPOSURE",
-      "timestamp": "2026-04-02T18:46:31.835183",
+      "timestamp": "2026-04-02T18:59:14.910403",
       "title": "WARNING: 1 positions with excessive exposure",
       "details": [
         {
-          "symbol": "ETH/USD",
-          "value": 291.671,
-          "percentage": 88.41219907609535
+          "symbol": "USD/CASH",
+          "value": 563.0755526839882,
+          "percentage": 98.26326980201078
         }
       ],
       "message": "Consider diversifying to reduce risk"
@@ -56,17 +36,7 @@
       "action": "Consider setting stop-loss orders or reducing position sizes",
       "reason": "1 positions with significant losses",
       "details": [
-        "SOL/USD: -5.18% loss"
-      ]
-    },
-    {
-      "type": "DATA_INTEGRITY",
-      "priority": "CRITICAL",
-      "action": "Immediately reconcile dashboard data with exchange APIs",
-      "reason": "Dashboard shows different positions than actual exchange",
-      "details": [
-        "ETH: 98.3% mismatch",
-        "SOL: 87.0% mismatch"
+        "SOL/USD: -5.78% loss"
       ]
     },
     {
@@ -80,8 +50,8 @@
     }
   ],
   "summary": {
-    "total_alerts": 3,
-    "critical_alerts": 2,
-    "recommendations_count": 3
+    "total_alerts": 2,
+    "critical_alerts": 1,
+    "recommendations_count": 2
   }
 }

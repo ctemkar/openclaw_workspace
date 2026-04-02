@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-04-02T19:06:34.399999",
+  "binance_balance": 70.15,
+  "gemini_cash": 563.08,
+  "steps": {
+    "step1": "Get Gemini USDT deposit address",
+    "step2": "Initiate Binance withdrawal",
+    "step3": "Verify test transfer",
+    "step4": "Send full amount"
+  },
+  "estimated_fees": {
+    "withdrawal_fee": 3.0,
+    "network_fee_low": 1.0,
+    "network_fee_high": 5.0,
+    "total_fees_low": 4.0,
+    "total_fees_high": 8.0
+  },
+  "estimated_net": {
+    "low": 62.15,
+    "high": 66.15
+  },
+  "warnings": [
+    "Double check addresses",
+    "Use correct network",
+    "Include memo if required",
+    "Test with small amount first"
+  ]
+}
