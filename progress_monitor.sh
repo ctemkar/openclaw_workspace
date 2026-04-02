@@ -40,6 +40,12 @@ if ps aux | grep -v grep | grep "gemini_only_trader.py" > /dev/null; then
     BOT_LIST="$BOT_LIST gemini_only_trader.py"
 fi
 
+# Check for Unified LLM bot (NEW STRATEGY)
+if ps aux | grep -v grep | grep "unified_llm_trader.py" > /dev/null; then
+    BOTS_RUNNING=$((BOTS_RUNNING + 1))
+    BOT_LIST="$BOT_LIST unified_llm_trader.py"
+fi
+
 # Check for old bots (should not be running)
 if ps aux | grep -v grep | grep -E "(fixed_bot_common|full_capital_bot|simple_real_trader|real_futures_trading_bot|fixed_futures_bot|enhanced_26_crypto)" > /dev/null; then
     BOTS_RUNNING=$((BOTS_RUNNING + 1))
@@ -62,6 +68,14 @@ elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"gemini_only_trader.py"* ]]; 
     echo "   Capital: $563 USD available on Gemini"
     echo "   Status: ACTIVE - No Binance trading (geographic restrictions)"
     echo "   P&L: -$14.29 total (ETH -$12.31, SOL -$1.98)"
+elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"unified_llm_trader.py"* ]]; then
+    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
+    echo "   Strategy: UNIFIED LLM-POWERED TRADING"
+    echo "   Mode: Rule-based + LLM with aggressive overrides"
+    echo "   Capital: $492.93 USD available on Gemini"
+    echo "   Status: ACTIVE - Overriding LLM for drops >3%"
+    echo "   LLM Models: deepseek-r1, qwen3, mistral"
+    echo "   Market: BEARISH - Buying dips during correction"
 elif [[ "$BOT_LIST" == *"OLD_BOT_STILL_RUNNING"* ]]; then
     echo "BOT: [WARN] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
     echo "   Old bots still running - may conflict"

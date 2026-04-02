@@ -106,5 +106,35 @@
     "timestamp": "2026-04-02T19:47:25.272693",
     "type": "spot",
     "note": "LLM Trading Bot: BUY SOL | Bullish market sentiment - buying SOL for potential upside"
+  },
+  {
+    "exchange": "gemini",
+    "symbol": "BTC/USD",
+    "side": "buy",
+    "price": 0,
+    "amount": 34.5049640925584,
+    "timestamp": "2026-04-02T19:52:53.992207",
+    "type": "spot",
+    "note": "LLM Trading Bot: BUY BTC | High volatility - buying BTC for potential swing"
+  },
+  {
+    "exchange": "gemini",
+    "symbol": "SOL/USD",
+    "side": "buy",
+    "price": 0,
+    "amount": 49.292805846512,
+    "timestamp": "2026-04-02T19:58:15.922512",
+    "type": "spot",
+    "note": "LLM Trading Bot: BUY SOL | Bullish market sentiment - buying SOL for potential upside"
+  },
+  {
+    "exchange": "gemini",
+    "symbol": "SOL/USD",
+    "side": "buy",
+    "price": 0,
+    "amount": 49.292805846512,
+    "timestamp": "2026-04-02T20:09:15.425013",
+    "type": "spot",
+    "note": "LLM Trading Bot: BUY SOL | Bullish market sentiment - buying SOL for potential upside"
   }
 ]
