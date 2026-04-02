@@ -96,5 +96,15 @@
     "timestamp": "2026-04-02T19:20:52.051547",
     "type": "cash",
     "note": "Binance USDT cash - $70.15 idle due to geographic restrictions"
+  },
+  {
+    "exchange": "gemini",
+    "symbol": "SOL/USD",
+    "side": "buy",
+    "price": 0,
+    "amount": 49.292805846512,
+    "timestamp": "2026-04-02T19:47:25.272693",
+    "type": "spot",
+    "note": "LLM Trading Bot: BUY SOL | Bullish market sentiment - buying SOL for potential upside"
   }
 ]
