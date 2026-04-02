@@ -323,16 +323,69 @@ def update_cache():
         else:
             dashboard_cache['system_health'] = 'good'
         
-        # Try to get ACTUAL data from trades API first
+        # Get REAL Gemini data (not simulated trades)
         try:
-            import urllib.request
-            import urllib.error
+            import ccxt
+            with open('secure_keys/.gemini_key', 'r') as f:
+                key = f.read().strip()
+            with open('secure_keys/.gemini_secret', 'r') as f:
+                secret = f.read().strip()
             
-            # Get actual trades data
-            trades_url = 'http://localhost:5012/api/trades'
-            try:
-                response = urllib.request.urlopen(trades_url, timeout=5)
-                trades_data = json.loads(response.read().decode())
+            exchange = ccxt.gemini({
+                'apiKey': key,
+                'secret': secret,
+                'enableRateLimit': True
+            })
+            
+            balance = exchange.fetch_balance()
+            usd = balance['total'].get('USD', 0)
+            eth = balance['total'].get('ETH', 0)
+            sol = balance['total'].get('SOL', 0)
+            
+            # Calculate crypto values
+            if eth > 0:
+                eth_ticker = exchange.fetch_ticker('ETH/USD')
+                eth_value = eth * eth_ticker['last']
+            else:
+                eth_value = 0
+            
+            if sol > 0:
+                sol_ticker = exchange.fetch_ticker('SOL/USD')
+                sol_value = sol * sol_ticker['last']
+            else:
+                sol_value = 0
+            
+            total_value = usd + eth_value + sol_value
+            
+            # Update portfolio with REAL data
+            dashboard_cache['portfolio']['total_value'] = total_value
+            dashboard_cache['portfolio']['free_usd'] = usd
+            dashboard_cache['portfolio']['btc_value'] = 0
+            dashboard_cache['portfolio']['eth_value'] = eth_value
+            dashboard_cache['portfolio']['sol_value'] = sol_value
+            
+            # Calculate P&L from initial $946.97
+            initial = 946.97
+            pnl = total_value - initial
+            pnl_percent = (pnl / initial) * 100
+            dashboard_cache['portfolio']['pnl'] = pnl
+            dashboard_cache['portfolio']['pnl_percent'] = pnl_percent
+            
+            # Show REAL trading status
+            dashboard_cache['trading']['total_trades'] = 0  # No active trades
+            dashboard_cache['trading']['win_rate'] = 0
+            dashboard_cache['trading']['last_trade'] = 'No recent trades'
+            
+            # Update exchanges status
+            dashboard_cache['exchanges']['gemini']['status'] = f'ACTIVE (${total_value:.2f})'
+            dashboard_cache['exchanges']['binance']['status'] = 'RESTRICTED'
+            
+            print(f"✅ Using REAL Gemini data: ${total_value:.2f}")
+            
+        except Exception as e:
+            print(f"❌ Error getting real Gemini data: {e}")
+            # Fall back to file-based data
+            pass
                 
                 # Calculate actual portfolio from trades
                 total_trades = trades_data.get('count', 0)
