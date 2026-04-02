@@ -1,0 +1,63 @@
+=== SLEEP MONITOR REPORT ===
+Time: Fri Apr  3 03:41:13 +07 2026
+User: Chetu (Sleeping)
+
+=== SYSTEM STATUS ===
+
+1. CRITICAL PROCESSES:
+   - ✅ simple_fixed_dashboard.py: RUNNING
+   - ✅ simple_pnl_dashboard.py: RUNNING
+   - ✅ dashboard_monitor.py: RUNNING
+   - ✅ auto_arbitrage_bot.py: RUNNING
+   - ✅ portfolio_rebalancer.py: RUNNING
+   - ✅ market_maker_analyzer.py: RUNNING
+   - ✅ multi_llm_trading_bot_fixed_order.py: RUNNING
+   - ❌ real_26_crypto_trader.py: NOT RUNNING
+   - ❌ llm_consensus_bot.py: NOT RUNNING
+   - ❌ original_dashboard_fixed.py: NOT RUNNING
+   - ❌ trades_dashboard_fixed.py: NOT RUNNING
+   - ❌ simple_pnl_fixed.py: NOT RUNNING
+
+2. DASHBOARD PORTS:
+   - ❌ Port 5007: NOT RESPONDING (original_dashboard_fixed.py likely down)
+   - ✅ Port 5008: RESPONDING (simple_fixed_dashboard.py)
+   - ✅ Port 5009: RESPONDING (simple_pnl_dashboard.py)
+   - ❌ Port 5011: NOT RESPONDING (trades_dashboard_fixed.py likely down)
+
+3. TRADING ACTIVITY:
+   - 📊 LLM Predictions: 374 recorded in history
+   - ⚠️ Last trading error: Binance order notional too small (<5 USDT) at 2026-04-01 19:44:28
+
+4. SYSTEM RESOURCES:
+   - CPU Usage: 19.39% (5.17% user + 14.22% sys)
+   - Memory: 31GB used, 99MB free
+   - Load Average: 3.62, 2.43, 2.15
+   - Processes: 448 total, 3 running
+
+5. ERROR STATUS:
+   - ⚠️ trading_bot.log: Contains recent Binance API errors
+   - Error details: "Order's notional must be no smaller than 5 (unless you choose reduce only)"
+   - This is a configuration/position sizing issue, not a system failure
+
+=== ANALYSIS ===
+
+✅ STABLE COMPONENTS:
+- Core monitoring system (dashboard_monitor.py) is running
+- Multiple trading bots are operational
+- Two dashboard instances are serving
+- System resources are within normal limits
+
+⚠️ ATTENTION NEEDED:
+- Some dashboard processes are not running (5007, 5011)
+- Some trading bots are not running (real_26_crypto_trader.py, llm_consensus_bot.py)
+- Binance trading has position sizing issues (orders < $5)
+
+🔧 RECOMMENDATIONS:
+1. Check why real_26_crypto_trader.py and llm_consensus_bot.py stopped
+2. Investigate dashboard processes on ports 5007 and 5011
+3. Adjust Binance position sizing to meet minimum $5 requirement
+4. Consider restarting failed components if critical
+
+=== MONITORING CONTINUES ===
+Next check scheduled in 30 minutes
+System is stable enough for continued monitoring while user sleeps

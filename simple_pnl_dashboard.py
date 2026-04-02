@@ -335,6 +335,24 @@ def dashboard():
     # Calculate Binance P&L from real data
     binance_open_pnl = binance_data.get('total_unrealized_pnl', 0)
     binance_positions = binance_data.get('open_positions', [])
+    
+    # Ensure binance_positions is a list and has correct structure
+    if not isinstance(binance_positions, list):
+        binance_positions = []
+    
+    # Clean up positions to ensure they have required fields
+    cleaned_positions = []
+    for pos in binance_positions:
+        if isinstance(pos, dict):
+            # Ensure all required fields exist
+            pos.setdefault('symbol', 'UNKNOWN')
+            pos.setdefault('entry_price', 0)
+            pos.setdefault('current_price', 0)
+            pos.setdefault('pnl', 0)
+            pos.setdefault('pnl_percent', 0)
+            cleaned_positions.append(pos)
+    
+    binance_positions = cleaned_positions
     binance_total_pnl = binance_open_pnl
     
     # If Gemini status indicates error, show it
