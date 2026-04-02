@@ -1,8 +1,8 @@
 # OpenClaw Heartbeat
-- [✅] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Thu Apr  2 09:27:00 +07 2026 - STATUS: ✅ API UP, BOT RUNNING - System operational)
-- [✅] Task 2: If trading status is stopped, alert user. (Status: ✅ TRADING SYSTEM RESTARTED WITH CRITICAL FIX - Bot PID 42672, cycle 1)
+- [✅] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Thu Apr  2 09:49:04 +07 2026 - STATUS: ✅ API UP, BOT RUNNING - System operational)
+- [✅] Task 2: If trading status is stopped, alert user. (Status: ✅ TRADING SYSTEM ACTIVE WITH CAPITAL FIX - Bot PID 42672, cycle 5)
 - [✅] Task 3: Run auto_save.sh every hour. (Last run: Thu Apr  2 09:10:52 +07 2026 - ✅ GIT BACKUP COMPLETED - Memory updated)
-- [✅] Task 4: Monitor fixed trading bot. (Status: ✅ ALL TRADING BOTS RUNNING - 26-crypto bot restarted with capital reallocation)
+- [✅] Task 4: Monitor fixed trading bot. (Status: ✅ ALL TRADING BOTS RUNNING - 26-crypto bot scanning, LLM bot completed analysis)
 - [✅] Task 5: Handle Cash Earner Daily Tasks reminder. (Status: ✅ DAILY_TASKS.md CREATED - Project tracking restored, LLM consensus system active)
 
 ✅ CRITICAL ISSUES RESOLVED:
@@ -25,13 +25,11 @@
    - Port 5010: ❌ **NOT FOUND** - No dashboard_truth.py file
    - Port 5011: ✅ **RUNNING** (PID 29021) - Real-Time Trades Dashboard **FIXED** (shows Entry Price, Current Price, P&L, P&L% - P&L totals now in correct columns 7-8)
 3. **✅ PORTS VERIFIED:** All ports 5007, 5008, 5009, 5011 responding correctly
-4. **💰 REAL PORTFOLIO STATUS (from port 5011):**
-   - **Gemini:** $484.54 total (12 trades)
-   - **Binance:** $127.56 total (10 trades)
-   - **Total Portfolio:** $612.10
-   - **Total P&L:** $+0.77 ($+1.07 Gemini, $-0.30 Binance)
-   - **Win Rate:** 59.1% (13/22 profitable)
-   - **Position size:** 10% of available capital
+4. **💰 REAL PORTFOLIO STATUS (from port 5011 - UPDATED):**
+   - **Total Trades:** 22
+   - **Win Rate:** 27.3% (6/22 profitable) - **PERFORMANCE ISSUE**
+   - **Total P&L:** Likely negative (dashboard shows `<span class="negative">`)
+   - **Note:** Previous data was stale - actual performance is worse than reported
 5. **Exchange status:**
    - Gemini: ✅ **OPERATIONAL** - Active LONG positions
    - Binance: ⚠️ **LIMITED** - Geographic restrictions, SHORT positions only
@@ -67,23 +65,36 @@
 3. **✅ LLM PREDICTION TRACKING** - 100 decisions saved for accuracy analysis
 4. **✅ MONITORING RESTORED** - Full visibility into system status
 
-📊 CURRENT TIME: Thursday, April 2nd, 2026 — 9:32 AM (Asia/Bangkok)
-📈 SYSTEM STATUS: ✅ **OPERATIONAL WITH CRITICAL FIX APPLIED** - All systems running
+📊 CURRENT TIME: Thursday, April 2nd, 2026 — 9:55 AM (Asia/Bangkok)
+📈 SYSTEM STATUS: ✅ **OPERATIONAL WITH MULTIPLE ISSUES** - All systems running
 
-## 🚨 CRITICAL CAPITAL ALLOCATION FIX APPLIED
-**Issue Identified:** Trading bot had `BINANCE_CAPITAL = 0.0` - ZERO capital for SHORT positions (which are profitable)
-**Problem:** 89% of capital in Gemini LONG ($0.00 P&L), only 11% in Binance SHORT ($0.07 P&L - ALL profit)
-**Fix Applied:** 
-- `BINANCE_CAPITAL = 262.14` (40% of portfolio for profitable SHORT strategy)
+## 🚨 CRITICAL PERFORMANCE ISSUE CONFIRMED
+**Dashboard shows:** Win Rate 27.3% (6/22 profitable), Total P&L likely negative
+**Issue:** Trading system has very poor performance - only 27.3% of trades profitable
+**Urgent Action Needed:** Improve trading strategy or risk management
+
+## 🚨 EXCESSIVE DASHBOARD SPRAWL IDENTIFIED
+**Problem:** 4 active dashboards + 2 more processes = resource waste and confusion
+**Dashboards running:**
+1. Port 5007: Original Dashboard (portfolio totals)
+2. Port 5008: P&L Dashboard (profit/loss focus)
+3. Port 5009: Fixed Dashboard (real P&L, no hardcoded values)
+4. Port 5011: Trades Dashboard (real-time prices)
+**Recommendation:** Consolidate to 1-2 dashboards maximum
+
+## 🚨 CRITICAL CAPITAL ALLOCATION FIX ACTIVE
+**Issue Resolved:** Trading bot had `BINANCE_CAPITAL = 0.0` - ZERO capital for SHORT positions
+**Fix Active:** 
+- `BINANCE_CAPITAL = 262.14` (40% of portfolio for SHORT strategy)
 - `GEMINI_CAPITAL = 393.22` (60% of portfolio for LONG strategy)
-- Bot restarted (PID 42672) with new capital allocation
-**Expected Impact:** More SHORT positions, better P&L focus on profitable strategy
+- Bot PID 42672 running with new capital allocation (Cycle 5)
+**Goal:** Improve from current 27.3% win rate
 
 ## 🛌 SLEEP MONITORING ACTIVE
 **Sleep Monitor Status:** ✅ **ACTIVE** - Monitoring every 30 minutes
-**Last Check:** 09:11 AM - All critical systems running
+**Last Check:** 09:45 AM - All critical systems running
 **Emergency Alert:** ✅ **CONFIGURED** - Will alert if critical failures
-**Next Check:** 09:41 AM (30 minute intervals)
+**Next Check:** 10:15 AM (30 minute intervals)
 
 ### 🎯 MONITORING FOCUS:
 1. **Critical Processes:** Trading bot, LLM bot, all dashboards
@@ -91,18 +102,18 @@
 3. **Error Detection:** Automatic alert on critical failures
 4. **Auto-Recovery:** Attempts to restart failed critical systems
 
-### ✅ CURRENT STATUS (09:32 AM CHECK):
+### ✅ CURRENT STATUS (09:55 AM CHECK):
 - **All 6 critical processes:** ✅ RUNNING
-  - `real_26_crypto_trader.py`: ✅ ACTIVE (PID 42672, Cycle 1, last scan 09:31 AM) - **RESTARTED WITH FIX**
-  - `llm_consensus_bot.py`: ✅ ACTIVE (PID 29471, last analysis 09:26 AM)
+  - `real_26_crypto_trader.py`: ✅ ACTIVE (PID 42672, Cycle 5, last scan 09:52 AM) - **WITH CAPITAL FIX**
+  - `llm_consensus_bot.py`: ✅ ACTIVE (PID 29471, last analysis 09:54 AM) - **No trades executed (weak signals)**
   - All 4 dashboards: ✅ RUNNING & RESPONDING
 - **All 4 dashboard ports:** ✅ RESPONDING (5007, 5008, 5009, 5011) - All HTTP 200
-- **LLM Predictions:** 225+ recorded (active analysis)
-- **CPU Usage:** Normal
+- **LLM Predictions:** 232+ recorded (active analysis)
+- **CPU Usage:** Normal (13.43% per sleep monitor)
 - **Error Count:** 1 (Binance geographic restriction - expected)
 - **Trading Activity:** Scanning every 5 minutes, no opportunities found in recent cycles
-- **Portfolio Status:** $655.36 total, $0.07 P&L (positive) - **SHORTS PROFITABLE, LONGS BREAKING EVEN**
-- **Monitoring Tasks:** ✅ progress_monitor.sh executed at 09:27 AM
+- **Portfolio Status:** Total trades: 22, Win Rate: 27.3% (6/22 profitable) - **CRITICAL PERFORMANCE ISSUE**
+- **Monitoring Tasks:** ✅ auto_save.sh due at 10:10 AM (15 minutes)
 
 ## 🚨 CRITICAL DISCREPANCIES RESOLVED:
 1. **❌ STALE BALANCE DATA FIXED:**
@@ -110,9 +121,9 @@
    - **Binance:** $70.49 total ($70.49 deployed, $0 cash) - ✅ UPDATED
    - **Total Portfolio:** $655.36 - ✅ UPDATED
 2. **❌ STALE BOT STATUS FIXED:**
-   - **LLM Consensus Bot:** ✅ RUNNING (PID 91940) - ✅ CONFIRMED
-   - **real_26_crypto_trader:** ✅ RUNNING (PID 5446) - ✅ CONFIRMED
-   - **Port 5011 Dashboard:** ✅ RUNNING (PID 28846) - ✅ **FIXED** (now shows Entry Price, Current Price, P&L, P&L%)
+   - **LLM Consensus Bot:** ✅ RUNNING (PID 29471) - ✅ CONFIRMED (current PID)
+   - **real_26_crypto_trader:** ✅ RUNNING (PID 42672) - ✅ CONFIRMED (restarted with capital fix)
+   - **Port 5011 Dashboard:** ✅ RUNNING (PID 29021) - ✅ **FIXED** (now shows Entry Price, Current Price, P&L, P&L%)
 3. **❌ TIME DISCREPANCY FIXED:**
    - **Actual:** Thursday, April 2nd, 02:10 AM
    - **Was:** Thursday, April 2nd, 02:04 AM - ✅ UPDATED
