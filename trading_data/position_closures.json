@@ -1,0 +1,72 @@
+[
+  {
+    "asset": "ETH",
+    "exchange": "gemini",
+    "status": "FAILED",
+    "error": "gemini createOrder() allows limit orders only",
+    "timestamp": "2026-04-02T17:50:37.741180"
+  },
+  {
+    "asset": "ETH",
+    "exchange": "binance",
+    "status": "FAILED",
+    "error": "binance {\"code\":-2019,\"msg\":\"Margin is insufficient.\"}",
+    "timestamp": "2026-04-02T17:50:40.760205"
+  },
+  {
+    "asset": "XRP",
+    "exchange": "gemini",
+    "status": "FAILED",
+    "error": "gemini createOrder() allows limit orders only",
+    "timestamp": "2026-04-02T17:50:41.782205"
+  },
+  {
+    "asset": "XRP",
+    "exchange": "binance",
+    "status": "FAILED",
+    "error": "binance {\"code\":-2019,\"msg\":\"Margin is insufficient.\"}",
+    "timestamp": "2026-04-02T17:50:42.971961"
+  },
+  {
+    "asset": "BTC",
+    "exchange": "gemini",
+    "status": "FAILED",
+    "error": "gemini createOrder() allows limit orders only",
+    "timestamp": "2026-04-02T17:50:44.044661"
+  },
+  {
+    "asset": "BTC",
+    "exchange": "binance",
+    "status": "FAILED",
+    "error": "binance amount of BTC/USDT:USDT must be greater than minimum amount precision of 0.001",
+    "timestamp": "2026-04-02T17:50:45.045313"
+  },
+  {
+    "asset": "SOL",
+    "exchange": "gemini",
+    "status": "FAILED",
+    "error": "gemini createOrder() allows limit orders only",
+    "timestamp": "2026-04-02T17:50:46.048135"
+  },
+  {
+    "asset": "SOL",
+    "exchange": "binance",
+    "status": "FAILED",
+    "error": "binance {\"code\":-2019,\"msg\":\"Margin is insufficient.\"}",
+    "timestamp": "2026-04-02T17:50:47.184314"
+  },
+  {
+    "asset": "LINK",
+    "exchange": "gemini",
+    "status": "FAILED",
+    "error": "gemini createOrder() allows limit orders only",
+    "timestamp": "2026-04-02T17:50:48.205717"
+  },
+  {
+    "asset": "LINK",
+    "exchange": "binance",
+    "status": "FAILED",
+    "error": "binance {\"code\":-2019,\"msg\":\"Margin is insufficient.\"}",
+    "timestamp": "2026-04-02T17:50:49.389146"
+  }
+]
