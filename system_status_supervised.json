@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-04-02T12:15:30.244051",
+  "supervisor": "running",
+  "components": {
+    "26-crypto-trader": {
+      "name": "26-crypto-trader",
+      "pid": 59197,
+      "running": true,
+      "health": "healthy",
+      "restart_count": 1,
+      "start_time": "2026-04-02T12:15:18.897182",
+      "uptime": 11.346888,
+      "required": true
+    },
+    "llm-consensus-bot": {
+      "name": "llm-consensus-bot",
+      "pid": 59203,
+      "running": true,
+      "health": "starting",
+      "restart_count": 1,
+      "start_time": "2026-04-02T12:15:23.967071",
+      "uptime": 6.277009,
+      "required": false
+    },
+    "dashboard-5007": {
+      "name": "dashboard-5007",
+      "pid": 59205,
+      "running": false,
+      "health": "starting",
+      "restart_count": 1,
+      "start_time": "2026-04-02T12:15:27.123143",
+      "uptime": 3.120945,
+      "required": false
+    }
+  },
+  "summary": {
+    "total": 3,
+    "healthy": 1,
+    "unhealthy": 0,
+    "dead": 2
+  }
+}

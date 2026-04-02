@@ -1,0 +1,381 @@
+#!/usr/bin/env python3
+"""
+CONSOLIDATED TRADING DASHBOARD
+Single dashboard showing all essential information on port 5007
+"""
+
+from flask import Flask, render_template_string, jsonify
+import json
+import os
+import time
+from datetime import datetime
+import threading
+
+app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+HTML_TEMPLATE = '''
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trading System Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #1e293b;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #334155;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #60a5fa;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+        }
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #334155;
+        }
+        .status-good { color: #4ade80; }
+        .status-warning { color: #fbbf24; }
+        .status-error { color: #f87171; }
+        .status-neutral { color: #94a3b8; }
+        .value { font-weight: bold; }
+        .refresh {
+            text-align: center;
+            margin: 20px 0;
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+        .last-updated {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.8em;
+            margin-top: 30px;
+        }
+        .system-health {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .health-good { background: #065f46; color: #6ee7b7; }
+        .health-warning { background: #92400e; color: #fbbf24; }
+        .health-error { background: #7f1d1d; color: #fca5a5; }
+    </style>
+    <script>
+        function refreshData() {
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    // Update timestamp
+                    document.getElementById('timestamp').textContent = new Date(data.timestamp).toLocaleString();
+                    
+                    // Update system health
+                    const healthEl = document.getElementById('system-health');
+                    healthEl.textContent = data.system_health.toUpperCase();
+                    healthEl.className = 'system-health health-' + data.system_health;
+                    
+                    // Update component status
+                    const componentsEl = document.getElementById('components-status');
+                    componentsEl.innerHTML = '';
+                    data.components.forEach(comp => {
+                        const div = document.createElement('div');
+                        div.className = 'status-item';
+                        div.innerHTML = `
+                            <span>${comp.name}</span>
+                            <span class="status-${comp.health} value">${comp.health.toUpperCase()}</span>
+                        `;
+                        componentsEl.appendChild(div);
+                    });
+                    
+                    // Update trading status
+                    document.getElementById('trading-status').textContent = data.trading.status;
+                    document.getElementById('trading-mode').textContent = data.trading.mode;
+                    document.getElementById('last-trade').textContent = data.trading.last_trade || 'None';
+                    document.getElementById('total-trades').textContent = data.trading.total_trades;
+                    document.getElementById('win-rate').textContent = data.trading.win_rate + '%';
+                    
+                    // Update portfolio
+                    document.getElementById('total-value').textContent = '$' + data.portfolio.total_value.toFixed(2);
+                    document.getElementById('free-usd').textContent = '$' + data.portfolio.free_usd.toFixed(2);
+                    document.getElementById('btc-value').textContent = '$' + data.portfolio.btc_value.toFixed(2);
+                    document.getElementById('pnl').textContent = '$' + data.portfolio.pnl.toFixed(2);
+                    document.getElementById('pnl-percent').textContent = data.portfolio.pnl_percent.toFixed(2) + '%';
+                    
+                    // Update exchanges
+                    document.getElementById('gemini-status').textContent = data.exchanges.gemini.status;
+                    document.getElementById('binance-status').textContent = data.exchanges.binance.status;
+                })
+                .catch(error => {
+                    console.error('Error refreshing data:', error);
+                });
+        }
+        
+        // Refresh every 30 seconds
+        setInterval(refreshData, 30000);
+        
+        // Initial load
+        document.addEventListener('DOMContentLoaded', refreshData);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Trading System Dashboard</h1>
+            <p>Consolidated monitoring and control panel</p>
+            <div>
+                System Health: <span id="system-health" class="system-health health-good">LOADING...</span>
+            </div>
+        </div>
+        
+        <div class="status-grid">
+            <div class="card">
+                <h3>📊 System Status</h3>
+                <div id="components-status">
+                    <!-- Filled by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>💰 Portfolio</h3>
+                <div class="status-item">
+                    <span>Total Value</span>
+                    <span class="value" id="total-value">$---</span>
+                </div>
+                <div class="status-item">
+                    <span>Free USD</span>
+                    <span class="value" id="free-usd">$---</span>
+                </div>
+                <div class="status-item">
+                    <span>BTC Value</span>
+                    <span class="value" id="btc-value">$---</span>
+                </div>
+                <div class="status-item">
+                    <span>Total P&L</span>
+                    <span class="value" id="pnl">$---</span>
+                </div>
+                <div class="status-item">
+                    <span>P&L %</span>
+                    <span class="value" id="pnl-percent">---%</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Trading</h3>
+                <div class="status-item">
+                    <span>Status</span>
+                    <span class="value" id="trading-status">---</span>
+                </div>
+                <div class="status-item">
+                    <span>Mode</span>
+                    <span class="value" id="trading-mode">---</span>
+                </div>
+                <div class="status-item">
+                    <span>Last Trade</span>
+                    <span class="value" id="last-trade">---</span>
+                </div>
+                <div class="status-item">
+                    <span>Total Trades</span>
+                    <span class="value" id="total-trades">---</span>
+                </div>
+                <div class="status-item">
+                    <span>Win Rate</span>
+                    <span class="value" id="win-rate">---%</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🏦 Exchanges</h3>
+                <div class="status-item">
+                    <span>Gemini</span>
+                    <span class="value" id="gemini-status">---</span>
+                </div>
+                <div class="status-item">
+                    <span>Binance</span>
+                    <span class="value" id="binance-status">---</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="refresh">
+            <button onclick="refreshData()">🔄 Refresh Now</button>
+            <p>Auto-refreshes every 30 seconds</p>
+        </div>
+        
+        <div class="last-updated">
+            Last updated: <span id="timestamp">---</span>
+        </div>
+    </div>
+</body>
+</html>
+'''
+
+# Cache for dashboard data
+dashboard_cache = {
+    'timestamp': datetime.now().isoformat(),
+    'system_health': 'unknown',
+    'components': [],
+    'trading': {
+        'status': 'unknown',
+        'mode': 'unknown',
+        'last_trade': None,
+        'total_trades': 0,
+        'win_rate': 0
+    },
+    'portfolio': {
+        'total_value': 0,
+        'free_usd': 0,
+        'btc_value': 0,
+        'pnl': 0,
+        'pnl_percent': 0
+    },
+    'exchanges': {
+        'gemini': {'status': 'unknown'},
+        'binance': {'status': 'unknown'}
+    }
+}
+
+def update_cache():
+    """Update cache with current system data"""
+    global dashboard_cache
+    
+    try:
+        # Load supervisor status
+        status_file = os.path.join(BASE_DIR, 'system_status_supervised.json')
+        if os.path.exists(status_file):
+            with open(status_file, 'r') as f:
+                supervisor_status = json.load(f)
+            
+            # Update components
+            dashboard_cache['components'] = []
+            for name, comp in supervisor_status.get('components', {}).items():
+                dashboard_cache['components'].append({
+                    'name': name,
+                    'health': comp.get('health', 'unknown')
+                })
+            
+            # Determine system health
+            summary = supervisor_status.get('summary', {})
+            if summary.get('dead', 0) > 0:
+                dashboard_cache['system_health'] = 'error'
+            elif summary.get('unhealthy', 0) > 0:
+                dashboard_cache['system_health'] = 'warning'
+            else:
+                dashboard_cache['system_health'] = 'good'
+        
+        # Load trading config
+        config_file = os.path.join(BASE_DIR, 'trading_config.json')
+        if os.path.exists(config_file):
+            with open(config_file, 'r') as f:
+                config = json.load(f)
+            
+            dashboard_cache['portfolio']['total_value'] = config.get('total_value', 0)
+            dashboard_cache['portfolio']['free_usd'] = config.get('current_capital', 0)
+            dashboard_cache['portfolio']['btc_value'] = config.get('btc_value', 0)
+            
+            # Calculate P&L
+            initial = config.get('initial_capital', 0)
+            current = config.get('total_value', 0)
+            if initial > 0:
+                pnl = current - initial
+                pnl_percent = (pnl / initial) * 100
+                dashboard_cache['portfolio']['pnl'] = pnl
+                dashboard_cache['portfolio']['pnl_percent'] = pnl_percent
+        
+        # Load daily trades for trading stats
+        trades_file = os.path.join(BASE_DIR, 'daily_trades.json')
+        if os.path.exists(trades_file):
+            with open(trades_file, 'r') as f:
+                trades_data = json.load(f)
+            
+            trades = trades_data.get('trades', [])
+            dashboard_cache['trading']['total_trades'] = len(trades)
+            
+            if trades:
+                last_trade = trades[-1]
+                dashboard_cache['trading']['last_trade'] = f"{last_trade.get('side', '')} {last_trade.get('symbol', '')}"
+        
+        # Update timestamp
+        dashboard_cache['timestamp'] = datetime.now().isoformat()
+        
+        # Set trading status based on supervisor
+        if dashboard_cache['system_health'] == 'good':
+            dashboard_cache['trading']['status'] = 'ACTIVE'
+            dashboard_cache['trading']['mode'] = 'AGGRESSIVE'
+        elif dashboard_cache['system_health'] == 'warning':
+            dashboard_cache['trading']['status'] = 'DEGRADED'
+            dashboard_cache['trading']['mode'] = 'CONSERVATIVE'
+        else:
+            dashboard_cache['trading']['status'] = 'STOPPED'
+            dashboard_cache['trading']['mode'] = 'INACTIVE'
+        
+        # Simple exchange status
+        dashboard_cache['exchanges']['gemini']['status'] = 'OPERATIONAL'
+        dashboard_cache['exchanges']['binance']['status'] = 'LIMITED'
+        
+    except Exception as e:
+        print(f"Error updating cache: {e}")
+
+def cache_updater_thread():
+    """Thread to periodically update cache"""
+    while True:
+        update_cache()
+        time.sleep(30)  # Update every 30 seconds
+
+@app.route('/')
+def dashboard():
+    """Main dashboard page"""
+    return render_template_string(HTML_TEMPLATE)
+
+@app.route('/api/status')
+def api_status():
+    """API endpoint for system status"""
+    return jsonify(dashboard_cache)
+
+if __name__ == '__main__':
+    # Start cache updater thread
+    updater = threading.Thread(target=cache_updater_thread, daemon=True)
+    updater.start()
+    
+    # Initial cache update
+    update_cache()
+    
+    print("="*70)
+    print("🚀 CONSOLIDATED TRADING DASHBOARD")
+    print("="*70)
+    print(f"📊 Dashboard available at: http://localhost:5007")
+    print(f"📈 API endpoint: http://localhost:5007/api/status")
+    print("="*70)
+    
+    app.run(host='0.0.0.0', port=5007, debug=False)
