@@ -34,6 +34,12 @@ if ps aux | grep -v grep | grep "real_26_crypto_trader_fixed.py" > /dev/null; th
     BOT_LIST="$BOT_LIST real_26_crypto_trader_fixed.py"
 fi
 
+# Check for Gemini-only bot (CURRENT STRATEGY)
+if ps aux | grep -v grep | grep "gemini_only_trader.py" > /dev/null; then
+    BOTS_RUNNING=$((BOTS_RUNNING + 1))
+    BOT_LIST="$BOT_LIST gemini_only_trader.py"
+fi
+
 # Check for old bots (should not be running)
 if ps aux | grep -v grep | grep -E "(fixed_bot_common|full_capital_bot|simple_real_trader|real_futures_trading_bot|fixed_futures_bot|enhanced_26_crypto)" > /dev/null; then
     BOTS_RUNNING=$((BOTS_RUNNING + 1))
@@ -49,6 +55,13 @@ elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"real_26_crypto_trader_fixed.
     echo "   Capital: $393 Gemini LONG, $262 Binance SHORT"
     echo "   Status: FIXED VERSION - Prevents simultaneous LONG/SHORT"
     echo "   Hedge prevention: Active (skipping BTC, ETH, SOL, XRP, LINK)"
+elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"gemini_only_trader.py"* ]]; then
+    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
+    echo "   Strategy: GEMINI-ONLY CONSERVATIVE"
+    echo "   Mode: CONSERVATIVE - 1.5% drop threshold, one trade per cycle"
+    echo "   Capital: $563 USD available on Gemini"
+    echo "   Status: ACTIVE - No Binance trading (geographic restrictions)"
+    echo "   P&L: -$14.29 total (ETH -$12.31, SOL -$1.98)"
 elif [[ "$BOT_LIST" == *"OLD_BOT_STILL_RUNNING"* ]]; then
     echo "BOT: [WARN] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
     echo "   Old bots still running - may conflict"

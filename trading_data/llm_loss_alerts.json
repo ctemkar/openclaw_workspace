@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-04-02T18:46:31.835233",
+  "alerts": [
+    {
+      "type": "CRITICAL_LOSS",
+      "timestamp": "2026-04-02T18:46:27.911263",
+      "title": "CRITICAL: 1 positions with >5.0% losses",
+      "details": [
+        {
+          "symbol": "SOL/USD",
+          "pnl_percent": -5.180540797033184,
+          "pnl_amount": -1.9804194427846638,
+          "amount": 0.46007698178883716
+        }
+      ],
+      "total_pnl": -14.289284423436795
+    },
+    {
+      "type": "DATA_MISMATCH",
+      "timestamp": "2026-04-02T18:46:31.828680",
+      "title": "CRITICAL: 2 data mismatches found",
+      "details": [
+        {
+          "asset": "ETH",
+          "dashboard": 0.13715198490797093,
+          "actual": 0.0023499,
+          "difference_pct": 98.28664528509977
+        },
+        {
+          "asset": "SOL",
+          "dashboard": 0.46007698178883716,
+          "actual": 0.05986488,
+          "difference_pct": 86.98807322043415
+        }
+      ],
+      "message": "Dashboard data does not match exchange reality!"
+    },
+    {
+      "type": "RISK_EXPOSURE",
+      "timestamp": "2026-04-02T18:46:31.835183",
+      "title": "WARNING: 1 positions with excessive exposure",
+      "details": [
+        {
+          "symbol": "ETH/USD",
+          "value": 291.671,
+          "percentage": 88.41219907609535
+        }
+      ],
+      "message": "Consider diversifying to reduce risk"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "LOSS_MANAGEMENT",
+      "priority": "HIGH",
+      "action": "Consider setting stop-loss orders or reducing position sizes",
+      "reason": "1 positions with significant losses",
+      "details": [
+        "SOL/USD: -5.18% loss"
+      ]
+    },
+    {
+      "type": "DATA_INTEGRITY",
+      "priority": "CRITICAL",
+      "action": "Immediately reconcile dashboard data with exchange APIs",
+      "reason": "Dashboard shows different positions than actual exchange",
+      "details": [
+        "ETH: 98.3% mismatch",
+        "SOL: 87.0% mismatch"
+      ]
+    },
+    {
+      "type": "SYSTEM_IMPROVEMENT",
+      "priority": "MEDIUM",
+      "action": "Implement automated loss alerts and risk monitoring",
+      "reason": "Current system lacks proactive loss detection",
+      "details": [
+        "LLM system should monitor P&L continuously"
+      ]
+    }
+  ],
+  "summary": {
+    "total_alerts": 3,
+    "critical_alerts": 2,
+    "recommendations_count": 3
+  }
+}
