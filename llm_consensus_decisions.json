@@ -1,85 +1,5 @@
 [
   {
-    "timestamp": "2026-04-02T06:41:11.864495",
-    "symbol": "BTC",
-    "action": "BUY",
-    "buy_score": 5.19,
-    "sell_score": 5.88,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864500",
-    "symbol": "ETH",
-    "action": "BUY",
-    "buy_score": 6.51,
-    "sell_score": 4.49,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864502",
-    "symbol": "SOL",
-    "action": "HOLD",
-    "buy_score": 4.85,
-    "sell_score": 5.82,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864503",
-    "symbol": "XRP",
-    "action": "BUY",
-    "buy_score": 5.83,
-    "sell_score": 4.18,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864503",
-    "symbol": "ADA",
-    "action": "BUY",
-    "buy_score": 5.65,
-    "sell_score": 5.12,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864505",
-    "symbol": "DOT",
-    "action": "BUY",
-    "buy_score": 4.74,
-    "sell_score": 5.28,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864505",
-    "symbol": "DOGE",
-    "action": "BUY",
-    "buy_score": 4.49,
-    "sell_score": 5.42,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864506",
-    "symbol": "AVAX",
-    "action": "BUY",
-    "buy_score": 6.93,
-    "sell_score": 5.03,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864507",
-    "symbol": "LINK",
-    "action": "BUY",
-    "buy_score": 6.24,
-    "sell_score": 4.36,
-    "executed": false
-  },
-  {
-    "timestamp": "2026-04-02T06:41:11.864511",
-    "symbol": "UNI",
-    "action": "BUY",
-    "buy_score": 5.97,
-    "sell_score": 4.22,
-    "executed": false
-  },
-  {
     "timestamp": "2026-04-02T07:05:07.305637",
     "symbol": "BTC",
     "action": "HOLD",
@@ -797,6 +717,86 @@
     "action": "SELL",
     "buy_score": 4.86,
     "sell_score": 6.15,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288125",
+    "symbol": "BTC",
+    "action": "HOLD",
+    "buy_score": 4.46,
+    "sell_score": 6.64,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288131",
+    "symbol": "ETH",
+    "action": "HOLD",
+    "buy_score": 5.78,
+    "sell_score": 5.89,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288133",
+    "symbol": "SOL",
+    "action": "HOLD",
+    "buy_score": 4.17,
+    "sell_score": 7.04,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288134",
+    "symbol": "XRP",
+    "action": "HOLD",
+    "buy_score": 4.75,
+    "sell_score": 5.85,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288134",
+    "symbol": "ADA",
+    "action": "HOLD",
+    "buy_score": 3.64,
+    "sell_score": 5.96,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288135",
+    "symbol": "DOT",
+    "action": "HOLD",
+    "buy_score": 4.75,
+    "sell_score": 6.65,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288136",
+    "symbol": "DOGE",
+    "action": "SELL",
+    "buy_score": 4.28,
+    "sell_score": 5.99,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288138",
+    "symbol": "AVAX",
+    "action": "HOLD",
+    "buy_score": 4.83,
+    "sell_score": 5.94,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288138",
+    "symbol": "LINK",
+    "action": "HOLD",
+    "buy_score": 5.01,
+    "sell_score": 5.18,
+    "executed": false
+  },
+  {
+    "timestamp": "2026-04-02T10:43:36.288143",
+    "symbol": "UNI",
+    "action": "HOLD",
+    "buy_score": 4.32,
+    "sell_score": 6.82,
     "executed": false
   }
 ]
