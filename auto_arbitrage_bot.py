@@ -29,13 +29,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = os.path.join(BASE_DIR, 'config', 'api_keys.json')
 
 # Cryptos to monitor (liquid pairs on both exchanges)
-CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT', 'UNI', 'LINK', 'MATIC', 'AVAX']
+# Expanded from 10 to 15 cryptos for more opportunities
+CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'UNI', 'LINK', 'AVAX', 'DOGE', 'LTC', 'SHIB', 'BCH']
 
 # Trading parameters
 MIN_SPREAD_PERCENT = 0.5      # 0.5% minimum spread to trade
 MIN_PROFIT_AMOUNT = 1.0       # Minimum $1 profit after fees
-TRADE_SIZE_PERCENT = 0.02     # 2% of available capital per trade
-MAX_TRADE_SIZE = 100.0        # Maximum $100 per trade
+TRADE_SIZE_PERCENT = 0.04     # 4% of available capital per trade (INCREASED)
+MAX_TRADE_SIZE = 150.0        # Maximum $150 per trade (INCREASED)
 
 # Exchange fees (approximate)
 GEMINI_FEE = 0.0010  # 0.10% taker fee
@@ -126,12 +127,27 @@ class AutoArbitrageBot:
         if spread_percent < MIN_SPREAD_PERCENT:
             return None
         
-        # Estimate available capital (in reality, we should fetch balances)
-        # For now, use conservative estimates
-        available_capital = 50.0  # Start with $50 per trade
+        # DYNAMIC TRADE SIZING BASED ON SPREAD
+        # Larger spreads = larger trades (more profit, less risk)
+        if spread_percent >= 1.0:
+            # 1.0%+ spread: Use larger trade size
+            trade_multiplier = 1.5
+            min_profit = 2.0  # Require $2 profit for larger trades
+        elif spread_percent >= 0.75:
+            # 0.75-1.0% spread: Medium trade size
+            trade_multiplier = 1.2
+            min_profit = 1.5
+        else:
+            # 0.5-0.75% spread: Standard trade size
+            trade_multiplier = 1.0
+            min_profit = MIN_PROFIT_AMOUNT
         
-        # Calculate trade size
-        trade_size = min(available_capital * TRADE_SIZE_PERCENT, MAX_TRADE_SIZE)
+        # Estimate available capital
+        available_capital = 100.0  # Increased from $50
+        
+        # Calculate trade size with dynamic scaling
+        base_trade_size = available_capital * TRADE_SIZE_PERCENT
+        trade_size = min(base_trade_size * trade_multiplier, MAX_TRADE_SIZE)
         
         if trade_size < 10.0:  # Minimum $10 trade
             return None
@@ -147,8 +163,8 @@ class AutoArbitrageBot:
         total_fees = buy_fee + sell_fee
         net_profit = sell_value - trade_size - total_fees
         
-        # Check if profit meets minimum threshold
-        if net_profit < MIN_PROFIT_AMOUNT:
+        # Check if profit meets dynamic minimum threshold
+        if net_profit < min_profit:
             return None
         
         # Return arbitrage opportunity
@@ -329,9 +345,21 @@ class AutoArbitrageBot:
                     logger.info(f"   Total profit: ${self.total_profit:.2f}")
                     logger.info(f"   Avg profit/trade: ${self.total_profit/self.trade_count:.2f}")
                 
-                # Wait before next cycle
-                logger.info(f"💤 Next scan in 30 seconds...")
-                time.sleep(30)
+                # Intelligent scanning based on time
+                current_hour = datetime.now().hour
+                
+                # Adjust scan frequency based on market hours
+                if 13 <= current_hour <= 21:  # US/EU overlap (high volume)
+                    scan_delay = 20  # Scan more frequently
+                    logger.info(f"🌍 High volume hours: Next scan in {scan_delay} seconds...")
+                elif 22 <= current_hour or current_hour <= 4:  # Asia hours
+                    scan_delay = 40  # Scan less frequently
+                    logger.info(f"🌏 Asia hours: Next scan in {scan_delay} seconds...")
+                else:
+                    scan_delay = 30  # Standard
+                    logger.info(f"💤 Next scan in {scan_delay} seconds...")
+                
+                time.sleep(scan_delay)
                 
             except Exception as e:
                 logger.error(f"❌ Error in arbitrage cycle: {e}")
