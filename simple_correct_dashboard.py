@@ -159,19 +159,50 @@ HTML_TEMPLATE = '''
 '''
 
 def load_actual_holdings():
-    """Load ONLY actual cryptocurrency holdings (no USD, no summaries)"""
+    """Load ONLY REAL cryptocurrency holdings (no USD, no summaries, no test entries)"""
     holdings = []
     
     try:
         with open('trading_data/trades.json', 'r') as f:
             trades = json.load(f)
         
-        # Filter for ONLY spot trades (actual holdings)
-        spot_trades = [t for t in trades if t.get('type') == 'spot']
+        # Filter for ONLY REAL spot trades (actual holdings, not test entries)
+        real_trades = []
+        for trade in trades:
+            if trade.get('type') != 'spot':
+                continue  # Skip non-spot trades
+            
+            note = trade.get('note', '').lower()
+            symbol = trade.get('symbol', '')
+            
+            # Check if this is a REAL trade (not a test/LLM bot entry)
+            is_real_trade = True
+            
+            # Heuristic: Real trades have realistic prices
+            price = trade.get('price', 0)
+            if symbol == 'ETH/USD' and price > 5000:  # ETH over $5k is suspicious
+                is_real_trade = False
+            elif symbol == 'SOL/USD' and price > 200:  # SOL over $200 is suspicious
+                is_real_trade = False
+            elif symbol == 'BTC/USD' and price > 100000:  # BTC over $100k is suspicious
+                is_real_trade = False
+            
+            # Heuristic: Check note for test indicators
+            if 'price fixed' in note or 'amount fixed' in note:
+                is_real_trade = False
+            
+            # Heuristic: Round numbers are suspicious (real trades have decimals)
+            if price % 1 == 0 and price > 100:  # Round number over $100
+                is_real_trade = False
+            
+            if is_real_trade:
+                real_trades.append(trade)
+        
+        print(f"📊 Found {len(real_trades)} REAL trades (filtered out test entries)")
         
         # Group by symbol to combine duplicates
         holdings_by_symbol = {}
-        for trade in spot_trades:
+        for trade in real_trades:
             symbol = trade.get('symbol', '').replace('/USD', '').replace('/USDT', '')
             
             if symbol not in holdings_by_symbol:
@@ -183,7 +214,8 @@ def load_actual_holdings():
                     'current_price': trade.get('current_price', trade.get('price', 0)),
                     'current_value': 0,
                     'pnl': 0,
-                    'pnl_percent': 0
+                    'pnl_percent': 0,
+                    'is_real': True
                 }
             
             # Add to existing holding
@@ -204,7 +236,14 @@ def load_actual_holdings():
                 
                 holdings.append(holding)
         
-        print(f"✅ Loaded {len(holdings)} actual holdings: {', '.join([h['symbol'] for h in holdings])}")
+        print(f"✅ Loaded {len(holdings)} REAL holdings: {', '.join([h['symbol'] for h in holdings])}")
+        
+        # Show investment breakdown
+        print("💰 INVESTMENT BREAKDOWN:")
+        total_investment = sum(h['investment'] for h in holdings)
+        for holding in holdings:
+            print(f"  • {holding['symbol']}: ${holding['investment']:.2f} ({holding['amount']:.8f} coins)")
+        print(f"  📊 TOTAL REAL INVESTMENT: ${total_investment:.2f}")
         
     except Exception as e:
         print(f"❌ Error loading holdings: {e}")
