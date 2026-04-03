@@ -1,0 +1,76 @@
+=== SYSTEM HEALTH CHECK REPORT ===
+Timestamp: 2026-04-03 06:41 AM (Asia/Bangkok)
+System: Chetan's Mac mini
+Uptime: 2 days, 52 minutes
+
+=== SYSTEM STATUS ===
+1. UPTIME & LOAD:
+   - Uptime: 2 days, 52 minutes
+   - Load averages: 1.13, 1.08, 1.27
+   - CPU usage: 13.21% user, 16.74% sys, 70.4% idle
+   - Processes: 407 total, 3 running, 1 stuck, 403 sleeping
+
+2. MEMORY USAGE:
+   - Physical memory: 31GB used (25GB wired, 3.8GB compressor)
+   - Memory free: 160MB
+   - Memory pressure: Moderate (compressor active)
+
+3. DISK SPACE:
+   - Root filesystem (/): 228GB total, 17GB used, 7GB available (71% used)
+   - Data volume (/System/Volumes/Data): 228GB total, 181GB used, 7GB available (97% used) ⚠️ CRITICAL
+   - Other volumes: Within normal limits
+
+4. NETWORK:
+   - Internet connectivity: OK (ping to 8.8.8.8 successful)
+   - Network stats: 54.9M packets in, 27.7M packets out
+
+5. TEMPERATURE:
+   - No thermal warnings detected
+   - No performance warnings detected
+
+=== APPLICATION STATUS (from sleep_monitor.sh) ===
+1. PROCESS STATUS:
+   ✅ Running: simple_fixed_dashboard.py
+   ❌ Stopped: real_26_crypto_trader.py
+   ❌ Stopped: llm_consensus_bot.py
+   ❌ Stopped: original_dashboard_fixed.py
+   ❌ Stopped: trades_dashboard_fixed.py
+   ❌ Stopped: simple_pnl_fixed.py
+
+2. DASHBOARD PORTS:
+   ✅ Responding: Port 5008, Port 5009
+   ❌ Not responding: Port 5007, Port 5011
+
+3. TRADING ACTIVITY:
+   📊 LLM Predictions: 374 recorded
+
+4. OPENCLAW PROCESSES:
+   ✅ Running: openclaw-gateway (PID: 83141, CPU: 90.1%, 28:00 runtime)
+   ✅ Running: openclaw-tui (PID: 83237)
+   ✅ Running: openclaw (PID: 83236)
+
+5. ERROR CHECK:
+   ⚠️ trading_bot.log has 1 recent error:
+     - 2026-04-01 19:44:28: Binance trade execution failed (order notional too small)
+
+=== ANOMALIES DETECTED ===
+1. CRITICAL: Data volume at 97% capacity (181GB/228GB used)
+2. WARNING: Multiple trading applications not running
+3. WARNING: Dashboard ports 5007 and 5011 not responding
+4. NOTICE: Memory compressor active (3.8GB compressed)
+5. NOTICE: 1 stuck process detected
+
+=== RECOMMENDATIONS ===
+1. IMMEDIATE ACTION: Clean up /System/Volumes/Data to free disk space
+2. Investigate why trading applications are not running
+3. Check dashboard services on ports 5007 and 5011
+4. Monitor memory usage for potential leaks
+5. Review trading_bot.log for recurring errors
+
+=== OVERALL SYSTEM HEALTH: NEEDS ATTENTION ⚠️ ===
+System is operational but requires maintenance to address:
+- Critical disk space issue
+- Multiple stopped applications
+- Non-responsive services
+
+Next check scheduled in 2 hours.
