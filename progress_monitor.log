@@ -2376,3 +2376,24 @@ http://127.0.0.1:5007
 
 STATUS: [WARN] API is DOWN
 BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Fri Apr  3 17:23:24 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Fri Apr  3 17:56:01 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
+--- Progress Monitor: Fri Apr  3 18:07:31 +07 2026 ---
+Click to open REAL-TIME Dashboard:
+http://127.0.0.1:5007
+(Auto-refreshes every 10 seconds)
+
+STATUS: [WARN] API is DOWN
+BOT: [CRITICAL] NO TRADING BOTS RUNNING
