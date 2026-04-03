@@ -33,10 +33,10 @@ CONFIG_FILE = os.path.join(BASE_DIR, 'config', 'api_keys.json')
 CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'UNI', 'LINK', 'AVAX', 'DOGE', 'LTC', 'SHIB', 'BCH']
 
 # Trading parameters
-MIN_SPREAD_PERCENT = 0.4      # 0.5% minimum spread to trade
-MIN_PROFIT_AMOUNT = 0.25       # Minimum $0.25 profit after fees
-TRADE_SIZE_PERCENT = 0.08     # 8% of available capital per trade (AGGRESSIVE)
-MAX_TRADE_SIZE = 200.0        # Maximum $200 per trade (AGGRESSIVE)
+MIN_SPREAD_PERCENT = 0.5      # 0.5% minimum spread to trade
+MIN_PROFIT_AMOUNT = 1.0       # Minimum $1 profit after fees
+TRADE_SIZE_PERCENT = 0.04     # 4% of available capital per trade (INCREASED)
+MAX_TRADE_SIZE = 150.0        # Maximum $150 per trade (INCREASED)
 
 # Exchange fees (approximate)
 GEMINI_FEE = 0.0010  # 0.10% taker fee
