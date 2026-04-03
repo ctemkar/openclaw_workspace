@@ -30,7 +30,7 @@ CONFIG_FILE = os.path.join(BASE_DIR, 'config', 'api_keys.json')
 
 # Cryptos to monitor (liquid pairs on both exchanges)
 # Expanded from 10 to 15 cryptos for more opportunities
-CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'BAT', 'SUSHI', 'CRV', 'SHIB', 'BCH', 'PEPE', 'WIF', 'BONK', 'FLOKI', 'INJ']  # 27 supported cryptos (removed unsupported)  # 34 cryptos for maximum arbitrage coverage
+CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'BAT', 'SUSHI', 'CRV', 'SHIB', 'BCH', 'PEPE', 'WIF', 'BONK', 'FLOKI', 'INJ']  # 27 supported cryptos (removed unsupported)  # 34 cryptos for maximum arbitrage coverage
 
 # Trading parameters
 MIN_SPREAD_PERCENT = 0.4      # 0.5% minimum spread to trade

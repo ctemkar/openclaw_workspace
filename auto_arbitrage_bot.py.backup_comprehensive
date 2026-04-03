@@ -30,7 +30,7 @@ CONFIG_FILE = os.path.join(BASE_DIR, 'config', 'api_keys.json')
 
 # Cryptos to monitor (liquid pairs on both exchanges)
 # Expanded from 10 to 15 cryptos for more opportunities
-CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'BAT', 'SUSHI', 'CRV', 'SHIB', 'BCH', 'PEPE', 'WIF', 'BONK', 'FLOKI', 'INJ']  # 27 supported cryptos (removed unsupported)  # 34 cryptos for maximum arbitrage coverage
+CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'UNI', 'LINK', 'AVAX', 'DOGE', 'LTC', 'SHIB', 'BCH']
 
 # Trading parameters
 MIN_SPREAD_PERCENT = 0.4      # 0.5% minimum spread to trade
@@ -101,10 +101,8 @@ class AutoArbitrageBot:
     def calculate_arbitrage_opportunity(self, crypto: str) -> Optional[Dict]:
         """Calculate arbitrage opportunity for a crypto"""
         gemini_price, binance_price = self.fetch_prices(crypto)
-        logger.debug(f"DEBUG {crypto}: gemini=${gemini_price:.6f}, binance=${binance_price:.6f}")
         
         if gemini_price <= 0 or binance_price <= 0:
-            logger.debug(f"DEBUG {crypto}: Price check failed - gemini=${gemini_price:.6f}, binance=${binance_price:.6f}")
             return None
         
         # Calculate spread percentage
