@@ -1,0 +1,206 @@
+[
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 1 Short 1"
+  },
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 1 Short 2"
+  },
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 1 Short 3"
+  },
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "time": "20:00",
+    "type": "long",
+    "duration": "8-15min",
+    "topic": "Day 1 Long-form",
+    "based_on": "Shorts from previous day"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 2 Short 1"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 2 Short 2"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 2 Short 3"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 3 Short 1"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 3 Short 2"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 3 Short 3"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "time": "20:00",
+    "type": "long",
+    "duration": "8-15min",
+    "topic": "Day 3 Long-form",
+    "based_on": "Shorts from previous day"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 4 Short 1"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 4 Short 2"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 4 Short 3"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 5 Short 1"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 5 Short 2"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 5 Short 3"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "time": "20:00",
+    "type": "long",
+    "duration": "8-15min",
+    "topic": "Day 5 Long-form",
+    "based_on": "Shorts from previous day"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 6 Short 1"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 6 Short 2"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 6 Short 3"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "time": "10:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 7 Short 1"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "time": "14:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 7 Short 2"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "time": "18:00",
+    "type": "short",
+    "duration": "45-60s",
+    "topic": "Day 7 Short 3"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "time": "20:00",
+    "type": "long",
+    "duration": "8-15min",
+    "topic": "Day 7 Long-form",
+    "based_on": "Shorts from previous day"
+  }
+]

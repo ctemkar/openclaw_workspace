@@ -1,0 +1,26 @@
+{
+  "weekly_output": {
+    "shorts": 21,
+    "longs": 4,
+    "total": 25,
+    "shorts_duration": "45-60 seconds",
+    "longs_duration": "8-15 minutes"
+  },
+  "time_efficiency": {
+    "weekly_hours": "16-22.5",
+    "content_per_hour": "1.1-1.6 pieces",
+    "time_saving": "60% vs separate creation"
+  },
+  "conversion_examples": [
+    {
+      "short": "Krishna: India's Original Superhero (50s)",
+      "long": "Krishna: Complete Character Documentary (12min)",
+      "expansion": "Take traits \u2192 Expand to life chapters"
+    },
+    {
+      "short": "Bhagavad Gita Decision Making (45s)",
+      "long": "Complete Bhagavad Gita System (10min)",
+      "expansion": "3 steps \u2192 Full system + case studies"
+    }
+  ]
+}

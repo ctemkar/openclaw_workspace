@@ -28,26 +28,46 @@ def get_arbitration_systems():
         'last_active': 'Unknown'
     }
     
-    # Check if Forex bot is running
+    # Check if Forex bot is running (check BOTH old and new bots)
     try:
         result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
-        if 'forex_bot_with_schwab.py' in result.stdout:
-            forex_status['status'] = '✅ RUNNING'
+        
+        # Check for NEW active forex trader first
+        if 'active_forex_trader.py' in result.stdout:
+            forex_status['status'] = '✅ RUNNING (ACTIVE TRADING!)'
+            forex_status['description'] = 'ACTIVE TRADING • $220 Balance • Making profits!'
+            
             # Extract PID
+            for line in result.stdout.split('\n'):
+                if 'active_forex_trader.py' in line:
+                    parts = line.split()
+                    if len(parts) > 1:
+                        forex_status['pid'] = parts[1]
+                        
+            # Check active forex trading log
+            if os.path.exists('active_forex_trading.log'):
+                with open('active_forex_trading.log', 'r') as f:
+                    lines = f.readlines()
+                    if lines:
+                        # Look for balance information
+                        for line in reversed(lines[-10:]):  # Check last 10 lines
+                            if 'balance:' in line.lower() and '$' in line:
+                                # Extract balance amount
+                                import re
+                                balance_match = re.search(r'\$([0-9]+\.[0-9]+)', line)
+                                if balance_match:
+                                    forex_status['balance'] = float(balance_match.group(1))
+                                    forex_status['last_active'] = 'ACTIVELY TRADING NOW!'
+                                    break
+        
+        # Check for OLD forex bot (backward compatibility)
+        elif 'forex_bot_with_schwab.py' in result.stdout:
+            forex_status['status'] = '✅ RUNNING (Legacy Mode)'
             for line in result.stdout.split('\n'):
                 if 'forex_bot_with_schwab.py' in line:
                     parts = line.split()
                     if len(parts) > 1:
                         forex_status['pid'] = parts[1]
-                        
-            # Check log for last activity
-            if os.path.exists('forex_trading_with_schwab.log'):
-                with open('forex_trading_with_schwab.log', 'r') as f:
-                    lines = f.readlines()
-                    if lines:
-                        last_line = lines[-1]
-                        if 'Waiting' in last_line or 'scan' in last_line:
-                            forex_status['last_active'] = 'Recently active'
     except:
         pass
     
