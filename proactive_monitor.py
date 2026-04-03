@@ -1,241 +1,339 @@
 #!/usr/bin/env python3
 """
-PROACTIVE MONITORING - Check actual exchange data and fix dashboard
+PROACTIVE MONITORING SYSTEM
+Continuously checks ALL trading systems and automatically fixes issues
 """
-
 import os
-import json
+import time
 import subprocess
+import requests
+import json
+import logging
 from datetime import datetime
+import sys
 
-def get_actual_gemini_data():
-    """Get actual Gemini data from trading bot or API"""
-    print("🔵 GETTING ACTUAL GEMINI DATA")
-    print("="*50)
-    
-    # Check trading bot log for actual Gemini data
-    gemini_data = {
-        'total': 0,
-        'free': 0,
-        'used': 0,
-        'positions': []
-    }
-    
-    try:
-        # Read trading bot config
-        with open('real_26_crypto_trader.py', 'r') as f:
-            content = f.read()
-            import re
-            # Find GEMINI_CAPITAL
-            match = re.search(r'GEMINI_CAPITAL\s*=\s*([\d.]+)', content)
-            if match:
-                gemini_data['configured_capital'] = float(match.group(1))
-                print(f"📋 Configured capital: ${gemini_data['configured_capital']:.2f}")
-    except Exception as e:
-        print(f"❌ Error reading config: {e}")
-    
-    # Try to get actual trade data
-    try:
-        with open('26_crypto_trade_history_CORRECTED.json', 'r') as f:
-            trades = json.load(f)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('proactive_monitor.log'),
+        logging.StreamHandler()
+    ]
+)
+
+class ProactiveMonitor:
+    def __init__(self):
+        self.check_interval = 60  # Check every 60 seconds
+        self.fix_attempts = {}
+        self.max_fix_attempts = 3
         
-        gemini_trades = [t for t in trades if t.get('exchange') == 'gemini']
-        print(f"📊 Gemini trades in history: {len(gemini_trades)}")
+    def check_all_systems(self):
+        """Check ALL trading systems"""
+        logging.info("🔍 CHECKING ALL TRADING SYSTEMS")
         
-        for trade in gemini_trades[-3:]:  # Last 3 trades
-            symbol = trade.get('symbol', 'unknown')
-            side = trade.get('side', 'unknown')
-            entry = trade.get('entry_price', 0)
-            current = trade.get('current_price', 0)
-            pnl = trade.get('pnl', 0)
-            status = trade.get('status', 'unknown')
-            print(f"  {symbol} {side} @ ${entry:.4f} (P&L: ${pnl:.2f}) [{status}]")
+        systems = [
+            self.check_forex_bot,
+            self.check_26_crypto_bot,
+            self.check_practical_profit_bot,
+            self.check_dashboard,
+            self.check_exchange_apis,
+            self.check_arbitrage_opportunities
+        ]
+        
+        all_ok = True
+        for system_check in systems:
+            try:
+                if not system_check():
+                    all_ok = False
+            except Exception as e:
+                logging.error(f"❌ Error checking system: {e}")
+                all_ok = False
+        
+        return all_ok
+    
+    def check_forex_bot(self):
+        """Check Forex bot"""
+        logging.info("💰 Checking Forex bot...")
+        
+        # Check if process is running
+        result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
+        forex_running = 'forex_bot_with_schwab.py' in result.stdout
+        
+        if not forex_running:
+            logging.error("❌ Forex bot NOT RUNNING!")
+            self.fix_forex_bot()
+            return False
+        
+        # Check if it's actually working (not just process)
+        try:
+            # Check recent logs
+            if os.path.exists('real_forex_trading.log'):
+                with open('real_forex_trading.log', 'r') as f:
+                    lines = f.readlines()
+                    if lines:
+                        last_line = lines[-1].strip()
+                        if 'ERROR' in last_line or 'failed' in last_line.lower():
+                            logging.error(f"❌ Forex bot has errors: {last_line[:100]}")
+                            return False
             
-            if status == 'open':
-                gemini_data['positions'].append({
-                    'symbol': symbol,
-                    'side': side,
-                    'entry_price': entry,
-                    'current_price': current,
-                    'pnl': pnl
-                })
-    except Exception as e:
-        print(f"❌ Error reading trade history: {e}")
-    
-    return gemini_data
-
-def get_actual_binance_data():
-    """Get actual Binance data from trading bot or API"""
-    print("\n🟡 GETTING ACTUAL BINANCE DATA")
-    print("="*50)
-    
-    binance_data = {
-        'total': 0,
-        'free': 0,
-        'used': 0,
-        'positions': []
-    }
-    
-    try:
-        # Read trading bot config
-        with open('real_26_crypto_trader.py', 'r') as f:
-            content = f.read()
-            import re
-            # Find BINANCE_CAPITAL
-            match = re.search(r'BINANCE_CAPITAL\s*=\s*([\d.]+)', content)
-            if match:
-                binance_data['configured_capital'] = float(match.group(1))
-                print(f"📋 Configured capital: ${binance_data['configured_capital']:.2f}")
-    except Exception as e:
-        print(f"❌ Error reading config: {e}")
-    
-    # Try to get actual trade data
-    try:
-        with open('26_crypto_trade_history_CORRECTED.json', 'r') as f:
-            trades = json.load(f)
-        
-        binance_trades = [t for t in trades if t.get('exchange') == 'binance']
-        print(f"📊 Binance trades in history: {len(binance_trades)}")
-        
-        for trade in binance_trades[-3:]:  # Last 3 trades
-            symbol = trade.get('symbol', 'unknown')
-            side = trade.get('side', 'unknown')
-            entry = trade.get('entry_price', 0)
-            current = trade.get('current_price', 0)
-            pnl = trade.get('pnl', 0)
-            status = trade.get('status', 'unknown')
-            print(f"  {symbol} {side} @ ${entry:.4f} (P&L: ${pnl:.2f}) [{status}]")
+            logging.info("✅ Forex bot running")
+            return True
             
-            if status == 'open':
-                binance_data['positions'].append({
-                    'symbol': symbol,
-                    'side': side,
-                    'entry_price': entry,
-                    'current_price': current,
-                    'pnl': pnl
-                })
-    except Exception as e:
-        print(f"❌ Error reading trade history: {e}")
+        except Exception as e:
+            logging.error(f"❌ Error checking Forex bot: {e}")
+            return False
     
-    return binance_data
-
-def check_dashboard_data():
-    """Check what the dashboard is actually showing"""
-    print("\n📊 CHECKING DASHBOARD DATA")
-    print("="*50)
+    def fix_forex_bot(self):
+        """Fix Forex bot"""
+        logging.info("🔧 Fixing Forex bot...")
+        
+        # Kill any stuck processes
+        subprocess.run(['pkill', '-f', 'forex_bot_with_schwab.py'], capture_output=True)
+        time.sleep(2)
+        
+        # Restart
+        try:
+            subprocess.Popen([
+                'python3', 'forex_bot_with_schwab.py', '--real-trading'
+            ], stdout=open('real_forex_trading.log', 'a'), stderr=subprocess.STDOUT)
+            logging.info("✅ Forex bot RESTARTED")
+            return True
+        except Exception as e:
+            logging.error(f"❌ Failed to restart Forex bot: {e}")
+            return False
     
-    try:
-        # Check simple dashboard
-        import urllib.request
-        import urllib.error
+    def check_26_crypto_bot(self):
+        """Check 26-crypto bot"""
+        logging.info("⚡ Checking 26-crypto bot...")
+        
+        result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
+        crypto_running = 'real_26_crypto_trader.py' in result.stdout
+        
+        if not crypto_running:
+            logging.error("❌ 26-crypto bot NOT RUNNING!")
+            self.fix_26_crypto_bot()
+            return False
+        
+        # Check logs for errors
+        if os.path.exists('26_crypto_output.log'):
+            with open('26_crypto_output.log', 'r') as f:
+                content = f.read()
+                if 'ERROR' in content or 'Traceback' in content:
+                    logging.error("❌ 26-crypto bot has errors in log")
+                    self.fix_26_crypto_bot()
+                    return False
+        
+        logging.info("✅ 26-crypto bot running")
+        return True
+    
+    def fix_26_crypto_bot(self):
+        """Fix 26-crypto bot"""
+        logging.info("🔧 Fixing 26-crypto bot...")
+        
+        subprocess.run(['pkill', '-f', 'real_26_crypto_trader.py'], capture_output=True)
+        time.sleep(2)
         
         try:
-            response = urllib.request.urlopen('http://localhost:5007/api/status', timeout=5)
-            data = json.loads(response.read().decode())
-            
-            print(f"📈 Dashboard System Health: {data.get('system_health', 'unknown')}")
-            print(f"💰 Portfolio Total: ${data.get('portfolio', {}).get('total_value', 0):.2f}")
-            print(f"📉 P&L: ${data.get('portfolio', {}).get('pnl', 0):.2f}")
-            print(f"🎯 Win Rate: {data.get('trading', {}).get('win_rate', 0)}%")
-            
-            # Check if data looks realistic
-            total_value = data.get('portfolio', {}).get('total_value', 0)
-            if total_value < 100:  # Less than $100 seems wrong
-                print("⚠️  WARNING: Dashboard shows very low portfolio value (< $100)")
-                return False
+            subprocess.Popen([
+                'python3', 'real_26_crypto_trader.py'
+            ], stdout=open('26_crypto_output.log', 'a'), stderr=subprocess.STDOUT)
+            logging.info("✅ 26-crypto bot RESTARTED")
             return True
-        except urllib.error.URLError as e:
-            print(f"❌ Dashboard not accessible: {e}")
+        except Exception as e:
+            logging.error(f"❌ Failed to restart 26-crypto bot: {e}")
             return False
-    except Exception as e:
-        print(f"❌ Error checking dashboard: {e}")
-        return False
+    
+    def check_practical_profit_bot(self):
+        """Check practical profit bot"""
+        logging.info("📈 Checking practical profit bot...")
+        
+        result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
+        profit_running = 'practical_profit_bot.py' in result.stdout
+        
+        if not profit_running:
+            logging.error("❌ Practical profit bot NOT RUNNING!")
+            self.fix_practical_profit_bot()
+            return False
+        
+        # Check for Binance NOTIONAL errors
+        if os.path.exists('practical_profit_output.log'):
+            with open('practical_profit_output.log', 'r') as f:
+                lines = f.readlines()[-20:]  # Last 20 lines
+                for line in lines:
+                    if 'NOTIONAL' in line or 'Filter failure' in line:
+                        logging.error("❌ Practical profit bot has NOTIONAL error!")
+                        # Fix trade size
+                        self.fix_trade_size()
+                        return False
+        
+        logging.info("✅ Practical profit bot running")
+        return True
+    
+    def fix_practical_profit_bot(self):
+        """Fix practical profit bot"""
+        logging.info("🔧 Fixing practical profit bot...")
+        
+        subprocess.run(['pkill', '-f', 'practical_profit_bot.py'], capture_output=True)
+        time.sleep(2)
+        
+        try:
+            subprocess.Popen([
+                'python3', 'practical_profit_bot.py'
+            ], stdout=open('practical_profit_output.log', 'a'), stderr=subprocess.STDOUT)
+            logging.info("✅ Practical profit bot RESTARTED")
+            return True
+        except Exception as e:
+            logging.error(f"❌ Failed to restart practical profit bot: {e}")
+            return False
+    
+    def fix_trade_size(self):
+        """Fix trade size for Binance NOTIONAL error"""
+        logging.info("🔧 Fixing trade size (NOTIONAL error)...")
+        
+        try:
+            # Read file
+            with open('practical_profit_bot.py', 'r') as f:
+                content = f.read()
+            
+            # Update min_trade_mana to 200
+            if 'self.min_trade_mana = 50' in content:
+                content = content.replace('self.min_trade_mana = 50', 'self.min_trade_mana = 200')
+                with open('practical_profit_bot.py', 'w') as f:
+                    f.write(content)
+                logging.info("✅ Updated min_trade_mana from 50 to 200")
+                
+                # Restart bot
+                self.fix_practical_profit_bot()
+                return True
+            else:
+                logging.info("✅ Trade size already fixed (200 MANA)")
+                return True
+                
+        except Exception as e:
+            logging.error(f"❌ Failed to fix trade size: {e}")
+            return False
+    
+    def check_dashboard(self):
+        """Check dashboard"""
+        logging.info("📊 Checking dashboard...")
+        
+        try:
+            response = requests.get('http://localhost:5020', timeout=10)
+            if response.status_code == 200:
+                logging.info("✅ Dashboard running (HTTP 200)")
+                return True
+            else:
+                logging.error(f"❌ Dashboard error: HTTP {response.status_code}")
+                self.fix_dashboard()
+                return False
+        except Exception as e:
+            logging.error(f"❌ Dashboard not responding: {e}")
+            self.fix_dashboard()
+            return False
+    
+    def fix_dashboard(self):
+        """Fix dashboard"""
+        logging.info("🔧 Fixing dashboard...")
+        
+        # Kill old dashboard
+        subprocess.run(['pkill', '-f', 'arbitration_trading_dashboard.py'], capture_output=True)
+        time.sleep(2)
+        
+        # Start new one
+        try:
+            subprocess.Popen([
+                'python3', 'arbitration_trading_dashboard.py'
+            ], stdout=open('dashboard.log', 'a'), stderr=subprocess.STDOUT)
+            logging.info("✅ Dashboard RESTARTED")
+            return True
+        except Exception as e:
+            logging.error(f"❌ Failed to restart dashboard: {e}")
+            return False
+    
+    def check_exchange_apis(self):
+        """Check exchange APIs"""
+        logging.info("🌐 Checking exchange APIs...")
+        
+        exchanges = [
+            ('Binance', 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'),
+            ('Gemini', 'https://api.gemini.com/v1/pubticker/btcusd')
+        ]
+        
+        all_ok = True
+        for name, url in exchanges:
+            try:
+                response = requests.get(url, timeout=10)
+                if response.status_code == 200:
+                    logging.info(f"✅ {name} API accessible")
+                else:
+                    logging.error(f"❌ {name} API error: HTTP {response.status_code}")
+                    all_ok = False
+            except Exception as e:
+                logging.error(f"❌ {name} API failed: {e}")
+                all_ok = False
+        
+        return all_ok
+    
+    def check_arbitrage_opportunities(self):
+        """Check if arbitrage is profitable"""
+        logging.info("💰 Checking arbitrage opportunities...")
+        
+        try:
+            # Get MANA prices
+            b_resp = requests.get('https://api.binance.com/api/v3/ticker/price?symbol=MANAUSDT', timeout=10)
+            g_resp = requests.get('https://api.gemini.com/v1/pubticker/manausd', timeout=10)
+            
+            if b_resp.status_code == 200 and g_resp.status_code == 200:
+                b_price = float(b_resp.json()['price'])
+                g_price = float(g_resp.json()['last'])
+                spread = ((g_price - b_price) / b_price) * 100
+                
+                if spread > 0.5:
+                    logging.info(f"✅ ARBITRAGE PROFITABLE: {spread:.2f}% spread")
+                    logging.info(f"   Binance: ${b_price:.4f}, Gemini: ${g_price:.4f}")
+                    logging.info(f"   Profit: ${g_price-b_price:.4f} per MANA")
+                else:
+                    logging.info(f"⚠️  Arbitrage not profitable: {spread:.2f}% (need >0.5%)")
+                
+                return True
+            else:
+                logging.error("❌ Can't fetch prices for arbitrage check")
+                return False
+                
+        except Exception as e:
+            logging.error(f"❌ Error checking arbitrage: {e}")
+            return False
+    
+    def run(self):
+        """Main monitoring loop"""
+        logging.info("🚀 STARTING PROACTIVE MONITORING SYSTEM")
+        logging.info(f"⏰ Check interval: {self.check_interval} seconds")
+        logging.info("=" * 60)
+        
+        cycle = 0
+        while True:
+            cycle += 1
+            logging.info(f"\n🔄 MONITORING CYCLE #{cycle} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            logging.info("=" * 60)
+            
+            all_ok = self.check_all_systems()
+            
+            if all_ok:
+                logging.info("🎉 ALL SYSTEMS OPERATIONAL!")
+            else:
+                logging.warning("⚠️  Some systems need attention (fixes attempted)")
+            
+            # Wait for next check
+            logging.info(f"⏳ Next check in {self.check_interval} seconds...")
+            time.sleep(self.check_interval)
 
-def fix_dashboard_with_real_data(gemini_data, binance_data):
-    """Update dashboard with real data"""
-    print("\n🔧 FIXING DASHBOARD WITH REAL DATA")
-    print("="*50)
+if __name__ == '__main__':
+    monitor = ProactiveMonitor()
     
-    # Calculate realistic portfolio based on configured capital
-    gemini_capital = gemini_data.get('configured_capital', 393.22)
-    binance_capital = binance_data.get('configured_capital', 262.14)
-    total_capital = gemini_capital + binance_capital
-    
-    # Estimate current value (assuming some P&L)
-    # Using more realistic P&L based on actual trading performance
-    estimated_total = total_capital * 0.85  # Assuming 15% loss (better than 94.6%!)
-    estimated_pnl = estimated_total - total_capital
-    estimated_pnl_percent = (estimated_pnl / total_capital) * 100
-    
-    print(f"📋 Realistic estimates based on configured capital:")
-    print(f"  Gemini: ${gemini_capital:.2f}")
-    print(f"  Binance: ${binance_capital:.2f}")
-    print(f"  Total: ${total_capital:.2f}")
-    print(f"  Estimated Current: ${estimated_total:.2f}")
-    print(f"  Estimated P&L: ${estimated_pnl:.2f} ({estimated_pnl_percent:.1f}%)")
-    
-    # Update the simple dashboard cache
     try:
-        # We need to update the dashboard's data source
-        # For now, create a corrected trading_config.json
-        corrected_config = {
-            "capital": total_capital,
-            "initial_capital": 946.97,  # From earlier data
-            "current_capital": estimated_total,
-            "btc_holdings": 0.0,
-            "btc_value": 0.0,
-            "total_value": estimated_total,
-            "risk_parameters": {
-                "stop_loss": 0.05,
-                "take_profit": 0.1,
-                "max_trades_per_day": 2,
-                "max_position_size": 0.2
-            },
-            "trading_status": "ACTIVE",
-            "last_updated": datetime.now().isoformat(),
-            "notes": "PROACTIVELY UPDATED with realistic data based on configured capital"
-        }
-        
-        with open('trading_config_CORRECTED.json', 'w') as f:
-            json.dump(corrected_config, f, indent=2)
-        
-        print(f"✅ Created corrected config: trading_config_CORRECTED.json")
-        print(f"⚠️  Note: Dashboard needs to be updated to read from corrected file")
-        
+        monitor.run()
+    except KeyboardInterrupt:
+        logging.info("\n👋 Monitoring stopped by user")
     except Exception as e:
-        print(f"❌ Error fixing dashboard: {e}")
-
-def main():
-    print("="*60)
-    print("🎯 PROACTIVE MONITORING - FIXING WITH REAL DATA")
-    print("="*60)
-    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print()
-    
-    # Get actual data
-    gemini_data = get_actual_gemini_data()
-    binance_data = get_actual_binance_data()
-    
-    # Check current dashboard
-    dashboard_ok = check_dashboard_data()
-    
-    if not dashboard_ok:
-        print("\n🚨 DASHBOARD SHOWS UNREALISTIC DATA - FIXING...")
-        fix_dashboard_with_real_data(gemini_data, binance_data)
-    
-    print("\n" + "="*60)
-    print("✅ PROACTIVE ACTIONS TAKEN:")
-    print("1. Checked actual configured capital in trading bot")
-    print("2. Reviewed actual trade history")
-    print("3. Verified dashboard data quality")
-    print("4. Created corrected config with realistic estimates")
-    print()
-    print("🎯 NEXT PROACTIVE STEPS:")
-    print("1. Update dashboard to show ACTUAL trade rows")
-    print("2. Integrate real API checks (need API keys)")
-    print("3. Monitor P&L changes in real-time")
-    print("4. Alert on unrealistic data automatically")
-    print("="*60)
-
-if __name__ == "__main__":
-    main()
+        logging.error(f"❌ Monitor crashed: {e}")
+        sys.exit(1)

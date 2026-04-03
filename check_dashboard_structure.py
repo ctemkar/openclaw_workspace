@@ -1,49 +1,66 @@
 #!/usr/bin/env python3
+"""
+Check dashboard structure for clicking issue
+"""
 import requests
 
+print("🔍 CHECKING DASHBOARD STRUCTURE")
+print("=" * 60)
+
 try:
-    response = requests.get('http://localhost:5007/', timeout=5)
-    html = response.text
+    resp = requests.get('http://localhost:5020', timeout=10)
+    html = resp.text
     
-    # Find the P&L section
-    if 'P&L INFORMATION' in html:
-        start = html.find('P&L INFORMATION')
-        # Get 500 chars before and 1000 chars after
-        before = html[max(0, start-500):start]
-        after = html[start:start+1000]
-        
-        print('✅ P&L INFORMATION SECTION FOUND')
-        print('=' * 60)
-        
-        # Show what comes before P&L
-        print('\n📄 WHAT COMES BEFORE P&L:')
-        lines = before.split('\n')
-        for line in lines[-10:]:  # Last 10 lines before P&L
-            if line.strip():
-                print(f'   ...{line.strip()[:80]}')
-        
-        print('\n📊 P&L SECTION CONTENT:')
-        lines = after.split('\n')
-        for i, line in enumerate(lines[:20]):  # First 20 lines of P&L section
-            if line.strip():
-                print(f'   {line.strip()[:100]}')
-        
-        # Check if P&L is near the top
-        pnl_position = html.find('P&L INFORMATION')
-        total_length = len(html)
-        percentage = (pnl_position / total_length) * 100
-        
-        print(f'\n📍 P&L POSITION: {pnl_position:,} chars into {total_length:,} chars ({percentage:.1f}% of page)')
-        
-        if percentage < 30:
-            print('   ✅ P&L is near the top of the page')
-        elif percentage < 60:
-            print('   ⚠️ P&L is in the middle of the page')
-        else:
-            print('   ❌ P&L is near the bottom - should be moved up')
-            
+    # Look for clickable elements
+    print("\n🎯 CLICKABLE ELEMENTS FOUND:")
+    
+    # Look for onclick attributes
+    if 'onclick=' in html:
+        print("✅ Found onclick attributes")
+        # Extract some examples
+        import re
+        onclicks = re.findall(r'onclick=[\'"]([^\'"]*)[\'"]', html)
+        for i, oc in enumerate(onclicks[:5]):
+            print(f"   {i+1}. onclick: {oc[:50]}...")
     else:
-        print('❌ P&L INFORMATION section NOT found')
-        
+        print("❌ No onclick attributes found")
+    
+    # Look for JavaScript functions
+    if 'function ' in html:
+        print("✅ Found JavaScript functions")
+        funcs = re.findall(r'function\s+(\w+)\s*\(', html)
+        for i, func in enumerate(funcs[:5]):
+            print(f"   {i+1}. function: {func}()")
+    
+    # Look for card/title structure
+    print("\n🎯 CARD/TITLE STRUCTURE:")
+    # Find h2/h3 titles
+    titles = re.findall(r'<h[23][^>]*>(.*?)</h[23]>', html)
+    for i, title in enumerate(titles[:10]):
+        print(f"   {i+1}. Title: {title.strip()}")
+    
+    # Look for expand/collapse functionality
+    if 'expand' in html.lower() or 'collapse' in html.lower() or 'toggle' in html.lower():
+        print("\n✅ Found expand/collapse/toggle functionality")
+    else:
+        print("\n❌ No expand/collapse functionality found")
+    
+    # Check if there's supposed to be clicking on titles
+    print("\n🎯 WHAT 'CLICKING ON TITLE' MIGHT MEAN:")
+    print("   1. Titles should expand/collapse details")
+    print("   2. Clicking should show more information")
+    print("   3. Might be broken JavaScript")
+    
+    # Check JavaScript errors
+    print("\n🔧 POSSIBLE FIXES:")
+    print("   1. Check browser console for JavaScript errors")
+    print("   2. Look for missing JavaScript functions")
+    print("   3. Check if event listeners are attached")
+    
 except Exception as e:
-    print(f'❌ Error: {e}')
+    print(f"❌ Error: {e}")
+
+print("\n📱 TO TEST: Open browser, go to http://localhost:5020")
+print("   Press F12 → Console tab")
+print("   Click on a title")
+print("   See if JavaScript errors appear")

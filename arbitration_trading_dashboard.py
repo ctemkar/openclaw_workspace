@@ -269,9 +269,14 @@ def dashboard():
             .header h1 { margin: 0; color: #60a5fa; font-size: 2.5em; }
             .header p { margin: 10px 0 0; color: #94a3b8; }
             .card { background: #1e293b; padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid #3b82f6; }
-            .card h2 { margin-top: 0; color: #60a5fa; border-bottom: 2px solid #334155; padding-bottom: 10px; }
+            .card h2 { margin-top: 0; color: #60a5fa; border-bottom: 2px solid #334155; padding-bottom: 10px; cursor: pointer; }
+            .card h2:hover { color: #93c5fd; }
             .systems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-            .system-card { background: #334155; padding: 15px; border-radius: 8px; }
+            .system-card { background: #334155; padding: 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+            .system-card:hover { background: #475569; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+            .system-card.expanded { background: #475569; padding: 20px; }
+            .system-details { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #4b5563; }
+            .system-card.expanded .system-details { display: block; }
             .system-name { font-weight: bold; font-size: 1.2em; color: #f8fafc; margin-bottom: 5px; }
             .system-status { margin: 10px 0; }
             .running { color: #10b981; font-weight: bold; }
@@ -290,6 +295,53 @@ def dashboard():
             function refreshDashboard() {
                 location.reload();
             }
+            
+            // Toggle system card details
+            function toggleSystemDetails(card) {
+                card.classList.toggle('expanded');
+                const details = card.querySelector('.system-details');
+                if (details) {
+                    if (card.classList.contains('expanded')) {
+                        details.style.display = 'block';
+                        // Add more details dynamically
+                        const systemName = card.querySelector('.system-name').textContent;
+                        details.innerHTML += `<div style="margin-top: 10px; color: #94a3b8;">
+                            <strong>Click Actions:</strong><br>
+                            • View detailed logs<br>
+                            • Restart system<br>
+                            • Check recent trades<br>
+                            • Monitor performance
+                        </div>`;
+                    } else {
+                        details.style.display = 'none';
+                    }
+                }
+            }
+            
+            // Add click handlers to all system cards
+            document.addEventListener('DOMContentLoaded', function() {
+                const systemCards = document.querySelectorAll('.system-card');
+                systemCards.forEach(card => {
+                    card.addEventListener('click', function() {
+                        toggleSystemDetails(this);
+                    });
+                });
+                
+                // Add click handlers to card headers
+                const cardHeaders = document.querySelectorAll('.card h2');
+                cardHeaders.forEach(header => {
+                    header.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const systemsGrid = card.querySelector('.systems-grid');
+                        if (systemsGrid) {
+                            systemsGrid.style.display = systemsGrid.style.display === 'none' ? 'grid' : 'none';
+                        }
+                    });
+                });
+                
+                updateCountdown();
+            });
+            
             // Auto-refresh every 5 minutes (300,000 ms)
             setTimeout(function() {
                 location.reload();
@@ -312,7 +364,6 @@ def dashboard():
                     }, 1000);
                 }
             }
-            document.addEventListener('DOMContentLoaded', updateCountdown);
         </script>
     </head>
     <body>
@@ -372,6 +423,20 @@ def dashboard():
                         {% endif %}
                         <div style="margin-top: 10px; font-size: 0.9em; color: #64748b;">
                             File: {{ system.file }}
+                        </div>
+                        <div class="system-details" style="display: none;">
+                            <div style="margin-top: 10px; padding: 10px; background: #475569; border-radius: 5px;">
+                                <strong>System Details:</strong><br>
+                                • Status: {{ system.status }}<br>
+                                • Last active: {{ system.get('last_active', 'Unknown') }}<br>
+                                • File: {{ system.file }}<br>
+                                {% if system.get('pid') %}
+                                • PID: {{ system.pid }}<br>
+                                {% endif %}
+                                <button onclick="alert('Would restart {{ system.name }}')" style="margin-top: 10px; padding: 5px 10px; background: #3b82f6; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                                    🔄 Restart
+                                </button>
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
