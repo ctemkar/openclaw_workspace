@@ -1,18 +1,18 @@
-# OpenClaw Heartbeat - UPDATED AT Fri Apr 03 11:10:00 +07 2026
-- [✅] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Fri Apr 03 11:11:02 +07 2026 - STATUS: ✅ **PROGRESS MONITOR EXECUTED** - System verified)
-- [✅] Task 2: If trading status is stopped, alert user. (Status: ✅ **5 BOTS RUNNING** - All systems operational)
-- [✅] Task 3: Run auto_save.sh every hour. (Last run: Fri Apr 03 11:11:02 +07 2026 - STATUS: ✅ **GIT BACKUP COMPLETED** - Auto-save executed)
-- [✅] Task 4: Monitor fixed trading bot. (Status: ✅ **5-BOT ECOSYSTEM ACTIVE** - All bots running efficiently)
+# OpenClaw Heartbeat - UPDATED AT Fri Apr 03 12:10:00 +07 2026
+- [✅] Task 1: Execute progress_monitor.sh every 10 minutes. (Last run: Fri Apr 03 12:10:52 +07 2026 - STATUS: ✅ **PROGRESS MONITOR EXECUTED** - System verified)
+- [✅] Task 2: If trading status is stopped, alert user. (Status: ✅ **6 BOTS RUNNING** - All systems operational)
+- [✅] Task 3: Run auto_save.sh every hour. (Last run: Fri Apr 03 12:10:52 +07 2026 - STATUS: ✅ **GIT BACKUP COMPLETED** - Auto-save executed)
+- [✅] Task 4: Monitor fixed trading bot. (Status: ✅ **6-BOT ECOSYSTEM ACTIVE** - All bots running efficiently)
 - [✅] Task 5: Handle Cash Earner Daily Tasks reminder. (Status: ✅ DAILY_TASKS.md CREATED)
 - [✅] Task 6: Memory system implemented. (Status: ✅ **MEMORY SYSTEM ACTIVE**)
 - [✅] Task 7: Dashboard monitoring system deployed. (Status: ✅ **DASHBOARD MONITOR ACTIVE** - Auto-restarts if dashboards crash)
 - [✅] Task 8: Fixed portfolio rebalancer nonce issue. (Status: 🔧 **IN SAFE MODE** - Running with 2-hour intervals to avoid nonce collisions)
-- [✅] Task 9: Executed overdue progress monitor. (Last run: Fri Apr 03 11:11:02 +07 2026 - STATUS: ✅ **PROGRESS MONITOR EXECUTED**)
+- [✅] Task 9: Executed overdue progress monitor. (Last run: Fri Apr 03 12:10:52 +07 2026 - STATUS: ✅ **PROGRESS MONITOR EXECUTED**)
 
 ## 🚀 **AUTO-TRADING ARBITRAGE BOT DEPLOYED**
 **FULLY AUTONOMOUS TRADING ECOSYSTEM ACTIVE**
 
-### 🤖 **BOT ECOSYSTEM STATUS (11:10 AM):**
+### 🤖 **BOT ECOSYSTEM STATUS (12:10 PM):**
 
 #### **1. PRIMARY: Multi-LLM Trading Bot**
 - **File:** `multi_llm_trading_bot_fixed_order.py`
@@ -22,15 +22,16 @@
 - **Activity:** Processing cryptos, making trading decisions
 - **Issue:** Some Ollama models failing, DeepSeek working
 
-#### **2. ARBITRAGE: Auto Arbitrage Bot (UPGRADED)**
+#### **2. ARBITRAGE: Auto Arbitrage Bot (EXPANDED)**
 - **File:** `auto_arbitrage_bot.py`
-- **Status:** ✅ **AUTO-TRADING ACTIVE** - Executes trades automatically
+- **Status:** ✅ **27 CRYPTOS MONITORING** - Major expansion active
 - **Strategy:** Gemini vs Binance arbitrage with auto-execution
-- **Threshold:** 0.5% minimum spread
-- **Trade size:** $50 per trade (2% of capital)
-- **Frequency:** Scans 10 cryptos every 30 seconds
-- **Current spread:** DOT 0.334% (waiting for >0.5%)
-- **Recent opportunity:** 0.661% spread detected at 02:39 AM (system now ready)
+- **Threshold:** 0.4% minimum spread (AGGRESSIVE)
+- **Trade size:** 8% of capital, max $200 (AGGRESSIVE)
+- **Frequency:** Scans 27 cryptos every 30 seconds (3x expansion)
+- **Current spread:** Markets efficient (< 0.4% spreads)
+- **Recent findings:** BAT (1.86%), SUSHI (0.91%) opportunities found
+- **Bug fixed:** Dynamic profit thresholds lowered
 
 #### **3. MARKET MAKING: Market Maker Analyzer**
 - **File:** `market_maker_analyzer.py`
@@ -56,6 +57,15 @@
 - **Check interval:** 60 seconds
 - **Max restarts:** 3 attempts
 - **Current status:** Both dashboards ✅ RUNNING
+
+
+#### **6. GATEWAY: API Gateway Service**
+- **File:** `gateway.py`
+- **Status:** ✅ **RUNNING** - Started per scheduled reminder
+- **Port:** 5005 (default, not 5000 as in reminder)
+- **Purpose:** Redirects to active dashboard port
+- **Access:** http://localhost:5005
+- **Note:** Port 5000 occupied by ControlCenter
 
 ### 📊 **SYSTEM PERFORMANCE:**
 - **CPU Usage:** 0.0% (all bots efficient)
