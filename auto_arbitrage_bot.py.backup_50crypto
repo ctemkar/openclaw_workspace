@@ -30,11 +30,11 @@ CONFIG_FILE = os.path.join(BASE_DIR, 'config', 'api_keys.json')
 
 # Cryptos to monitor (liquid pairs on both exchanges)
 # Expanded from 10 to 15 cryptos for more opportunities
-CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'BAT', 'SUSHI', 'CRV', 'SHIB', 'BCH', 'PEPE', 'WIF', 'BONK', 'FLOKI', 'INJ', 'MATIC', 'BNB', 'TRX', 'ETC', 'ALGO', 'NEAR', 'MKR', 'SNX', 'ZRX', 'ENJ', '1INCH', 'UMA', 'MEME', 'ARB', 'OP', 'IMX', 'METIS', 'RNDR', 'FET', 'AGIX', 'OCEAN', 'SAND', 'MANA', 'AXS', 'GALA', 'EOS', 'XLM', 'VET', 'THETA']  # 56 cryptos (removed unsupported on Gemini)  # 50 cryptos for maximum arbitrage opportunities  # 27 supported cryptos (removed unsupported)  # 34 cryptos for maximum arbitrage coverage
+CRYPTOS = ['BTC', 'ETH', 'SOL', 'XRP', 'DOT', 'DOGE', 'AVAX', 'LINK', 'UNI', 'LTC', 'ATOM', 'FIL', 'XTZ', 'AAVE', 'COMP', 'YFI', 'BAT', 'SUSHI', 'CRV', 'SHIB', 'BCH', 'PEPE', 'WIF', 'BONK', 'FLOKI', 'INJ']  # 27 supported cryptos (removed unsupported)  # 34 cryptos for maximum arbitrage coverage
 
 # Trading parameters
 MIN_SPREAD_PERCENT = 0.4      # 0.5% minimum spread to trade
-MIN_PROFIT_AMOUNT = 0.15  # Lowered to make 0.4% spreads profitable       # Minimum $0.25 profit after fees
+MIN_PROFIT_AMOUNT = 0.25       # Minimum $0.25 profit after fees
 TRADE_SIZE_PERCENT = 0.08     # 8% of available capital per trade (AGGRESSIVE)
 MAX_TRADE_SIZE = 200.0        # Maximum $200 per trade (AGGRESSIVE)
 
