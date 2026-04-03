@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Krishna: The Divine Guide in 60 Seconds",
+    "type": "character",
+    "script_hook": "Who was Krishna? More than just a god - the ultimate life coach!",
+    "duration": "60 seconds"
+  },
+  {
+    "title": "Bhagavad Gita Summary for Beginners",
+    "type": "story",
+    "script_hook": "The world's most profound conversation happened on a battlefield...",
+    "duration": "55 seconds"
+  },
+  {
+    "title": "Leadership Lessons from Yudhishthira",
+    "type": "lesson",
+    "script_hook": "How to lead with truth in a world of lies...",
+    "duration": "50 seconds"
+  }
+]

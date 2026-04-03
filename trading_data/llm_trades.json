@@ -1,0 +1,25 @@
+[
+  {
+    "exchange": "binance",
+    "symbol": "DOT/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 1.257,
+    "amount": 7.9554494828957845,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "DOT",
+      "buy_score": 4.9,
+      "sell_score": 1.5,
+      "confidence": 7.5,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: DOT price is increasing by 2.53% in the last 24 hours, indicating a possible short-term upward trend. However, its current price of $1.26 suggests it may be overvalued compared to other cryptocurrencies.",
+        "llama3: The stock has shown a strong upward trend with a moderate gain of +2.53% in the past 24 hours. Although the price is still relatively low at $1.26, the positive momentum suggests a potential uptrend."
+      ],
+      "signal": "STRONG_BUY"
+    },
+    "order_id": "6076758704",
+    "timestamp": "2026-04-03T22:09:12.641298"
+  }
+]

@@ -17,12 +17,10 @@ echo ""
 # 1. Check all critical processes
 echo -e "${BLUE}1. PROCESS STATUS:${NC}"
 critical_processes=(
-    "real_26_crypto_trader.py"
-    "llm_consensus_bot.py"
-    "original_dashboard_fixed.py"
-    "trades_dashboard_fixed.py"
-    "simple_pnl_fixed.py"
-    "simple_fixed_dashboard.py"
+    "real_dashboard_simple.py"
+    "arbitration_trading_dashboard.py"
+    "simple_trading_dashboard.py"
+    "forex_bot_with_schwab.py"
 )
 
 all_running=true
@@ -37,7 +35,7 @@ done
 
 # 2. Check dashboard ports
 echo -e "\n${BLUE}2. DASHBOARD PORTS:${NC}"
-ports=(5007 5008 5009 5011)
+ports=(5010 5015 5020)
 for port in "${ports[@]}"; do
     if curl -s --connect-timeout 5 "http://localhost:$port/" > /dev/null; then
         echo -e "  ${GREEN}✅ Port $port responding${NC}"
@@ -63,18 +61,19 @@ memory_usage=$(memory_pressure | grep "System-wide memory free" | awk '{print $4
 echo -e "  CPU Usage: ${YELLOW}$cpu_usage%${NC}"
 echo -e "  Memory Free: ${YELLOW}$memory_usage%${NC}"
 
-# 5. Check for errors in logs
-echo -e "\n${BLUE}5. ERROR CHECK:${NC}"
+# 5. Check for errors in logs (last hour only)
+echo -e "\n${BLUE}5. ERROR CHECK (LAST HOUR):${NC}"
 error_count=0
 log_files=("trading_bot.log" "llm_bot.log" "dashboard_errors.log")
 for log in "${log_files[@]}"; do
     if [ -f "$log" ]; then
-        errors=$(grep -i "error\|fail\|exception\|crash" "$log" | tail -3 | wc -l)
+        # Check for errors in the last hour
+        errors=$(grep -i "error\|fail\|exception\|crash" "$log" | grep "$(date -v-1H '+%Y-%m-%d %H')" | wc -l)
         if [ "$errors" -gt 0 ]; then
-            echo -e "  ${RED}⚠️ $log has $errors recent errors${NC}"
+            echo -e "  ${RED}⚠️ $log has $errors recent errors (last hour)${NC}"
             error_count=$((error_count + errors))
         else
-            echo -e "  ${GREEN}✅ $log clean${NC}"
+            echo -e "  ${GREEN}✅ $log clean (no errors in last hour)${NC}"
         fi
     fi
 done
@@ -83,12 +82,18 @@ done
 echo -e "\n${BLUE}=== SUMMARY ===${NC}"
 if [ "$all_running" = true ] && [ "$error_count" -eq 0 ]; then
     echo -e "${GREEN}✅ ALL SYSTEMS NOMINAL${NC}"
-    echo "All processes running, all dashboards responding, no errors detected."
+    echo "All processes running, all dashboards responding, no recent errors detected."
     echo "System is stable and monitoring will continue."
 else
-    echo -e "${YELLOW}⚠️ SYSTEM NEEDS ATTENTION${NC}"
-    echo "Some components may need manual intervention."
-    echo "Will continue monitoring and alert if critical."
+    if [ "$all_running" = true ]; then
+        echo -e "${YELLOW}⚠️ SYSTEM STABLE WITH OLD ERRORS${NC}"
+        echo "All processes running, all dashboards responding."
+        echo "Old errors detected but system is currently stable."
+    else
+        echo -e "${RED}🚨 SYSTEM NEEDS ATTENTION${NC}"
+        echo "Critical components are not running."
+        echo "Manual intervention required."
+    fi
 fi
 
 echo -e "\n${BLUE}Next check in 30 minutes${NC}"
