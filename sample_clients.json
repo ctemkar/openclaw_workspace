@@ -1,0 +1,26 @@
+[
+  {
+    "name": "TechStart Inc.",
+    "join_date": "2026-04-03T21:11:22.577555",
+    "total_spent": 450.0,
+    "order_count": 3,
+    "last_order": "2026-04-03T21:11:22.577562",
+    "status": "active"
+  },
+  {
+    "name": "EcoStore Online",
+    "join_date": "2026-04-03T21:11:22.577563",
+    "total_spent": 280.0,
+    "order_count": 2,
+    "last_order": "2026-04-03T21:11:22.577564",
+    "status": "active"
+  },
+  {
+    "name": "HealthFit Blog",
+    "join_date": "2026-04-03T21:11:22.577565",
+    "total_spent": 120.0,
+    "order_count": 1,
+    "last_order": "2026-04-03T21:11:22.577566",
+    "status": "active"
+  }
+]

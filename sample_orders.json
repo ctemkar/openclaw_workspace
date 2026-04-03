@@ -1,0 +1,83 @@
+[
+  {
+    "order_id": "ORD20240403001",
+    "client_name": "TechStart Inc.",
+    "content_type": "blog_post",
+    "content_name": "Blog Post",
+    "details": {
+      "words": 1000,
+      "topic": "AI in Business",
+      "platform": "upwork"
+    },
+    "price": 100.0,
+    "status": "completed",
+    "created_date": "2026-04-03T21:11:22.577786",
+    "delivery_date": "2026-04-03T21:11:22.577787",
+    "content_idea": {
+      "title": "How AI is Transforming Small Businesses in 2024",
+      "description": "A blog post that SEO-optimized blog article with headings, keywords, and call-to-action",
+      "tags": [
+        "blog post",
+        "AI in Business",
+        "AI generated",
+        "professional"
+      ]
+    },
+    "platform": "upwork",
+    "notes": "Client requested 2 revisions"
+  },
+  {
+    "order_id": "ORD20240403002",
+    "client_name": "EcoStore Online",
+    "content_type": "product_description",
+    "content_name": "Product Description",
+    "details": {
+      "descriptions": 15,
+      "topic": "Eco-friendly Products",
+      "platform": "fiverr"
+    },
+    "price": 120.0,
+    "status": "completed",
+    "created_date": "2026-04-03T21:11:22.577789",
+    "delivery_date": "2026-04-03T21:11:22.577790",
+    "content_idea": {
+      "title": "Sustainable Bamboo Toothbrush - Eco Oral Care",
+      "description": "A product description that Compelling product descriptions for e-commerce websites",
+      "tags": [
+        "product description",
+        "Eco-friendly Products",
+        "AI generated",
+        "professional"
+      ]
+    },
+    "platform": "fiverr",
+    "notes": "Bulk order for 15 products"
+  },
+  {
+    "order_id": "ORD20240403003",
+    "client_name": "HealthFit Blog",
+    "content_type": "social_media",
+    "content_name": "Social Media Post",
+    "details": {
+      "posts": 10,
+      "topic": "Fitness Tips",
+      "platform": "direct"
+    },
+    "price": 150.0,
+    "status": "pending",
+    "created_date": "2026-04-03T21:11:22.577791",
+    "delivery_date": "2026-04-05T21:11:22.577791",
+    "content_idea": {
+      "title": "\ud83d\udcaa 5 Morning Exercises That Will Transform Your Day",
+      "description": "A social media post that Engaging social media posts for Instagram, Twitter, LinkedIn, Facebook",
+      "tags": [
+        "social media",
+        "Fitness Tips",
+        "AI generated",
+        "professional"
+      ]
+    },
+    "platform": "direct",
+    "notes": "Weekly social media package"
+  }
+]
