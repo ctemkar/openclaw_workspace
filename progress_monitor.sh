@@ -1,98 +1,54 @@
-#!/bin/zsh
-PORT_FILE="/Users/chetantemkar/.openclaw/workspace/app/.active_port"
-LOG_FILE="/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log"
+#!/bin/bash
+echo "=== PROGRESS MONITOR - $(date '+%Y-%m-%d %H:%M:%S %Z') ==="
+echo ""
 
-if [ -f "$LOG_FILE" ]; then
-    tail -n 100 "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
+# Check if practical profit bot is running
+if ps aux | grep -v grep | grep -q "practical_profit_bot.py"; then
+    BOT_PID=$(ps aux | grep "practical_profit_bot.py" | grep -v grep | awk '{print $2}')
+    echo "✅ PRACTICAL PROFIT BOT RUNNING (PID: $BOT_PID)"
+else
+    echo "❌ PRACTICAL PROFIT BOT NOT RUNNING"
 fi
 
-echo "--- Progress Monitor: $(date) ---"
-
-if [ -f "$PORT_FILE" ]; then
-    CURRENT_PORT=$(cat "$PORT_FILE")
-    echo "Click to open REAL-TIME Dashboard:"
-    echo "http://127.0.0.1:$CURRENT_PORT"
-    echo "(Auto-refreshes every 10 seconds)"
+# Check latest profits
+if [ -f "practical_profits.log" ]; then
     echo ""
+    echo "📊 LATEST PROFITS:"
+    tail -5 practical_profits.log
+fi
+
+# Check current MANA spread
+echo ""
+echo "🔍 CURRENT MARKET STATUS:"
+python3 << 'PYEOF'
+import ccxt
+try:
+    binance = ccxt.binance({'enableRateLimit': True})
+    gemini = ccxt.gemini({'enableRateLimit': True})
     
-    if ! curl -s "http://127.0.0.1:$CURRENT_PORT" > /dev/null; then
-        echo "STATUS: [WARN] API is DOWN"
-    else
-        echo "STATUS: [OK] API is UP"
-    fi
-else
-    echo "STATUS: [ERROR] Port file missing"
-fi
+    binance_price = binance.fetch_ticker('MANA/USDT')['last']
+    gemini_price = gemini.fetch_ticker('MANA/USD')['last']
+    
+    spread = ((gemini_price - binance_price) / binance_price) * 100
+    
+    print(f"MANA Spread: {abs(spread):.2f}%")
+    print(f"Binance: ${binance_price:.4f}")
+    print(f"Gemini: ${gemini_price:.4f}")
+    
+    if abs(spread) >= 0.5:
+        profit_30 = 30 * (abs(spread)/100) - 0.06
+        print(f"💰 Potential profit (if Gemini worked): ${profit_30:.2f}")
+    else:
+        print("⏳ Spread too small for arbitrage")
+        
+except Exception as e:
+    print(f"Error: {e}")
+PYEOF
 
-# Check for actual running trading bots
-BOTS_RUNNING=0
-BOT_LIST=""
+# Check system resources
+echo ""
+echo "💻 SYSTEM RESOURCES:"
+ps aux | grep "practical_profit" | grep -v grep | awk '{print "   CPU: "$3"%, MEM: "$4"%, PID: "$2}'
 
-# Check for current 26-crypto bot (FIXED VERSION)
-if ps aux | grep -v grep | grep "real_26_crypto_trader_fixed.py" > /dev/null; then
-    BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST real_26_crypto_trader_fixed.py"
-fi
-
-# Check for Gemini-only bot (CURRENT STRATEGY)
-if ps aux | grep -v grep | grep "gemini_only_trader.py" > /dev/null; then
-    BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST gemini_only_trader.py"
-fi
-
-# Check for Unified LLM bot (NEW STRATEGY)
-if ps aux | grep -v grep | grep "unified_llm_trader.py" > /dev/null; then
-    BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST unified_llm_trader.py"
-fi
-
-# Check for Enhanced LLM bot (LATEST STRATEGY)
-if ps aux | grep -v grep | grep "enhanced_llm_trader.py" > /dev/null; then
-    BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST enhanced_llm_trader.py"
-fi
-
-# Check for old bots (should not be running)
-if ps aux | grep -v grep | grep -E "(fixed_bot_common|full_capital_bot|simple_real_trader|real_futures_trading_bot|fixed_futures_bot|enhanced_26_crypto)" > /dev/null; then
-    BOTS_RUNNING=$((BOTS_RUNNING + 1))
-    BOT_LIST="$BOT_LIST (OLD_BOT_STILL_RUNNING)"
-fi
-
-if [ $BOTS_RUNNING -eq 0 ]; then
-    echo "BOT: [CRITICAL] NO TRADING BOTS RUNNING"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"real_26_crypto_trader_fixed.py"* ]]; then
-    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
-    echo "   Strategy: 26-CRYPTO AGGRESSIVE (Gemini LONG, Binance SHORT)"
-    echo "   Mode: AGGRESSIVE - 5% position size (reduced due to margin)"
-    echo "   Capital: $393 Gemini LONG, $262 Binance SHORT"
-    echo "   Status: FIXED VERSION - Prevents simultaneous LONG/SHORT"
-    echo "   Hedge prevention: Active (skipping BTC, ETH, SOL, XRP, LINK)"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"gemini_only_trader.py"* ]]; then
-    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
-    echo "   Strategy: GEMINI-ONLY CONSERVATIVE"
-    echo "   Mode: CONSERVATIVE - 1.5% drop threshold, one trade per cycle"
-    echo "   Capital: $563 USD available on Gemini"
-    echo "   Status: ACTIVE - No Binance trading (geographic restrictions)"
-    echo "   P&L: -$14.29 total (ETH -$12.31, SOL -$1.98)"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"unified_llm_trader.py"* ]]; then
-    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
-    echo "   Strategy: UNIFIED LLM-POWERED TRADING"
-    echo "   Mode: Rule-based + LLM with aggressive overrides"
-    echo "   Capital: $492.93 USD available on Gemini"
-    echo "   Status: ACTIVE - Overriding LLM for drops >3%"
-    echo "   LLM Models: deepseek-r1, qwen3, mistral"
-    echo "   Market: BEARISH - Buying dips during correction"
-elif [ $BOTS_RUNNING -eq 1 ] && [[ "$BOT_LIST" == *"enhanced_llm_trader.py"* ]]; then
-    echo "BOT: [OK] 1 BOT RUNNING:${BOT_LIST}"
-    echo "   Strategy: ENHANCED LLM-POWERED TRADING"
-    echo "   Mode: Real market data + LLM + override logic"
-    echo "   Capital: $492.93 USD available on Gemini"
-    echo "   Status: ACTIVE - Scanning 12 cryptos, override >2.5% drops"
-    echo "   LLM Models: deepseek-r1, qwen3, mistral (3s timeout)"
-    echo "   Market: BEARISH - Cryptos down 3-8% (buying opportunity)"
-elif [[ "$BOT_LIST" == *"OLD_BOT_STILL_RUNNING"* ]]; then
-    echo "BOT: [WARN] $BOTS_RUNNING BOTS RUNNING:${BOT_LIST}"
-    echo "   Old bots still running - may conflict"
-else
-    echo "BOT: [UNKNOWN] $BOTS_RUNNING BOTS:${BOT_LIST}"
-fi
+echo ""
+echo "✅ PROGRESS MONITOR COMPLETED AT $(date '+%H:%M:%S')"
