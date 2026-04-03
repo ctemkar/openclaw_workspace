@@ -367,7 +367,11 @@ def dashboard():
         html += f'''
                 <div class="system-card">
                     <div class="system-header">
-                        <div class="system-name">{bot['name']}</div>
+                        <a href="/bot_details.html?bot={bot['id']}" target="_blank" style="text-decoration: none; color: inherit;">
+                            <div class="system-name" style="cursor: pointer; color: #60a5fa;">
+                                {bot['name']} <span style="font-size: 0.8em; color: #94a3b8;">↗</span>
+                            </div>
+                        </a>
                         <div class="system-status {'status-running' if is_running else 'status-stopped'}">
                             {bot['status']} {f"(PID: {bot['pid']})" if bot['pid'] else ''}
                         </div>
@@ -519,6 +523,65 @@ def get_all_activity():
     """API endpoint to get all bot activities"""
     update_bot_activities()
     return jsonify(BOTS)
+
+@app.route('/api/bot/<bot_id>/status')
+def get_bot_status(bot_id):
+    """API endpoint for control UI to get bot real-time status"""
+    update_bot_activities()
+    for bot in BOTS:
+        if bot['id'] == bot_id:
+            # Format response for control UI
+            return jsonify({
+                'id': bot['id'],
+                'name': bot['name'],
+                'status': bot['status'],
+                'pid': bot['pid'],
+                'activity': bot['activity'],
+                'last_action': bot['last_action'],
+                'real_time': True,
+                'timestamp': datetime.now().isoformat()
+            })
+    return jsonify({'error': 'Bot not found'}), 404
+
+@app.route('/api/bots/summary')
+def get_bots_summary():
+    """API endpoint for control UI to get all bots summary"""
+    update_bot_activities()
+    summary = []
+    for bot in BOTS:
+        summary.append({
+            'id': bot['id'],
+            'name': bot['name'],
+            'status': bot['status'],
+            'pid': bot['pid'],
+            'activity': bot['activity'][:50] + '...' if len(bot['activity']) > 50 else bot['activity']
+        })
+    return jsonify(summary)
+
+@app.route('/bot_details.html')
+def bot_details_page():
+    """Serve the bot details HTML page"""
+    bot_id = request.args.get('bot', 'forex')
+    
+    # Read the HTML file
+    try:
+        with open('bot_details.html', 'r') as f:
+            html_content = f.read()
+        
+        # Update the page title with bot name
+        update_bot_activities()
+        bot_name = 'Unknown Bot'
+        for bot in BOTS:
+            if bot['id'] == bot_id:
+                bot_name = bot['name']
+                break
+        
+        html_content = html_content.replace('<title>Bot Real-Time Details</title>', 
+                                           f'<title>Real-Time: {bot_name}</title>')
+        
+        return html_content
+    except FileNotFoundError:
+        return 'Bot details page not found. Please check if bot_details.html exists.', 404
 
 if __name__ == '__main__':
     print("🎯 Starting Live Activity Trading Dashboard...")

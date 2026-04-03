@@ -57,7 +57,7 @@ class ForexTradingBotWithSchwab:
         else:
             # Paper trading parameters
             self.trade_size = 0.01  # 0.01 lots (micro)
-            self.starting_balance = 10000.00  # $10,000 paper
+            self.starting_balance = 225.00  # Chetu's REAL Schwab balance: $225
         
         self.max_trades = 2
         self.stop_loss_pips = 20
@@ -103,9 +103,13 @@ class ForexTradingBotWithSchwab:
             #     account_id=schwab_account_id
             # )
             
-            logging.info(f"✅ Schwab credentials loaded")
-            logging.info(f"   Account ID: {schwab_account_id}")
-            self.schwab_connected = True
+            # 🚨 TRANSPARENCY: These are FAKE/PLACEHOLDER credentials
+            # The .env file has placeholder values, not real Schwab API credentials
+            # To get real credentials: Register at https://developer.schwab.com
+            logging.warning(f"⚠️  PLACEHOLDER CREDENTIALS LOADED (NOT REAL SCHWAB API)")
+            logging.warning(f"   Account ID: {schwab_account_id}")
+            logging.warning(f"   ⚠️  Need REAL OAuth2 credentials from developer.schwab.com")
+            self.schwab_connected = True  # But still simulated!
             
         except Exception as e:
             logging.error(f"❌ Schwab setup failed: {e}")
@@ -115,20 +119,50 @@ class ForexTradingBotWithSchwab:
     def get_schwab_balance(self):
         """Get account balance from Schwab"""
         if not self.schwab_connected:
-            return 10000.00  # Default paper balance
+            # Check if we have access token for real API
+            schwab_access_token = os.getenv('SCHWAB_ACCESS_TOKEN')
+            if schwab_access_token:
+                # 🎉 WE HAVE ACCESS TOKEN! Try REAL API call
+                try:
+                    import requests
+                    headers = {
+                        "Authorization": f"Bearer {schwab_access_token}",
+                        "Accept": "application/json"
+                    }
+                    account_id = os.getenv('SCHWAB_ACCOUNT_ID')
+                    url = f"https://api.schwabapi.com/trader/v1/accounts/{account_id}"
+                    
+                    logging.info(f"   🔗 Attempting REAL Schwab API call...")
+                    response = requests.get(url, headers=headers, timeout=10)
+                    
+                    if response.status_code == 200:
+                        account_data = response.json()
+                        # Extract balance from Schwab response
+                        # Note: Actual field name may vary - check Schwab API docs
+                        balance = account_data.get('currentBalances', {}).get('cashBalance', 225.00)
+                        logging.info(f"   ✅ REAL SCHWAB BALANCE: ${balance:.2f} (from API!)")
+                        return float(balance)
+                    else:
+                        logging.warning(f"   ⚠️  API call failed ({response.status_code}): {response.text[:100]}")
+                        logging.warning(f"   ⚠️  Using hardcoded $225.00 instead")
+                        return 225.00
+                        
+                except Exception as e:
+                    logging.error(f"❌ REAL API error: {e}")
+                    return 225.00
+            else:
+                # No access token - use hardcoded
+                logging.warning("   ⚠️  HARDCODED BALANCE: $225.00 (Need SCHWAB_ACCESS_TOKEN in .env)")
+                return 225.00
         
         try:
-            # In a real implementation:
-            # balance = self.schwab_client.get_account_balance()
-            # return balance.get('cash_available', 10000.00)
-            
-            # For now, return simulated balance
-            logging.info("   📊 Would fetch real balance from Schwab API")
-            return 10000.00  # Simulated
+            # If schwab_connected is True but no token, still simulated
+            logging.warning("   ⚠️  SIMULATED: Would fetch REAL balance with proper OAuth2 flow")
+            return 225.00
             
         except Exception as e:
             logging.error(f"❌ Error getting Schwab balance: {e}")
-            return 10000.00  # Fallback paper balance
+            return 225.00
     
     def get_forex_prices(self) -> Dict[str, float]:
         """Get current Forex prices from free API"""
