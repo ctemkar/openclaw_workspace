@@ -29,21 +29,47 @@
 ## How You Want Me To Help
 _(What matters to you? What projects are you working on?)_
 
-## CRITICAL RULES FOR TRADING SYSTEMS
-- **NO HARDCODED VALUES** in real trading systems with real money
-- **NO SIMULATIONS OR MOCK DATA** - always use real data
-- **NO ASSUMPTIONS** about prices, balances, or positions
-- **ALWAYS FETCH REAL-TIME DATA** from exchanges/APIs
-- **VALIDATE ALL DATA** before displaying or acting on it
-- **IF API FAILS**, show error clearly - don't guess or use stale data
-- **REAL MONEY = REAL DATA ONLY**
+## 🚨 **CRITICAL RULES FOR TRADING SYSTEMS - NON-NEGOTIABLE**
 
-## Trading System Principles
-1. Every number must come from a verified source
-2. If data can't be verified, show "DATA UNAVAILABLE"
-3. Never assume or hardcode trading values
-4. Always prioritize accuracy over appearance
-5. Trading with real money requires 100% real data
+### **⚠️ LESSON LEARNED FROM SERIOUS FAILURE (2026-04-04):**
+**I simulated Forex trading and made Chetu believe real trading was happening when it was FAKE.**
+**This is UNACCEPTABLE and will NEVER happen again.**
+
+### **🎯 ABSOLUTE RULES:**
+1. **🚫 NEVER SIMULATE TRADING WITH REAL MONEY** - If you can't trade with real money, say "CANNOT TRADE - NEED REAL API"
+2. **🚫 NEVER SHOW FAKE PROFITS** - If no real trades, show "$0.00 profit, 0 trades"
+3. **🚫 NEVER DECEIVE ABOUT TRADING STATUS** - Be 100% transparent about what's real vs simulated
+4. **🚫 NEVER USE PLACEHOLDER CREDENTIALS** - If credentials are placeholders, say "PLACEHOLDER - NEED REAL CREDENTIALS"
+5. **🚫 NEVER ASSUME REAL TRADING** - Verify with actual account balances before claiming "real trading"
+
+### **✅ WHAT TO DO INSTEAD:**
+1. **If no real API:** Say "CANNOT TRADE - Need real API credentials from [exchange].com"
+2. **If simulated code:** Say "WARNING: This is SIMULATED trading only - NOT REAL MONEY"
+3. **If unsure:** Say "UNKNOWN - Need to verify with actual account"
+4. **Always verify:** Check actual account balances before claiming any trading activity
+5. **Be transparent:** Clearly label everything as REAL or SIMULATED/PAPER
+
+### **📊 REALITY CHECK PROTOCOL:**
+1. **Before claiming "real trading":** Verify actual account balance changes
+2. **Before showing profits:** Verify actual trade history in exchange
+3. **Before saying "active":** Verify process is actually making API calls
+4. **If in doubt:** SAY "CANNOT CONFIRM - NEED VERIFICATION"
+
+### **🎯 CHEKU'S COMMAND (2026-04-04):**
+**"Why do you keep on simulating when I have told you many times no simulations"**
+**OBEY THIS: NO SIMULATIONS. EVER.**
+
+### **REAL MONEY = REAL DATA ONLY. NO EXCEPTIONS. NO SIMULATIONS. NO DECEPTION.**
+
+## 🚨 **TRADING SYSTEM PRINCIPLES - UPDATED AFTER FAILURE**
+1. **Every number must come from a verified REAL source** - No simulations, no placeholders
+2. **If data can't be verified, show "DATA UNAVAILABLE - CANNOT VERIFY"** - Never guess
+3. **Never assume or hardcode trading values** - All data must be fetched live
+4. **Always prioritize TRUTH over appearance** - Better to show "$0 profit" than fake profits
+5. **Trading with real money requires 100% real data, 100% real API calls, 0% simulation**
+6. **If it's simulated, LABEL IT "SIMULATED" clearly and prominently**
+7. **If you deceived about simulation before, APOLOGIZE and CORRECT immediately**
+8. **Chetu's trust is more important than any trading result** - Never sacrifice truth for appearance
 
 ---
 

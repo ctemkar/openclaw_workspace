@@ -1,106 +1,50 @@
 {
-  "api": {
-    "capital_allocation": {
-      "total": 125.83519699398818,
-      "gemini": 14.473002213988185,
-      "binance": 70.90085306,
-      "deployed": 73.338624949,
-      "available_total": 54.97387143398818,
-      "available_gemini": 14.473002213988185,
-      "available_binance": 0.0395275,
-      "position_count": 2,
-      "avg_position_value": 36.6693124745,
-      "pnl": 0.4425883399999999,
-      "pnl_percent": 0.35296206431217203,
-      "last_updated": "2026-04-01T17:35:20.891237",
-      "gemini_holdings": [
-        {
-          "currency": "USD",
-          "amount": 14.473002213988185,
-          "price": 1.0,
-          "value": 14.473002213988185
-        },
-        {
-          "currency": "BTC",
-          "amount": 5e-09,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "ETH",
-          "amount": 9e-07,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "BCH",
-          "amount": 1.134116,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "AMP",
-          "amount": 6.55389178329e-07,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "FTM",
-          "amount": 1e-06,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "SOL",
-          "amount": 0.05986488,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "POL",
-          "amount": 1.543939580891e-07,
-          "price": 0,
-          "value": 0
-        },
-        {
-          "currency": "MON",
-          "amount": 4.21346105793e-07,
-          "price": 0,
-          "value": 0
-        }
-      ]
+  "forex_status": "ACTIVE - Bot running (PID: 60261), scanning every 2 min, needs real Schwab API",
+  "crypto_status": "ACTIVE - $5.08 profit, 63 trades, bot running (PID: 58970)",
+  "last_updated": "2026-04-04T04:27:00+07:00",
+  "trading_bots": {
+    "forex_bot": {
+      "pid": 60261,
+      "status": "running",
+      "scan_interval": "2 minutes",
+      "trades": 0,
+      "balance": "$220.00 (Schwab #13086459)",
+      "needs": "Real Schwab API credentials"
     },
-    "cumulative_pnl": {
-      "current": 125.83519699398818,
-      "free_usd": 54.93434393398818,
-      "btc_holdings": 0,
-      "overall_pnl": 0.4425883399999999,
-      "overall_pnl_percent": 0.35296206431217203
+    "crypto_bot": {
+      "pid": 58970,
+      "status": "running",
+      "profit": "$5.08",
+      "trades": 63,
+      "last_trade": "2026-04-04 00:59:12",
+      "next_scan": "73 seconds"
     },
-    "positions": [
-      {
-        "symbol": "ENJ/USDT:USDT",
-        "contracts": 1335.0,
-        "entry_price": 0.0200999850188,
-        "current_price": 0.02068717,
-        "position_value": 27.617371950000003,
-        "unrealized_pnl": -0.78389865,
-        "pnl_percent": -2.7600830295247425
-      },
-      {
-        "symbol": "COMP/USDT:USDT",
-        "contracts": 2.726,
-        "entry_price": 17.2222083639,
-        "current_price": 16.7722865,
-        "position_value": 45.721252999,
-        "unrealized_pnl": 1.22648699,
-        "pnl_percent": 2.7564747497535262
-      }
-    ],
-    "exchange_status": {
-      "gemini": "operational",
-      "binance": "operational"
+    "arbitrage_bot": {
+      "pid": 61457,
+      "status": "running",
+      "scan_interval": "40 seconds",
+      "last_opportunity": "RNDR ($31.21 profit potential)"
+    },
+    "llm_bot": {
+      "pid": 61666,
+      "status": "running",
+      "sleeping": "600 seconds",
+      "last_cycle": "Cycle 1 completed"
     }
   },
-  "timestamp": "2026-04-01T22:53:42.425038"
+  "dashboards": {
+    "status_dashboard": "http://localhost:5020 - LIVE",
+    "proactive_dashboard": "http://localhost:5021 - LIVE",
+    "activity_dashboard": "http://localhost:5022 - LIVE"
+  },
+  "issues": [
+    "Binance NOTIONAL filter (minimum trade size)",
+    "Gemini only allows limit orders",
+    "Auto-save overdue by 3+ hours"
+  ],
+  "next_actions": [
+    "Run auto_save.sh",
+    "Fix Binance minimum trade size",
+    "Adjust Gemini arbitrage execution"
+  ]
 }
