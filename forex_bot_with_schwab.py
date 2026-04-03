@@ -442,8 +442,9 @@ class ForexTradingBotWithSchwab:
                 logging.info(f"   Win Rate: {self.win_rate*100:.1f}%")
                 
                 # Wait for next scan (Forex markets move slower)
-                logging.info(f"⏳ Waiting 10 minutes for next scan...")
-                time.sleep(600)  # 10 minutes
+                logging.info(f"🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!")
+                logging.info(f"⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)")
+                time.sleep(120)  # 2 minutes - MUCH SAFER!
                 
             except KeyboardInterrupt:
                 logging.info("🛑 Forex bot stopped by user")

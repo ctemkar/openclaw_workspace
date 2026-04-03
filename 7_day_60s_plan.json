@@ -1,0 +1,212 @@
+[
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "upload_time": "10:00 AM",
+    "type": "deep_fact",
+    "title": "Mahabharata Length Revealed",
+    "focus": "Educational fact",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "upload_time": "2:00 PM",
+    "type": "character_study",
+    "title": "Krishna Character Study",
+    "focus": "Character depth",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 1,
+    "date": "2026-04-03",
+    "upload_time": "6:00 PM",
+    "type": "wisdom_application",
+    "title": "Decision Making Wisdom",
+    "focus": "Practical application",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "upload_time": "10:00 AM",
+    "type": "story_digest",
+    "title": "The Dice Game Story",
+    "focus": "Narrative storytelling",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "upload_time": "2:00 PM",
+    "type": "book_breakdown",
+    "title": "Krishnavatara Book 1",
+    "focus": "Book review",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 2,
+    "date": "2026-04-04",
+    "upload_time": "6:00 PM",
+    "type": "interactive_quiz",
+    "title": "Mahabharata Quiz",
+    "focus": "Engagement",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "upload_time": "10:00 AM",
+    "type": "wisdom_application",
+    "title": "Day 3 Content",
+    "focus": "Varied content",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "upload_time": "2:00 PM",
+    "type": "story_digest",
+    "title": "Day 3 Feature",
+    "focus": "Engaging feature",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 3,
+    "date": "2026-04-05",
+    "upload_time": "6:00 PM",
+    "type": "wisdom_application",
+    "title": "Day 3 Wisdom",
+    "focus": "Evening wisdom",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "upload_time": "10:00 AM",
+    "type": "deep_fact",
+    "title": "Day 4 Content",
+    "focus": "Varied content",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "upload_time": "2:00 PM",
+    "type": "interactive_quiz",
+    "title": "Day 4 Feature",
+    "focus": "Engaging feature",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 4,
+    "date": "2026-04-06",
+    "upload_time": "6:00 PM",
+    "type": "deep_fact",
+    "title": "Day 4 Wisdom",
+    "focus": "Evening wisdom",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "upload_time": "10:00 AM",
+    "type": "deep_fact",
+    "title": "Day 5 Content",
+    "focus": "Varied content",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "upload_time": "2:00 PM",
+    "type": "book_breakdown",
+    "title": "Day 5 Feature",
+    "focus": "Engaging feature",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 5,
+    "date": "2026-04-07",
+    "upload_time": "6:00 PM",
+    "type": "deep_fact",
+    "title": "Day 5 Wisdom",
+    "focus": "Evening wisdom",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "upload_time": "10:00 AM",
+    "type": "deep_fact",
+    "title": "Day 6 Content",
+    "focus": "Varied content",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "upload_time": "2:00 PM",
+    "type": "story_digest",
+    "title": "Day 6 Feature",
+    "focus": "Engaging feature",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 6,
+    "date": "2026-04-08",
+    "upload_time": "6:00 PM",
+    "type": "comparative_analysis",
+    "title": "Day 6 Wisdom",
+    "focus": "Evening wisdom",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "upload_time": "10:00 AM",
+    "type": "deep_fact",
+    "title": "Day 7 Content",
+    "focus": "Varied content",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "upload_time": "2:00 PM",
+    "type": "story_digest",
+    "title": "Day 7 Feature",
+    "focus": "Engaging feature",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  },
+  {
+    "day": 7,
+    "date": "2026-04-09",
+    "upload_time": "6:00 PM",
+    "type": "wisdom_application",
+    "title": "Day 7 Wisdom",
+    "focus": "Evening wisdom",
+    "duration": "45-60 seconds",
+    "status": "planned"
+  }
+]

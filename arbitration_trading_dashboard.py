@@ -17,7 +17,43 @@ def get_arbitration_systems():
     """Get status of all arbitration trading systems"""
     systems = []
     
-    # 1. Auto Arbitrage Bot
+    # 1. FOREX ARBITRATION BOT ($220 Schwab Account)
+    forex_status = {
+        'name': '💰 FOREX Arbitration Bot',
+        'file': 'forex_bot_with_schwab.py',
+        'description': 'Schwab Account #13086459 • $220 Balance',
+        'status': '❌ NOT RUNNING',
+        'balance': 220.00,
+        'account': 'Schwab #13086459',
+        'last_active': 'Unknown'
+    }
+    
+    # Check if Forex bot is running
+    try:
+        result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
+        if 'forex_bot_with_schwab.py' in result.stdout:
+            forex_status['status'] = '✅ RUNNING'
+            # Extract PID
+            for line in result.stdout.split('\n'):
+                if 'forex_bot_with_schwab.py' in line:
+                    parts = line.split()
+                    if len(parts) > 1:
+                        forex_status['pid'] = parts[1]
+                        
+            # Check log for last activity
+            if os.path.exists('forex_trading_with_schwab.log'):
+                with open('forex_trading_with_schwab.log', 'r') as f:
+                    lines = f.readlines()
+                    if lines:
+                        last_line = lines[-1]
+                        if 'Waiting' in last_line or 'scan' in last_line:
+                            forex_status['last_active'] = 'Recently active'
+    except:
+        pass
+    
+    systems.append(forex_status)
+    
+    # 2. Auto Arbitrage Bot (Crypto)
     arbitrage_status = {
         'name': 'Auto Arbitrage Bot',
         'file': 'auto_arbitrage_bot.py',
@@ -123,20 +159,44 @@ def get_arbitration_systems():
 
 def get_system_status():
     """Get overall system status"""
+    # Calculate total investment (Forex + Crypto)
+    total_investment = 220.00  # Forex
+    total_investment += 2.60   # Crypto profit
+    
     return {
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'timezone': 'Asia/Bangkok (GMT+7)',
         'refresh_interval': '5 minutes',
-        'total_systems': 4,
+        'total_systems': 5,  # Now includes Forex
         'running_systems': 0,
-        'total_profit': 2.60
+        'total_profit': 2.60,
+        'total_investment': total_investment,
+        'forex_balance': 220.00
     }
 
 def get_live_opportunities():
     """Get live arbitrage opportunities"""
     opportunities = []
     
-    # Check if there are any opportunity files
+    # 1. Check Forex opportunities first
+    if os.path.exists('forex_opportunities.json'):
+        try:
+            with open('forex_opportunities.json', 'r') as f:
+                forex_data = json.load(f)
+                if isinstance(forex_data, list):
+                    for opp in forex_data[:3]:  # Show first 3 Forex opportunities
+                        if isinstance(opp, dict):
+                            opportunities.append({
+                                'type': '💰 FOREX',
+                                'pair': opp.get('pair', 'Unknown'),
+                                'spread': f"{opp.get('spread_pips', 0)} pips",
+                                'profit_potential': opp.get('potential_profit', 0),
+                                'brokers': f"{opp.get('buy_broker', '?')} → {opp.get('sell_broker', '?')}"
+                            })
+        except:
+            pass
+    
+    # 2. Check crypto opportunities
     opportunity_files = [
         'arbitrage_opportunities.json',
         'market_making_opportunities.json',
@@ -149,11 +209,19 @@ def get_live_opportunities():
                 with open(file, 'r') as f:
                     data = json.load(f)
                     if isinstance(data, list) and len(data) > 0:
-                        opportunities.extend(data[:3])  # Show first 3
+                        for opp in data[:2]:  # Show first 2 crypto opportunities
+                            if isinstance(opp, dict):
+                                opportunities.append({
+                                    'type': '⚡ CRYPTO',
+                                    'pair': opp.get('pair', opp.get('symbol', 'Unknown')),
+                                    'spread': f"{opp.get('spread', opp.get('spread_percent', 0))}%",
+                                    'profit_potential': opp.get('profit_potential', opp.get('potential_profit', 0)),
+                                    'exchange': opp.get('exchange', 'Unknown')
+                                })
             except:
                 pass
     
-    return opportunities[:5]  # Return max 5 opportunities
+    return opportunities[:6]  # Return max 6 opportunities
 
 @app.route('/')
 def dashboard():
@@ -241,7 +309,11 @@ def dashboard():
                 </div>
                 <div class="stat-item">
                     <div class="stat-value">${{ "%.2f"|format(system_status.total_profit) }}</div>
-                    <div class="stat-label">Total Profit</div>
+                    <div class="stat-label">Crypto Profit</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${{ "%.2f"|format(system_status.forex_balance) }}</div>
+                    <div class="stat-label">Forex Balance</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value" id="countdown">5:00</div>
@@ -269,6 +341,9 @@ def dashboard():
                         {% if system.get('total_profit') %}
                         <div class="profit">💰 Profit: ${{ "%.2f"|format(system.total_profit) }}</div>
                         {% endif %}
+                        {% if system.get('balance') %}
+                        <div class="profit" style="color: #fbbf24;">💰 Balance: ${{ "%.2f"|format(system.balance) }}</div>
+                        {% endif %}
                         {% if system.get('total_trades') %}
                         <div style="color: #94a3b8;">📊 Trades: {{ system.total_trades }}</div>
                         {% endif %}
@@ -288,14 +363,17 @@ def dashboard():
                 <h2>🎯 LIVE OPPORTUNITIES</h2>
                 {% for opp in opportunities %}
                 <div class="opportunity">
-                    {% if opp.get('pair') %}
-                    <div style="font-weight: bold; color: #f8fafc;">{{ opp.pair }}</div>
-                    {% endif %}
+                    <div style="font-weight: bold; color: {% if opp.type == '💰 FOREX' %}#fbbf24{% else %}#60a5fa{% endif %};">
+                        {{ opp.type }}: {{ opp.pair }}
+                    </div>
                     {% if opp.get('spread') %}
-                    <div style="color: #f59e0b;">Spread: {{ opp.spread }}%</div>
+                    <div style="color: #f59e0b;">Spread: {{ opp.spread }}</div>
                     {% endif %}
                     {% if opp.get('profit_potential') %}
                     <div style="color: #10b981;">Profit: ${{ "%.2f"|format(opp.profit_potential) }}</div>
+                    {% endif %}
+                    {% if opp.get('brokers') %}
+                    <div style="color: #94a3b8;">Arbitrage: {{ opp.brokers }}</div>
                     {% endif %}
                     {% if opp.get('exchange') %}
                     <div style="color: #94a3b8;">Exchange: {{ opp.exchange }}</div>
@@ -328,5 +406,6 @@ if __name__ == '__main__':
     print("🚀 Starting ARBITRATION TRADING SYSTEM DASHBOARD...")
     print("⚖️  Dashboard: http://localhost:5020")
     print("⏰ Auto-refresh: Every 5 minutes")
-    print("📊 Shows: All arbitration trading systems")
+    print("📊 Shows: ALL arbitration systems (Crypto + Forex)")
+    print("💰 Includes: $220 Forex balance (Schwab #13086459)")
     app.run(host='0.0.0.0', port=5020, debug=False)

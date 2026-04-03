@@ -21,5 +21,51 @@
     },
     "order_id": "6076758704",
     "timestamp": "2026-04-03T22:09:12.641298"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "ETH/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 2052.32,
+    "amount": 0.004872534497544242,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "ETH",
+      "buy_score": 2.8,
+      "sell_score": 1.7,
+      "confidence": 7.0,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: ETH is showing a slight decline in value over the last 24 hours. While this doesn't necessarily indicate a sell signal, it also doesn't provide strong support for a buy decision. A more significant downward movement or a clear upward trend would be needed to justify a stronger recommendation.",
+        "llama3: ETH has experienced a minor correction (-0.42% in the last 24 hours), which could be a temporary pullback before resuming its upward trend. The current price is still relatively stable, and there are no clear signs of significant selling pressure."
+      ],
+      "signal": "NEUTRAL"
+    },
+    "order_id": "45484556776",
+    "timestamp": "2026-04-03T22:24:36.812445"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "DOGE/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 0.0916,
+    "amount": 109.17030567685589,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "DOGE",
+      "buy_score": 4.55,
+      "sell_score": 1.5,
+      "confidence": 7.5,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: DOGE has shown a moderate increase in price (+1.57%) over the past 24 hours, but its overall performance is relatively stable and not particularly exceptional. It's worth considering buying if you're looking for a low-risk investment or to diversify your portfolio.",
+        "llama3: DOGE has shown a moderate increase in price over the past day. While it's not a drastic move, it suggests that there may be some underlying momentum driving the cryptocurrency. Additionally, DOGE is still relatively low-priced and could potentially have room to grow if the market conditions are favorable."
+      ],
+      "signal": "STRONG_BUY"
+    },
+    "order_id": "14142461312",
+    "timestamp": "2026-04-03T23:10:38.305352"
   }
 ]
