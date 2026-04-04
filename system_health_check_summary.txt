@@ -1,0 +1,74 @@
+=== SYSTEM HEALTH CHECK SUMMARY ===
+Date: Sun Apr  5 04:40:41 +07 2026
+Check Time: 2026-04-04 21:40 UTC
+
+=== SYSTEM OVERVIEW ===
+• Uptime: 1 day, 15 hours, 30 minutes
+• Load Average: 1.85, 1.86, 1.99
+• CPU Usage: 15.36% user, 12.4% sys, 72.59% idle
+• Memory: 13GB used (2.4GB wired), 19GB free
+• Processes: 415 total, 3 running, 412 sleeping
+
+=== DISK SPACE ===
+• Root (/): 12GB used of 228GB (39%)
+• Data (/System/Volumes/Data): 182GB used of 228GB (91%) ⚠️ HIGH USAGE
+• Workspace: 836MB used
+
+=== CRITICAL PROCESSES ===
+✅ RUNNING:
+• openclaw-gateway (PID: 69265) - 85.8% CPU, 3.2GB RAM
+• auto_arbitrage_bot.py (PID: 61457) - Running since Sat 4AM
+• real_26_crypto_arbitrage_bot.py (PID: 55581) - Running since 3:35AM
+• simple_real_dashboard.py (PID: 60156) - Running since 3:44AM
+• practical_profit_bot.py (PID: 80537) - Running since 2:08AM
+• multi_llm_trading_bot_fixed_order.py (PID: 33410) - Running since 10:22PM
+• market_maker_analyzer.py (PID: 61551) - Running since Sat 4AM
+• openclaw-tui (PID: 21033) - Running since Fri 1PM
+
+❌ MISSING (per sleep_monitor.sh):
+• real_dashboard_simple.py
+• arbitration_trading_dashboard.py
+• simple_trading_dashboard.py
+• forex_bot_with_schwab.py
+
+=== DASHBOARD PORTS ===
+✅ Port 5025: Running (sorted_spread_dashboard.html)
+❌ Port 5010: Not responding
+❌ Port 5015: Not responding
+❌ Port 5020: Not responding
+
+=== OPENCLAW STATUS ===
+• Gateway: Running (PID 69254, port 18789)
+• Dashboard: http://127.0.0.1:18789/
+• Sessions: 2485 active
+• Tasks: 2 active, 2 running, 99 issues
+• Security: 0 critical, 6 warnings, 1 info
+• Telegram channel: OK (1 account)
+
+=== TRADING ACTIVITY ===
+• LLM Predictions: 374 recorded in history
+• Last trading cycle (02:09): 0 arbitrage opportunities found
+• Bot appears to be scanning but not finding opportunities
+
+=== ANOMALIES DETECTED ===
+1. ⚠️ High disk usage on /System/Volumes/Data (91%)
+2. ⚠️ Missing critical dashboard processes (5010, 5015, 5020 ports)
+3. ⚠️ Missing some trading bots from sleep_monitor checklist
+4. ⚠️ OpenClaw service config issues (Node from version manager)
+5. ⚠️ Security warnings: exec security=full, short gateway token
+
+=== RECOMMENDATIONS ===
+1. Clean up /System/Volumes/Data to free disk space
+2. Restart missing dashboard processes on ports 5010, 5015, 5020
+3. Run "openclaw doctor --repair" to fix service config
+4. Consider tightening exec security from "full" to "allowlist"
+5. Monitor trading bot logs for actual trading activity
+
+=== SYSTEM STABILITY ===
+Overall: ⚠️ DEGRADED
+• Core OpenClaw system: ✅ STABLE
+• Trading infrastructure: ⚠️ PARTIAL
+• Dashboard access: ⚠️ LIMITED
+• Resource usage: ⚠️ HIGH DISK
+
+Next check scheduled in 2 hours.
