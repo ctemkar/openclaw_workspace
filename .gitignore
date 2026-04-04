@@ -15,3 +15,12 @@ keys/
 secrets/
 *.key
 *.secret
+
+# API Keys and Secrets
+.env
+.env.*
+*.env
+secure_keys/
+secrets/
+*.key
+*.secret

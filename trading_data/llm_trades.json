@@ -133,5 +133,27 @@
     },
     "order_id": "8555010403",
     "timestamp": "2026-04-04T14:44:52.437060"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "SOL/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 80.82,
+    "amount": 0.12373174956693889,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "SOL",
+      "buy_score": 4.2,
+      "sell_score": 1.4,
+      "confidence": 7.0,
+      "model_count": 1,
+      "reasons": [
+        "llama3: SOL has a moderate bullish momentum with a 0.65% gain in the last 24 hours. The price is still relatively stable and hasn't shown any significant signs of reversal or correction. However, it's essential to monitor for potential bearish divergences and volatility spikes."
+      ],
+      "signal": "BUY"
+    },
+    "order_id": "16876254591",
+    "timestamp": "2026-04-05T03:18:53.700141"
   }
 ]
