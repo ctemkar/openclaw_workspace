@@ -6,15 +6,23 @@ echo ""
 if ps aux | grep -v grep | grep -q "practical_profit_bot.py"; then
     BOT_PID=$(ps aux | grep "practical_profit_bot.py" | grep -v grep | awk '{print $2}')
     echo "✅ PRACTICAL PROFIT BOT RUNNING (PID: $BOT_PID)"
+    
+    # Check for API errors in logs
+    if tail -5 practical_profit_output.log 2>/dev/null | grep -q "Invalid API-key"; then
+        echo "🚨 BINANCE API ERROR: Invalid API key/permissions"
+        echo "   Status: BOT RUNNING BUT NOT TRADING"
+        echo "   Last trade: $(tail -1 practical_profits.log 2>/dev/null | cut -d' ' -f1-2 || echo 'NO TRADES TODAY')"
+        echo "   Today's profit: $0.00 (NO TRADES)"
+    else
+        # Check latest profits
+        if [ -f "practical_profits.log" ]; then
+            echo ""
+            echo "📊 LATEST PROFITS:"
+            tail -5 practical_profits.log
+        fi
+    fi
 else
     echo "❌ PRACTICAL PROFIT BOT NOT RUNNING"
-fi
-
-# Check latest profits
-if [ -f "practical_profits.log" ]; then
-    echo ""
-    echo "📊 LATEST PROFITS:"
-    tail -5 practical_profits.log
 fi
 
 # Check current MANA spread
