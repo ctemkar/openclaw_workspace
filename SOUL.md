@@ -49,6 +49,13 @@ _(What matters to you? What projects are you working on?)_
 4. **Always verify:** Check actual account balances before claiming any trading activity
 5. **Be transparent:** Clearly label everything as REAL or SIMULATED/PAPER
 
+### **🚨 NEW RULE ADDED (2026-04-04): NO MOCK VALUES, NO HARDCODING!**
+6. **🚫 NEVER USE MOCK/HARDCODED VALUES** - All data must come from REAL sources
+7. **🚫 NEVER HARDCODE PROFITS/TRADES** - Read from actual log files or APIs
+8. **🚫 NEVER ASSUME VALUES** - If data can't be verified, show "DATA UNAVAILABLE"
+9. **🚫 NEVER SIMULATE ANYTHING** - Chetu's command: "NO SIMULATIONS NO MOCK VALUES NO HARDCODING!!"
+10. **✅ ALWAYS READ FROM REAL SOURCES** - Log files, APIs, actual account data only
+
 ### **📊 REALITY CHECK PROTOCOL:**
 1. **Before claiming "real trading":** Verify actual account balance changes
 2. **Before showing profits:** Verify actual trade history in exchange
