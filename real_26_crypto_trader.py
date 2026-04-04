@@ -200,8 +200,25 @@ def check_gemini_long_opportunities(exchange, crypto):
     return None
 
 def check_binance_short_opportunities(exchange, crypto):
-    # DISABLED - Binance balance is $0.00
-    return None
+    # ENABLED - Check for arbitrage opportunities (Binance vs Gemini)
+    # First, just log the price for spread monitoring
+    try:
+        symbol = f"{crypto}/USDT"
+        ticker = exchange.fetch_ticker(symbol)
+        current_price = ticker['last']
+        
+        # Log price for spread monitoring (we'll calculate spread later)
+        logger.info(f"  {crypto}: ${current_price:.4f} on Binance")
+        
+        # Return price data for spread calculation
+        return {
+            'crypto': crypto,
+            'binance_price': current_price,
+            'symbol': symbol
+        }
+    except Exception as e:
+        logger.debug(f"  {crypto}: Error fetching price - {e}")
+        return None
     """Check for SHORT opportunities on Binance Futures"""
     try:
         symbol = f"{crypto}/USDT"
@@ -373,17 +390,25 @@ def trading_cycle(exchanges):
     #             executed_trade = execute_gemini_trade(exchanges['gemini'], trade)
     #             opportunities_found += 1
     
-    # Check Binance SHORT opportunities (all 26 cryptos)
+    # Check Binance prices for all cryptos (for spread monitoring)
+    binance_prices = {}
     if exchanges['binance']:
-        logger.info(f"🔍 Checking {len(ALL_CRYPTOS)} cryptos on Binance for SHORT...")
+        logger.info(f"🔍 Checking {len(ALL_CRYPTOS)} cryptos on Binance for prices...")
         for crypto in ALL_CRYPTOS:
-            trade = check_binance_short_opportunities(exchanges['binance'], crypto)
-            if trade:
-                # Execute REAL trade
-                executed_trade = execute_binance_trade(exchanges['binance'], trade)
-                opportunities_found += 1
+            price_data = check_binance_short_opportunities(exchanges['binance'], crypto)
+            if price_data:
+                binance_prices[crypto] = price_data['binance_price']
+                logger.info(f"  {crypto}: ${price_data['binance_price']:.4f}")
     
-    logger.info(f"🎯 Opportunities found this cycle: {opportunities_found}")
+    # Log summary of prices
+    if binance_prices:
+        logger.info(f"📊 Binance prices collected: {len(binance_prices)} cryptos")
+        # Show top 5 by price (just for monitoring)
+        sorted_prices = sorted(binance_prices.items(), key=lambda x: x[1], reverse=True)
+        logger.info(f"🏆 Highest prices: {', '.join([f'{c}:${p:.2f}' for c, p in sorted_prices[:3]])}")
+        logger.info(f"📉 Lowest prices: {', '.join([f'{c}:${p:.4f}' for c, p in sorted_prices[-3:]])}")
+    
+    logger.info(f"🎯 Arbitrage opportunities found this cycle: {opportunities_found}")
     logger.info(f"⏰ Next cycle in {SCAN_INTERVAL} seconds...")
     
     return opportunities_found
