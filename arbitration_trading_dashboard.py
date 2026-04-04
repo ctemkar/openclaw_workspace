@@ -260,24 +260,50 @@ def get_live_opportunities():
             with open('trading_data/auto_arbitrage_trades.json', 'r') as f:
                 data = json.load(f)
                 if isinstance(data, list) and len(data) > 0:
-                    # Get unique cryptos with their LATEST spread
+                    # Get unique cryptos with their LATEST SUCCESSFUL spread
                     crypto_latest = {}
                     for trade in data[-100:]:  # Last 100 trades
                         if isinstance(trade, dict) and trade.get('spread_percent'):
                             crypto = trade.get('crypto', 'Unknown')
                             spread = trade.get('spread_percent', 0)
                             timestamp = trade.get('timestamp', '')
+                            success = trade.get('success', False)
                             
-                            # Keep only the latest entry for each crypto
-                            if crypto not in crypto_latest or timestamp > crypto_latest[crypto]['timestamp']:
+                            # FILTER OUT: Unrealistic spreads (>20%) and failed trades
+                            if spread > 20.0:  # Unrealistic spread
+                                continue
+                            
+                            # Only keep SUCCESSFUL trades, or if no successful ones, keep most recent
+                            if crypto not in crypto_latest:
                                 crypto_latest[crypto] = {
                                     'spread': spread,
                                     'buy_price': trade.get('buy_price', 0),
                                     'sell_price': trade.get('sell_price', 0),
                                     'profit': trade.get('net_profit', 0),
                                     'timestamp': timestamp,
-                                    'success': trade.get('success', False)
+                                    'success': success
                                 }
+                            else:
+                                # Prefer successful trades over failed ones
+                                if success and not crypto_latest[crypto]['success']:
+                                    crypto_latest[crypto] = {
+                                        'spread': spread,
+                                        'buy_price': trade.get('buy_price', 0),
+                                        'sell_price': trade.get('sell_price', 0),
+                                        'profit': trade.get('net_profit', 0),
+                                        'timestamp': timestamp,
+                                        'success': success
+                                    }
+                                # If both failed or both successful, keep most recent
+                                elif timestamp > crypto_latest[crypto]['timestamp']:
+                                    crypto_latest[crypto] = {
+                                        'spread': spread,
+                                        'buy_price': trade.get('buy_price', 0),
+                                        'sell_price': trade.get('sell_price', 0),
+                                        'profit': trade.get('net_profit', 0),
+                                        'timestamp': timestamp,
+                                        'success': success
+                                    }
                     
                     # Convert to list
                     for crypto, data in crypto_latest.items():
@@ -312,9 +338,9 @@ def get_live_opportunities():
                                 crypto_spreads.append({
                                     'crypto': 'MANA',
                                     'spread': spread,
-                                    'buy_price': 0.0884,  # From progress monitor
-                                    'sell_price': 0.0885,  # From progress monitor
-                                    'profit': 0.08,  # Typical profit per trade
+                                    'buy_price': 0.0880,  # From progress monitor (Binance)
+                                    'sell_price': 0.0885,  # From progress monitor (Gemini)
+                                    'profit': 0.10,  # Potential profit from progress monitor
                                     'timestamp': 'Recent',
                                     'success': True  # Actually making money
                                 })
@@ -662,8 +688,8 @@ def dashboard():
 
 if __name__ == '__main__':
     print("🚀 Starting ARBITRATION TRADING SYSTEM DASHBOARD...")
-    print("⚖️  Dashboard: http://localhost:5020")
+    print("⚖️  Dashboard: http://localhost:5023")
     print("⏰ Auto-refresh: Every 5 minutes")
     print("📊 Shows: ALL arbitration systems (Crypto + Forex)")
     print("💰 Includes: $220 Forex balance (Schwab #13086459)")
-    app.run(host='0.0.0.0', port=5020, debug=False)
+    app.run(host='0.0.0.0', port=5023, debug=False)
