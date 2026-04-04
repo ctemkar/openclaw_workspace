@@ -199,27 +199,8 @@ def check_gemini_long_opportunities(exchange, crypto):
     
     return None
 
-def check_binance_short_opportunities(exchange, crypto):
-    # ENABLED - Check for arbitrage opportunities (Binance vs Gemini)
-    # First, just log the price for spread monitoring
-    try:
-        symbol = f"{crypto}/USDT"
-        ticker = exchange.fetch_ticker(symbol)
-        current_price = ticker['last']
-        
-        # Log price for spread monitoring (we'll calculate spread later)
-        logger.info(f"  {crypto}: ${current_price:.4f} on Binance")
-        
-        # Return price data for spread calculation
-        return {
-            'crypto': crypto,
-            'binance_price': current_price,
-            'symbol': symbol
-        }
-    except Exception as e:
-        logger.debug(f"  {crypto}: Error fetching price - {e}")
-        return None
-    """Check for SHORT opportunities on Binance Futures"""
+def check_binance_prices(exchange, crypto):
+    """Check Binance prices for spread monitoring (public data)"""
     try:
         symbol = f"{crypto}/USDT"
         ticker = exchange.fetch_ticker(symbol)
@@ -227,51 +208,19 @@ def check_binance_short_opportunities(exchange, crypto):
         current_price = ticker['last']
         change_percent = ticker['percentage']
         
-        if change_percent is None:
-            # Calculate manually if percentage not available
-            open_price = ticker['open']
-            if open_price and open_price > 0:
-                change_percent = ((current_price - open_price) / open_price) * 100
+        # Log price for spread monitoring
+        logger.info(f"  {crypto}: ${current_price:.4f} ({change_percent:.2f}%)")
         
-        if change_percent and change_percent <= -SHORT_THRESHOLD:
-            logger.info(f"⚡ BINANCE SHORT SIGNAL: {crypto} down {change_percent:.2f}%")
-            
-            # Calculate position size with leverage
-            capital_risk = BINANCE_CAPITAL * POSITION_SIZE  # $3.75
-            position_value = capital_risk * LEVERAGE  # $11.25 with 3x leverage
-            amount = position_value / current_price
-            
-            trade_data = {
-                'exchange': 'binance',
-                'symbol': symbol,
-                'side': 'sell',
-                'type': 'SHORT',
-                'current_price': current_price,
-                'change_percent': change_percent,
-                'amount': amount,
-                'position_value': position_value,
-                'capital_risk': capital_risk,
-                'leverage': LEVERAGE,
-                'stop_loss': current_price * (1 + STOP_LOSS),  # For SHORT: stop if price rises
-                'take_profit': current_price * (1 - TAKE_PROFIT),  # For SHORT: profit if price drops more
-                'status': 'SIGNAL_DETECTED'
-            }
-            
-            logger.info(f"🎯 PREPARING BINANCE SHORT: {crypto}")
-            logger.info(f"    Current price: ${current_price:.4f}")
-            logger.info(f"    24h change: {change_percent:.2f}%")
-            logger.info(f"    Position size: {amount:.6f} contracts")
-            logger.info(f"    Position value: ${position_value:.2f} (with {LEVERAGE}x leverage)")
-            logger.info(f"    Capital at risk: ${capital_risk:.2f}")
-            logger.info(f"    Stop-loss: ${trade_data['stop_loss']:.4f} (+{STOP_LOSS*100:.0f}%)")
-            logger.info(f"    Take-profit: ${trade_data['take_profit']:.4f} (-{TAKE_PROFIT*100:.0f}%)")
-            
-            return trade_data
-    
+        # Return price data for spread calculation
+        return {
+            'crypto': crypto,
+            'binance_price': current_price,
+            'change_percent': change_percent,
+            'symbol': symbol
+        }
     except Exception as e:
-        logger.error(f"❌ Error checking {crypto} on Binance: {e}")
-    
-    return None
+        logger.error(f"❌ Error checking {crypto}: {e}")
+        return None
 
 def execute_gemini_trade(exchange, trade_data):
     """Execute REAL Gemini LONG trade"""
@@ -392,13 +341,15 @@ def trading_cycle(exchanges):
     
     # Check Binance prices for all cryptos (for spread monitoring)
     binance_prices = {}
-    if exchanges['binance']:
-        logger.info(f"🔍 Checking {len(ALL_CRYPTOS)} cryptos on Binance for prices...")
-        for crypto in ALL_CRYPTOS:
-            price_data = check_binance_short_opportunities(exchanges['binance'], crypto)
-            if price_data:
-                binance_prices[crypto] = price_data['binance_price']
-                logger.info(f"  {crypto}: ${price_data['binance_price']:.4f}")
+    
+    # Create a public Binance exchange (no API keys needed for price data)
+    public_binance = ccxt.binance({'enableRateLimit': True})
+    
+    logger.info(f"🔍 Checking {len(ALL_CRYPTOS)} cryptos on Binance for prices...")
+    for crypto in ALL_CRYPTOS:
+        price_data = check_binance_prices(public_binance, crypto)
+        if price_data:
+            binance_prices[crypto] = price_data['binance_price']
     
     # Log summary of prices
     if binance_prices:

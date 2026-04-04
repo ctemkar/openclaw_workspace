@@ -1,0 +1,29 @@
+================================================================================
+📈 TOP 10 CRYPTO SPREADS REPORT - Binance vs Gemini
+📅 Generated: 2026-04-05 02:17:58
+================================================================================
+
+Rank | Crypto | Binance Price | Gemini Price | Spread ($) | Spread (%) | Opportunity
+--------------------------------------------------------------------------------
+   1 | XTZ    | $      0.3499 | $      0.3484 |     0.0015 |       0.43% | BUY_ON_GEMINI
+   2 | AAVE   | $     95.0300 | $     95.3896 |    -0.3596 |      -0.38% | BUY_ON_BINANCE
+   3 | UNI    | $      3.1440 | $      3.1556 |    -0.0116 |      -0.37% | BUY_ON_BINANCE
+   4 | FIL    | $      0.8500 | $      0.8530 |    -0.0030 |      -0.35% | BUY_ON_BINANCE
+   5 | YFI    | $   2464.0000 | $   2456.5400 |     7.4600 |       0.30% | BUY_ON_GEMINI
+   6 | LTC    | $     53.7000 | $     53.7600 |    -0.0600 |      -0.11% | BUY_ON_BINANCE
+   7 | DOT    | $      1.2610 | $      1.2621 |    -0.0011 |      -0.09% | BUY_ON_BINANCE
+   8 | COMP   | $     16.8200 | $     16.8300 |    -0.0100 |      -0.06% | BUY_ON_BINANCE
+   9 | ATOM   | $      1.7100 | $      1.7090 |     0.0010 |       0.06% | BUY_ON_GEMINI
+  10 | LINK   | $      8.7400 | $      8.7448 |    -0.0048 |      -0.05% | BUY_ON_BINANCE
+
+📊 SUMMARY:
+  • Total cryptos analyzed: 16
+  • Highest spread: XTZ (0.43%)
+  • Average spread: 0.14%
+
+💡 OPPORTUNITY INTERPRETATION:
+  • BUY_ON_GEMINI: Binance price > Gemini price (buy on Gemini, sell on Binance)
+  • BUY_ON_BINANCE: Gemini price > Binance price (buy on Binance, sell on Gemini)
+  • Positive spread % means Binance price is higher
+  • Negative spread % means Gemini price is higher
+================================================================================

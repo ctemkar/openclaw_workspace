@@ -1,0 +1,78 @@
+=== SLEEP MONITOR REPORT ===
+Time: Sun Apr  5 02:26:45 +07 2026
+User: Chetu (Sleeping)
+
+=== SYSTEM STATUS ===
+
+✅ ACTIVE TRADING PROCESSES:
+1. auto_arbitrage_bot.py (PID: 61457) - Running since 4:15 AM
+2. practical_profit_bot.py (PID: 80537) - Running since 2:08 AM
+3. market_maker_analyzer.py (PID: 61551) - Running since 4:15 AM
+4. multi_llm_trading_bot_fixed_order.py (PID: 33410) - Running since 10:22 PM
+5. truthful_dashboard.py (PID: 19863) - Running since 12:13 AM
+
+✅ ACTIVE DASHBOARDS:
+1. Port 5025: Sorted Spread Dashboard - RESPONDING
+   - Shows practical bot profitable with $1.65 profit from 23 trades today
+   - Dashboard auto-refreshes every 30 seconds
+
+❌ MISSING PROCESSES (from sleep monitor script):
+- real_dashboard_simple.py
+- arbitration_trading_dashboard.py  
+- simple_trading_dashboard.py
+- forex_bot_with_schwab.py
+
+❌ MISSING PORTS (from sleep monitor script):
+- Port 5010: Not responding
+- Port 5015: Not responding
+- Port 5020: Not responding
+
+=== TRADING ACTIVITY ===
+
+📊 26-CRYPTO BOT:
+- Last cycle: 02:09:09 (Cycle 19)
+- Opportunities found: 0
+- Next cycle: 02:14:09 (every 300 seconds)
+- Status: Monitoring 23 cryptos on Binance
+
+💰 PRACTICAL PROFIT BOT:
+- Last check: 02:26:22
+- Current assets: $22.11 total
+  - MANA: 118.66 ($10.43)
+  - USDT: $11.68
+- Current spread: 0.27% (monitoring)
+- Status: Not enough MANA for trade, waiting 52 seconds
+
+📈 LLM PREDICTIONS:
+- 374 predictions recorded in history
+
+=== SYSTEM RESOURCES ===
+- CPU Usage: 24.8% user, 11.67% sys, 64.23% idle
+- Memory: Free pages: 49798, Purgeable: 43649
+- System stable, no memory pressure
+
+=== ERROR CHECK ===
+- No recent errors detected in logs (last hour)
+- All active processes running normally
+
+=== SUMMARY ===
+⚠️ PARTIAL SYSTEM OPERATIONAL
+
+CRITICAL ISSUES:
+1. Missing dashboards on ports 5010, 5015, 5020
+2. Missing processes from original sleep monitor checklist
+3. 26-crypto bot finding 0 arbitrage opportunities
+
+OPERATIONAL SYSTEMS:
+1. Practical profit bot active and monitoring
+2. Sorted spread dashboard on port 5025 responding
+3. Multiple trading bots running
+4. System resources stable
+
+=== RECOMMENDATIONS ===
+1. Update sleep_monitor.sh to check actual running processes
+2. Consider restarting missing dashboards if needed
+3. Monitor 26-crypto bot for arbitrage opportunities
+4. System stable for sleep, will continue monitoring
+
+Next check in 30 minutes (02:56 AM)

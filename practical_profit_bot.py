@@ -48,7 +48,7 @@ class PracticalProfitBot:
         
         # Trading parameters
         self.trade_percentage = 0.25  # Trade 25% of MANA
-        self.min_trade_mana = 120  # Minimum 120 MANA (~$10.50 at current prices)
+        self.min_trade_mana = 119  # Minimum 119 MANA (reduced from 120 due to balance)
         self.profit_target = 0.15  # $0.15 minimum profit
         
         # Track REAL profits
