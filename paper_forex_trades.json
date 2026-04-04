@@ -1,0 +1,54 @@
+[
+  {
+    "id": "FOREX_EURUSD_1775288445",
+    "pair": "EUR/USD",
+    "type": "SHORT",
+    "signal": "SELL",
+    "entry_price": 1.085,
+    "position_size": 0.01125,
+    "stop_loss": 1.087,
+    "take_profit": 1.081,
+    "timestamp": "2026-04-04T14:40:45.518111",
+    "status": "OPEN",
+    "real_trade": false
+  },
+  {
+    "id": "FOREX_GBPUSD_1775288445",
+    "pair": "GBP/USD",
+    "type": "SHORT",
+    "signal": "SELL",
+    "entry_price": 1.265,
+    "position_size": 0.01125,
+    "stop_loss": 1.267,
+    "take_profit": 1.261,
+    "timestamp": "2026-04-04T14:40:45.524961",
+    "status": "OPEN",
+    "real_trade": false
+  },
+  {
+    "id": "FOREX_EURUSD_1775288690",
+    "pair": "EUR/USD",
+    "type": "LONG",
+    "signal": "BUY",
+    "entry_price": 0.867,
+    "position_size": 0.052031249999999994,
+    "stop_loss": 0.865,
+    "take_profit": 0.871,
+    "timestamp": "2026-04-04T14:44:50.537656",
+    "status": "OPEN",
+    "real_trade": false
+  },
+  {
+    "id": "FOREX_GBPUSD_1775288690",
+    "pair": "GBP/USD",
+    "type": "LONG",
+    "signal": "BUY",
+    "entry_price": 0.758,
+    "position_size": 0.052031249999999994,
+    "stop_loss": 0.756,
+    "take_profit": 0.762,
+    "timestamp": "2026-04-04T14:44:50.543518",
+    "status": "OPEN",
+    "real_trade": false
+  }
+]

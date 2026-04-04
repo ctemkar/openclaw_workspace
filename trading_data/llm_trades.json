@@ -89,5 +89,49 @@
     },
     "order_id": "16872306858",
     "timestamp": "2026-04-04T00:11:46.846841"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "ETH/USDT",
+    "side": "sell",
+    "type": "SHORT_LLM",
+    "price": 2053.34,
+    "amount": 0.00487011405807124,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "ETH",
+      "buy_score": 1.4,
+      "sell_score": 3.5,
+      "confidence": 7.0,
+      "model_count": 1,
+      "reasons": [
+        "llama3: Despite the slight price drop today, Ethereum's price has been trending upwards overall. However, with a current price above $2000, there may be some consolidation or correction before further upward momentum can be expected. As such, I would recommend exercising caution when considering a buy."
+      ],
+      "signal": "SELL"
+    },
+    "order_id": "45491859760",
+    "timestamp": "2026-04-04T14:29:38.622489"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "ADA/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 0.2454,
+    "amount": 40.74979625101874,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "ADA",
+      "buy_score": 4.2,
+      "sell_score": 1.4,
+      "confidence": 7.0,
+      "model_count": 1,
+      "reasons": [
+        "llama3: ADA is showing a moderate increase in price, indicating some buying pressure. However, the gain is relatively small and not extremely significant. I would recommend BUYING with caution."
+      ],
+      "signal": "BUY"
+    },
+    "order_id": "8555010403",
+    "timestamp": "2026-04-04T14:44:52.437060"
   }
 ]
