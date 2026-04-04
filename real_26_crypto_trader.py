@@ -51,8 +51,8 @@ GEMINI_CAPITAL = 393.22  # 60% of portfolio for Gemini LONG
 BINANCE_CAPITAL = 262.14 # 40% of portfolio for Binance SHORT (profitable strategy)
 LEVERAGE = 1             # REDUCED from 3x to 1x (SAFER)
 POSITION_SIZE = 0.1     # 10% of allocated capital per trade
-LONG_THRESHOLD = 1.0     # ADJUSTED from 3.0% to 1.0% (BALANCED)
-SHORT_THRESHOLD = 1.0    # ADJUSTED from 3.0% to 1.0% (BALANCED)
+LONG_THRESHOLD = 0.5     # REDUCED from 1.0% to 0.5% (MORE OPPORTUNITIES)
+SHORT_THRESHOLD = 0.5    # REDUCED from 1.0% to 0.5% (MORE OPPORTUNITIES)
 STOP_LOSS = 0.03         # TIGHTER from 5% to 3% stop-loss
 TAKE_PROFIT = 0.05       # REDUCED from 10% to 5% take-profit
 SCAN_INTERVAL = 300      # INCREASED from 180 to 300 seconds (5 min)
@@ -264,9 +264,10 @@ def execute_gemini_trade(exchange, trade_data):
         # Place buy order
         order = exchange.create_order(
             symbol=trade_data['symbol'],
-            type='market',
+            type='limit',
             side='buy',
-            amount=trade_data['amount']
+            amount=trade_data['amount'],
+            price=trade_data['current_price'] * 1.01  # 1% above current for quick fill
         )
         
         logger.info(f"✅ GEMINI LONG ORDER EXECUTED: {order['id']}")
@@ -300,9 +301,10 @@ def execute_binance_trade(exchange, trade_data):
         # Place short sell order
         order = exchange.create_order(
             symbol=trade_data['symbol'],
-            type='market',
+            type='limit',
             side='sell',
-            amount=trade_data['amount']
+            amount=trade_data['amount'],
+            price=trade_data['current_price'] * 0.99  # 1% below current for quick fill
         )
         
         logger.info(f"✅ BINANCE SHORT ORDER EXECUTED: {order['id']}")
@@ -361,15 +363,15 @@ def trading_cycle(exchanges):
     
     opportunities_found = 0
     
-    # Check Gemini LONG opportunities (16 cryptos)
-    if exchanges['gemini']:
-        logger.info(f"🔍 Checking {len(GEMINI_CRYPTOS)} cryptos on Gemini for LONG...")
-        for crypto in GEMINI_CRYPTOS:
-            trade = check_gemini_long_opportunities(exchanges['gemini'], crypto)
-            if trade:
-                # Execute REAL trade
-                executed_trade = execute_gemini_trade(exchanges['gemini'], trade)
-                opportunities_found += 1
+    # Check Gemini LONG opportunities (16 cryptos) - TEMPORARILY DISABLED due to Nonce error
+    # if exchanges['gemini']:
+    #     logger.info(f"🔍 Checking {len(GEMINI_CRYPTOS)} cryptos on Gemini for LONG...")
+    #     for crypto in GEMINI_CRYPTOS:
+    #         trade = check_gemini_long_opportunities(exchanges['gemini'], crypto)
+    #         if trade:
+    #             # Execute REAL trade
+    #             executed_trade = execute_gemini_trade(exchanges['gemini'], trade)
+    #             opportunities_found += 1
     
     # Check Binance SHORT opportunities (all 26 cryptos)
     if exchanges['binance']:
