@@ -1,0 +1,89 @@
+=== SYSTEM HEALTH CHECK REPORT ===
+Time: Sat Apr  4 16:41:00 +07 2026
+Check performed by: Cron Job (Every 2h)
+
+=== SYSTEM OVERVIEW ===
+• Uptime: 1 day, 3 hours, 30 minutes
+• Load Average: 1.80, 2.23, 2.40 (1-min, 5-min, 15-min)
+• CPU Usage: 17.23% user, 12.42% sys, 70.33% idle
+• Memory: 29GB used (2.1GB wired), 2.6GB free
+• Power: AC Power connected
+• Thermal: No warnings
+
+=== DISK USAGE ===
+• Root (/): 12GB used of 228GB (37%)
+• System Data: 181GB used of 228GB (90%) ⚠️ HIGH USAGE
+• Other volumes: Normal usage
+
+=== CRITICAL PROCESSES STATUS ===
+✅ OpenClaw Gateway: Running (PID 79638, 73.2% CPU)
+✅ OpenClaw TUI: Running (PID 21033)
+✅ Multiple Python trading bots: 15+ processes running
+✅ Dashboard processes: All running (Ports 5010, 5015, 5020 listening)
+
+=== TRADING SYSTEM STATUS ===
+• Auto Arbitrage Bot: Running (PID 61457)
+• Real Crypto Trader: Running (PID 47938)
+• Practical Profit Bot: Running (PID 37538)
+• Multi-LLM Trading Bot: Running (PID 61666)
+• Market Maker Analyzer: Running (PID 61551)
+• Proactive Monitor: Running (PID 26077)
+• Auto Restart Monitor: Running (PID 61742)
+
+=== DASHBOARD STATUS ===
+✅ Port 5010: Arbitration Trading Dashboard (PID 24966)
+✅ Port 5015: Real Dashboard Simple (PID 88307)
+✅ Port 5020: Simple Trading Dashboard (PID 88472)
+✅ Other dashboards: Live Activity, Proactive, etc.
+
+=== ERROR ANALYSIS (LAST 24H) ===
+⚠️ CRITICAL ISSUES DETECTED:
+
+1. GEMINI API FAILURES:
+   • Multiple "Nonce has not increased" errors
+   • "Gemini API fundamentally broken" errors
+   • Possible causes: Invalid/expired API key, IP blocking, regional restrictions
+
+2. BINANCE API ISSUES:
+   • "Invalid API-key, IP, or permissions for action" (Recent: 16:40:37)
+   • Margin insufficient errors
+   • Minimum order size violations
+
+3. LOCAL LLM CONNECTIVITY:
+   • Ollama timeouts (port 11434)
+   • Multiple LLM query failures
+
+4. CODE ERRORS:
+   • Template rendering issues (Jinja2 errors)
+   • Type errors in trading logic
+   • Syntax errors in some scripts
+
+=== SLEEP MONITOR RESULTS ===
+• All critical processes: RUNNING
+• All dashboard ports: RESPONDING
+• LLM Predictions: 374 recorded
+• CPU Usage: 14.53%
+• Trading logs: Clean (no recent errors)
+
+=== RECOMMENDATIONS ===
+1. ⚠️ Address Gemini API issues immediately - API key may be invalid/expired
+2. ⚠️ Verify Binance API credentials and permissions
+3. ⚠️ Check System Data disk usage (90% full) - consider cleanup
+4. ✅ Trading system infrastructure is stable and operational
+5. ✅ OpenClaw services are running normally
+6. ✅ Network connectivity is good
+
+=== OVERALL HEALTH SCORE: 7/10 ===
+• Infrastructure: 9/10 (All systems running)
+• API Connectivity: 5/10 (Multiple exchange API failures)
+• Disk Space: 6/10 (System Data at 90% capacity)
+• Error Rate: 6/10 (Persistent API errors)
+
+=== NEXT STEPS ===
+1. Investigate and fix Gemini API credentials
+2. Verify Binance API permissions
+3. Clean up System Data volume
+4. Monitor error logs for recurrence
+5. Schedule next check in 2 hours
+
+Report generated: 2026-04-04 16:41:00 +07:00
