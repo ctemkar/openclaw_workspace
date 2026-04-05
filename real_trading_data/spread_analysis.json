@@ -1,56 +1,56 @@
 [
   {
     "pair": "BTC/USDT",
-    "binance_price": 68685.53,
-    "gemini_price": 101379.34,
-    "spread_percent": 47.6,
-    "llm_score": 7.3,
+    "binance_price": 68716.24,
+    "gemini_price": 101277.43,
+    "spread_percent": 47.39,
+    "llm_score": 7.6,
     "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704431"
+    "timestamp": "2026-04-06T06:36:32.846451"
   },
   {
     "pair": "ETH/USDT",
-    "binance_price": 3422.98,
-    "gemini_price": 5345.44,
-    "spread_percent": 56.16,
-    "llm_score": 7.0,
+    "binance_price": 3416.31,
+    "gemini_price": 5338.63,
+    "spread_percent": 56.27,
+    "llm_score": 7.3,
     "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704447"
+    "timestamp": "2026-04-06T06:36:32.846472"
   },
   {
     "pair": "YFI/USDT",
-    "binance_price": 2321.13,
-    "gemini_price": 3470.73,
-    "spread_percent": 49.53,
-    "llm_score": 7.6,
+    "binance_price": 2323.49,
+    "gemini_price": 3472.4,
+    "spread_percent": 49.45,
+    "llm_score": 7.8,
     "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704454"
+    "timestamp": "2026-04-06T06:36:32.846478"
   },
   {
     "pair": "XTZ/USDT",
     "binance_price": 0.34,
     "gemini_price": 0.53,
-    "spread_percent": 53.11,
-    "llm_score": 7.9,
-    "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704466"
+    "spread_percent": 52.93,
+    "llm_score": 8.3,
+    "action": "TRADE",
+    "timestamp": "2026-04-06T06:36:32.846491"
   },
   {
     "pair": "UNI/USDT",
-    "binance_price": 8.51,
-    "gemini_price": 11.76,
-    "spread_percent": 38.1,
-    "llm_score": 7.9,
-    "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704473"
+    "binance_price": 8.52,
+    "gemini_price": 11.75,
+    "spread_percent": 37.97,
+    "llm_score": 8.0,
+    "action": "TRADE",
+    "timestamp": "2026-04-06T06:36:32.846497"
   },
   {
     "pair": "SOL/USDT",
-    "binance_price": 173.74,
-    "gemini_price": 271.7,
-    "spread_percent": 56.39,
-    "llm_score": 7.8,
-    "action": "MONITOR",
-    "timestamp": "2026-04-06T06:36:02.704479"
+    "binance_price": 173.71,
+    "gemini_price": 271.9,
+    "spread_percent": 56.53,
+    "llm_score": 8.4,
+    "action": "TRADE",
+    "timestamp": "2026-04-06T06:36:32.846514"
   }
 ]
