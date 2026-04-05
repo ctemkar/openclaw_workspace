@@ -1,0 +1,10 @@
+{
+  "system": "FinalPaperTradingSystem",
+  "mode": "100%_SIMULATION",
+  "real_money_allowed": 0.0,
+  "api_calls_allowed": 0,
+  "virtual_balance": 10000.0,
+  "created_at": "2026-04-05T22:30:35.271046",
+  "safety_level": "MAXIMUM",
+  "notes": "No API calls, no real money, 100% simulated"
+}

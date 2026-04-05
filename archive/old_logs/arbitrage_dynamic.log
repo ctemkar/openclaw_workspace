@@ -1,0 +1,576 @@
+2026-04-03 14:03:09,486 - INFO - 🚀 Starting Dynamic Arbitrage Bot
+2026-04-03 14:03:09,486 - INFO - ==================================================
+2026-04-03 14:03:09,486 - INFO - 🔍 Discovering cryptos supported on BOTH Gemini and Binance...
+2026-04-03 14:03:15,151 - INFO -    ✅ BTC: Supported on both exchanges
+2026-04-03 14:03:15,631 - INFO -    ✅ ETH: Supported on both exchanges
+2026-04-03 14:03:16,251 - INFO -    ✅ SOL: Supported on both exchanges
+2026-04-03 14:03:16,756 - INFO -    ✅ XRP: Supported on both exchanges
+2026-04-03 14:03:16,756 - INFO -    ❌ ADA: Not supported on both exchanges
+2026-04-03 14:03:17,368 - INFO -    ✅ DOT: Supported on both exchanges
+2026-04-03 14:03:17,986 - INFO -    ✅ TRX: Supported on both exchanges
+2026-04-03 14:03:17,986 - INFO -    ❌ ALGO: Not supported on both exchanges
+2026-04-03 14:03:17,986 - INFO -    ❌ NEAR: Not supported on both exchanges
+2026-04-03 14:03:18,599 - INFO -    ✅ ATOM: Supported on both exchanges
+2026-04-03 14:03:19,100 - INFO -    ✅ LINK: Supported on both exchanges
+2026-04-03 14:03:19,614 - INFO -    ✅ UNI: Supported on both exchanges
+2026-04-03 14:03:20,248 - INFO -    ✅ AAVE: Supported on both exchanges
+2026-04-03 14:03:20,811 - INFO -    ✅ COMP: Supported on both exchanges
+2026-04-03 14:03:21,469 - INFO -    ✅ YFI: Supported on both exchanges
+2026-04-03 14:03:21,469 - INFO -    ❌ SNX: Not supported on both exchanges
+2026-04-03 14:03:21,977 - INFO -    ✅ CRV: Supported on both exchanges
+2026-04-03 14:03:22,698 - INFO -    ✅ SUSHI: Supported on both exchanges
+2026-04-03 14:03:22,698 - INFO -    ❌ MKR: Not supported on both exchanges
+2026-04-03 14:03:22,698 - INFO -    ❌ 1INCH: Not supported on both exchanges
+2026-04-03 14:03:23,103 - INFO -    ✅ DOGE: Supported on both exchanges
+2026-04-03 14:03:23,924 - INFO -    ✅ SHIB: Supported on both exchanges
+2026-04-03 14:03:24,318 - INFO -    ✅ PEPE: Supported on both exchanges
+2026-04-03 14:03:24,945 - INFO -    ✅ WIF: Supported on both exchanges
+2026-04-03 14:03:25,663 - INFO -    ✅ BONK: Supported on both exchanges
+2026-04-03 14:03:26,176 - INFO -    ✅ FLOKI: Supported on both exchanges
+2026-04-03 14:03:26,177 - INFO -    ❌ MEME: Not supported on both exchanges
+2026-04-03 14:03:26,177 - INFO -    ❌ MATIC: Not supported on both exchanges
+2026-04-03 14:03:26,785 - INFO -    ✅ ARB: Supported on both exchanges
+2026-04-03 14:03:27,319 - INFO -    ✅ OP: Supported on both exchanges
+2026-04-03 14:03:27,917 - INFO -    ✅ IMX: Supported on both exchanges
+2026-04-03 14:03:27,917 - INFO -    ❌ METIS: Not supported on both exchanges
+2026-04-03 14:03:28,530 - INFO -    ✅ RNDR: Supported on both exchanges
+2026-04-03 14:03:29,144 - INFO -    ✅ FET: Supported on both exchanges
+2026-04-03 14:03:29,145 - INFO -    ❌ AGIX: Not supported on both exchanges
+2026-04-03 14:03:29,145 - INFO -    ❌ OCEAN: Not supported on both exchanges
+2026-04-03 14:03:29,662 - INFO -    ✅ FIL: Supported on both exchanges
+2026-04-03 14:03:30,282 - INFO -    ✅ SAND: Supported on both exchanges
+2026-04-03 14:03:30,987 - INFO -    ✅ MANA: Supported on both exchanges
+2026-04-03 14:03:30,987 - INFO -    ❌ AXS: Not supported on both exchanges
+2026-04-03 14:03:31,606 - INFO -    ✅ GALA: Supported on both exchanges
+2026-04-03 14:03:31,606 - INFO -    ❌ ENJ: Not supported on both exchanges
+2026-04-03 14:03:32,219 - INFO -    ✅ BNB: Supported on both exchanges
+2026-04-03 14:03:32,220 - INFO -    ❌ FTT: Not supported on both exchanges
+2026-04-03 14:03:32,220 - INFO -    ❌ LEO: Not supported on both exchanges
+2026-04-03 14:03:32,220 - INFO -    ❌ CRO: Not supported on both exchanges
+2026-04-03 14:03:32,848 - INFO -    ✅ LTC: Supported on both exchanges
+2026-04-03 14:03:33,384 - INFO -    ✅ BCH: Supported on both exchanges
+2026-04-03 14:03:33,385 - INFO -    ❌ XLM: Not supported on both exchanges
+2026-04-03 14:03:33,385 - INFO -    ❌ VET: Not supported on both exchanges
+2026-04-03 14:03:33,385 - INFO -    ❌ EOS: Not supported on both exchanges
+2026-04-03 14:03:34,005 - INFO -    ✅ XTZ: Supported on both exchanges
+2026-04-03 14:03:34,006 - INFO -    ❌ ETC: Not supported on both exchanges
+2026-04-03 14:03:34,006 - INFO -    ❌ THETA: Not supported on both exchanges
+2026-04-03 14:03:34,562 - INFO -    ✅ ZEC: Supported on both exchanges
+2026-04-03 14:03:34,562 - INFO -    ❌ XMR: Not supported on both exchanges
+2026-04-03 14:03:35,183 - INFO -    ✅ USDC: Supported on both exchanges
+2026-04-03 14:03:35,696 - INFO -    ✅ DAI: Supported on both exchanges
+2026-04-03 14:03:35,696 - INFO -    ❌ BUSD: Not supported on both exchanges
+2026-04-03 14:03:35,696 - INFO - 🎯 Found 36 cryptos supported on both exchanges
+2026-04-03 14:03:35,696 - INFO - 📊 Supported cryptos: BTC, ETH, SOL, XRP, DOT, TRX, ATOM, LINK, UNI, AAVE, COMP, YFI, CRV, SUSHI, DOGE, SHIB, PEPE, WIF, BONK, FLOKI, ARB, OP, IMX, RNDR, FET, FIL, SAND, MANA, GALA, BNB, LTC, BCH, XTZ, ZEC, USDC, DAI
+2026-04-03 14:03:35,696 - INFO - 🎯 Monitoring 36 cryptos
+2026-04-03 14:03:35,696 - INFO - 📈 Minimum spread: 0.4%
+2026-04-03 14:03:35,696 - INFO - 💰 Minimum profit: $0.15
+2026-04-03 14:03:35,696 - INFO - ==================================================
+2026-04-03 14:03:35,696 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:03:38,670 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:03:48,294 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:03:54,756 - INFO -    🎯 BCH: Spread=0.45%, Profit=$0.20
+2026-04-03 14:03:57,082 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:03:57,082 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:03:57,082 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:03:57,083 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:03:57,083 - INFO -    💰 BCH: 0.45% spread, $0.20 profit
+2026-04-03 14:04:27,138 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:04:29,879 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:04:36,828 - INFO -    🎯 PEPE: Spread=0.87%, Profit=$0.54
+2026-04-03 14:04:39,185 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:04:45,252 - INFO -    🎯 BCH: Spread=0.49%, Profit=$0.23
+2026-04-03 14:04:47,788 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:04:47,788 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:04:47,788 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:04:47,789 - INFO -    💰 PEPE: 0.87% spread, $0.54 profit
+2026-04-03 14:04:47,789 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:04:47,789 - INFO -    💰 BCH: 0.49% spread, $0.23 profit
+2026-04-03 14:05:17,927 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:05:21,946 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:05:28,651 - INFO -    🎯 PEPE: Spread=0.87%, Profit=$0.54
+2026-04-03 14:05:30,883 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:05:36,795 - INFO -    🎯 BCH: Spread=0.45%, Profit=$0.20
+2026-04-03 14:05:38,949 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:05:38,949 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:05:38,950 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:05:38,950 - INFO -    💰 PEPE: 0.87% spread, $0.54 profit
+2026-04-03 14:05:38,950 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:05:38,950 - INFO -    💰 BCH: 0.45% spread, $0.20 profit
+2026-04-03 14:06:09,017 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:06:11,752 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:06:20,502 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:06:26,601 - INFO -    🎯 BCH: Spread=0.47%, Profit=$0.22
+2026-04-03 14:06:28,714 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:06:28,714 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:06:28,714 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:06:28,714 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:06:28,714 - INFO -    💰 BCH: 0.47% spread, $0.22 profit
+2026-04-03 14:06:58,733 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:07:01,358 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:07:10,334 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:07:16,444 - INFO -    🎯 BCH: Spread=0.45%, Profit=$0.20
+2026-04-03 14:07:18,632 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:07:18,632 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:07:18,632 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:07:18,632 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:07:18,632 - INFO -    💰 BCH: 0.45% spread, $0.20 profit
+2026-04-03 14:07:48,721 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:07:51,205 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:08:05,849 - INFO -    🎯 BCH: Spread=0.45%, Profit=$0.20
+2026-04-03 14:08:07,897 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:08:07,897 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:08:07,897 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:08:07,897 - INFO -    💰 BCH: 0.45% spread, $0.20 profit
+2026-04-03 14:08:37,913 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:08:40,483 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:08:49,268 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:08:55,207 - INFO -    🎯 BCH: Spread=0.45%, Profit=$0.20
+2026-04-03 14:08:57,258 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:08:57,258 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:08:57,258 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:08:57,258 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:08:57,258 - INFO -    💰 BCH: 0.45% spread, $0.20 profit
+2026-04-03 14:09:27,333 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:09:29,981 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:09:38,500 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:09:44,457 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:09:46,609 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:09:46,609 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:09:46,609 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:09:46,609 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:09:46,609 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:10:16,684 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:10:19,380 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:10:28,085 - INFO -    🎯 ARB: Spread=0.43%, Profit=$0.18
+2026-04-03 14:10:34,126 - INFO -    🎯 BCH: Spread=0.43%, Profit=$0.18
+2026-04-03 14:10:36,253 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:10:36,254 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:10:36,254 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:10:36,254 - INFO -    💰 ARB: 0.43% spread, $0.18 profit
+2026-04-03 14:10:36,254 - INFO -    💰 BCH: 0.43% spread, $0.18 profit
+2026-04-03 14:11:06,298 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:11:08,943 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:11:16,856 - INFO -    🎯 FLOKI: Spread=0.41%, Profit=$0.16
+2026-04-03 14:11:17,439 - INFO -    🎯 ARB: Spread=0.53%, Profit=$0.27
+2026-04-03 14:11:23,585 - INFO -    🎯 BCH: Spread=0.43%, Profit=$0.18
+2026-04-03 14:11:25,784 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:11:25,784 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:11:25,784 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:11:25,784 - INFO -    💰 FLOKI: 0.41% spread, $0.16 profit
+2026-04-03 14:11:25,784 - INFO -    💰 ARB: 0.53% spread, $0.27 profit
+2026-04-03 14:11:25,784 - INFO -    💰 BCH: 0.43% spread, $0.18 profit
+2026-04-03 14:11:55,859 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:11:58,384 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:12:00,542 - INFO -    🎯 UNI: Spread=0.42%, Profit=$0.18
+2026-04-03 14:12:06,546 - INFO -    🎯 FLOKI: Spread=0.44%, Profit=$0.19
+2026-04-03 14:12:07,043 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:12:12,996 - INFO -    🎯 BCH: Spread=0.47%, Profit=$0.22
+2026-04-03 14:12:15,150 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:12:15,150 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:12:15,151 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:12:15,151 - INFO -    💰 UNI: 0.42% spread, $0.18 profit
+2026-04-03 14:12:15,151 - INFO -    💰 FLOKI: 0.44% spread, $0.19 profit
+2026-04-03 14:12:15,151 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:12:15,151 - INFO -    💰 BCH: 0.47% spread, $0.22 profit
+2026-04-03 14:12:45,163 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:12:47,785 - INFO -    🎯 DOT: Spread=0.57%, Profit=$0.29
+2026-04-03 14:12:56,448 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:13:02,602 - INFO -    🎯 BCH: Spread=0.47%, Profit=$0.22
+2026-04-03 14:13:04,652 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:13:04,653 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:13:04,653 - INFO -    💰 DOT: 0.57% spread, $0.29 profit
+2026-04-03 14:13:04,653 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:13:04,653 - INFO -    💰 BCH: 0.47% spread, $0.22 profit
+2026-04-03 14:13:34,701 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:13:37,315 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:13:40,519 - INFO -    🎯 COMP: Spread=0.42%, Profit=$0.18
+2026-04-03 14:13:45,919 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:13:51,862 - INFO -    🎯 BCH: Spread=0.43%, Profit=$0.18
+2026-04-03 14:13:54,072 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:13:54,073 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:13:54,073 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:13:54,073 - INFO -    💰 COMP: 0.42% spread, $0.18 profit
+2026-04-03 14:13:54,073 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:13:54,073 - INFO -    💰 BCH: 0.43% spread, $0.18 profit
+2026-04-03 14:14:24,132 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:14:26,646 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:14:30,057 - INFO -    🎯 COMP: Spread=0.48%, Profit=$0.22
+2026-04-03 14:14:35,684 - INFO -    🎯 ARB: Spread=0.53%, Profit=$0.27
+2026-04-03 14:14:41,808 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:14:44,088 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:14:44,088 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:14:44,088 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:14:44,088 - INFO -    💰 COMP: 0.48% spread, $0.22 profit
+2026-04-03 14:14:44,088 - INFO -    💰 ARB: 0.53% spread, $0.27 profit
+2026-04-03 14:14:44,089 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:15:14,163 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:15:16,629 - INFO -    🎯 DOT: Spread=0.57%, Profit=$0.29
+2026-04-03 14:15:19,878 - INFO -    🎯 COMP: Spread=0.48%, Profit=$0.22
+2026-04-03 14:15:25,349 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:15:31,333 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:15:33,571 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:15:33,572 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:15:33,572 - INFO -    💰 DOT: 0.57% spread, $0.29 profit
+2026-04-03 14:15:33,572 - INFO -    💰 COMP: 0.48% spread, $0.22 profit
+2026-04-03 14:15:33,572 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:15:33,572 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:16:03,595 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:16:06,180 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:16:08,371 - INFO -    🎯 UNI: Spread=0.42%, Profit=$0.18
+2026-04-03 14:16:09,488 - INFO -    🎯 COMP: Spread=0.54%, Profit=$0.27
+2026-04-03 14:16:14,972 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:16:20,953 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:16:23,105 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:16:23,105 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:16:23,105 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:16:23,105 - INFO -    💰 UNI: 0.42% spread, $0.18 profit
+2026-04-03 14:16:23,105 - INFO -    💰 COMP: 0.54% spread, $0.27 profit
+2026-04-03 14:16:23,105 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:16:23,105 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:16:53,180 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:16:55,845 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:16:58,124 - INFO -    🎯 UNI: Spread=0.45%, Profit=$0.20
+2026-04-03 14:17:04,695 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:17:10,814 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:17:12,964 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:17:12,964 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:17:12,965 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:17:12,965 - INFO -    💰 UNI: 0.45% spread, $0.20 profit
+2026-04-03 14:17:12,965 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:17:12,965 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:17:43,037 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:17:45,544 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:17:54,300 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:18:00,282 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:18:02,432 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:18:02,432 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:18:02,432 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:18:02,432 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:18:02,432 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:18:32,508 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:18:35,073 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:18:43,797 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:18:49,633 - INFO -    🎯 BCH: Spread=0.40%, Profit=$0.16
+2026-04-03 14:18:51,683 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:18:51,683 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:18:51,683 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:18:51,683 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:18:51,683 - INFO -    💰 BCH: 0.40% spread, $0.16 profit
+2026-04-03 14:19:21,758 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:19:24,352 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:19:32,818 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:19:43,169 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:19:43,169 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:19:43,169 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:19:43,169 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:20:13,227 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:20:15,801 - INFO -    🎯 DOT: Spread=0.65%, Profit=$0.36
+2026-04-03 14:20:24,587 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:20:32,577 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:20:32,577 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:20:32,577 - INFO -    💰 DOT: 0.65% spread, $0.36 profit
+2026-04-03 14:20:32,577 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:21:02,577 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:21:05,161 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:21:13,744 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:21:22,108 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:21:22,108 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:21:22,108 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:21:22,109 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:21:52,176 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:21:54,774 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:22:03,582 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:22:11,980 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:22:11,980 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:22:11,980 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:22:11,980 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:22:42,006 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:22:44,421 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:22:53,467 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:23:01,850 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:23:01,850 - INFO - 🎯 Found 2 arbitrage opportunities!
+2026-04-03 14:23:01,850 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:23:01,851 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:23:31,914 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:23:34,512 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:23:43,316 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:23:47,313 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:23:49,975 - INFO -    🎯 XTZ: Spread=0.40%, Profit=$0.16
+2026-04-03 14:23:51,611 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:23:51,611 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:23:51,612 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:23:51,612 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:23:51,612 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:23:51,612 - INFO -    💰 XTZ: 0.40% spread, $0.16 profit
+2026-04-03 14:24:21,677 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:24:24,584 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:24:34,198 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:24:38,511 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:24:41,393 - INFO -    🎯 XTZ: Spread=0.46%, Profit=$0.21
+2026-04-03 14:24:43,223 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:24:43,223 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:24:43,223 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:24:43,223 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:24:43,224 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:24:43,224 - INFO -    💰 XTZ: 0.46% spread, $0.21 profit
+2026-04-03 14:25:13,368 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:25:16,108 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:25:25,899 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:25:26,522 - INFO -    🎯 OP: Spread=0.46%, Profit=$0.21
+2026-04-03 14:25:29,956 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:25:32,893 - INFO -    🎯 XTZ: Spread=0.66%, Profit=$0.37
+2026-04-03 14:25:34,833 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:25:34,833 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:25:34,834 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:25:34,834 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:25:34,834 - INFO -    💰 OP: 0.46% spread, $0.21 profit
+2026-04-03 14:25:34,834 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:25:34,834 - INFO -    💰 XTZ: 0.66% spread, $0.37 profit
+2026-04-03 14:26:04,984 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:26:07,835 - INFO -    🎯 DOT: Spread=0.97%, Profit=$0.62
+2026-04-03 14:26:17,741 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:26:18,351 - INFO -    🎯 OP: Spread=0.46%, Profit=$0.21
+2026-04-03 14:26:21,986 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:26:24,837 - INFO -    🎯 XTZ: Spread=0.57%, Profit=$0.30
+2026-04-03 14:26:26,662 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:26:26,662 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:26:26,662 - INFO -    💰 DOT: 0.97% spread, $0.62 profit
+2026-04-03 14:26:26,662 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:26:26,662 - INFO -    💰 OP: 0.46% spread, $0.21 profit
+2026-04-03 14:26:26,662 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:26:26,662 - INFO -    💰 XTZ: 0.57% spread, $0.30 profit
+2026-04-03 14:26:56,778 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:26:59,706 - INFO -    🎯 DOT: Spread=0.97%, Profit=$0.62
+2026-04-03 14:27:09,448 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:27:13,750 - INFO -    🎯 MANA: Spread=0.62%, Profit=$0.34
+2026-04-03 14:27:16,733 - INFO -    🎯 XTZ: Spread=0.51%, Profit=$0.25
+2026-04-03 14:27:18,665 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:27:18,666 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:27:18,666 - INFO -    💰 DOT: 0.97% spread, $0.62 profit
+2026-04-03 14:27:18,666 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:27:18,666 - INFO -    💰 MANA: 0.62% spread, $0.34 profit
+2026-04-03 14:27:18,666 - INFO -    💰 XTZ: 0.51% spread, $0.25 profit
+2026-04-03 14:27:48,827 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:27:51,657 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:28:01,332 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:28:05,715 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:28:08,754 - INFO -    🎯 XTZ: Spread=0.49%, Profit=$0.23
+2026-04-03 14:28:10,495 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:28:10,495 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:28:10,495 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:28:10,495 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:28:10,495 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:28:10,495 - INFO -    💰 XTZ: 0.49% spread, $0.23 profit
+2026-04-03 14:28:40,642 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:28:43,368 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:28:52,996 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:28:56,889 - INFO -    🎯 MANA: Spread=0.85%, Profit=$0.52
+2026-04-03 14:28:59,959 - INFO -    🎯 XTZ: Spread=0.46%, Profit=$0.21
+2026-04-03 14:29:01,666 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:29:01,667 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:29:01,667 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:29:01,667 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:29:01,667 - INFO -    💰 MANA: 0.85% spread, $0.52 profit
+2026-04-03 14:29:01,667 - INFO -    💰 XTZ: 0.46% spread, $0.21 profit
+2026-04-03 14:29:31,811 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:29:34,674 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:29:44,090 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:29:48,193 - INFO -    🎯 MANA: Spread=0.85%, Profit=$0.52
+2026-04-03 14:29:51,264 - INFO -    🎯 XTZ: Spread=0.49%, Profit=$0.23
+2026-04-03 14:29:52,983 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:29:52,983 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:29:52,983 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:29:52,984 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:29:52,984 - INFO -    💰 MANA: 0.85% spread, $0.52 profit
+2026-04-03 14:29:52,984 - INFO -    💰 XTZ: 0.49% spread, $0.23 profit
+2026-04-03 14:30:23,080 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:30:26,052 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:30:35,702 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:30:39,798 - INFO -    🎯 MANA: Spread=0.62%, Profit=$0.34
+2026-04-03 14:30:42,766 - INFO -    🎯 XTZ: Spread=0.49%, Profit=$0.23
+2026-04-03 14:30:44,557 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:30:44,557 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:30:44,558 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:30:44,558 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:30:44,558 - INFO -    💰 MANA: 0.62% spread, $0.34 profit
+2026-04-03 14:30:44,558 - INFO -    💰 XTZ: 0.49% spread, $0.23 profit
+2026-04-03 14:31:14,678 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:31:17,491 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:31:27,109 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:31:30,288 - INFO -    🎯 FIL: Spread=0.49%, Profit=$0.23
+2026-04-03 14:31:31,514 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:31:34,524 - INFO -    🎯 XTZ: Spread=0.51%, Profit=$0.25
+2026-04-03 14:31:36,349 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:31:36,349 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:31:36,349 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:31:36,349 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:31:36,349 - INFO -    💰 FIL: 0.49% spread, $0.23 profit
+2026-04-03 14:31:36,349 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:31:36,349 - INFO -    💰 XTZ: 0.51% spread, $0.25 profit
+2026-04-03 14:32:06,494 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:32:09,191 - INFO -    🎯 DOT: Spread=0.89%, Profit=$0.55
+2026-04-03 14:32:19,332 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:32:22,046 - INFO -    🎯 FIL: Spread=0.49%, Profit=$0.23
+2026-04-03 14:32:23,322 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:32:26,329 - INFO -    🎯 XTZ: Spread=0.51%, Profit=$0.25
+2026-04-03 14:32:28,237 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:32:28,237 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:32:28,237 - INFO -    💰 DOT: 0.89% spread, $0.55 profit
+2026-04-03 14:32:28,237 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:32:28,237 - INFO -    💰 FIL: 0.49% spread, $0.23 profit
+2026-04-03 14:32:28,237 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:32:28,238 - INFO -    💰 XTZ: 0.51% spread, $0.25 profit
+2026-04-03 14:32:58,387 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:33:01,213 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:33:10,939 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:33:15,418 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:33:16,062 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:33:18,518 - INFO -    🎯 XTZ: Spread=0.49%, Profit=$0.23
+2026-04-03 14:33:20,259 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:33:20,259 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:33:20,260 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:33:20,260 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:33:20,260 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:33:20,260 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:33:20,260 - INFO -    💰 XTZ: 0.49% spread, $0.23 profit
+2026-04-03 14:33:50,403 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:33:53,127 - INFO -    🎯 DOT: Spread=0.81%, Profit=$0.49
+2026-04-03 14:34:02,651 - INFO -    🎯 ARB: Spread=0.96%, Profit=$0.61
+2026-04-03 14:34:06,750 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:34:07,375 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:34:09,616 - INFO -    🎯 XTZ: Spread=0.49%, Profit=$0.23
+2026-04-03 14:34:11,326 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:34:11,327 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:34:11,327 - INFO -    💰 DOT: 0.81% spread, $0.49 profit
+2026-04-03 14:34:11,327 - INFO -    💰 ARB: 0.96% spread, $0.61 profit
+2026-04-03 14:34:11,327 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:34:11,327 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:34:11,327 - INFO -    💰 XTZ: 0.49% spread, $0.23 profit
+2026-04-03 14:34:41,436 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:34:44,066 - INFO -    🎯 DOT: Spread=0.73%, Profit=$0.42
+2026-04-03 14:34:53,338 - INFO -    🎯 ARB: Spread=0.85%, Profit=$0.52
+2026-04-03 14:34:57,501 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:34:58,156 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:35:00,610 - INFO -    🎯 XTZ: Spread=0.43%, Profit=$0.18
+2026-04-03 14:35:02,456 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:35:02,457 - INFO - 🎯 Found 5 arbitrage opportunities!
+2026-04-03 14:35:02,457 - INFO -    💰 DOT: 0.73% spread, $0.42 profit
+2026-04-03 14:35:02,457 - INFO -    💰 ARB: 0.85% spread, $0.52 profit
+2026-04-03 14:35:02,457 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:35:02,457 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:35:02,457 - INFO -    💰 XTZ: 0.43% spread, $0.18 profit
+2026-04-03 14:35:32,579 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:35:45,152 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:35:54,262 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:35:54,262 - INFO - 🎯 Found 1 arbitrage opportunities!
+2026-04-03 14:35:54,262 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:36:24,367 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:36:35,537 - INFO -    🎯 ARB: Spread=0.53%, Profit=$0.27
+2026-04-03 14:36:43,726 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:36:43,726 - INFO - 🎯 Found 1 arbitrage opportunities!
+2026-04-03 14:36:43,727 - INFO -    💰 ARB: 0.53% spread, $0.27 profit
+2026-04-03 14:37:13,795 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:37:26,170 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:37:29,738 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:37:32,573 - INFO -    🎯 XTZ: Spread=0.46%, Profit=$0.21
+2026-04-03 14:37:34,106 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:37:34,106 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:37:34,106 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:37:34,106 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:37:34,106 - INFO -    💰 XTZ: 0.46% spread, $0.21 profit
+2026-04-03 14:38:04,182 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:38:15,576 - INFO -    🎯 ARB: Spread=0.64%, Profit=$0.35
+2026-04-03 14:38:19,445 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:38:22,081 - INFO -    🎯 XTZ: Spread=0.40%, Profit=$0.16
+2026-04-03 14:38:23,716 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:38:23,717 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:38:23,717 - INFO -    💰 ARB: 0.64% spread, $0.35 profit
+2026-04-03 14:38:23,717 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:38:23,717 - INFO -    💰 XTZ: 0.40% spread, $0.16 profit
+2026-04-03 14:38:53,786 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:39:05,069 - INFO -    🎯 ARB: Spread=0.53%, Profit=$0.27
+2026-04-03 14:39:08,933 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:39:11,696 - INFO -    🎯 XTZ: Spread=0.43%, Profit=$0.18
+2026-04-03 14:39:13,337 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:39:13,338 - INFO - 🎯 Found 3 arbitrage opportunities!
+2026-04-03 14:39:13,338 - INFO -    💰 ARB: 0.53% spread, $0.27 profit
+2026-04-03 14:39:13,338 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:39:13,338 - INFO -    💰 XTZ: 0.43% spread, $0.18 profit
+2026-04-03 14:39:43,399 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:39:54,836 - INFO -    🎯 ARB: Spread=0.86%, Profit=$0.53
+2026-04-03 14:39:58,667 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:39:59,205 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:40:01,370 - INFO -    🎯 XTZ: Spread=0.51%, Profit=$0.25
+2026-04-03 14:40:03,067 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:40:03,068 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:40:03,068 - INFO -    💰 ARB: 0.86% spread, $0.53 profit
+2026-04-03 14:40:03,068 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:40:03,068 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:40:03,068 - INFO -    💰 XTZ: 0.51% spread, $0.25 profit
+2026-04-03 14:40:33,078 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:40:44,112 - INFO -    🎯 ARB: Spread=0.86%, Profit=$0.53
+2026-04-03 14:40:47,965 - INFO -    🎯 MANA: Spread=0.62%, Profit=$0.34
+2026-04-03 14:40:48,479 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:40:50,671 - INFO -    🎯 XTZ: Spread=0.54%, Profit=$0.27
+2026-04-03 14:40:52,257 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:40:52,257 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:40:52,258 - INFO -    💰 ARB: 0.86% spread, $0.53 profit
+2026-04-03 14:40:52,258 - INFO -    💰 MANA: 0.62% spread, $0.34 profit
+2026-04-03 14:40:52,258 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:40:52,258 - INFO -    💰 XTZ: 0.54% spread, $0.27 profit
+2026-04-03 14:41:22,277 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:41:33,353 - INFO -    🎯 ARB: Spread=0.86%, Profit=$0.53
+2026-04-03 14:41:37,131 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:41:37,687 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:41:39,956 - INFO -    🎯 XTZ: Spread=0.66%, Profit=$0.37
+2026-04-03 14:41:41,610 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:41:41,610 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:41:41,611 - INFO -    💰 ARB: 0.86% spread, $0.53 profit
+2026-04-03 14:41:41,611 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:41:41,611 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:41:41,611 - INFO -    💰 XTZ: 0.66% spread, $0.37 profit
+2026-04-03 14:42:11,654 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:42:23,081 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:42:26,943 - INFO -    🎯 MANA: Spread=0.74%, Profit=$0.43
+2026-04-03 14:42:27,495 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:42:29,732 - INFO -    🎯 XTZ: Spread=0.60%, Profit=$0.32
+2026-04-03 14:42:31,373 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:42:31,373 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:42:31,373 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:42:31,373 - INFO -    💰 MANA: 0.74% spread, $0.43 profit
+2026-04-03 14:42:31,374 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:42:31,374 - INFO -    💰 XTZ: 0.60% spread, $0.32 profit
+2026-04-03 14:43:01,447 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:43:12,941 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:43:16,826 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:43:17,329 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:43:19,583 - INFO -    🎯 XTZ: Spread=0.54%, Profit=$0.27
+2026-04-03 14:43:21,176 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:43:21,176 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:43:21,177 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:43:21,177 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:43:21,177 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:43:21,177 - INFO -    💰 XTZ: 0.54% spread, $0.27 profit
+2026-04-03 14:43:51,226 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:44:02,488 - INFO -    🎯 ARB: Spread=0.75%, Profit=$0.44
+2026-04-03 14:44:06,283 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:44:06,901 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:44:08,967 - INFO -    🎯 XTZ: Spread=0.60%, Profit=$0.32
+2026-04-03 14:44:10,687 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:44:10,687 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:44:10,687 - INFO -    💰 ARB: 0.75% spread, $0.44 profit
+2026-04-03 14:44:10,687 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:44:10,687 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:44:10,687 - INFO -    💰 XTZ: 0.60% spread, $0.32 profit
+2026-04-03 14:44:40,722 - INFO - 📊 Scanning 36 cryptos for arbitrage...
+2026-04-03 14:44:51,953 - INFO -    🎯 ARB: Spread=0.86%, Profit=$0.53
+2026-04-03 14:44:55,805 - INFO -    🎯 MANA: Spread=0.50%, Profit=$0.24
+2026-04-03 14:44:56,315 - INFO -    🎯 GALA: Spread=0.69%, Profit=$0.39
+2026-04-03 14:44:58,586 - INFO -    🎯 XTZ: Spread=0.63%, Profit=$0.34
+2026-04-03 14:45:00,233 - WARNING -    ⚠️ Error fetching DAI: '>' not supported between instances of 'NoneType' and 'int'
+2026-04-03 14:45:00,234 - INFO - 🎯 Found 4 arbitrage opportunities!
+2026-04-03 14:45:00,234 - INFO -    💰 ARB: 0.86% spread, $0.53 profit
+2026-04-03 14:45:00,234 - INFO -    💰 MANA: 0.50% spread, $0.24 profit
+2026-04-03 14:45:00,234 - INFO -    💰 GALA: 0.69% spread, $0.39 profit
+2026-04-03 14:45:00,234 - INFO -    💰 XTZ: 0.63% spread, $0.34 profit

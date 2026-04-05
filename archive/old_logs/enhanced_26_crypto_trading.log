@@ -1,0 +1,448 @@
+2026-03-31 23:37:41,775 - INFO - ======================================================================
+2026-03-31 23:37:41,775 - INFO - 🚀 ENHANCED 26-CRYPTO TRADING BOT
+2026-03-31 23:37:41,775 - INFO - ======================================================================
+2026-03-31 23:37:41,775 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-03-31 23:37:41,775 - INFO - ₿ Binance SHORT: 26 cryptos ($134.27 capital)
+2026-03-31 23:37:41,775 - INFO - 📉 SHORT threshold: 3.0% drop (REAL MOVES ONLY)
+2026-03-31 23:37:41,775 - INFO - 💰 Position size: 10% of capital ($13.43)
+2026-03-31 23:37:41,776 - INFO - ⚖️  Leverage: 1x (SAFER)
+2026-03-31 23:37:41,776 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-03-31 23:37:41,776 - INFO - 📈 Max positions: 3
+2026-03-31 23:37:41,776 - INFO - 📉 Daily loss limit: -5%
+2026-03-31 23:37:41,776 - INFO - ⏰ Scan interval: 300 seconds
+2026-03-31 23:37:41,776 - INFO - ======================================================================
+2026-03-31 23:37:41,776 - INFO - ⚡ AUTOMATIC POSITION MANAGEMENT ENABLED
+2026-03-31 23:37:41,776 - INFO - ⚡ Will automatically close at SL/TP
+2026-03-31 23:37:41,776 - INFO - ⚡ Will free capital when needed
+2026-03-31 23:37:41,776 - INFO - ======================================================================
+2026-03-31 23:37:41,776 - INFO - 📊 Loaded 4 open positions
+2026-03-31 23:37:41,776 - INFO - ✅ Gemini API keys loaded
+2026-03-31 23:37:41,777 - INFO - ✅ Binance API keys loaded
+2026-03-31 23:37:41,778 - INFO - ✅ Gemini exchange initialized
+2026-03-31 23:37:41,781 - INFO - ✅ Binance Futures exchange initialized
+2026-03-31 23:37:41,781 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-03-31 23:37:41,781 - INFO - ======================================================================
+2026-03-31 23:37:41,781 - INFO - 📊 ENHANCED TRADING CYCLE - 23:37:41
+2026-03-31 23:37:41,781 - INFO - ======================================================================
+2026-03-31 23:37:41,781 - INFO - 🔍 Checking 4 open positions...
+2026-03-31 23:37:43,921 - WARNING - 🚨 STOP LOSS HIT: SOL/USDT at $81.2600 (SL: $0.0000)
+2026-03-31 23:37:43,921 - INFO - 🔄 CLOSING POSITION: SOL/USDT (STOP_LOSS)
+2026-03-31 23:37:43,921 - ERROR - ❌ Error closing        position SOL/USDT: 'amount'
+2026-03-31 23:37:44,031 - WARNING - 🚨 STOP LOSS HIT: ETH/USDT at $2065.6100 (SL: $0.0000)
+2026-03-31 23:37:44,032 - INFO - 🔄 CLOSING POSITION: ETH/USDT (STOP_LOSS)
+2026-03-31 23:37:44,032 - ERROR - ❌ Error closing        position ETH/USDT: 'amount'
+2026-03-31 23:37:44,143 - WARNING - 🚨 STOP LOSS HIT: XRP/USDT at $1.3169 (SL: $0.0000)
+2026-03-31 23:37:44,143 - INFO - 🔄 CLOSING POSITION: XRP/USDT (STOP_LOSS)
+2026-03-31 23:37:44,143 - ERROR - ❌ Error closing        position XRP/USDT: 'amount'
+2026-03-31 23:37:44,257 - WARNING - 🚨 STOP LOSS HIT: ADA/USDT at $0.2357 (SL: $0.0000)
+2026-03-31 23:37:44,257 - INFO - 🔄 CLOSING POSITION: ADA/USDT (STOP_LOSS)
+2026-03-31 23:37:44,257 - ERROR - ❌ Error closing        position ADA/USDT: 'amount'
+2026-03-31 23:37:44,257 - INFO - 📉 Closed 4 positions
+2026-03-31 23:37:44,377 - WARNING - ⚠️  Low capital: $2.77 available, need $13.43
+2026-03-31 23:37:44,377 - INFO - 🔧 Freeing capital by closing worst position: ETH/USDT
+2026-03-31 23:37:44,491 - INFO - 🔄 CLOSING POSITION: ETH/USDT (CAPITAL_FREEING)
+2026-03-31 23:37:44,491 - ERROR - ❌ Error closing        position ETH/USDT: 'amount'
+2026-03-31 23:37:44,492 - INFO - 💰 Freed up capital for new trades
+2026-03-31 23:37:44,492 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-03-31 23:37:44,829 - INFO - ⚡ BINANCE SHORT SIGNAL: SOL down -3.43%
+2026-03-31 23:37:44,829 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:37:45,054 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -5.08%
+2026-03-31 23:37:45,054 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:37:46,640 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-03-31 23:37:46,640 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:37:47,094 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.46%
+2026-03-31 23:37:47,094 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:37:47,094 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-03-31 23:37:47,320 - INFO - 🎯 Opportunities found this cycle: 0
+2026-03-31 23:37:47,320 - INFO - 📊 STATUS: 4/3 positions, Daily P&L: $0.00
+2026-03-31 23:37:47,320 - INFO - ⏱️  Cycle 1 duration: 5.5 seconds
+2026-03-31 23:37:47,320 - INFO - 📈 Total opportunities found: 0
+2026-03-31 23:37:47,320 - INFO - ⏰ Next cycle in 300 seconds...
+2026-03-31 23:40:23,408 - INFO - ======================================================================
+2026-03-31 23:40:23,408 - INFO - 🚀 ENHANCED 26-CRYPTO TRADING BOT
+2026-03-31 23:40:23,408 - INFO - ======================================================================
+2026-03-31 23:40:23,408 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-03-31 23:40:23,408 - INFO - ₿ Binance SHORT: 26 cryptos ($134.27 capital)
+2026-03-31 23:40:23,408 - INFO - 📉 SHORT threshold: 3.0% drop (REAL MOVES ONLY)
+2026-03-31 23:40:23,408 - INFO - 💰 Position size: 10% of capital ($13.43)
+2026-03-31 23:40:23,408 - INFO - ⚖️  Leverage: 1x (SAFER)
+2026-03-31 23:40:23,408 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-03-31 23:40:23,408 - INFO - 📈 Max positions: 3
+2026-03-31 23:40:23,408 - INFO - 📉 Daily loss limit: -5%
+2026-03-31 23:40:23,408 - INFO - ⏰ Scan interval: 300 seconds
+2026-03-31 23:40:23,408 - INFO - ======================================================================
+2026-03-31 23:40:23,408 - INFO - ⚡ AUTOMATIC POSITION MANAGEMENT ENABLED
+2026-03-31 23:40:23,408 - INFO - ⚡ Will automatically close at SL/TP
+2026-03-31 23:40:23,408 - INFO - ⚡ Will free capital when needed
+2026-03-31 23:40:23,408 - INFO - ======================================================================
+2026-03-31 23:40:23,408 - INFO - 📊 Loaded 4 open positions
+2026-03-31 23:40:23,408 - INFO - ✅ Gemini API keys loaded
+2026-03-31 23:40:23,409 - INFO - ✅ Binance API keys loaded
+2026-03-31 23:40:23,410 - INFO - ✅ Gemini exchange initialized
+2026-03-31 23:40:23,413 - INFO - ✅ Binance Futures exchange initialized
+2026-03-31 23:40:23,413 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-03-31 23:40:23,413 - INFO - ======================================================================
+2026-03-31 23:40:23,413 - INFO - 📊 ENHANCED TRADING CYCLE - 23:40:23
+2026-03-31 23:40:23,413 - INFO - ======================================================================
+2026-03-31 23:40:23,413 - INFO - 🔍 Checking 4 open positions...
+2026-03-31 23:40:25,879 - WARNING - ⚠️  Low capital: $0.00 available, need $13.43
+2026-03-31 23:40:25,880 - INFO - 🔧 Freeing capital by closing worst position: ETH/USDT
+2026-03-31 23:40:25,990 - INFO - 🔄 CLOSING POSITION: ETH/USDT (CAPITAL_FREEING)
+2026-03-31 23:40:26,214 - INFO - ✅ POSITION CLOSED: ETH/USDT
+2026-03-31 23:40:26,214 - INFO -    Order ID: 8389766144118639496
+2026-03-31 23:40:26,214 - INFO -    Close Price: $2086.8300
+2026-03-31 23:40:26,214 - INFO -    P&L: -1.89%
+2026-03-31 23:40:26,216 - INFO - 📝 Position updated: ETH/USDT -> CLOSED
+2026-03-31 23:40:26,216 - INFO - 📊 Loaded 3 open positions
+2026-03-31 23:40:26,217 - INFO - 💰 Daily P&L updated: $-0.57
+2026-03-31 23:40:26,217 - INFO - 💰 Freed up capital for new trades
+2026-03-31 23:40:26,217 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-03-31 23:40:26,794 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -4.22%
+2026-03-31 23:40:26,794 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:40:28,367 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-03-31 23:40:28,367 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:40:28,818 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.03%
+2026-03-31 23:40:28,819 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:40:28,819 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-03-31 23:40:29,044 - INFO - 🎯 Opportunities found this cycle: 0
+2026-03-31 23:40:29,045 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-0.57
+2026-03-31 23:40:29,045 - INFO - ⏱️  Cycle 1 duration: 5.6 seconds
+2026-03-31 23:40:29,045 - INFO - 📈 Total opportunities found: 0
+2026-03-31 23:40:29,045 - INFO - ⏰ Next cycle in 300 seconds...
+2026-03-31 23:45:29,157 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-03-31 23:45:29,157 - INFO - ======================================================================
+2026-03-31 23:45:29,158 - INFO - 📊 ENHANCED TRADING CYCLE - 23:45:29
+2026-03-31 23:45:29,158 - INFO - ======================================================================
+2026-03-31 23:45:29,158 - INFO - 🔍 Checking 3 open positions...
+2026-03-31 23:45:29,733 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-03-31 23:45:30,293 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.79%
+2026-03-31 23:45:30,293 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:45:31,847 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-03-31 23:45:31,847 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:45:32,294 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-03-31 23:45:32,515 - INFO - 🎯 Opportunities found this cycle: 0
+2026-03-31 23:45:32,515 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-0.57
+2026-03-31 23:45:32,515 - INFO - ⏱️  Cycle 2 duration: 3.4 seconds
+2026-03-31 23:45:32,515 - INFO - 📈 Total opportunities found: 0
+2026-03-31 23:45:32,515 - INFO - ⏰ Next cycle in 300 seconds...
+2026-03-31 23:50:32,517 - INFO - 
+🔄 CYCLE 3 STARTING...
+2026-03-31 23:50:32,518 - INFO - ======================================================================
+2026-03-31 23:50:32,518 - INFO - 📊 ENHANCED TRADING CYCLE - 23:50:32
+2026-03-31 23:50:32,518 - INFO - ======================================================================
+2026-03-31 23:50:32,518 - INFO - 🔍 Checking 3 open positions...
+2026-03-31 23:50:33,040 - WARNING - ⚠️  Low capital: $0.00 available, need $13.43
+2026-03-31 23:50:33,040 - INFO - 🔧 Freeing capital by closing worst position: SOL/USDT
+2026-03-31 23:50:33,149 - INFO - 🔄 CLOSING POSITION: SOL/USDT (CAPITAL_FREEING)
+2026-03-31 23:50:33,497 - INFO - ✅ POSITION CLOSED: SOL/USDT
+2026-03-31 23:50:33,498 - INFO -    Order ID: 206517319473
+2026-03-31 23:50:33,498 - INFO -    Close Price: $82.2200
+2026-03-31 23:50:33,498 - INFO -    P&L: -1.58%
+2026-03-31 23:50:33,499 - INFO - 📝 Position updated: SOL/USDT -> CLOSED
+2026-03-31 23:50:33,500 - INFO - 📊 Loaded 2 open positions
+2026-03-31 23:50:33,500 - INFO - 💰 Daily P&L updated: $-1.04
+2026-03-31 23:50:33,500 - INFO - 💰 Freed up capital for new trades
+2026-03-31 23:50:33,500 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-03-31 23:50:34,055 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.79%
+2026-03-31 23:50:34,055 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-03-31 23:50:34,055 - INFO -     Current price: $0.2385
+2026-03-31 23:50:34,055 - INFO -     24h change: -3.79%
+2026-03-31 23:50:34,055 - INFO -     Position size: 56.297694 contracts
+2026-03-31 23:50:34,055 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-03-31 23:50:34,056 - INFO -     Capital at risk: $13.43
+2026-03-31 23:50:34,056 - INFO -     Stop-loss: $0.2457 (+3%)
+2026-03-31 23:50:34,056 - INFO -     Take-profit: $0.2266 (-5%)
+2026-03-31 23:50:34,056 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-03-31 23:50:34,479 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63796683744
+2026-03-31 23:50:34,480 - INFO -    Shorted 56.297694 contracts
+2026-03-31 23:50:34,480 - INFO -    At price: $0.2385
+2026-03-31 23:50:34,480 - INFO -    Position value: $13.43 (1x)
+2026-03-31 23:50:34,481 - INFO - 📝 Position saved: ADA/USDT sell
+2026-03-31 23:50:34,482 - INFO - 📊 Loaded 3 open positions
+2026-03-31 23:50:36,036 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-03-31 23:50:36,036 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:50:36,485 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.08%
+2026-03-31 23:50:36,485 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:50:36,485 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-03-31 23:50:36,707 - INFO - 🎯 Opportunities found this cycle: 1
+2026-03-31 23:50:36,707 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.04
+2026-03-31 23:50:36,708 - INFO - ⏱️  Cycle 3 duration: 4.2 seconds
+2026-03-31 23:50:36,708 - INFO - 📈 Total opportunities found: 1
+2026-03-31 23:50:36,708 - INFO - ⏰ Next cycle in 300 seconds...
+2026-03-31 23:55:36,844 - INFO - 
+🔄 CYCLE 4 STARTING...
+2026-03-31 23:55:36,845 - INFO - ======================================================================
+2026-03-31 23:55:36,845 - INFO - 📊 ENHANCED TRADING CYCLE - 23:55:36
+2026-03-31 23:55:36,845 - INFO - ======================================================================
+2026-03-31 23:55:36,845 - INFO - 🔍 Checking 3 open positions...
+2026-03-31 23:55:37,353 - WARNING - ⚠️  Low capital: $8.81 available, need $13.43
+2026-03-31 23:55:37,353 - INFO - 🔧 Freeing capital by closing worst position: XRP/USDT
+2026-03-31 23:55:37,465 - INFO - 🔄 CLOSING POSITION: XRP/USDT (CAPITAL_FREEING)
+2026-03-31 23:55:37,785 - INFO - ✅ POSITION CLOSED: XRP/USDT
+2026-03-31 23:55:37,785 - INFO -    Order ID: 145597616285
+2026-03-31 23:55:37,785 - INFO -    Close Price: $1.3294
+2026-03-31 23:55:37,785 - INFO -    P&L: -1.02%
+2026-03-31 23:55:37,786 - INFO - 📝 Position updated: XRP/USDT -> CLOSED
+2026-03-31 23:55:37,786 - INFO - 📊 Loaded 2 open positions
+2026-03-31 23:55:37,786 - INFO - 💰 Daily P&L updated: $-1.35
+2026-03-31 23:55:37,786 - INFO - 💰 Freed up capital for new trades
+2026-03-31 23:55:37,786 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-03-31 23:55:38,332 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.35%
+2026-03-31 23:55:38,332 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-03-31 23:55:38,332 - INFO -     Current price: $0.2392
+2026-03-31 23:55:38,333 - INFO -     24h change: -3.35%
+2026-03-31 23:55:38,333 - INFO -     Position size: 56.132943 contracts
+2026-03-31 23:55:38,333 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-03-31 23:55:38,333 - INFO -     Capital at risk: $13.43
+2026-03-31 23:55:38,333 - INFO -     Stop-loss: $0.2464 (+3%)
+2026-03-31 23:55:38,333 - INFO -     Take-profit: $0.2272 (-5%)
+2026-03-31 23:55:38,333 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-03-31 23:55:38,644 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63796810232
+2026-03-31 23:55:38,644 - INFO -    Shorted 56.132943 contracts
+2026-03-31 23:55:38,644 - INFO -    At price: $0.2392
+2026-03-31 23:55:38,644 - INFO -    Position value: $13.43 (1x)
+2026-03-31 23:55:38,644 - INFO - 📝 Position saved: ADA/USDT sell
+2026-03-31 23:55:38,645 - INFO - 📊 Loaded 3 open positions
+2026-03-31 23:55:40,196 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-03-31 23:55:40,197 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:55:40,636 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.08%
+2026-03-31 23:55:40,636 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-03-31 23:55:40,637 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-03-31 23:55:40,859 - INFO - 🎯 Opportunities found this cycle: 1
+2026-03-31 23:55:40,859 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.35
+2026-03-31 23:55:40,859 - INFO - ⏱️  Cycle 4 duration: 4.0 seconds
+2026-03-31 23:55:40,859 - INFO - 📈 Total opportunities found: 2
+2026-03-31 23:55:40,859 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:00:40,935 - INFO - 
+🔄 CYCLE 5 STARTING...
+2026-04-01 00:00:40,936 - INFO - ======================================================================
+2026-04-01 00:00:40,936 - INFO - 📊 ENHANCED TRADING CYCLE - 00:00:40
+2026-04-01 00:00:40,936 - INFO - ======================================================================
+2026-04-01 00:00:40,936 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 00:00:41,458 - WARNING - ⚠️  Low capital: $4.95 available, need $13.43
+2026-04-01 00:00:41,458 - INFO - 🔧 Freeing capital by closing worst position: ADA/USDT
+2026-04-01 00:00:41,570 - INFO - 🔄 CLOSING POSITION: ADA/USDT (CAPITAL_FREEING)
+2026-04-01 00:00:41,918 - INFO - ✅ POSITION CLOSED: ADA/USDT
+2026-04-01 00:00:41,918 - INFO -    Order ID: 63796925858
+2026-04-01 00:00:41,918 - INFO -    Close Price: $0.2396
+2026-04-01 00:00:41,918 - INFO -    P&L: -0.46%
+2026-04-01 00:00:41,920 - INFO - 📝 Position updated: ADA/USDT -> CLOSED
+2026-04-01 00:00:41,920 - INFO - 📊 Loaded 2 open positions
+2026-04-01 00:00:41,920 - INFO - 💰 Daily P&L updated: $-1.41
+2026-04-01 00:00:41,921 - INFO - 💰 Freed up capital for new trades
+2026-04-01 00:00:41,921 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 00:00:42,484 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.46%
+2026-04-01 00:00:42,484 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 00:00:42,484 - INFO -     Current price: $0.2397
+2026-04-01 00:00:42,484 - INFO -     24h change: -3.46%
+2026-04-01 00:00:42,485 - INFO -     Position size: 56.015853 contracts
+2026-04-01 00:00:42,485 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 00:00:42,485 - INFO -     Capital at risk: $13.43
+2026-04-01 00:00:42,485 - INFO -     Stop-loss: $0.2469 (+3%)
+2026-04-01 00:00:42,485 - INFO -     Take-profit: $0.2277 (-5%)
+2026-04-01 00:00:42,485 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 00:00:42,840 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63796926322
+2026-04-01 00:00:42,840 - INFO -    Shorted 56.015853 contracts
+2026-04-01 00:00:42,840 - INFO -    At price: $0.2397
+2026-04-01 00:00:42,840 - INFO -    Position value: $13.43 (1x)
+2026-04-01 00:00:42,842 - INFO - 📝 Position saved: ADA/USDT sell
+2026-04-01 00:00:42,843 - INFO - 📊 Loaded 3 open positions
+2026-04-01 00:00:44,422 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:00:44,423 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:00:44,868 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.04%
+2026-04-01 00:00:44,868 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:00:44,868 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:00:45,091 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:00:45,091 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.41
+2026-04-01 00:00:45,091 - INFO - ⏱️  Cycle 5 duration: 4.2 seconds
+2026-04-01 00:00:45,091 - INFO - 📈 Total opportunities found: 3
+2026-04-01 00:00:45,091 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:05:45,236 - INFO - 
+🔄 CYCLE 6 STARTING...
+2026-04-01 00:05:45,236 - INFO - ======================================================================
+2026-04-01 00:05:45,237 - INFO - 📊 ENHANCED TRADING CYCLE - 00:05:45
+2026-04-01 00:05:45,237 - INFO - ======================================================================
+2026-04-01 00:05:45,237 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 00:05:45,848 - WARNING - ⚠️  Low capital: $5.34 available, need $13.43
+2026-04-01 00:05:45,849 - INFO - 🔧 Freeing capital by closing worst position: ADA/USDT
+2026-04-01 00:05:45,964 - INFO - 🔄 CLOSING POSITION: ADA/USDT (CAPITAL_FREEING)
+2026-04-01 00:05:46,268 - INFO - ✅ POSITION CLOSED: ADA/USDT
+2026-04-01 00:05:46,269 - INFO -    Order ID: 63797048764
+2026-04-01 00:05:46,269 - INFO -    Close Price: $0.2392
+2026-04-01 00:05:46,269 - INFO -    P&L: -0.29%
+2026-04-01 00:05:46,271 - INFO - 📝 Position updated: ADA/USDT -> CLOSED
+2026-04-01 00:05:46,271 - INFO - 📊 Loaded 2 open positions
+2026-04-01 00:05:46,271 - INFO - 💰 Daily P&L updated: $-1.45
+2026-04-01 00:05:46,271 - INFO - 💰 Freed up capital for new trades
+2026-04-01 00:05:46,272 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 00:05:46,906 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.55%
+2026-04-01 00:05:46,906 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 00:05:46,906 - INFO -     Current price: $0.2392
+2026-04-01 00:05:46,907 - INFO -     24h change: -3.55%
+2026-04-01 00:05:46,907 - INFO -     Position size: 56.132943 contracts
+2026-04-01 00:05:46,907 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 00:05:46,907 - INFO -     Capital at risk: $13.43
+2026-04-01 00:05:46,907 - INFO -     Stop-loss: $0.2464 (+3%)
+2026-04-01 00:05:46,907 - INFO -     Take-profit: $0.2272 (-5%)
+2026-04-01 00:05:46,907 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 00:05:47,314 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63797048871
+2026-04-01 00:05:47,314 - INFO -    Shorted 56.132943 contracts
+2026-04-01 00:05:47,314 - INFO -    At price: $0.2392
+2026-04-01 00:05:47,314 - INFO -    Position value: $13.43 (1x)
+2026-04-01 00:05:47,316 - INFO - 📝 Position saved: ADA/USDT sell
+2026-04-01 00:05:47,317 - INFO - 📊 Loaded 3 open positions
+2026-04-01 00:05:49,119 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:05:49,119 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:05:49,643 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.04%
+2026-04-01 00:05:49,643 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:05:49,643 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:05:49,943 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:05:49,943 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.45
+2026-04-01 00:05:49,943 - INFO - ⏱️  Cycle 6 duration: 4.7 seconds
+2026-04-01 00:05:49,943 - INFO - 📈 Total opportunities found: 4
+2026-04-01 00:05:49,943 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:10:50,028 - INFO - 
+🔄 CYCLE 7 STARTING...
+2026-04-01 00:10:50,029 - INFO - ======================================================================
+2026-04-01 00:10:50,029 - INFO - 📊 ENHANCED TRADING CYCLE - 00:10:50
+2026-04-01 00:10:50,029 - INFO - ======================================================================
+2026-04-01 00:10:50,029 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 00:10:50,579 - WARNING - ⚠️  Low capital: $5.12 available, need $13.43
+2026-04-01 00:10:50,579 - INFO - 🔧 Freeing capital by closing worst position: ADA/USDT
+2026-04-01 00:10:50,768 - INFO - 🔄 CLOSING POSITION: ADA/USDT (CAPITAL_FREEING)
+2026-04-01 00:10:50,918 - INFO - ✅ POSITION CLOSED: ADA/USDT
+2026-04-01 00:10:50,918 - INFO -    Order ID: 63797184960
+2026-04-01 00:10:50,918 - INFO -    Close Price: $0.2392
+2026-04-01 00:10:50,918 - INFO -    P&L: 0.00%
+2026-04-01 00:10:50,919 - INFO - 📝 Position updated: ADA/USDT -> CLOSED
+2026-04-01 00:10:50,919 - INFO - 📊 Loaded 2 open positions
+2026-04-01 00:10:50,919 - INFO - 💰 Daily P&L updated: $-1.45
+2026-04-01 00:10:50,919 - INFO - 💰 Freed up capital for new trades
+2026-04-01 00:10:50,919 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 00:10:51,514 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.47%
+2026-04-01 00:10:51,514 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 00:10:51,514 - INFO -     Current price: $0.2392
+2026-04-01 00:10:51,514 - INFO -     24h change: -3.47%
+2026-04-01 00:10:51,514 - INFO -     Position size: 56.132943 contracts
+2026-04-01 00:10:51,514 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 00:10:51,514 - INFO -     Capital at risk: $13.43
+2026-04-01 00:10:51,514 - INFO -     Stop-loss: $0.2464 (+3%)
+2026-04-01 00:10:51,514 - INFO -     Take-profit: $0.2272 (-5%)
+2026-04-01 00:10:51,514 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 00:10:51,831 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63797185604
+2026-04-01 00:10:51,832 - INFO -    Shorted 56.132943 contracts
+2026-04-01 00:10:51,832 - INFO -    At price: $0.2392
+2026-04-01 00:10:51,832 - INFO -    Position value: $13.43 (1x)
+2026-04-01 00:10:51,833 - INFO - 📝 Position saved: ADA/USDT sell
+2026-04-01 00:10:51,833 - INFO - 📊 Loaded 3 open positions
+2026-04-01 00:10:53,615 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:10:53,615 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:10:54,144 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -3.23%
+2026-04-01 00:10:54,145 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:10:54,145 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:10:54,439 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:10:54,440 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.45
+2026-04-01 00:10:54,440 - INFO - ⏱️  Cycle 7 duration: 4.4 seconds
+2026-04-01 00:10:54,440 - INFO - 📈 Total opportunities found: 5
+2026-04-01 00:10:54,440 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:15:54,515 - INFO - 
+🔄 CYCLE 8 STARTING...
+2026-04-01 00:15:54,515 - INFO - ======================================================================
+2026-04-01 00:15:54,515 - INFO - 📊 ENHANCED TRADING CYCLE - 00:15:54
+2026-04-01 00:15:54,515 - INFO - ======================================================================
+2026-04-01 00:15:54,515 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 00:15:55,087 - WARNING - ⚠️  Low capital: $3.61 available, need $13.43
+2026-04-01 00:15:55,087 - INFO - 🔧 Freeing capital by closing worst position: ADA/USDT
+2026-04-01 00:15:55,202 - INFO - 🔄 CLOSING POSITION: ADA/USDT (CAPITAL_FREEING)
+2026-04-01 00:15:55,491 - INFO - ✅ POSITION CLOSED: ADA/USDT
+2026-04-01 00:15:55,491 - INFO -    Order ID: 63797360058
+2026-04-01 00:15:55,491 - INFO -    Close Price: $0.2417
+2026-04-01 00:15:55,491 - INFO -    P&L: -1.05%
+2026-04-01 00:15:55,493 - INFO - 📝 Position updated: ADA/USDT -> CLOSED
+2026-04-01 00:15:55,494 - INFO - 📊 Loaded 3 open positions
+2026-04-01 00:15:55,494 - INFO - 💰 Daily P&L updated: $-1.59
+2026-04-01 00:15:55,494 - INFO - 💰 Freed up capital for new trades
+2026-04-01 00:15:55,494 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 00:15:58,002 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:15:58,002 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:15:58,638 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:15:58,865 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 00:15:58,866 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.59
+2026-04-01 00:15:58,866 - INFO - ⏱️  Cycle 8 duration: 4.4 seconds
+2026-04-01 00:15:58,866 - INFO - 📈 Total opportunities found: 5
+2026-04-01 00:15:58,866 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:20:58,924 - INFO - 
+🔄 CYCLE 9 STARTING...
+2026-04-01 00:20:58,925 - INFO - ======================================================================
+2026-04-01 00:20:58,925 - INFO - 📊 ENHANCED TRADING CYCLE - 00:20:58
+2026-04-01 00:20:58,926 - INFO - ======================================================================
+2026-04-01 00:20:58,926 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 00:20:59,618 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 00:21:01,730 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:21:01,730 - WARNING - ⚠️  Cannot trade: Max positions reached (3)
+2026-04-01 00:21:02,163 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:21:02,379 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 00:21:02,380 - INFO - 📊 STATUS: 3/3 positions, Daily P&L: $-1.59
+2026-04-01 00:21:02,380 - INFO - ⏱️  Cycle 9 duration: 3.5 seconds
+2026-04-01 00:21:02,380 - INFO - 📈 Total opportunities found: 5
+2026-04-01 00:21:02,380 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:48:47,862 - INFO - ======================================================================
+2026-04-01 05:48:47,864 - INFO - 🚀 ENHANCED 26-CRYPTO TRADING BOT
+2026-04-01 05:48:47,864 - INFO - ======================================================================
+2026-04-01 05:48:47,864 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-01 05:48:47,864 - INFO - ₿ Binance SHORT: 26 cryptos ($134.27 capital)
+2026-04-01 05:48:47,864 - INFO - 📉 SHORT threshold: 3.0% drop (REAL MOVES ONLY)
+2026-04-01 05:48:47,864 - INFO - 💰 Position size: 10% of capital ($13.43)
+2026-04-01 05:48:47,864 - INFO - ⚖️  Leverage: 1x (SAFER)
+2026-04-01 05:48:47,864 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-04-01 05:48:47,864 - INFO - 📈 Max positions: 3
+2026-04-01 05:48:47,864 - INFO - 📉 Daily loss limit: -5%
+2026-04-01 05:48:47,864 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-01 05:48:47,864 - INFO - ======================================================================
+2026-04-01 05:48:47,864 - INFO - ⚡ AUTOMATIC POSITION MANAGEMENT ENABLED
+2026-04-01 05:48:47,864 - INFO - ⚡ Will automatically close at SL/TP
+2026-04-01 05:48:47,864 - INFO - ⚡ Will free capital when needed
+2026-04-01 05:48:47,864 - INFO - ======================================================================
+2026-04-01 05:48:47,865 - INFO - 📊 Loaded 3 open positions
+2026-04-01 05:48:47,865 - INFO - ✅ Gemini API keys loaded
+2026-04-01 05:48:47,866 - INFO - ✅ Binance API keys loaded
+2026-04-01 05:48:47,867 - INFO - ✅ Gemini exchange initialized
+2026-04-01 05:48:47,870 - INFO - ✅ Binance Futures exchange initialized
+2026-04-01 05:48:47,871 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-01 05:48:47,871 - INFO - ======================================================================
+2026-04-01 05:48:47,872 - INFO - 📊 ENHANCED TRADING CYCLE - 05:48:47
+2026-04-01 05:48:47,872 - INFO - ======================================================================
+2026-04-01 05:48:47,872 - INFO - 🔍 Checking 3 open positions...
+2026-04-01 05:48:50,725 - WARNING - ⚠️  Low capital: $3.64 available, need $13.43
+2026-04-01 05:48:50,725 - INFO - 🔧 Freeing capital by closing worst position: ADA/USDT
+2026-04-01 05:48:50,836 - INFO - 🔄 CLOSING POSITION: ADA/USDT (CAPITAL_FREEING)
+2026-04-01 05:48:51,038 - INFO - ✅ POSITION CLOSED: ADA/USDT
+2026-04-01 05:48:51,038 - INFO -    Order ID: 63804277848
+2026-04-01 05:48:51,038 - INFO -    Close Price: $0.2400
+2026-04-01 05:48:51,038 - INFO -    P&L: -0.46%
+2026-04-01 05:48:51,062 - INFO - 📝 Position updated: ADA/USDT -> CLOSED
+2026-04-01 05:48:51,062 - INFO - 📊 Loaded 2 open positions
+2026-04-01 05:48:51,062 - INFO - 💰 Daily P&L updated: $-0.07
+2026-04-01 05:48:51,062 - INFO - 💰 Freed up capital for new trades
+2026-04-01 05:48:51,062 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:48:53,878 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:48:53,878 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:48:53,879 - INFO -     Current price: $1650.1000
+2026-04-01 05:48:53,879 - INFO -     24h change: -3.40%
+2026-04-01 05:48:53,879 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:48:53,879 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:48:53,879 - INFO -     Capital at risk: $13.43
+2026-04-01 05:48:53,879 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:48:53,879 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:48:53,879 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:48:54,192 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:48:54,639 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:48:54,858 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 05:48:54,858 - INFO - 📊 STATUS: 2/3 positions, Daily P&L: $-0.07
+2026-04-01 05:48:54,858 - INFO - ⏱️  Cycle 1 duration: 7.0 seconds
+2026-04-01 05:48:54,858 - INFO - 📈 Total opportunities found: 1
+2026-04-01 05:48:54,858 - INFO - ⏰ Next cycle in 300 seconds...

@@ -1,0 +1,10 @@
+2026-04-02 02:26:28,471 - CIO - INFO - 
+🧠 CIO ANALYSIS: BTC
+2026-04-02 02:26:28,471 - CIO - INFO -    Automated consensus: BUY (Net: 2.5)
+2026-04-02 02:26:28,471 - CIO - WARNING -    ⚠️ llama3.1:latest: 🚨 CONTRADICTION: Score says BUY (BUY) but comment is BEARISH
+2026-04-02 02:26:28,471 - CIO - WARNING -    🚨 1 CONTRADICTIONS FOUND!
+2026-04-02 02:26:28,471 - CIO - INFO -    Comment sentiments: BEARISH, BULLISH, NEUTRAL
+2026-04-02 02:26:28,471 - CIO - INFO -    Model decisions: BUY:1, SELL:1, HOLD:0
+2026-04-02 02:26:28,471 - CIO - INFO -    🎯 CIO FINAL DECISION: HOLD (Confidence: 8/10)
+2026-04-02 02:26:28,471 - CIO - INFO -    📝 Reason: Mixed signals with contradictions. 1 models have score-comment mismatches
+2026-04-02 02:26:28,471 - CIO - INFO -    ⚠️ llama3.1: Score=BUY, Comment=BEARISH → SELL

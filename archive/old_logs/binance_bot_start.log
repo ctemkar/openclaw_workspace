@@ -1,0 +1,538 @@
+2026-03-31 17:26:17,270 - INFO - ======================================================================
+2026-03-31 17:26:17,271 - INFO - 🚀 BINANCE FUTURES SHORT TRADING BOT
+2026-03-31 17:26:17,271 - INFO - ======================================================================
+2026-03-31 17:26:17,271 - INFO - SHORT threshold: 0.8% drop
+2026-03-31 17:26:17,271 - INFO - Futures capital: $50.00
+2026-03-31 17:26:17,271 - INFO - Leverage: 3x (conservative)
+2026-03-31 17:26:17,271 - INFO - Position size: 20% of capital
+2026-03-31 17:26:17,271 - INFO - Stop-loss: 5%, Take-profit: 8%
+2026-03-31 17:26:17,271 - INFO - Scan interval: 60 seconds
+2026-03-31 17:26:17,271 - INFO - ======================================================================
+2026-03-31 17:26:17,271 - INFO - ⚠️  CURRENTLY IN SIMULATION MODE
+2026-03-31 17:26:17,271 - INFO -    Trades are planned but not executed
+2026-03-31 17:26:17,271 - INFO -    Uncomment code for real trading
+2026-03-31 17:26:17,271 - INFO - ======================================================================
+2026-03-31 17:26:19,253 - INFO - ✅ Binance Futures exchange connected
+2026-03-31 17:26:19,365 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:26:19,365 - INFO -    Free USDT: $42.29
+2026-03-31 17:26:19,365 - INFO -    Total USDT: $77.76
+2026-03-31 17:26:19,365 - INFO - 
+📊 FUTURES CYCLE 1 - 17:26:19
+2026-03-31 17:26:19,365 - INFO - --------------------------------------------------
+2026-03-31 17:26:19,365 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:26:19,475 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.56%
+2026-03-31 17:26:19,475 - INFO - 🎯 PREPARING FUTURES SHORT: BTC/USDT
+2026-03-31 17:26:19,476 - INFO -    Current price: $66376.1000
+2026-03-31 17:26:19,476 - INFO -    24h change: -1.56%
+2026-03-31 17:26:19,476 - INFO -    Position size: 0.000382 contracts
+2026-03-31 17:26:19,476 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:19,476 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:19,476 - INFO -    Stop-loss: $69694.9050 (+5.0%)
+2026-03-31 17:26:19,476 - INFO -    Take-profit: $61066.0120 (-8.0%)
+2026-03-31 17:26:19,481 - INFO - ✅ FUTURES SHORT PLAN CREATED for BTC/USDT
+2026-03-31 17:26:19,481 - INFO -    Would short 0.000382 contracts at $66376.1000
+2026-03-31 17:26:19,481 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:19,595 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.39%
+2026-03-31 17:26:19,596 - INFO - 🎯 PREPARING FUTURES SHORT: ETH/USDT
+2026-03-31 17:26:19,596 - INFO -    Current price: $2025.9100
+2026-03-31 17:26:19,596 - INFO -    24h change: -1.39%
+2026-03-31 17:26:19,596 - INFO -    Position size: 0.012526 contracts
+2026-03-31 17:26:19,596 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:19,596 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:19,596 - INFO -    Stop-loss: $2127.2055 (+5.0%)
+2026-03-31 17:26:19,596 - INFO -    Take-profit: $1863.8372 (-8.0%)
+2026-03-31 17:26:19,600 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETH/USDT
+2026-03-31 17:26:19,600 - INFO -    Would short 0.012526 contracts at $2025.9100
+2026-03-31 17:26:19,600 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:19,714 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.92%
+2026-03-31 17:26:19,714 - INFO - 🎯 PREPARING FUTURES SHORT: SOL/USDT
+2026-03-31 17:26:19,714 - INFO -    Current price: $80.7400
+2026-03-31 17:26:19,714 - INFO -    24h change: -3.92%
+2026-03-31 17:26:19,714 - INFO -    Position size: 0.314302 contracts
+2026-03-31 17:26:19,714 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:19,714 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:19,714 - INFO -    Stop-loss: $84.7770 (+5.0%)
+2026-03-31 17:26:19,715 - INFO -    Take-profit: $74.2808 (-8.0%)
+2026-03-31 17:26:19,718 - INFO - ✅ FUTURES SHORT PLAN CREATED for SOL/USDT
+2026-03-31 17:26:19,718 - INFO -    Would short 0.314302 contracts at $80.7400
+2026-03-31 17:26:19,718 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:19,832 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.06%
+2026-03-31 17:26:19,833 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:26:19,833 - INFO -    Current price: $0.2409
+2026-03-31 17:26:19,833 - INFO -    24h change: -3.06%
+2026-03-31 17:26:19,833 - INFO -    Position size: 105.341385 contracts
+2026-03-31 17:26:19,833 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:19,833 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:19,833 - INFO -    Stop-loss: $0.2529 (+5.0%)
+2026-03-31 17:26:19,833 - INFO -    Take-profit: $0.2216 (-8.0%)
+2026-03-31 17:26:19,836 - INFO - ✅ FUTURES SHORT PLAN CREATED for ADA/USDT
+2026-03-31 17:26:19,836 - INFO -    Would short 105.341385 contracts at $0.2409
+2026-03-31 17:26:19,836 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:19,948 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.71%
+2026-03-31 17:26:19,949 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:26:19,949 - INFO -    Current price: $1.3109
+2026-03-31 17:26:19,949 - INFO -    24h change: -2.71%
+2026-03-31 17:26:19,949 - INFO -    Position size: 19.358257 contracts
+2026-03-31 17:26:19,949 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:19,949 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:19,949 - INFO -    Stop-loss: $1.3764 (+5.0%)
+2026-03-31 17:26:19,949 - INFO -    Take-profit: $1.2060 (-8.0%)
+2026-03-31 17:26:19,953 - INFO - ✅ FUTURES SHORT PLAN CREATED for XRP/USDT
+2026-03-31 17:26:19,953 - INFO -    Would short 19.358257 contracts at $1.3109
+2026-03-31 17:26:19,953 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,066 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.68%
+2026-03-31 17:26:20,066 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:26:20,066 - INFO -    Current price: $1.2340
+2026-03-31 17:26:20,066 - INFO -    24h change: -2.68%
+2026-03-31 17:26:20,067 - INFO -    Position size: 20.564619 contracts
+2026-03-31 17:26:20,067 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,067 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,067 - INFO -    Stop-loss: $1.2957 (+5.0%)
+2026-03-31 17:26:20,067 - INFO -    Take-profit: $1.1353 (-8.0%)
+2026-03-31 17:26:20,070 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOT/USDT
+2026-03-31 17:26:20,070 - INFO -    Would short 20.564619 contracts at $1.2340
+2026-03-31 17:26:20,070 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,180 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.91%
+2026-03-31 17:26:20,180 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:26:20,180 - INFO -    Current price: $0.0901
+2026-03-31 17:26:20,181 - INFO -    24h change: -2.91%
+2026-03-31 17:26:20,181 - INFO -    Position size: 281.744640 contracts
+2026-03-31 17:26:20,181 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,181 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,181 - INFO -    Stop-loss: $0.0946 (+5.0%)
+2026-03-31 17:26:20,181 - INFO -    Take-profit: $0.0829 (-8.0%)
+2026-03-31 17:26:20,185 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOGE/USDT
+2026-03-31 17:26:20,185 - INFO -    Would short 281.744640 contracts at $0.0901
+2026-03-31 17:26:20,185 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,297 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -2.00%
+2026-03-31 17:26:20,298 - INFO - 🎯 PREPARING FUTURES SHORT: AVAX/USDT
+2026-03-31 17:26:20,298 - INFO -    Current price: $8.7350
+2026-03-31 17:26:20,298 - INFO -    24h change: -2.00%
+2026-03-31 17:26:20,298 - INFO -    Position size: 2.905179 contracts
+2026-03-31 17:26:20,298 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,298 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,298 - INFO -    Stop-loss: $9.1717 (+5.0%)
+2026-03-31 17:26:20,298 - INFO -    Take-profit: $8.0362 (-8.0%)
+2026-03-31 17:26:20,301 - INFO - ✅ FUTURES SHORT PLAN CREATED for AVAX/USDT
+2026-03-31 17:26:20,301 - INFO -    Would short 2.905179 contracts at $8.7350
+2026-03-31 17:26:20,301 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,301 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:26:20,412 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.25%
+2026-03-31 17:26:20,412 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:26:20,412 - INFO -    Current price: $8.5680
+2026-03-31 17:26:20,412 - INFO -    24h change: -2.25%
+2026-03-31 17:26:20,412 - INFO -    Position size: 2.961804 contracts
+2026-03-31 17:26:20,412 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,412 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,413 - INFO -    Stop-loss: $8.9964 (+5.0%)
+2026-03-31 17:26:20,413 - INFO -    Take-profit: $7.8826 (-8.0%)
+2026-03-31 17:26:20,416 - INFO - ✅ FUTURES SHORT PLAN CREATED for LINK/USDT
+2026-03-31 17:26:20,416 - INFO -    Would short 2.961804 contracts at $8.5680
+2026-03-31 17:26:20,416 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,526 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.88%
+2026-03-31 17:26:20,527 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:26:20,527 - INFO -    Current price: $3.4740
+2026-03-31 17:26:20,527 - INFO -    24h change: -0.88%
+2026-03-31 17:26:20,527 - INFO -    Position size: 7.304761 contracts
+2026-03-31 17:26:20,527 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,527 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,527 - INFO -    Stop-loss: $3.6477 (+5.0%)
+2026-03-31 17:26:20,527 - INFO -    Take-profit: $3.1961 (-8.0%)
+2026-03-31 17:26:20,531 - INFO - ✅ FUTURES SHORT PLAN CREATED for UNI/USDT
+2026-03-31 17:26:20,531 - INFO -    Would short 7.304761 contracts at $3.4740
+2026-03-31 17:26:20,531 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,642 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.91%
+2026-03-31 17:26:20,642 - INFO - 🎯 PREPARING FUTURES SHORT: LTC/USDT
+2026-03-31 17:26:20,642 - INFO -    Current price: $53.3300
+2026-03-31 17:26:20,642 - INFO -    24h change: -0.91%
+2026-03-31 17:26:20,642 - INFO -    Position size: 0.475844 contracts
+2026-03-31 17:26:20,642 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,642 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,642 - INFO -    Stop-loss: $55.9965 (+5.0%)
+2026-03-31 17:26:20,642 - INFO -    Take-profit: $49.0636 (-8.0%)
+2026-03-31 17:26:20,645 - INFO - ✅ FUTURES SHORT PLAN CREATED for LTC/USDT
+2026-03-31 17:26:20,645 - INFO -    Would short 0.475844 contracts at $53.3300
+2026-03-31 17:26:20,645 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,874 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.25%
+2026-03-31 17:26:20,874 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:26:20,874 - INFO -    Current price: $8.0200
+2026-03-31 17:26:20,874 - INFO -    24h change: -2.25%
+2026-03-31 17:26:20,874 - INFO -    Position size: 3.164182 contracts
+2026-03-31 17:26:20,875 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,875 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,875 - INFO -    Stop-loss: $8.4210 (+5.0%)
+2026-03-31 17:26:20,875 - INFO -    Take-profit: $7.3784 (-8.0%)
+2026-03-31 17:26:20,878 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETC/USDT
+2026-03-31 17:26:20,879 - INFO -    Would short 3.164182 contracts at $8.0200
+2026-03-31 17:26:20,879 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:20,991 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.41%
+2026-03-31 17:26:20,991 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:26:20,991 - INFO -    Current price: $0.1647
+2026-03-31 17:26:20,991 - INFO -    24h change: -3.41%
+2026-03-31 17:26:20,992 - INFO -    Position size: 154.059858 contracts
+2026-03-31 17:26:20,992 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:20,992 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:20,992 - INFO -    Stop-loss: $0.1730 (+5.0%)
+2026-03-31 17:26:20,992 - INFO -    Take-profit: $0.1515 (-8.0%)
+2026-03-31 17:26:20,995 - INFO - ✅ FUTURES SHORT PLAN CREATED for XLM/USDT
+2026-03-31 17:26:20,996 - INFO -    Would short 154.059858 contracts at $0.1647
+2026-03-31 17:26:20,996 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:21,222 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.07%
+2026-03-31 17:26:21,222 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:26:21,222 - INFO -    Current price: $0.0066
+2026-03-31 17:26:21,222 - INFO -    24h change: -2.07%
+2026-03-31 17:26:21,222 - INFO -    Position size: 3839.143683 contracts
+2026-03-31 17:26:21,222 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:21,222 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:21,222 - INFO -    Stop-loss: $0.0069 (+5.0%)
+2026-03-31 17:26:21,223 - INFO -    Take-profit: $0.0061 (-8.0%)
+2026-03-31 17:26:21,226 - INFO - ✅ FUTURES SHORT PLAN CREATED for VET/USDT
+2026-03-31 17:26:21,226 - INFO -    Would short 3839.143683 contracts at $0.0066
+2026-03-31 17:26:21,226 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:21,337 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.38%
+2026-03-31 17:26:21,338 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:26:21,338 - INFO -    Current price: $0.8210
+2026-03-31 17:26:21,338 - INFO -    24h change: -2.38%
+2026-03-31 17:26:21,338 - INFO -    Position size: 30.909549 contracts
+2026-03-31 17:26:21,338 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:21,338 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:21,338 - INFO -    Stop-loss: $0.8620 (+5.0%)
+2026-03-31 17:26:21,338 - INFO -    Take-profit: $0.7553 (-8.0%)
+2026-03-31 17:26:21,342 - INFO - ✅ FUTURES SHORT PLAN CREATED for FIL/USDT
+2026-03-31 17:26:21,342 - INFO -    Would short 30.909549 contracts at $0.8210
+2026-03-31 17:26:21,342 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:21,565 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:26:21,679 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.09%
+2026-03-31 17:26:21,679 - INFO - 🎯 PREPARING FUTURES SHORT: AAVE/USDT
+2026-03-31 17:26:21,679 - INFO -    Current price: $95.9400
+2026-03-31 17:26:21,679 - INFO -    24h change: -2.09%
+2026-03-31 17:26:21,679 - INFO -    Position size: 0.264506 contracts
+2026-03-31 17:26:21,679 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:21,679 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:21,679 - INFO -    Stop-loss: $100.7370 (+5.0%)
+2026-03-31 17:26:21,679 - INFO -    Take-profit: $88.2648 (-8.0%)
+2026-03-31 17:26:21,683 - INFO - ✅ FUTURES SHORT PLAN CREATED for AAVE/USDT
+2026-03-31 17:26:21,683 - INFO -    Would short 0.264506 contracts at $95.9400
+2026-03-31 17:26:21,683 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:21,796 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:26:21,797 - INFO - 🎯 PREPARING FUTURES SHORT: MKR/USDT
+2026-03-31 17:26:21,797 - INFO -    Current price: $1650.1000
+2026-03-31 17:26:21,797 - INFO -    24h change: -3.40%
+2026-03-31 17:26:21,797 - INFO -    Position size: 0.015379 contracts
+2026-03-31 17:26:21,797 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:21,797 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:21,797 - INFO -    Stop-loss: $1732.6050 (+5.0%)
+2026-03-31 17:26:21,797 - INFO -    Take-profit: $1518.0920 (-8.0%)
+2026-03-31 17:26:21,801 - INFO - ✅ FUTURES SHORT PLAN CREATED for MKR/USDT
+2026-03-31 17:26:21,801 - INFO -    Would short 0.015379 contracts at $1650.1000
+2026-03-31 17:26:21,801 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:21,916 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.99%
+2026-03-31 17:26:21,916 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:26:21,916 - INFO -    Current price: $17.3200
+2026-03-31 17:26:21,916 - INFO -    24h change: -4.99%
+2026-03-31 17:26:21,916 - INFO -    Position size: 1.465170 contracts
+2026-03-31 17:26:21,916 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:21,916 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:21,916 - INFO -    Stop-loss: $18.1860 (+5.0%)
+2026-03-31 17:26:21,916 - INFO -    Take-profit: $15.9344 (-8.0%)
+2026-03-31 17:26:21,920 - INFO - ✅ FUTURES SHORT PLAN CREATED for COMP/USDT
+2026-03-31 17:26:21,920 - INFO -    Would short 1.465170 contracts at $17.3200
+2026-03-31 17:26:21,920 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:22,034 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:26:22,034 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:26:22,034 - INFO -    Current price: $0.2770
+2026-03-31 17:26:22,034 - INFO -    24h change: -1.42%
+2026-03-31 17:26:22,034 - INFO -    Position size: 91.612779 contracts
+2026-03-31 17:26:22,034 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:22,034 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:22,034 - INFO -    Stop-loss: $0.2909 (+5.0%)
+2026-03-31 17:26:22,034 - INFO -    Take-profit: $0.2548 (-8.0%)
+2026-03-31 17:26:22,038 - INFO - ✅ FUTURES SHORT PLAN CREATED for SNX/USDT
+2026-03-31 17:26:22,038 - INFO -    Would short 91.612779 contracts at $0.2770
+2026-03-31 17:26:22,038 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:22,153 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.37%
+2026-03-31 17:26:22,153 - INFO - 🎯 PREPARING FUTURES SHORT: YFI/USDT
+2026-03-31 17:26:22,153 - INFO -    Current price: $2442.0000
+2026-03-31 17:26:22,153 - INFO -    24h change: -1.37%
+2026-03-31 17:26:22,153 - INFO -    Position size: 0.010392 contracts
+2026-03-31 17:26:22,153 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:26:22,153 - INFO -    Capital at risk: $8.46
+2026-03-31 17:26:22,153 - INFO -    Stop-loss: $2564.1000 (+5.0%)
+2026-03-31 17:26:22,153 - INFO -    Take-profit: $2246.6400 (-8.0%)
+2026-03-31 17:26:22,154 - INFO - ✅ FUTURES SHORT PLAN CREATED for YFI/USDT
+2026-03-31 17:26:22,154 - INFO -    Would short 0.010392 contracts at $2442.0000
+2026-03-31 17:26:22,154 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:26:22,154 - INFO - 
+📈 CYCLE 1 SUMMARY:
+2026-03-31 17:26:22,154 - INFO -    Short plans created: 20
+2026-03-31 17:26:22,154 - INFO -    Total plans: 20
+2026-03-31 17:26:22,154 - INFO -    Cycle duration: 2.8 seconds
+2026-03-31 17:26:22,154 - INFO -    Free balance: $42.29
+2026-03-31 17:26:22,154 - INFO -    📋 SHORT TRADE PLANS READY!
+2026-03-31 17:26:22,154 - INFO -    Check futures_trade_plans.json
+2026-03-31 17:26:22,154 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:26:22,154 - INFO - ======================================================================
+2026-03-31 17:26:22,271 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:26:22,271 - INFO -    Free USDT: $42.29
+2026-03-31 17:26:22,271 - INFO -    Total USDT: $77.76
+2026-03-31 17:27:22,272 - INFO - 
+📊 FUTURES CYCLE 2 - 17:27:22
+2026-03-31 17:27:22,272 - INFO - --------------------------------------------------
+2026-03-31 17:27:22,272 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:27:22,384 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.58%
+2026-03-31 17:27:22,385 - INFO - 🎯 PREPARING FUTURES SHORT: BTC/USDT
+2026-03-31 17:27:22,385 - INFO -    Current price: $66322.5000
+2026-03-31 17:27:22,385 - INFO -    24h change: -1.58%
+2026-03-31 17:27:22,385 - INFO -    Position size: 0.000383 contracts
+2026-03-31 17:27:22,385 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,385 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,385 - INFO -    Stop-loss: $69638.6250 (+5.0%)
+2026-03-31 17:27:22,385 - INFO -    Take-profit: $61016.7000 (-8.0%)
+2026-03-31 17:27:22,389 - INFO - ✅ FUTURES SHORT PLAN CREATED for BTC/USDT
+2026-03-31 17:27:22,389 - INFO -    Would short 0.000383 contracts at $66322.5000
+2026-03-31 17:27:22,389 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:22,504 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.36%
+2026-03-31 17:27:22,505 - INFO - 🎯 PREPARING FUTURES SHORT: ETH/USDT
+2026-03-31 17:27:22,505 - INFO -    Current price: $2024.9900
+2026-03-31 17:27:22,505 - INFO -    24h change: -1.36%
+2026-03-31 17:27:22,505 - INFO -    Position size: 0.012532 contracts
+2026-03-31 17:27:22,505 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,505 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,505 - INFO -    Stop-loss: $2126.2395 (+5.0%)
+2026-03-31 17:27:22,505 - INFO -    Take-profit: $1862.9908 (-8.0%)
+2026-03-31 17:27:22,508 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETH/USDT
+2026-03-31 17:27:22,508 - INFO -    Would short 0.012532 contracts at $2024.9900
+2026-03-31 17:27:22,508 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:22,630 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -4.01%
+2026-03-31 17:27:22,631 - INFO - 🎯 PREPARING FUTURES SHORT: SOL/USDT
+2026-03-31 17:27:22,631 - INFO -    Current price: $80.6300
+2026-03-31 17:27:22,631 - INFO -    24h change: -4.01%
+2026-03-31 17:27:22,631 - INFO -    Position size: 0.314730 contracts
+2026-03-31 17:27:22,631 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,631 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,631 - INFO -    Stop-loss: $84.6615 (+5.0%)
+2026-03-31 17:27:22,631 - INFO -    Take-profit: $74.1796 (-8.0%)
+2026-03-31 17:27:22,635 - INFO - ✅ FUTURES SHORT PLAN CREATED for SOL/USDT
+2026-03-31 17:27:22,635 - INFO -    Would short 0.314730 contracts at $80.6300
+2026-03-31 17:27:22,635 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:22,745 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.18%
+2026-03-31 17:27:22,745 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:27:22,746 - INFO -    Current price: $0.2405
+2026-03-31 17:27:22,746 - INFO -    24h change: -3.18%
+2026-03-31 17:27:22,746 - INFO -    Position size: 105.516376 contracts
+2026-03-31 17:27:22,746 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,746 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,746 - INFO -    Stop-loss: $0.2525 (+5.0%)
+2026-03-31 17:27:22,746 - INFO -    Take-profit: $0.2213 (-8.0%)
+2026-03-31 17:27:22,750 - INFO - ✅ FUTURES SHORT PLAN CREATED for ADA/USDT
+2026-03-31 17:27:22,750 - INFO -    Would short 105.516376 contracts at $0.2405
+2026-03-31 17:27:22,750 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:22,860 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.75%
+2026-03-31 17:27:22,861 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:27:22,861 - INFO -    Current price: $1.3101
+2026-03-31 17:27:22,861 - INFO -    24h change: -2.75%
+2026-03-31 17:27:22,861 - INFO -    Position size: 19.370039 contracts
+2026-03-31 17:27:22,861 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,861 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,861 - INFO -    Stop-loss: $1.3756 (+5.0%)
+2026-03-31 17:27:22,861 - INFO -    Take-profit: $1.2053 (-8.0%)
+2026-03-31 17:27:22,865 - INFO - ✅ FUTURES SHORT PLAN CREATED for XRP/USDT
+2026-03-31 17:27:22,865 - INFO -    Would short 19.370039 contracts at $1.3101
+2026-03-31 17:27:22,865 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:22,982 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.68%
+2026-03-31 17:27:22,983 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:27:22,983 - INFO -    Current price: $1.2330
+2026-03-31 17:27:22,983 - INFO -    24h change: -2.68%
+2026-03-31 17:27:22,983 - INFO -    Position size: 20.581256 contracts
+2026-03-31 17:27:22,983 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:22,983 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:22,983 - INFO -    Stop-loss: $1.2947 (+5.0%)
+2026-03-31 17:27:22,983 - INFO -    Take-profit: $1.1344 (-8.0%)
+2026-03-31 17:27:22,987 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOT/USDT
+2026-03-31 17:27:22,987 - INFO -    Would short 20.581256 contracts at $1.2330
+2026-03-31 17:27:22,987 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,101 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -3.00%
+2026-03-31 17:27:23,102 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:27:23,102 - INFO -    Current price: $0.0900
+2026-03-31 17:27:23,102 - INFO -    24h change: -3.00%
+2026-03-31 17:27:23,102 - INFO -    Position size: 282.025878 contracts
+2026-03-31 17:27:23,102 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,102 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,102 - INFO -    Stop-loss: $0.0945 (+5.0%)
+2026-03-31 17:27:23,102 - INFO -    Take-profit: $0.0828 (-8.0%)
+2026-03-31 17:27:23,104 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOGE/USDT
+2026-03-31 17:27:23,104 - INFO -    Would short 282.025878 contracts at $0.0900
+2026-03-31 17:27:23,104 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,219 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -2.05%
+2026-03-31 17:27:23,219 - INFO - 🎯 PREPARING FUTURES SHORT: AVAX/USDT
+2026-03-31 17:27:23,219 - INFO -    Current price: $8.7270
+2026-03-31 17:27:23,219 - INFO -    24h change: -2.05%
+2026-03-31 17:27:23,219 - INFO -    Position size: 2.907836 contracts
+2026-03-31 17:27:23,219 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,219 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,219 - INFO -    Stop-loss: $9.1634 (+5.0%)
+2026-03-31 17:27:23,219 - INFO -    Take-profit: $8.0288 (-8.0%)
+2026-03-31 17:27:23,223 - INFO - ✅ FUTURES SHORT PLAN CREATED for AVAX/USDT
+2026-03-31 17:27:23,223 - INFO -    Would short 2.907836 contracts at $8.7270
+2026-03-31 17:27:23,223 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,223 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:27:23,336 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.31%
+2026-03-31 17:27:23,337 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:27:23,337 - INFO -    Current price: $8.5600
+2026-03-31 17:27:23,337 - INFO -    24h change: -2.31%
+2026-03-31 17:27:23,337 - INFO -    Position size: 2.964566 contracts
+2026-03-31 17:27:23,337 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,337 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,337 - INFO -    Stop-loss: $8.9880 (+5.0%)
+2026-03-31 17:27:23,337 - INFO -    Take-profit: $7.8752 (-8.0%)
+2026-03-31 17:27:23,339 - INFO - ✅ FUTURES SHORT PLAN CREATED for LINK/USDT
+2026-03-31 17:27:23,339 - INFO -    Would short 2.964566 contracts at $8.5600
+2026-03-31 17:27:23,339 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,454 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.97%
+2026-03-31 17:27:23,454 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:27:23,454 - INFO -    Current price: $3.4710
+2026-03-31 17:27:23,454 - INFO -    24h change: -0.97%
+2026-03-31 17:27:23,455 - INFO -    Position size: 7.311060 contracts
+2026-03-31 17:27:23,455 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,455 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,455 - INFO -    Stop-loss: $3.6446 (+5.0%)
+2026-03-31 17:27:23,455 - INFO -    Take-profit: $3.1933 (-8.0%)
+2026-03-31 17:27:23,458 - INFO - ✅ FUTURES SHORT PLAN CREATED for UNI/USDT
+2026-03-31 17:27:23,459 - INFO -    Would short 7.311060 contracts at $3.4710
+2026-03-31 17:27:23,459 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,571 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -1.04%
+2026-03-31 17:27:23,572 - INFO - 🎯 PREPARING FUTURES SHORT: LTC/USDT
+2026-03-31 17:27:23,572 - INFO -    Current price: $53.2600
+2026-03-31 17:27:23,572 - INFO -    24h change: -1.04%
+2026-03-31 17:27:23,572 - INFO -    Position size: 0.476468 contracts
+2026-03-31 17:27:23,572 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,572 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,572 - INFO -    Stop-loss: $55.9230 (+5.0%)
+2026-03-31 17:27:23,572 - INFO -    Take-profit: $48.9992 (-8.0%)
+2026-03-31 17:27:23,576 - INFO - ✅ FUTURES SHORT PLAN CREATED for LTC/USDT
+2026-03-31 17:27:23,576 - INFO -    Would short 0.476468 contracts at $53.2600
+2026-03-31 17:27:23,576 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,799 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.34%
+2026-03-31 17:27:23,800 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:27:23,800 - INFO -    Current price: $8.0120
+2026-03-31 17:27:23,800 - INFO -    24h change: -2.34%
+2026-03-31 17:27:23,800 - INFO -    Position size: 3.167335 contracts
+2026-03-31 17:27:23,800 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,800 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,800 - INFO -    Stop-loss: $8.4126 (+5.0%)
+2026-03-31 17:27:23,800 - INFO -    Take-profit: $7.3710 (-8.0%)
+2026-03-31 17:27:23,804 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETC/USDT
+2026-03-31 17:27:23,804 - INFO -    Would short 3.167335 contracts at $8.0120
+2026-03-31 17:27:23,804 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:23,917 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.50%
+2026-03-31 17:27:23,917 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:27:23,917 - INFO -    Current price: $0.1646
+2026-03-31 17:27:23,917 - INFO -    24h change: -3.50%
+2026-03-31 17:27:23,917 - INFO -    Position size: 154.218709 contracts
+2026-03-31 17:27:23,918 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:23,918 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:23,918 - INFO -    Stop-loss: $0.1728 (+5.0%)
+2026-03-31 17:27:23,918 - INFO -    Take-profit: $0.1514 (-8.0%)
+2026-03-31 17:27:23,921 - INFO - ✅ FUTURES SHORT PLAN CREATED for XLM/USDT
+2026-03-31 17:27:23,921 - INFO -    Would short 154.218709 contracts at $0.1646
+2026-03-31 17:27:23,921 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,145 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.25%
+2026-03-31 17:27:24,145 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:27:24,145 - INFO -    Current price: $0.0066
+2026-03-31 17:27:24,145 - INFO -    24h change: -2.25%
+2026-03-31 17:27:24,145 - INFO -    Position size: 3843.788022 contracts
+2026-03-31 17:27:24,145 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,145 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,145 - INFO -    Stop-loss: $0.0069 (+5.0%)
+2026-03-31 17:27:24,145 - INFO -    Take-profit: $0.0061 (-8.0%)
+2026-03-31 17:27:24,149 - INFO - ✅ FUTURES SHORT PLAN CREATED for VET/USDT
+2026-03-31 17:27:24,149 - INFO -    Would short 3843.788022 contracts at $0.0066
+2026-03-31 17:27:24,149 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,260 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.38%
+2026-03-31 17:27:24,260 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:27:24,260 - INFO -    Current price: $0.8210
+2026-03-31 17:27:24,260 - INFO -    24h change: -2.38%
+2026-03-31 17:27:24,260 - INFO -    Position size: 30.909487 contracts
+2026-03-31 17:27:24,260 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,260 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,260 - INFO -    Stop-loss: $0.8620 (+5.0%)
+2026-03-31 17:27:24,260 - INFO -    Take-profit: $0.7553 (-8.0%)
+2026-03-31 17:27:24,261 - INFO - ✅ FUTURES SHORT PLAN CREATED for FIL/USDT
+2026-03-31 17:27:24,261 - INFO -    Would short 30.909487 contracts at $0.8210
+2026-03-31 17:27:24,261 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,480 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:27:24,590 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.07%
+2026-03-31 17:27:24,590 - INFO - 🎯 PREPARING FUTURES SHORT: AAVE/USDT
+2026-03-31 17:27:24,590 - INFO -    Current price: $95.9100
+2026-03-31 17:27:24,590 - INFO -    24h change: -2.07%
+2026-03-31 17:27:24,590 - INFO -    Position size: 0.264589 contracts
+2026-03-31 17:27:24,590 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,590 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,590 - INFO -    Stop-loss: $100.7055 (+5.0%)
+2026-03-31 17:27:24,590 - INFO -    Take-profit: $88.2372 (-8.0%)
+2026-03-31 17:27:24,590 - INFO - ✅ FUTURES SHORT PLAN CREATED for AAVE/USDT
+2026-03-31 17:27:24,591 - INFO -    Would short 0.264589 contracts at $95.9100
+2026-03-31 17:27:24,591 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,700 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:27:24,700 - INFO - 🎯 PREPARING FUTURES SHORT: MKR/USDT
+2026-03-31 17:27:24,700 - INFO -    Current price: $1650.1000
+2026-03-31 17:27:24,700 - INFO -    24h change: -3.40%
+2026-03-31 17:27:24,700 - INFO -    Position size: 0.015379 contracts
+2026-03-31 17:27:24,700 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,700 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,700 - INFO -    Stop-loss: $1732.6050 (+5.0%)
+2026-03-31 17:27:24,700 - INFO -    Take-profit: $1518.0920 (-8.0%)
+2026-03-31 17:27:24,701 - INFO - ✅ FUTURES SHORT PLAN CREATED for MKR/USDT
+2026-03-31 17:27:24,701 - INFO -    Would short 0.015379 contracts at $1650.1000
+2026-03-31 17:27:24,701 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,810 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -5.05%
+2026-03-31 17:27:24,810 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:27:24,810 - INFO -    Current price: $17.3000
+2026-03-31 17:27:24,810 - INFO -    24h change: -5.05%
+2026-03-31 17:27:24,810 - INFO -    Position size: 1.466861 contracts
+2026-03-31 17:27:24,810 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,810 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,810 - INFO -    Stop-loss: $18.1650 (+5.0%)
+2026-03-31 17:27:24,810 - INFO -    Take-profit: $15.9160 (-8.0%)
+2026-03-31 17:27:24,810 - INFO - ✅ FUTURES SHORT PLAN CREATED for COMP/USDT
+2026-03-31 17:27:24,810 - INFO -    Would short 1.466861 contracts at $17.3000
+2026-03-31 17:27:24,810 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:24,920 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:27:24,920 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:27:24,920 - INFO -    Current price: $0.2780
+2026-03-31 17:27:24,920 - INFO -    24h change: -1.42%
+2026-03-31 17:27:24,920 - INFO -    Position size: 91.283052 contracts
+2026-03-31 17:27:24,920 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:24,920 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:24,920 - INFO -    Stop-loss: $0.2919 (+5.0%)
+2026-03-31 17:27:24,920 - INFO -    Take-profit: $0.2558 (-8.0%)
+2026-03-31 17:27:24,921 - INFO - ✅ FUTURES SHORT PLAN CREATED for SNX/USDT
+2026-03-31 17:27:24,921 - INFO -    Would short 91.283052 contracts at $0.2780
+2026-03-31 17:27:24,921 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:25,028 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.45%
+2026-03-31 17:27:25,028 - INFO - 🎯 PREPARING FUTURES SHORT: YFI/USDT
+2026-03-31 17:27:25,028 - INFO -    Current price: $2441.0000
+2026-03-31 17:27:25,028 - INFO -    24h change: -1.45%
+2026-03-31 17:27:25,028 - INFO -    Position size: 0.010396 contracts
+2026-03-31 17:27:25,028 - INFO -    Position value: $25.38 (with 3x leverage)
+2026-03-31 17:27:25,028 - INFO -    Capital at risk: $8.46
+2026-03-31 17:27:25,028 - INFO -    Stop-loss: $2563.0500 (+5.0%)
+2026-03-31 17:27:25,029 - INFO -    Take-profit: $2245.7200 (-8.0%)
+2026-03-31 17:27:25,029 - INFO - ✅ FUTURES SHORT PLAN CREATED for YFI/USDT
+2026-03-31 17:27:25,029 - INFO -    Would short 0.010396 contracts at $2441.0000
+2026-03-31 17:27:25,029 - INFO -    With 3x leverage ($25.38 position)
+2026-03-31 17:27:25,029 - INFO - 
+📈 CYCLE 2 SUMMARY:
+2026-03-31 17:27:25,029 - INFO -    Short plans created: 20
+2026-03-31 17:27:25,029 - INFO -    Total plans: 40
+2026-03-31 17:27:25,029 - INFO -    Cycle duration: 2.8 seconds
+2026-03-31 17:27:25,029 - INFO -    Free balance: $42.29
+2026-03-31 17:27:25,029 - INFO -    📋 SHORT TRADE PLANS READY!
+2026-03-31 17:27:25,029 - INFO -    Check futures_trade_plans.json
+2026-03-31 17:27:25,029 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:27:25,029 - INFO - ======================================================================
+2026-03-31 17:27:25,145 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:27:25,145 - INFO -    Free USDT: $42.45
+2026-03-31 17:27:25,145 - INFO -    Total USDT: $77.87

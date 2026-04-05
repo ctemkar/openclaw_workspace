@@ -1,0 +1,4 @@
+  File "/Users/chetantemkar/.openclaw/workspace/app/full_capital_bot.py", line 312
+    return Nonedef check_binance_short_opportunities(exchange, crypto):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

@@ -1,0 +1,23 @@
+2026-04-03 18:48:08,855 - INFO - 🚀 GEMINI ONE-TOUCH FIX INITIALIZED
+2026-04-03 18:48:08,856 - INFO - 💰 30-second delays between ALL Gemini calls
+2026-04-03 18:48:08,860 - INFO - 📊 One-Touch Trading:
+2026-04-03 18:48:08,860 - INFO -    Min delay: 35 seconds
+2026-04-03 18:48:08,860 - INFO -    Trade size: $30.0
+2026-04-03 18:48:08,860 - INFO -    Min profit: $0.2
+2026-04-03 18:48:08,860 - INFO - ============================================================
+2026-04-03 18:48:08,860 - INFO - 🚀 GEMINI ONE-TOUCH TRADING BOT
+2026-04-03 18:48:08,860 - INFO - 💰 30-second delays between ALL Gemini calls
+2026-04-03 18:48:08,860 - INFO - ============================================================
+2026-04-03 18:48:08,860 - INFO - 🔍 One-Touch Scan #1
+2026-04-03 18:48:08,860 - INFO - 💰 Checking balances (One-Touch)...
+2026-04-03 18:48:10,738 - INFO -    Binance: $7.71 USDT
+2026-04-03 18:48:10,738 - INFO -    Checking Gemini (35s One-Touch delay)...
+2026-04-03 18:48:10,738 - INFO - 🔍 Gemini One-Touch call: fetch_balance
+2026-04-03 18:48:14,591 - ERROR - ❌ Gemini One-Touch call failed: gemini Nonce '1775217894242' has not increased since your last call to the Gemini API.
+2026-04-03 18:48:14,592 - WARNING -    ❌ Gemini balance check failed
+2026-04-03 18:48:14,593 - INFO - 🔍 Looking for opportunities (One-Touch)...
+2026-04-03 18:48:14,708 - INFO - ⏳ Enforcing 31.0s delay (One-Touch rule)...
+2026-04-03 18:48:45,813 - INFO - 🔍 Gemini One-Touch call: fetch_ticker
+2026-04-03 18:48:46,101 - INFO -    ✅ MANA: 0.93% spread
+2026-04-03 18:48:46,101 - INFO -       Profit: $0.22
+2026-04-03 18:48:46,221 - INFO - ⏳ Enforcing 34.6s delay (One-Touch rule)...

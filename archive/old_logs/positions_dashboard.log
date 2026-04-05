@@ -1,0 +1,18 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+================================================================================
+📊 DASHBOARD WITH POSITIONS
+================================================================================
+Shows all positions with individual P&L
+💰 Cumulative P&L: -43.86% (never resets)
+🚨 Binance: $3.47 free (TRADING BLOCKED)
+🌐 URL: http://localhost:5005
+================================================================================
+ * Serving Flask app 'dashboard_with_positions'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://192.168.1.63:5005
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [31/Mar/2026 20:42:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 20:42:45] "GET / HTTP/1.1" 200 -

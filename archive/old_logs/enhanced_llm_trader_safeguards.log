@@ -1,0 +1,3453 @@
+INFO:__main__:======================================================================
+INFO:__main__:🚀 ENHANCED LLM TRADER - OPTION B OPTIMIZED
+INFO:__main__:======================================================================
+INFO:__main__:🤖 Real market data + LLM decisions + override logic
+INFO:__main__:💰 Capital: Gemini $393.22, Binance $262.14
+INFO:__main__:🎯 Position: 10%, Threshold: 1.0% drop
+INFO:__main__:🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+INFO:__main__:🧠 LLM Models: deepseek-r1, qwen3, mistral
+INFO:__main__:⏰ Interval: 300 seconds
+INFO:__main__:======================================================================
+INFO:__main__:✅ API keys loaded
+INFO:__main__:✅ Exchanges initialized
+INFO:__main__:✅ Ollama available (9 models)
+INFO:__main__:
+======================================================================
+INFO:__main__:🎯 STARTING TRADING CYCLES
+INFO:__main__:======================================================================
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #1
+INFO:__main__:   Time: 22:40:14
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009521
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.248480
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.159314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151156
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.169849
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377733
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061658
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022834
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119230
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.239944
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006368
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166080
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107346
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100963
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.450852
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252252
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041347
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015305
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014983
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079388
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160822
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 23
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #2
+INFO:__main__:   Time: 22:46:11
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM TIMEOUT: BTC - Rule says LONG, LLM timeout
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000441
+INFO:__main__:   Value: $29.49
+INFO:__main__:   Confidence: MEDIUM
+INFO:__main__:   LLM: TIMEOUT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009521
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.248480
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.159314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151156
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.169849
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377733
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061658
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022834
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119230
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.239944
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006358
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165911
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107171
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100792
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.449088
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252009
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041165
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015266
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014966
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160822
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 24
+INFO:__main__:   Trades executed: 24
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 47
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #3
+INFO:__main__:   Time: 22:52:05
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009521
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.248480
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.159314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151156
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.169849
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377733
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061658
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022834
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119230
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.239944
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006373
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166185
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107434
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101025
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.452299
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252446
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041269
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015323
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015022
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079388
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161615
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 70
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #4
+INFO:__main__:   Time: 22:58:11
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM TIMEOUT: BTC - Rule says LONG, LLM timeout
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000441
+INFO:__main__:   Value: $29.49
+INFO:__main__:   Confidence: MEDIUM
+INFO:__main__:   LLM: TIMEOUT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009521
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.248480
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.159314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151156
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.169849
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377733
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061658
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022834
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022314
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119230
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.239944
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006370
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166122
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107434
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101002
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.452621
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252495
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041282
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015319
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015021
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079292
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161615
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 24
+INFO:__main__:   Trades executed: 24
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 94
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #5
+INFO:__main__:   Time: 23:04:06
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006375
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166101
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107611
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101158
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.454394
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252446
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041243
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015326
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015046
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079436
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161615
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 117
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #6
+INFO:__main__:   Time: 23:09:58
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006367
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165806
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107611
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101111
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.449729
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252203
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041075
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015298
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015009
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079485
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161615
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 140
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #7
+INFO:__main__:   Time: 23:15:52
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006378
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166185
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107611
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101205
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.453265
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252203
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041165
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015319
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015048
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079678
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.162015
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 163
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #8
+INFO:__main__:   Time: 23:21:46
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006382
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166227
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107611
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.101095
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.454878
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252397
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041256
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015339
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015069
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079678
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.162015
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 186
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #9
+INFO:__main__:   Time: 23:27:40
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006374
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.166016
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107523
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100831
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.454394
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252446
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041204
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015305
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015045
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079823
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161815
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 209
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #10
+INFO:__main__:   Time: 23:33:34
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.000196
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006353
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165305
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107346
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100676
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.451174
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251671
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041114
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015264
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015012
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079872
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161416
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 23
+INFO:__main__:   Trades executed: 23
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 232
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #11
+INFO:__main__:   Time: 23:39:28
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006335
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164744
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106996
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100383
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.447807
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251236
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.040908
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015211
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014969
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079921
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161218
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 20
+INFO:__main__:   Trades executed: 20
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 252
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #12
+INFO:__main__:   Time: 23:46:00
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006335
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164537
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106909
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100383
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.447967
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251140
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.040883
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015202
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014964
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079969
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161020
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 274
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #13
+INFO:__main__:   Time: 23:51:54
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006342
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164619
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107083
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100360
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.452943
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251429
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.040972
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015198
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014991
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079969
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161020
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 296
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #14
+INFO:__main__:   Time: 23:57:47
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:🎯 OVERRIDE: BTC - Big drop (3.0%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (5.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (4.3%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (4.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (2.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (11.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.2%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:⚠️ LLM REJECTED: ATOM - LLM says HOLD (small drop)
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.0%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini BTC/USD
+INFO:__main__:   Side: buy, Amount: 0.000294
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009551
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.249078
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.161420
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.151193
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.173927
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.377806
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061653
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022914
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241536
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006353
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164992
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107171
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100545
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.454071
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251622
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.040998
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015221
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015007
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079872
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161416
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 318
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #15
+INFO:__main__:   Time: 00:03:41
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006372
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165932
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107611
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100715
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.455202
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252349
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041152
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015271
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015066
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079872
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161815
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 340
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #16
+INFO:__main__:   Time: 00:09:34
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006362
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165492
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106996
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100568
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.451495
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251864
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041088
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015237
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015022
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079726
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161020
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 362
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #17
+INFO:__main__:   Time: 00:15:26
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006350
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165055
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106735
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100337
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.449408
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251622
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041088
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015195
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014976
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079388
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160232
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 384
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #18
+INFO:__main__:   Time: 00:21:18
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006338
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164785
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106648
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100168
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251429
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041088
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015174
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014950
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079292
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160232
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 21
+INFO:__main__:   Trades executed: 21
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 405
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #19
+INFO:__main__:   Time: 00:27:12
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006344
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.164764
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106735
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100176
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.251526
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041178
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015179
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.014966
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079629
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160037
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 21
+INFO:__main__:   Trades executed: 21
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 426
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #20
+INFO:__main__:   Time: 00:33:06
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006359
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165076
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.106909
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100498
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.450692
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252397
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041478
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015234
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015040
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079823
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.160822
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 448
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #21
+INFO:__main__:   Time: 00:39:00
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006368
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165911
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107171
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100660
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.452782
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252689
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041530
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015269
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015069
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079921
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161218
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 470
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #22
+INFO:__main__:   Time: 00:44:54
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USDT
+INFO:__main__:🎯 SIMULATED TRADE: gemini ETH/USD
+INFO:__main__:   Side: buy, Amount: 0.009526
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini SOL/USD
+INFO:__main__:   Side: buy, Amount: 0.247486
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOT/USD
+INFO:__main__:   Side: buy, Amount: 0.160093
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini XRP/USD
+INFO:__main__:   Side: buy, Amount: 0.150617
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini DOGE/USD
+INFO:__main__:   Side: buy, Amount: 2.181405
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LTC/USD
+INFO:__main__:   Side: buy, Amount: 0.376720
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini UNI/USD
+INFO:__main__:   Side: buy, Amount: 0.061255
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini LINK/USD
+INFO:__main__:   Side: buy, Amount: 0.022819
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini AVAX/USD
+INFO:__main__:   Side: buy, Amount: 0.022395
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini ATOM/USD
+INFO:__main__:   Side: buy, Amount: 0.119811
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: gemini FIL/USD
+INFO:__main__:   Side: buy, Amount: 0.241387
+INFO:__main__:   Value: $19.66
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.006370
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.165827
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.107171
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.100552
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 1.452138
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.252836
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.041702
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015287
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.015078
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.079775
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+INFO:__main__:   Side: sell, Amount: 0.161218
+INFO:__main__:   Value: $13.11
+INFO:__main__:   Confidence: OVERRIDE
+INFO:__main__:   LLM: HOLD
+INFO:__main__:
+📊 CYCLE SUMMARY:
+INFO:__main__:   Opportunities found: 22
+INFO:__main__:   Trades executed: 22
+INFO:__main__:======================================================================
+INFO:__main__:📈 TOTAL TRADES: 492
+INFO:__main__:⏰ Next cycle in 300 seconds...
+
+INFO:__main__:
+======================================================================
+INFO:__main__:🔄 ENHANCED LLM TRADING CYCLE #23
+INFO:__main__:   Time: 00:50:47
+INFO:__main__:======================================================================
+INFO:__main__:🔍 Checking Gemini opportunities...
+INFO:__main__:⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+INFO:__main__:🎯 OVERRIDE: ETH - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: SOL - Big drop (6.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USD
+INFO:__main__:🎯 OVERRIDE: DOT - Big drop (3.7%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USD
+INFO:__main__:🎯 OVERRIDE: XRP - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USD
+INFO:__main__:🎯 OVERRIDE: DOGE - Big drop (3.6%), overriding LLM HOLD
+INFO:__main__:🎯 OVERRIDE: LTC - Big drop (3.9%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USD
+INFO:__main__:🎯 OVERRIDE: UNI - Big drop (12.0%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USD
+INFO:__main__:🎯 OVERRIDE: LINK - Big drop (4.6%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USD
+INFO:__main__:🎯 OVERRIDE: AVAX - Big drop (5.1%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USD
+INFO:__main__:🎯 OVERRIDE: ATOM - Big drop (3.8%), overriding LLM HOLD
+INFO:__main__:💰 Price fix: Generic 100× multiplier for FIL/USD
+INFO:__main__:🎯 OVERRIDE: FIL - Big drop (4.1%), overriding LLM HOLD
+INFO:__main__:🔍 Checking Binance opportunities...
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOT/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for XRP/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for DOGE/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for UNI/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for LINK/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for AVAX/USDT
+INFO:__main__:💰 Price fix: Generic 100× multiplier for ATOM/USDT

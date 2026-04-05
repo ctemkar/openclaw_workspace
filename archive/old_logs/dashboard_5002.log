@@ -1,0 +1,19 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+======================================================================
+🚀 ENHANCED TRADING DASHBOARD
+======================================================================
+📊 Dashboard URL: http://localhost:5002
+📈 Trading Server: http://localhost:5001
+📁 Working directory: /Users/chetantemkar/.openclaw/workspace/app
+======================================================================
+ * Serving Flask app 'enhanced_trading_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.1.63:5002
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [31/Mar/2026 20:21:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 20:21:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [31/Mar/2026 20:21:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [31/Mar/2026 20:22:12] "GET / HTTP/1.1" 200 -

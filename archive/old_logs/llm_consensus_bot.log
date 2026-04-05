@@ -1,0 +1,308 @@
+2026-04-03 00:51:39,109 - INFO - ======================================================================
+2026-04-03 00:51:39,109 - INFO - 🧠 LLM CONSENSUS TRADING BOT
+2026-04-03 00:51:39,109 - INFO - 🤖 DeepSeek (main) + 4 Ollama models
+2026-04-03 00:51:39,109 - INFO - ======================================================================
+2026-04-03 00:51:39,111 - INFO - ✅ Gemini loaded
+2026-04-03 00:51:39,115 - INFO - ✅ Binance loaded
+2026-04-03 00:51:39,115 - INFO - 
+🔄 CYCLE 1 - 00:51:39
+2026-04-03 00:51:42,078 - INFO - 🔍 Getting weighted LLM consensus for BTC...
+2026-04-03 00:52:01,995 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:52:09,867 - INFO -   llama3.1: BUY=5, SELL=6 - Price is slightly below the previous day's close and has exp... (weight: 1.0)
+2026-04-03 00:52:15,553 - INFO -   llama3: BUY=4, SELL=6 - Weak short-term performance, but still strong fundamentals; ... (weight: 1.0)
+2026-04-03 00:52:35,600 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:52:45,304 - INFO -   qwen3: BUY=4, SELL=7 - Price is down 2.21% in 24h, indicating possible oversold con... (weight: 1.0)
+2026-04-03 00:52:53,278 - INFO -   mistral: BUY=5, SELL=7 - Current price is near the resistance level around $67k. A po... (weight: 1.0)
+2026-04-03 00:53:01,969 - INFO -   deepseek-r1: BUY=6, SELL=7 - Current price $66783.46 with 24h decline of 2.21% suggests c... (weight: 1.1)
+2026-04-03 00:53:09,419 - INFO -   llama3.1: BUY=8, SELL=6 - Price has corrected 2.21% in 24 hours, potentially a buying ... (weight: 0.9)
+2026-04-03 00:53:09,419 - INFO - 📊 BTC weighted consensus: BUY=5.2, SELL=6.3, Net=-1.0, Signal=NEUTRAL
+2026-04-03 00:53:09,419 - INFO -    🟢 Top BUY reason: Price has corrected 2.21% in 24 hours, potentially a buying opportunity after a ...
+2026-04-03 00:53:09,419 - INFO -    🔴 Top SELL reason: Price is down 2.21% in 24h, indicating possible oversold conditions. However, wi...
+2026-04-03 00:53:09,432 - INFO - 
+🧠 CIO ANALYSIS: BTC
+2026-04-03 00:53:09,433 - INFO -    Automated consensus: NEUTRAL (Net: 0.0)
+2026-04-03 00:53:09,433 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:53:09,433 - WARNING -    ⚠️ deepseek-r1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:53:09,433 - WARNING -    ⚠️ llama3.1:8b: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 00:53:09,433 - WARNING -    🚨 3 CONTRADICTIONS FOUND!
+2026-04-03 00:53:09,433 - INFO -    Comment sentiments: NEUTRAL, MIXED, MIXED, BEARISH, BEARISH, BEARISH, BULLISH
+2026-04-03 00:53:09,433 - INFO -    Model decisions: BUY:1, SELL:3, HOLD:0
+2026-04-03 00:53:09,433 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 00:53:09,434 - INFO -    📝 Reason: Sell consensus (43%) despite 3 contradictory comments
+2026-04-03 00:53:09,434 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:53:09,434 - INFO -    ⚠️ deepseek-r1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:53:09,434 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 00:53:09,434 - WARNING -    🚨 CIO OVERRIDE: Changing from NEUTRAL to SELL
+2026-04-03 00:53:09,434 - WARNING -    📝 Reason: Sell consensus (43%) despite 3 contradictory comments
+2026-04-03 00:53:09,472 - INFO - 🔍 Getting weighted LLM consensus for ETH...
+2026-04-03 00:53:27,896 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:53:35,895 - INFO -   llama3.1: BUY=8, SELL=6 - Short-term bearish trend with -4.05% 24h loss, but price is ... (weight: 1.0)
+2026-04-03 00:53:42,411 - INFO -   llama3: BUY=2, SELL=8 - Current price is relatively high, with a recent decline. Sel... (weight: 1.0)
+2026-04-03 00:54:02,413 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:54:09,956 - INFO -   qwen3: BUY=4, SELL=7 - Bearish momentum with 24h decline, but potential for rebound... (weight: 1.0)
+2026-04-03 00:54:17,888 - INFO -   mistral: BUY=6, SELL=4 - Current price is relatively high compared to the 24h drop of... (weight: 1.0)
+2026-04-03 00:54:26,050 - INFO -   deepseek-r1: BUY=6, SELL=7 - Current ETH price at $2050.05 with a 24h drop of 4.05% sugge... (weight: 1.1)
+2026-04-03 00:54:34,304 - INFO -   llama3.1: BUY=2, SELL=8 - ETH price has dropped by -4.05% in the last 24 hours, indica... (weight: 0.9)
+2026-04-03 00:54:34,305 - INFO - 📊 ETH weighted consensus: BUY=4.8, SELL=6.4, Net=-1.6, Signal=SELL
+2026-04-03 00:54:34,305 - INFO -    🟢 Top BUY reason: Short-term bearish trend with -4.05% 24h loss, but price is above key support le...
+2026-04-03 00:54:34,305 - INFO -    🔴 Top SELL reason: Current price is relatively high, with a recent decline. Sell score is higher du...
+2026-04-03 00:54:34,305 - INFO - 
+🧠 CIO ANALYSIS: ETH
+2026-04-03 00:54:34,305 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 00:54:34,305 - WARNING -    ⚠️ llama3.1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:54:34,306 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:54:34,306 - WARNING -    ⚠️ llama3.1:8b: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 00:54:34,306 - WARNING -    🚨 3 CONTRADICTIONS FOUND!
+2026-04-03 00:54:34,306 - INFO -    Comment sentiments: NEUTRAL, BEARISH, BEARISH, MIXED, BEARISH, NEUTRAL, BULLISH
+2026-04-03 00:54:34,306 - INFO -    Model decisions: BUY:1, SELL:4, HOLD:0
+2026-04-03 00:54:34,306 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 00:54:34,306 - INFO -    📝 Reason: Sell consensus (57%) despite 3 contradictory comments
+2026-04-03 00:54:34,306 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:54:34,306 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:54:34,306 - INFO -    ⚠️ llama3.1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 00:54:34,336 - INFO - 🔍 Getting weighted LLM consensus for SOL...
+2026-04-03 00:54:53,418 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:55:01,734 - INFO -   llama3.1: BUY=4, SELL=7 - The stock has decreased by -6.89% in the last 24 hours, whic... (weight: 1.0)
+2026-04-03 00:55:08,476 - INFO -   llama3: BUY=4, SELL=8 - SOL's recent price decline could be a buying opportunity. Ho... (weight: 1.0)
+2026-04-03 00:55:28,480 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:55:37,182 - INFO -   qwen3: BUY=3, SELL=7 - Price dropped 6.89% in 24h, suggesting potential rebound but... (weight: 1.0)
+2026-04-03 00:55:46,241 - INFO -   mistral: BUY=5, SELL=7 - Current price drop of 6.89% in 24h suggests potential for re... (weight: 1.0)
+2026-04-03 00:55:54,819 - INFO -   deepseek-r1: BUY=5, SELL=5 - SOL is trading at $78.81 with a 24-hour loss of 6.89%. This ... (weight: 1.1)
+2026-04-03 00:56:02,936 - INFO -   llama3.1: BUY=4, SELL=8 - Price decline of -6.89% within a short period suggests poten... (weight: 0.9)
+2026-04-03 00:56:02,937 - INFO - 📊 SOL weighted consensus: BUY=4.3, SELL=6.6, Net=-2.3, Signal=SELL
+2026-04-03 00:56:02,937 - INFO -    🟢 Top BUY reason: Parse error...
+2026-04-03 00:56:02,937 - INFO -    🔴 Top SELL reason: SOL's recent price decline could be a buying opportunity. However, the 24h loss ...
+2026-04-03 00:56:02,937 - INFO - 
+🧠 CIO ANALYSIS: SOL
+2026-04-03 00:56:02,938 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 00:56:02,938 - WARNING -    ⚠️ llama3.1:latest: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 00:56:02,938 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 00:56:02,938 - WARNING -    ⚠️ deepseek-r1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:56:02,939 - WARNING -    🚨 3 CONTRADICTIONS FOUND!
+2026-04-03 00:56:02,939 - INFO -    Comment sentiments: NEUTRAL, BULLISH, NEUTRAL, BEARISH, BULLISH, BEARISH, BEARISH
+2026-04-03 00:56:02,939 - INFO -    Model decisions: BUY:2, SELL:4, HOLD:0
+2026-04-03 00:56:02,939 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 00:56:02,939 - INFO -    📝 Reason: Sell consensus (57%) despite 3 contradictory comments
+2026-04-03 00:56:02,939 - INFO -    ⚠️ llama3.1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 00:56:02,939 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 00:56:02,939 - INFO -    ⚠️ deepseek-r1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:56:02,968 - INFO - 🔍 Getting weighted LLM consensus for XRP...
+2026-04-03 00:56:19,833 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:56:27,502 - INFO -   llama3.1: BUY=4, SELL=8 - XRP has experienced a significant price drop in the last 24 ... (weight: 1.0)
+2026-04-03 00:56:35,208 - INFO -   llama3: BUY=4, SELL=6 - XRP has experienced a decline in value over the past 24 hour... (weight: 1.0)
+2026-04-03 00:56:55,212 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:57:04,315 - INFO -   qwen3: BUY=4, SELL=7 - Current price at $1.30 with 24h decline suggests potential r... (weight: 1.0)
+2026-04-03 00:57:12,259 - INFO -   mistral: BUY=6, SELL=4 - Current price is slightly above the recent support level of ... (weight: 1.0)
+2026-04-03 00:57:22,263 - INFO -   deepseek-r1: BUY=3, SELL=7 - XRP trading at $1.30 with a 24-hour drop of 3.85% suggests d... (weight: 1.1)
+2026-04-03 00:57:30,626 - INFO -   llama3.1: BUY=4, SELL=8 - XRP is down by 3.85% in the last 24 hours, but the current p... (weight: 0.9)
+2026-04-03 00:57:30,626 - INFO - 📊 XRP weighted consensus: BUY=4.3, SELL=6.4, Net=-2.1, Signal=SELL
+2026-04-03 00:57:30,626 - INFO -    🟢 Top BUY reason: Current price is slightly above the recent support level of $1.25. A 3.85% drop ...
+2026-04-03 00:57:30,627 - INFO -    🔴 Top SELL reason: XRP has experienced a significant price drop in the last 24 hours, indicating po...
+2026-04-03 00:57:30,627 - INFO - 
+🧠 CIO ANALYSIS: XRP
+2026-04-03 00:57:30,627 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 00:57:30,627 - WARNING -    ⚠️ llama3.1:8b: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 00:57:30,627 - WARNING -    🚨 1 CONTRADICTIONS FOUND!
+2026-04-03 00:57:30,628 - INFO -    Comment sentiments: NEUTRAL, BEARISH, NEUTRAL, BEARISH, MIXED, NEUTRAL, BULLISH
+2026-04-03 00:57:30,628 - INFO -    Model decisions: BUY:1, SELL:3, HOLD:0
+2026-04-03 00:57:30,628 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 00:57:30,628 - INFO -    📝 Reason: Sell consensus (43%) despite 1 contradictory comments
+2026-04-03 00:57:30,628 - INFO -    ⚠️ llama3.1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 00:57:30,659 - INFO - 🔍 Getting weighted LLM consensus for ADA...
+2026-04-03 00:57:47,872 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:57:54,576 - INFO -   llama3.1: BUY=4, SELL=6 - Recently declined by 3.97%, could be a short-term buying opp... (weight: 1.0)
+2026-04-03 00:58:02,332 - INFO -   llama3: BUY=6, SELL=8 - ADA has had a significant decline in the last 24 hours. Whil... (weight: 1.0)
+2026-04-03 00:58:22,337 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:58:33,489 - INFO -   qwen3: BUY=3, SELL=7 - ADA is down 3.97% in 24h, suggesting potential weakness. How... (weight: 1.0)
+2026-04-03 00:58:41,108 - INFO -   mistral: BUY=6, SELL=4 - Current price drop might be a temporary correction. Long-ter... (weight: 1.0)
+2026-04-03 00:58:49,251 - INFO -   deepseek-r1: BUY=4, SELL=7 - ADA is currently trading at $0.24 with a 24-hour drop of 3.9... (weight: 1.1)
+2026-04-03 00:58:57,474 - INFO -   llama3.1: BUY=4, SELL=8 - Price dropped significantly in the last 24 hours, potentiall... (weight: 0.9)
+2026-04-03 00:58:57,475 - INFO - 📊 ADA weighted consensus: BUY=4.6, SELL=6.4, Net=-1.8, Signal=SELL
+2026-04-03 00:58:57,475 - INFO -    🟢 Top BUY reason: ADA has had a significant decline in the last 24 hours. While it's not an extrem...
+2026-04-03 00:58:57,475 - INFO -    🔴 Top SELL reason: ADA has had a significant decline in the last 24 hours. While it's not an extrem...
+2026-04-03 00:58:57,475 - INFO - 
+🧠 CIO ANALYSIS: ADA
+2026-04-03 00:58:57,475 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 00:58:57,475 - WARNING -    ⚠️ llama3.1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 00:58:57,476 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 00:58:57,476 - WARNING -    ⚠️ deepseek-r1:latest: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 00:58:57,476 - WARNING -    🚨 3 CONTRADICTIONS FOUND!
+2026-04-03 00:58:57,476 - INFO -    Comment sentiments: NEUTRAL, BULLISH, MIXED, BEARISH, BEARISH, BULLISH, MIXED
+2026-04-03 00:58:57,476 - INFO -    Model decisions: BUY:2, SELL:3, HOLD:0
+2026-04-03 00:58:57,476 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 00:58:57,476 - INFO -    📝 Reason: Sell consensus (43%) despite 3 contradictory comments
+2026-04-03 00:58:57,476 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 00:58:57,477 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 00:58:57,477 - INFO -    ⚠️ deepseek-r1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 00:58:57,506 - INFO - 🔍 Getting weighted LLM consensus for DOT...
+2026-04-03 00:59:14,925 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 00:59:22,533 - INFO -   llama3.1: BUY=2, SELL=8 - Recent price drop indicates potential buying opportunity. Ho... (weight: 1.0)
+2026-04-03 00:59:28,854 - INFO -   llama3: BUY=4, SELL=6 - Recent decline in price, but lack of strong fundamental indi... (weight: 1.0)
+2026-04-03 00:59:48,860 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 00:59:57,131 - INFO -   qwen3: BUY=3, SELL=7 - Price down 3.93% in 24h, suggesting weakness. However, could... (weight: 1.0)
+2026-04-03 01:00:06,183 - INFO -   mistral: BUY=5, SELL=7 - Current price is near a local resistance level (around $1.20... (weight: 1.0)
+2026-04-03 01:00:14,057 - INFO -   deepseek-r1: BUY=4, SELL=6 - DOT is trading at $1.22 with a 24-hour decline of 3.93%. A s... (weight: 1.1)
+2026-04-03 01:00:22,729 - INFO -   llama3.1: BUY=4, SELL=8 - Negative price movement (-3.93%) in the last 24 hours may in... (weight: 0.9)
+2026-04-03 01:00:22,730 - INFO - 📊 DOT weighted consensus: BUY=3.9, SELL=6.6, Net=-2.7, Signal=SELL
+2026-04-03 01:00:22,730 - INFO -    🟢 Top BUY reason: Parse error...
+2026-04-03 01:00:22,730 - INFO -    🔴 Top SELL reason: Recent price drop indicates potential buying opportunity. However, the magnitude...
+2026-04-03 01:00:22,730 - INFO - 
+🧠 CIO ANALYSIS: DOT
+2026-04-03 01:00:22,730 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 01:00:22,730 - WARNING -    ⚠️ llama3:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:00:22,731 - WARNING -    ⚠️ qwen3:latest: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 01:00:22,731 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:00:22,731 - WARNING -    ⚠️ deepseek-r1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:00:22,731 - WARNING -    🚨 4 CONTRADICTIONS FOUND!
+2026-04-03 01:00:22,731 - INFO -    Comment sentiments: NEUTRAL, BEARISH, BEARISH, BULLISH, BEARISH, BEARISH, MIXED
+2026-04-03 01:00:22,731 - INFO -    Model decisions: BUY:1, SELL:5, HOLD:0
+2026-04-03 01:00:22,731 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 01:00:22,731 - INFO -    📝 Reason: Sell consensus (71%) despite 4 contradictory comments
+2026-04-03 01:00:22,731 - INFO -    ⚠️ llama3: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:00:22,732 - INFO -    ⚠️ qwen3: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 01:00:22,732 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:00:22,732 - INFO -    ⚠️ deepseek-r1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:00:22,766 - INFO - 🔍 Getting weighted LLM consensus for DOGE...
+2026-04-03 01:00:39,927 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 01:00:47,575 - INFO -   llama3.1: BUY=4, SELL=6 - DOGE's recent price drop could be an opportunity to buy. How... (weight: 1.0)
+2026-04-03 01:00:53,583 - INFO -   llama3: BUY=4, SELL=6 - Recent decline might be an opportunity to buy on dips, but c... (weight: 1.0)
+2026-04-03 01:01:13,584 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 01:01:22,132 - INFO -   qwen3: BUY=3, SELL=7 - DOGE is down 3.17% in 24h, showing weakness. Short-term bear... (weight: 1.0)
+2026-04-03 01:01:30,671 - INFO -   mistral: BUY=5, SELL=6 - Current price is near a local resistance level at $0.09, sug... (weight: 1.0)
+2026-04-03 01:01:37,667 - INFO -   deepseek-r1: BUY=4, SELL=6 - DOGE is trading near the bottom with a negative 24h change. ... (weight: 1.1)
+2026-04-03 01:01:44,949 - INFO -   llama3.1: BUY=4, SELL=6 - Low price due to recent decline, but DOGE has shown volatili... (weight: 0.9)
+2026-04-03 01:01:44,949 - INFO - 📊 DOGE weighted consensus: BUY=4.2, SELL=6.0, Net=-1.8, Signal=SELL
+2026-04-03 01:01:44,949 - INFO -    🟢 Top BUY reason: Parse error...
+2026-04-03 01:01:44,950 - INFO -    🔴 Top SELL reason: DOGE is down 3.17% in 24h, showing weakness. Short-term bearish trend, but poten...
+2026-04-03 01:01:44,950 - INFO - 
+🧠 CIO ANALYSIS: DOGE
+2026-04-03 01:01:44,950 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 01:01:44,950 - WARNING -    ⚠️ llama3.1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:01:44,950 - WARNING -    ⚠️ llama3:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:01:44,950 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:01:44,951 - WARNING -    ⚠️ deepseek-r1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:01:44,951 - WARNING -    ⚠️ llama3.1:8b: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:01:44,951 - WARNING -    🚨 5 CONTRADICTIONS FOUND!
+2026-04-03 01:01:44,951 - INFO -    Comment sentiments: NEUTRAL, BEARISH, BEARISH, BEARISH, BULLISH, BEARISH, BULLISH
+2026-04-03 01:01:44,951 - INFO -    Model decisions: BUY:2, SELL:4, HOLD:0
+2026-04-03 01:01:44,951 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 01:01:44,951 - INFO -    📝 Reason: Sell consensus (57%) despite 5 contradictory comments
+2026-04-03 01:01:44,951 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:01:44,951 - INFO -    ⚠️ llama3: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:01:44,951 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:01:44,951 - INFO -    ⚠️ deepseek-r1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:01:44,952 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:01:44,980 - INFO - 🔍 Getting weighted LLM consensus for AVAX...
+2026-04-03 01:02:02,753 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 01:02:09,979 - INFO -   llama3.1: BUY=7, SELL=8 - Recent decline could be a correction or sign of weakening tr... (weight: 1.0)
+2026-04-03 01:02:17,403 - INFO -   llama3: BUY=4, SELL=6 - AVAX is currently experiencing a pullback after a strong ral... (weight: 1.0)
+2026-04-03 01:02:37,408 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 01:02:45,165 - INFO -   qwen3: BUY=5, SELL=8 - Price down 5.66% in 24h, suggesting possible oversold condit... (weight: 1.0)
+2026-04-03 01:02:53,855 - INFO -   mistral: BUY=6, SELL=4 - AVAX has seen a short-term price decrease (-5.66% in 24h). H... (weight: 1.0)
+2026-04-03 01:03:01,913 - INFO -   deepseek-r1: BUY=3, SELL=7 - AVAX is trading at $8.67 with a 24-hour drop of 5.66%, indic... (weight: 1.1)
+2026-04-03 01:03:10,560 - INFO -   llama3.1: BUY=4, SELL=8 - Avalanche (AVAX) is experiencing a significant price drop, w... (weight: 0.9)
+2026-04-03 01:03:10,560 - INFO - 📊 AVAX weighted consensus: BUY=4.8, SELL=6.5, Net=-1.7, Signal=SELL
+2026-04-03 01:03:10,561 - INFO -    🟢 Top BUY reason: Recent decline could be a correction or sign of weakening trend. Price above mov...
+2026-04-03 01:03:10,561 - INFO -    🔴 Top SELL reason: Recent decline could be a correction or sign of weakening trend. Price above mov...
+2026-04-03 01:03:10,561 - INFO - 
+🧠 CIO ANALYSIS: AVAX
+2026-04-03 01:03:10,561 - INFO -    Automated consensus: SELL (Net: 0.0)
+2026-04-03 01:03:10,561 - WARNING -    ⚠️ llama3.1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:03:10,561 - WARNING -    ⚠️ llama3:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:03:10,561 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:03:10,562 - WARNING -    ⚠️ llama3.1:8b: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 01:03:10,562 - WARNING -    🚨 4 CONTRADICTIONS FOUND!
+2026-04-03 01:03:10,562 - INFO -    Comment sentiments: NEUTRAL, BEARISH, BULLISH, BEARISH, BULLISH, BEARISH, BULLISH
+2026-04-03 01:03:10,562 - INFO -    Model decisions: BUY:3, SELL:3, HOLD:0
+2026-04-03 01:03:10,562 - INFO -    🎯 CIO FINAL DECISION: BUY (Confidence: 7/10)
+2026-04-03 01:03:10,562 - INFO -    📝 Reason: Buy consensus (43%) despite 4 contradictory comments
+2026-04-03 01:03:10,562 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:03:10,562 - INFO -    ⚠️ llama3: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:03:10,562 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:03:10,562 - INFO -    ⚠️ llama3.1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 01:03:10,563 - WARNING -    🚨 CIO OVERRIDE: Changing from SELL to BUY
+2026-04-03 01:03:10,563 - WARNING -    📝 Reason: Buy consensus (43%) despite 4 contradictory comments
+2026-04-03 01:03:10,598 - INFO - 🔍 Getting weighted LLM consensus for LINK...
+2026-04-03 01:03:28,592 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 01:03:36,276 - INFO -   llama3.1: BUY=6, SELL=2 - Recent decline may be a correction or a buying opportunity. ... (weight: 1.0)
+2026-04-03 01:03:43,277 - INFO -   llama3: BUY=7, SELL=6 - LINK's recent decline may be a buying opportunity as it appr... (weight: 1.0)
+2026-04-03 01:04:03,282 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 01:04:13,262 - INFO -   qwen3: BUY=3, SELL=7 - LINK is down 4.89% in 24h, suggesting short-term weakness. H... (weight: 1.0)
+2026-04-03 01:04:22,223 - INFO -   mistral: BUY=6, SELL=4 - Current price is below the 7-day moving average ($8.93 on Fe... (weight: 1.0)
+2026-04-03 01:04:30,487 - INFO -   deepseek-r1: BUY=3, SELL=7 - Current price is $8.55 with a 24h drop of 4.89%. This indica... (weight: 1.1)
+2026-04-03 01:04:39,609 - INFO -   llama3.1: BUY=3, SELL=8 - Link has dropped by 4.89% in the last 24 hours, which could ... (weight: 0.9)
+2026-04-03 01:04:39,609 - INFO - 📊 LINK weighted consensus: BUY=4.7, SELL=5.5, Net=-0.8, Signal=NEUTRAL
+2026-04-03 01:04:39,610 - INFO -    🟢 Top BUY reason: LINK's recent decline may be a buying opportunity as it approaches key support l...
+2026-04-03 01:04:39,610 - INFO -    🔴 Top SELL reason: Link has dropped by 4.89% in the last 24 hours, which could be a sign of weaknes...
+2026-04-03 01:04:39,610 - INFO - 
+🧠 CIO ANALYSIS: LINK
+2026-04-03 01:04:39,610 - INFO -    Automated consensus: NEUTRAL (Net: 0.0)
+2026-04-03 01:04:39,610 - WARNING -    ⚠️ llama3:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:04:39,610 - WARNING -    ⚠️ qwen3:latest: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 01:04:39,611 - WARNING -    ⚠️ mistral:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BULLISH
+2026-04-03 01:04:39,611 - WARNING -    ⚠️ deepseek-r1:latest: 🚨 CONTRADICTION: Score says SELL (SELL) but comment is BULLISH
+2026-04-03 01:04:39,611 - WARNING -    🚨 4 CONTRADICTIONS FOUND!
+2026-04-03 01:04:39,611 - INFO -    Comment sentiments: NEUTRAL, MIXED, BULLISH, BULLISH, BULLISH, BULLISH, BEARISH
+2026-04-03 01:04:39,611 - INFO -    Model decisions: BUY:5, SELL:1, HOLD:0
+2026-04-03 01:04:39,611 - INFO -    🎯 CIO FINAL DECISION: BUY (Confidence: 7/10)
+2026-04-03 01:04:39,611 - INFO -    📝 Reason: Buy consensus (71%) despite 4 contradictory comments
+2026-04-03 01:04:39,611 - INFO -    ⚠️ llama3: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:04:39,611 - INFO -    ⚠️ qwen3: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 01:04:39,611 - INFO -    ⚠️ mistral: Score=NEUTRAL, Comment=BULLISH → BUY
+2026-04-03 01:04:39,612 - INFO -    ⚠️ deepseek-r1: Score=SELL, Comment=BULLISH → BUY
+2026-04-03 01:04:39,612 - WARNING -    🚨 CIO OVERRIDE: Changing from NEUTRAL to BUY
+2026-04-03 01:04:39,612 - WARNING -    📝 Reason: Buy consensus (71%) despite 4 contradictory comments
+2026-04-03 01:04:39,645 - INFO - 🔍 Getting weighted LLM consensus for UNI...
+2026-04-03 01:04:57,492 - INFO -   glm-4.7-flash: BUY=5, SELL=5 - Parse error... (weight: 1.2)
+2026-04-03 01:05:05,679 - INFO -   llama3.1: BUY=8, SELL=9 - High volatility with a significant drop in price within 24h.... (weight: 1.0)
+2026-04-03 01:05:11,860 - INFO -   llama3: BUY=4, SELL=8 - Strong sell signal due to significant price drop in the last... (weight: 1.0)
+2026-04-03 01:05:31,865 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-03 01:05:41,308 - INFO -   qwen3: BUY=3, SELL=7 - Price dropped 13.74% in 24h, suggesting possible oversold co... (weight: 1.0)
+2026-04-03 01:05:48,882 - INFO -   mistral: BUY=6, SELL=4 - Current price drop might indicate a potential buying opportu... (weight: 1.0)
+2026-04-03 01:05:56,914 - INFO -   deepseek-r1: BUY=5, SELL=6 - UNI at $3.13 with 24h drop of 13.74% indicates recent volati... (weight: 1.1)
+2026-04-03 01:06:04,256 - INFO -   llama3.1: BUY=4, SELL=6 - Significant price drop in the past 24 hours, possible overse... (weight: 0.9)
+2026-04-03 01:06:04,297 - INFO - 📊 UNI weighted consensus: BUY=5.0, SELL=6.4, Net=-1.4, Signal=NEUTRAL
+2026-04-03 01:06:04,299 - INFO -    🟢 Top BUY reason: High volatility with a significant drop in price within 24h. Could be a short-te...
+2026-04-03 01:06:04,299 - INFO -    🔴 Top SELL reason: High volatility with a significant drop in price within 24h. Could be a short-te...
+2026-04-03 01:06:04,299 - INFO - 
+🧠 CIO ANALYSIS: UNI
+2026-04-03 01:06:04,301 - INFO -    Automated consensus: NEUTRAL (Net: 0.0)
+2026-04-03 01:06:04,301 - WARNING -    ⚠️ llama3.1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:06:04,301 - WARNING -    ⚠️ deepseek-r1:latest: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:06:04,302 - WARNING -    ⚠️ llama3.1:8b: ⚠️ MISMATCH: Score NEUTRAL but comment is BEARISH
+2026-04-03 01:06:04,302 - WARNING -    🚨 3 CONTRADICTIONS FOUND!
+2026-04-03 01:06:04,302 - INFO -    Comment sentiments: NEUTRAL, BEARISH, MIXED, BEARISH, MIXED, BEARISH, BEARISH
+2026-04-03 01:06:04,302 - INFO -    Model decisions: BUY:0, SELL:5, HOLD:0
+2026-04-03 01:06:04,302 - INFO -    🎯 CIO FINAL DECISION: SELL (Confidence: 7/10)
+2026-04-03 01:06:04,309 - INFO -    📝 Reason: Sell consensus (71%) despite 3 contradictory comments
+2026-04-03 01:06:04,309 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:06:04,309 - INFO -    ⚠️ deepseek-r1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:06:04,309 - INFO -    ⚠️ llama3.1: Score=NEUTRAL, Comment=BEARISH → SELL
+2026-04-03 01:06:04,309 - WARNING -    🚨 CIO OVERRIDE: Changing from NEUTRAL to SELL
+2026-04-03 01:06:04,309 - WARNING -    📝 Reason: Sell consensus (71%) despite 3 contradictory comments
+2026-04-03 01:06:04,400 - INFO - 
+🎯 TRADE DECISIONS:
+2026-04-03 01:06:04,432 - INFO - ✅ Trade executor loaded
+2026-04-03 01:06:04,432 - INFO -   BTC: SELL (confidence: 1.0)
+2026-04-03 01:06:04,434 - INFO -     ✅ Trade executed: SELL 0.0001 BTC
+2026-04-03 01:06:04,434 - INFO -   ETH: SELL (confidence: 1.6)
+2026-04-03 01:06:04,435 - INFO -     ✅ Trade executed: SELL 0.0027 ETH
+2026-04-03 01:06:04,435 - INFO -   SOL: SELL (confidence: 2.3)
+2026-04-03 01:06:04,436 - INFO -     ✅ Trade executed: SELL 0.0699 SOL
+2026-04-03 01:06:04,436 - INFO -   XRP: SELL (confidence: 2.1)
+2026-04-03 01:06:04,436 - INFO -     ✅ Trade executed: SELL 4.2353 XRP
+2026-04-03 01:06:04,436 - INFO -   ADA: SELL (confidence: 1.8)
+2026-04-03 01:06:04,437 - INFO -     ✅ Trade executed: SELL 23.0142 ADA
+2026-04-03 01:06:04,437 - INFO -   DOT: SELL (confidence: 2.7)
+2026-04-03 01:06:04,437 - INFO -     ✅ Trade executed: SELL 4.5086 DOT
+2026-04-03 01:06:04,437 - INFO -   DOGE: SELL (confidence: 1.8)
+2026-04-03 01:06:04,438 - INFO -     ✅ Trade executed: SELL 61.2347 DOGE
+2026-04-03 01:06:04,438 - INFO -   AVAX: BUY (no trade - signal not strong enough)
+2026-04-03 01:06:04,438 - INFO -   LINK: BUY (no trade - signal not strong enough)
+2026-04-03 01:06:04,438 - INFO -   UNI: SELL (confidence: 1.4)
+2026-04-03 01:06:04,438 - INFO -     ✅ Trade executed: SELL 1.7577 UNI
+2026-04-03 01:06:04,438 - INFO - 
+📊 CYCLE SUMMARY: 8 trades executed
+2026-04-03 01:06:04,439 - INFO - ✅ Decisions saved to /Users/chetantemkar/.openclaw/workspace/app/llm_consensus_decisions.json
+2026-04-03 01:06:04,439 - INFO - ✅ Executed 8 trades this cycle
+2026-04-03 01:06:04,439 - INFO - ⏰ Next analysis in 10 minutes...

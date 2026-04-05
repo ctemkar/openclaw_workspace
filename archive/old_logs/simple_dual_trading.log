@@ -1,0 +1,3 @@
+2026-04-03 17:53:02,406 - INFO - 🚀 STARTING SIMPLE DUAL-EXCHANGE BOT
+2026-04-03 17:53:02,407 - INFO - 💰 YOU HAVE: $572 Gemini + $72 Binance = $644 TOTAL
+2026-04-03 17:53:06,278 - ERROR - ❌ Balance check error: gemini Nonce '1775213586002' has not increased since your last call to the Gemini API.

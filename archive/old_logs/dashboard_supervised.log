@@ -1,0 +1,33 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+======================================================================
+🚀 CONSOLIDATED TRADING DASHBOARD
+======================================================================
+📊 Dashboard available at: http://localhost:5007
+📈 API endpoint: http://localhost:5007/api/status
+======================================================================
+ * Serving Flask app 'simple_dashboard'
+ * Debug mode: off
+Address already in use
+Port 5007 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Tip: There are .env files present. Install python-dotenv to use them.
+======================================================================
+🚀 CONSOLIDATED TRADING DASHBOARD
+======================================================================
+📊 Dashboard available at: http://localhost:5007
+📈 API endpoint: http://localhost:5007/api/status
+======================================================================
+ * Serving Flask app 'simple_dashboard'
+ * Debug mode: off
+Address already in use
+Port 5007 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Tip: There are .env files present. Install python-dotenv to use them.
+======================================================================
+🚀 CONSOLIDATED TRADING DASHBOARD
+======================================================================
+📊 Dashboard available at: http://localhost:5007
+📈 API endpoint: http://localhost:5007/api/status
+======================================================================
+ * Serving Flask app 'simple_dashboard'
+ * Debug mode: off
+Address already in use
+Port 5007 is in use by another program. Either identify and stop that program, or start the server with a different port.

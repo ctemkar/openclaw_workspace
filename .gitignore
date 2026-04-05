@@ -1,37 +1,42 @@
-# API KEYS - NEVER COMMIT THESE
-secure_keys/
-*.key
-*.secret
+# Secrets and sensitive data
+.env
+.env.local
+.env.*.local
 *.env
-.env*
-api_keys.json
-config.json
-credentials.json
+secrets/
+keys/
+tokens/
 
-# Trading system
-trading_mode.txt
-paper_trading_keys/
-demo_paper_trades.json
-simulated_trades_audit.json
-safety_lock.json
+# Telegram bot files with hardcoded tokens
+simple_telegram_trading_bot.py
+telegram_trading_bot.py
 
-# Logs
-*.log
-logs/
+# API key files
+*_key*
+*_secret*
+*_token*
 
-# Python
+# Trading system files with potential secrets
+llm_consensus_trading_system.py
+fixed_profitable_trading_system.py
+properly_fixed_trading_system.py
+
+# Audit logs and trading data
+*_audit.json
+*_trades.log
+real_trading_data/
+
+# Python cache
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-venv/
-env/
+*.py[cod]
+*$py.class
 
-# System
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
 .DS_Store
 Thumbs.db
-
-# Temporary files
-*.tmp
-*.temp

@@ -1,0 +1,15 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 TRUTH DASHBOARD starting on http://localhost:5003
+🎯 This shows what's ACTUALLY happening (not simulated data)
+ * Serving Flask app 'truth_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.1.63:5003
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [31/Mar/2026 17:44:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 17:44:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [31/Mar/2026 17:45:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 17:47:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 17:47:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

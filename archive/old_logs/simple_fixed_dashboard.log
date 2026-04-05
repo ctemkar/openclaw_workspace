@@ -1,0 +1,39 @@
+🚀 STARTING REAL P&L DASHBOARD (NO HARCODED VALUES)
+   • Port: 5009
+   • Shows: REAL P&L data only
+   • Priority: No hardcoded values
+   • Access: http://localhost:5009/
+ * Serving Flask app 'simple_fixed_dashboard'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://192.168.1.63:5009
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 03:20:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 03:20:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 03:39:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 03:40:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 04:41:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 04:43:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 04:43:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 05:43:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 05:44:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 06:41:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 06:45:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 07:47:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 07:47:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 08:40:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 08:48:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 08:48:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 09:49:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 09:49:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 10:40:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 10:50:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 10:50:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 11:51:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 12:40:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 12:52:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 13:01:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 13:02:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2026 13:02:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

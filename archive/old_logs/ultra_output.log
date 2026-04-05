@@ -1,0 +1,84 @@
+2026-04-03 18:22:41,162 - INFO - 🚀 ULTRA-AGGRESSIVE TRADER STARTING
+2026-04-03 18:22:41,163 - INFO - 💰 USING YOUR FULL $40 - MAXIMUM TRADING!
+2026-04-03 18:22:41,167 - INFO - 📊 ULTRA-AGGRESSIVE Trading:
+2026-04-03 18:22:41,167 - INFO -    Min spread: 0.4%
+2026-04-03 18:22:41,168 - INFO -    Trade size: $30.0 (75% of your $40!)
+2026-04-03 18:22:41,168 - INFO -    Min profit: $0.07 (LOWER threshold)
+2026-04-03 18:22:41,168 - INFO - ============================================================
+2026-04-03 18:22:41,168 - INFO - 🚀 ULTRA-AGGRESSIVE TRADING ACTIVATED
+2026-04-03 18:22:41,168 - INFO - ============================================================
+2026-04-03 18:22:41,168 - INFO - 🔍 Ultra Scan #1
+2026-04-03 18:22:43,160 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:22:43,160 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:22:46,952 - INFO -    🎯 Found: MANA - 0.48%
+2026-04-03 18:22:46,953 - INFO -       Profit: $0.08
+2026-04-03 18:22:46,953 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:22:46,953 - INFO -    Crypto: MANA
+2026-04-03 18:22:46,953 - INFO -    Spread: 0.48%
+2026-04-03 18:22:46,953 - INFO -    Expected profit: $0.08
+2026-04-03 18:22:46,953 - INFO -    Trade size: $30.0
+2026-04-03 18:22:46,953 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:22:46,953 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:23:16,972 - INFO - 🔍 Ultra Scan #2
+2026-04-03 18:23:17,096 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:23:17,096 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:23:17,480 - INFO -    🎯 Found: MANA - 0.48%
+2026-04-03 18:23:17,480 - INFO -       Profit: $0.08
+2026-04-03 18:23:17,480 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:23:17,480 - INFO -    Crypto: MANA
+2026-04-03 18:23:17,480 - INFO -    Spread: 0.48%
+2026-04-03 18:23:17,480 - INFO -    Expected profit: $0.08
+2026-04-03 18:23:17,480 - INFO -    Trade size: $30.0
+2026-04-03 18:23:17,480 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:23:17,480 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:23:47,485 - INFO - 🔍 Ultra Scan #3
+2026-04-03 18:23:47,609 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:23:47,610 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:23:48,038 - INFO -    🎯 Found: MANA - 0.48%
+2026-04-03 18:23:48,038 - INFO -       Profit: $0.08
+2026-04-03 18:23:48,038 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:23:48,038 - INFO -    Crypto: MANA
+2026-04-03 18:23:48,038 - INFO -    Spread: 0.48%
+2026-04-03 18:23:48,039 - INFO -    Expected profit: $0.08
+2026-04-03 18:23:48,039 - INFO -    Trade size: $30.0
+2026-04-03 18:23:48,039 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:23:48,039 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:24:18,039 - INFO - 🔍 Ultra Scan #4
+2026-04-03 18:24:18,168 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:24:18,168 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:24:18,655 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:24:18,655 - INFO -       Profit: $0.15
+2026-04-03 18:24:18,656 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:24:18,656 - INFO -    Crypto: MANA
+2026-04-03 18:24:18,656 - INFO -    Spread: 0.70%
+2026-04-03 18:24:18,656 - INFO -    Expected profit: $0.15
+2026-04-03 18:24:18,656 - INFO -    Trade size: $30.0
+2026-04-03 18:24:18,656 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:24:18,656 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:24:48,677 - INFO - 🔍 Ultra Scan #5
+2026-04-03 18:24:48,807 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:24:48,807 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:24:49,190 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:24:49,190 - INFO -       Profit: $0.15
+2026-04-03 18:24:49,190 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:24:49,190 - INFO -    Crypto: MANA
+2026-04-03 18:24:49,190 - INFO -    Spread: 0.70%
+2026-04-03 18:24:49,190 - INFO -    Expected profit: $0.15
+2026-04-03 18:24:49,190 - INFO -    Trade size: $30.0
+2026-04-03 18:24:49,190 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:24:49,190 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:25:19,206 - INFO - 🔍 Ultra Scan #6
+2026-04-03 18:25:19,329 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:25:19,330 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:25:19,718 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:25:19,719 - INFO -       Profit: $0.15
+2026-04-03 18:25:19,719 - INFO - 🎯 EXECUTING ULTRA-AGGRESSIVE TRADE!
+2026-04-03 18:25:19,719 - INFO -    Crypto: MANA
+2026-04-03 18:25:19,719 - INFO -    Spread: 0.70%
+2026-04-03 18:25:19,719 - INFO -    Expected profit: $0.15
+2026-04-03 18:25:19,719 - INFO -    Trade size: $30.0
+2026-04-03 18:25:19,719 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:25:19,719 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:25:49,758 - INFO - 🔍 Ultra Scan #7
+2026-04-03 18:25:49,874 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:25:49,874 - INFO -    ✅ READY for $30.0 trades!

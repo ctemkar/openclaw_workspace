@@ -1,0 +1,993 @@
+2026-04-04 16:19:25,323 - INFO - 🚀 PRACTICAL PROFIT BOT STARTING
+2026-04-04 16:19:25,323 - INFO - 💰 Makes REAL money with what WORKS!
+2026-04-04 16:19:25,328 - INFO - 📊 Practical Trading:
+2026-04-04 16:19:25,328 - INFO -    Trade %: 25.0% of MANA
+2026-04-04 16:19:25,328 - INFO -    Min profit: $0.15
+2026-04-04 16:19:25,328 - INFO - ============================================================
+2026-04-04 16:19:25,328 - INFO - 🚀 PRACTICAL PROFIT BOT - MAKING REAL MONEY
+2026-04-04 16:19:25,328 - INFO - ============================================================
+2026-04-04 16:19:25,328 - INFO - 💰 USING WHAT WORKS:
+2026-04-04 16:19:25,328 - INFO -    • Gemini PUBLIC API for prices
+2026-04-04 16:19:25,328 - INFO -    • Binance for trading
+2026-04-04 16:19:25,328 - INFO -    • Your 705 MANA for profit
+2026-04-04 16:19:25,328 - INFO - ============================================================
+2026-04-04 16:19:25,328 - INFO - 🔍 Practical Scan #1
+2026-04-04 16:19:25,777 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:19:25,778 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:19:25,778 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:19:25,778 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 16:20:13,801 - INFO - 🔍 Practical Scan #2
+2026-04-04 16:20:13,924 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:20:13,924 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:20:13,924 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:20:13,924 - INFO -    ⏳ Waiting 54 seconds...
+2026-04-04 16:21:08,000 - INFO - 🔍 Practical Scan #3
+2026-04-04 16:21:08,127 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:21:08,127 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:21:08,127 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:21:08,127 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 16:21:55,145 - INFO - 🔍 Practical Scan #4
+2026-04-04 16:21:55,269 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:21:55,269 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:21:55,269 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:21:55,269 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 16:23:05,318 - INFO - 🔍 Practical Scan #5
+2026-04-04 16:23:05,558 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:23:05,558 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:23:05,558 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:23:05,559 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 16:23:52,621 - INFO - 🔍 Practical Scan #6
+2026-04-04 16:23:52,749 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:23:52,749 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:23:52,749 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:23:52,749 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 16:24:51,803 - INFO - 🔍 Practical Scan #7
+2026-04-04 16:24:51,933 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:24:51,934 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:24:51,934 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:24:51,934 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 16:25:43,943 - INFO - 🔍 Practical Scan #8
+2026-04-04 16:25:44,070 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:25:44,070 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:25:44,070 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:25:44,070 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 16:26:59,152 - INFO - 🔍 Practical Scan #9
+2026-04-04 16:27:01,021 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:27:01,022 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:27:01,022 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:27:01,023 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 16:28:07,127 - INFO - 🔍 Practical Scan #10
+2026-04-04 16:28:07,700 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:28:07,700 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:28:07,700 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:28:07,700 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 16:28:55,844 - INFO - 🔍 Practical Scan #11
+2026-04-04 16:28:56,066 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:28:56,066 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:28:56,067 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:28:56,067 - INFO -    ⏳ Waiting 45 seconds...
+2026-04-04 16:29:41,261 - INFO - 🔍 Practical Scan #12
+2026-04-04 16:29:41,808 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:29:41,853 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:29:41,853 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:29:41,897 - INFO -    ⏳ Waiting 54 seconds...
+2026-04-04 16:30:36,028 - INFO - 🔍 Practical Scan #13
+2026-04-04 16:30:36,372 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:30:36,373 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:30:36,373 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:30:36,373 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 16:31:29,528 - INFO - 🔍 Practical Scan #14
+2026-04-04 16:31:29,831 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:31:29,839 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:31:29,839 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:31:29,839 - INFO -    ⏳ Waiting 58 seconds...
+2026-04-04 16:32:27,899 - INFO - 🔍 Practical Scan #15
+2026-04-04 16:32:28,032 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:32:28,032 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:32:28,032 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:32:28,033 - INFO -    ⏳ Waiting 54 seconds...
+2026-04-04 16:33:22,132 - INFO - 🔍 Practical Scan #16
+2026-04-04 16:33:22,266 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:33:22,266 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:33:22,267 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:33:22,267 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 16:34:29,390 - INFO - 🔍 Practical Scan #17
+2026-04-04 16:34:29,624 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:34:29,625 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:34:29,625 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:34:29,625 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 16:35:35,772 - INFO - 🔍 Practical Scan #18
+2026-04-04 16:35:35,991 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:35:35,992 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:35:35,992 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:35:35,992 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 16:36:48,089 - INFO - 🔍 Practical Scan #19
+2026-04-04 16:36:48,330 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:36:48,330 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:36:48,330 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:36:48,330 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 16:37:39,439 - INFO - 🔍 Practical Scan #20
+2026-04-04 16:37:39,566 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:37:39,567 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:37:39,567 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:37:39,567 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 16:38:30,573 - INFO - 🔍 Practical Scan #21
+2026-04-04 16:38:30,697 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:38:30,697 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:38:30,698 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:38:30,698 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 16:39:37,819 - INFO - 🔍 Practical Scan #22
+2026-04-04 16:39:38,063 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:39:38,063 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:39:38,063 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:39:38,063 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 16:40:37,140 - INFO - 🔍 Practical Scan #23
+2026-04-04 16:40:37,258 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:40:37,258 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:40:37,258 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:40:37,258 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 16:41:25,409 - INFO - 🔍 Practical Scan #24
+2026-04-04 16:41:25,534 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:41:25,535 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:41:25,535 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:41:25,535 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 16:42:34,669 - INFO - 🔍 Practical Scan #25
+2026-04-04 16:42:35,294 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:42:35,295 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:42:35,295 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:42:35,311 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 16:43:35,969 - INFO - 🔍 Practical Scan #26
+2026-04-04 16:43:39,120 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:43:39,143 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:43:39,143 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:43:39,144 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 16:44:38,311 - INFO - 🔍 Practical Scan #27
+2026-04-04 16:44:38,498 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:44:38,498 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:44:38,498 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:44:38,499 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 16:45:29,506 - INFO - 🔍 Practical Scan #28
+2026-04-04 16:45:29,705 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:45:29,706 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:45:29,706 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:45:29,706 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 16:46:33,844 - INFO - 🔍 Practical Scan #29
+2026-04-04 16:46:34,209 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:46:34,209 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:46:34,209 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:46:34,209 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 16:47:26,266 - INFO - 🔍 Practical Scan #30
+2026-04-04 16:47:26,403 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:47:26,404 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:47:26,404 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:47:26,404 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 16:48:19,555 - INFO - 🔍 Practical Scan #31
+2026-04-04 16:48:19,678 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:48:19,679 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:48:19,679 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:48:19,679 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 16:49:29,793 - INFO - 🔍 Practical Scan #32
+2026-04-04 16:49:29,997 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:49:29,997 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:49:29,997 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:49:29,998 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 16:50:18,148 - INFO - 🔍 Practical Scan #33
+2026-04-04 16:50:18,277 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:50:18,277 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:50:18,277 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:50:18,278 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 16:51:15,332 - INFO - 🔍 Practical Scan #34
+2026-04-04 16:51:15,464 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:51:15,464 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:51:15,464 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:51:15,464 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 16:52:14,614 - INFO - 🔍 Practical Scan #35
+2026-04-04 16:52:14,748 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:52:14,749 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:52:14,749 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:52:14,749 - INFO -    ⏳ Waiting 71 seconds...
+2026-04-04 16:53:25,891 - INFO - 🔍 Practical Scan #36
+2026-04-04 16:53:26,109 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:53:26,110 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:53:26,110 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:53:26,110 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 16:54:19,237 - INFO - 🔍 Practical Scan #37
+2026-04-04 16:54:19,365 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:54:19,366 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:54:19,366 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:54:19,366 - INFO -    ⏳ Waiting 71 seconds...
+2026-04-04 16:55:30,515 - INFO - 🔍 Practical Scan #38
+2026-04-04 16:55:30,738 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:55:30,738 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:55:30,738 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:55:30,738 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 16:56:26,875 - INFO - 🔍 Practical Scan #39
+2026-04-04 16:56:27,008 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:56:27,009 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:56:27,009 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:56:27,009 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 16:57:16,474 - INFO - 🔍 Practical Scan #40
+2026-04-04 16:57:17,199 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:57:17,199 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:57:17,199 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:57:17,232 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 16:58:05,384 - INFO - 🔍 Practical Scan #41
+2026-04-04 16:58:05,736 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:58:05,737 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:58:05,737 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:58:05,781 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 16:59:15,824 - INFO - 🔍 Practical Scan #42
+2026-04-04 16:59:17,942 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 16:59:17,942 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 16:59:17,942 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 16:59:17,942 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 17:00:32,485 - INFO - 🔍 Practical Scan #43
+2026-04-04 17:00:35,691 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:00:35,723 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:00:35,724 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:00:35,750 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 17:01:35,834 - INFO - 🔍 Practical Scan #44
+2026-04-04 17:01:36,368 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:01:36,369 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:01:36,369 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:01:36,369 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 17:02:33,511 - INFO - 🔍 Practical Scan #45
+2026-04-04 17:02:33,662 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:02:33,663 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:02:33,663 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:02:33,663 - INFO -    ⏳ Waiting 68 seconds...
+2026-04-04 17:03:41,738 - INFO - 🔍 Practical Scan #46
+2026-04-04 17:03:41,966 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:03:41,966 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:03:41,966 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:03:41,966 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 17:04:51,108 - INFO - 🔍 Practical Scan #47
+2026-04-04 17:04:51,340 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:04:51,341 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:04:51,341 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:04:51,341 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 17:05:42,476 - INFO - 🔍 Practical Scan #48
+2026-04-04 17:05:42,616 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:05:42,616 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:05:42,616 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:05:42,616 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 17:06:38,743 - INFO - 🔍 Practical Scan #49
+2026-04-04 17:06:38,876 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:06:38,877 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:06:38,877 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:06:38,877 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 17:07:49,023 - INFO - 🔍 Practical Scan #50
+2026-04-04 17:07:49,356 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:07:49,357 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:07:49,357 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:07:49,357 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 17:09:01,507 - INFO - 🔍 Practical Scan #51
+2026-04-04 17:09:01,802 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:09:01,803 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:09:01,803 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:09:01,803 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 17:09:58,941 - INFO - 🔍 Practical Scan #52
+2026-04-04 17:09:59,067 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:09:59,068 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:09:59,068 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:09:59,068 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 17:10:55,101 - INFO - 🔍 Practical Scan #53
+2026-04-04 17:10:55,230 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:10:55,230 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:10:55,230 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:10:55,230 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 17:11:59,380 - INFO - 🔍 Practical Scan #54
+2026-04-04 17:11:59,719 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:11:59,719 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:11:59,719 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:11:59,719 - INFO -    ⏳ Waiting 54 seconds...
+2026-04-04 17:12:54,281 - INFO - 🔍 Practical Scan #55
+2026-04-04 17:12:57,187 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:12:57,189 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:12:57,189 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:12:57,189 - INFO -    ⏳ Waiting 55 seconds...
+2026-04-04 17:13:52,207 - INFO - 🔍 Practical Scan #56
+2026-04-04 17:13:52,416 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:13:52,416 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:13:52,416 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:13:52,417 - INFO -    ⏳ Waiting 68 seconds...
+2026-04-04 17:15:00,419 - INFO - 🔍 Practical Scan #57
+2026-04-04 17:15:00,752 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:15:00,752 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:15:00,752 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:15:00,753 - INFO -    ⏳ Waiting 65 seconds...
+2026-04-04 17:16:05,813 - INFO - 🔍 Practical Scan #58
+2026-04-04 17:16:06,939 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:16:06,939 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:16:06,939 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:16:06,966 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 17:17:11,145 - INFO - 🔍 Practical Scan #59
+2026-04-04 17:17:11,561 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:17:11,561 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:17:11,561 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:17:11,562 - INFO -    ⏳ Waiting 45 seconds...
+2026-04-04 17:17:56,700 - INFO - 🔍 Practical Scan #60
+2026-04-04 17:17:56,826 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:17:56,826 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:17:56,826 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:17:56,826 - INFO -    ⏳ Waiting 46 seconds...
+2026-04-04 17:18:42,976 - INFO - 🔍 Practical Scan #61
+2026-04-04 17:18:43,100 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:18:43,100 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:18:43,101 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:18:43,101 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 17:19:56,240 - INFO - 🔍 Practical Scan #62
+2026-04-04 17:19:56,540 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:19:56,540 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:19:56,541 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:19:56,541 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 17:20:47,683 - INFO - 🔍 Practical Scan #63
+2026-04-04 17:20:47,815 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:20:47,816 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:20:47,816 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:20:47,816 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 17:21:47,951 - INFO - 🔍 Practical Scan #64
+2026-04-04 17:21:48,175 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:21:48,176 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:21:48,176 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:21:48,176 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 17:22:36,323 - INFO - 🔍 Practical Scan #65
+2026-04-04 17:22:36,445 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:22:36,445 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:22:36,445 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:22:36,445 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 17:23:49,569 - INFO - 🔍 Practical Scan #66
+2026-04-04 17:23:49,827 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:23:49,827 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:23:49,827 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:23:49,827 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 17:25:01,970 - INFO - 🔍 Practical Scan #67
+2026-04-04 17:25:02,194 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:25:02,195 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:25:02,195 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:25:02,195 - INFO -    ⏳ Waiting 71 seconds...
+2026-04-04 17:26:13,333 - INFO - 🔍 Practical Scan #68
+2026-04-04 17:26:13,560 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:26:13,561 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:26:13,561 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:26:13,561 - INFO -    ⏳ Waiting 58 seconds...
+2026-04-04 17:27:11,613 - INFO - 🔍 Practical Scan #69
+2026-04-04 17:27:11,873 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:27:11,873 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:27:11,873 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:27:11,873 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 17:28:00,879 - INFO - 🔍 Practical Scan #70
+2026-04-04 17:28:01,039 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:28:01,040 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:28:01,040 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:28:01,041 - INFO -    ⏳ Waiting 51 seconds...
+2026-04-04 17:28:52,146 - INFO - 🔍 Practical Scan #71
+2026-04-04 17:28:52,462 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:28:52,462 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:28:52,462 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:28:52,463 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 17:29:53,653 - INFO - 🔍 Practical Scan #72
+2026-04-04 17:29:55,650 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:29:55,650 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:29:55,650 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:29:55,651 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 17:31:08,993 - INFO - 🔍 Practical Scan #73
+2026-04-04 17:31:12,644 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:31:12,658 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:31:12,659 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:31:12,709 - INFO -    ⏳ Waiting 45 seconds...
+2026-04-04 17:31:58,217 - INFO - 🔍 Practical Scan #74
+2026-04-04 17:31:58,463 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:31:58,464 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:31:58,464 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:31:58,464 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 17:32:57,528 - INFO - 🔍 Practical Scan #75
+2026-04-04 17:32:57,662 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:32:57,662 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:32:57,662 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:32:57,663 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 17:33:54,700 - INFO - 🔍 Practical Scan #76
+2026-04-04 17:33:54,835 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:33:54,835 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:33:54,835 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:33:54,835 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 17:35:08,907 - INFO - 🔍 Practical Scan #77
+2026-04-04 17:35:09,130 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:35:09,130 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:35:09,130 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:35:09,131 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 17:36:06,173 - INFO - 🔍 Practical Scan #78
+2026-04-04 17:36:06,297 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:36:06,298 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:36:06,298 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:36:06,298 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 17:37:18,373 - INFO - 🔍 Practical Scan #79
+2026-04-04 17:37:18,595 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:37:18,595 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:37:18,595 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:37:18,595 - INFO -    ⏳ Waiting 46 seconds...
+2026-04-04 17:38:04,733 - INFO - 🔍 Practical Scan #80
+2026-04-04 17:38:04,857 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:38:04,857 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:38:04,857 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:38:04,858 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 17:39:11,994 - INFO - 🔍 Practical Scan #81
+2026-04-04 17:39:12,435 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:39:12,435 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:39:12,435 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:39:12,435 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 17:40:08,549 - INFO - 🔍 Practical Scan #82
+2026-04-04 17:40:08,675 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:40:08,675 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:40:08,675 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:40:08,675 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 17:40:56,788 - INFO - 🔍 Practical Scan #83
+2026-04-04 17:40:56,910 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:40:56,910 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:40:56,910 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:40:56,910 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 17:41:58,060 - INFO - 🔍 Practical Scan #84
+2026-04-04 17:41:58,320 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:41:58,321 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:41:58,321 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:41:58,321 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 17:42:47,376 - INFO - 🔍 Practical Scan #85
+2026-04-04 17:42:47,542 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:42:47,542 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:42:47,542 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:42:47,543 - INFO -    ⏳ Waiting 65 seconds...
+2026-04-04 17:43:52,718 - INFO - 🔍 Practical Scan #86
+2026-04-04 17:43:53,470 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:43:53,471 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:43:53,513 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:43:53,525 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 17:45:06,564 - INFO - 🔍 Practical Scan #87
+2026-04-04 17:45:07,363 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:45:07,406 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:45:07,406 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:45:07,406 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 17:45:54,964 - INFO - 🔍 Practical Scan #88
+2026-04-04 17:45:56,832 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:45:56,845 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:45:56,845 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:45:56,853 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 17:47:02,977 - INFO - 🔍 Practical Scan #89
+2026-04-04 17:47:03,391 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:47:03,391 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:47:03,392 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:47:03,392 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 17:48:18,443 - INFO - 🔍 Practical Scan #90
+2026-04-04 17:48:18,711 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:48:18,712 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:48:18,712 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:48:18,712 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 17:49:24,740 - INFO - 🔍 Practical Scan #91
+2026-04-04 17:49:24,965 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:49:24,965 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:49:24,966 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:49:24,966 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 17:50:34,065 - INFO - 🔍 Practical Scan #92
+2026-04-04 17:50:34,272 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:50:34,272 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:50:34,272 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:50:34,272 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 17:51:22,393 - INFO - 🔍 Practical Scan #93
+2026-04-04 17:51:22,521 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:51:22,521 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:51:22,521 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:51:22,521 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 17:52:21,668 - INFO - 🔍 Practical Scan #94
+2026-04-04 17:52:21,796 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:52:21,796 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:52:21,796 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:52:21,796 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 17:53:14,870 - INFO - 🔍 Practical Scan #95
+2026-04-04 17:53:14,996 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:53:14,996 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:53:14,996 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:53:14,997 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 17:54:28,047 - INFO - 🔍 Practical Scan #96
+2026-04-04 17:54:28,397 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:54:28,398 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:54:28,398 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:54:28,398 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 17:55:32,455 - INFO - 🔍 Practical Scan #97
+2026-04-04 17:55:32,686 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:55:32,687 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:55:32,687 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:55:32,687 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 17:56:39,761 - INFO - 🔍 Practical Scan #98
+2026-04-04 17:56:39,978 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:56:39,978 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:56:39,979 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:56:39,979 - INFO -    ⏳ Waiting 54 seconds...
+2026-04-04 17:57:34,054 - INFO - 🔍 Practical Scan #99
+2026-04-04 17:57:34,196 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:57:34,198 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:57:34,198 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:57:34,198 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 17:58:34,229 - INFO - 🔍 Practical Scan #100
+2026-04-04 17:58:34,725 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:58:34,725 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:58:34,726 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:58:34,726 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 17:59:21,820 - INFO - 🔍 Practical Scan #101
+2026-04-04 17:59:22,240 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 17:59:22,274 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 17:59:22,274 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 17:59:22,339 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 18:00:18,682 - INFO - 🔍 Practical Scan #102
+2026-04-04 18:00:20,853 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:00:20,884 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:00:20,884 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:00:20,895 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 18:01:14,062 - INFO - 🔍 Practical Scan #103
+2026-04-04 18:01:14,325 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:01:14,326 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:01:14,326 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:01:14,327 - INFO -    ⏳ Waiting 62 seconds...
+2026-04-04 18:02:16,406 - INFO - 🔍 Practical Scan #104
+2026-04-04 18:02:16,678 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:02:16,678 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:02:16,678 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:02:16,679 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 18:03:20,860 - INFO - 🔍 Practical Scan #105
+2026-04-04 18:03:21,129 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:03:21,130 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:03:21,130 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:03:21,130 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 18:04:21,264 - INFO - 🔍 Practical Scan #106
+2026-04-04 18:04:21,565 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:04:21,566 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:04:21,566 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:04:21,566 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 18:05:17,714 - INFO - 🔍 Practical Scan #107
+2026-04-04 18:05:17,840 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:05:17,840 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:05:17,841 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:05:17,841 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 18:06:04,846 - INFO - 🔍 Practical Scan #108
+2026-04-04 18:06:04,969 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:06:04,970 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:06:04,970 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:06:04,970 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 18:07:17,040 - INFO - 🔍 Practical Scan #109
+2026-04-04 18:07:17,348 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:07:17,348 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:07:17,348 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:07:17,349 - INFO -    ⏳ Waiting 62 seconds...
+2026-04-04 18:08:19,429 - INFO - 🔍 Practical Scan #110
+2026-04-04 18:08:19,658 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:08:19,658 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:08:19,658 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:08:19,658 - INFO -    ⏳ Waiting 46 seconds...
+2026-04-04 18:09:05,717 - INFO - 🔍 Practical Scan #111
+2026-04-04 18:09:05,846 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:09:05,846 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:09:05,847 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:09:05,847 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 18:10:12,884 - INFO - 🔍 Practical Scan #112
+2026-04-04 18:10:13,105 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:10:13,105 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:10:13,105 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:10:13,105 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 18:11:20,233 - INFO - 🔍 Practical Scan #113
+2026-04-04 18:11:20,453 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:11:20,453 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:11:20,453 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:11:20,453 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 18:12:19,598 - INFO - 🔍 Practical Scan #114
+2026-04-04 18:12:20,033 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:12:20,033 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:12:20,033 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:12:20,033 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 18:13:09,041 - INFO - 🔍 Practical Scan #115
+2026-04-04 18:13:09,163 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:13:09,163 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:13:09,163 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:13:09,163 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 18:14:22,221 - INFO - 🔍 Practical Scan #116
+2026-04-04 18:14:23,697 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:14:23,697 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:14:23,699 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:14:23,700 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 18:15:12,276 - INFO - 🔍 Practical Scan #117
+2026-04-04 18:15:13,302 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:15:13,302 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:15:13,302 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:15:13,302 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 18:16:28,341 - INFO - 🔍 Practical Scan #118
+2026-04-04 18:16:28,616 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:16:28,616 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:16:28,616 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:16:28,616 - INFO -    ⏳ Waiting 58 seconds...
+2026-04-04 18:17:26,715 - INFO - 🔍 Practical Scan #119
+2026-04-04 18:17:27,126 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:17:27,126 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:17:27,126 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:17:27,132 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 18:18:26,150 - INFO - 🔍 Practical Scan #120
+2026-04-04 18:18:26,281 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:18:26,282 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:18:26,282 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:18:26,282 - INFO -    ⏳ Waiting 62 seconds...
+2026-04-04 18:19:28,311 - INFO - 🔍 Practical Scan #121
+2026-04-04 18:19:28,616 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:19:28,616 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:19:28,617 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:19:28,617 - INFO -    ⏳ Waiting 45 seconds...
+2026-04-04 18:20:13,639 - INFO - 🔍 Practical Scan #122
+2026-04-04 18:20:13,763 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:20:13,763 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:20:13,763 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:20:13,763 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 18:21:12,823 - INFO - 🔍 Practical Scan #123
+2026-04-04 18:21:12,954 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:21:12,954 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:21:12,954 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:21:12,954 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 18:22:26,024 - INFO - 🔍 Practical Scan #124
+2026-04-04 18:22:26,254 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:22:26,254 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:22:26,254 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:22:26,254 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 18:23:27,257 - INFO - 🔍 Practical Scan #125
+2026-04-04 18:23:27,488 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:23:27,489 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:23:27,489 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:23:27,489 - INFO -    ⏳ Waiting 63 seconds...
+2026-04-04 18:24:30,514 - INFO - 🔍 Practical Scan #126
+2026-04-04 18:24:30,738 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:24:30,739 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:24:30,739 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:24:30,739 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 18:25:30,802 - INFO - 🔍 Practical Scan #127
+2026-04-04 18:25:31,070 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:25:31,071 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:25:31,071 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:25:31,071 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 18:26:41,139 - INFO - 🔍 Practical Scan #128
+2026-04-04 18:26:41,356 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:26:41,356 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:26:41,356 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:26:41,356 - INFO -    ⏳ Waiting 56 seconds...
+2026-04-04 18:27:37,364 - INFO - 🔍 Practical Scan #129
+2026-04-04 18:27:37,491 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:27:37,492 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:27:37,492 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:27:37,492 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 18:28:52,518 - INFO - 🔍 Practical Scan #130
+2026-04-04 18:28:52,806 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:28:52,806 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:28:52,806 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:28:52,806 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 18:29:40,828 - INFO - 🔍 Practical Scan #131
+2026-04-04 18:29:41,215 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:29:41,216 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:29:41,216 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:29:41,217 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 18:30:42,256 - INFO - 🔍 Practical Scan #132
+2026-04-04 18:30:42,805 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:30:42,805 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:30:42,805 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:30:42,805 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 18:31:34,877 - INFO - 🔍 Practical Scan #133
+2026-04-04 18:31:35,107 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:31:35,107 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:31:35,107 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:31:35,107 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 18:32:45,180 - INFO - 🔍 Practical Scan #134
+2026-04-04 18:32:47,281 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:32:47,281 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:32:47,306 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:32:47,337 - INFO -    ⏳ Waiting 58 seconds...
+2026-04-04 18:33:45,413 - INFO - 🔍 Practical Scan #135
+2026-04-04 18:33:45,552 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:33:45,553 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:33:45,553 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:33:45,553 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 18:34:37,615 - INFO - 🔍 Practical Scan #136
+2026-04-04 18:34:37,756 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:34:37,757 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:34:37,757 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:34:37,757 - INFO -    ⏳ Waiting 55 seconds...
+2026-04-04 18:35:32,770 - INFO - 🔍 Practical Scan #137
+2026-04-04 18:35:32,909 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:35:32,909 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:35:32,909 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:35:32,909 - INFO -    ⏳ Waiting 55 seconds...
+2026-04-04 18:36:27,948 - INFO - 🔍 Practical Scan #138
+2026-04-04 18:36:28,081 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:36:28,082 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:36:28,082 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:36:28,082 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 18:37:29,119 - INFO - 🔍 Practical Scan #139
+2026-04-04 18:37:29,355 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:37:29,355 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:37:29,355 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:37:29,355 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 18:38:43,376 - INFO - 🔍 Practical Scan #140
+2026-04-04 18:38:43,645 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:38:43,645 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:38:43,645 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:38:43,645 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 18:39:57,709 - INFO - 🔍 Practical Scan #141
+2026-04-04 18:39:57,938 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:39:57,938 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:39:57,938 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:39:57,938 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 18:41:10,013 - INFO - 🔍 Practical Scan #142
+2026-04-04 18:41:10,238 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:41:10,238 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:41:10,238 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:41:10,239 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 18:42:16,305 - INFO - 🔍 Practical Scan #143
+2026-04-04 18:42:16,747 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:42:16,748 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:42:16,748 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:42:16,748 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 18:43:22,759 - INFO - 🔍 Practical Scan #144
+2026-04-04 18:43:23,014 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:43:23,015 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:43:23,015 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:43:23,015 - INFO -    ⏳ Waiting 46 seconds...
+2026-04-04 18:44:09,128 - INFO - 🔍 Practical Scan #145
+2026-04-04 18:44:09,674 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:44:09,674 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:44:09,674 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:44:09,688 - INFO -    ⏳ Waiting 65 seconds...
+2026-04-04 18:45:15,087 - INFO - 🔍 Practical Scan #146
+2026-04-04 18:45:21,813 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:45:21,814 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:45:21,814 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:45:21,814 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 18:46:09,492 - INFO - 🔍 Practical Scan #147
+2026-04-04 18:46:10,967 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:46:10,998 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:46:10,999 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:46:11,061 - INFO -    ⏳ Waiting 68 seconds...
+2026-04-04 18:47:19,102 - INFO - 🔍 Practical Scan #148
+2026-04-04 18:47:19,440 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:47:19,440 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:47:19,441 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:47:19,442 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 18:48:28,518 - INFO - 🔍 Practical Scan #149
+2026-04-04 18:48:29,208 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:48:29,209 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:48:29,209 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:48:29,209 - INFO -    ⏳ Waiting 50 seconds...
+2026-04-04 18:49:19,258 - INFO - 🔍 Practical Scan #150
+2026-04-04 18:49:19,382 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:49:19,382 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:49:19,382 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:49:19,382 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 18:50:18,391 - INFO - 🔍 Practical Scan #151
+2026-04-04 18:50:18,513 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:50:18,513 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:50:18,513 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:50:18,513 - INFO -    ⏳ Waiting 46 seconds...
+2026-04-04 18:51:04,526 - INFO - 🔍 Practical Scan #152
+2026-04-04 18:51:04,652 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:51:04,653 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:51:04,653 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:51:04,653 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 18:51:57,725 - INFO - 🔍 Practical Scan #153
+2026-04-04 18:51:57,848 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:51:57,848 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:51:57,848 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:51:57,848 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 18:52:57,914 - INFO - 🔍 Practical Scan #154
+2026-04-04 18:52:58,136 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:52:58,136 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:52:58,137 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:52:58,137 - INFO -    ⏳ Waiting 50 seconds...
+2026-04-04 18:53:48,137 - INFO - 🔍 Practical Scan #155
+2026-04-04 18:53:48,261 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:53:48,261 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:53:48,262 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:53:48,262 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 18:54:37,262 - INFO - 🔍 Practical Scan #156
+2026-04-04 18:54:37,385 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:54:37,385 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:54:37,385 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:54:37,385 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 18:55:52,460 - INFO - 🔍 Practical Scan #157
+2026-04-04 18:55:52,685 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:55:52,686 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:55:52,686 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:55:52,686 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 18:57:01,725 - INFO - 🔍 Practical Scan #158
+2026-04-04 18:57:01,945 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:57:01,946 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:57:01,946 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:57:01,946 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 18:57:51,021 - INFO - 🔍 Practical Scan #159
+2026-04-04 18:57:51,155 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:57:51,155 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:57:51,155 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:57:51,155 - INFO -    ⏳ Waiting 59 seconds...
+2026-04-04 18:58:50,229 - INFO - 🔍 Practical Scan #160
+2026-04-04 18:58:50,363 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:58:50,363 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:58:50,363 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:58:50,363 - INFO -    ⏳ Waiting 50 seconds...
+2026-04-04 18:59:40,432 - INFO - 🔍 Practical Scan #161
+2026-04-04 18:59:40,669 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 18:59:40,674 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 18:59:40,674 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 18:59:40,677 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 19:00:56,045 - INFO - 🔍 Practical Scan #162
+2026-04-04 19:00:57,224 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:00:57,225 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:00:57,225 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:00:57,228 - INFO -    ⏳ Waiting 50 seconds...
+2026-04-04 19:01:47,236 - INFO - 🔍 Practical Scan #163
+2026-04-04 19:01:47,378 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:01:47,378 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:01:47,378 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:01:47,378 - INFO -    ⏳ Waiting 60 seconds...
+2026-04-04 19:02:47,973 - INFO - 🔍 Practical Scan #164
+2026-04-04 19:02:50,799 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:02:50,799 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:02:50,799 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:02:50,866 - INFO -    ⏳ Waiting 67 seconds...
+2026-04-04 19:03:58,434 - INFO - 🔍 Practical Scan #165
+2026-04-04 19:04:01,198 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:04:01,198 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:04:01,199 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:04:01,200 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 19:05:16,214 - INFO - 🔍 Practical Scan #166
+2026-04-04 19:05:16,658 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:05:16,658 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:05:16,659 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:05:16,659 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 19:06:08,727 - INFO - 🔍 Practical Scan #167
+2026-04-04 19:06:08,851 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:06:08,851 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:06:08,851 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:06:08,851 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 19:06:57,858 - INFO - 🔍 Practical Scan #168
+2026-04-04 19:06:57,994 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:06:57,994 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:06:57,994 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:06:57,994 - INFO -    ⏳ Waiting 49 seconds...
+2026-04-04 19:07:47,069 - INFO - 🔍 Practical Scan #169
+2026-04-04 19:07:47,187 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:07:47,187 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:07:47,187 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:07:47,187 - INFO -    ⏳ Waiting 52 seconds...
+2026-04-04 19:08:39,198 - INFO - 🔍 Practical Scan #170
+2026-04-04 19:08:39,326 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:08:39,326 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:08:39,326 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:08:39,326 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 19:09:49,401 - INFO - 🔍 Practical Scan #171
+2026-04-04 19:09:49,858 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:09:49,858 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:09:49,858 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:09:49,858 - INFO -    ⏳ Waiting 64 seconds...
+2026-04-04 19:10:53,946 - INFO - 🔍 Practical Scan #172
+2026-04-04 19:10:54,177 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:10:54,177 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:10:54,178 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:10:54,178 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 19:11:47,351 - INFO - 🔍 Practical Scan #173
+2026-04-04 19:11:47,518 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:11:47,518 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:11:47,518 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:11:47,518 - INFO -    ⏳ Waiting 61 seconds...
+2026-04-04 19:12:48,665 - INFO - 🔍 Practical Scan #174
+2026-04-04 19:12:48,897 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:12:48,897 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:12:48,898 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:12:48,898 - INFO -    ⏳ Waiting 63 seconds...
+2026-04-04 19:13:52,040 - INFO - 🔍 Practical Scan #175
+2026-04-04 19:13:52,333 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:13:52,333 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:13:52,333 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:13:52,333 - INFO -    ⏳ Waiting 69 seconds...
+2026-04-04 19:15:01,558 - INFO - 🔍 Practical Scan #176
+2026-04-04 19:15:03,268 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:15:03,269 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:15:03,269 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:15:03,270 - INFO -    ⏳ Waiting 73 seconds...
+2026-04-04 19:16:17,941 - INFO - 🔍 Practical Scan #177
+2026-04-04 19:16:24,060 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:16:24,091 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:16:24,091 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:16:24,123 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 19:17:12,282 - INFO - 🔍 Practical Scan #178
+2026-04-04 19:17:12,948 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:17:12,948 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:17:12,948 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:17:12,948 - INFO -    ⏳ Waiting 63 seconds...
+2026-04-04 19:18:15,950 - INFO - 🔍 Practical Scan #179
+2026-04-04 19:18:16,321 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:18:16,321 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:18:16,321 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:18:16,341 - INFO -    ⏳ Waiting 66 seconds...
+2026-04-04 19:19:22,941 - INFO - 🔍 Practical Scan #180
+2026-04-04 19:19:25,095 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:19:25,095 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:19:25,122 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:19:25,164 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 19:20:35,309 - INFO - 🔍 Practical Scan #181
+2026-04-04 19:20:35,660 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:20:35,660 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:20:35,661 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:20:35,661 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 19:21:45,808 - INFO - 🔍 Practical Scan #182
+2026-04-04 19:21:46,168 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:21:46,169 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:21:46,169 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:21:46,169 - INFO -    ⏳ Waiting 47 seconds...
+2026-04-04 19:22:33,183 - INFO - 🔍 Practical Scan #183
+2026-04-04 19:22:33,304 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:22:33,305 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:22:33,305 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:22:33,305 - INFO -    ⏳ Waiting 57 seconds...
+2026-04-04 19:23:30,363 - INFO - 🔍 Practical Scan #184
+2026-04-04 19:23:30,482 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:23:30,482 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:23:30,482 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:23:30,482 - INFO -    ⏳ Waiting 62 seconds...
+2026-04-04 19:24:32,494 - INFO - 🔍 Practical Scan #185
+2026-04-04 19:24:32,710 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:24:32,710 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:24:32,710 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:24:32,711 - INFO -    ⏳ Waiting 65 seconds...
+2026-04-04 19:25:37,856 - INFO - 🔍 Practical Scan #186
+2026-04-04 19:25:38,188 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:25:38,189 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:25:38,189 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:25:38,189 - INFO -    ⏳ Waiting 45 seconds...
+2026-04-04 19:26:23,310 - INFO - 🔍 Practical Scan #187
+2026-04-04 19:26:23,436 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:26:23,437 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:26:23,437 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:26:23,437 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 19:27:35,601 - INFO - 🔍 Practical Scan #188
+2026-04-04 19:27:35,821 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:27:35,822 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:27:35,822 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:27:35,822 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 19:28:50,920 - INFO - 🔍 Practical Scan #189
+2026-04-04 19:28:51,374 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:28:51,375 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:28:51,375 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:28:51,375 - INFO -    ⏳ Waiting 72 seconds...
+2026-04-04 19:30:03,538 - INFO - 🔍 Practical Scan #190
+2026-04-04 19:30:04,341 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:30:04,508 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:30:04,508 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:30:04,551 - INFO -    ⏳ Waiting 48 seconds...
+2026-04-04 19:30:52,691 - INFO - 🔍 Practical Scan #191
+2026-04-04 19:30:52,878 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:30:52,878 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:30:52,878 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:30:52,878 - INFO -    ⏳ Waiting 68 seconds...
+2026-04-04 19:32:01,399 - INFO - 🔍 Practical Scan #192
+2026-04-04 19:32:06,139 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:32:06,163 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:32:06,181 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:32:06,193 - INFO -    ⏳ Waiting 70 seconds...
+2026-04-04 19:33:16,763 - INFO - 🔍 Practical Scan #193
+2026-04-04 19:33:20,290 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:33:20,292 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:33:20,292 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:33:20,357 - INFO -    ⏳ Waiting 53 seconds...
+2026-04-04 19:34:13,409 - INFO - 🔍 Practical Scan #194
+2026-04-04 19:34:13,551 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:34:13,551 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:34:13,551 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:34:13,551 - INFO -    ⏳ Waiting 75 seconds...
+2026-04-04 19:35:28,716 - INFO - 🔍 Practical Scan #195
+2026-04-04 19:35:29,122 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:35:29,172 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:35:29,172 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:35:29,172 - INFO -    ⏳ Waiting 74 seconds...
+2026-04-04 19:36:43,248 - INFO - 🔍 Practical Scan #196
+2026-04-04 19:36:43,473 - ERROR - ❌ Asset check error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2026-04-04 19:36:43,474 - INFO -    ⏳ Spread: 0.00% (monitoring)
+2026-04-04 19:36:43,474 - WARNING -    ⚠️ Not enough MANA: 0.00
+2026-04-04 19:36:43,474 - INFO -    ⏳ Waiting 73 seconds...

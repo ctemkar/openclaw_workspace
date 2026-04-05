@@ -1,0 +1,338 @@
+2026-04-02 22:32:07,701 - INFO - ======================================================================
+2026-04-02 22:32:07,701 - INFO - 🚀 ENHANCED LLM TRADER - OPTION B OPTIMIZED
+2026-04-02 22:32:07,701 - INFO - ======================================================================
+2026-04-02 22:32:07,701 - INFO - 🤖 Real market data + LLM decisions + override logic
+2026-04-02 22:32:07,701 - INFO - 💰 Capital: Gemini $393.22, Binance $262.14
+2026-04-02 22:32:07,701 - INFO - 🎯 Position: 10%, Threshold: 1.0% drop
+2026-04-02 22:32:07,701 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-04-02 22:32:07,701 - INFO - 🧠 LLM Models: deepseek-r1, qwen3, mistral
+2026-04-02 22:32:07,701 - INFO - ⏰ Interval: 300 seconds
+2026-04-02 22:32:07,701 - INFO - ======================================================================
+2026-04-02 22:32:07,703 - INFO - ✅ API keys loaded
+2026-04-02 22:32:07,708 - INFO - ✅ Exchanges initialized
+2026-04-02 22:32:07,717 - INFO - ✅ Ollama available (9 models)
+2026-04-02 22:32:07,717 - INFO - 
+======================================================================
+2026-04-02 22:32:07,717 - INFO - 🎯 STARTING TRADING CYCLES
+2026-04-02 22:32:07,717 - INFO - ======================================================================
+2026-04-02 22:32:07,717 - INFO - 
+======================================================================
+2026-04-02 22:32:07,717 - INFO - 🔄 ENHANCED LLM TRADING CYCLE #1
+2026-04-02 22:32:07,717 - INFO -    Time: 22:32:07
+2026-04-02 22:32:07,717 - INFO - ======================================================================
+2026-04-02 22:32:07,717 - INFO - 🔍 Checking Gemini opportunities...
+2026-04-02 22:32:13,860 - INFO - ⚠️ LLM REJECTED: BTC - LLM says HOLD (small drop)
+2026-04-02 22:32:16,061 - INFO - 🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+2026-04-02 22:32:18,263 - INFO - 🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+2026-04-02 22:32:18,569 - INFO - 💰 Price fix: Generic 100× multiplier for DOT/USD
+2026-04-02 22:32:20,593 - INFO - 🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+2026-04-02 22:32:20,884 - INFO - 💰 Price fix: Generic 100× multiplier for XRP/USD
+2026-04-02 22:32:22,918 - INFO - 🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+2026-04-02 22:32:23,230 - INFO - 💰 Price fix: Generic 100× multiplier for DOGE/USD
+2026-04-02 22:32:25,156 - INFO - 🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+2026-04-02 22:32:27,330 - INFO - 🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+2026-04-02 22:32:27,679 - INFO - 💰 Price fix: Generic 100× multiplier for UNI/USD
+2026-04-02 22:32:29,627 - INFO - 🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+2026-04-02 22:32:29,962 - INFO - 💰 Price fix: Generic 100× multiplier for LINK/USD
+2026-04-02 22:32:31,846 - INFO - 🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+2026-04-02 22:32:32,150 - INFO - 💰 Price fix: Generic 100× multiplier for AVAX/USD
+2026-04-02 22:32:34,024 - INFO - 🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+2026-04-02 22:32:34,367 - INFO - 💰 Price fix: Generic 100× multiplier for ATOM/USD
+2026-04-02 22:32:36,276 - INFO - 🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+2026-04-02 22:32:36,580 - INFO - 💰 Price fix: Generic 100× multiplier for FIL/USD
+2026-04-02 22:32:38,452 - INFO - 🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+2026-04-02 22:32:38,452 - INFO - 🔍 Checking Binance opportunities...
+2026-04-02 22:32:46,963 - INFO - 💰 Price fix: Generic 100× multiplier for DOT/USDT
+2026-04-02 22:32:49,058 - INFO - 💰 Price fix: Generic 100× multiplier for XRP/USDT
+2026-04-02 22:32:51,149 - INFO - 💰 Price fix: Generic 100× multiplier for DOGE/USDT
+2026-04-02 22:32:55,506 - INFO - 💰 Price fix: Generic 100× multiplier for UNI/USDT
+2026-04-02 22:32:57,608 - INFO - 💰 Price fix: Generic 100× multiplier for LINK/USDT
+2026-04-02 22:32:59,726 - INFO - 💰 Price fix: Generic 100× multiplier for AVAX/USDT
+2026-04-02 22:33:01,881 - INFO - 💰 Price fix: Generic 100× multiplier for ATOM/USDT
+2026-04-02 22:33:03,973 - INFO - 💰 Price fix: Generic 100× multiplier for FIL/USDT
+2026-04-02 22:33:05,898 - INFO - 🎯 SIMULATED TRADE: gemini ETH/USD
+2026-04-02 22:33:05,898 - INFO -    Side: buy, Amount: 0.009521
+2026-04-02 22:33:05,898 - INFO -    Value: $19.66
+2026-04-02 22:33:05,898 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,898 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,903 - INFO - 🎯 SIMULATED TRADE: gemini SOL/USD
+2026-04-02 22:33:05,903 - INFO -    Side: buy, Amount: 0.248480
+2026-04-02 22:33:05,903 - INFO -    Value: $19.66
+2026-04-02 22:33:05,903 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,903 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,908 - INFO - 🎯 SIMULATED TRADE: gemini DOT/USD
+2026-04-02 22:33:05,908 - INFO -    Side: buy, Amount: 0.159314
+2026-04-02 22:33:05,908 - INFO -    Value: $19.66
+2026-04-02 22:33:05,908 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,908 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,912 - INFO - 🎯 SIMULATED TRADE: gemini XRP/USD
+2026-04-02 22:33:05,913 - INFO -    Side: buy, Amount: 0.151156
+2026-04-02 22:33:05,913 - INFO -    Value: $19.66
+2026-04-02 22:33:05,913 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,913 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,917 - INFO - 🎯 SIMULATED TRADE: gemini DOGE/USD
+2026-04-02 22:33:05,917 - INFO -    Side: buy, Amount: 2.169849
+2026-04-02 22:33:05,917 - INFO -    Value: $19.66
+2026-04-02 22:33:05,917 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,917 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,921 - INFO - 🎯 SIMULATED TRADE: gemini LTC/USD
+2026-04-02 22:33:05,921 - INFO -    Side: buy, Amount: 0.377733
+2026-04-02 22:33:05,921 - INFO -    Value: $19.66
+2026-04-02 22:33:05,921 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,921 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,926 - INFO - 🎯 SIMULATED TRADE: gemini UNI/USD
+2026-04-02 22:33:05,926 - INFO -    Side: buy, Amount: 0.061658
+2026-04-02 22:33:05,926 - INFO -    Value: $19.66
+2026-04-02 22:33:05,926 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,926 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,930 - INFO - 🎯 SIMULATED TRADE: gemini LINK/USD
+2026-04-02 22:33:05,930 - INFO -    Side: buy, Amount: 0.022834
+2026-04-02 22:33:05,930 - INFO -    Value: $19.66
+2026-04-02 22:33:05,930 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,930 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,935 - INFO - 🎯 SIMULATED TRADE: gemini AVAX/USD
+2026-04-02 22:33:05,935 - INFO -    Side: buy, Amount: 0.022314
+2026-04-02 22:33:05,935 - INFO -    Value: $19.66
+2026-04-02 22:33:05,935 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,935 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,939 - INFO - 🎯 SIMULATED TRADE: gemini ATOM/USD
+2026-04-02 22:33:05,939 - INFO -    Side: buy, Amount: 0.119230
+2026-04-02 22:33:05,939 - INFO -    Value: $19.66
+2026-04-02 22:33:05,939 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,939 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,943 - INFO - 🎯 SIMULATED TRADE: gemini FIL/USD
+2026-04-02 22:33:05,944 - INFO -    Side: buy, Amount: 0.239944
+2026-04-02 22:33:05,944 - INFO -    Value: $19.66
+2026-04-02 22:33:05,944 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,944 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,948 - INFO - 🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+2026-04-02 22:33:05,948 - INFO -    Side: sell, Amount: 0.000196
+2026-04-02 22:33:05,948 - INFO -    Value: $13.11
+2026-04-02 22:33:05,948 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,948 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,952 - INFO - 🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+2026-04-02 22:33:05,952 - INFO -    Side: sell, Amount: 0.006383
+2026-04-02 22:33:05,952 - INFO -    Value: $13.11
+2026-04-02 22:33:05,952 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,952 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,957 - INFO - 🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+2026-04-02 22:33:05,957 - INFO -    Side: sell, Amount: 0.166735
+2026-04-02 22:33:05,957 - INFO -    Value: $13.11
+2026-04-02 22:33:05,957 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,957 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,961 - INFO - 🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+2026-04-02 22:33:05,961 - INFO -    Side: sell, Amount: 0.107346
+2026-04-02 22:33:05,961 - INFO -    Value: $13.11
+2026-04-02 22:33:05,961 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,961 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,966 - INFO - 🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+2026-04-02 22:33:05,966 - INFO -    Side: sell, Amount: 0.101479
+2026-04-02 22:33:05,966 - INFO -    Value: $13.11
+2026-04-02 22:33:05,966 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,966 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,970 - INFO - 🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+2026-04-02 22:33:05,970 - INFO -    Side: sell, Amount: 1.452943
+2026-04-02 22:33:05,970 - INFO -    Value: $13.11
+2026-04-02 22:33:05,970 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,970 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,974 - INFO - 🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+2026-04-02 22:33:05,974 - INFO -    Side: sell, Amount: 0.252592
+2026-04-02 22:33:05,974 - INFO -    Value: $13.11
+2026-04-02 22:33:05,974 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,974 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,979 - INFO - 🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+2026-04-02 22:33:05,979 - INFO -    Side: sell, Amount: 0.041465
+2026-04-02 22:33:05,979 - INFO -    Value: $13.11
+2026-04-02 22:33:05,979 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,979 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,983 - INFO - 🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+2026-04-02 22:33:05,983 - INFO -    Side: sell, Amount: 0.015319
+2026-04-02 22:33:05,983 - INFO -    Value: $13.11
+2026-04-02 22:33:05,983 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,983 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,987 - INFO - 🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+2026-04-02 22:33:05,987 - INFO -    Side: sell, Amount: 0.015002
+2026-04-02 22:33:05,987 - INFO -    Value: $13.11
+2026-04-02 22:33:05,988 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,988 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,992 - INFO - 🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+2026-04-02 22:33:05,992 - INFO -    Side: sell, Amount: 0.079485
+2026-04-02 22:33:05,992 - INFO -    Value: $13.11
+2026-04-02 22:33:05,992 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,992 - INFO -    LLM: HOLD
+2026-04-02 22:33:05,996 - INFO - 🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+2026-04-02 22:33:05,996 - INFO -    Side: sell, Amount: 0.161020
+2026-04-02 22:33:05,996 - INFO -    Value: $13.11
+2026-04-02 22:33:05,996 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:33:05,996 - INFO -    LLM: HOLD
+2026-04-02 22:33:06,001 - INFO - 
+📊 CYCLE SUMMARY:
+2026-04-02 22:33:06,001 - INFO -    Opportunities found: 23
+2026-04-02 22:33:06,001 - INFO -    Trades executed: 23
+2026-04-02 22:33:06,001 - INFO - ======================================================================
+2026-04-02 22:33:06,001 - INFO - 📈 TOTAL TRADES: 23
+2026-04-02 22:33:06,001 - INFO - ⏰ Next cycle in 300 seconds...
+
+2026-04-02 22:38:06,013 - INFO - 
+======================================================================
+2026-04-02 22:38:06,014 - INFO - 🔄 ENHANCED LLM TRADING CYCLE #2
+2026-04-02 22:38:06,014 - INFO -    Time: 22:38:06
+2026-04-02 22:38:06,014 - INFO - ======================================================================
+2026-04-02 22:38:06,015 - INFO - 🔍 Checking Gemini opportunities...
+2026-04-02 22:38:10,539 - INFO - ⚠️ LLM TIMEOUT: BTC - Rule says LONG, LLM timeout
+2026-04-02 22:38:12,723 - INFO - 🎯 OVERRIDE: ETH - Big drop (2.9%), overriding LLM HOLD
+2026-04-02 22:38:14,862 - INFO - 🎯 OVERRIDE: SOL - Big drop (5.0%), overriding LLM HOLD
+2026-04-02 22:38:15,176 - INFO - 💰 Price fix: Generic 100× multiplier for DOT/USD
+2026-04-02 22:38:16,963 - INFO - 🎯 OVERRIDE: DOT - Big drop (2.7%), overriding LLM HOLD
+2026-04-02 22:38:17,271 - INFO - 💰 Price fix: Generic 100× multiplier for XRP/USD
+2026-04-02 22:38:19,080 - INFO - 🎯 OVERRIDE: XRP - Big drop (4.0%), overriding LLM HOLD
+2026-04-02 22:38:19,404 - INFO - 💰 Price fix: Generic 100× multiplier for DOGE/USD
+2026-04-02 22:38:21,233 - INFO - 🎯 OVERRIDE: DOGE - Big drop (2.6%), overriding LLM HOLD
+2026-04-02 22:38:23,509 - INFO - 🎯 OVERRIDE: LTC - Big drop (4.0%), overriding LLM HOLD
+2026-04-02 22:38:23,826 - INFO - 💰 Price fix: Generic 100× multiplier for UNI/USD
+2026-04-02 22:38:25,641 - INFO - 🎯 OVERRIDE: UNI - Big drop (11.7%), overriding LLM HOLD
+2026-04-02 22:38:25,950 - INFO - 💰 Price fix: Generic 100× multiplier for LINK/USD
+2026-04-02 22:38:27,775 - INFO - 🎯 OVERRIDE: LINK - Big drop (4.3%), overriding LLM HOLD
+2026-04-02 22:38:28,084 - INFO - 💰 Price fix: Generic 100× multiplier for AVAX/USD
+2026-04-02 22:38:29,913 - INFO - 🎯 OVERRIDE: AVAX - Big drop (4.3%), overriding LLM HOLD
+2026-04-02 22:38:30,278 - INFO - 💰 Price fix: Generic 100× multiplier for ATOM/USD
+2026-04-02 22:38:32,090 - INFO - 🎯 OVERRIDE: ATOM - Big drop (2.7%), overriding LLM HOLD
+2026-04-02 22:38:32,406 - INFO - 💰 Price fix: Generic 100× multiplier for FIL/USD
+2026-04-02 22:38:34,220 - INFO - 🎯 OVERRIDE: FIL - Big drop (3.3%), overriding LLM HOLD
+2026-04-02 22:38:34,220 - INFO - 🔍 Checking Binance opportunities...
+2026-04-02 22:38:40,647 - INFO - 💰 Price fix: Generic 100× multiplier for DOT/USDT
+2026-04-02 22:38:42,694 - INFO - 💰 Price fix: Generic 100× multiplier for XRP/USDT
+2026-04-02 22:38:44,742 - INFO - 💰 Price fix: Generic 100× multiplier for DOGE/USDT
+2026-04-02 22:38:48,931 - INFO - 💰 Price fix: Generic 100× multiplier for UNI/USDT
+2026-04-02 22:38:51,020 - INFO - 💰 Price fix: Generic 100× multiplier for LINK/USDT
+2026-04-02 22:38:53,114 - INFO - 💰 Price fix: Generic 100× multiplier for AVAX/USDT
+2026-04-02 22:38:55,260 - INFO - 💰 Price fix: Generic 100× multiplier for ATOM/USDT
+2026-04-02 22:38:57,433 - INFO - 💰 Price fix: Generic 100× multiplier for FIL/USDT
+2026-04-02 22:38:59,295 - INFO - 🎯 SIMULATED TRADE: gemini BTC/USD
+2026-04-02 22:38:59,295 - INFO -    Side: buy, Amount: 0.000441
+2026-04-02 22:38:59,295 - INFO -    Value: $29.49
+2026-04-02 22:38:59,295 - INFO -    Confidence: MEDIUM
+2026-04-02 22:38:59,295 - INFO -    LLM: TIMEOUT
+2026-04-02 22:38:59,313 - INFO - 🎯 SIMULATED TRADE: gemini ETH/USD
+2026-04-02 22:38:59,313 - INFO -    Side: buy, Amount: 0.009521
+2026-04-02 22:38:59,313 - INFO -    Value: $19.66
+2026-04-02 22:38:59,314 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,314 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,324 - INFO - 🎯 SIMULATED TRADE: gemini SOL/USD
+2026-04-02 22:38:59,324 - INFO -    Side: buy, Amount: 0.248480
+2026-04-02 22:38:59,324 - INFO -    Value: $19.66
+2026-04-02 22:38:59,324 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,324 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,329 - INFO - 🎯 SIMULATED TRADE: gemini DOT/USD
+2026-04-02 22:38:59,329 - INFO -    Side: buy, Amount: 0.159314
+2026-04-02 22:38:59,329 - INFO -    Value: $19.66
+2026-04-02 22:38:59,329 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,330 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,335 - INFO - 🎯 SIMULATED TRADE: gemini XRP/USD
+2026-04-02 22:38:59,335 - INFO -    Side: buy, Amount: 0.151156
+2026-04-02 22:38:59,335 - INFO -    Value: $19.66
+2026-04-02 22:38:59,335 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,335 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,340 - INFO - 🎯 SIMULATED TRADE: gemini DOGE/USD
+2026-04-02 22:38:59,340 - INFO -    Side: buy, Amount: 2.169849
+2026-04-02 22:38:59,340 - INFO -    Value: $19.66
+2026-04-02 22:38:59,340 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,340 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,345 - INFO - 🎯 SIMULATED TRADE: gemini LTC/USD
+2026-04-02 22:38:59,345 - INFO -    Side: buy, Amount: 0.377733
+2026-04-02 22:38:59,345 - INFO -    Value: $19.66
+2026-04-02 22:38:59,345 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,345 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,350 - INFO - 🎯 SIMULATED TRADE: gemini UNI/USD
+2026-04-02 22:38:59,350 - INFO -    Side: buy, Amount: 0.061658
+2026-04-02 22:38:59,350 - INFO -    Value: $19.66
+2026-04-02 22:38:59,350 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,350 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,355 - INFO - 🎯 SIMULATED TRADE: gemini LINK/USD
+2026-04-02 22:38:59,355 - INFO -    Side: buy, Amount: 0.022834
+2026-04-02 22:38:59,355 - INFO -    Value: $19.66
+2026-04-02 22:38:59,355 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,355 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,359 - INFO - 🎯 SIMULATED TRADE: gemini AVAX/USD
+2026-04-02 22:38:59,359 - INFO -    Side: buy, Amount: 0.022314
+2026-04-02 22:38:59,359 - INFO -    Value: $19.66
+2026-04-02 22:38:59,359 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,359 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,364 - INFO - 🎯 SIMULATED TRADE: gemini ATOM/USD
+2026-04-02 22:38:59,364 - INFO -    Side: buy, Amount: 0.119230
+2026-04-02 22:38:59,364 - INFO -    Value: $19.66
+2026-04-02 22:38:59,364 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,364 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,369 - INFO - 🎯 SIMULATED TRADE: gemini FIL/USD
+2026-04-02 22:38:59,369 - INFO -    Side: buy, Amount: 0.239944
+2026-04-02 22:38:59,369 - INFO -    Value: $19.66
+2026-04-02 22:38:59,369 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,369 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,374 - INFO - 🎯 SIMULATED TRADE: binance BTC/USDT:USDT
+2026-04-02 22:38:59,374 - INFO -    Side: sell, Amount: 0.000196
+2026-04-02 22:38:59,374 - INFO -    Value: $13.11
+2026-04-02 22:38:59,374 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,374 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,378 - INFO - 🎯 SIMULATED TRADE: binance ETH/USDT:USDT
+2026-04-02 22:38:59,378 - INFO -    Side: sell, Amount: 0.006359
+2026-04-02 22:38:59,378 - INFO -    Value: $13.11
+2026-04-02 22:38:59,378 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,378 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,383 - INFO - 🎯 SIMULATED TRADE: binance SOL/USDT:USDT
+2026-04-02 22:38:59,383 - INFO -    Side: sell, Amount: 0.165806
+2026-04-02 22:38:59,383 - INFO -    Value: $13.11
+2026-04-02 22:38:59,383 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,383 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,387 - INFO - 🎯 SIMULATED TRADE: binance DOT/USDT:USDT
+2026-04-02 22:38:59,387 - INFO -    Side: sell, Amount: 0.106996
+2026-04-02 22:38:59,387 - INFO -    Value: $13.11
+2026-04-02 22:38:59,387 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,387 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,392 - INFO - 🎯 SIMULATED TRADE: binance XRP/USDT:USDT
+2026-04-02 22:38:59,392 - INFO -    Side: sell, Amount: 0.100940
+2026-04-02 22:38:59,392 - INFO -    Value: $13.11
+2026-04-02 22:38:59,392 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,392 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,397 - INFO - 🎯 SIMULATED TRADE: binance DOGE/USDT:USDT
+2026-04-02 22:38:59,397 - INFO -    Side: sell, Amount: 1.448127
+2026-04-02 22:38:59,397 - INFO -    Value: $13.11
+2026-04-02 22:38:59,397 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,397 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,402 - INFO - 🎯 SIMULATED TRADE: binance LTC/USDT:USDT
+2026-04-02 22:38:59,402 - INFO -    Side: sell, Amount: 0.252155
+2026-04-02 22:38:59,402 - INFO -    Value: $13.11
+2026-04-02 22:38:59,402 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,402 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,406 - INFO - 🎯 SIMULATED TRADE: binance UNI/USDT:USDT
+2026-04-02 22:38:59,406 - INFO -    Side: sell, Amount: 0.041295
+2026-04-02 22:38:59,406 - INFO -    Value: $13.11
+2026-04-02 22:38:59,406 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,406 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,411 - INFO - 🎯 SIMULATED TRADE: binance LINK/USDT:USDT
+2026-04-02 22:38:59,411 - INFO -    Side: sell, Amount: 0.015274
+2026-04-02 22:38:59,411 - INFO -    Value: $13.11
+2026-04-02 22:38:59,411 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,411 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,416 - INFO - 🎯 SIMULATED TRADE: binance AVAX/USDT:USDT
+2026-04-02 22:38:59,416 - INFO -    Side: sell, Amount: 0.014952
+2026-04-02 22:38:59,416 - INFO -    Value: $13.11
+2026-04-02 22:38:59,416 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,416 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,421 - INFO - 🎯 SIMULATED TRADE: binance ATOM/USDT:USDT
+2026-04-02 22:38:59,421 - INFO -    Side: sell, Amount: 0.079292
+2026-04-02 22:38:59,421 - INFO -    Value: $13.11
+2026-04-02 22:38:59,421 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,421 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,426 - INFO - 🎯 SIMULATED TRADE: binance FIL/USDT:USDT
+2026-04-02 22:38:59,426 - INFO -    Side: sell, Amount: 0.160625
+2026-04-02 22:38:59,426 - INFO -    Value: $13.11
+2026-04-02 22:38:59,426 - INFO -    Confidence: OVERRIDE
+2026-04-02 22:38:59,426 - INFO -    LLM: HOLD
+2026-04-02 22:38:59,430 - INFO - 
+📊 CYCLE SUMMARY:
+2026-04-02 22:38:59,430 - INFO -    Opportunities found: 24
+2026-04-02 22:38:59,430 - INFO -    Trades executed: 24
+2026-04-02 22:38:59,430 - INFO - ======================================================================
+2026-04-02 22:38:59,430 - INFO - 📈 TOTAL TRADES: 47
+2026-04-02 22:38:59,430 - INFO - ⏰ Next cycle in 300 seconds...
+

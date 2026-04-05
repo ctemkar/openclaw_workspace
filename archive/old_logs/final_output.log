@@ -1,0 +1,159 @@
+2026-04-03 18:28:19,835 - INFO - 🚀 FINAL FIXED BOT STARTING
+2026-04-03 18:28:19,836 - INFO - 💰 YOUR BALANCE: $70 USDT - MAXIMUM READY!
+2026-04-03 18:28:19,840 - INFO - 📊 Final Trading:
+2026-04-03 18:28:19,840 - INFO -    Trade size: $30.0
+2026-04-03 18:28:19,840 - INFO -    Min profit: $0.1
+2026-04-03 18:28:19,840 - INFO -    Nonce management: ✅ FILE-BASED
+2026-04-03 18:28:19,840 - INFO - ============================================================
+2026-04-03 18:28:19,840 - INFO - 🚀 FINAL FIXED BOT - PROPER NONCE MANAGEMENT
+2026-04-03 18:28:19,840 - INFO - ============================================================
+2026-04-03 18:28:19,840 - INFO - 🔍 Final Scan #1
+2026-04-03 18:28:21,985 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:28:21,985 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:28:31,072 - INFO -    🎯 Found: MANA - 0.59%
+2026-04-03 18:28:31,072 - INFO -       Profit: $0.12
+2026-04-03 18:28:31,072 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:28:31,072 - INFO -    Spread: 0.59%
+2026-04-03 18:28:31,072 - INFO -    Expected profit: $0.12
+2026-04-03 18:28:31,072 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:28:31,072 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:28:31,072 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:28:31,072 - INFO -    💰 Expected profit: $0.12
+2026-04-03 18:28:31,072 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:28:31,072 - INFO -    💰 Profit: $0.12
+2026-04-03 18:28:31,072 - INFO -    📊 Total trades: 1
+2026-04-03 18:29:01,117 - INFO - 🔍 Final Scan #2
+2026-04-03 18:29:01,238 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:29:01,238 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:29:06,697 - INFO -    🎯 Found: MANA - 0.59%
+2026-04-03 18:29:06,697 - INFO -       Profit: $0.12
+2026-04-03 18:29:06,697 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:29:06,697 - INFO -    Spread: 0.59%
+2026-04-03 18:29:06,697 - INFO -    Expected profit: $0.12
+2026-04-03 18:29:06,697 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:29:06,697 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:29:06,697 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:29:06,697 - INFO -    💰 Expected profit: $0.12
+2026-04-03 18:29:06,697 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:29:06,697 - INFO -    💰 Profit: $0.12
+2026-04-03 18:29:06,697 - INFO -    📊 Total trades: 2
+2026-04-03 18:29:36,704 - INFO - 🔍 Final Scan #3
+2026-04-03 18:29:36,826 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:29:36,826 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:29:42,284 - INFO -    🎯 Found: MANA - 0.59%
+2026-04-03 18:29:42,284 - INFO -       Profit: $0.12
+2026-04-03 18:29:42,284 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:29:42,284 - INFO -    Spread: 0.59%
+2026-04-03 18:29:42,284 - INFO -    Expected profit: $0.12
+2026-04-03 18:29:42,284 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:29:42,284 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:29:42,285 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:29:42,285 - INFO -    💰 Expected profit: $0.12
+2026-04-03 18:29:42,285 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:29:42,285 - INFO -    💰 Profit: $0.12
+2026-04-03 18:29:42,285 - INFO -    📊 Total trades: 3
+2026-04-03 18:30:12,332 - INFO - 🔍 Final Scan #4
+2026-04-03 18:30:12,459 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:30:12,459 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:30:17,871 - INFO -    🎯 Found: MANA - 0.93%
+2026-04-03 18:30:17,871 - INFO -       Profit: $0.22
+2026-04-03 18:30:17,872 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:30:17,872 - INFO -    Spread: 0.93%
+2026-04-03 18:30:17,872 - INFO -    Expected profit: $0.22
+2026-04-03 18:30:17,872 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:30:17,872 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:30:17,872 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:30:17,872 - INFO -    💰 Expected profit: $0.22
+2026-04-03 18:30:17,872 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:30:17,872 - INFO -    💰 Profit: $0.22
+2026-04-03 18:30:17,872 - INFO -    📊 Total trades: 4
+2026-04-03 18:30:47,880 - INFO - 🔍 Final Scan #5
+2026-04-03 18:30:48,006 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:30:48,007 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:30:53,467 - INFO -    🎯 Found: MANA - 0.93%
+2026-04-03 18:30:53,467 - INFO -       Profit: $0.22
+2026-04-03 18:30:53,467 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:30:53,467 - INFO -    Spread: 0.93%
+2026-04-03 18:30:53,467 - INFO -    Expected profit: $0.22
+2026-04-03 18:30:53,467 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:30:53,467 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:30:53,467 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:30:53,467 - INFO -    💰 Expected profit: $0.22
+2026-04-03 18:30:53,467 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:30:53,467 - INFO -    💰 Profit: $0.22
+2026-04-03 18:30:53,467 - INFO -    📊 Total trades: 5
+2026-04-03 18:31:23,542 - INFO - 🔍 Final Scan #6
+2026-04-03 18:31:23,666 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:31:23,666 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:31:29,134 - INFO -    🎯 Found: MANA - 0.82%
+2026-04-03 18:31:29,134 - INFO -       Profit: $0.18
+2026-04-03 18:31:29,134 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:31:29,134 - INFO -    Spread: 0.82%
+2026-04-03 18:31:29,134 - INFO -    Expected profit: $0.18
+2026-04-03 18:31:29,134 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:31:29,134 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:31:29,134 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:31:29,134 - INFO -    💰 Expected profit: $0.18
+2026-04-03 18:31:29,134 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:31:29,135 - INFO -    💰 Profit: $0.18
+2026-04-03 18:31:29,135 - INFO -    📊 Total trades: 6
+2026-04-03 18:31:59,210 - INFO - 🔍 Final Scan #7
+2026-04-03 18:31:59,339 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:31:59,340 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:32:04,733 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:32:04,733 - INFO -       Profit: $0.15
+2026-04-03 18:32:04,733 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:32:04,733 - INFO -    Spread: 0.70%
+2026-04-03 18:32:04,733 - INFO -    Expected profit: $0.15
+2026-04-03 18:32:04,734 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:32:04,734 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:32:04,734 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:32:04,734 - INFO -    💰 Expected profit: $0.15
+2026-04-03 18:32:04,734 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:32:04,734 - INFO -    💰 Profit: $0.15
+2026-04-03 18:32:04,734 - INFO -    📊 Total trades: 7
+2026-04-03 18:32:34,742 - INFO - 🔍 Final Scan #8
+2026-04-03 18:32:34,870 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:32:34,870 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:32:40,326 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:32:40,326 - INFO -       Profit: $0.15
+2026-04-03 18:32:40,326 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:32:40,326 - INFO -    Spread: 0.70%
+2026-04-03 18:32:40,326 - INFO -    Expected profit: $0.15
+2026-04-03 18:32:40,326 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:32:40,326 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:32:40,326 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:32:40,326 - INFO -    💰 Expected profit: $0.15
+2026-04-03 18:32:40,326 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:32:40,326 - INFO -    💰 Profit: $0.15
+2026-04-03 18:32:40,326 - INFO -    📊 Total trades: 8
+2026-04-03 18:33:10,401 - INFO - 🔍 Final Scan #9
+2026-04-03 18:33:10,532 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:33:10,532 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:33:15,955 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:33:15,955 - INFO -       Profit: $0.15
+2026-04-03 18:33:15,955 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:33:15,955 - INFO -    Spread: 0.70%
+2026-04-03 18:33:15,955 - INFO -    Expected profit: $0.15
+2026-04-03 18:33:15,955 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:33:15,955 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:33:15,955 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:33:15,955 - INFO -    💰 Expected profit: $0.15
+2026-04-03 18:33:15,955 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:33:15,955 - INFO -    💰 Profit: $0.15
+2026-04-03 18:33:15,955 - INFO -    📊 Total trades: 9
+2026-04-03 18:33:45,988 - INFO - 🔍 Final Scan #10
+2026-04-03 18:33:46,117 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:33:46,118 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:33:51,583 - INFO -    🎯 Found: MANA - 0.82%
+2026-04-03 18:33:51,584 - INFO -       Profit: $0.18
+2026-04-03 18:33:51,584 - INFO - 🎯 EXECUTING FINAL TRADE: MANA
+2026-04-03 18:33:51,584 - INFO -    Spread: 0.82%
+2026-04-03 18:33:51,584 - INFO -    Expected profit: $0.18
+2026-04-03 18:33:51,584 - INFO -    ⚠️ Gemini nonce issue - simulating trade
+2026-04-03 18:33:51,584 - INFO -    📝 Would: BUY MANA on gemini
+2026-04-03 18:33:51,584 - INFO -    📝 Would: SELL on binance
+2026-04-03 18:33:51,584 - INFO -    💰 Expected profit: $0.18
+2026-04-03 18:33:51,584 - INFO -    🎉 SIMULATED TRADE COMPLETE
+2026-04-03 18:33:51,584 - INFO -    💰 Profit: $0.18
+2026-04-03 18:33:51,584 - INFO -    📊 Total trades: 10

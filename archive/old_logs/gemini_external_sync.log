@@ -1,0 +1,24 @@
+2026-04-03 18:57:07,385 - INFO - 🚀 GEMINI EXTERNAL SYNC FIX INITIALIZED
+2026-04-03 18:57:07,386 - INFO - 💰 Uses external time service - Solves nonce issue!
+2026-04-03 18:57:07,390 - INFO - 📊 External Sync Trading:
+2026-04-03 18:57:07,390 - INFO -    Min delay: 40 seconds
+2026-04-03 18:57:07,390 - INFO -    Trade size: $30.0
+2026-04-03 18:57:07,390 - INFO -    Nonce source: worldtimeapi.org
+2026-04-03 18:57:07,390 - INFO - ============================================================
+2026-04-03 18:57:07,390 - INFO - 🚀 GEMINI EXTERNAL SYNC TRADING BOT
+2026-04-03 18:57:07,390 - INFO - 💰 Uses worldtimeapi.org for nonce synchronization
+2026-04-03 18:57:07,390 - INFO - ============================================================
+2026-04-03 18:57:07,390 - INFO - 🔍 Testing Gemini API with EXTERNAL SYNC...
+2026-04-03 18:57:07,390 - INFO -    Testing public endpoint...
+2026-04-03 18:57:11,055 - INFO -    ✅ Public API works: BTC = $67014.14
+2026-04-03 18:57:11,055 - INFO -    Testing private endpoint (40s external sync delay)...
+2026-04-03 18:57:11,055 - INFO - 🔍 Gemini External Sync call #1
+2026-04-03 18:57:11,273 - WARNING - External time service failed: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2026-04-03 18:57:11,550 - ERROR - ❌ External sync call failed: gemini Nonce '1776217431274' has not increased since your last call to the Gemini API.
+2026-04-03 18:57:11,551 - ERROR -    ❌ Private API still failing even with external sync
+2026-04-03 18:57:11,551 - ERROR - ❌❌❌ GEMINI API STILL BROKEN EVEN WITH EXTERNAL SYNC ❌❌❌
+2026-04-03 18:57:11,551 - ERROR -    This means Gemini API key might be:
+2026-04-03 18:57:11,551 - ERROR -    1. Invalid or expired
+2026-04-03 18:57:11,551 - ERROR -    2. Blocked for your region (Thailand)
+2026-04-03 18:57:11,551 - ERROR -    3. Has fundamental issues
+2026-04-03 18:57:11,551 - ERROR -    Solution: Use different exchange or contact Gemini support

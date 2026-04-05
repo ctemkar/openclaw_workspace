@@ -1,0 +1,138 @@
+2026-04-03 02:21:53,328 - INFO - ✅ Gemini exchange initialized for portfolio rebalancing
+2026-04-03 02:21:53,328 - INFO - ======================================================================
+2026-04-03 02:21:53,328 - INFO - ⚖️ PORTFOLIO REBALANCER BOT
+2026-04-03 02:21:53,328 - INFO - Automatically rebalances portfolio to target allocation
+2026-04-03 02:21:53,328 - INFO - ======================================================================
+2026-04-03 02:21:53,328 - INFO - 🎯 TARGET ALLOCATION:
+2026-04-03 02:21:53,328 - INFO -   BTC: 40.0%
+2026-04-03 02:21:53,328 - INFO -   ETH: 30.0%
+2026-04-03 02:21:53,329 - INFO -   SOL: 10.0%
+2026-04-03 02:21:53,329 - INFO -   XRP: 5.0%
+2026-04-03 02:21:53,329 - INFO -   ADA: 5.0%
+2026-04-03 02:21:53,329 - INFO -   OTHER: 10.0%
+2026-04-03 02:21:53,329 - INFO - 📊 Rebalance threshold: 5.0% deviation
+2026-04-03 02:21:53,329 - INFO - 
+🔄 REBALANCE CYCLE 1 - 02:21:53
+2026-04-03 02:21:57,504 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775157717235' has not increased since your last call to the Gemini API.
+2026-04-03 02:21:57,519 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:26:57,548 - INFO - 
+🔄 REBALANCE CYCLE 2 - 02:26:57
+2026-04-03 02:26:58,733 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775158017551' has not increased since your last call to the Gemini API.
+2026-04-03 02:26:58,734 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:31:58,769 - INFO - 
+🔄 REBALANCE CYCLE 3 - 02:31:58
+2026-04-03 02:32:00,010 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775158318770' has not increased since your last call to the Gemini API.
+2026-04-03 02:32:00,010 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:37:00,134 - INFO - 
+🔄 REBALANCE CYCLE 4 - 02:37:00
+2026-04-03 02:37:01,470 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775158620183' has not increased since your last call to the Gemini API.
+2026-04-03 02:37:01,491 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:42:01,569 - INFO - 
+🔄 REBALANCE CYCLE 5 - 02:42:01
+2026-04-03 02:42:02,680 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775158921573' has not increased since your last call to the Gemini API.
+2026-04-03 02:42:02,681 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:47:02,724 - INFO - 
+🔄 REBALANCE CYCLE 6 - 02:47:02
+2026-04-03 02:47:03,797 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775159222725' has not increased since your last call to the Gemini API.
+2026-04-03 02:47:03,797 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:52:03,806 - INFO - 
+🔄 REBALANCE CYCLE 7 - 02:52:03
+2026-04-03 02:52:05,088 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775159523808' has not increased since your last call to the Gemini API.
+2026-04-03 02:52:05,088 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 02:57:05,134 - INFO - 
+🔄 REBALANCE CYCLE 8 - 02:57:05
+2026-04-03 02:57:06,256 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775159825136' has not increased since your last call to the Gemini API.
+2026-04-03 02:57:06,256 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:02:06,276 - INFO - 
+🔄 REBALANCE CYCLE 9 - 03:02:06
+2026-04-03 03:02:07,374 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775160126277' has not increased since your last call to the Gemini API.
+2026-04-03 03:02:07,375 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:07:07,463 - INFO - 
+🔄 REBALANCE CYCLE 10 - 03:07:07
+2026-04-03 03:07:10,339 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775160427487' has not increased since your last call to the Gemini API.
+2026-04-03 03:07:10,349 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:12:10,397 - INFO - 
+🔄 REBALANCE CYCLE 11 - 03:12:10
+2026-04-03 03:12:11,661 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775160730400' has not increased since your last call to the Gemini API.
+2026-04-03 03:12:11,661 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:17:11,726 - INFO - 
+🔄 REBALANCE CYCLE 12 - 03:17:11
+2026-04-03 03:17:12,850 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775161031726' has not increased since your last call to the Gemini API.
+2026-04-03 03:17:12,850 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:22:12,897 - INFO - 
+🔄 REBALANCE CYCLE 13 - 03:22:12
+2026-04-03 03:22:14,208 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775161332927' has not increased since your last call to the Gemini API.
+2026-04-03 03:22:14,208 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:27:14,234 - INFO - 
+🔄 REBALANCE CYCLE 14 - 03:27:14
+2026-04-03 03:27:15,444 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775161634236' has not increased since your last call to the Gemini API.
+2026-04-03 03:27:15,445 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:32:15,474 - INFO - 
+🔄 REBALANCE CYCLE 15 - 03:32:15
+2026-04-03 03:32:16,563 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775161935475' has not increased since your last call to the Gemini API.
+2026-04-03 03:32:16,563 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:37:16,797 - INFO - 
+🔄 REBALANCE CYCLE 16 - 03:37:16
+2026-04-03 03:37:20,695 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775162236864' has not increased since your last call to the Gemini API.
+2026-04-03 03:37:20,718 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:42:20,789 - INFO - 
+🔄 REBALANCE CYCLE 17 - 03:42:20
+2026-04-03 03:42:21,941 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775162540792' has not increased since your last call to the Gemini API.
+2026-04-03 03:42:21,942 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:47:21,945 - INFO - 
+🔄 REBALANCE CYCLE 18 - 03:47:21
+2026-04-03 03:47:23,112 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775162841946' has not increased since your last call to the Gemini API.
+2026-04-03 03:47:23,112 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:52:23,215 - INFO - 
+🔄 REBALANCE CYCLE 19 - 03:52:23
+2026-04-03 03:52:24,381 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775163143221' has not increased since your last call to the Gemini API.
+2026-04-03 03:52:24,382 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 03:57:24,479 - INFO - 
+🔄 REBALANCE CYCLE 20 - 03:57:24
+2026-04-03 03:57:25,555 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775163444481' has not increased since your last call to the Gemini API.
+2026-04-03 03:57:25,555 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:02:25,616 - INFO - 
+🔄 REBALANCE CYCLE 21 - 04:02:25
+2026-04-03 04:02:26,702 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775163745616' has not increased since your last call to the Gemini API.
+2026-04-03 04:02:26,702 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:04:58,456 - INFO - ✅ Gemini exchange initialized for portfolio rebalancing
+2026-04-03 04:04:58,456 - INFO - ======================================================================
+2026-04-03 04:04:58,456 - INFO - ⚖️ PORTFOLIO REBALANCER BOT
+2026-04-03 04:04:58,456 - INFO - Automatically rebalances portfolio to target allocation
+2026-04-03 04:04:58,456 - INFO - ======================================================================
+2026-04-03 04:04:58,456 - INFO - 🎯 TARGET ALLOCATION:
+2026-04-03 04:04:58,456 - INFO -   BTC: 40.0%
+2026-04-03 04:04:58,456 - INFO -   ETH: 30.0%
+2026-04-03 04:04:58,456 - INFO -   SOL: 10.0%
+2026-04-03 04:04:58,456 - INFO -   XRP: 5.0%
+2026-04-03 04:04:58,456 - INFO -   ADA: 5.0%
+2026-04-03 04:04:58,456 - INFO -   OTHER: 10.0%
+2026-04-03 04:04:58,456 - INFO - 📊 Rebalance threshold: 5.0% deviation
+2026-04-03 04:04:58,456 - INFO - 
+🔄 REBALANCE CYCLE 1 - 04:04:58
+2026-04-03 04:05:01,985 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775163901713' has not increased since your last call to the Gemini API.
+2026-04-03 04:05:01,985 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:10:01,995 - INFO - 
+🔄 REBALANCE CYCLE 2 - 04:10:01
+2026-04-03 04:10:03,234 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775164201998' has not increased since your last call to the Gemini API.
+2026-04-03 04:10:03,235 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:15:03,363 - INFO - 
+🔄 REBALANCE CYCLE 3 - 04:15:03
+2026-04-03 04:15:04,596 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775164503366' has not increased since your last call to the Gemini API.
+2026-04-03 04:15:04,596 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:20:04,684 - INFO - 
+🔄 REBALANCE CYCLE 4 - 04:20:04
+2026-04-03 04:20:05,933 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775164804685' has not increased since your last call to the Gemini API.
+2026-04-03 04:20:05,933 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:25:06,086 - INFO - 
+🔄 REBALANCE CYCLE 5 - 04:25:06
+2026-04-03 04:25:07,527 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775165106091' has not increased since your last call to the Gemini API.
+2026-04-03 04:25:07,528 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:30:07,680 - INFO - 
+🔄 REBALANCE CYCLE 6 - 04:30:07
+2026-04-03 04:30:08,890 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775165407684' has not increased since your last call to the Gemini API.
+2026-04-03 04:30:08,891 - WARNING - ⚠️ Could not fetch balances, skipping cycle
+2026-04-03 04:35:08,985 - INFO - 
+🔄 REBALANCE CYCLE 7 - 04:35:08
+2026-04-03 04:35:10,066 - ERROR - ❌ Failed to fetch balances: gemini Nonce '1775165708986' has not increased since your last call to the Gemini API.
+2026-04-03 04:35:10,066 - WARNING - ⚠️ Could not fetch balances, skipping cycle

@@ -1,0 +1,20 @@
+🚀 Starting REAL-TIME Top 10 Dashboard on port 5026...
+✅ Shows CURRENT spreads from progress monitor
+🌐 Access at: http://localhost:5026
+📊 Best opportunity: YFI -1.82% = $0.55 profit per $30 trade
+Traceback (most recent call last):
+  File "/Users/chetantemkar/.openclaw/workspace/app/real_time_top10_dashboard.py", line 195, in <module>
+    main()
+    ~~~~^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/real_time_top10_dashboard.py", line 191, in main
+    server = HTTPServer(('', PORT), RealTimeTop10Dashboard)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 48] Address already in use

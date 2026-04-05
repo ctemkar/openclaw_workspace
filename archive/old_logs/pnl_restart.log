@@ -1,0 +1,133 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 STARTING SIMPLE P&L DASHBOARD
+   • Port: 5008
+   • Shows: P&L information as requested
+   • Priority: Cumulative P&L first
+   • Clear: SHORT trades status shown
+   • Access: http://localhost:5008/
+
+ * Serving Flask app 'simple_pnl_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.63:5008
+[33mPress CTRL+C to quit[0m
+[2026-04-01 13:37:07,687] ERROR in app: Exception on / [HEAD]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/simple_pnl_dashboard.py", line 378, in dashboard
+    return render_template_string(
+        HTML_TEMPLATE,
+    ...<11 lines>...
+        capital=capital
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 163, in render_template_string
+    return _render(app, template, context)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 184, in top-level template code
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'pnl'
+127.0.0.1 - - [01/Apr/2026 13:37:07] "[35m[1mHEAD / HTTP/1.1[0m" 500 -
+127.0.0.1 - - [01/Apr/2026 15:43:21] "[33mGET /status HTTP/1.1[0m" 404 -
+[2026-04-01 15:43:29,009] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/simple_pnl_dashboard.py", line 378, in dashboard
+    return render_template_string(
+        HTML_TEMPLATE,
+    ...<11 lines>...
+        capital=capital
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 163, in render_template_string
+    return _render(app, template, context)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 184, in top-level template code
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'pnl'
+127.0.0.1 - - [01/Apr/2026 15:43:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+127.0.0.1 - - [01/Apr/2026 17:32:30] "[33mGET /status HTTP/1.1[0m" 404 -
+[2026-04-01 17:32:55,802] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/simple_pnl_dashboard.py", line 378, in dashboard
+    return render_template_string(
+        HTML_TEMPLATE,
+    ...<11 lines>...
+        capital=capital
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 163, in render_template_string
+    return _render(app, template, context)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 184, in top-level template code
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'pnl'
+127.0.0.1 - - [01/Apr/2026 17:32:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2026-04-01 17:33:02,463] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/simple_pnl_dashboard.py", line 378, in dashboard
+    return render_template_string(
+        HTML_TEMPLATE,
+    ...<11 lines>...
+        capital=capital
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 163, in render_template_string
+    return _render(app, template, context)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 184, in top-level template code
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'pnl'
+127.0.0.1 - - [01/Apr/2026 17:33:02] "[35m[1mGET / HTTP/1.1[0m" 500 -

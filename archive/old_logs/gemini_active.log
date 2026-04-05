@@ -1,0 +1,59 @@
+2026-03-31 13:28:23,213 - INFO - ✅ Gemini API keys loaded
+2026-03-31 13:28:23,215 - INFO - 💰 Total Balance: $134.27
+2026-03-31 13:28:23,215 - INFO - 🎯 Trading Capital: $50.00
+2026-03-31 13:28:23,215 - INFO - ⚖️ Risk: 1.0% per trade ($0.50)
+2026-03-31 13:28:23,215 - INFO - 🛑 Stop-loss: 2.0%
+2026-03-31 13:28:23,215 - INFO - 🎯 Take-profit: 4.0%
+2026-03-31 13:28:23,215 - INFO - 📊 Max trades/day: 4
+2026-03-31 13:28:23,215 - INFO - 🔄 Starting conservative trading...
+2026-03-31 13:28:23,215 - INFO - 
+📊 CYCLE 1 - 13:28:23
+2026-03-31 13:28:26,780 - INFO - 💰 Balance: $134.27 USD
+2026-03-31 13:28:27,278 - INFO - 🔍 BTC/USD: $67371.49 (0.0%)
+2026-03-31 13:28:27,777 - INFO - 🔍 ETH/USD: $2057.40 (0.0%)
+2026-03-31 13:28:28,284 - INFO - 🔍 SOL/USD: $83.07 (0.0%)
+2026-03-31 13:28:28,284 - ERROR - Market data error for ADA/USD: gemini does not have market symbol ADA/USD
+2026-03-31 13:28:28,838 - INFO - 🔍 XRP/USD: $1.32 (0.0%)
+2026-03-31 13:28:29,378 - INFO - 🔍 DOT/USD: $1.24 (0.0%)
+2026-03-31 13:28:29,915 - INFO - 🔍 DOGE/USD: $0.09 (0.0%)
+2026-03-31 13:28:30,485 - INFO - 🔍 AVAX/USD: $8.90 (0.0%)
+2026-03-31 13:28:30,485 - ERROR - Market data error for MATIC/USD: gemini does not have market symbol MATIC/USD
+2026-03-31 13:28:30,978 - INFO - 🔍 LINK/USD: $8.71 (0.0%)
+2026-03-31 13:28:30,978 - INFO - 
+📈 Summary: Trades today: 0/4
+2026-03-31 13:28:30,978 - INFO - ⏰ Next check in 3 minutes...
+2026-03-31 13:28:30,978 - INFO - ==================================================
+2026-03-31 13:31:31,006 - INFO - 
+📊 CYCLE 2 - 13:31:31
+2026-03-31 13:31:32,099 - INFO - 💰 Balance: $134.27 USD
+2026-03-31 13:31:32,360 - INFO - 🔍 BTC/USD: $67358.29 (0.0%)
+2026-03-31 13:31:32,935 - INFO - 🔍 ETH/USD: $2055.66 (0.0%)
+2026-03-31 13:31:33,484 - INFO - 🔍 SOL/USD: $83.07 (0.0%)
+2026-03-31 13:31:33,484 - ERROR - Market data error for ADA/USD: gemini does not have market symbol ADA/USD
+2026-03-31 13:31:34,139 - INFO - 🔍 XRP/USD: $1.32 (0.0%)
+2026-03-31 13:31:34,625 - INFO - 🔍 DOT/USD: $1.24 (0.0%)
+2026-03-31 13:31:35,185 - INFO - 🔍 DOGE/USD: $0.09 (0.0%)
+2026-03-31 13:31:35,734 - INFO - 🔍 AVAX/USD: $8.91 (0.0%)
+2026-03-31 13:31:35,734 - ERROR - Market data error for MATIC/USD: gemini does not have market symbol MATIC/USD
+2026-03-31 13:31:36,289 - INFO - 🔍 LINK/USD: $8.71 (0.0%)
+2026-03-31 13:31:36,290 - INFO - 
+📈 Summary: Trades today: 0/4
+2026-03-31 13:31:36,290 - INFO - ⏰ Next check in 3 minutes...
+2026-03-31 13:31:36,290 - INFO - ==================================================
+2026-03-31 13:34:36,361 - INFO - 
+📊 CYCLE 3 - 13:34:36
+2026-03-31 13:34:37,459 - INFO - 💰 Balance: $134.27 USD
+2026-03-31 13:34:37,725 - INFO - 🔍 BTC/USD: $67329.50 (0.0%)
+2026-03-31 13:34:38,223 - INFO - 🔍 ETH/USD: $2056.19 (0.0%)
+2026-03-31 13:34:38,791 - INFO - 🔍 SOL/USD: $83.10 (0.0%)
+2026-03-31 13:34:38,791 - ERROR - Market data error for ADA/USD: gemini does not have market symbol ADA/USD
+2026-03-31 13:34:39,310 - INFO - 🔍 XRP/USD: $1.32 (0.0%)
+2026-03-31 13:34:39,810 - INFO - 🔍 DOT/USD: $1.24 (0.0%)
+2026-03-31 13:34:40,319 - INFO - 🔍 DOGE/USD: $0.09 (0.0%)
+2026-03-31 13:34:40,831 - INFO - 🔍 AVAX/USD: $8.91 (0.0%)
+2026-03-31 13:34:40,831 - ERROR - Market data error for MATIC/USD: gemini does not have market symbol MATIC/USD
+2026-03-31 13:34:41,327 - INFO - 🔍 LINK/USD: $8.71 (0.0%)
+2026-03-31 13:34:41,327 - INFO - 
+📈 Summary: Trades today: 0/4
+2026-03-31 13:34:41,327 - INFO - ⏰ Next check in 3 minutes...
+2026-03-31 13:34:41,327 - INFO - ==================================================

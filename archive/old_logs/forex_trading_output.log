@@ -1,0 +1,26 @@
+2026-04-03 19:38:15,633 - INFO - 🚀 SIMPLE FOREX TRADING BOT INITIALIZING
+2026-04-03 19:38:15,633 - INFO - 💰 Paper trading mode - Ready for real accounts
+2026-04-03 19:38:15,633 - INFO - 📊 Trading 5 major Forex pairs
+2026-04-03 19:38:15,633 - INFO - 💰 Paper balance: $10000.00
+2026-04-03 19:38:15,633 - INFO - 🎯 Risk: 1.0% per trade
+2026-04-03 19:38:15,633 - INFO - 📈 Strategy: Trend following + Mean reversion
+2026-04-03 19:38:15,633 - INFO - ============================================================
+2026-04-03 19:38:15,633 - INFO - 🚀 SIMPLE FOREX BOT STARTING - PAPER TRADING
+2026-04-03 19:38:15,633 - INFO - 💰 Ready for real account integration
+2026-04-03 19:38:15,633 - INFO - ============================================================
+2026-04-03 19:38:15,633 - INFO - 🔍 Forex Scan #1
+2026-04-03 19:38:16,552 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-03 19:38:16,552 - INFO -    Paper Balance: $10000.00
+2026-04-03 19:38:16,553 - INFO -    Total Profit: $0.00
+2026-04-03 19:38:16,553 - INFO -    Open Trades: 0
+2026-04-03 19:38:16,553 - INFO -    Closed Trades: 0
+2026-04-03 19:38:16,553 - INFO -    Win Rate: 0.0%
+2026-04-03 19:38:16,553 - INFO - ⏳ Waiting 10 minutes for next scan...
+2026-04-03 19:48:16,604 - INFO - 🔍 Forex Scan #2
+2026-04-03 19:48:17,435 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-03 19:48:17,436 - INFO -    Paper Balance: $10000.00
+2026-04-03 19:48:17,436 - INFO -    Total Profit: $0.00
+2026-04-03 19:48:17,436 - INFO -    Open Trades: 0
+2026-04-03 19:48:17,436 - INFO -    Closed Trades: 0
+2026-04-03 19:48:17,436 - INFO -    Win Rate: 0.0%
+2026-04-03 19:48:17,436 - INFO - ⏳ Waiting 10 minutes for next scan...

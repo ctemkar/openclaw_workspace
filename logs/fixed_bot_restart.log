@@ -1,0 +1,2107 @@
+2026-04-05 15:12:23,919 - INFO - 🚀 MICROSECOND ARBITRAGE BOT STARTING
+2026-04-05 15:12:23,919 - INFO - 🎯 Using YOUR microsecond fix: nonce = int(time.time() * 1000000)
+2026-04-05 15:12:23,920 - INFO - ✅ Loaded Binance key: dT0OIm9aq8...
+2026-04-05 15:12:23,920 - INFO - ✅ Loaded Gemini key: account-oH...
+2026-04-05 15:12:23,925 - INFO - 🧪 TESTING GEMINI CONNECTION WITH MICROSECOND NONCE
+2026-04-05 15:12:25,037 - INFO - ✅ Gemini symbols: 3 available
+2026-04-05 15:12:26,145 - INFO - ✅ Gemini balances response: {'result': 'error', 'reason': 'InvalidNonce', 'message': "Nonce '1775377111084076' has not increased since your last call to the Gemini API."}
+2026-04-05 15:12:26,145 - INFO - 
+============================================================
+2026-04-05 15:12:26,145 - INFO - 🔄 CYCLE 1 - 2026-04-05 15:12:26
+2026-04-05 15:12:26,145 - INFO - ============================================================
+2026-04-05 15:12:26,145 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:12:29,263 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:12:37,706 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:12:37,706 - INFO -    1. YFI: 1.02% (✅ TRADABLE)
+2026-04-05 15:12:37,706 - INFO -       Binance: $2434.0000, Gemini: $2458.8200
+2026-04-05 15:12:37,706 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.31
+2026-04-05 15:12:37,706 - INFO -    2. DOT: 0.33% (⏳ MONITORING)
+2026-04-05 15:12:37,706 - INFO -       Binance: $1.2270, Gemini: $1.2311
+2026-04-05 15:12:37,706 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:12:37,706 - INFO -    3. MANA: 0.31% (⏳ MONITORING)
+2026-04-05 15:12:37,706 - INFO -       Binance: $0.0846, Gemini: $0.0849
+2026-04-05 15:12:37,706 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 15:12:37,706 - INFO -    4. XTZ: -0.26% (⏳ MONITORING)
+2026-04-05 15:12:37,706 - INFO -       Binance: $0.3415, Gemini: $0.3406
+2026-04-05 15:12:37,706 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 15:12:37,706 - INFO -    5. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:12:37,706 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:12:37,706 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:12:37,706 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:12:37,706 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.02% spread
+2026-04-05 15:12:37,706 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:12:37,706 - INFO -    Binance: $2434.0000, Gemini: $2458.8200
+2026-04-05 15:12:37,706 - INFO -    Profit per $30: $0.31
+2026-04-05 15:12:37,706 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:12:37,727 - INFO - 📊 Average spread: 0.27% across 10 pairs
+2026-04-05 15:12:37,727 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:17:37,819 - INFO - 
+============================================================
+2026-04-05 15:17:37,842 - INFO - 🔄 CYCLE 2 - 2026-04-05 15:17:37
+2026-04-05 15:17:37,843 - INFO - ============================================================
+2026-04-05 15:17:37,844 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:17:39,193 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:17:45,459 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:17:45,459 - INFO -    1. YFI: 1.81% (✅ TRADABLE)
+2026-04-05 15:17:45,459 - INFO -       Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 15:17:45,460 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.54
+2026-04-05 15:17:45,460 - INFO -    2. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 15:17:45,460 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 15:17:45,460 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 15:17:45,460 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 15:17:45,460 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 15:17:45,460 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:17:45,460 - INFO -    4. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 15:17:45,460 - INFO -       Binance: $0.3417, Gemini: $0.3406
+2026-04-05 15:17:45,460 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 15:17:45,460 - INFO -    5. MANA: 0.19% (⏳ MONITORING)
+2026-04-05 15:17:45,460 - INFO -       Binance: $0.0847, Gemini: $0.0849
+2026-04-05 15:17:45,460 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:17:45,460 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:17:45,460 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.81% spread
+2026-04-05 15:17:45,460 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:17:45,460 - INFO -    Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 15:17:45,460 - INFO -    Profit per $30: $0.54
+2026-04-05 15:17:45,460 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:17:45,460 - INFO - 📊 Average spread: 0.35% across 10 pairs
+2026-04-05 15:17:45,460 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:22:45,538 - INFO - 
+============================================================
+2026-04-05 15:22:45,538 - INFO - 🔄 CYCLE 3 - 2026-04-05 15:22:45
+2026-04-05 15:22:45,538 - INFO - ============================================================
+2026-04-05 15:22:45,538 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:22:46,703 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:22:52,478 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:22:52,479 - INFO -    1. YFI: 1.73% (✅ TRADABLE)
+2026-04-05 15:22:52,479 - INFO -       Binance: $2417.0000, Gemini: $2458.8200
+2026-04-05 15:22:52,479 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.52
+2026-04-05 15:22:52,479 - INFO -    2. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 15:22:52,479 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 15:22:52,479 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 15:22:52,479 - INFO -    3. AVAX: -0.22% (⏳ MONITORING)
+2026-04-05 15:22:52,479 - INFO -       Binance: $8.8200, Gemini: $8.8010
+2026-04-05 15:22:52,479 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.06
+2026-04-05 15:22:52,479 - INFO -    4. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:22:52,480 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:22:52,480 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:22:52,480 - INFO -    5. UNI: 0.08% (⏳ MONITORING)
+2026-04-05 15:22:52,480 - INFO -       Binance: $3.0770, Gemini: $3.0795
+2026-04-05 15:22:52,480 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.02
+2026-04-05 15:22:52,480 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:22:52,480 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.73% spread
+2026-04-05 15:22:52,480 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:22:52,480 - INFO -    Binance: $2417.0000, Gemini: $2458.8200
+2026-04-05 15:22:52,480 - INFO -    Profit per $30: $0.52
+2026-04-05 15:22:52,480 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:22:52,481 - INFO - 📊 Average spread: 0.29% across 10 pairs
+2026-04-05 15:22:52,481 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:27:52,964 - INFO - 
+============================================================
+2026-04-05 15:27:54,214 - INFO - 🔄 CYCLE 4 - 2026-04-05 15:27:54
+2026-04-05 15:27:54,308 - INFO - ============================================================
+2026-04-05 15:27:54,335 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:27:56,813 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:28:03,364 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:28:03,394 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 15:28:03,394 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:28:03,394 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 15:28:03,394 - INFO -    2. DOT: 0.58% (✅ TRADABLE)
+2026-04-05 15:28:03,394 - INFO -       Binance: $1.2240, Gemini: $1.2311
+2026-04-05 15:28:03,394 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.17
+2026-04-05 15:28:03,394 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 15:28:03,394 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 15:28:03,394 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:28:03,394 - INFO -    4. MANA: 0.19% (⏳ MONITORING)
+2026-04-05 15:28:03,394 - INFO -       Binance: $0.0847, Gemini: $0.0849
+2026-04-05 15:28:03,394 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:28:03,394 - INFO -    5. AAVE: 0.12% (⏳ MONITORING)
+2026-04-05 15:28:03,394 - INFO -       Binance: $92.6200, Gemini: $92.7348
+2026-04-05 15:28:03,394 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.04
+2026-04-05 15:28:03,394 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 15:28:03,395 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 15:28:03,395 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:28:03,395 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:28:03,395 - INFO -    Profit per $30: $0.46
+2026-04-05 15:28:03,395 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:28:03,481 - INFO - 📊 Average spread: 0.30% across 10 pairs
+2026-04-05 15:28:03,481 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:33:03,648 - INFO - 
+============================================================
+2026-04-05 15:33:03,664 - INFO - 🔄 CYCLE 5 - 2026-04-05 15:33:03
+2026-04-05 15:33:03,665 - INFO - ============================================================
+2026-04-05 15:33:03,665 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:33:04,864 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:33:10,453 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:33:10,453 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 15:33:10,453 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:33:10,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 15:33:10,454 - INFO -    2. DOT: 0.50% (⏳ MONITORING)
+2026-04-05 15:33:10,454 - INFO -       Binance: $1.2250, Gemini: $1.2311
+2026-04-05 15:33:10,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.15
+2026-04-05 15:33:10,454 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 15:33:10,454 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 15:33:10,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:33:10,454 - INFO -    4. MANA: 0.19% (⏳ MONITORING)
+2026-04-05 15:33:10,454 - INFO -       Binance: $0.0847, Gemini: $0.0849
+2026-04-05 15:33:10,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:33:10,454 - INFO -    5. COMP: -0.12% (⏳ MONITORING)
+2026-04-05 15:33:10,454 - INFO -       Binance: $16.6000, Gemini: $16.5800
+2026-04-05 15:33:10,454 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 15:33:10,454 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:33:10,454 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 15:33:10,454 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:33:10,454 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:33:10,454 - INFO -    Profit per $30: $0.46
+2026-04-05 15:33:10,454 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:33:10,455 - INFO - 📊 Average spread: 0.30% across 10 pairs
+2026-04-05 15:33:10,455 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:38:10,458 - INFO - 
+============================================================
+2026-04-05 15:38:10,461 - INFO - 🔄 CYCLE 6 - 2026-04-05 15:38:10
+2026-04-05 15:38:10,461 - INFO - ============================================================
+2026-04-05 15:38:10,461 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:38:11,642 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:38:17,839 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:38:17,839 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 15:38:17,839 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:38:17,839 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 15:38:17,839 - INFO -    2. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 15:38:17,839 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 15:38:17,839 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 15:38:17,839 - INFO -    3. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:38:17,839 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:38:17,839 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:38:17,839 - INFO -    4. AVAX: -0.18% (⏳ MONITORING)
+2026-04-05 15:38:17,840 - INFO -       Binance: $8.8200, Gemini: $8.8040
+2026-04-05 15:38:17,840 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 15:38:17,840 - INFO -    5. COMP: -0.12% (⏳ MONITORING)
+2026-04-05 15:38:17,840 - INFO -       Binance: $16.6000, Gemini: $16.5800
+2026-04-05 15:38:17,840 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 15:38:17,840 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:38:17,840 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 15:38:17,840 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:38:17,840 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 15:38:17,840 - INFO -    Profit per $30: $0.46
+2026-04-05 15:38:17,840 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:38:17,840 - INFO - 📊 Average spread: 0.27% across 10 pairs
+2026-04-05 15:38:17,840 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:43:17,990 - INFO - 
+============================================================
+2026-04-05 15:43:18,027 - INFO - 🔄 CYCLE 7 - 2026-04-05 15:43:18
+2026-04-05 15:43:18,027 - INFO - ============================================================
+2026-04-05 15:43:18,028 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:43:20,346 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:43:26,557 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:43:26,559 - INFO -    1. YFI: 1.69% (✅ TRADABLE)
+2026-04-05 15:43:26,559 - INFO -       Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 15:43:26,559 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.51
+2026-04-05 15:43:26,559 - INFO -    2. DOT: 0.50% (⏳ MONITORING)
+2026-04-05 15:43:26,559 - INFO -       Binance: $1.2250, Gemini: $1.2311
+2026-04-05 15:43:26,559 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.15
+2026-04-05 15:43:26,559 - INFO -    3. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:43:26,559 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:43:26,559 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:43:26,559 - INFO -    4. UNI: 0.20% (⏳ MONITORING)
+2026-04-05 15:43:26,559 - INFO -       Binance: $3.0710, Gemini: $3.0770
+2026-04-05 15:43:26,559 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:43:26,559 - INFO -    5. COMP: -0.12% (⏳ MONITORING)
+2026-04-05 15:43:26,559 - INFO -       Binance: $16.6000, Gemini: $16.5800
+2026-04-05 15:43:26,559 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 15:43:26,559 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:43:26,559 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.69% spread
+2026-04-05 15:43:26,560 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:43:26,560 - INFO -    Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 15:43:26,560 - INFO -    Profit per $30: $0.51
+2026-04-05 15:43:26,560 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:43:26,561 - INFO - 📊 Average spread: 0.30% across 10 pairs
+2026-04-05 15:43:26,561 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:48:26,604 - INFO - 
+============================================================
+2026-04-05 15:48:26,607 - INFO - 🔄 CYCLE 8 - 2026-04-05 15:48:26
+2026-04-05 15:48:26,607 - INFO - ============================================================
+2026-04-05 15:48:26,607 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:48:27,761 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:48:33,531 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:48:33,532 - INFO -    1. YFI: 1.77% (✅ TRADABLE)
+2026-04-05 15:48:33,532 - INFO -       Binance: $2416.0000, Gemini: $2458.8200
+2026-04-05 15:48:33,532 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.53
+2026-04-05 15:48:33,532 - INFO -    2. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 15:48:33,532 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 15:48:33,532 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 15:48:33,532 - INFO -    3. UNI: 0.33% (⏳ MONITORING)
+2026-04-05 15:48:33,532 - INFO -       Binance: $3.0670, Gemini: $3.0770
+2026-04-05 15:48:33,533 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:48:33,533 - INFO -    4. XTZ: -0.23% (⏳ MONITORING)
+2026-04-05 15:48:33,533 - INFO -       Binance: $0.3417, Gemini: $0.3409
+2026-04-05 15:48:33,533 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 15:48:33,533 - INFO -    5. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:48:33,533 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:48:33,533 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:48:33,533 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:48:33,533 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.77% spread
+2026-04-05 15:48:33,533 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:48:33,533 - INFO -    Binance: $2416.0000, Gemini: $2458.8200
+2026-04-05 15:48:33,533 - INFO -    Profit per $30: $0.53
+2026-04-05 15:48:33,534 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:48:33,536 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 15:48:33,536 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:53:33,611 - INFO - 
+============================================================
+2026-04-05 15:53:33,613 - INFO - 🔄 CYCLE 9 - 2026-04-05 15:53:33
+2026-04-05 15:53:33,613 - INFO - ============================================================
+2026-04-05 15:53:33,614 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:53:34,841 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:53:40,728 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:53:40,729 - INFO -    1. YFI: 1.81% (✅ TRADABLE)
+2026-04-05 15:53:40,729 - INFO -       Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 15:53:40,729 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.54
+2026-04-05 15:53:40,729 - INFO -    2. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 15:53:40,729 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 15:53:40,729 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 15:53:40,729 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 15:53:40,729 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 15:53:40,729 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 15:53:40,729 - INFO -    4. XTZ: -0.23% (⏳ MONITORING)
+2026-04-05 15:53:40,729 - INFO -       Binance: $0.3417, Gemini: $0.3409
+2026-04-05 15:53:40,730 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 15:53:40,730 - INFO -    5. MANA: 0.19% (⏳ MONITORING)
+2026-04-05 15:53:40,730 - INFO -       Binance: $0.0847, Gemini: $0.0849
+2026-04-05 15:53:40,730 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:53:40,730 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:53:40,730 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.81% spread
+2026-04-05 15:53:40,730 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:53:40,730 - INFO -    Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 15:53:40,730 - INFO -    Profit per $30: $0.54
+2026-04-05 15:53:40,730 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:53:40,731 - INFO - 📊 Average spread: 0.34% across 10 pairs
+2026-04-05 15:53:40,731 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:58:40,887 - INFO - 
+============================================================
+2026-04-05 15:58:40,902 - INFO - 🔄 CYCLE 10 - 2026-04-05 15:58:40
+2026-04-05 15:58:40,903 - INFO - ============================================================
+2026-04-05 15:58:40,903 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:58:42,576 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 15:58:48,433 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:58:48,451 - INFO -    1. YFI: 1.60% (✅ TRADABLE)
+2026-04-05 15:58:48,453 - INFO -       Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 15:58:48,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.48
+2026-04-05 15:58:48,454 - INFO -    2. XTZ: -0.29% (⏳ MONITORING)
+2026-04-05 15:58:48,454 - INFO -       Binance: $0.3419, Gemini: $0.3409
+2026-04-05 15:58:48,454 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.09
+2026-04-05 15:58:48,454 - INFO -    3. DOT: 0.25% (⏳ MONITORING)
+2026-04-05 15:58:48,454 - INFO -       Binance: $1.2280, Gemini: $1.2311
+2026-04-05 15:58:48,454 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 15:58:48,455 - INFO -    4. FIL: 0.21% (⏳ MONITORING)
+2026-04-05 15:58:48,455 - INFO -       Binance: $0.8200, Gemini: $0.8217
+2026-04-05 15:58:48,455 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 15:58:48,455 - INFO -    5. UNI: -0.20% (⏳ MONITORING)
+2026-04-05 15:58:48,455 - INFO -       Binance: $3.0740, Gemini: $3.0677
+2026-04-05 15:58:48,455 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.06
+2026-04-05 15:58:48,455 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 15:58:48,455 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.60% spread
+2026-04-05 15:58:48,455 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 15:58:48,455 - INFO -    Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 15:58:48,455 - INFO -    Profit per $30: $0.48
+2026-04-05 15:58:48,455 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 15:58:48,533 - INFO - 📊 Average spread: 0.32% across 10 pairs
+2026-04-05 15:58:48,533 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:03:48,587 - INFO - 
+============================================================
+2026-04-05 16:03:48,594 - INFO - 🔄 CYCLE 11 - 2026-04-05 16:03:48
+2026-04-05 16:03:48,595 - INFO - ============================================================
+2026-04-05 16:03:48,595 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:03:49,823 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:03:56,278 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:03:56,279 - INFO -    1. YFI: 1.56% (✅ TRADABLE)
+2026-04-05 16:03:56,279 - INFO -       Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:03:56,279 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.47
+2026-04-05 16:03:56,279 - INFO -    2. XTZ: -0.35% (⏳ MONITORING)
+2026-04-05 16:03:56,279 - INFO -       Binance: $0.3421, Gemini: $0.3409
+2026-04-05 16:03:56,279 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 16:03:56,279 - INFO -    3. UNI: -0.33% (⏳ MONITORING)
+2026-04-05 16:03:56,279 - INFO -       Binance: $3.0780, Gemini: $3.0677
+2026-04-05 16:03:56,279 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 16:03:56,279 - INFO -    4. AVAX: -0.19% (⏳ MONITORING)
+2026-04-05 16:03:56,280 - INFO -       Binance: $8.8400, Gemini: $8.8230
+2026-04-05 16:03:56,280 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.06
+2026-04-05 16:03:56,280 - INFO -    5. DOT: 0.17% (⏳ MONITORING)
+2026-04-05 16:03:56,280 - INFO -       Binance: $1.2290, Gemini: $1.2311
+2026-04-05 16:03:56,280 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 16:03:56,280 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:03:56,280 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.56% spread
+2026-04-05 16:03:56,280 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:03:56,280 - INFO -    Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:03:56,280 - INFO -    Profit per $30: $0.47
+2026-04-05 16:03:56,280 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:03:56,281 - INFO - 📊 Average spread: 0.31% across 10 pairs
+2026-04-05 16:03:56,281 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:08:56,386 - INFO - 
+============================================================
+2026-04-05 16:08:56,386 - INFO - 🔄 CYCLE 12 - 2026-04-05 16:08:56
+2026-04-05 16:08:56,386 - INFO - ============================================================
+2026-04-05 16:08:56,386 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:08:57,927 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:09:04,253 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:09:04,253 - INFO -    1. YFI: 1.60% (✅ TRADABLE)
+2026-04-05 16:09:04,253 - INFO -       Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 16:09:04,253 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.48
+2026-04-05 16:09:04,254 - INFO -    2. UNI: -0.40% (⏳ MONITORING)
+2026-04-05 16:09:04,254 - INFO -       Binance: $3.0800, Gemini: $3.0677
+2026-04-05 16:09:04,254 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 16:09:04,254 - INFO -    3. COMP: 0.30% (⏳ MONITORING)
+2026-04-05 16:09:04,254 - INFO -       Binance: $16.5700, Gemini: $16.6200
+2026-04-05 16:09:04,254 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 16:09:04,254 - INFO -    4. XTZ: -0.26% (⏳ MONITORING)
+2026-04-05 16:09:04,254 - INFO -       Binance: $0.3418, Gemini: $0.3409
+2026-04-05 16:09:04,254 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:09:04,254 - INFO -    5. ATOM: 0.24% (⏳ MONITORING)
+2026-04-05 16:09:04,254 - INFO -       Binance: $1.6880, Gemini: $1.6920
+2026-04-05 16:09:04,254 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 16:09:04,255 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:09:04,255 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.60% spread
+2026-04-05 16:09:04,255 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:09:04,255 - INFO -    Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 16:09:04,255 - INFO -    Profit per $30: $0.48
+2026-04-05 16:09:04,255 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:09:04,257 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 16:09:04,257 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:14:04,428 - INFO - 
+============================================================
+2026-04-05 16:14:04,450 - INFO - 🔄 CYCLE 13 - 2026-04-05 16:14:04
+2026-04-05 16:14:04,450 - INFO - ============================================================
+2026-04-05 16:14:04,451 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:14:06,630 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:14:12,698 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:14:12,745 - INFO -    1. YFI: 1.56% (✅ TRADABLE)
+2026-04-05 16:14:12,745 - INFO -       Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:14:12,745 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.47
+2026-04-05 16:14:12,746 - INFO -    2. UNI: -0.43% (⏳ MONITORING)
+2026-04-05 16:14:12,746 - INFO -       Binance: $3.0810, Gemini: $3.0677
+2026-04-05 16:14:12,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.13
+2026-04-05 16:14:12,746 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:14:12,746 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:14:12,746 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:14:12,746 - INFO -    4. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 16:14:12,746 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 16:14:12,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:14:12,746 - INFO -    5. DOT: 0.25% (⏳ MONITORING)
+2026-04-05 16:14:12,746 - INFO -       Binance: $1.2280, Gemini: $1.2311
+2026-04-05 16:14:12,746 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 16:14:12,747 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:14:12,747 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.56% spread
+2026-04-05 16:14:12,747 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:14:12,747 - INFO -    Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:14:12,747 - INFO -    Profit per $30: $0.47
+2026-04-05 16:14:12,747 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:14:12,835 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 16:14:12,835 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:19:12,907 - INFO - 
+============================================================
+2026-04-05 16:19:12,921 - INFO - 🔄 CYCLE 14 - 2026-04-05 16:19:12
+2026-04-05 16:19:12,922 - INFO - ============================================================
+2026-04-05 16:19:12,922 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:19:14,135 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:19:19,803 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:19:19,803 - INFO -    1. YFI: 1.86% (✅ TRADABLE)
+2026-04-05 16:19:19,803 - INFO -       Binance: $2414.0000, Gemini: $2458.8200
+2026-04-05 16:19:19,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.56
+2026-04-05 16:19:19,803 - INFO -    2. UNI: -0.43% (⏳ MONITORING)
+2026-04-05 16:19:19,803 - INFO -       Binance: $3.0810, Gemini: $3.0677
+2026-04-05 16:19:19,803 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.13
+2026-04-05 16:19:19,803 - INFO -    3. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 16:19:19,803 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 16:19:19,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 16:19:19,803 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:19:19,803 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:19:19,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:19:19,803 - INFO -    5. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 16:19:19,803 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 16:19:19,803 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:19:19,803 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:19:19,803 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.86% spread
+2026-04-05 16:19:19,803 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:19:19,803 - INFO -    Binance: $2414.0000, Gemini: $2458.8200
+2026-04-05 16:19:19,803 - INFO -    Profit per $30: $0.56
+2026-04-05 16:19:19,803 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:19:19,804 - INFO - 📊 Average spread: 0.39% across 10 pairs
+2026-04-05 16:19:19,804 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:24:19,813 - INFO - 
+============================================================
+2026-04-05 16:24:19,814 - INFO - 🔄 CYCLE 15 - 2026-04-05 16:24:19
+2026-04-05 16:24:19,814 - INFO - ============================================================
+2026-04-05 16:24:19,814 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:24:20,980 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:24:26,772 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:24:26,772 - INFO -    1. YFI: 1.73% (✅ TRADABLE)
+2026-04-05 16:24:26,772 - INFO -       Binance: $2417.0000, Gemini: $2458.8200
+2026-04-05 16:24:26,772 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.52
+2026-04-05 16:24:26,772 - INFO -    2. UNI: -0.43% (⏳ MONITORING)
+2026-04-05 16:24:26,772 - INFO -       Binance: $3.0810, Gemini: $3.0677
+2026-04-05 16:24:26,772 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.13
+2026-04-05 16:24:26,772 - INFO -    3. COMP: -0.36% (⏳ MONITORING)
+2026-04-05 16:24:26,772 - INFO -       Binance: $16.6300, Gemini: $16.5700
+2026-04-05 16:24:26,772 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 16:24:26,772 - INFO -    4. DOT: 0.33% (⏳ MONITORING)
+2026-04-05 16:24:26,772 - INFO -       Binance: $1.2270, Gemini: $1.2311
+2026-04-05 16:24:26,772 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:24:26,772 - INFO -    5. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 16:24:26,772 - INFO -       Binance: $0.3420, Gemini: $0.3409
+2026-04-05 16:24:26,772 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 16:24:26,772 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:24:26,772 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.73% spread
+2026-04-05 16:24:26,772 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:24:26,772 - INFO -    Binance: $2417.0000, Gemini: $2458.8200
+2026-04-05 16:24:26,772 - INFO -    Profit per $30: $0.52
+2026-04-05 16:24:26,772 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:24:26,772 - INFO - 📊 Average spread: 0.40% across 10 pairs
+2026-04-05 16:24:26,772 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:29:26,837 - INFO - 
+============================================================
+2026-04-05 16:29:26,922 - INFO - 🔄 CYCLE 16 - 2026-04-05 16:29:26
+2026-04-05 16:29:26,922 - INFO - ============================================================
+2026-04-05 16:29:26,924 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:29:28,633 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:29:34,824 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:29:34,854 - INFO -    1. YFI: 1.65% (✅ TRADABLE)
+2026-04-05 16:29:34,854 - INFO -       Binance: $2419.0000, Gemini: $2458.8200
+2026-04-05 16:29:34,854 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.49
+2026-04-05 16:29:34,854 - INFO -    2. UNI: -0.46% (⏳ MONITORING)
+2026-04-05 16:29:34,854 - INFO -       Binance: $3.0820, Gemini: $3.0677
+2026-04-05 16:29:34,854 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.14
+2026-04-05 16:29:34,854 - INFO -    3. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 16:29:34,855 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 16:29:34,855 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 16:29:34,855 - INFO -    4. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 16:29:34,855 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 16:29:34,855 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:29:34,855 - INFO -    5. XTZ: -0.26% (⏳ MONITORING)
+2026-04-05 16:29:34,855 - INFO -       Binance: $0.3418, Gemini: $0.3409
+2026-04-05 16:29:34,855 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:29:34,855 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 16:29:34,899 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.65% spread
+2026-04-05 16:29:34,899 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:29:34,899 - INFO -    Binance: $2419.0000, Gemini: $2458.8200
+2026-04-05 16:29:34,899 - INFO -    Profit per $30: $0.49
+2026-04-05 16:29:34,899 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:29:34,921 - INFO - 📊 Average spread: 0.36% across 10 pairs
+2026-04-05 16:29:34,922 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:34:34,897 - INFO - 
+============================================================
+2026-04-05 16:34:34,904 - INFO - 🔄 CYCLE 17 - 2026-04-05 16:34:34
+2026-04-05 16:34:34,904 - INFO - ============================================================
+2026-04-05 16:34:34,906 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:34:36,088 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:34:41,820 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:34:41,820 - INFO -    1. YFI: 1.69% (✅ TRADABLE)
+2026-04-05 16:34:41,820 - INFO -       Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 16:34:41,820 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.51
+2026-04-05 16:34:41,820 - INFO -    2. MANA: -0.52% (✅ TRADABLE)
+2026-04-05 16:34:41,820 - INFO -       Binance: $0.0853, Gemini: $0.0849
+2026-04-05 16:34:41,820 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 16:34:41,820 - INFO -    3. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 16:34:41,820 - INFO -       Binance: $1.2260, Gemini: $1.2311
+2026-04-05 16:34:41,820 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 16:34:41,820 - INFO -    4. UNI: -0.40% (⏳ MONITORING)
+2026-04-05 16:34:41,821 - INFO -       Binance: $3.0800, Gemini: $3.0677
+2026-04-05 16:34:41,821 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 16:34:41,821 - INFO -    5. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:34:41,821 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:34:41,821 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:34:41,821 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 16:34:41,821 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.69% spread
+2026-04-05 16:34:41,821 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:34:41,821 - INFO -    Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 16:34:41,821 - INFO -    Profit per $30: $0.51
+2026-04-05 16:34:41,821 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:34:41,821 - INFO - 📊 Average spread: 0.39% across 10 pairs
+2026-04-05 16:34:41,821 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:39:41,895 - INFO - 
+============================================================
+2026-04-05 16:39:41,895 - INFO - 🔄 CYCLE 18 - 2026-04-05 16:39:41
+2026-04-05 16:39:41,896 - INFO - ============================================================
+2026-04-05 16:39:41,896 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:39:43,115 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:39:49,159 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:39:49,160 - INFO -    1. YFI: 1.77% (✅ TRADABLE)
+2026-04-05 16:39:49,160 - INFO -       Binance: $2416.0000, Gemini: $2458.8200
+2026-04-05 16:39:49,160 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.53
+2026-04-05 16:39:49,160 - INFO -    2. DOT: 0.56% (✅ TRADABLE)
+2026-04-05 16:39:49,160 - INFO -       Binance: $1.2240, Gemini: $1.2309
+2026-04-05 16:39:49,160 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.17
+2026-04-05 16:39:49,160 - INFO -    3. UNI: -0.33% (⏳ MONITORING)
+2026-04-05 16:39:49,160 - INFO -       Binance: $3.0780, Gemini: $3.0677
+2026-04-05 16:39:49,160 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 16:39:49,160 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:39:49,160 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:39:49,160 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:39:49,161 - INFO -    5. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 16:39:49,161 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 16:39:49,161 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 16:39:49,161 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 16:39:49,161 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.77% spread
+2026-04-05 16:39:49,161 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:39:49,161 - INFO -    Binance: $2416.0000, Gemini: $2458.8200
+2026-04-05 16:39:49,161 - INFO -    Profit per $30: $0.53
+2026-04-05 16:39:49,161 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:39:49,162 - INFO - 📊 Average spread: 0.39% across 10 pairs
+2026-04-05 16:39:49,162 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:44:49,280 - INFO - 
+============================================================
+2026-04-05 16:44:49,281 - INFO - 🔄 CYCLE 19 - 2026-04-05 16:44:49
+2026-04-05 16:44:49,281 - INFO - ============================================================
+2026-04-05 16:44:49,282 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:44:50,430 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:44:56,260 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:44:56,260 - INFO -    1. YFI: 1.69% (✅ TRADABLE)
+2026-04-05 16:44:56,260 - INFO -       Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 16:44:56,260 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.51
+2026-04-05 16:44:56,260 - INFO -    2. MANA: -0.86% (✅ TRADABLE)
+2026-04-05 16:44:56,260 - INFO -       Binance: $0.0856, Gemini: $0.0849
+2026-04-05 16:44:56,260 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.26
+2026-04-05 16:44:56,260 - INFO -    3. DOT: 0.40% (⏳ MONITORING)
+2026-04-05 16:44:56,260 - INFO -       Binance: $1.2260, Gemini: $1.2309
+2026-04-05 16:44:56,260 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 16:44:56,260 - INFO -    4. UNI: -0.37% (⏳ MONITORING)
+2026-04-05 16:44:56,260 - INFO -       Binance: $3.0790, Gemini: $3.0677
+2026-04-05 16:44:56,260 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 16:44:56,260 - INFO -    5. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:44:56,260 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:44:56,260 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:44:56,260 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 16:44:56,260 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.69% spread
+2026-04-05 16:44:56,260 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:44:56,260 - INFO -    Binance: $2418.0000, Gemini: $2458.8200
+2026-04-05 16:44:56,260 - INFO -    Profit per $30: $0.51
+2026-04-05 16:44:56,260 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:44:56,261 - INFO - 📊 Average spread: 0.46% across 10 pairs
+2026-04-05 16:44:56,261 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:49:56,296 - INFO - 
+============================================================
+2026-04-05 16:49:56,296 - INFO - 🔄 CYCLE 20 - 2026-04-05 16:49:56
+2026-04-05 16:49:56,296 - INFO - ============================================================
+2026-04-05 16:49:56,296 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:49:57,501 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:50:04,055 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:50:04,055 - INFO -    1. YFI: 1.56% (✅ TRADABLE)
+2026-04-05 16:50:04,056 - INFO -       Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:50:04,056 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.47
+2026-04-05 16:50:04,056 - INFO -    2. MANA: -0.86% (✅ TRADABLE)
+2026-04-05 16:50:04,056 - INFO -       Binance: $0.0856, Gemini: $0.0849
+2026-04-05 16:50:04,056 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.26
+2026-04-05 16:50:04,056 - INFO -    3. UNI: -0.40% (⏳ MONITORING)
+2026-04-05 16:50:04,056 - INFO -       Binance: $3.0800, Gemini: $3.0677
+2026-04-05 16:50:04,056 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 16:50:04,056 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:50:04,056 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:50:04,056 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:50:04,057 - INFO -    5. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 16:50:04,057 - INFO -       Binance: $1.2270, Gemini: $1.2309
+2026-04-05 16:50:04,057 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:50:04,057 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 16:50:04,057 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.56% spread
+2026-04-05 16:50:04,057 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:50:04,057 - INFO -    Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 16:50:04,057 - INFO -    Profit per $30: $0.47
+2026-04-05 16:50:04,057 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:50:04,058 - INFO - 📊 Average spread: 0.43% across 10 pairs
+2026-04-05 16:50:04,058 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 16:55:04,151 - INFO - 
+============================================================
+2026-04-05 16:55:04,152 - INFO - 🔄 CYCLE 21 - 2026-04-05 16:55:04
+2026-04-05 16:55:04,152 - INFO - ============================================================
+2026-04-05 16:55:04,152 - INFO - 📊 Getting Binance prices...
+2026-04-05 16:55:05,302 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 16:55:11,560 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 16:55:11,561 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 16:55:11,561 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 16:55:11,561 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 16:55:11,561 - INFO -    2. MANA: -1.10% (✅ TRADABLE)
+2026-04-05 16:55:11,561 - INFO -       Binance: $0.0858, Gemini: $0.0849
+2026-04-05 16:55:11,561 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.33
+2026-04-05 16:55:11,561 - INFO -    3. UNI: -0.43% (⏳ MONITORING)
+2026-04-05 16:55:11,561 - INFO -       Binance: $3.0810, Gemini: $3.0677
+2026-04-05 16:55:11,561 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.13
+2026-04-05 16:55:11,561 - INFO -    4. DOT: 0.40% (⏳ MONITORING)
+2026-04-05 16:55:11,561 - INFO -       Binance: $1.2260, Gemini: $1.2309
+2026-04-05 16:55:11,561 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 16:55:11,561 - INFO -    5. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 16:55:11,561 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 16:55:11,561 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 16:55:11,561 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 16:55:11,561 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 16:55:11,561 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 16:55:11,561 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 16:55:11,561 - INFO -    Profit per $30: $0.43
+2026-04-05 16:55:11,561 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 16:55:11,561 - INFO - 📊 Average spread: 0.42% across 10 pairs
+2026-04-05 16:55:11,561 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:00:11,712 - INFO - 
+============================================================
+2026-04-05 17:00:11,714 - INFO - 🔄 CYCLE 22 - 2026-04-05 17:00:11
+2026-04-05 17:00:11,714 - INFO - ============================================================
+2026-04-05 17:00:11,714 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:00:12,907 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:00:19,197 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:00:19,197 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 17:00:19,197 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:00:19,197 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 17:00:19,197 - INFO -    2. MANA: -1.21% (✅ TRADABLE)
+2026-04-05 17:00:19,197 - INFO -       Binance: $0.0859, Gemini: $0.0849
+2026-04-05 17:00:19,197 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.36
+2026-04-05 17:00:19,197 - INFO -    3. UNI: -0.40% (⏳ MONITORING)
+2026-04-05 17:00:19,197 - INFO -       Binance: $3.0800, Gemini: $3.0677
+2026-04-05 17:00:19,198 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 17:00:19,198 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 17:00:19,198 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 17:00:19,198 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:00:19,198 - INFO -    5. DOT: 0.24% (⏳ MONITORING)
+2026-04-05 17:00:19,198 - INFO -       Binance: $1.2280, Gemini: $1.2309
+2026-04-05 17:00:19,198 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 17:00:19,198 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:00:19,198 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 17:00:19,198 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:00:19,198 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:00:19,198 - INFO -    Profit per $30: $0.43
+2026-04-05 17:00:19,198 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:00:19,199 - INFO - 📊 Average spread: 0.41% across 10 pairs
+2026-04-05 17:00:19,199 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:05:19,346 - INFO - 
+============================================================
+2026-04-05 17:05:19,348 - INFO - 🔄 CYCLE 23 - 2026-04-05 17:05:19
+2026-04-05 17:05:19,348 - INFO - ============================================================
+2026-04-05 17:05:19,348 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:05:20,555 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:05:26,882 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:05:26,882 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 17:05:26,882 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:05:26,882 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 17:05:26,883 - INFO -    2. MANA: -1.10% (✅ TRADABLE)
+2026-04-05 17:05:26,883 - INFO -       Binance: $0.0858, Gemini: $0.0849
+2026-04-05 17:05:26,883 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.33
+2026-04-05 17:05:26,883 - INFO -    3. UNI: -0.37% (⏳ MONITORING)
+2026-04-05 17:05:26,883 - INFO -       Binance: $3.0790, Gemini: $3.0677
+2026-04-05 17:05:26,883 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 17:05:26,883 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 17:05:26,883 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 17:05:26,883 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:05:26,883 - INFO -    5. ATOM: -0.30% (⏳ MONITORING)
+2026-04-05 17:05:26,883 - INFO -       Binance: $1.6890, Gemini: $1.6840
+2026-04-05 17:05:26,883 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.09
+2026-04-05 17:05:26,883 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:05:26,884 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 17:05:26,884 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:05:26,884 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:05:26,884 - INFO -    Profit per $30: $0.43
+2026-04-05 17:05:26,884 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:05:26,886 - INFO - 📊 Average spread: 0.43% across 10 pairs
+2026-04-05 17:05:26,886 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:10:27,054 - INFO - 
+============================================================
+2026-04-05 17:10:27,054 - INFO - 🔄 CYCLE 24 - 2026-04-05 17:10:27
+2026-04-05 17:10:27,054 - INFO - ============================================================
+2026-04-05 17:10:27,055 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:10:28,439 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:10:35,024 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:10:35,024 - INFO -    1. YFI: 1.39% (✅ TRADABLE)
+2026-04-05 17:10:35,024 - INFO -       Binance: $2425.0000, Gemini: $2458.8200
+2026-04-05 17:10:35,024 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.42
+2026-04-05 17:10:35,024 - INFO -    2. MANA: -0.75% (✅ TRADABLE)
+2026-04-05 17:10:35,024 - INFO -       Binance: $0.0855, Gemini: $0.0849
+2026-04-05 17:10:35,025 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.22
+2026-04-05 17:10:35,025 - INFO -    3. UNI: -0.40% (⏳ MONITORING)
+2026-04-05 17:10:35,025 - INFO -       Binance: $3.0800, Gemini: $3.0677
+2026-04-05 17:10:35,025 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 17:10:35,025 - INFO -    4. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 17:10:35,025 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 17:10:35,025 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:10:35,025 - INFO -    5. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 17:10:35,025 - INFO -       Binance: $1.2270, Gemini: $1.2309
+2026-04-05 17:10:35,025 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:10:35,025 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:10:35,025 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.39% spread
+2026-04-05 17:10:35,026 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:10:35,026 - INFO -    Binance: $2425.0000, Gemini: $2458.8200
+2026-04-05 17:10:35,026 - INFO -    Profit per $30: $0.42
+2026-04-05 17:10:35,026 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:10:35,026 - INFO - 📊 Average spread: 0.37% across 10 pairs
+2026-04-05 17:10:35,027 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:15:35,177 - INFO - 
+============================================================
+2026-04-05 17:15:35,178 - INFO - 🔄 CYCLE 25 - 2026-04-05 17:15:35
+2026-04-05 17:15:35,178 - INFO - ============================================================
+2026-04-05 17:15:35,179 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:15:36,381 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:15:42,954 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:15:42,954 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 17:15:42,954 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 17:15:42,954 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 17:15:42,954 - INFO -    2. MANA: -0.75% (✅ TRADABLE)
+2026-04-05 17:15:42,954 - INFO -       Binance: $0.0855, Gemini: $0.0849
+2026-04-05 17:15:42,954 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.22
+2026-04-05 17:15:42,954 - INFO -    3. FIL: 0.58% (✅ TRADABLE)
+2026-04-05 17:15:42,955 - INFO -       Binance: $0.8170, Gemini: $0.8217
+2026-04-05 17:15:42,955 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.17
+2026-04-05 17:15:42,955 - INFO -    4. UNI: -0.37% (⏳ MONITORING)
+2026-04-05 17:15:42,955 - INFO -       Binance: $3.0790, Gemini: $3.0677
+2026-04-05 17:15:42,955 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 17:15:42,955 - INFO -    5. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 17:15:42,955 - INFO -       Binance: $1.2270, Gemini: $1.2309
+2026-04-05 17:15:42,955 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:15:42,955 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 17:15:42,955 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 17:15:42,955 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:15:42,956 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 17:15:42,956 - INFO -    Profit per $30: $0.46
+2026-04-05 17:15:42,956 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:15:42,956 - INFO - 📊 Average spread: 0.41% across 10 pairs
+2026-04-05 17:15:42,956 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:20:42,993 - INFO - 
+============================================================
+2026-04-05 17:20:42,995 - INFO - 🔄 CYCLE 26 - 2026-04-05 17:20:42
+2026-04-05 17:20:42,995 - INFO - ============================================================
+2026-04-05 17:20:42,995 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:20:44,198 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:20:50,653 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:20:50,654 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 17:20:50,654 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:20:50,654 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 17:20:50,654 - INFO -    2. MANA: -0.75% (✅ TRADABLE)
+2026-04-05 17:20:50,654 - INFO -       Binance: $0.0855, Gemini: $0.0849
+2026-04-05 17:20:50,654 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.22
+2026-04-05 17:20:50,654 - INFO -    3. FIL: 0.58% (✅ TRADABLE)
+2026-04-05 17:20:50,654 - INFO -       Binance: $0.8170, Gemini: $0.8217
+2026-04-05 17:20:50,654 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.17
+2026-04-05 17:20:50,654 - INFO -    4. DOT: 0.48% (⏳ MONITORING)
+2026-04-05 17:20:50,654 - INFO -       Binance: $1.2250, Gemini: $1.2309
+2026-04-05 17:20:50,654 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.14
+2026-04-05 17:20:50,654 - INFO -    5. UNI: -0.20% (⏳ MONITORING)
+2026-04-05 17:20:50,654 - INFO -       Binance: $3.0740, Gemini: $3.0677
+2026-04-05 17:20:50,654 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.06
+2026-04-05 17:20:50,654 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 17:20:50,655 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 17:20:50,655 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:20:50,655 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:20:50,655 - INFO -    Profit per $30: $0.43
+2026-04-05 17:20:50,655 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:20:50,656 - INFO - 📊 Average spread: 0.40% across 10 pairs
+2026-04-05 17:20:50,656 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:25:50,746 - INFO - 
+============================================================
+2026-04-05 17:25:50,746 - INFO - 🔄 CYCLE 27 - 2026-04-05 17:25:50
+2026-04-05 17:25:50,747 - INFO - ============================================================
+2026-04-05 17:25:50,747 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:25:51,954 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:25:58,276 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:25:58,277 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 17:25:58,277 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:25:58,277 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 17:25:58,277 - INFO -    2. MANA: -0.75% (✅ TRADABLE)
+2026-04-05 17:25:58,277 - INFO -       Binance: $0.0855, Gemini: $0.0849
+2026-04-05 17:25:58,277 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.22
+2026-04-05 17:25:58,277 - INFO -    3. FIL: 0.58% (✅ TRADABLE)
+2026-04-05 17:25:58,277 - INFO -       Binance: $0.8170, Gemini: $0.8217
+2026-04-05 17:25:58,277 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.17
+2026-04-05 17:25:58,278 - INFO -    4. DOT: 0.40% (⏳ MONITORING)
+2026-04-05 17:25:58,278 - INFO -       Binance: $1.2260, Gemini: $1.2309
+2026-04-05 17:25:58,278 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 17:25:58,278 - INFO -    5. UNI: -0.17% (⏳ MONITORING)
+2026-04-05 17:25:58,278 - INFO -       Binance: $3.0730, Gemini: $3.0677
+2026-04-05 17:25:58,278 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 17:25:58,278 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 17:25:58,278 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 17:25:58,278 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:25:58,278 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:25:58,278 - INFO -    Profit per $30: $0.43
+2026-04-05 17:25:58,278 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:25:58,279 - INFO - 📊 Average spread: 0.38% across 10 pairs
+2026-04-05 17:25:58,279 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:30:58,404 - INFO - 
+============================================================
+2026-04-05 17:30:58,404 - INFO - 🔄 CYCLE 28 - 2026-04-05 17:30:58
+2026-04-05 17:30:58,404 - INFO - ============================================================
+2026-04-05 17:30:58,404 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:30:59,598 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:31:06,148 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:31:06,149 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 17:31:06,149 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:31:06,149 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 17:31:06,149 - INFO -    2. MANA: -0.63% (✅ TRADABLE)
+2026-04-05 17:31:06,149 - INFO -       Binance: $0.0854, Gemini: $0.0849
+2026-04-05 17:31:06,149 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.19
+2026-04-05 17:31:06,149 - INFO -    3. FIL: 0.45% (⏳ MONITORING)
+2026-04-05 17:31:06,149 - INFO -       Binance: $0.8180, Gemini: $0.8217
+2026-04-05 17:31:06,149 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.14
+2026-04-05 17:31:06,149 - INFO -    4. DOT: 0.40% (⏳ MONITORING)
+2026-04-05 17:31:06,149 - INFO -       Binance: $1.2260, Gemini: $1.2309
+2026-04-05 17:31:06,150 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 17:31:06,150 - INFO -    5. UNI: -0.24% (⏳ MONITORING)
+2026-04-05 17:31:06,150 - INFO -       Binance: $3.0750, Gemini: $3.0677
+2026-04-05 17:31:06,150 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 17:31:06,150 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:31:06,150 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 17:31:06,150 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:31:06,150 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 17:31:06,150 - INFO -    Profit per $30: $0.43
+2026-04-05 17:31:06,150 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:31:06,151 - INFO - 📊 Average spread: 0.37% across 10 pairs
+2026-04-05 17:31:06,151 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:36:06,301 - INFO - 
+============================================================
+2026-04-05 17:36:06,302 - INFO - 🔄 CYCLE 29 - 2026-04-05 17:36:06
+2026-04-05 17:36:06,302 - INFO - ============================================================
+2026-04-05 17:36:06,302 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:36:07,498 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:36:13,847 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:36:13,847 - INFO -    1. YFI: 1.23% (✅ TRADABLE)
+2026-04-05 17:36:13,847 - INFO -       Binance: $2429.0000, Gemini: $2458.8200
+2026-04-05 17:36:13,847 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.37
+2026-04-05 17:36:13,847 - INFO -    2. MANA: -0.63% (✅ TRADABLE)
+2026-04-05 17:36:13,847 - INFO -       Binance: $0.0854, Gemini: $0.0849
+2026-04-05 17:36:13,847 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.19
+2026-04-05 17:36:13,847 - INFO -    3. FIL: 0.33% (⏳ MONITORING)
+2026-04-05 17:36:13,847 - INFO -       Binance: $0.8190, Gemini: $0.8217
+2026-04-05 17:36:13,847 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:36:13,847 - INFO -    4. UNI: -0.27% (⏳ MONITORING)
+2026-04-05 17:36:13,847 - INFO -       Binance: $3.0760, Gemini: $3.0677
+2026-04-05 17:36:13,847 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 17:36:13,847 - INFO -    5. ATOM: -0.24% (⏳ MONITORING)
+2026-04-05 17:36:13,847 - INFO -       Binance: $1.6880, Gemini: $1.6840
+2026-04-05 17:36:13,847 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 17:36:13,848 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:36:13,848 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.23% spread
+2026-04-05 17:36:13,848 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:36:13,848 - INFO -    Binance: $2429.0000, Gemini: $2458.8200
+2026-04-05 17:36:13,848 - INFO -    Profit per $30: $0.37
+2026-04-05 17:36:13,848 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:36:13,848 - INFO - 📊 Average spread: 0.35% across 10 pairs
+2026-04-05 17:36:13,848 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:41:13,998 - INFO - 
+============================================================
+2026-04-05 17:41:13,998 - INFO - 🔄 CYCLE 30 - 2026-04-05 17:41:13
+2026-04-05 17:41:13,998 - INFO - ============================================================
+2026-04-05 17:41:13,998 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:41:15,220 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:41:21,724 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:41:21,724 - INFO -    1. YFI: 1.14% (✅ TRADABLE)
+2026-04-05 17:41:21,724 - INFO -       Binance: $2431.0000, Gemini: $2458.8200
+2026-04-05 17:41:21,725 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.34
+2026-04-05 17:41:21,725 - INFO -    2. MANA: -0.86% (✅ TRADABLE)
+2026-04-05 17:41:21,725 - INFO -       Binance: $0.0856, Gemini: $0.0849
+2026-04-05 17:41:21,725 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.26
+2026-04-05 17:41:21,725 - INFO -    3. ATOM: -0.30% (⏳ MONITORING)
+2026-04-05 17:41:21,725 - INFO -       Binance: $1.6890, Gemini: $1.6840
+2026-04-05 17:41:21,725 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.09
+2026-04-05 17:41:21,725 - INFO -    4. AAVE: 0.24% (⏳ MONITORING)
+2026-04-05 17:41:21,725 - INFO -       Binance: $92.8600, Gemini: $93.0802
+2026-04-05 17:41:21,725 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 17:41:21,725 - INFO -    5. XTZ: -0.23% (⏳ MONITORING)
+2026-04-05 17:41:21,726 - INFO -       Binance: $0.3417, Gemini: $0.3409
+2026-04-05 17:41:21,726 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 17:41:21,726 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:41:21,726 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.14% spread
+2026-04-05 17:41:21,726 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:41:21,726 - INFO -    Binance: $2431.0000, Gemini: $2458.8200
+2026-04-05 17:41:21,726 - INFO -    Profit per $30: $0.34
+2026-04-05 17:41:21,726 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:41:21,727 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 17:41:21,727 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:46:21,796 - INFO - 
+============================================================
+2026-04-05 17:46:21,797 - INFO - 🔄 CYCLE 31 - 2026-04-05 17:46:21
+2026-04-05 17:46:21,797 - INFO - ============================================================
+2026-04-05 17:46:21,797 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:46:23,014 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:46:29,461 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:46:29,461 - INFO -    1. YFI: 1.14% (✅ TRADABLE)
+2026-04-05 17:46:29,462 - INFO -       Binance: $2431.0000, Gemini: $2458.8200
+2026-04-05 17:46:29,462 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.34
+2026-04-05 17:46:29,462 - INFO -    2. MANA: -0.86% (✅ TRADABLE)
+2026-04-05 17:46:29,462 - INFO -       Binance: $0.0856, Gemini: $0.0849
+2026-04-05 17:46:29,462 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.26
+2026-04-05 17:46:29,462 - INFO -    3. AAVE: 0.25% (⏳ MONITORING)
+2026-04-05 17:46:29,462 - INFO -       Binance: $92.8500, Gemini: $93.0802
+2026-04-05 17:46:29,462 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 17:46:29,462 - INFO -    4. COMP: 0.24% (⏳ MONITORING)
+2026-04-05 17:46:29,462 - INFO -       Binance: $16.5800, Gemini: $16.6200
+2026-04-05 17:46:29,462 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 17:46:29,462 - INFO -    5. ATOM: -0.24% (⏳ MONITORING)
+2026-04-05 17:46:29,463 - INFO -       Binance: $1.6880, Gemini: $1.6840
+2026-04-05 17:46:29,463 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 17:46:29,463 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:46:29,463 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.14% spread
+2026-04-05 17:46:29,463 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:46:29,463 - INFO -    Binance: $2431.0000, Gemini: $2458.8200
+2026-04-05 17:46:29,463 - INFO -    Profit per $30: $0.34
+2026-04-05 17:46:29,463 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:46:29,464 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 17:46:29,464 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:51:29,490 - INFO - 
+============================================================
+2026-04-05 17:51:29,491 - INFO - 🔄 CYCLE 32 - 2026-04-05 17:51:29
+2026-04-05 17:51:29,491 - INFO - ============================================================
+2026-04-05 17:51:29,491 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:51:30,705 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:51:36,435 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:51:36,435 - INFO -    1. YFI: 1.31% (✅ TRADABLE)
+2026-04-05 17:51:36,435 - INFO -       Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 17:51:36,435 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.39
+2026-04-05 17:51:36,435 - INFO -    2. MANA: -0.63% (✅ TRADABLE)
+2026-04-05 17:51:36,435 - INFO -       Binance: $0.0854, Gemini: $0.0849
+2026-04-05 17:51:36,435 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.19
+2026-04-05 17:51:36,435 - INFO -    3. DOT: 0.36% (⏳ MONITORING)
+2026-04-05 17:51:36,435 - INFO -       Binance: $1.2260, Gemini: $1.2304
+2026-04-05 17:51:36,435 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 17:51:36,435 - INFO -    4. AVAX: 0.32% (⏳ MONITORING)
+2026-04-05 17:51:36,435 - INFO -       Binance: $8.8200, Gemini: $8.8480
+2026-04-05 17:51:36,435 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 17:51:36,435 - INFO -    5. UNI: 0.23% (⏳ MONITORING)
+2026-04-05 17:51:36,436 - INFO -       Binance: $3.0730, Gemini: $3.0800
+2026-04-05 17:51:36,436 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 17:51:36,436 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 17:51:36,436 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.31% spread
+2026-04-05 17:51:36,436 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:51:36,436 - INFO -    Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 17:51:36,436 - INFO -    Profit per $30: $0.39
+2026-04-05 17:51:36,436 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:51:36,437 - INFO - 📊 Average spread: 0.35% across 10 pairs
+2026-04-05 17:51:36,437 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 17:56:36,467 - INFO - 
+============================================================
+2026-04-05 17:56:36,469 - INFO - 🔄 CYCLE 33 - 2026-04-05 17:56:36
+2026-04-05 17:56:36,469 - INFO - ============================================================
+2026-04-05 17:56:36,469 - INFO - 📊 Getting Binance prices...
+2026-04-05 17:56:37,676 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 17:56:43,523 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 17:56:43,524 - INFO -    1. YFI: 1.31% (✅ TRADABLE)
+2026-04-05 17:56:43,524 - INFO -       Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 17:56:43,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.39
+2026-04-05 17:56:43,524 - INFO -    2. DOT: 0.44% (⏳ MONITORING)
+2026-04-05 17:56:43,524 - INFO -       Binance: $1.2250, Gemini: $1.2304
+2026-04-05 17:56:43,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 17:56:43,524 - INFO -    3. AVAX: 0.43% (⏳ MONITORING)
+2026-04-05 17:56:43,524 - INFO -       Binance: $8.8100, Gemini: $8.8480
+2026-04-05 17:56:43,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 17:56:43,524 - INFO -    4. MANA: -0.40% (⏳ MONITORING)
+2026-04-05 17:56:43,524 - INFO -       Binance: $0.0852, Gemini: $0.0849
+2026-04-05 17:56:43,525 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 17:56:43,525 - INFO -    5. UNI: 0.26% (⏳ MONITORING)
+2026-04-05 17:56:43,525 - INFO -       Binance: $3.0720, Gemini: $3.0800
+2026-04-05 17:56:43,525 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 17:56:43,525 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 17:56:43,525 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.31% spread
+2026-04-05 17:56:43,525 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 17:56:43,525 - INFO -    Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 17:56:43,525 - INFO -    Profit per $30: $0.39
+2026-04-05 17:56:43,525 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 17:56:43,526 - INFO - 📊 Average spread: 0.34% across 10 pairs
+2026-04-05 17:56:43,526 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:01:43,599 - INFO - 
+============================================================
+2026-04-05 18:01:43,599 - INFO - 🔄 CYCLE 34 - 2026-04-05 18:01:43
+2026-04-05 18:01:43,599 - INFO - ============================================================
+2026-04-05 18:01:43,599 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:01:44,863 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:01:51,296 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:01:51,296 - INFO -    1. YFI: 1.65% (✅ TRADABLE)
+2026-04-05 18:01:51,296 - INFO -       Binance: $2419.0000, Gemini: $2458.8200
+2026-04-05 18:01:51,296 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.49
+2026-04-05 18:01:51,296 - INFO -    2. AVAX: 0.43% (⏳ MONITORING)
+2026-04-05 18:01:51,296 - INFO -       Binance: $8.8100, Gemini: $8.8480
+2026-04-05 18:01:51,296 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 18:01:51,296 - INFO -    3. DOT: 0.36% (⏳ MONITORING)
+2026-04-05 18:01:51,296 - INFO -       Binance: $1.2260, Gemini: $1.2304
+2026-04-05 18:01:51,296 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 18:01:51,296 - INFO -    4. UNI: 0.33% (⏳ MONITORING)
+2026-04-05 18:01:51,296 - INFO -       Binance: $3.0700, Gemini: $3.0800
+2026-04-05 18:01:51,296 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:01:51,296 - INFO -    5. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 18:01:51,296 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 18:01:51,296 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 18:01:51,296 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:01:51,296 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.65% spread
+2026-04-05 18:01:51,296 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:01:51,296 - INFO -    Binance: $2419.0000, Gemini: $2458.8200
+2026-04-05 18:01:51,296 - INFO -    Profit per $30: $0.49
+2026-04-05 18:01:51,296 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:01:51,296 - INFO - 📊 Average spread: 0.37% across 10 pairs
+2026-04-05 18:01:51,296 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:06:51,382 - INFO - 
+============================================================
+2026-04-05 18:06:51,382 - INFO - 🔄 CYCLE 35 - 2026-04-05 18:06:51
+2026-04-05 18:06:51,382 - INFO - ============================================================
+2026-04-05 18:06:51,382 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:06:52,597 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:06:58,802 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:06:58,802 - INFO -    1. YFI: 1.60% (✅ TRADABLE)
+2026-04-05 18:06:58,802 - INFO -       Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 18:06:58,802 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.48
+2026-04-05 18:06:58,802 - INFO -    2. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 18:06:58,803 - INFO -       Binance: $1.2260, Gemini: $1.2299
+2026-04-05 18:06:58,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:06:58,803 - INFO -    3. UNI: 0.26% (⏳ MONITORING)
+2026-04-05 18:06:58,803 - INFO -       Binance: $3.0720, Gemini: $3.0800
+2026-04-05 18:06:58,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 18:06:58,803 - INFO -    4. AAVE: 0.19% (⏳ MONITORING)
+2026-04-05 18:06:58,803 - INFO -       Binance: $92.5300, Gemini: $92.7092
+2026-04-05 18:06:58,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 18:06:58,803 - INFO -    5. FIL: 0.11% (⏳ MONITORING)
+2026-04-05 18:06:58,803 - INFO -       Binance: $0.8170, Gemini: $0.8179
+2026-04-05 18:06:58,803 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.03
+2026-04-05 18:06:58,803 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:06:58,803 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.60% spread
+2026-04-05 18:06:58,803 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:06:58,803 - INFO -    Binance: $2420.0000, Gemini: $2458.8200
+2026-04-05 18:06:58,803 - INFO -    Profit per $30: $0.48
+2026-04-05 18:06:58,803 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:06:58,803 - INFO - 📊 Average spread: 0.27% across 10 pairs
+2026-04-05 18:06:58,804 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:11:58,884 - INFO - 
+============================================================
+2026-04-05 18:11:58,884 - INFO - 🔄 CYCLE 36 - 2026-04-05 18:11:58
+2026-04-05 18:11:58,884 - INFO - ============================================================
+2026-04-05 18:11:58,884 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:12:00,088 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:12:05,732 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:12:05,732 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 18:12:05,732 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:12:05,732 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 18:12:05,732 - INFO -    2. DOT: 0.24% (⏳ MONITORING)
+2026-04-05 18:12:05,732 - INFO -       Binance: $1.2270, Gemini: $1.2299
+2026-04-05 18:12:05,732 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 18:12:05,732 - INFO -    3. AAVE: 0.18% (⏳ MONITORING)
+2026-04-05 18:12:05,732 - INFO -       Binance: $92.5400, Gemini: $92.7092
+2026-04-05 18:12:05,732 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:12:05,732 - INFO -    4. MANA: -0.16% (⏳ MONITORING)
+2026-04-05 18:12:05,733 - INFO -       Binance: $0.0850, Gemini: $0.0849
+2026-04-05 18:12:05,733 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 18:12:05,733 - INFO -    5. UNI: 0.16% (⏳ MONITORING)
+2026-04-05 18:12:05,733 - INFO -       Binance: $3.0750, Gemini: $3.0800
+2026-04-05 18:12:05,733 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:12:05,733 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:12:05,733 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 18:12:05,733 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:12:05,733 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:12:05,733 - INFO -    Profit per $30: $0.46
+2026-04-05 18:12:05,733 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:12:05,733 - INFO - 📊 Average spread: 0.26% across 10 pairs
+2026-04-05 18:12:05,733 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:17:05,789 - INFO - 
+============================================================
+2026-04-05 18:17:05,789 - INFO - 🔄 CYCLE 37 - 2026-04-05 18:17:05
+2026-04-05 18:17:05,789 - INFO - ============================================================
+2026-04-05 18:17:05,789 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:17:06,974 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:17:12,789 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:17:12,789 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 18:17:12,789 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:17:12,789 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 18:17:12,789 - INFO -    2. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 18:17:12,789 - INFO -       Binance: $1.2260, Gemini: $1.2299
+2026-04-05 18:17:12,789 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:17:12,789 - INFO -    3. UNI: 0.26% (⏳ MONITORING)
+2026-04-05 18:17:12,789 - INFO -       Binance: $3.0720, Gemini: $3.0800
+2026-04-05 18:17:12,789 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 18:17:12,789 - INFO -    4. AAVE: 0.25% (⏳ MONITORING)
+2026-04-05 18:17:12,789 - INFO -       Binance: $92.4800, Gemini: $92.7092
+2026-04-05 18:17:12,789 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 18:17:12,789 - INFO -    5. AVAX: 0.18% (⏳ MONITORING)
+2026-04-05 18:17:12,789 - INFO -       Binance: $8.8000, Gemini: $8.8160
+2026-04-05 18:17:12,789 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:17:12,789 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:17:12,789 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 18:17:12,789 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:17:12,789 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:17:12,789 - INFO -    Profit per $30: $0.46
+2026-04-05 18:17:12,789 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:17:12,789 - INFO - 📊 Average spread: 0.31% across 10 pairs
+2026-04-05 18:17:12,789 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:22:12,801 - INFO - 
+============================================================
+2026-04-05 18:22:12,801 - INFO - 🔄 CYCLE 38 - 2026-04-05 18:22:12
+2026-04-05 18:22:12,801 - INFO - ============================================================
+2026-04-05 18:22:12,801 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:22:13,983 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:22:19,850 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:22:19,850 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 18:22:19,850 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:22:19,850 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 18:22:19,850 - INFO -    2. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 18:22:19,850 - INFO -       Binance: $1.2260, Gemini: $1.2299
+2026-04-05 18:22:19,850 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:22:19,851 - INFO -    3. UNI: 0.29% (⏳ MONITORING)
+2026-04-05 18:22:19,851 - INFO -       Binance: $3.0710, Gemini: $3.0800
+2026-04-05 18:22:19,851 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 18:22:19,851 - INFO -    4. COMP: 0.18% (⏳ MONITORING)
+2026-04-05 18:22:19,851 - INFO -       Binance: $16.5400, Gemini: $16.5700
+2026-04-05 18:22:19,851 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:22:19,851 - INFO -    5. MANA: -0.16% (⏳ MONITORING)
+2026-04-05 18:22:19,851 - INFO -       Binance: $0.0850, Gemini: $0.0849
+2026-04-05 18:22:19,851 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 18:22:19,851 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:22:19,851 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 18:22:19,851 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:22:19,852 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:22:19,852 - INFO -    Profit per $30: $0.46
+2026-04-05 18:22:19,852 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:22:19,852 - INFO - 📊 Average spread: 0.29% across 10 pairs
+2026-04-05 18:22:19,853 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:27:19,904 - INFO - 
+============================================================
+2026-04-05 18:27:19,905 - INFO - 🔄 CYCLE 39 - 2026-04-05 18:27:19
+2026-04-05 18:27:19,905 - INFO - ============================================================
+2026-04-05 18:27:19,905 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:27:21,059 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:27:26,844 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:27:26,844 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 18:27:26,844 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:27:26,844 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 18:27:26,844 - INFO -    2. UNI: 0.33% (⏳ MONITORING)
+2026-04-05 18:27:26,844 - INFO -       Binance: $3.0700, Gemini: $3.0800
+2026-04-05 18:27:26,844 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:27:26,844 - INFO -    3. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 18:27:26,844 - INFO -       Binance: $1.2260, Gemini: $1.2299
+2026-04-05 18:27:26,844 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:27:26,844 - INFO -    4. COMP: -0.24% (⏳ MONITORING)
+2026-04-05 18:27:26,844 - INFO -       Binance: $16.5400, Gemini: $16.5000
+2026-04-05 18:27:26,844 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 18:27:26,844 - INFO -    5. AVAX: 0.18% (⏳ MONITORING)
+2026-04-05 18:27:26,844 - INFO -       Binance: $8.8000, Gemini: $8.8160
+2026-04-05 18:27:26,844 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:27:26,844 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:27:26,844 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 18:27:26,844 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:27:26,844 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:27:26,844 - INFO -    Profit per $30: $0.43
+2026-04-05 18:27:26,844 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:27:26,844 - INFO - 📊 Average spread: 0.29% across 10 pairs
+2026-04-05 18:27:26,844 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:32:26,857 - INFO - 
+============================================================
+2026-04-05 18:32:26,859 - INFO - 🔄 CYCLE 40 - 2026-04-05 18:32:26
+2026-04-05 18:32:26,859 - INFO - ============================================================
+2026-04-05 18:32:26,859 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:32:28,063 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:32:33,953 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:32:33,953 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 18:32:33,954 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:32:33,954 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 18:32:33,954 - INFO -    2. DOT: 0.32% (⏳ MONITORING)
+2026-04-05 18:32:33,954 - INFO -       Binance: $1.2260, Gemini: $1.2299
+2026-04-05 18:32:33,954 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.10
+2026-04-05 18:32:33,954 - INFO -    3. UNI: 0.20% (⏳ MONITORING)
+2026-04-05 18:32:33,954 - INFO -       Binance: $3.0740, Gemini: $3.0800
+2026-04-05 18:32:33,954 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 18:32:33,954 - INFO -    4. MANA: -0.16% (⏳ MONITORING)
+2026-04-05 18:32:33,954 - INFO -       Binance: $0.0850, Gemini: $0.0849
+2026-04-05 18:32:33,954 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 18:32:33,954 - INFO -    5. COMP: 0.12% (⏳ MONITORING)
+2026-04-05 18:32:33,954 - INFO -       Binance: $16.5400, Gemini: $16.5600
+2026-04-05 18:32:33,954 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.04
+2026-04-05 18:32:33,954 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:32:33,954 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 18:32:33,954 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:32:33,955 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 18:32:33,955 - INFO -    Profit per $30: $0.46
+2026-04-05 18:32:33,955 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:32:33,955 - INFO - 📊 Average spread: 0.25% across 10 pairs
+2026-04-05 18:32:33,955 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:37:33,961 - INFO - 
+============================================================
+2026-04-05 18:37:33,962 - INFO - 🔄 CYCLE 41 - 2026-04-05 18:37:33
+2026-04-05 18:37:33,962 - INFO - ============================================================
+2026-04-05 18:37:33,962 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:37:35,146 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:37:40,885 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:37:40,885 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 18:37:40,885 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:37:40,885 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 18:37:40,885 - INFO -    2. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 18:37:40,885 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 18:37:40,885 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 18:37:40,885 - INFO -    3. FIL: -0.26% (⏳ MONITORING)
+2026-04-05 18:37:40,886 - INFO -       Binance: $0.8200, Gemini: $0.8179
+2026-04-05 18:37:40,886 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 18:37:40,886 - INFO -    4. DOT: 0.24% (⏳ MONITORING)
+2026-04-05 18:37:40,886 - INFO -       Binance: $1.2270, Gemini: $1.2299
+2026-04-05 18:37:40,886 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 18:37:40,886 - INFO -    5. UNI: 0.16% (⏳ MONITORING)
+2026-04-05 18:37:40,886 - INFO -       Binance: $3.0750, Gemini: $3.0800
+2026-04-05 18:37:40,886 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 18:37:40,886 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:37:40,886 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 18:37:40,886 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:37:40,886 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:37:40,887 - INFO -    Profit per $30: $0.43
+2026-04-05 18:37:40,887 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:37:40,887 - INFO - 📊 Average spread: 0.28% across 10 pairs
+2026-04-05 18:37:40,887 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:42:40,951 - INFO - 
+============================================================
+2026-04-05 18:42:40,951 - INFO - 🔄 CYCLE 42 - 2026-04-05 18:42:40
+2026-04-05 18:42:40,951 - INFO - ============================================================
+2026-04-05 18:42:40,951 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:42:43,319 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:42:49,247 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:42:49,247 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 18:42:49,248 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:42:49,248 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 18:42:49,248 - INFO -    2. MANA: -0.40% (⏳ MONITORING)
+2026-04-05 18:42:49,248 - INFO -       Binance: $0.0852, Gemini: $0.0849
+2026-04-05 18:42:49,248 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 18:42:49,248 - INFO -    3. FIL: -0.38% (⏳ MONITORING)
+2026-04-05 18:42:49,248 - INFO -       Binance: $0.8210, Gemini: $0.8179
+2026-04-05 18:42:49,248 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 18:42:49,248 - INFO -    4. COMP: 0.36% (⏳ MONITORING)
+2026-04-05 18:42:49,248 - INFO -       Binance: $16.5300, Gemini: $16.5900
+2026-04-05 18:42:49,248 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 18:42:49,249 - INFO -    5. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 18:42:49,249 - INFO -       Binance: $0.3420, Gemini: $0.3409
+2026-04-05 18:42:49,249 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 18:42:49,249 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:42:49,249 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 18:42:49,249 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:42:49,249 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:42:49,249 - INFO -    Profit per $30: $0.43
+2026-04-05 18:42:49,249 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:42:49,250 - INFO - 📊 Average spread: 0.35% across 10 pairs
+2026-04-05 18:42:49,250 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:47:49,303 - INFO - 
+============================================================
+2026-04-05 18:47:49,304 - INFO - 🔄 CYCLE 43 - 2026-04-05 18:47:49
+2026-04-05 18:47:49,304 - INFO - ============================================================
+2026-04-05 18:47:49,304 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:47:50,513 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:47:56,398 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:47:56,398 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 18:47:56,398 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:47:56,398 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 18:47:56,398 - INFO -    2. MANA: -0.52% (✅ TRADABLE)
+2026-04-05 18:47:56,399 - INFO -       Binance: $0.0853, Gemini: $0.0849
+2026-04-05 18:47:56,399 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 18:47:56,399 - INFO -    3. FIL: -0.38% (⏳ MONITORING)
+2026-04-05 18:47:56,399 - INFO -       Binance: $0.8210, Gemini: $0.8179
+2026-04-05 18:47:56,399 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 18:47:56,399 - INFO -    4. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 18:47:56,399 - INFO -       Binance: $0.3420, Gemini: $0.3409
+2026-04-05 18:47:56,399 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 18:47:56,399 - INFO -    5. COMP: 0.30% (⏳ MONITORING)
+2026-04-05 18:47:56,399 - INFO -       Binance: $16.5300, Gemini: $16.5800
+2026-04-05 18:47:56,399 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 18:47:56,399 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 18:47:56,400 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 18:47:56,400 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:47:56,400 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:47:56,400 - INFO -    Profit per $30: $0.43
+2026-04-05 18:47:56,400 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:47:56,400 - INFO - 📊 Average spread: 0.37% across 10 pairs
+2026-04-05 18:47:56,401 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:52:56,467 - INFO - 
+============================================================
+2026-04-05 18:52:56,467 - INFO - 🔄 CYCLE 44 - 2026-04-05 18:52:56
+2026-04-05 18:52:56,467 - INFO - ============================================================
+2026-04-05 18:52:56,468 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:52:57,672 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:53:03,911 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:53:03,911 - INFO -    1. YFI: 1.35% (✅ TRADABLE)
+2026-04-05 18:53:03,912 - INFO -       Binance: $2426.0000, Gemini: $2458.8200
+2026-04-05 18:53:03,912 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.41
+2026-04-05 18:53:03,912 - INFO -    2. DOT: 0.44% (⏳ MONITORING)
+2026-04-05 18:53:03,912 - INFO -       Binance: $1.2280, Gemini: $1.2334
+2026-04-05 18:53:03,912 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 18:53:03,912 - INFO -    3. XTZ: -0.44% (⏳ MONITORING)
+2026-04-05 18:53:03,912 - INFO -       Binance: $0.3424, Gemini: $0.3409
+2026-04-05 18:53:03,912 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.13
+2026-04-05 18:53:03,912 - INFO -    4. MANA: -0.40% (⏳ MONITORING)
+2026-04-05 18:53:03,912 - INFO -       Binance: $0.0852, Gemini: $0.0849
+2026-04-05 18:53:03,912 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 18:53:03,912 - INFO -    5. FIL: -0.38% (⏳ MONITORING)
+2026-04-05 18:53:03,913 - INFO -       Binance: $0.8210, Gemini: $0.8179
+2026-04-05 18:53:03,913 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 18:53:03,913 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 18:53:03,913 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.35% spread
+2026-04-05 18:53:03,913 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:53:03,913 - INFO -    Binance: $2426.0000, Gemini: $2458.8200
+2026-04-05 18:53:03,913 - INFO -    Profit per $30: $0.41
+2026-04-05 18:53:03,913 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:53:03,914 - INFO - 📊 Average spread: 0.36% across 10 pairs
+2026-04-05 18:53:03,914 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 18:58:03,961 - INFO - 
+============================================================
+2026-04-05 18:58:03,961 - INFO - 🔄 CYCLE 45 - 2026-04-05 18:58:03
+2026-04-05 18:58:03,962 - INFO - ============================================================
+2026-04-05 18:58:03,962 - INFO - 📊 Getting Binance prices...
+2026-04-05 18:58:05,142 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 18:58:10,921 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 18:58:10,921 - INFO -    1. YFI: 1.44% (✅ TRADABLE)
+2026-04-05 18:58:10,921 - INFO -       Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:58:10,921 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.43
+2026-04-05 18:58:10,921 - INFO -    2. DOT: 0.60% (✅ TRADABLE)
+2026-04-05 18:58:10,921 - INFO -       Binance: $1.2260, Gemini: $1.2334
+2026-04-05 18:58:10,921 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.18
+2026-04-05 18:58:10,921 - INFO -    3. FIL: -0.50% (⏳ MONITORING)
+2026-04-05 18:58:10,921 - INFO -       Binance: $0.8220, Gemini: $0.8179
+2026-04-05 18:58:10,921 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 18:58:10,921 - INFO -    4. XTZ: -0.47% (⏳ MONITORING)
+2026-04-05 18:58:10,921 - INFO -       Binance: $0.3425, Gemini: $0.3409
+2026-04-05 18:58:10,921 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.14
+2026-04-05 18:58:10,921 - INFO -    5. ATOM: -0.24% (⏳ MONITORING)
+2026-04-05 18:58:10,921 - INFO -       Binance: $1.6880, Gemini: $1.6840
+2026-04-05 18:58:10,921 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 18:58:10,921 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 18:58:10,921 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.44% spread
+2026-04-05 18:58:10,921 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 18:58:10,921 - INFO -    Binance: $2424.0000, Gemini: $2458.8200
+2026-04-05 18:58:10,921 - INFO -    Profit per $30: $0.43
+2026-04-05 18:58:10,921 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 18:58:10,922 - INFO - 📊 Average spread: 0.36% across 10 pairs
+2026-04-05 18:58:10,922 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:03:10,953 - INFO - 
+============================================================
+2026-04-05 19:03:10,954 - INFO - 🔄 CYCLE 46 - 2026-04-05 19:03:10
+2026-04-05 19:03:10,954 - INFO - ============================================================
+2026-04-05 19:03:10,954 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:03:12,326 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:03:18,087 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:03:18,087 - INFO -    1. YFI: 1.39% (✅ TRADABLE)
+2026-04-05 19:03:18,087 - INFO -       Binance: $2425.0000, Gemini: $2458.8200
+2026-04-05 19:03:18,087 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.42
+2026-04-05 19:03:18,087 - INFO -    2. DOT: 0.52% (✅ TRADABLE)
+2026-04-05 19:03:18,087 - INFO -       Binance: $1.2270, Gemini: $1.2334
+2026-04-05 19:03:18,088 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 19:03:18,088 - INFO -    3. FIL: -0.50% (⏳ MONITORING)
+2026-04-05 19:03:18,088 - INFO -       Binance: $0.8220, Gemini: $0.8179
+2026-04-05 19:03:18,088 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 19:03:18,088 - INFO -    4. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 19:03:18,088 - INFO -       Binance: $0.3420, Gemini: $0.3409
+2026-04-05 19:03:18,088 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 19:03:18,088 - INFO -    5. COMP: 0.18% (⏳ MONITORING)
+2026-04-05 19:03:18,088 - INFO -       Binance: $16.5400, Gemini: $16.5700
+2026-04-05 19:03:18,088 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 19:03:18,088 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 19:03:18,089 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.39% spread
+2026-04-05 19:03:18,089 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:03:18,089 - INFO -    Binance: $2425.0000, Gemini: $2458.8200
+2026-04-05 19:03:18,089 - INFO -    Profit per $30: $0.42
+2026-04-05 19:03:18,089 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:03:18,090 - INFO - 📊 Average spread: 0.34% across 10 pairs
+2026-04-05 19:03:18,090 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:08:18,166 - INFO - 
+============================================================
+2026-04-05 19:08:18,166 - INFO - 🔄 CYCLE 47 - 2026-04-05 19:08:18
+2026-04-05 19:08:18,166 - INFO - ============================================================
+2026-04-05 19:08:18,166 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:08:19,366 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:08:25,460 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:08:25,461 - INFO -    1. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 19:08:25,461 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 19:08:25,461 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 19:08:25,461 - INFO -    2. DOT: 0.52% (✅ TRADABLE)
+2026-04-05 19:08:25,461 - INFO -       Binance: $1.2270, Gemini: $1.2334
+2026-04-05 19:08:25,461 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 19:08:25,461 - INFO -    3. FIL: -0.50% (⏳ MONITORING)
+2026-04-05 19:08:25,461 - INFO -       Binance: $0.8220, Gemini: $0.8179
+2026-04-05 19:08:25,461 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 19:08:25,461 - INFO -    4. ATOM: -0.24% (⏳ MONITORING)
+2026-04-05 19:08:25,462 - INFO -       Binance: $1.6880, Gemini: $1.6840
+2026-04-05 19:08:25,462 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.07
+2026-04-05 19:08:25,462 - INFO -    5. XTZ: -0.18% (⏳ MONITORING)
+2026-04-05 19:08:25,462 - INFO -       Binance: $0.3415, Gemini: $0.3409
+2026-04-05 19:08:25,462 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 19:08:25,462 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 19:08:25,462 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.52% spread
+2026-04-05 19:08:25,462 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:08:25,462 - INFO -    Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 19:08:25,462 - INFO -    Profit per $30: $0.46
+2026-04-05 19:08:25,462 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:08:25,462 - INFO - 📊 Average spread: 0.34% across 10 pairs
+2026-04-05 19:08:25,463 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:13:25,466 - INFO - 
+============================================================
+2026-04-05 19:13:25,467 - INFO - 🔄 CYCLE 48 - 2026-04-05 19:13:25
+2026-04-05 19:13:25,467 - INFO - ============================================================
+2026-04-05 19:13:25,467 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:13:26,671 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:13:32,623 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:13:32,623 - INFO -    1. YFI: 1.48% (✅ TRADABLE)
+2026-04-05 19:13:32,623 - INFO -       Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 19:13:32,623 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.44
+2026-04-05 19:13:32,623 - INFO -    2. FIL: -0.50% (⏳ MONITORING)
+2026-04-05 19:13:32,623 - INFO -       Binance: $0.8220, Gemini: $0.8179
+2026-04-05 19:13:32,623 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.15
+2026-04-05 19:13:32,623 - INFO -    3. XTZ: -0.32% (⏳ MONITORING)
+2026-04-05 19:13:32,623 - INFO -       Binance: $0.3420, Gemini: $0.3409
+2026-04-05 19:13:32,623 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 19:13:32,623 - INFO -    4. AAVE: 0.23% (⏳ MONITORING)
+2026-04-05 19:13:32,623 - INFO -       Binance: $91.8500, Gemini: $92.0616
+2026-04-05 19:13:32,624 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 19:13:32,624 - INFO -    5. ATOM: -0.18% (⏳ MONITORING)
+2026-04-05 19:13:32,624 - INFO -       Binance: $1.6870, Gemini: $1.6840
+2026-04-05 19:13:32,624 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.05
+2026-04-05 19:13:32,624 - INFO - 🎯 Found 1 tradable opportunities (≥0.5%)
+2026-04-05 19:13:32,624 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.48% spread
+2026-04-05 19:13:32,624 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:13:32,624 - INFO -    Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 19:13:32,624 - INFO -    Profit per $30: $0.44
+2026-04-05 19:13:32,624 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:13:32,624 - INFO - 📊 Average spread: 0.31% across 10 pairs
+2026-04-05 19:13:32,625 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:18:32,699 - INFO - 
+============================================================
+2026-04-05 19:18:32,699 - INFO - 🔄 CYCLE 49 - 2026-04-05 19:18:32
+2026-04-05 19:18:32,700 - INFO - ============================================================
+2026-04-05 19:18:32,700 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:18:33,897 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:18:39,746 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:18:39,746 - INFO -    1. YFI: 1.31% (✅ TRADABLE)
+2026-04-05 19:18:39,746 - INFO -       Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 19:18:39,746 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.39
+2026-04-05 19:18:39,746 - INFO -    2. MANA: -0.63% (✅ TRADABLE)
+2026-04-05 19:18:39,746 - INFO -       Binance: $0.0854, Gemini: $0.0849
+2026-04-05 19:18:39,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.19
+2026-04-05 19:18:39,746 - INFO -    3. FIL: -0.62% (✅ TRADABLE)
+2026-04-05 19:18:39,746 - INFO -       Binance: $0.8230, Gemini: $0.8179
+2026-04-05 19:18:39,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.19
+2026-04-05 19:18:39,746 - INFO -    4. XTZ: -0.38% (⏳ MONITORING)
+2026-04-05 19:18:39,746 - INFO -       Binance: $0.3422, Gemini: $0.3409
+2026-04-05 19:18:39,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 19:18:39,746 - INFO -    5. ATOM: -0.12% (⏳ MONITORING)
+2026-04-05 19:18:39,746 - INFO -       Binance: $1.6860, Gemini: $1.6840
+2026-04-05 19:18:39,746 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 19:18:39,746 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 19:18:39,746 - INFO - 🎯 EXECUTING ARBITRAGE: YFI at 1.31% spread
+2026-04-05 19:18:39,746 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:18:39,747 - INFO -    Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 19:18:39,747 - INFO -    Profit per $30: $0.39
+2026-04-05 19:18:39,747 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:18:39,747 - INFO - 📊 Average spread: 0.33% across 10 pairs
+2026-04-05 19:18:39,747 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:23:39,816 - INFO - 
+============================================================
+2026-04-05 19:23:39,817 - INFO - 🔄 CYCLE 50 - 2026-04-05 19:23:39
+2026-04-05 19:23:39,817 - INFO - ============================================================
+2026-04-05 19:23:39,817 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:23:41,024 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:23:46,774 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:23:46,774 - INFO -    1. XTZ: 3.63% (✅ TRADABLE)
+2026-04-05 19:23:46,774 - INFO -       Binance: $0.3418, Gemini: $0.3542
+2026-04-05 19:23:46,774 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.09
+2026-04-05 19:23:46,774 - INFO -    2. YFI: 1.48% (✅ TRADABLE)
+2026-04-05 19:23:46,774 - INFO -       Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 19:23:46,774 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.44
+2026-04-05 19:23:46,774 - INFO -    3. MANA: -0.40% (⏳ MONITORING)
+2026-04-05 19:23:46,774 - INFO -       Binance: $0.0852, Gemini: $0.0849
+2026-04-05 19:23:46,775 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 19:23:46,775 - INFO -    4. FIL: -0.38% (⏳ MONITORING)
+2026-04-05 19:23:46,775 - INFO -       Binance: $0.8210, Gemini: $0.8179
+2026-04-05 19:23:46,775 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 19:23:46,775 - INFO -    5. COMP: 0.18% (⏳ MONITORING)
+2026-04-05 19:23:46,775 - INFO -       Binance: $16.4900, Gemini: $16.5200
+2026-04-05 19:23:46,775 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 19:23:46,775 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 19:23:46,775 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.63% spread
+2026-04-05 19:23:46,775 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:23:46,775 - INFO -    Binance: $0.3418, Gemini: $0.3542
+2026-04-05 19:23:46,776 - INFO -    Profit per $30: $1.09
+2026-04-05 19:23:46,776 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:23:46,776 - INFO - 📊 Average spread: 0.64% across 10 pairs
+2026-04-05 19:23:46,776 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:28:46,786 - INFO - 
+============================================================
+2026-04-05 19:28:46,786 - INFO - 🔄 CYCLE 51 - 2026-04-05 19:28:46
+2026-04-05 19:28:46,786 - INFO - ============================================================
+2026-04-05 19:28:46,786 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:28:47,963 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:28:53,750 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:28:53,750 - INFO -    1. XTZ: 3.48% (✅ TRADABLE)
+2026-04-05 19:28:53,750 - INFO -       Binance: $0.3423, Gemini: $0.3542
+2026-04-05 19:28:53,750 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.04
+2026-04-05 19:28:53,750 - INFO -    2. YFI: 1.31% (✅ TRADABLE)
+2026-04-05 19:28:53,750 - INFO -       Binance: $2427.0000, Gemini: $2458.8200
+2026-04-05 19:28:53,750 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.39
+2026-04-05 19:28:53,750 - INFO -    3. FIL: -0.38% (⏳ MONITORING)
+2026-04-05 19:28:53,750 - INFO -       Binance: $0.8210, Gemini: $0.8179
+2026-04-05 19:28:53,750 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 19:28:53,750 - INFO -    4. MANA: -0.28% (⏳ MONITORING)
+2026-04-05 19:28:53,750 - INFO -       Binance: $0.0851, Gemini: $0.0849
+2026-04-05 19:28:53,750 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 19:28:53,750 - INFO -    5. COMP: 0.24% (⏳ MONITORING)
+2026-04-05 19:28:53,750 - INFO -       Binance: $16.4900, Gemini: $16.5300
+2026-04-05 19:28:53,750 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 19:28:53,750 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 19:28:53,750 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.48% spread
+2026-04-05 19:28:53,750 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:28:53,750 - INFO -    Binance: $0.3423, Gemini: $0.3542
+2026-04-05 19:28:53,750 - INFO -    Profit per $30: $1.04
+2026-04-05 19:28:53,750 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:28:53,751 - INFO - 📊 Average spread: 0.62% across 10 pairs
+2026-04-05 19:28:53,751 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:33:53,827 - INFO - 
+============================================================
+2026-04-05 19:33:53,828 - INFO - 🔄 CYCLE 52 - 2026-04-05 19:33:53
+2026-04-05 19:33:53,828 - INFO - ============================================================
+2026-04-05 19:33:53,828 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:33:55,038 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:34:00,720 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:34:00,720 - INFO -    1. XTZ: 3.84% (✅ TRADABLE)
+2026-04-05 19:34:00,720 - INFO -       Binance: $0.3411, Gemini: $0.3542
+2026-04-05 19:34:00,720 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.15
+2026-04-05 19:34:00,720 - INFO -    2. YFI: 1.56% (✅ TRADABLE)
+2026-04-05 19:34:00,720 - INFO -       Binance: $2421.0000, Gemini: $2458.8200
+2026-04-05 19:34:00,720 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.47
+2026-04-05 19:34:00,720 - INFO -    3. DOT: 0.65% (✅ TRADABLE)
+2026-04-05 19:34:00,720 - INFO -       Binance: $1.2220, Gemini: $1.2300
+2026-04-05 19:34:00,720 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.20
+2026-04-05 19:34:00,720 - INFO -    4. UNI: 0.42% (⏳ MONITORING)
+2026-04-05 19:34:00,720 - INFO -       Binance: $3.0670, Gemini: $3.0800
+2026-04-05 19:34:00,720 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 19:34:00,720 - INFO -    5. MANA: 0.19% (⏳ MONITORING)
+2026-04-05 19:34:00,720 - INFO -       Binance: $0.0847, Gemini: $0.0849
+2026-04-05 19:34:00,720 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.06
+2026-04-05 19:34:00,720 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 19:34:00,720 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.84% spread
+2026-04-05 19:34:00,720 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:34:00,720 - INFO -    Binance: $0.3411, Gemini: $0.3542
+2026-04-05 19:34:00,720 - INFO -    Profit per $30: $1.15
+2026-04-05 19:34:00,720 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:34:00,720 - INFO - 📊 Average spread: 0.70% across 10 pairs
+2026-04-05 19:34:00,720 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:39:00,791 - INFO - 
+============================================================
+2026-04-05 19:39:00,795 - INFO - 🔄 CYCLE 53 - 2026-04-05 19:39:00
+2026-04-05 19:39:00,795 - INFO - ============================================================
+2026-04-05 19:39:00,795 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:39:02,032 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:39:08,394 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:39:08,394 - INFO -    1. XTZ: 3.93% (✅ TRADABLE)
+2026-04-05 19:39:08,394 - INFO -       Binance: $0.3408, Gemini: $0.3542
+2026-04-05 19:39:08,395 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.18
+2026-04-05 19:39:08,395 - INFO -    2. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 19:39:08,395 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 19:39:08,395 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 19:39:08,395 - INFO -    3. MANA: 0.43% (⏳ MONITORING)
+2026-04-05 19:39:08,395 - INFO -       Binance: $0.0845, Gemini: $0.0849
+2026-04-05 19:39:08,395 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 19:39:08,395 - INFO -    4. UNI: -0.31% (⏳ MONITORING)
+2026-04-05 19:39:08,395 - INFO -       Binance: $3.0720, Gemini: $3.0624
+2026-04-05 19:39:08,395 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.09
+2026-04-05 19:39:08,395 - INFO -    5. COMP: 0.24% (⏳ MONITORING)
+2026-04-05 19:39:08,395 - INFO -       Binance: $16.4300, Gemini: $16.4700
+2026-04-05 19:39:08,396 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 19:39:08,396 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 19:39:08,396 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.93% spread
+2026-04-05 19:39:08,396 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:39:08,396 - INFO -    Binance: $0.3408, Gemini: $0.3542
+2026-04-05 19:39:08,396 - INFO -    Profit per $30: $1.18
+2026-04-05 19:39:08,396 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:39:08,398 - INFO - 📊 Average spread: 0.68% across 10 pairs
+2026-04-05 19:39:08,398 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:44:08,443 - INFO - 
+============================================================
+2026-04-05 19:44:08,445 - INFO - 🔄 CYCLE 54 - 2026-04-05 19:44:08
+2026-04-05 19:44:08,445 - INFO - ============================================================
+2026-04-05 19:44:08,445 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:44:09,862 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:44:16,251 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:44:16,251 - INFO -    1. XTZ: 4.08% (✅ TRADABLE)
+2026-04-05 19:44:16,251 - INFO -       Binance: $0.3403, Gemini: $0.3542
+2026-04-05 19:44:16,251 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.23
+2026-04-05 19:44:16,251 - INFO -    2. YFI: 1.81% (✅ TRADABLE)
+2026-04-05 19:44:16,251 - INFO -       Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 19:44:16,251 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.54
+2026-04-05 19:44:16,251 - INFO -    3. MANA: 0.90% (✅ TRADABLE)
+2026-04-05 19:44:16,251 - INFO -       Binance: $0.0841, Gemini: $0.0849
+2026-04-05 19:44:16,251 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.27
+2026-04-05 19:44:16,251 - INFO -    4. DOT: 0.63% (✅ TRADABLE)
+2026-04-05 19:44:16,251 - INFO -       Binance: $1.2200, Gemini: $1.2277
+2026-04-05 19:44:16,251 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.19
+2026-04-05 19:44:16,251 - INFO -    5. ATOM: 0.36% (⏳ MONITORING)
+2026-04-05 19:44:16,251 - INFO -       Binance: $1.6770, Gemini: $1.6830
+2026-04-05 19:44:16,251 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 19:44:16,251 - INFO - 🎯 Found 4 tradable opportunities (≥0.5%)
+2026-04-05 19:44:16,252 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.08% spread
+2026-04-05 19:44:16,252 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:44:16,252 - INFO -    Binance: $0.3403, Gemini: $0.3542
+2026-04-05 19:44:16,252 - INFO -    Profit per $30: $1.23
+2026-04-05 19:44:16,252 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:44:16,252 - INFO - 📊 Average spread: 0.84% across 10 pairs
+2026-04-05 19:44:16,252 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:49:16,350 - INFO - 
+============================================================
+2026-04-05 19:49:16,350 - INFO - 🔄 CYCLE 55 - 2026-04-05 19:49:16
+2026-04-05 19:49:16,350 - INFO - ============================================================
+2026-04-05 19:49:16,350 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:49:17,559 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:49:23,985 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:49:23,985 - INFO -    1. XTZ: 3.99% (✅ TRADABLE)
+2026-04-05 19:49:23,985 - INFO -       Binance: $0.3406, Gemini: $0.3542
+2026-04-05 19:49:23,986 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.20
+2026-04-05 19:49:23,986 - INFO -    2. YFI: 1.81% (✅ TRADABLE)
+2026-04-05 19:49:23,986 - INFO -       Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 19:49:23,986 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.54
+2026-04-05 19:49:23,986 - INFO -    3. DOT: 0.63% (✅ TRADABLE)
+2026-04-05 19:49:23,986 - INFO -       Binance: $1.2200, Gemini: $1.2277
+2026-04-05 19:49:23,986 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.19
+2026-04-05 19:49:23,986 - INFO -    4. MANA: 0.55% (✅ TRADABLE)
+2026-04-05 19:49:23,986 - INFO -       Binance: $0.0844, Gemini: $0.0849
+2026-04-05 19:49:23,986 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 19:49:23,986 - INFO -    5. ATOM: 0.30% (⏳ MONITORING)
+2026-04-05 19:49:23,986 - INFO -       Binance: $1.6780, Gemini: $1.6830
+2026-04-05 19:49:23,987 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 19:49:23,987 - INFO - 🎯 Found 4 tradable opportunities (≥0.5%)
+2026-04-05 19:49:23,987 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.99% spread
+2026-04-05 19:49:23,987 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:49:23,987 - INFO -    Binance: $0.3406, Gemini: $0.3542
+2026-04-05 19:49:23,987 - INFO -    Profit per $30: $1.20
+2026-04-05 19:49:23,987 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:49:23,988 - INFO - 📊 Average spread: 0.80% across 10 pairs
+2026-04-05 19:49:23,988 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:54:24,073 - INFO - 
+============================================================
+2026-04-05 19:54:24,073 - INFO - 🔄 CYCLE 56 - 2026-04-05 19:54:24
+2026-04-05 19:54:24,074 - INFO - ============================================================
+2026-04-05 19:54:24,074 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:54:25,298 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:54:31,753 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:54:31,753 - INFO -    1. XTZ: 3.96% (✅ TRADABLE)
+2026-04-05 19:54:31,753 - INFO -       Binance: $0.3407, Gemini: $0.3542
+2026-04-05 19:54:31,754 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.19
+2026-04-05 19:54:31,754 - INFO -    2. YFI: 1.81% (✅ TRADABLE)
+2026-04-05 19:54:31,754 - INFO -       Binance: $2415.0000, Gemini: $2458.8200
+2026-04-05 19:54:31,754 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.54
+2026-04-05 19:54:31,754 - INFO -    3. MANA: 0.66% (✅ TRADABLE)
+2026-04-05 19:54:31,754 - INFO -       Binance: $0.0843, Gemini: $0.0849
+2026-04-05 19:54:31,754 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.20
+2026-04-05 19:54:31,754 - INFO -    4. COMP: 0.18% (⏳ MONITORING)
+2026-04-05 19:54:31,754 - INFO -       Binance: $16.4700, Gemini: $16.5000
+2026-04-05 19:54:31,754 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 19:54:31,754 - INFO -    5. UNI: -0.12% (⏳ MONITORING)
+2026-04-05 19:54:31,754 - INFO -       Binance: $3.0680, Gemini: $3.0643
+2026-04-05 19:54:31,755 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 19:54:31,755 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 19:54:31,755 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.96% spread
+2026-04-05 19:54:31,755 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:54:31,755 - INFO -    Binance: $0.3407, Gemini: $0.3542
+2026-04-05 19:54:31,755 - INFO -    Profit per $30: $1.19
+2026-04-05 19:54:31,755 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:54:31,756 - INFO - 📊 Average spread: 0.70% across 10 pairs
+2026-04-05 19:54:31,756 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 19:59:31,774 - INFO - 
+============================================================
+2026-04-05 19:59:31,775 - INFO - 🔄 CYCLE 57 - 2026-04-05 19:59:31
+2026-04-05 19:59:31,776 - INFO - ============================================================
+2026-04-05 19:59:31,776 - INFO - 📊 Getting Binance prices...
+2026-04-05 19:59:32,996 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 19:59:38,877 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 19:59:38,877 - INFO -    1. XTZ: 3.90% (✅ TRADABLE)
+2026-04-05 19:59:38,877 - INFO -       Binance: $0.3409, Gemini: $0.3542
+2026-04-05 19:59:38,877 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.17
+2026-04-05 19:59:38,877 - INFO -    2. YFI: 1.48% (✅ TRADABLE)
+2026-04-05 19:59:38,877 - INFO -       Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 19:59:38,878 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.44
+2026-04-05 19:59:38,878 - INFO -    3. MANA: 0.55% (✅ TRADABLE)
+2026-04-05 19:59:38,878 - INFO -       Binance: $0.0844, Gemini: $0.0849
+2026-04-05 19:59:38,878 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 19:59:38,878 - INFO -    4. AVAX: -0.27% (⏳ MONITORING)
+2026-04-05 19:59:38,878 - INFO -       Binance: $8.7900, Gemini: $8.7660
+2026-04-05 19:59:38,878 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 19:59:38,878 - INFO -    5. UNI: -0.25% (⏳ MONITORING)
+2026-04-05 19:59:38,878 - INFO -       Binance: $3.0720, Gemini: $3.0643
+2026-04-05 19:59:38,878 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 19:59:38,878 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 19:59:38,878 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.90% spread
+2026-04-05 19:59:38,878 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 19:59:38,878 - INFO -    Binance: $0.3409, Gemini: $0.3542
+2026-04-05 19:59:38,878 - INFO -    Profit per $30: $1.17
+2026-04-05 19:59:38,879 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 19:59:38,879 - INFO - 📊 Average spread: 0.70% across 10 pairs
+2026-04-05 19:59:38,879 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:04:38,930 - INFO - 
+============================================================
+2026-04-05 20:04:38,932 - INFO - 🔄 CYCLE 58 - 2026-04-05 20:04:38
+2026-04-05 20:04:38,932 - INFO - ============================================================
+2026-04-05 20:04:38,933 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:04:40,121 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:04:45,952 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:04:45,952 - INFO -    1. XTZ: 3.90% (✅ TRADABLE)
+2026-04-05 20:04:45,952 - INFO -       Binance: $0.3409, Gemini: $0.3542
+2026-04-05 20:04:45,952 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.17
+2026-04-05 20:04:45,952 - INFO -    2. YFI: 1.48% (✅ TRADABLE)
+2026-04-05 20:04:45,952 - INFO -       Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 20:04:45,952 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.44
+2026-04-05 20:04:45,953 - INFO -    3. UNI: -0.35% (⏳ MONITORING)
+2026-04-05 20:04:45,953 - INFO -       Binance: $3.0750, Gemini: $3.0643
+2026-04-05 20:04:45,953 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.10
+2026-04-05 20:04:45,953 - INFO -    4. MANA: 0.31% (⏳ MONITORING)
+2026-04-05 20:04:45,953 - INFO -       Binance: $0.0846, Gemini: $0.0849
+2026-04-05 20:04:45,953 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 20:04:45,953 - INFO -    5. AVAX: -0.27% (⏳ MONITORING)
+2026-04-05 20:04:45,953 - INFO -       Binance: $8.7900, Gemini: $8.7660
+2026-04-05 20:04:45,953 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 20:04:45,953 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:04:45,953 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.90% spread
+2026-04-05 20:04:45,953 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:04:45,954 - INFO -    Binance: $0.3409, Gemini: $0.3542
+2026-04-05 20:04:45,954 - INFO -    Profit per $30: $1.17
+2026-04-05 20:04:45,954 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:04:45,954 - INFO - 📊 Average spread: 0.71% across 10 pairs
+2026-04-05 20:04:45,955 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:09:45,955 - INFO - 
+============================================================
+2026-04-05 20:09:45,956 - INFO - 🔄 CYCLE 59 - 2026-04-05 20:09:45
+2026-04-05 20:09:45,956 - INFO - ============================================================
+2026-04-05 20:09:45,956 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:09:47,151 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:09:53,674 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:09:53,675 - INFO -    1. XTZ: 3.81% (✅ TRADABLE)
+2026-04-05 20:09:53,675 - INFO -       Binance: $0.3412, Gemini: $0.3542
+2026-04-05 20:09:53,675 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.14
+2026-04-05 20:09:53,675 - INFO -    2. YFI: 1.65% (✅ TRADABLE)
+2026-04-05 20:09:53,675 - INFO -       Binance: $2419.0000, Gemini: $2458.8200
+2026-04-05 20:09:53,675 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.49
+2026-04-05 20:09:53,675 - INFO -    3. MANA: 0.43% (⏳ MONITORING)
+2026-04-05 20:09:53,675 - INFO -       Binance: $0.0845, Gemini: $0.0849
+2026-04-05 20:09:53,675 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 20:09:53,675 - INFO -    4. ATOM: 0.30% (⏳ MONITORING)
+2026-04-05 20:09:53,676 - INFO -       Binance: $1.6780, Gemini: $1.6830
+2026-04-05 20:09:53,676 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 20:09:53,676 - INFO -    5. UNI: -0.28% (⏳ MONITORING)
+2026-04-05 20:09:53,676 - INFO -       Binance: $3.0730, Gemini: $3.0643
+2026-04-05 20:09:53,676 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 20:09:53,676 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:09:53,676 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.81% spread
+2026-04-05 20:09:53,676 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:09:53,676 - INFO -    Binance: $0.3412, Gemini: $0.3542
+2026-04-05 20:09:53,676 - INFO -    Profit per $30: $1.14
+2026-04-05 20:09:53,676 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:09:53,677 - INFO - 📊 Average spread: 0.71% across 10 pairs
+2026-04-05 20:09:53,677 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:14:53,828 - INFO - 
+============================================================
+2026-04-05 20:14:53,828 - INFO - 🔄 CYCLE 60 - 2026-04-05 20:14:53
+2026-04-05 20:14:53,828 - INFO - ============================================================
+2026-04-05 20:14:53,828 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:14:55,048 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:15:01,673 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:15:01,673 - INFO -    1. XTZ: 4.15% (✅ TRADABLE)
+2026-04-05 20:15:01,673 - INFO -       Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:15:01,673 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.24
+2026-04-05 20:15:01,674 - INFO -    2. YFI: 1.90% (✅ TRADABLE)
+2026-04-05 20:15:01,674 - INFO -       Binance: $2413.0000, Gemini: $2458.8200
+2026-04-05 20:15:01,674 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.57
+2026-04-05 20:15:01,674 - INFO -    3. MANA: 0.55% (✅ TRADABLE)
+2026-04-05 20:15:01,674 - INFO -       Binance: $0.0844, Gemini: $0.0849
+2026-04-05 20:15:01,674 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 20:15:01,674 - INFO -    4. COMP: 0.37% (⏳ MONITORING)
+2026-04-05 20:15:01,674 - INFO -       Binance: $16.4200, Gemini: $16.4800
+2026-04-05 20:15:01,674 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 20:15:01,674 - INFO -    5. ATOM: 0.30% (⏳ MONITORING)
+2026-04-05 20:15:01,674 - INFO -       Binance: $1.6780, Gemini: $1.6830
+2026-04-05 20:15:01,675 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 20:15:01,675 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 20:15:01,675 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.15% spread
+2026-04-05 20:15:01,675 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:15:01,675 - INFO -    Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:15:01,675 - INFO -    Profit per $30: $1.24
+2026-04-05 20:15:01,675 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:15:01,676 - INFO - 📊 Average spread: 0.76% across 10 pairs
+2026-04-05 20:15:01,676 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:20:01,824 - INFO - 
+============================================================
+2026-04-05 20:20:01,824 - INFO - 🔄 CYCLE 61 - 2026-04-05 20:20:01
+2026-04-05 20:20:01,824 - INFO - ============================================================
+2026-04-05 20:20:01,824 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:20:03,021 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:20:09,523 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:20:09,523 - INFO -    1. XTZ: 4.15% (✅ TRADABLE)
+2026-04-05 20:20:09,523 - INFO -       Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:20:09,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.24
+2026-04-05 20:20:09,524 - INFO -    2. YFI: 1.90% (✅ TRADABLE)
+2026-04-05 20:20:09,524 - INFO -       Binance: $2413.0000, Gemini: $2458.8200
+2026-04-05 20:20:09,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.57
+2026-04-05 20:20:09,524 - INFO -    3. MANA: 0.66% (✅ TRADABLE)
+2026-04-05 20:20:09,524 - INFO -       Binance: $0.0843, Gemini: $0.0849
+2026-04-05 20:20:09,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.20
+2026-04-05 20:20:09,524 - INFO -    4. COMP: 0.37% (⏳ MONITORING)
+2026-04-05 20:20:09,524 - INFO -       Binance: $16.4200, Gemini: $16.4800
+2026-04-05 20:20:09,524 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 20:20:09,524 - INFO -    5. FIL: 0.26% (⏳ MONITORING)
+2026-04-05 20:20:09,524 - INFO -       Binance: $0.8170, Gemini: $0.8191
+2026-04-05 20:20:09,525 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 20:20:09,525 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 20:20:09,525 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.15% spread
+2026-04-05 20:20:09,525 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:20:09,525 - INFO -    Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:20:09,525 - INFO -    Profit per $30: $1.24
+2026-04-05 20:20:09,525 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:20:09,526 - INFO - 📊 Average spread: 0.77% across 10 pairs
+2026-04-05 20:20:09,526 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:25:09,675 - INFO - 
+============================================================
+2026-04-05 20:25:09,675 - INFO - 🔄 CYCLE 62 - 2026-04-05 20:25:09
+2026-04-05 20:25:09,675 - INFO - ============================================================
+2026-04-05 20:25:09,675 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:25:10,864 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:25:17,403 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:25:17,404 - INFO -    1. XTZ: 4.08% (✅ TRADABLE)
+2026-04-05 20:25:17,404 - INFO -       Binance: $0.3403, Gemini: $0.3542
+2026-04-05 20:25:17,404 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.23
+2026-04-05 20:25:17,404 - INFO -    2. YFI: 1.86% (✅ TRADABLE)
+2026-04-05 20:25:17,404 - INFO -       Binance: $2414.0000, Gemini: $2458.8200
+2026-04-05 20:25:17,404 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.56
+2026-04-05 20:25:17,404 - INFO -    3. MANA: 0.55% (✅ TRADABLE)
+2026-04-05 20:25:17,404 - INFO -       Binance: $0.0844, Gemini: $0.0849
+2026-04-05 20:25:17,404 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.16
+2026-04-05 20:25:17,404 - INFO -    4. UNI: -0.25% (⏳ MONITORING)
+2026-04-05 20:25:17,404 - INFO -       Binance: $3.0770, Gemini: $3.0692
+2026-04-05 20:25:17,404 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 20:25:17,404 - INFO -    5. FIL: 0.13% (⏳ MONITORING)
+2026-04-05 20:25:17,404 - INFO -       Binance: $0.8180, Gemini: $0.8191
+2026-04-05 20:25:17,404 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.04
+2026-04-05 20:25:17,404 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 20:25:17,404 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.08% spread
+2026-04-05 20:25:17,404 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:25:17,404 - INFO -    Binance: $0.3403, Gemini: $0.3542
+2026-04-05 20:25:17,404 - INFO -    Profit per $30: $1.23
+2026-04-05 20:25:17,404 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:25:17,405 - INFO - 📊 Average spread: 0.73% across 10 pairs
+2026-04-05 20:25:17,405 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:30:17,533 - INFO - 
+============================================================
+2026-04-05 20:30:17,534 - INFO - 🔄 CYCLE 63 - 2026-04-05 20:30:17
+2026-04-05 20:30:17,534 - INFO - ============================================================
+2026-04-05 20:30:17,534 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:30:18,746 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:30:24,892 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:30:24,892 - INFO -    1. XTZ: 4.45% (✅ TRADABLE)
+2026-04-05 20:30:24,892 - INFO -       Binance: $0.3391, Gemini: $0.3542
+2026-04-05 20:30:24,892 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.34
+2026-04-05 20:30:24,892 - INFO -    2. YFI: 2.20% (✅ TRADABLE)
+2026-04-05 20:30:24,892 - INFO -       Binance: $2406.0000, Gemini: $2458.8200
+2026-04-05 20:30:24,892 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.66
+2026-04-05 20:30:24,893 - INFO -    3. MANA: 0.90% (✅ TRADABLE)
+2026-04-05 20:30:24,893 - INFO -       Binance: $0.0841, Gemini: $0.0849
+2026-04-05 20:30:24,893 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.27
+2026-04-05 20:30:24,893 - INFO -    4. FIL: 0.75% (✅ TRADABLE)
+2026-04-05 20:30:24,893 - INFO -       Binance: $0.8130, Gemini: $0.8191
+2026-04-05 20:30:24,893 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.23
+2026-04-05 20:30:24,893 - INFO -    5. COMP: 0.31% (⏳ MONITORING)
+2026-04-05 20:30:24,893 - INFO -       Binance: $16.3800, Gemini: $16.4300
+2026-04-05 20:30:24,893 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 20:30:24,893 - INFO - 🎯 Found 4 tradable opportunities (≥0.5%)
+2026-04-05 20:30:24,893 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.45% spread
+2026-04-05 20:30:24,894 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:30:24,894 - INFO -    Binance: $0.3391, Gemini: $0.3542
+2026-04-05 20:30:24,894 - INFO -    Profit per $30: $1.34
+2026-04-05 20:30:24,894 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:30:24,894 - INFO - 📊 Average spread: 0.92% across 10 pairs
+2026-04-05 20:30:24,895 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:35:25,015 - INFO - 
+============================================================
+2026-04-05 20:35:25,017 - INFO - 🔄 CYCLE 64 - 2026-04-05 20:35:25
+2026-04-05 20:35:25,017 - INFO - ============================================================
+2026-04-05 20:35:25,018 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:35:26,447 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:35:33,265 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:35:33,265 - INFO -    1. XTZ: 4.18% (✅ TRADABLE)
+2026-04-05 20:35:33,265 - INFO -       Binance: $0.3400, Gemini: $0.3542
+2026-04-05 20:35:33,265 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.25
+2026-04-05 20:35:33,265 - INFO -    2. YFI: 2.03% (✅ TRADABLE)
+2026-04-05 20:35:33,265 - INFO -       Binance: $2410.0000, Gemini: $2458.8200
+2026-04-05 20:35:33,265 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.61
+2026-04-05 20:35:33,265 - INFO -    3. MANA: 0.66% (✅ TRADABLE)
+2026-04-05 20:35:33,266 - INFO -       Binance: $0.0843, Gemini: $0.0849
+2026-04-05 20:35:33,266 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.20
+2026-04-05 20:35:33,266 - INFO -    4. FIL: 0.26% (⏳ MONITORING)
+2026-04-05 20:35:33,266 - INFO -       Binance: $0.8170, Gemini: $0.8191
+2026-04-05 20:35:33,266 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.08
+2026-04-05 20:35:33,266 - INFO -    5. UNI: -0.25% (⏳ MONITORING)
+2026-04-05 20:35:33,266 - INFO -       Binance: $3.0770, Gemini: $3.0692
+2026-04-05 20:35:33,266 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 20:35:33,266 - INFO - 🎯 Found 3 tradable opportunities (≥0.5%)
+2026-04-05 20:35:33,266 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.18% spread
+2026-04-05 20:35:33,266 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:35:33,266 - INFO -    Binance: $0.3400, Gemini: $0.3542
+2026-04-05 20:35:33,267 - INFO -    Profit per $30: $1.25
+2026-04-05 20:35:33,267 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:35:33,267 - INFO - 📊 Average spread: 0.76% across 10 pairs
+2026-04-05 20:35:33,267 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:40:33,413 - INFO - 
+============================================================
+2026-04-05 20:40:33,415 - INFO - 🔄 CYCLE 65 - 2026-04-05 20:40:33
+2026-04-05 20:40:33,415 - INFO - ============================================================
+2026-04-05 20:40:33,415 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:40:34,666 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:40:40,964 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:40:40,965 - INFO -    1. XTZ: 4.15% (✅ TRADABLE)
+2026-04-05 20:40:40,965 - INFO -       Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:40:40,965 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.24
+2026-04-05 20:40:40,965 - INFO -    2. YFI: 1.86% (✅ TRADABLE)
+2026-04-05 20:40:40,966 - INFO -       Binance: $2414.0000, Gemini: $2458.8200
+2026-04-05 20:40:40,966 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.56
+2026-04-05 20:40:40,966 - INFO -    3. MANA: 0.43% (⏳ MONITORING)
+2026-04-05 20:40:40,966 - INFO -       Binance: $0.0845, Gemini: $0.0849
+2026-04-05 20:40:40,966 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 20:40:40,966 - INFO -    4. UNI: -0.38% (⏳ MONITORING)
+2026-04-05 20:40:40,966 - INFO -       Binance: $3.0810, Gemini: $3.0692
+2026-04-05 20:40:40,966 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 20:40:40,966 - INFO -    5. ATOM: -0.30% (⏳ MONITORING)
+2026-04-05 20:40:40,966 - INFO -       Binance: $1.6830, Gemini: $1.6780
+2026-04-05 20:40:40,967 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.09
+2026-04-05 20:40:40,967 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:40:40,967 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 4.15% spread
+2026-04-05 20:40:40,967 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:40:40,967 - INFO -    Binance: $0.3401, Gemini: $0.3542
+2026-04-05 20:40:40,967 - INFO -    Profit per $30: $1.24
+2026-04-05 20:40:40,967 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:40:40,968 - INFO - 📊 Average spread: 0.77% across 10 pairs
+2026-04-05 20:40:40,968 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:45:41,115 - INFO - 
+============================================================
+2026-04-05 20:45:41,116 - INFO - 🔄 CYCLE 66 - 2026-04-05 20:45:41
+2026-04-05 20:45:41,116 - INFO - ============================================================
+2026-04-05 20:45:41,116 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:45:42,336 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:45:48,727 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:45:48,727 - INFO -    1. XTZ: 3.96% (✅ TRADABLE)
+2026-04-05 20:45:48,727 - INFO -       Binance: $0.3407, Gemini: $0.3542
+2026-04-05 20:45:48,727 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.19
+2026-04-05 20:45:48,727 - INFO -    2. YFI: 1.86% (✅ TRADABLE)
+2026-04-05 20:45:48,727 - INFO -       Binance: $2414.0000, Gemini: $2458.8200
+2026-04-05 20:45:48,727 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.56
+2026-04-05 20:45:48,727 - INFO -    3. DOT: 0.44% (⏳ MONITORING)
+2026-04-05 20:45:48,727 - INFO -       Binance: $1.2220, Gemini: $1.2274
+2026-04-05 20:45:48,727 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 20:45:48,728 - INFO -    4. UNI: -0.38% (⏳ MONITORING)
+2026-04-05 20:45:48,728 - INFO -       Binance: $3.0810, Gemini: $3.0692
+2026-04-05 20:45:48,728 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 20:45:48,728 - INFO -    5. MANA: 0.31% (⏳ MONITORING)
+2026-04-05 20:45:48,728 - INFO -       Binance: $0.0846, Gemini: $0.0849
+2026-04-05 20:45:48,728 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.09
+2026-04-05 20:45:48,728 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:45:48,728 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.96% spread
+2026-04-05 20:45:48,728 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:45:48,728 - INFO -    Binance: $0.3407, Gemini: $0.3542
+2026-04-05 20:45:48,728 - INFO -    Profit per $30: $1.19
+2026-04-05 20:45:48,728 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:45:48,728 - INFO - 📊 Average spread: 0.78% across 10 pairs
+2026-04-05 20:45:48,728 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:50:48,751 - INFO - 
+============================================================
+2026-04-05 20:50:48,751 - INFO - 🔄 CYCLE 67 - 2026-04-05 20:50:48
+2026-04-05 20:50:48,751 - INFO - ============================================================
+2026-04-05 20:50:48,751 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:50:49,918 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:50:56,501 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:50:56,501 - INFO -    1. XTZ: 3.84% (✅ TRADABLE)
+2026-04-05 20:50:56,501 - INFO -       Binance: $0.3411, Gemini: $0.3542
+2026-04-05 20:50:56,501 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.15
+2026-04-05 20:50:56,501 - INFO -    2. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 20:50:56,501 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 20:50:56,501 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 20:50:56,501 - INFO -    3. UNI: -0.48% (⏳ MONITORING)
+2026-04-05 20:50:56,501 - INFO -       Binance: $3.0840, Gemini: $3.0692
+2026-04-05 20:50:56,502 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.14
+2026-04-05 20:50:56,502 - INFO -    4. AVAX: -0.37% (⏳ MONITORING)
+2026-04-05 20:50:56,502 - INFO -       Binance: $8.8100, Gemini: $8.7770
+2026-04-05 20:50:56,502 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 20:50:56,502 - INFO -    5. DOT: 0.36% (⏳ MONITORING)
+2026-04-05 20:50:56,502 - INFO -       Binance: $1.2230, Gemini: $1.2274
+2026-04-05 20:50:56,502 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 20:50:56,502 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:50:56,502 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.84% spread
+2026-04-05 20:50:56,502 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:50:56,502 - INFO -    Binance: $0.3411, Gemini: $0.3542
+2026-04-05 20:50:56,502 - INFO -    Profit per $30: $1.15
+2026-04-05 20:50:56,502 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:50:56,502 - INFO - 📊 Average spread: 0.70% across 10 pairs
+2026-04-05 20:50:56,502 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 20:55:56,653 - INFO - 
+============================================================
+2026-04-05 20:55:56,654 - INFO - 🔄 CYCLE 68 - 2026-04-05 20:55:56
+2026-04-05 20:55:56,654 - INFO - ============================================================
+2026-04-05 20:55:56,654 - INFO - 📊 Getting Binance prices...
+2026-04-05 20:55:57,862 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 20:56:04,138 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 20:56:04,139 - INFO -    1. XTZ: 3.93% (✅ TRADABLE)
+2026-04-05 20:56:04,139 - INFO -       Binance: $0.3408, Gemini: $0.3542
+2026-04-05 20:56:04,139 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.18
+2026-04-05 20:56:04,139 - INFO -    2. YFI: 1.77% (✅ TRADABLE)
+2026-04-05 20:56:04,139 - INFO -       Binance: $2416.0000, Gemini: $2458.8200
+2026-04-05 20:56:04,139 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.53
+2026-04-05 20:56:04,139 - INFO -    3. DOT: 0.44% (⏳ MONITORING)
+2026-04-05 20:56:04,139 - INFO -       Binance: $1.2220, Gemini: $1.2274
+2026-04-05 20:56:04,139 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.13
+2026-04-05 20:56:04,139 - INFO -    4. UNI: -0.42% (⏳ MONITORING)
+2026-04-05 20:56:04,140 - INFO -       Binance: $3.0820, Gemini: $3.0692
+2026-04-05 20:56:04,140 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.12
+2026-04-05 20:56:04,140 - INFO -    5. AVAX: -0.37% (⏳ MONITORING)
+2026-04-05 20:56:04,140 - INFO -       Binance: $8.8100, Gemini: $8.7770
+2026-04-05 20:56:04,140 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.11
+2026-04-05 20:56:04,140 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 20:56:04,140 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.93% spread
+2026-04-05 20:56:04,140 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 20:56:04,140 - INFO -    Binance: $0.3408, Gemini: $0.3542
+2026-04-05 20:56:04,140 - INFO -    Profit per $30: $1.18
+2026-04-05 20:56:04,140 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 20:56:04,141 - INFO - 📊 Average spread: 0.75% across 10 pairs
+2026-04-05 20:56:04,141 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 21:01:04,284 - INFO - 
+============================================================
+2026-04-05 21:01:04,285 - INFO - 🔄 CYCLE 69 - 2026-04-05 21:01:04
+2026-04-05 21:01:04,285 - INFO - ============================================================
+2026-04-05 21:01:04,285 - INFO - 📊 Getting Binance prices...
+2026-04-05 21:01:05,466 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 21:01:11,692 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 21:01:11,693 - INFO -    1. XTZ: 3.84% (✅ TRADABLE)
+2026-04-05 21:01:11,693 - INFO -       Binance: $0.3411, Gemini: $0.3542
+2026-04-05 21:01:11,693 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.15
+2026-04-05 21:01:11,693 - INFO -    2. YFI: 1.52% (✅ TRADABLE)
+2026-04-05 21:01:11,693 - INFO -       Binance: $2422.0000, Gemini: $2458.8200
+2026-04-05 21:01:11,693 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.46
+2026-04-05 21:01:11,693 - INFO -    3. DOT: 0.36% (⏳ MONITORING)
+2026-04-05 21:01:11,693 - INFO -       Binance: $1.2230, Gemini: $1.2274
+2026-04-05 21:01:11,693 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.11
+2026-04-05 21:01:11,693 - INFO -    4. COMP: 0.18% (⏳ MONITORING)
+2026-04-05 21:01:11,694 - INFO -       Binance: $16.4600, Gemini: $16.4900
+2026-04-05 21:01:11,694 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.05
+2026-04-05 21:01:11,694 - INFO -    5. FIL: -0.13% (⏳ MONITORING)
+2026-04-05 21:01:11,694 - INFO -       Binance: $0.8210, Gemini: $0.8199
+2026-04-05 21:01:11,694 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.04
+2026-04-05 21:01:11,694 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 21:01:11,694 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.84% spread
+2026-04-05 21:01:11,694 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 21:01:11,694 - INFO -    Binance: $0.3411, Gemini: $0.3542
+2026-04-05 21:01:11,694 - INFO -    Profit per $30: $1.15
+2026-04-05 21:01:11,694 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 21:01:11,695 - INFO - 📊 Average spread: 0.63% across 10 pairs
+2026-04-05 21:01:11,695 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 21:06:11,803 - INFO - 
+============================================================
+2026-04-05 21:06:11,804 - INFO - 🔄 CYCLE 70 - 2026-04-05 21:06:11
+2026-04-05 21:06:11,804 - INFO - ============================================================
+2026-04-05 21:06:11,804 - INFO - 📊 Getting Binance prices...
+2026-04-05 21:06:13,002 - INFO - 📊 Getting Gemini prices (GUSD pairs)...
+2026-04-05 21:06:18,765 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 21:06:18,765 - INFO -    1. XTZ: 3.66% (✅ TRADABLE)
+2026-04-05 21:06:18,765 - INFO -       Binance: $0.3417, Gemini: $0.3542
+2026-04-05 21:06:18,765 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $1.10
+2026-04-05 21:06:18,765 - INFO -    2. YFI: 1.48% (✅ TRADABLE)
+2026-04-05 21:06:18,765 - INFO -       Binance: $2423.0000, Gemini: $2458.8200
+2026-04-05 21:06:18,766 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.44
+2026-04-05 21:06:18,766 - INFO -    3. DOT: 0.42% (⏳ MONITORING)
+2026-04-05 21:06:18,766 - INFO -       Binance: $1.2270, Gemini: $1.2321
+2026-04-05 21:06:18,766 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.12
+2026-04-05 21:06:18,766 - INFO -    4. FIL: -0.26% (⏳ MONITORING)
+2026-04-05 21:06:18,766 - INFO -       Binance: $0.8220, Gemini: $0.8199
+2026-04-05 21:06:18,766 - INFO -       Action: BUY_GEMINI_SELL_BINANCE, Profit: $0.08
+2026-04-05 21:06:18,766 - INFO -    5. AAVE: 0.22% (⏳ MONITORING)
+2026-04-05 21:06:18,766 - INFO -       Binance: $91.0200, Gemini: $91.2212
+2026-04-05 21:06:18,766 - INFO -       Action: BUY_BINANCE_SELL_GEMINI, Profit: $0.07
+2026-04-05 21:06:18,766 - INFO - 🎯 Found 2 tradable opportunities (≥0.5%)
+2026-04-05 21:06:18,767 - INFO - 🎯 EXECUTING ARBITRAGE: XTZ at 3.66% spread
+2026-04-05 21:06:18,767 - INFO -    Action: BUY_BINANCE_SELL_GEMINI
+2026-04-05 21:06:18,767 - INFO -    Binance: $0.3417, Gemini: $0.3542
+2026-04-05 21:06:18,767 - INFO -    Profit per $30: $1.10
+2026-04-05 21:06:18,767 - INFO - 📝 Trade logged (implement actual execution next)
+2026-04-05 21:06:18,767 - INFO - 📊 Average spread: 0.65% across 10 pairs
+2026-04-05 21:06:18,768 - INFO - ⏰ Next scan in 300 seconds...

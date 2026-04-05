@@ -1,0 +1,471 @@
+2026-04-02 14:52:48,595 - INFO - ======================================================================
+2026-04-02 14:52:48,595 - INFO - 🤖 26-CRYPTO TRADING BOT STARTING (FIXED VERSION)
+2026-04-02 14:52:48,595 - INFO - ======================================================================
+2026-04-02 14:52:48,595 - INFO - 💰 Capital: $393.22 Gemini (LONG), $262.14 Binance (SHORT)
+2026-04-02 14:52:48,595 - INFO - 📊 Position size: 10.0% of capital
+2026-04-02 14:52:48,595 - INFO - ⚡ Leverage: 3x (Binance only)
+2026-04-02 14:52:48,595 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-02 14:52:48,595 - INFO - 🛡️  FIX: Position checking enabled - prevents simultaneous LONG/SHORT
+2026-04-02 14:52:48,595 - INFO - ======================================================================
+2026-04-02 14:52:48,607 - INFO - ✅ Gemini exchange initialized
+2026-04-02 14:52:48,610 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 14:52:48,610 - INFO - 🔄 CYCLE #1
+2026-04-02 14:52:48,610 - INFO - ======================================================================
+2026-04-02 14:52:48,610 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 14:52:48
+2026-04-02 14:52:48,610 - INFO - ======================================================================
+2026-04-02 14:52:48,610 - INFO - 📊 Loaded 16 open positions
+2026-04-02 14:52:48,611 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-02 14:52:52,636 - ERROR - ❌ Error checking Gemini BTC: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:53,224 - ERROR - ❌ Error checking Gemini ETH: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:53,788 - ERROR - ❌ Error checking Gemini SOL: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:54,296 - ERROR - ❌ Error checking Gemini XRP: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:54,297 - ERROR - ❌ Error checking Gemini ADA: gemini does not have market symbol ADA/USD
+2026-04-02 14:52:54,892 - ERROR - ❌ Error checking Gemini DOT: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:55,504 - ERROR - ❌ Error checking Gemini DOGE: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:56,274 - ERROR - ❌ Error checking Gemini AVAX: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:56,634 - ERROR - ❌ Error checking Gemini LINK: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:57,144 - ERROR - ❌ Error checking Gemini UNI: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:57,144 - ERROR - ❌ Error checking Gemini MATIC: gemini does not have market symbol MATIC/USD
+2026-04-02 14:52:57,658 - ERROR - ❌ Error checking Gemini ATOM: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:58,181 - ERROR - ❌ Error checking Gemini FIL: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-04-02 14:52:58,181 - ERROR - ❌ Error checking Gemini NEAR: gemini does not have market symbol NEAR/USD
+2026-04-02 14:52:58,181 - ERROR - ❌ Error checking Gemini ALGO: gemini does not have market symbol ALGO/USD
+2026-04-02 14:52:58,181 - ERROR - ❌ Error checking Gemini VET: gemini does not have market symbol VET/USD
+2026-04-02 14:52:58,181 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 14:52:58,182 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:52:58,182 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:52:58,182 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:52:58,182 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:53:00,492 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:53:00,607 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 14:53:01,059 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 14:53:01,059 - INFO -    Current: $0.10
+2026-04-02 14:53:01,060 - INFO -    24h Change: 1.20%
+2026-04-02 14:53:01,060 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 14:53:01,423 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 14:53:01,648 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 14:53:02,544 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 14:53:02,545 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 14:53:02,545 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 14:55:11,435 - INFO - ======================================================================
+2026-04-02 14:55:11,435 - INFO - 🤖 26-CRYPTO TRADING BOT STARTING (FIXED VERSION)
+2026-04-02 14:55:11,435 - INFO - ======================================================================
+2026-04-02 14:55:11,435 - INFO - 💰 Capital: $393.22 Gemini (LONG), $262.14 Binance (SHORT)
+2026-04-02 14:55:11,435 - INFO - 📊 Position size: 5.0% of capital
+2026-04-02 14:55:11,435 - INFO - ⚡ Leverage: 3x (Binance only)
+2026-04-02 14:55:11,435 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-02 14:55:11,435 - INFO - 🛡️  FIX: Position checking enabled - prevents simultaneous LONG/SHORT
+2026-04-02 14:55:11,435 - INFO - ======================================================================
+2026-04-02 14:55:11,437 - INFO - ✅ Gemini exchange initialized
+2026-04-02 14:55:11,440 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 14:55:11,440 - INFO - 🔄 CYCLE #1
+2026-04-02 14:55:11,440 - INFO - ======================================================================
+2026-04-02 14:55:11,440 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 14:55:11
+2026-04-02 14:55:11,440 - INFO - ======================================================================
+2026-04-02 14:55:11,440 - INFO - 📊 Loaded 17 open positions
+2026-04-02 14:55:11,440 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 14:55:21,220 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 14:55:21,221 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:55:21,221 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:55:21,221 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:55:21,221 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:55:23,647 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 14:55:23,758 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 14:55:24,204 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 14:55:24,204 - INFO -    Current: $0.10
+2026-04-02 14:55:24,204 - INFO -    24h Change: 1.61%
+2026-04-02 14:55:24,204 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 14:55:24,663 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 14:55:24,891 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 14:55:25,806 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 14:55:25,807 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 14:55:25,807 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:00:25,957 - INFO - 🔄 CYCLE #2
+2026-04-02 15:00:25,959 - INFO - ======================================================================
+2026-04-02 15:00:25,959 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:00:25
+2026-04-02 15:00:25,959 - INFO - ======================================================================
+2026-04-02 15:00:25,961 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:00:25,961 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:00:32,542 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:00:32,543 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:00:32,543 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:00:32,543 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:00:32,543 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:00:33,061 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:00:33,173 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:00:33,628 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 15:00:33,629 - INFO -    Current: $0.10
+2026-04-02 15:00:33,629 - INFO -    24h Change: 1.91%
+2026-04-02 15:00:33,629 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 15:00:34,024 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 15:00:34,248 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:00:35,166 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 15:00:35,166 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:00:35,166 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:05:35,309 - INFO - 🔄 CYCLE #3
+2026-04-02 15:05:35,313 - INFO - ======================================================================
+2026-04-02 15:05:35,313 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:05:35
+2026-04-02 15:05:35,313 - INFO - ======================================================================
+2026-04-02 15:05:35,315 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:05:35,315 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:05:42,382 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:05:42,383 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:05:42,383 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:05:42,383 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:05:42,383 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:05:43,017 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:05:43,130 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:05:43,587 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 15:05:43,587 - INFO -    Current: $0.10
+2026-04-02 15:05:43,587 - INFO -    24h Change: 2.11%
+2026-04-02 15:05:43,587 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 15:05:43,971 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 15:05:44,198 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:05:45,113 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 15:05:45,113 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:05:45,114 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:10:45,237 - INFO - 🔄 CYCLE #4
+2026-04-02 15:10:45,350 - INFO - ======================================================================
+2026-04-02 15:10:45,350 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:10:45
+2026-04-02 15:10:45,350 - INFO - ======================================================================
+2026-04-02 15:10:45,374 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:10:45,375 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:10:54,904 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:10:54,947 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:10:54,947 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:10:54,947 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:10:54,947 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:10:55,541 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:10:55,651 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:10:56,094 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 15:10:56,095 - INFO -    Current: $0.10
+2026-04-02 15:10:56,095 - INFO -    24h Change: 2.30%
+2026-04-02 15:10:56,095 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 15:10:56,523 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 15:10:56,753 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:10:57,650 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 15:10:57,651 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:10:57,651 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:15:57,793 - INFO - 🔄 CYCLE #5
+2026-04-02 15:15:57,886 - INFO - ======================================================================
+2026-04-02 15:15:57,887 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:15:57
+2026-04-02 15:15:57,887 - INFO - ======================================================================
+2026-04-02 15:15:57,889 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:15:57,889 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:16:06,100 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:16:06,144 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:16:06,144 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:16:06,144 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:16:06,144 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:16:06,892 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:16:07,008 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:16:07,466 - INFO - 🎯 BINANCE SHORT OPPORTUNITY: ALGO/USDT
+2026-04-02 15:16:07,466 - INFO -    Current: $0.10
+2026-04-02 15:16:07,466 - INFO -    24h Change: 1.29%
+2026-04-02 15:16:07,466 - INFO - 🚀 EXECUTING BINANCE SHORT: ALGO/USDT
+2026-04-02 15:16:07,797 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 15:16:08,065 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:16:08,990 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 15:16:08,990 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:16:08,990 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:21:09,121 - INFO - 🔄 CYCLE #6
+2026-04-02 15:21:09,124 - INFO - ======================================================================
+2026-04-02 15:21:09,125 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:21:09
+2026-04-02 15:21:09,125 - INFO - ======================================================================
+2026-04-02 15:21:09,127 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:21:09,128 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:21:16,063 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:21:16,063 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:21:16,064 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:21:16,064 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:21:16,064 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:21:16,617 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:21:16,736 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:21:17,455 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:21:18,393 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:21:18,394 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:21:18,394 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:26:18,519 - INFO - 🔄 CYCLE #7
+2026-04-02 15:26:18,519 - INFO - ======================================================================
+2026-04-02 15:26:18,519 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:26:18
+2026-04-02 15:26:18,519 - INFO - ======================================================================
+2026-04-02 15:26:18,521 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:26:18,521 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:26:25,722 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:26:25,722 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:26:25,722 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:26:25,722 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:26:25,723 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:26:26,244 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:26:26,361 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:26:27,046 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:26:27,950 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:26:27,951 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:26:27,951 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:31:27,989 - INFO - 🔄 CYCLE #8
+2026-04-02 15:31:27,991 - INFO - ======================================================================
+2026-04-02 15:31:27,991 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:31:27
+2026-04-02 15:31:27,991 - INFO - ======================================================================
+2026-04-02 15:31:27,994 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:31:27,994 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:31:35,074 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:31:35,074 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:31:35,075 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:31:35,075 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:31:35,075 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:31:35,594 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:31:35,708 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:31:36,402 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:31:37,318 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:31:37,318 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:31:37,318 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:36:37,382 - INFO - 🔄 CYCLE #9
+2026-04-02 15:36:37,471 - INFO - ======================================================================
+2026-04-02 15:36:37,472 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:36:37
+2026-04-02 15:36:37,472 - INFO - ======================================================================
+2026-04-02 15:36:37,474 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:36:37,475 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:36:46,061 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:36:46,104 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:36:46,105 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:36:46,105 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:36:46,105 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:36:46,837 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:36:46,948 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:36:47,624 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:36:48,577 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:36:48,578 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:36:48,578 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:41:48,749 - INFO - 🔄 CYCLE #10
+2026-04-02 15:41:48,860 - INFO - ======================================================================
+2026-04-02 15:41:48,861 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:41:48
+2026-04-02 15:41:48,861 - INFO - ======================================================================
+2026-04-02 15:41:48,863 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:41:48,864 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:41:57,459 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:41:57,477 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:41:57,477 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:41:57,478 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:41:57,478 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:41:58,059 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:41:58,178 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:41:58,862 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:41:59,783 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:41:59,784 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:41:59,784 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:46:59,922 - INFO - 🔄 CYCLE #11
+2026-04-02 15:46:59,925 - INFO - ======================================================================
+2026-04-02 15:46:59,926 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:46:59
+2026-04-02 15:46:59,926 - INFO - ======================================================================
+2026-04-02 15:46:59,928 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:46:59,928 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:47:07,118 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:47:07,118 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:47:07,118 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:47:07,118 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:47:07,118 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:47:07,650 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:47:07,766 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:47:08,455 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:47:09,378 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:47:09,379 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:47:09,379 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:52:09,502 - INFO - 🔄 CYCLE #12
+2026-04-02 15:52:09,502 - INFO - ======================================================================
+2026-04-02 15:52:09,503 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:52:09
+2026-04-02 15:52:09,503 - INFO - ======================================================================
+2026-04-02 15:52:09,504 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:52:09,504 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:52:16,776 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:52:16,776 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:52:16,776 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:52:16,776 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:52:16,776 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:52:17,288 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:52:17,400 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:52:18,083 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:52:18,982 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:52:18,982 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:52:18,982 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 15:57:19,118 - INFO - 🔄 CYCLE #13
+2026-04-02 15:57:19,121 - INFO - ======================================================================
+2026-04-02 15:57:19,121 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 15:57:19
+2026-04-02 15:57:19,121 - INFO - ======================================================================
+2026-04-02 15:57:19,123 - INFO - 📊 Loaded 17 open positions
+2026-04-02 15:57:19,123 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 15:57:25,512 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 15:57:25,512 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:57:25,512 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:57:25,512 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:57:25,512 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:57:26,034 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 15:57:26,146 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 15:57:26,828 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 15:57:27,743 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 15:57:27,743 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 15:57:27,743 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:02:27,892 - INFO - 🔄 CYCLE #14
+2026-04-02 16:02:28,002 - INFO - ======================================================================
+2026-04-02 16:02:28,003 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:02:28
+2026-04-02 16:02:28,003 - INFO - ======================================================================
+2026-04-02 16:02:28,005 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:02:28,006 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:02:35,784 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:02:35,785 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:02:35,785 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:02:35,785 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:02:35,785 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:02:36,356 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:02:36,512 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:02:37,198 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:02:38,107 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:02:38,150 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:02:38,150 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:07:38,301 - INFO - 🔄 CYCLE #15
+2026-04-02 16:07:38,303 - INFO - ======================================================================
+2026-04-02 16:07:38,303 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:07:38
+2026-04-02 16:07:38,303 - INFO - ======================================================================
+2026-04-02 16:07:38,306 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:07:38,306 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:07:45,438 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:07:45,439 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:07:45,439 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:07:45,439 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:07:45,439 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:07:45,966 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:07:46,081 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:07:46,758 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:07:47,672 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:07:47,672 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:07:47,672 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:12:47,728 - INFO - 🔄 CYCLE #16
+2026-04-02 16:12:47,728 - INFO - ======================================================================
+2026-04-02 16:12:47,728 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:12:47
+2026-04-02 16:12:47,728 - INFO - ======================================================================
+2026-04-02 16:12:47,730 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:12:47,730 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:12:54,839 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:12:54,840 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:12:54,840 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:12:54,840 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:12:54,840 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:12:55,359 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:12:55,471 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:12:56,151 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:12:57,071 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:12:57,071 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:12:57,071 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:17:57,213 - INFO - 🔄 CYCLE #17
+2026-04-02 16:17:57,215 - INFO - ======================================================================
+2026-04-02 16:17:57,216 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:17:57
+2026-04-02 16:17:57,216 - INFO - ======================================================================
+2026-04-02 16:17:57,219 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:17:57,219 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:18:03,631 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:18:03,633 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:18:03,633 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:18:03,633 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:18:03,633 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:18:04,194 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:18:04,307 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:18:04,992 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:18:05,905 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:18:05,905 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:18:05,905 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:23:05,997 - INFO - 🔄 CYCLE #18
+2026-04-02 16:23:06,099 - INFO - ======================================================================
+2026-04-02 16:23:06,100 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:23:06
+2026-04-02 16:23:06,100 - INFO - ======================================================================
+2026-04-02 16:23:06,103 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:23:06,103 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:23:12,719 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:23:12,719 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:23:12,719 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:23:12,720 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:23:12,720 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:23:13,237 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:23:13,352 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:23:14,044 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:23:14,947 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:23:14,947 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:23:14,947 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:28:14,983 - INFO - 🔄 CYCLE #19
+2026-04-02 16:28:15,072 - INFO - ======================================================================
+2026-04-02 16:28:15,073 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:28:15
+2026-04-02 16:28:15,073 - INFO - ======================================================================
+2026-04-02 16:28:15,075 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:28:15,076 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:28:22,028 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:28:22,028 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:28:22,028 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:28:22,028 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:28:22,028 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:28:22,530 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:28:22,642 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:28:23,322 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:28:24,225 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:28:24,226 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:28:24,226 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:29:59,832 - INFO - ======================================================================
+2026-04-02 16:29:59,832 - INFO - 🤖 26-CRYPTO TRADING BOT STARTING (FIXED VERSION)
+2026-04-02 16:29:59,832 - INFO - ======================================================================
+2026-04-02 16:29:59,832 - INFO - 💰 Capital: $393.22 Gemini (LONG), $262.14 Binance (SHORT)
+2026-04-02 16:29:59,832 - INFO - 📊 Position size: 5.0% of capital
+2026-04-02 16:29:59,832 - INFO - ⚡ Leverage: 3x (Binance only)
+2026-04-02 16:29:59,832 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-02 16:29:59,832 - INFO - 🛡️  FIX: Position checking enabled - prevents simultaneous LONG/SHORT
+2026-04-02 16:29:59,832 - INFO - ======================================================================
+2026-04-02 16:29:59,834 - INFO - ✅ Gemini exchange initialized
+2026-04-02 16:29:59,837 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 16:29:59,837 - INFO - 🔄 CYCLE #1
+2026-04-02 16:29:59,837 - INFO - ======================================================================
+2026-04-02 16:29:59,837 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:29:59
+2026-04-02 16:29:59,837 - INFO - ======================================================================
+2026-04-02 16:29:59,838 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:29:59,838 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING BTC: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING ETH: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING SOL: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING XRP: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING DOT: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING DOGE: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING AVAX: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING LINK: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:29:59,838 - WARNING - ⚠️ SKIPPING UNI: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:30:04,223 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:30:04,223 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:30:04,223 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:30:04,223 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:30:04,223 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:30:06,548 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:30:06,663 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:30:07,345 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:30:08,258 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:30:08,258 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:30:08,258 - INFO - ⏳ Waiting 300 seconds...
+2026-04-02 16:35:08,323 - INFO - 🔄 CYCLE #2
+2026-04-02 16:35:08,326 - INFO - ======================================================================
+2026-04-02 16:35:08,326 - INFO - 📊 26-CRYPTO TRADING CYCLE (FIXED) - 16:35:08
+2026-04-02 16:35:08,326 - INFO - ======================================================================
+2026-04-02 16:35:08,329 - INFO - 📊 Loaded 17 open positions
+2026-04-02 16:35:08,330 - INFO - 🔍 Checking 11 cryptos on Gemini for LONG...
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING BTC: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING ETH: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING SOL: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING XRP: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING DOT: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING DOGE: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING AVAX: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,330 - WARNING - ⚠️ SKIPPING LINK: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:08,331 - WARNING - ⚠️ SKIPPING UNI: Already have SELL on binance, would conflict with BUY on gemini
+2026-04-02 16:35:09,790 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-02 16:35:09,790 - WARNING - ⚠️ SKIPPING BTC: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:35:09,790 - WARNING - ⚠️ SKIPPING ETH: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:35:09,790 - WARNING - ⚠️ SKIPPING SOL: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:35:09,790 - WARNING - ⚠️ SKIPPING XRP: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:35:10,317 - WARNING - ⚠️ SKIPPING LINK: Already have BUY on gemini, would conflict with SELL on binance
+2026-04-02 16:35:10,433 - ERROR - ❌ Error checking Binance MATIC: binance does not have market symbol MATIC/USDT
+2026-04-02 16:35:11,116 - ERROR - ❌ Error checking Binance EOS: binance does not have market symbol EOS/USDT
+2026-04-02 16:35:12,023 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 16:35:12,023 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 16:35:12,024 - INFO - ⏳ Waiting 300 seconds...

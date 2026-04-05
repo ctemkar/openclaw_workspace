@@ -1,0 +1,70 @@
+2026-04-03 01:35:50,602 - INFO - ======================================================================
+2026-04-03 01:35:50,602 - INFO - 🧠 MULTI-LLM VOTING TRADING SYSTEM
+2026-04-03 01:35:50,602 - INFO - 🤖 DeepSeek (main) + 4 Ollama LLMs consensus
+2026-04-03 01:35:50,602 - INFO - ======================================================================
+2026-04-03 01:35:50,603 - INFO - ✅ Gemini API keys loaded
+2026-04-03 01:35:50,603 - INFO - ✅ Binance API keys loaded
+2026-04-03 01:35:50,604 - INFO - ✅ Gemini exchange initialized
+2026-04-03 01:35:50,608 - INFO - ✅ Binance exchange initialized
+2026-04-03 01:35:50,608 - INFO - ✅ Exchanges initialized
+2026-04-03 01:35:50,608 - INFO - 💰 Gemini capital: $434.35
+2026-04-03 01:35:50,608 - INFO - 💰 Binance capital: $36.70
+2026-04-03 01:35:50,608 - INFO - 
+🔄 TRADING CYCLE 1 - 01:35:50
+2026-04-03 01:35:50,608 - INFO - ======================================================================
+2026-04-03 01:35:50,608 - INFO - 🧠 MULTI-LLM TRADING CYCLE - 01:35:50
+2026-04-03 01:35:50,608 - INFO - ======================================================================
+2026-04-03 01:35:50,608 - INFO - 📈 Getting current prices for 10 cryptos...
+2026-04-03 01:35:53,510 - INFO - 🔍 Getting LLM consensus for BTC...
+2026-04-03 01:36:24,136 - ERROR - ❌ Error querying llama3:latest for BTC: 
+2026-04-03 01:36:24,145 - ERROR - ❌ Error querying llama3.1:latest for BTC: 
+2026-04-03 01:36:24,145 - ERROR - ❌ Error querying qwen2.5-coder:32b for BTC: 
+2026-04-03 01:36:24,145 - ERROR - ❌ Error querying glm-4.7-flash:latest for BTC: 
+2026-04-03 01:36:24,153 - WARNING - ⚠️ No valid LLM responses for BTC
+2026-04-03 01:36:24,155 - INFO - 🔍 Getting LLM consensus for ETH...
+2026-04-03 01:36:55,129 - ERROR - ❌ Error querying llama3:latest for ETH: 
+2026-04-03 01:36:55,192 - ERROR - ❌ Error querying qwen2.5-coder:32b for ETH: 
+2026-04-03 01:36:55,192 - ERROR - ❌ Error querying llama3.1:latest for ETH: 
+2026-04-03 01:36:55,192 - ERROR - ❌ Error querying glm-4.7-flash:latest for ETH: 
+2026-04-03 01:36:55,193 - WARNING - ⚠️ No valid LLM responses for ETH
+2026-04-03 01:36:55,200 - INFO - 🔍 Getting LLM consensus for SOL...
+2026-04-03 01:37:26,768 - ERROR - ❌ Error querying llama3:latest for SOL: 
+2026-04-03 01:37:26,826 - ERROR - ❌ Error querying llama3.1:latest for SOL: 
+2026-04-03 01:37:26,827 - ERROR - ❌ Error querying qwen2.5-coder:32b for SOL: 
+2026-04-03 01:37:26,827 - ERROR - ❌ Error querying glm-4.7-flash:latest for SOL: 
+2026-04-03 01:37:26,828 - WARNING - ⚠️ No valid LLM responses for SOL
+2026-04-03 01:37:26,828 - INFO - 🔍 Getting LLM consensus for XRP...
+2026-04-03 01:37:57,902 - ERROR - ❌ Error querying qwen2.5-coder:32b for XRP: 
+2026-04-03 01:37:57,904 - ERROR - ❌ Error querying glm-4.7-flash:latest for XRP: 
+2026-04-03 01:37:57,905 - INFO - 📊 XRP consensus: BUY=3.50, SELL=3.15, Signal=NEUTRAL
+2026-04-03 01:37:57,906 - INFO - 🔍 Getting LLM consensus for ADA...
+2026-04-03 01:38:28,794 - ERROR - ❌ Error querying llama3:latest for ADA: 
+2026-04-03 01:38:28,860 - ERROR - ❌ Error querying qwen2.5-coder:32b for ADA: 
+2026-04-03 01:38:28,860 - ERROR - ❌ Error querying llama3.1:latest for ADA: 
+2026-04-03 01:38:28,860 - ERROR - ❌ Error querying glm-4.7-flash:latest for ADA: 
+2026-04-03 01:38:28,860 - WARNING - ⚠️ No valid LLM responses for ADA
+2026-04-03 01:38:28,860 - INFO - 🔍 Getting LLM consensus for DOT...
+2026-04-03 01:38:59,836 - ERROR - ❌ Error querying llama3:latest for DOT: 
+2026-04-03 01:38:59,867 - ERROR - ❌ Error querying llama3.1:latest for DOT: 
+2026-04-03 01:38:59,867 - ERROR - ❌ Error querying qwen2.5-coder:32b for DOT: 
+2026-04-03 01:38:59,868 - ERROR - ❌ Error querying glm-4.7-flash:latest for DOT: 
+2026-04-03 01:38:59,868 - WARNING - ⚠️ No valid LLM responses for DOT
+2026-04-03 01:38:59,868 - INFO - 🔍 Getting LLM consensus for DOGE...
+2026-04-03 01:39:30,895 - ERROR - ❌ Error querying llama3:latest for DOGE: 
+2026-04-03 01:39:30,926 - ERROR - ❌ Error querying llama3.1:latest for DOGE: 
+2026-04-03 01:39:30,926 - ERROR - ❌ Error querying qwen2.5-coder:32b for DOGE: 
+2026-04-03 01:39:30,964 - ERROR - ❌ Error querying glm-4.7-flash:latest for DOGE: 
+2026-04-03 01:39:30,964 - WARNING - ⚠️ No valid LLM responses for DOGE
+2026-04-03 01:39:30,964 - INFO - 🔍 Getting LLM consensus for AVAX...
+2026-04-03 01:40:01,858 - ERROR - ❌ Error querying llama3:latest for AVAX: 
+2026-04-03 01:40:01,892 - ERROR - ❌ Error querying qwen2.5-coder:32b for AVAX: 
+2026-04-03 01:40:01,893 - ERROR - ❌ Error querying llama3.1:latest for AVAX: 
+2026-04-03 01:40:01,893 - ERROR - ❌ Error querying glm-4.7-flash:latest for AVAX: 
+2026-04-03 01:40:01,893 - WARNING - ⚠️ No valid LLM responses for AVAX
+2026-04-03 01:40:01,894 - INFO - 🔍 Getting LLM consensus for LINK...
+2026-04-03 01:40:32,891 - ERROR - ❌ Error querying llama3:latest for LINK: 
+2026-04-03 01:40:32,944 - ERROR - ❌ Error querying qwen2.5-coder:32b for LINK: 
+2026-04-03 01:40:32,944 - ERROR - ❌ Error querying llama3.1:latest for LINK: 
+2026-04-03 01:40:32,944 - ERROR - ❌ Error querying glm-4.7-flash:latest for LINK: 
+2026-04-03 01:40:32,945 - WARNING - ⚠️ No valid LLM responses for LINK
+2026-04-03 01:40:32,945 - INFO - 🔍 Getting LLM consensus for UNI...

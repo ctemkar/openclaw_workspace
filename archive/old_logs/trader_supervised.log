@@ -1,0 +1,105 @@
+2026-04-02 12:08:53,168 - INFO - ======================================================================
+2026-04-02 12:08:53,168 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 12:08:53,168 - INFO - ======================================================================
+2026-04-02 12:08:53,168 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 12:08:53,168 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-02 12:08:53,168 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-02 12:08:53,168 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:08:53,168 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:08:53,168 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-02 12:08:53,168 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 12:08:53,168 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 12:08:53,168 - INFO - ======================================================================
+2026-04-02 12:08:53,168 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 12:08:53,168 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 12:08:53,168 - INFO - ======================================================================
+2026-04-02 12:08:53,168 - INFO - ✅ Gemini API keys loaded
+2026-04-02 12:08:53,169 - INFO - ✅ Binance API keys loaded
+2026-04-02 12:08:53,170 - INFO - ✅ Gemini exchange initialized
+2026-04-02 12:08:53,173 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 12:08:53,173 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 12:08:53,173 - INFO - ======================================================================
+2026-04-02 12:08:53,173 - INFO - 📊 26-CRYPTO TRADING CYCLE - 12:08:53
+2026-04-02 12:08:53,173 - INFO - ======================================================================
+2026-04-02 12:08:53,173 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-02 12:09:35,073 - INFO - ======================================================================
+2026-04-02 12:09:35,073 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 12:09:35,073 - INFO - ======================================================================
+2026-04-02 12:09:35,073 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 12:09:35,073 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-02 12:09:35,073 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-02 12:09:35,073 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:09:35,073 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:09:35,074 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-02 12:09:35,074 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 12:09:35,074 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 12:09:35,074 - INFO - ======================================================================
+2026-04-02 12:09:35,074 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 12:09:35,074 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 12:09:35,074 - INFO - ======================================================================
+2026-04-02 12:09:35,074 - INFO - ✅ Gemini API keys loaded
+2026-04-02 12:09:35,074 - INFO - ✅ Binance API keys loaded
+2026-04-02 12:09:35,075 - INFO - ✅ Gemini exchange initialized
+2026-04-02 12:09:35,078 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 12:09:35,078 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 12:09:35,078 - INFO - ======================================================================
+2026-04-02 12:09:35,078 - INFO - 📊 26-CRYPTO TRADING CYCLE - 12:09:35
+2026-04-02 12:09:35,078 - INFO - ======================================================================
+2026-04-02 12:09:35,078 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-02 12:09:48,099 - INFO - 🔍 Checking 23 cryptos on Binance for SHORT...
+2026-04-02 12:09:48,099 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-02 12:09:48,099 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 12:09:48,100 - INFO - ⏱️  Cycle 1 duration: 13.0 seconds
+2026-04-02 12:09:48,100 - INFO - 📈 Total opportunities found: 0
+2026-04-02 12:14:45,677 - INFO - ======================================================================
+2026-04-02 12:14:45,678 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 12:14:45,678 - INFO - ======================================================================
+2026-04-02 12:14:45,678 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 12:14:45,678 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-02 12:14:45,678 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-02 12:14:45,678 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:14:45,678 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:14:45,678 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-02 12:14:45,678 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 12:14:45,678 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 12:14:45,678 - INFO - ======================================================================
+2026-04-02 12:14:45,678 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 12:14:45,678 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 12:14:45,678 - INFO - ======================================================================
+2026-04-02 12:14:45,678 - INFO - ✅ Gemini API keys loaded
+2026-04-02 12:14:45,678 - INFO - ✅ Binance API keys loaded
+2026-04-02 12:14:45,680 - INFO - ✅ Gemini exchange initialized
+2026-04-02 12:14:45,682 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 12:14:45,682 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 12:14:45,682 - INFO - ======================================================================
+2026-04-02 12:14:45,682 - INFO - 📊 26-CRYPTO TRADING CYCLE - 12:14:45
+2026-04-02 12:14:45,683 - INFO - ======================================================================
+2026-04-02 12:14:45,683 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-02 12:15:19,126 - INFO - ======================================================================
+2026-04-02 12:15:19,126 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 12:15:19,126 - INFO - ======================================================================
+2026-04-02 12:15:19,126 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 12:15:19,126 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-02 12:15:19,126 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-02 12:15:19,126 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:15:19,126 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 12:15:19,126 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-02 12:15:19,126 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 12:15:19,126 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 12:15:19,126 - INFO - ======================================================================
+2026-04-02 12:15:19,126 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 12:15:19,126 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 12:15:19,126 - INFO - ======================================================================
+2026-04-02 12:15:19,127 - INFO - ✅ Gemini API keys loaded
+2026-04-02 12:15:19,127 - INFO - ✅ Binance API keys loaded
+2026-04-02 12:15:19,128 - INFO - ✅ Gemini exchange initialized
+2026-04-02 12:15:19,131 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 12:15:19,131 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 12:15:19,131 - INFO - ======================================================================
+2026-04-02 12:15:19,131 - INFO - 📊 26-CRYPTO TRADING CYCLE - 12:15:19
+2026-04-02 12:15:19,131 - INFO - ======================================================================
+2026-04-02 12:15:19,131 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...

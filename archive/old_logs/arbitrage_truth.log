@@ -1,0 +1,16 @@
+🚀 Starting Arbitrage Truth Dashboard on http://localhost:5012
+   Shows the REAL facts about 36 vs 50 cryptos
+ * Serving Flask app 'arbitrage_truth_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5012
+ * Running on http://192.168.1.63:5012
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Apr/2026 14:17:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:17:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:17:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:37:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:37:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:38:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:38:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

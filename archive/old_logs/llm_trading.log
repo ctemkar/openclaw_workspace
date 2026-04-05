@@ -1,0 +1,167 @@
+2026-04-01 20:32:21,618 - INFO - ======================================================================
+2026-04-01 20:32:21,618 - INFO - 🧠 LLM CONSENSUS TRADING BOT
+2026-04-01 20:32:21,618 - INFO - 🤖 DeepSeek (main) + 4 Ollama models
+2026-04-01 20:32:21,618 - INFO - ======================================================================
+2026-04-01 20:32:21,620 - INFO - ✅ Gemini loaded
+2026-04-01 20:32:21,624 - INFO - ✅ Binance loaded
+2026-04-01 20:32:21,624 - INFO - 
+🔄 CYCLE 1 - 20:32:21
+2026-04-01 20:32:24,522 - INFO - 🔍 Getting LLM consensus for BTC...
+2026-04-01 20:32:41,812 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:32:49,502 - INFO -   llama3.1: BUY=8, SELL=3
+2026-04-01 20:32:55,896 - INFO -   llama3: BUY=7, SELL=3
+2026-04-01 20:33:15,899 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:33:15,922 - INFO - 📊 BTC consensus: BUY=6.7, SELL=3.7, Signal=STRONG_BUY
+2026-04-01 20:33:15,922 - INFO - 🔍 Getting LLM consensus for ETH...
+2026-04-01 20:33:34,506 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:33:42,346 - INFO -   llama3.1: BUY=7, SELL=2
+2026-04-01 20:33:48,164 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:34:08,173 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:34:08,174 - INFO - 📊 ETH consensus: BUY=6.7, SELL=3.7, Signal=STRONG_BUY
+2026-04-01 20:34:08,174 - INFO - 🔍 Getting LLM consensus for SOL...
+2026-04-01 20:34:23,211 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:34:30,497 - INFO -   llama3.1: BUY=4, SELL=8
+2026-04-01 20:34:36,945 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:34:56,949 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:34:56,951 - INFO - 📊 SOL consensus: BUY=5.7, SELL=5.7, Signal=NEUTRAL
+2026-04-01 20:34:56,951 - INFO - 🔍 Getting LLM consensus for XRP...
+2026-04-01 20:35:14,723 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:35:22,503 - INFO -   llama3.1: BUY=8, SELL=6
+2026-04-01 20:35:30,138 - INFO -   llama3: BUY=8, SELL=6
+2026-04-01 20:35:50,275 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:35:50,276 - INFO - 📊 XRP consensus: BUY=7.0, SELL=5.7, Signal=NEUTRAL
+2026-04-01 20:35:50,309 - INFO - 🔍 Getting LLM consensus for ADA...
+2026-04-01 20:36:05,776 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:36:13,710 - INFO -   llama3.1: BUY=6, SELL=4
+2026-04-01 20:36:19,442 - INFO -   llama3: BUY=6, SELL=4
+2026-04-01 20:36:39,488 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:36:39,508 - INFO - 📊 ADA consensus: BUY=5.7, SELL=4.3, Signal=NEUTRAL
+2026-04-01 20:36:39,508 - INFO - 🔍 Getting LLM consensus for DOT...
+2026-04-01 20:36:56,374 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:37:04,006 - INFO -   llama3.1: BUY=8, SELL=3
+2026-04-01 20:37:11,806 - INFO -   llama3: BUY=7, SELL=5
+2026-04-01 20:37:31,808 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:37:31,831 - INFO - 📊 DOT consensus: BUY=6.7, SELL=4.3, Signal=BUY
+2026-04-01 20:37:31,831 - INFO - 🔍 Getting LLM consensus for DOGE...
+2026-04-01 20:37:49,823 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:37:56,928 - INFO -   llama3.1: BUY=6, SELL=3
+2026-04-01 20:38:03,832 - INFO -   llama3: BUY=6, SELL=3
+2026-04-01 20:38:23,837 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:38:23,840 - INFO - 📊 DOGE consensus: BUY=5.7, SELL=3.7, Signal=BUY
+2026-04-01 20:38:23,851 - INFO - 🔍 Getting LLM consensus for AVAX...
+2026-04-01 20:38:40,860 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:38:48,427 - INFO -   llama3.1: BUY=8, SELL=6
+2026-04-01 20:38:55,579 - INFO -   llama3: BUY=8, SELL=2
+2026-04-01 20:39:15,582 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:39:15,612 - INFO - 📊 AVAX consensus: BUY=7.0, SELL=4.3, Signal=BUY
+2026-04-01 20:39:15,612 - INFO - 🔍 Getting LLM consensus for LINK...
+2026-04-01 20:39:32,389 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:39:39,476 - INFO -   llama3.1: BUY=8, SELL=5
+2026-04-01 20:39:47,460 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:40:07,463 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:40:07,476 - INFO - 📊 LINK consensus: BUY=7.0, SELL=4.7, Signal=BUY
+2026-04-01 20:40:07,476 - INFO - 🔍 Getting LLM consensus for UNI...
+2026-04-01 20:40:23,255 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:40:30,553 - INFO -   llama3.1: BUY=6, SELL=4
+2026-04-01 20:40:40,147 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:41:00,150 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:41:00,159 - INFO - 📊 UNI consensus: BUY=6.3, SELL=4.3, Signal=BUY
+2026-04-01 20:41:00,159 - INFO - 
+🎯 TRADE DECISIONS:
+2026-04-01 20:41:00,976 - INFO - ✅ Gemini loaded for trading
+2026-04-01 20:41:01,132 - INFO - ✅ Binance loaded for trading
+2026-04-01 20:41:01,132 - INFO - ✅ Trade executor loaded
+2026-04-01 20:41:01,132 - INFO -   📈 BTC: BUY signal (STRONG_BUY)
+2026-04-01 20:41:01,136 - INFO - 🟢 EXECUTING GEMINI LONG: 0.000219 BTC @ $68488.84
+2026-04-01 20:41:01,136 - INFO -    Amount: $15.00, Reason: STRONG_BUY consensus: BUY=6.67/10, SELL=3.67/10
+2026-04-01 20:41:04,442 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,442 - INFO -   📈 ETH: BUY signal (STRONG_BUY)
+2026-04-01 20:41:04,442 - INFO - 🟢 EXECUTING GEMINI LONG: 0.007044 ETH @ $2129.35
+2026-04-01 20:41:04,442 - INFO -    Amount: $15.00, Reason: STRONG_BUY consensus: BUY=6.67/10, SELL=3.67/10
+2026-04-01 20:41:04,442 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,442 - INFO -   📈 DOT: BUY signal (BUY)
+2026-04-01 20:41:04,442 - INFO - 🟢 EXECUTING GEMINI LONG: 11.764706 DOT @ $1.27
+2026-04-01 20:41:04,442 - INFO -    Amount: $15.00, Reason: BUY consensus: BUY=6.67/10, SELL=4.33/10
+2026-04-01 20:41:04,442 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,442 - INFO -   📈 DOGE: BUY signal (BUY)
+2026-04-01 20:41:04,442 - INFO - 🟢 EXECUTING GEMINI LONG: 162.004536 DOGE @ $0.09
+2026-04-01 20:41:04,442 - INFO -    Amount: $15.00, Reason: BUY consensus: BUY=5.67/10, SELL=3.67/10
+2026-04-01 20:41:04,442 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,443 - INFO -   📈 AVAX: BUY signal (BUY)
+2026-04-01 20:41:04,443 - INFO - 🟢 EXECUTING GEMINI LONG: 1.625135 AVAX @ $9.23
+2026-04-01 20:41:04,443 - INFO -    Amount: $15.00, Reason: BUY consensus: BUY=7.0/10, SELL=4.33/10
+2026-04-01 20:41:04,443 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,443 - INFO -   📈 LINK: BUY signal (BUY)
+2026-04-01 20:41:04,443 - INFO - 🟢 EXECUTING GEMINI LONG: 1.666667 LINK @ $9.00
+2026-04-01 20:41:04,443 - INFO -    Amount: $15.00, Reason: BUY consensus: BUY=7.0/10, SELL=4.67/10
+2026-04-01 20:41:04,443 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,443 - INFO -   📈 UNI: BUY signal (BUY)
+2026-04-01 20:41:04,443 - INFO - 🟢 EXECUTING GEMINI LONG: 4.166667 UNI @ $3.60
+2026-04-01 20:41:04,443 - INFO -    Amount: $15.00, Reason: BUY consensus: BUY=6.33/10, SELL=4.33/10
+2026-04-01 20:41:04,443 - ERROR - ❌ Gemini trade failed: gemini createOrder() allows limit orders only
+2026-04-01 20:41:04,443 - INFO - ⏭️ No trades executed (waiting for stronger signals)
+2026-04-01 20:41:04,443 - INFO - ⏰ Next analysis in 10 minutes...
+2026-04-01 20:51:04,510 - INFO - 
+🔄 CYCLE 2 - 20:51:04
+2026-04-01 20:51:05,671 - INFO - 🔍 Getting LLM consensus for BTC...
+2026-04-01 20:51:22,393 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:51:30,606 - INFO -   llama3.1: BUY=4, SELL=7
+2026-04-01 20:51:39,314 - INFO -   llama3: BUY=6, SELL=4
+2026-04-01 20:51:59,316 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:51:59,328 - INFO - 📊 BTC consensus: BUY=5.0, SELL=5.3, Signal=NEUTRAL
+2026-04-01 20:51:59,329 - INFO - 🔍 Getting LLM consensus for ETH...
+2026-04-01 20:52:18,060 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:52:25,384 - INFO -   llama3.1: BUY=8, SELL=5
+2026-04-01 20:52:33,860 - INFO -   llama3: BUY=7, SELL=4
+2026-04-01 20:52:53,864 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:52:53,881 - INFO - 📊 ETH consensus: BUY=6.7, SELL=4.7, Signal=BUY
+2026-04-01 20:52:53,881 - INFO - 🔍 Getting LLM consensus for SOL...
+2026-04-01 20:53:12,460 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:53:20,071 - INFO -   llama3.1: BUY=8, SELL=2
+2026-04-01 20:53:27,798 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:53:47,803 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:53:47,826 - INFO - 📊 SOL consensus: BUY=7.0, SELL=3.7, Signal=STRONG_BUY
+2026-04-01 20:53:47,826 - INFO - 🔍 Getting LLM consensus for XRP...
+2026-04-01 20:54:07,872 - ERROR - ❌ Error querying glm-4.7-flash:latest: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:54:14,838 - INFO -   llama3.1: BUY=8, SELL=2
+2026-04-01 20:54:21,338 - INFO -   llama3: BUY=8, SELL=5
+2026-04-01 20:54:41,341 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:54:41,363 - INFO - 📊 XRP consensus: BUY=8.0, SELL=3.5, Signal=STRONG_BUY
+2026-04-01 20:54:41,364 - INFO - 🔍 Getting LLM consensus for ADA...
+2026-04-01 20:54:58,857 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:55:07,125 - INFO -   llama3.1: BUY=6, SELL=3
+2026-04-01 20:55:14,468 - INFO -   llama3: BUY=6, SELL=4
+2026-04-01 20:55:34,470 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:55:34,492 - INFO - 📊 ADA consensus: BUY=5.7, SELL=4.0, Signal=BUY
+2026-04-01 20:55:34,492 - INFO - 🔍 Getting LLM consensus for DOT...
+2026-04-01 20:55:51,614 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:55:58,483 - INFO -   llama3.1: BUY=6, SELL=4
+2026-04-01 20:56:04,947 - INFO -   llama3: BUY=5, SELL=7
+2026-04-01 20:56:25,087 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:56:25,088 - INFO - 📊 DOT consensus: BUY=5.3, SELL=5.3, Signal=NEUTRAL
+2026-04-01 20:56:25,152 - INFO - 🔍 Getting LLM consensus for DOGE...
+2026-04-01 20:56:40,634 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:56:47,621 - INFO -   llama3.1: BUY=4, SELL=6
+2026-04-01 20:56:55,574 - INFO -   llama3: BUY=6, SELL=4
+2026-04-01 20:57:15,576 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:57:15,599 - INFO - 📊 DOGE consensus: BUY=5.0, SELL=5.0, Signal=NEUTRAL
+2026-04-01 20:57:15,599 - INFO - 🔍 Getting LLM consensus for AVAX...
+2026-04-01 20:57:33,518 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:57:41,156 - INFO -   llama3.1: BUY=7, SELL=6
+2026-04-01 20:57:47,951 - INFO -   llama3: BUY=8, SELL=6
+2026-04-01 20:58:07,954 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:58:07,976 - INFO - 📊 AVAX consensus: BUY=6.7, SELL=5.7, Signal=NEUTRAL
+2026-04-01 20:58:07,976 - INFO - 🔍 Getting LLM consensus for LINK...
+2026-04-01 20:58:25,199 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:58:32,557 - INFO -   llama3.1: BUY=8, SELL=4
+2026-04-01 20:58:40,685 - INFO -   llama3: BUY=6, SELL=4
+2026-04-01 20:59:00,689 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:59:00,691 - INFO - 📊 LINK consensus: BUY=6.3, SELL=4.3, Signal=BUY
+2026-04-01 20:59:00,691 - INFO - 🔍 Getting LLM consensus for UNI...
+2026-04-01 20:59:17,023 - INFO -   glm-4.7-flash: BUY=5, SELL=5
+2026-04-01 20:59:24,552 - INFO -   llama3.1: BUY=8, SELL=2
+2026-04-01 20:59:31,218 - INFO -   llama3: BUY=8, SELL=4
+2026-04-01 20:59:51,223 - ERROR - ❌ Error querying qwen2.5-coder:32b: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=20)
+2026-04-01 20:59:51,232 - INFO - 📊 UNI consensus: BUY=7.0, SELL=3.7, Signal=STRONG_BUY
+2026-04-01 20:59:51,273 - INFO - 
+🎯 TRADE DECISIONS:

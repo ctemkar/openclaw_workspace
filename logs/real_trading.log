@@ -1,0 +1,36 @@
+2026-04-05 18:16:28,982 - INFO - 💰 MAKE MONEY BOT STARTING
+2026-04-05 18:16:28,982 - INFO - 🎯 Actually trades with REAL money TODAY
+2026-04-05 18:16:28,982 - INFO - ✅ Loaded Binance key: dT0OIm9aq8...
+2026-04-05 18:16:28,985 - INFO - ============================================================
+2026-04-05 18:16:28,985 - INFO - 💰 MAKE MONEY BOT ACTIVE
+2026-04-05 18:16:28,985 - INFO - 📊 Trade size: $30.0
+2026-04-05 18:16:28,985 - INFO - 🎯 Target: YFI -1.74% arbitrage
+2026-04-05 18:16:28,985 - INFO - ============================================================
+2026-04-05 18:16:28,985 - INFO - 
+============================================================
+2026-04-05 18:16:28,986 - INFO - 🔄 CYCLE 1 - 18:16:28
+2026-04-05 18:16:28,986 - INFO - ============================================================
+2026-04-05 18:16:28,986 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:16:31,016 - INFO - 💰 Binance balance: $60.43 USDT
+2026-04-05 18:16:31,016 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:16:31,129 - INFO - 📊 YFI price: $2420.00
+2026-04-05 18:16:31,129 - INFO - 💰 BUYING: 0.012397 YFI at $2420.00 ($30.00)
+2026-04-05 18:16:31,242 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849487099', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2Fb949190c66edb42f356878', 'transactTime': '1775387791287', 'price': '0.00000000', 'origQty': '0.01239000', 'executedQty': '0.01239000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.00858000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775387791287', 'fills': [{'price': '2422.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104517'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849487099', 'clientOrderId': 'x-TKT5PX2Fb949190c66edb42f356878', 'timestamp': 1775387791287, 'datetime': '2026-04-05T11:16:31.287Z', 'lastTradeTimestamp': 1775387791287, 'lastUpdateTimestamp': 1775387791287, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2422.0, 'triggerPrice': None, 'amount': 0.01239, 'cost': 30.00858, 'average': 2422.0, 'filled': 0.01239, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'trades': [{'info': {'price': '2422.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104517'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104517', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2422.0, 'amount': 0.01239, 'cost': 30.00858, 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:16:31,242 - INFO - 🚀 SELLING: 0.012390 YFI at market price
+2026-04-05 18:16:31,354 - ERROR - ❌ SELL error: binance Account has insufficient balance for requested action.
+2026-04-05 18:16:31,355 - ERROR - ❌ Error in cycle 1: unsupported operand type(s) for +=: 'float' and 'NoneType'
+2026-04-05 18:16:31,355 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:17:31,417 - INFO - 
+============================================================
+2026-04-05 18:17:31,417 - INFO - 🔄 CYCLE 2 - 18:17:31
+2026-04-05 18:17:31,417 - INFO - ============================================================
+2026-04-05 18:17:31,417 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:17:31,544 - INFO - 💰 Binance balance: $30.42 USDT
+2026-04-05 18:17:31,544 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:17:31,656 - INFO - 📊 YFI price: $2422.00
+2026-04-05 18:17:31,657 - INFO - 💰 BUYING: 0.012386 YFI at $2422.00 ($30.00)
+2026-04-05 18:17:31,771 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849487215', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2F087188031878f90b9b03fe', 'transactTime': '1775387851817', 'price': '0.00000000', 'origQty': '0.01238000', 'executedQty': '0.01238000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '29.98436000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775387851817', 'fills': [{'price': '2422.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104518'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849487215', 'clientOrderId': 'x-TKT5PX2F087188031878f90b9b03fe', 'timestamp': 1775387851817, 'datetime': '2026-04-05T11:17:31.817Z', 'lastTradeTimestamp': 1775387851817, 'lastUpdateTimestamp': 1775387851817, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2422.0, 'triggerPrice': None, 'amount': 0.01238, 'cost': 29.98436, 'average': 2422.0, 'filled': 0.01238, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'trades': [{'info': {'price': '2422.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104518'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104518', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2422.0, 'amount': 0.01238, 'cost': 29.98436, 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:17:31,771 - INFO - 🚀 SELLING: 0.012380 YFI at market price
+2026-04-05 18:17:31,885 - ERROR - ❌ SELL error: name 'json' is not defined
+2026-04-05 18:17:31,885 - ERROR - ❌ Error in cycle 2: unsupported operand type(s) for +=: 'float' and 'NoneType'
+2026-04-05 18:17:31,885 - INFO - ⏰ Next trade in 60 seconds...

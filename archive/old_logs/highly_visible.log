@@ -1,0 +1,8 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 Starting HIGHLY VISIBLE Dashboard on port 5008...
+🎨 Bright colors, large text, impossible to miss!
+🔗 Access: http://localhost:5008/
+ * Serving Flask app 'dashboard_highly_visible'
+ * Debug mode: off
+Address already in use
+Port 5008 is in use by another program. Either identify and stop that program, or start the server with a different port.

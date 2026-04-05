@@ -1,0 +1,43 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 STARTING SIMPLE P&L DASHBOARD
+   • Port: 5008
+   • Shows: P&L information as requested
+   • Priority: Cumulative P&L first
+   • Clear: SHORT trades status shown
+   • Access: http://localhost:5008/
+
+ * Serving Flask app 'simple_pnl_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.63:5008
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/Apr/2026 02:10:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:10:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:10:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:10:39] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:10:45] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:11:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:11:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:19:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:20:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:20:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:21:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:21:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:22:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:22:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:22:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

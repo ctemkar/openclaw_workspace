@@ -1,0 +1,945 @@
+2026-04-01 04:24:23,556 - INFO - ======================================================================
+2026-04-01 04:24:23,557 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-01 04:24:23,557 - INFO - ======================================================================
+2026-04-01 04:24:23,557 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-01 04:24:23,557 - INFO - ♊ Gemini LONG: 16 cryptos ($134.27 capital - FULL BALANCE!)
+2026-04-01 04:24:23,557 - INFO - ₿ Binance SHORT: 26 cryptos ($134.27 capital, 1x)
+2026-04-01 04:24:23,557 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-01 04:24:23,557 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-01 04:24:23,557 - INFO - 💰 Position size: 10% of capital (MORE AGGRESSIVE!)
+2026-04-01 04:24:23,557 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-01 04:24:23,557 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-01 04:24:23,557 - INFO - ======================================================================
+2026-04-01 04:24:23,557 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-01 04:24:23,557 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-01 04:24:23,557 - INFO - ======================================================================
+2026-04-01 04:24:23,557 - INFO - ✅ Gemini API keys loaded
+2026-04-01 04:24:23,557 - INFO - ✅ Binance API keys loaded
+2026-04-01 04:24:23,559 - INFO - ✅ Gemini exchange initialized
+2026-04-01 04:24:23,562 - INFO - ✅ Binance Futures exchange initialized
+2026-04-01 04:24:23,562 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-01 04:24:23,562 - INFO - ======================================================================
+2026-04-01 04:24:23,562 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:24:23
+2026-04-01 04:24:23,562 - INFO - ======================================================================
+2026-04-01 04:24:23,562 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:25:49,950 - ERROR - ❌ Error checking BTC on Gemini: gemini GET https://api.gemini.com/v1/symbols
+2026-04-01 04:26:22,641 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:26:23,500 - ERROR - ❌ Error checking BTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992382641&recvWindow=10000&signature=d7c9c6ff27bafa00286edb3798ebbc43231bf3d62875e9ae6e63cd0416158be8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:23,786 - ERROR - ❌ Error checking ETH on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992383500&recvWindow=10000&signature=913f35bb644acb77c2339b346e8cc2b4c360aa190c65d8f7a458374d79e7362c 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:24,070 - ERROR - ❌ Error checking SOL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992383786&recvWindow=10000&signature=1929ebf7da02040c468fa7201213e8c190a3c7eb3771234314ed94142d342687 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:24,438 - ERROR - ❌ Error checking XRP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992384070&recvWindow=10000&signature=5d205a7536dd577a3d46b577cedb9015714870ad550249b5b2128d41a92ce06b 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:24,724 - ERROR - ❌ Error checking ADA on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992384439&recvWindow=10000&signature=21e003a130adada773ac6e7aa4198aa6ab779f5625cbb2bd7f86f6ed72981b7e 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:25,010 - ERROR - ❌ Error checking DOT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992384725&recvWindow=10000&signature=939509356fa53f8f1cf9461283d48fa2d5c3a5afac59fed2a1a19f15d6d18b20 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:25,293 - ERROR - ❌ Error checking DOGE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992385010&recvWindow=10000&signature=54ba7c0e227b67ef187cea195789fa5799dea8cbe30b06ea8cf61924a6b98f3a 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:25,579 - ERROR - ❌ Error checking AVAX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992385294&recvWindow=10000&signature=a4bc619799ac8944fcfccbed9fc42977565067a8568227a58c7b20434c1c13d1 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:25,863 - ERROR - ❌ Error checking LINK on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992385579&recvWindow=10000&signature=839d990859db7b187acc298e2afa830904f30ff92bc05a7dc400ac5a88f9e536 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:26,148 - ERROR - ❌ Error checking UNI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992385863&recvWindow=10000&signature=d4920a461475945c2618ab02b1cf56be2ec7495d821f89f3dba7208d07189194 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:26,432 - ERROR - ❌ Error checking LTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992386148&recvWindow=10000&signature=102005131932cf70398e7c1db480edbbc074291a108bf65304397ffdf92bb32d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:26,715 - ERROR - ❌ Error checking ATOM on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992386432&recvWindow=10000&signature=bc6f4145ae1a927be961eaafd14646796aa619f31ce5d1fb29fc02a73520f8a8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:27,057 - ERROR - ❌ Error checking FIL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992386715&recvWindow=10000&signature=175915b24128490ab0947441346df70ba992bc9d1d795eb61071e1ec608fbb89 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:27,345 - ERROR - ❌ Error checking XTZ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992387057&recvWindow=10000&signature=b768390dc36050029dd963b1c7bea6740ac3d513d719029c60ff4a82421751d8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:27,629 - ERROR - ❌ Error checking AAVE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992387346&recvWindow=10000&signature=9b3c5dd9d005f697c851923c3cd07196c852826df9c2fba2787fd23fd550817f 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:27,913 - ERROR - ❌ Error checking COMP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992387629&recvWindow=10000&signature=546e3902f1ced67a69d1cf3fe2518bbaa4581c7b0375e7d510a3bb88394fcdeb 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:28,198 - ERROR - ❌ Error checking YFI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992387913&recvWindow=10000&signature=cb771b32fd762625513ee9d66fe394c3e47c06a376cd487afd1666caadb0a46a 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:28,483 - ERROR - ❌ Error checking SNX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992388198&recvWindow=10000&signature=7a4cd93996d433cb287fdadab18bf8f49d4ee7478899e7037eb4a08295516366 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:28,768 - ERROR - ❌ Error checking MKR on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992388484&recvWindow=10000&signature=a9ffc3a61ce1fb12572728a4559dc5556ac5f82452be81d61fa34ebd588d2049 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:29,056 - ERROR - ❌ Error checking BAT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992388769&recvWindow=10000&signature=40c9032ba53aa35b75af2a30f1c1a2992b1023a04117472c80b62bf549fd5c32 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:29,343 - ERROR - ❌ Error checking ZRX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992389056&recvWindow=10000&signature=9508f627ae9e159b01f34f7d8ed5553805f33aaf27dd93d915543b2ffbdacef8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:29,685 - ERROR - ❌ Error checking OMG on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992389344&recvWindow=10000&signature=0787b1bcd4b1496980180c69ab266751f1067baace1d0834ddcd9170304cc8d0 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:29,973 - ERROR - ❌ Error checking ENJ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992389685&recvWindow=10000&signature=0031c5b6506765b2df8f3cdf7456ad2b78ccf787b48ef70c1fb7f4f19450fbee 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:30,258 - ERROR - ❌ Error checking MATIC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992389973&recvWindow=10000&signature=6c47782d8831f09648eda989b3672279b7d96457496b10ac778f283c25ed8b3f 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:30,544 - ERROR - ❌ Error checking SUSHI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992390258&recvWindow=10000&signature=40ad94474b36ebfef98f14cbca035f05a831d48922e80c7b28c23c1da530180f 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:30,830 - ERROR - ❌ Error checking CRV on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992390544&recvWindow=10000&signature=f0f0e471efcb8b18cd90ce7fe1ea659ac75735317bf6246b7aeab315bf289415 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:26:30,831 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 04:26:30,831 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:26:30,831 - INFO - ⏱️  Cycle 1 duration: 127.3 seconds
+2026-04-01 04:26:30,831 - INFO - 📈 Total opportunities found: 0
+2026-04-01 04:31:30,981 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-04-01 04:31:30,981 - INFO - ======================================================================
+2026-04-01 04:31:30,982 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:31:30
+2026-04-01 04:31:30,982 - INFO - ======================================================================
+2026-04-01 04:31:30,982 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:32:00,987 - ERROR - ❌ Error checking BTC on Gemini: gemini GET https://api.gemini.com/v1/pubticker/btcusd
+2026-04-01 04:32:22,877 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:32:52,880 - ERROR - ❌ Error checking BTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992742877&recvWindow=10000&signature=0578b667644c1bfca014f9fab950ae748ed04df06060c2795eef46b7b8a17b0b
+2026-04-01 04:33:22,884 - ERROR - ❌ Error checking ETH on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992772881&recvWindow=10000&signature=90c8f52a0c5a8e63b6a427fb064c2b5a3fe2ef59b05f9d7a71cc111fe849b0da
+2026-04-01 04:33:33,653 - ERROR - ❌ Error checking SOL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992802885&recvWindow=10000&signature=6be25d507f7d204b40b59696ce084543cb5762cfcab0e2fcac4b3a6a78564ec3 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:33,941 - ERROR - ❌ Error checking XRP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992813653&recvWindow=10000&signature=30f6445146732120833ed517e8c6fa8da189df6a8fdc03d8a5cd6b3ec47f722b 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:34,227 - ERROR - ❌ Error checking ADA on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992813941&recvWindow=10000&signature=3d71e4d062b506d025d4db13941ef9ef1e47bcd16c17cf9958a6806d5617209f 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:34,513 - ERROR - ❌ Error checking DOT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992814227&recvWindow=10000&signature=fb26da3c5c33ad0585d46e112d6773a8555479e32516d45a8694b24407a086a4 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:34,884 - ERROR - ❌ Error checking DOGE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992814513&recvWindow=10000&signature=f8b1fb48ba6a8d016dfb74b34361fb4f6fdecf4d817dfc9c959931a8a5a9f187 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:35,171 - ERROR - ❌ Error checking AVAX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992814885&recvWindow=10000&signature=7785d307171de9ba91f7e3e9b7ce974cf75c0dc6b35d6324603d1434bb312bd2 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:35,457 - ERROR - ❌ Error checking LINK on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992815171&recvWindow=10000&signature=b7e8ef060113949fc954e77c93164a53593821a7acfe0880b90837d5e1eb089d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:35,743 - ERROR - ❌ Error checking UNI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992815457&recvWindow=10000&signature=4519ab4a73cb4bb53d9b369aa597d3abdc5e9a3f0794bb9b1b72559e1ffc1d4e 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:36,029 - ERROR - ❌ Error checking LTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992815743&recvWindow=10000&signature=f354c53f3ae56536405c2d71832602a913df64a73be55750dcfea0e8044e2c61 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:36,314 - ERROR - ❌ Error checking ATOM on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992816029&recvWindow=10000&signature=de88bfb02eedacece76db21848f2664df495af272f18d1ee4cdffddca9e1a58d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:36,602 - ERROR - ❌ Error checking FIL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992816314&recvWindow=10000&signature=66839d96cbd2bcef06e4d7dc869c7883d12323f24c75a72ee869ff5f69e5d362 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:36,888 - ERROR - ❌ Error checking XTZ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992816602&recvWindow=10000&signature=e2535baea43b0acb047ab908bd241338cf6dd0b31f9e2428c8799d8665eb6138 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:37,258 - ERROR - ❌ Error checking AAVE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992816888&recvWindow=10000&signature=e67bbe69ada2eb28208c830be31f4966086625a29a3148ddaf1dcedcc1e41e90 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:37,541 - ERROR - ❌ Error checking COMP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992817258&recvWindow=10000&signature=e342ad4ab09748cb5df5bd559b72e3815b8bd9c9c54e7d153d5fd2c22fc57180 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:37,826 - ERROR - ❌ Error checking YFI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992817541&recvWindow=10000&signature=9d3f477787a0a14b3e64a0122a9235a5660190b3ff2ff5067d8efe9211451d43 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:38,110 - ERROR - ❌ Error checking SNX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992817826&recvWindow=10000&signature=e5cab31c474401e5536a42e3c91f2a4fc35c545e2e785205b2995682306059a7 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:38,393 - ERROR - ❌ Error checking MKR on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992818110&recvWindow=10000&signature=3cc61f961e61b7f195237c466c05db75c6deaf1a91906512c7ac53fdfefadf36 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:38,675 - ERROR - ❌ Error checking BAT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992818393&recvWindow=10000&signature=ebd4a0a3e33e24fb961ad08f3ef8c27ad42cddd4f0e539051d7020a182deeeab 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:38,958 - ERROR - ❌ Error checking ZRX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992818675&recvWindow=10000&signature=d605e3805a3824d2e280fa568d0fee90a2e12e32b2d7502bb5f0f4925c8975e3 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:39,241 - ERROR - ❌ Error checking OMG on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992818958&recvWindow=10000&signature=6a40695638bc3e6b307765b647419b485e8a37c53c3b1441a8fbebb03cb1f159 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:39,600 - ERROR - ❌ Error checking ENJ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992819242&recvWindow=10000&signature=de8e61dc077686b28305db73d2a407820224e4ab4b9d79ff9bd0fb1253280220 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:39,884 - ERROR - ❌ Error checking MATIC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992819600&recvWindow=10000&signature=51fa0511754d090a767d96296b67d352716d87e3163906cbf7b02300c79ab232 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:40,170 - ERROR - ❌ Error checking SUSHI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992819884&recvWindow=10000&signature=aff2879fc08a73aff8ebf2f392c59c17462573f7ebf68dec5bcdcb161b409740 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:40,455 - ERROR - ❌ Error checking CRV on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774992820171&recvWindow=10000&signature=2ffec3e942a907ececcb7b85a39eb49488c943bf3d1d6de89061a9864a2fc02f 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:33:40,456 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 04:33:40,456 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:33:40,456 - INFO - ⏱️  Cycle 2 duration: 129.5 seconds
+2026-04-01 04:33:40,456 - INFO - 📈 Total opportunities found: 0
+2026-04-01 04:38:40,460 - INFO - 
+🔄 CYCLE 3 STARTING...
+2026-04-01 04:38:40,461 - INFO - ======================================================================
+2026-04-01 04:38:40,462 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:38:40
+2026-04-01 04:38:40,462 - INFO - ======================================================================
+2026-04-01 04:38:40,462 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:38:49,517 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:38:50,365 - ERROR - ❌ Error checking BTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993129517&recvWindow=10000&signature=a84a04fa83f00bbd1f15fa3fb541291d255042c5c1c6f7d9c077d66398dd37c1 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:50,648 - ERROR - ❌ Error checking ETH on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993130365&recvWindow=10000&signature=547a2a7f4231f92dc80643a8100e94211ff81a9e24ed4c39affee4d2938e851e 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:50,936 - ERROR - ❌ Error checking SOL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993130648&recvWindow=10000&signature=105459e6ba0801ca56db39d12cc5f8d64b79616cbe6d7c84130a6903a4bb2df6 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:51,221 - ERROR - ❌ Error checking XRP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993130936&recvWindow=10000&signature=1f07b9468f9652680418c300e320c3a250ae2af095a9a331b5f6cb5bd8b40ac8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:51,506 - ERROR - ❌ Error checking ADA on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993131221&recvWindow=10000&signature=08f5bcec092956fd88531fc9ff3213e91fd7db7e8fa1132d727b82948459cad8 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:51,792 - ERROR - ❌ Error checking DOT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993131507&recvWindow=10000&signature=436fffe92f14b7e05b41a90d47814c66700bf683c836fd4508dffa8db846059d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:52,078 - ERROR - ❌ Error checking DOGE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993131792&recvWindow=10000&signature=e89c8b1aac4bec6ff9999f5adc7fd0d1258f9d257dd4970c6362bc24db01443d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:52,364 - ERROR - ❌ Error checking AVAX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993132078&recvWindow=10000&signature=953974ded0ae4455d4d7542541a4b3d1445d866bd4fd96bd008bd3f3c957bda2 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:52,650 - ERROR - ❌ Error checking LINK on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993132364&recvWindow=10000&signature=c73c1c3f3fb9e197bb7b6a41fdb49774b15364f922688a3d9328f6abd693b666 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:52,937 - ERROR - ❌ Error checking UNI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993132651&recvWindow=10000&signature=50b3eb31cd127fb7aa39f48468e7c4bfee515ef45b8b78115c2213a46e779ad0 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:53,222 - ERROR - ❌ Error checking LTC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993132937&recvWindow=10000&signature=6e001f5a837bfee1643a21c8317d4fd0e00bf8daa0a12bd0ef91ba16dab3285d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:53,507 - ERROR - ❌ Error checking ATOM on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993133222&recvWindow=10000&signature=68252718a570881f8d42039c2beb21fe91e275fc7eca6e26bb6f41efe2e724a4 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:53,797 - ERROR - ❌ Error checking FIL on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993133508&recvWindow=10000&signature=386570562cca661237fce77db7e55ba9b12976d96d7b72a75b5b0feba65967ce 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:54,085 - ERROR - ❌ Error checking XTZ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993133797&recvWindow=10000&signature=b2dd1fdd0d4b1906845e77f897f34d2e6543384edfa3eb2985c654b36b929fce 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:54,371 - ERROR - ❌ Error checking AAVE on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993134085&recvWindow=10000&signature=48ac34ff5ef02b40cf01784aec64dc02668008c6c2840f01968ca6167a58adb0 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:54,664 - ERROR - ❌ Error checking COMP on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993134371&recvWindow=10000&signature=0e8fe136474e393dfd27332cf8a450693773714737fbb62c22727ff03d7e21f4 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:54,950 - ERROR - ❌ Error checking YFI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993134664&recvWindow=10000&signature=4c9505b31dc15bb9c4e56ae7c28a227ee69fb82ef9ace6fd2884224a42c0a0b6 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:55,236 - ERROR - ❌ Error checking SNX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993134951&recvWindow=10000&signature=fc255fee68b05e03563f79a554e077841d51c30db378663de261687361999d8b 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:55,522 - ERROR - ❌ Error checking MKR on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993135236&recvWindow=10000&signature=41aef88be3d5ff7aba250f871188deb18367a9c642f6f415000eb21b0a57f38d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:55,807 - ERROR - ❌ Error checking BAT on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993135522&recvWindow=10000&signature=14115c4e7fea81589ea1864393172032690df261537c4fe815008953b9195dc2 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:56,092 - ERROR - ❌ Error checking ZRX on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993135807&recvWindow=10000&signature=283df20d7ceb12ad7c084ed5b24599a98d60939a7f0ca751d64b9549f53e1dc2 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:56,377 - ERROR - ❌ Error checking OMG on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993136093&recvWindow=10000&signature=3d2c66daa6459dda966b77536b38dd41b298b22b912fbaf0cd4ad2439bfadfa3 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:56,666 - ERROR - ❌ Error checking ENJ on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993136378&recvWindow=10000&signature=1a5f9f7aebf88edc365d041a273276d1a82c3be509aeb153d3d3b4ff4ab73787 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:56,952 - ERROR - ❌ Error checking MATIC on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993136666&recvWindow=10000&signature=5b47f8d188c851f3c1ec820fed90f97d29bc8c6efa396065a69d5c4b1924850d 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:57,237 - ERROR - ❌ Error checking SUSHI on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993136952&recvWindow=10000&signature=914707e30242f55c712ede009632b331de0a61f83b20b84c7e780765c319995a 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:57,519 - ERROR - ❌ Error checking CRV on Binance: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1774993137237&recvWindow=10000&signature=2c91a3f2c7e00c85dd20fe1700c71348b4b84615c9e2dbbaaf1e27a11df7ed11 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 04:38:57,519 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 04:38:57,519 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:38:57,519 - INFO - ⏱️  Cycle 3 duration: 17.1 seconds
+2026-04-01 04:38:57,519 - INFO - 📈 Total opportunities found: 0
+2026-04-01 04:43:57,519 - INFO - 
+🔄 CYCLE 4 STARTING...
+2026-04-01 04:43:57,519 - INFO - ======================================================================
+2026-04-01 04:43:57,519 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:43:57
+2026-04-01 04:43:57,519 - INFO - ======================================================================
+2026-04-01 04:43:57,519 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:44:06,103 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:44:08,482 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.83%
+2026-04-01 04:44:08,483 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 04:44:08,483 - INFO -     Current price: $0.2411
+2026-04-01 04:44:08,483 - INFO -     24h change: -1.83%
+2026-04-01 04:44:08,483 - INFO -     Position size: 55.690585 contracts
+2026-04-01 04:44:08,483 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:44:08,483 - INFO -     Capital at risk: $13.43
+2026-04-01 04:44:08,483 - INFO -     Stop-loss: $0.2483 (+3%)
+2026-04-01 04:44:08,483 - INFO -     Take-profit: $0.2290 (-5%)
+2026-04-01 04:44:08,483 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 04:44:08,796 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:44:10,333 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 04:44:10,333 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 04:44:10,333 - INFO -     Current price: $1650.1000
+2026-04-01 04:44:10,333 - INFO -     24h change: -3.40%
+2026-04-01 04:44:10,333 - INFO -     Position size: 0.008137 contracts
+2026-04-01 04:44:10,333 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:44:10,333 - INFO -     Capital at risk: $13.43
+2026-04-01 04:44:10,333 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 04:44:10,334 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 04:44:10,334 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 04:44:10,659 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 04:44:11,101 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.80%
+2026-04-01 04:44:11,101 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 04:44:11,101 - INFO -     Current price: $0.0201
+2026-04-01 04:44:11,101 - INFO -     24h change: -2.80%
+2026-04-01 04:44:11,101 - INFO -     Position size: 667.345924 contracts
+2026-04-01 04:44:11,101 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:44:11,101 - INFO -     Capital at risk: $13.43
+2026-04-01 04:44:11,101 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 04:44:11,101 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 04:44:11,101 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 04:44:11,479 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:44:11,480 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 04:44:11,700 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 04:44:11,700 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:44:11,700 - INFO - ⏱️  Cycle 4 duration: 14.2 seconds
+2026-04-01 04:44:11,700 - INFO - 📈 Total opportunities found: 3
+2026-04-01 04:49:11,775 - INFO - 
+🔄 CYCLE 5 STARTING...
+2026-04-01 04:49:11,776 - INFO - ======================================================================
+2026-04-01 04:49:11,776 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:49:11
+2026-04-01 04:49:11,776 - INFO - ======================================================================
+2026-04-01 04:49:11,776 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:49:20,917 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:49:21,539 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.79%
+2026-04-01 04:49:21,539 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 04:49:21,539 - INFO -     Current price: $0.2410
+2026-04-01 04:49:21,539 - INFO -     24h change: -1.79%
+2026-04-01 04:49:21,540 - INFO -     Position size: 55.713693 contracts
+2026-04-01 04:49:21,540 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:49:21,540 - INFO -     Capital at risk: $13.43
+2026-04-01 04:49:21,540 - INFO -     Stop-loss: $0.2482 (+3%)
+2026-04-01 04:49:21,540 - INFO -     Take-profit: $0.2289 (-5%)
+2026-04-01 04:49:21,540 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 04:49:21,896 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:49:23,456 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 04:49:23,456 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 04:49:23,456 - INFO -     Current price: $1650.1000
+2026-04-01 04:49:23,456 - INFO -     24h change: -3.40%
+2026-04-01 04:49:23,456 - INFO -     Position size: 0.008137 contracts
+2026-04-01 04:49:23,456 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:49:23,456 - INFO -     Capital at risk: $13.43
+2026-04-01 04:49:23,456 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 04:49:23,456 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 04:49:23,456 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 04:49:23,840 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 04:49:24,280 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.81%
+2026-04-01 04:49:24,280 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 04:49:24,280 - INFO -     Current price: $0.0201
+2026-04-01 04:49:24,280 - INFO -     24h change: -2.81%
+2026-04-01 04:49:24,280 - INFO -     Position size: 668.009950 contracts
+2026-04-01 04:49:24,280 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:49:24,280 - INFO -     Capital at risk: $13.43
+2026-04-01 04:49:24,280 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 04:49:24,280 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 04:49:24,280 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 04:49:24,605 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:49:24,605 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 04:49:24,825 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 04:49:24,825 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:49:24,825 - INFO - ⏱️  Cycle 5 duration: 13.0 seconds
+2026-04-01 04:49:24,825 - INFO - 📈 Total opportunities found: 6
+2026-04-01 04:54:24,846 - INFO - 
+🔄 CYCLE 6 STARTING...
+2026-04-01 04:54:24,846 - INFO - ======================================================================
+2026-04-01 04:54:24,846 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:54:24
+2026-04-01 04:54:24,846 - INFO - ======================================================================
+2026-04-01 04:54:24,846 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:54:34,593 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:54:35,194 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.34%
+2026-04-01 04:54:35,194 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 04:54:35,194 - INFO -     Current price: $0.2420
+2026-04-01 04:54:35,194 - INFO -     24h change: -1.34%
+2026-04-01 04:54:35,194 - INFO -     Position size: 55.483471 contracts
+2026-04-01 04:54:35,194 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:54:35,194 - INFO -     Capital at risk: $13.43
+2026-04-01 04:54:35,194 - INFO -     Stop-loss: $0.2493 (+3%)
+2026-04-01 04:54:35,195 - INFO -     Take-profit: $0.2299 (-5%)
+2026-04-01 04:54:35,195 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 04:54:35,649 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:54:37,968 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 04:54:37,968 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 04:54:37,968 - INFO -     Current price: $1650.1000
+2026-04-01 04:54:37,969 - INFO -     24h change: -3.40%
+2026-04-01 04:54:37,969 - INFO -     Position size: 0.008137 contracts
+2026-04-01 04:54:37,969 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:54:37,969 - INFO -     Capital at risk: $13.43
+2026-04-01 04:54:37,969 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 04:54:37,969 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 04:54:37,969 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 04:54:38,286 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 04:54:38,911 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.66%
+2026-04-01 04:54:38,911 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 04:54:38,911 - INFO -     Current price: $0.0201
+2026-04-01 04:54:38,911 - INFO -     24h change: -2.66%
+2026-04-01 04:54:38,911 - INFO -     Position size: 666.683217 contracts
+2026-04-01 04:54:38,912 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:54:38,912 - INFO -     Capital at risk: $13.43
+2026-04-01 04:54:38,912 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 04:54:38,912 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 04:54:38,912 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 04:54:39,343 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:54:39,344 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 04:54:39,747 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 04:54:39,747 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:54:39,747 - INFO - ⏱️  Cycle 6 duration: 14.9 seconds
+2026-04-01 04:54:39,747 - INFO - 📈 Total opportunities found: 9
+2026-04-01 04:59:39,890 - INFO - 
+🔄 CYCLE 7 STARTING...
+2026-04-01 04:59:39,890 - INFO - ======================================================================
+2026-04-01 04:59:39,890 - INFO - 📊 26-CRYPTO TRADING CYCLE - 04:59:39
+2026-04-01 04:59:39,890 - INFO - ======================================================================
+2026-04-01 04:59:39,890 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 04:59:48,598 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 04:59:49,277 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.43%
+2026-04-01 04:59:49,277 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 04:59:49,277 - INFO -     Current price: $0.2412
+2026-04-01 04:59:49,277 - INFO -     24h change: -1.43%
+2026-04-01 04:59:49,277 - INFO -     Position size: 55.667496 contracts
+2026-04-01 04:59:49,277 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:59:49,277 - INFO -     Capital at risk: $13.43
+2026-04-01 04:59:49,277 - INFO -     Stop-loss: $0.2484 (+3%)
+2026-04-01 04:59:49,278 - INFO -     Take-profit: $0.2291 (-5%)
+2026-04-01 04:59:49,278 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 04:59:49,599 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:59:51,366 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 04:59:51,366 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 04:59:51,366 - INFO -     Current price: $1650.1000
+2026-04-01 04:59:51,366 - INFO -     24h change: -3.40%
+2026-04-01 04:59:51,366 - INFO -     Position size: 0.008137 contracts
+2026-04-01 04:59:51,366 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:59:51,366 - INFO -     Capital at risk: $13.43
+2026-04-01 04:59:51,366 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 04:59:51,366 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 04:59:51,366 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 04:59:51,677 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 04:59:52,116 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.66%
+2026-04-01 04:59:52,117 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 04:59:52,117 - INFO -     Current price: $0.0201
+2026-04-01 04:59:52,117 - INFO -     24h change: -2.66%
+2026-04-01 04:59:52,117 - INFO -     Position size: 666.683217 contracts
+2026-04-01 04:59:52,117 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 04:59:52,117 - INFO -     Capital at risk: $13.43
+2026-04-01 04:59:52,117 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 04:59:52,117 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 04:59:52,117 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 04:59:52,426 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 04:59:52,426 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 04:59:52,644 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 04:59:52,644 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 04:59:52,644 - INFO - ⏱️  Cycle 7 duration: 12.8 seconds
+2026-04-01 04:59:52,644 - INFO - 📈 Total opportunities found: 12
+2026-04-01 05:04:52,657 - INFO - 
+🔄 CYCLE 8 STARTING...
+2026-04-01 05:04:52,657 - INFO - ======================================================================
+2026-04-01 05:04:52,657 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:04:52
+2026-04-01 05:04:52,657 - INFO - ======================================================================
+2026-04-01 05:04:52,657 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:05:02,002 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:05:02,605 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.71%
+2026-04-01 05:05:02,605 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:05:02,605 - INFO -     Current price: $0.2408
+2026-04-01 05:05:02,605 - INFO -     24h change: -1.71%
+2026-04-01 05:05:02,605 - INFO -     Position size: 55.759967 contracts
+2026-04-01 05:05:02,605 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:05:02,605 - INFO -     Capital at risk: $13.43
+2026-04-01 05:05:02,605 - INFO -     Stop-loss: $0.2480 (+3%)
+2026-04-01 05:05:02,605 - INFO -     Take-profit: $0.2288 (-5%)
+2026-04-01 05:05:02,605 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:05:02,915 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:05:04,474 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:05:04,474 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:05:04,475 - INFO -     Current price: $1650.1000
+2026-04-01 05:05:04,475 - INFO -     24h change: -3.40%
+2026-04-01 05:05:04,475 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:05:04,475 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:05:04,475 - INFO -     Capital at risk: $13.43
+2026-04-01 05:05:04,475 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:05:04,475 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:05:04,475 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:05:04,854 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:05:05,304 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.61%
+2026-04-01 05:05:05,304 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:05:05,304 - INFO -     Current price: $0.0201
+2026-04-01 05:05:05,304 - INFO -     24h change: -2.61%
+2026-04-01 05:05:05,304 - INFO -     Position size: 667.014406 contracts
+2026-04-01 05:05:05,304 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:05:05,304 - INFO -     Capital at risk: $13.43
+2026-04-01 05:05:05,304 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:05:05,305 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:05:05,305 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:05:05,623 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:05:05,623 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:05:05,849 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:05:05,849 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:05:05,850 - INFO - ⏱️  Cycle 8 duration: 13.2 seconds
+2026-04-01 05:05:05,850 - INFO - 📈 Total opportunities found: 15
+2026-04-01 05:10:05,998 - INFO - 
+🔄 CYCLE 9 STARTING...
+2026-04-01 05:10:05,999 - INFO - ======================================================================
+2026-04-01 05:10:05,999 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:10:05
+2026-04-01 05:10:05,999 - INFO - ======================================================================
+2026-04-01 05:10:05,999 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:10:15,067 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:10:15,879 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.52%
+2026-04-01 05:10:15,879 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:10:15,880 - INFO -     Current price: $0.2403
+2026-04-01 05:10:15,880 - INFO -     24h change: -1.52%
+2026-04-01 05:10:15,880 - INFO -     Position size: 55.875988 contracts
+2026-04-01 05:10:15,880 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:10:15,880 - INFO -     Capital at risk: $13.43
+2026-04-01 05:10:15,880 - INFO -     Stop-loss: $0.2475 (+3%)
+2026-04-01 05:10:15,880 - INFO -     Take-profit: $0.2283 (-5%)
+2026-04-01 05:10:15,880 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:10:16,258 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:10:17,805 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:10:17,805 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:10:17,805 - INFO -     Current price: $1650.1000
+2026-04-01 05:10:17,805 - INFO -     24h change: -3.40%
+2026-04-01 05:10:17,805 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:10:17,805 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:10:17,805 - INFO -     Capital at risk: $13.43
+2026-04-01 05:10:17,805 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:10:17,805 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:10:17,805 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:10:18,298 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:10:18,743 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.43%
+2026-04-01 05:10:18,743 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:10:18,743 - INFO -     Current price: $0.0201
+2026-04-01 05:10:18,743 - INFO -     24h change: -2.43%
+2026-04-01 05:10:18,743 - INFO -     Position size: 668.009950 contracts
+2026-04-01 05:10:18,743 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:10:18,743 - INFO -     Capital at risk: $13.43
+2026-04-01 05:10:18,743 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:10:18,743 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:10:18,744 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:10:19,168 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:10:19,169 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:10:19,575 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:10:19,576 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:10:19,576 - INFO - ⏱️  Cycle 9 duration: 13.6 seconds
+2026-04-01 05:10:19,576 - INFO - 📈 Total opportunities found: 18
+2026-04-01 05:15:19,588 - INFO - 
+🔄 CYCLE 10 STARTING...
+2026-04-01 05:15:19,589 - INFO - ======================================================================
+2026-04-01 05:15:19,589 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:15:19
+2026-04-01 05:15:19,589 - INFO - ======================================================================
+2026-04-01 05:15:19,589 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:15:29,464 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:15:30,095 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.72%
+2026-04-01 05:15:30,096 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:15:30,096 - INFO -     Current price: $0.2404
+2026-04-01 05:15:30,096 - INFO -     24h change: -1.72%
+2026-04-01 05:15:30,096 - INFO -     Position size: 55.852745 contracts
+2026-04-01 05:15:30,096 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:15:30,096 - INFO -     Capital at risk: $13.43
+2026-04-01 05:15:30,096 - INFO -     Stop-loss: $0.2476 (+3%)
+2026-04-01 05:15:30,096 - INFO -     Take-profit: $0.2284 (-5%)
+2026-04-01 05:15:30,096 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:15:30,450 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:15:32,808 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:15:32,808 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:15:32,808 - INFO -     Current price: $1650.1000
+2026-04-01 05:15:32,808 - INFO -     24h change: -3.40%
+2026-04-01 05:15:32,808 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:15:32,808 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:15:32,808 - INFO -     Capital at risk: $13.43
+2026-04-01 05:15:32,808 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:15:32,808 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:15:32,808 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:15:33,221 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:15:33,664 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.43%
+2026-04-01 05:15:33,664 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:15:33,664 - INFO -     Current price: $0.0201
+2026-04-01 05:15:33,664 - INFO -     24h change: -2.43%
+2026-04-01 05:15:33,664 - INFO -     Position size: 668.009950 contracts
+2026-04-01 05:15:33,664 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:15:33,664 - INFO -     Capital at risk: $13.43
+2026-04-01 05:15:33,664 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:15:33,664 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:15:33,664 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:15:34,082 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:15:34,082 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:15:34,301 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:15:34,301 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:15:34,301 - INFO - ⏱️  Cycle 10 duration: 14.7 seconds
+2026-04-01 05:15:34,301 - INFO - 📈 Total opportunities found: 21
+2026-04-01 05:20:34,332 - INFO - 
+🔄 CYCLE 11 STARTING...
+2026-04-01 05:20:34,332 - INFO - ======================================================================
+2026-04-01 05:20:34,332 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:20:34
+2026-04-01 05:20:34,332 - INFO - ======================================================================
+2026-04-01 05:20:34,332 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:20:43,932 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:20:44,552 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.84%
+2026-04-01 05:20:44,552 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:20:44,552 - INFO -     Current price: $0.2401
+2026-04-01 05:20:44,552 - INFO -     24h change: -1.84%
+2026-04-01 05:20:44,552 - INFO -     Position size: 55.922532 contracts
+2026-04-01 05:20:44,552 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:20:44,552 - INFO -     Capital at risk: $13.43
+2026-04-01 05:20:44,552 - INFO -     Stop-loss: $0.2473 (+3%)
+2026-04-01 05:20:44,552 - INFO -     Take-profit: $0.2281 (-5%)
+2026-04-01 05:20:44,552 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:20:44,875 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:20:46,432 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:20:46,432 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:20:46,432 - INFO -     Current price: $1650.1000
+2026-04-01 05:20:46,432 - INFO -     24h change: -3.40%
+2026-04-01 05:20:46,432 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:20:46,432 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:20:46,432 - INFO -     Capital at risk: $13.43
+2026-04-01 05:20:46,432 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:20:46,433 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:20:46,433 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:20:46,878 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:20:47,320 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -2.33%
+2026-04-01 05:20:47,321 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:20:47,321 - INFO -     Current price: $0.0201
+2026-04-01 05:20:47,321 - INFO -     24h change: -2.33%
+2026-04-01 05:20:47,321 - INFO -     Position size: 668.009950 contracts
+2026-04-01 05:20:47,321 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:20:47,321 - INFO -     Capital at risk: $13.43
+2026-04-01 05:20:47,321 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:20:47,321 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:20:47,321 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:20:47,772 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:20:47,772 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:20:47,995 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:20:47,995 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:20:47,995 - INFO - ⏱️  Cycle 11 duration: 13.7 seconds
+2026-04-01 05:20:47,995 - INFO - 📈 Total opportunities found: 24
+2026-04-01 05:25:48,149 - INFO - 
+🔄 CYCLE 12 STARTING...
+2026-04-01 05:25:48,150 - INFO - ======================================================================
+2026-04-01 05:25:48,150 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:25:48
+2026-04-01 05:25:48,150 - INFO - ======================================================================
+2026-04-01 05:25:48,150 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:25:57,531 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:25:58,150 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -2.21%
+2026-04-01 05:25:58,150 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:25:58,150 - INFO -     Current price: $0.2395
+2026-04-01 05:25:58,150 - INFO -     24h change: -2.21%
+2026-04-01 05:25:58,150 - INFO -     Position size: 56.062630 contracts
+2026-04-01 05:25:58,150 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:25:58,150 - INFO -     Capital at risk: $13.43
+2026-04-01 05:25:58,150 - INFO -     Stop-loss: $0.2467 (+3%)
+2026-04-01 05:25:58,151 - INFO -     Take-profit: $0.2275 (-5%)
+2026-04-01 05:25:58,151 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:25:58,562 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:26:00,126 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:26:00,126 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:26:00,126 - INFO -     Current price: $1650.1000
+2026-04-01 05:26:00,126 - INFO -     24h change: -3.40%
+2026-04-01 05:26:00,126 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:26:00,126 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:26:00,126 - INFO -     Capital at risk: $13.43
+2026-04-01 05:26:00,126 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:26:00,126 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:26:00,126 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:26:00,503 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:26:00,947 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -1.95%
+2026-04-01 05:26:00,947 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:26:00,947 - INFO -     Current price: $0.0201
+2026-04-01 05:26:00,947 - INFO -     24h change: -1.95%
+2026-04-01 05:26:00,948 - INFO -     Position size: 666.683217 contracts
+2026-04-01 05:26:00,948 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:26:00,948 - INFO -     Capital at risk: $13.43
+2026-04-01 05:26:00,948 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:26:00,948 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:26:00,948 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:26:01,372 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:26:01,372 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:26:01,595 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:26:01,596 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:26:01,596 - INFO - ⏱️  Cycle 12 duration: 13.4 seconds
+2026-04-01 05:26:01,596 - INFO - 📈 Total opportunities found: 27
+2026-04-01 05:31:01,651 - INFO - 
+🔄 CYCLE 13 STARTING...
+2026-04-01 05:31:01,651 - INFO - ======================================================================
+2026-04-01 05:31:01,651 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:31:01
+2026-04-01 05:31:01,652 - INFO - ======================================================================
+2026-04-01 05:31:01,652 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:31:11,318 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:31:11,959 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -2.25%
+2026-04-01 05:31:11,960 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:31:11,960 - INFO -     Current price: $0.2391
+2026-04-01 05:31:11,960 - INFO -     24h change: -2.25%
+2026-04-01 05:31:11,960 - INFO -     Position size: 56.156420 contracts
+2026-04-01 05:31:11,960 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:31:11,960 - INFO -     Capital at risk: $13.43
+2026-04-01 05:31:11,960 - INFO -     Stop-loss: $0.2463 (+3%)
+2026-04-01 05:31:11,960 - INFO -     Take-profit: $0.2271 (-5%)
+2026-04-01 05:31:11,960 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:31:12,411 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:31:14,015 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:31:14,015 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:31:14,015 - INFO -     Current price: $1650.1000
+2026-04-01 05:31:14,015 - INFO -     24h change: -3.40%
+2026-04-01 05:31:14,015 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:31:14,016 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:31:14,016 - INFO -     Capital at risk: $13.43
+2026-04-01 05:31:14,016 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:31:14,016 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:31:14,016 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:31:14,330 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:31:14,783 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -1.80%
+2026-04-01 05:31:14,783 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:31:14,783 - INFO -     Current price: $0.0201
+2026-04-01 05:31:14,783 - INFO -     24h change: -1.80%
+2026-04-01 05:31:14,783 - INFO -     Position size: 666.683217 contracts
+2026-04-01 05:31:14,783 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:31:14,783 - INFO -     Capital at risk: $13.43
+2026-04-01 05:31:14,783 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:31:14,783 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:31:14,783 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:31:15,229 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:31:15,229 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:31:15,456 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:31:15,456 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:31:15,456 - INFO - ⏱️  Cycle 13 duration: 13.8 seconds
+2026-04-01 05:31:15,456 - INFO - 📈 Total opportunities found: 30
+2026-04-01 05:36:15,471 - INFO - 
+🔄 CYCLE 14 STARTING...
+2026-04-01 05:36:15,472 - INFO - ======================================================================
+2026-04-01 05:36:15,472 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:36:15
+2026-04-01 05:36:15,472 - INFO - ======================================================================
+2026-04-01 05:36:15,472 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:36:24,437 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:36:25,142 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -2.33%
+2026-04-01 05:36:25,142 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:36:25,142 - INFO -     Current price: $0.2389
+2026-04-01 05:36:25,143 - INFO -     24h change: -2.33%
+2026-04-01 05:36:25,143 - INFO -     Position size: 56.203432 contracts
+2026-04-01 05:36:25,143 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:36:25,143 - INFO -     Capital at risk: $13.43
+2026-04-01 05:36:25,143 - INFO -     Stop-loss: $0.2461 (+3%)
+2026-04-01 05:36:25,143 - INFO -     Take-profit: $0.2270 (-5%)
+2026-04-01 05:36:25,143 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:36:25,509 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:36:27,342 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:36:27,342 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:36:27,343 - INFO -     Current price: $1650.1000
+2026-04-01 05:36:27,343 - INFO -     24h change: -3.40%
+2026-04-01 05:36:27,343 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:36:27,343 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:36:27,343 - INFO -     Capital at risk: $13.43
+2026-04-01 05:36:27,343 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:36:27,343 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:36:27,343 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:36:27,654 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:36:28,104 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -1.95%
+2026-04-01 05:36:28,104 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:36:28,104 - INFO -     Current price: $0.0201
+2026-04-01 05:36:28,104 - INFO -     24h change: -1.95%
+2026-04-01 05:36:28,104 - INFO -     Position size: 667.345924 contracts
+2026-04-01 05:36:28,105 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:36:28,105 - INFO -     Capital at risk: $13.43
+2026-04-01 05:36:28,105 - INFO -     Stop-loss: $0.0207 (+3%)
+2026-04-01 05:36:28,105 - INFO -     Take-profit: $0.0191 (-5%)
+2026-04-01 05:36:28,105 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:36:28,435 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:36:28,435 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:36:28,659 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:36:28,659 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:36:28,659 - INFO - ⏱️  Cycle 14 duration: 13.2 seconds
+2026-04-01 05:36:28,659 - INFO - 📈 Total opportunities found: 33
+2026-04-01 05:41:28,735 - INFO - 
+🔄 CYCLE 15 STARTING...
+2026-04-01 05:41:28,736 - INFO - ======================================================================
+2026-04-01 05:41:28,737 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:41:28
+2026-04-01 05:41:28,737 - INFO - ======================================================================
+2026-04-01 05:41:28,737 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:41:37,566 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:41:38,160 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -2.08%
+2026-04-01 05:41:38,160 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:41:38,160 - INFO -     Current price: $0.2398
+2026-04-01 05:41:38,160 - INFO -     24h change: -2.08%
+2026-04-01 05:41:38,161 - INFO -     Position size: 55.992494 contracts
+2026-04-01 05:41:38,161 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:41:38,161 - INFO -     Capital at risk: $13.43
+2026-04-01 05:41:38,161 - INFO -     Stop-loss: $0.2470 (+3%)
+2026-04-01 05:41:38,161 - INFO -     Take-profit: $0.2278 (-5%)
+2026-04-01 05:41:38,161 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:41:38,534 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:41:40,095 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:41:40,095 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:41:40,095 - INFO -     Current price: $1650.1000
+2026-04-01 05:41:40,095 - INFO -     24h change: -3.40%
+2026-04-01 05:41:40,095 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:41:40,095 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:41:40,095 - INFO -     Capital at risk: $13.43
+2026-04-01 05:41:40,095 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:41:40,096 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:41:40,096 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:41:40,459 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:41:41,274 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -1.66%
+2026-04-01 05:41:41,274 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:41:41,274 - INFO -     Current price: $0.0202
+2026-04-01 05:41:41,274 - INFO -     24h change: -1.66%
+2026-04-01 05:41:41,274 - INFO -     Position size: 665.691621 contracts
+2026-04-01 05:41:41,274 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:41:41,274 - INFO -     Capital at risk: $13.43
+2026-04-01 05:41:41,274 - INFO -     Stop-loss: $0.0208 (+3%)
+2026-04-01 05:41:41,274 - INFO -     Take-profit: $0.0192 (-5%)
+2026-04-01 05:41:41,274 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:41:41,774 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:41:41,774 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:41:41,992 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:41:41,992 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:41:41,992 - INFO - ⏱️  Cycle 15 duration: 13.3 seconds
+2026-04-01 05:41:41,992 - INFO - 📈 Total opportunities found: 36
+2026-04-01 05:46:42,000 - INFO - 
+🔄 CYCLE 16 STARTING...
+2026-04-01 05:46:42,000 - INFO - ======================================================================
+2026-04-01 05:46:42,000 - INFO - 📊 26-CRYPTO TRADING CYCLE - 05:46:42
+2026-04-01 05:46:42,000 - INFO - ======================================================================
+2026-04-01 05:46:42,000 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-01 05:46:50,734 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT...
+2026-04-01 05:46:51,353 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -1.88%
+2026-04-01 05:46:51,353 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 05:46:51,353 - INFO -     Current price: $0.2402
+2026-04-01 05:46:51,353 - INFO -     24h change: -1.88%
+2026-04-01 05:46:51,353 - INFO -     Position size: 55.899251 contracts
+2026-04-01 05:46:51,353 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:46:51,353 - INFO -     Capital at risk: $13.43
+2026-04-01 05:46:51,353 - INFO -     Stop-loss: $0.2474 (+3%)
+2026-04-01 05:46:51,353 - INFO -     Take-profit: $0.2282 (-5%)
+2026-04-01 05:46:51,353 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 05:46:51,734 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:46:53,284 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 05:46:53,284 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 05:46:53,284 - INFO -     Current price: $1650.1000
+2026-04-01 05:46:53,284 - INFO -     24h change: -3.40%
+2026-04-01 05:46:53,284 - INFO -     Position size: 0.008137 contracts
+2026-04-01 05:46:53,284 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:46:53,284 - INFO -     Capital at risk: $13.43
+2026-04-01 05:46:53,284 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 05:46:53,284 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 05:46:53,284 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 05:46:53,604 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 05:46:54,046 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ down -1.56%
+2026-04-01 05:46:54,046 - INFO - 🎯 PREPARING BINANCE SHORT: ENJ
+2026-04-01 05:46:54,046 - INFO -     Current price: $0.0202
+2026-04-01 05:46:54,046 - INFO -     24h change: -1.56%
+2026-04-01 05:46:54,046 - INFO -     Position size: 665.032194 contracts
+2026-04-01 05:46:54,046 - INFO -     Position value: $13.43 (with 1x leverage)
+2026-04-01 05:46:54,046 - INFO -     Capital at risk: $13.43
+2026-04-01 05:46:54,046 - INFO -     Stop-loss: $0.0208 (+3%)
+2026-04-01 05:46:54,046 - INFO -     Take-profit: $0.0192 (-5%)
+2026-04-01 05:46:54,046 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ/USDT
+2026-04-01 05:46:54,359 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-01 05:46:54,359 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 05:46:54,581 - INFO - 🎯 Opportunities found this cycle: 3
+2026-04-01 05:46:54,581 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 05:46:54,581 - INFO - ⏱️  Cycle 16 duration: 12.6 seconds
+2026-04-01 05:46:54,581 - INFO - 📈 Total opportunities found: 39

@@ -1,0 +1,39 @@
+🚀 STARTING SIMPLE P&L DASHBOARD
+   • Port: 5008
+   • Shows: P&L information as requested
+   • Priority: Cumulative P&L first
+   • Clear: SHORT trades status shown
+   • Access: http://localhost:5008/
+
+ * Serving Flask app 'simple_pnl_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.63:5008
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Apr/2026 03:27:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 03:27:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 03:39:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 03:40:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 04:41:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 04:43:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 04:43:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 05:43:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 05:44:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 06:41:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 06:45:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 07:47:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 07:47:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 08:40:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 08:48:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 08:48:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 09:49:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 09:49:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 10:40:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 10:50:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 10:50:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 11:51:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 12:40:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 12:52:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 13:01:55] "GET / HTTP/1.1" 200 -

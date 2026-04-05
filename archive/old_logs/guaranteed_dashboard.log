@@ -1,0 +1,8 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 STARTING GUARANTEED DASHBOARD ON PORT 5005
+✅ This dashboard reads DIRECTLY from source files
+✅ Open: http://localhost:5005/
+ * Serving Flask app 'guaranteed_dashboard'
+ * Debug mode: off
+Address already in use
+Port 5005 is in use by another program. Either identify and stop that program, or start the server with a different port.

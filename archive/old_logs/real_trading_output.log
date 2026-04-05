@@ -1,0 +1,25 @@
+2026-04-03 16:24:48,656 - WARNING - ⚠️ API keys not found. Bot will run in SIMULATION mode.
+2026-04-03 16:24:48,656 - WARNING -    To enable real trading, set environment variables:
+2026-04-03 16:24:48,656 - WARNING -    - GEMINI_API_KEY, GEMINI_SECRET
+2026-04-03 16:24:48,656 - WARNING -    - BINANCE_API_KEY, BINANCE_SECRET
+2026-04-03 16:24:48,657 - WARNING -    Or create api_keys.json file
+2026-04-03 16:24:48,662 - INFO - 🚀 REAL Trading Bot Initialized
+2026-04-03 16:24:48,662 - INFO - 📊 Trading parameters:
+2026-04-03 16:24:48,662 - INFO -    Min spread: 0.4%
+2026-04-03 16:24:48,662 - INFO -    Trade size: $50.0
+2026-04-03 16:24:48,662 - INFO -    Min profit: $0.15
+2026-04-03 16:24:48,662 - INFO - ============================================================
+2026-04-03 16:24:48,662 - INFO - 🚀 STARTING REAL TRADING BOT
+2026-04-03 16:24:48,662 - INFO - ============================================================
+2026-04-03 16:24:48,662 - INFO - 📊 This bot will ACTUALLY EXECUTE trades if profitable
+2026-04-03 16:24:48,662 - INFO - ⚠️  Requires API keys for real trading
+2026-04-03 16:24:48,662 - INFO - ============================================================
+2026-04-03 16:24:48,662 - INFO - 🔍 Scan #1: Checking 7 cryptos
+2026-04-03 16:24:52,001 - ERROR -    ❌ Error checking gemini balance: gemini requires "apiKey" credential
+2026-04-03 16:24:53,148 - ERROR -    ❌ Error checking binance balance: binance requires "apiKey" credential
+2026-04-03 16:25:26,880 - INFO - 🔍 Scan #1: Checking 7 cryptos
+2026-04-03 16:25:26,881 - ERROR -    ❌ Error checking gemini balance: gemini requires "apiKey" credential
+2026-04-03 16:25:26,881 - ERROR -    ❌ Error checking binance balance: binance requires "apiKey" credential
+2026-04-03 16:26:01,138 - INFO - 🔍 Scan #1: Checking 7 cryptos
+2026-04-03 16:26:01,139 - ERROR -    ❌ Error checking gemini balance: gemini requires "apiKey" credential
+2026-04-03 16:26:01,139 - ERROR -    ❌ Error checking binance balance: binance requires "apiKey" credential

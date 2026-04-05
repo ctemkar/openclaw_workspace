@@ -1,0 +1,713 @@
+2026-03-31 17:28:07,306 - INFO - ======================================================================
+2026-03-31 17:28:07,306 - INFO - 🚀 BINANCE FUTURES SHORT TRADING BOT
+2026-03-31 17:28:07,307 - INFO - ======================================================================
+2026-03-31 17:28:07,307 - INFO - SHORT threshold: 0.8% drop
+2026-03-31 17:28:07,307 - INFO - Futures capital: $50.00
+2026-03-31 17:28:07,307 - INFO - Leverage: 3x (conservative)
+2026-03-31 17:28:07,307 - INFO - Position size: 20% of capital
+2026-03-31 17:28:07,307 - INFO - Stop-loss: 5%, Take-profit: 8%
+2026-03-31 17:28:07,307 - INFO - Scan interval: 60 seconds
+2026-03-31 17:28:07,307 - INFO - ======================================================================
+2026-03-31 17:28:07,307 - INFO - 🚨 REAL TRADING MODE - ACTIVE
+2026-03-31 17:28:07,307 - INFO -    Trades WILL be executed on Binance Futures
+2026-03-31 17:28:07,307 - INFO -    Using 3x leverage for short positions
+2026-03-31 17:28:07,307 - INFO - ======================================================================
+2026-03-31 17:28:09,171 - INFO - ✅ Binance Futures exchange connected
+2026-03-31 17:28:09,284 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:28:09,284 - INFO -    Free USDT: $42.41
+2026-03-31 17:28:09,284 - INFO -    Total USDT: $77.84
+2026-03-31 17:28:09,284 - INFO - 
+📊 FUTURES CYCLE 1 - 17:28:09
+2026-03-31 17:28:09,284 - INFO - --------------------------------------------------
+2026-03-31 17:28:09,284 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:28:09,431 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.55%
+2026-03-31 17:28:09,431 - INFO - 🎯 PREPARING FUTURES SHORT: BTC/USDT
+2026-03-31 17:28:09,432 - INFO -    Current price: $66351.0000
+2026-03-31 17:28:09,432 - INFO -    24h change: -1.55%
+2026-03-31 17:28:09,432 - INFO -    Position size: 0.000383 contracts
+2026-03-31 17:28:09,432 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:09,432 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:09,432 - INFO -    Stop-loss: $69668.5500 (+5.0%)
+2026-03-31 17:28:09,432 - INFO -    Take-profit: $61042.9200 (-8.0%)
+2026-03-31 17:28:09,436 - INFO - ✅ FUTURES SHORT PLAN CREATED for BTC/USDT
+2026-03-31 17:28:09,436 - INFO -    Would short 0.000383 contracts at $66351.0000
+2026-03-31 17:28:09,436 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:09,552 - ERROR - ❌ Trade execution failed: binance amount of BTC/USDT:USDT must be greater than minimum amount precision of 0.001
+2026-03-31 17:28:09,661 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.39%
+2026-03-31 17:28:09,662 - INFO - 🎯 PREPARING FUTURES SHORT: ETH/USDT
+2026-03-31 17:28:09,662 - INFO -    Current price: $2025.0900
+2026-03-31 17:28:09,662 - INFO -    24h change: -1.39%
+2026-03-31 17:28:09,662 - INFO -    Position size: 0.012564 contracts
+2026-03-31 17:28:09,662 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:09,662 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:09,662 - INFO -    Stop-loss: $2126.3445 (+5.0%)
+2026-03-31 17:28:09,662 - INFO -    Take-profit: $1863.0828 (-8.0%)
+2026-03-31 17:28:09,666 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETH/USDT
+2026-03-31 17:28:09,666 - INFO -    Would short 0.012564 contracts at $2025.0900
+2026-03-31 17:28:09,666 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:09,997 - INFO - ✅ REAL SHORT ORDER EXECUTED: 8389766143839779502
+2026-03-31 17:28:10,109 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.95%
+2026-03-31 17:28:10,109 - INFO - 🎯 PREPARING FUTURES SHORT: SOL/USDT
+2026-03-31 17:28:10,109 - INFO -    Current price: $80.6900
+2026-03-31 17:28:10,109 - INFO -    24h change: -3.95%
+2026-03-31 17:28:10,110 - INFO -    Position size: 0.315327 contracts
+2026-03-31 17:28:10,110 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:10,110 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:10,110 - INFO -    Stop-loss: $84.7245 (+5.0%)
+2026-03-31 17:28:10,110 - INFO -    Take-profit: $74.2348 (-8.0%)
+2026-03-31 17:28:10,113 - INFO - ✅ FUTURES SHORT PLAN CREATED for SOL/USDT
+2026-03-31 17:28:10,113 - INFO -    Would short 0.315327 contracts at $80.6900
+2026-03-31 17:28:10,114 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:10,476 - INFO - ✅ REAL SHORT ORDER EXECUTED: 206448003419
+2026-03-31 17:28:10,591 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.18%
+2026-03-31 17:28:10,591 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:28:10,591 - INFO -    Current price: $0.2405
+2026-03-31 17:28:10,591 - INFO -    24h change: -3.18%
+2026-03-31 17:28:10,591 - INFO -    Position size: 105.795319 contracts
+2026-03-31 17:28:10,591 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:10,591 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:10,591 - INFO -    Stop-loss: $0.2525 (+5.0%)
+2026-03-31 17:28:10,591 - INFO -    Take-profit: $0.2213 (-8.0%)
+2026-03-31 17:28:10,593 - INFO - ✅ FUTURES SHORT PLAN CREATED for ADA/USDT
+2026-03-31 17:28:10,594 - INFO -    Would short 105.795319 contracts at $0.2405
+2026-03-31 17:28:10,594 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:10,976 - INFO - ✅ REAL SHORT ORDER EXECUTED: 63789038440
+2026-03-31 17:28:11,089 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.72%
+2026-03-31 17:28:11,089 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:28:11,089 - INFO -    Current price: $1.3105
+2026-03-31 17:28:11,089 - INFO -    24h change: -2.72%
+2026-03-31 17:28:11,089 - INFO -    Position size: 19.415318 contracts
+2026-03-31 17:28:11,089 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:11,090 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:11,090 - INFO -    Stop-loss: $1.3760 (+5.0%)
+2026-03-31 17:28:11,090 - INFO -    Take-profit: $1.2057 (-8.0%)
+2026-03-31 17:28:11,093 - INFO - ✅ FUTURES SHORT PLAN CREATED for XRP/USDT
+2026-03-31 17:28:11,094 - INFO -    Would short 19.415318 contracts at $1.3105
+2026-03-31 17:28:11,094 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:11,482 - INFO - ✅ REAL SHORT ORDER EXECUTED: 145577434558
+2026-03-31 17:28:11,595 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.76%
+2026-03-31 17:28:11,595 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:28:11,595 - INFO -    Current price: $1.2320
+2026-03-31 17:28:11,595 - INFO -    24h change: -2.76%
+2026-03-31 17:28:11,595 - INFO -    Position size: 20.652414 contracts
+2026-03-31 17:28:11,595 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:11,595 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:11,595 - INFO -    Stop-loss: $1.2936 (+5.0%)
+2026-03-31 17:28:11,596 - INFO -    Take-profit: $1.1334 (-8.0%)
+2026-03-31 17:28:11,599 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOT/USDT
+2026-03-31 17:28:11,599 - INFO -    Would short 20.652414 contracts at $1.2320
+2026-03-31 17:28:11,599 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:11,944 - INFO - ✅ REAL SHORT ORDER EXECUTED: 31703020202
+2026-03-31 17:28:12,057 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.91%
+2026-03-31 17:28:12,057 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:28:12,057 - INFO -    Current price: $0.0901
+2026-03-31 17:28:12,057 - INFO -    24h change: -2.91%
+2026-03-31 17:28:12,057 - INFO -    Position size: 282.520256 contracts
+2026-03-31 17:28:12,058 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:12,058 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:12,058 - INFO -    Stop-loss: $0.0946 (+5.0%)
+2026-03-31 17:28:12,058 - INFO -    Take-profit: $0.0829 (-8.0%)
+2026-03-31 17:28:12,062 - INFO - ✅ FUTURES SHORT PLAN CREATED for DOGE/USDT
+2026-03-31 17:28:12,062 - INFO -    Would short 282.520256 contracts at $0.0901
+2026-03-31 17:28:12,062 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:12,372 - INFO - ✅ REAL SHORT ORDER EXECUTED: 95532947920
+2026-03-31 17:28:12,482 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -2.00%
+2026-03-31 17:28:12,483 - INFO - 🎯 PREPARING FUTURES SHORT: AVAX/USDT
+2026-03-31 17:28:12,483 - INFO -    Current price: $8.7310
+2026-03-31 17:28:12,483 - INFO -    24h change: -2.00%
+2026-03-31 17:28:12,483 - INFO -    Position size: 2.914188 contracts
+2026-03-31 17:28:12,483 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:12,483 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:12,483 - INFO -    Stop-loss: $9.1676 (+5.0%)
+2026-03-31 17:28:12,483 - INFO -    Take-profit: $8.0325 (-8.0%)
+2026-03-31 17:28:12,483 - INFO - ✅ FUTURES SHORT PLAN CREATED for AVAX/USDT
+2026-03-31 17:28:12,483 - INFO -    Would short 2.914188 contracts at $8.7310
+2026-03-31 17:28:12,483 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:12,798 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:12,798 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:28:12,910 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.27%
+2026-03-31 17:28:12,910 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:28:12,910 - INFO -    Current price: $8.5650
+2026-03-31 17:28:12,910 - INFO -    24h change: -2.27%
+2026-03-31 17:28:12,910 - INFO -    Position size: 2.970668 contracts
+2026-03-31 17:28:12,910 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:12,910 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:12,910 - INFO -    Stop-loss: $8.9932 (+5.0%)
+2026-03-31 17:28:12,910 - INFO -    Take-profit: $7.8798 (-8.0%)
+2026-03-31 17:28:12,911 - INFO - ✅ FUTURES SHORT PLAN CREATED for LINK/USDT
+2026-03-31 17:28:12,911 - INFO -    Would short 2.970668 contracts at $8.5650
+2026-03-31 17:28:12,911 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:13,222 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:13,333 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.94%
+2026-03-31 17:28:13,333 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:28:13,333 - INFO -    Current price: $3.4720
+2026-03-31 17:28:13,333 - INFO -    24h change: -0.94%
+2026-03-31 17:28:13,333 - INFO -    Position size: 7.328276 contracts
+2026-03-31 17:28:13,333 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:13,333 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:13,333 - INFO -    Stop-loss: $3.6456 (+5.0%)
+2026-03-31 17:28:13,334 - INFO -    Take-profit: $3.1942 (-8.0%)
+2026-03-31 17:28:13,337 - INFO - ✅ FUTURES SHORT PLAN CREATED for UNI/USDT
+2026-03-31 17:28:13,337 - INFO -    Would short 7.328276 contracts at $3.4720
+2026-03-31 17:28:13,337 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:13,698 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:13,808 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -1.02%
+2026-03-31 17:28:13,808 - INFO - 🎯 PREPARING FUTURES SHORT: LTC/USDT
+2026-03-31 17:28:13,808 - INFO -    Current price: $53.2800
+2026-03-31 17:28:13,808 - INFO -    24h change: -1.02%
+2026-03-31 17:28:13,808 - INFO -    Position size: 0.477548 contracts
+2026-03-31 17:28:13,808 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:13,808 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:13,808 - INFO -    Stop-loss: $55.9440 (+5.0%)
+2026-03-31 17:28:13,808 - INFO -    Take-profit: $49.0176 (-8.0%)
+2026-03-31 17:28:13,812 - INFO - ✅ FUTURES SHORT PLAN CREATED for LTC/USDT
+2026-03-31 17:28:13,812 - INFO -    Would short 0.477548 contracts at $53.2800
+2026-03-31 17:28:13,812 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:14,203 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:14,424 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.34%
+2026-03-31 17:28:14,425 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:28:14,425 - INFO -    Current price: $8.0140
+2026-03-31 17:28:14,425 - INFO -    24h change: -2.34%
+2026-03-31 17:28:14,425 - INFO -    Position size: 3.174916 contracts
+2026-03-31 17:28:14,425 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:14,425 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:14,425 - INFO -    Stop-loss: $8.4147 (+5.0%)
+2026-03-31 17:28:14,425 - INFO -    Take-profit: $7.3729 (-8.0%)
+2026-03-31 17:28:14,426 - INFO - ✅ FUTURES SHORT PLAN CREATED for ETC/USDT
+2026-03-31 17:28:14,427 - INFO -    Would short 3.174916 contracts at $8.0140
+2026-03-31 17:28:14,427 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:14,813 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:14,923 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.48%
+2026-03-31 17:28:14,923 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:28:14,923 - INFO -    Current price: $0.1646
+2026-03-31 17:28:14,923 - INFO -    24h change: -3.48%
+2026-03-31 17:28:14,923 - INFO -    Position size: 154.617005 contracts
+2026-03-31 17:28:14,924 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:14,924 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:14,924 - INFO -    Stop-loss: $0.1728 (+5.0%)
+2026-03-31 17:28:14,924 - INFO -    Take-profit: $0.1514 (-8.0%)
+2026-03-31 17:28:14,927 - INFO - ✅ FUTURES SHORT PLAN CREATED for XLM/USDT
+2026-03-31 17:28:14,927 - INFO -    Would short 154.617005 contracts at $0.1646
+2026-03-31 17:28:14,927 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:15,317 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:15,543 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.15%
+2026-03-31 17:28:15,544 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:28:15,544 - INFO -    Current price: $0.0066
+2026-03-31 17:28:15,544 - INFO -    24h change: -2.15%
+2026-03-31 17:28:15,544 - INFO -    Position size: 3849.867498 contracts
+2026-03-31 17:28:15,544 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:15,544 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:15,544 - INFO -    Stop-loss: $0.0069 (+5.0%)
+2026-03-31 17:28:15,544 - INFO -    Take-profit: $0.0061 (-8.0%)
+2026-03-31 17:28:15,548 - INFO - ✅ FUTURES SHORT PLAN CREATED for VET/USDT
+2026-03-31 17:28:15,548 - INFO -    Would short 3849.867498 contracts at $0.0066
+2026-03-31 17:28:15,548 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:15,939 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:16,241 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.49%
+2026-03-31 17:28:16,241 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:28:16,241 - INFO -    Current price: $0.8210
+2026-03-31 17:28:16,241 - INFO -    24h change: -2.49%
+2026-03-31 17:28:16,242 - INFO -    Position size: 30.991199 contracts
+2026-03-31 17:28:16,242 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:16,242 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:16,242 - INFO -    Stop-loss: $0.8620 (+5.0%)
+2026-03-31 17:28:16,242 - INFO -    Take-profit: $0.7553 (-8.0%)
+2026-03-31 17:28:16,244 - INFO - ✅ FUTURES SHORT PLAN CREATED for FIL/USDT
+2026-03-31 17:28:16,244 - INFO -    Would short 30.991199 contracts at $0.8210
+2026-03-31 17:28:16,244 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:16,609 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:17,202 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:28:17,495 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.10%
+2026-03-31 17:28:17,495 - INFO - 🎯 PREPARING FUTURES SHORT: AAVE/USDT
+2026-03-31 17:28:17,495 - INFO -    Current price: $95.9300
+2026-03-31 17:28:17,495 - INFO -    24h change: -2.10%
+2026-03-31 17:28:17,495 - INFO -    Position size: 0.265233 contracts
+2026-03-31 17:28:17,495 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:17,495 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:17,495 - INFO -    Stop-loss: $100.7265 (+5.0%)
+2026-03-31 17:28:17,495 - INFO -    Take-profit: $88.2556 (-8.0%)
+2026-03-31 17:28:17,496 - INFO - ✅ FUTURES SHORT PLAN CREATED for AAVE/USDT
+2026-03-31 17:28:17,496 - INFO -    Would short 0.265233 contracts at $95.9300
+2026-03-31 17:28:17,496 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:17,809 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:18,104 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:28:18,104 - INFO - 🎯 PREPARING FUTURES SHORT: MKR/USDT
+2026-03-31 17:28:18,104 - INFO -    Current price: $1650.1000
+2026-03-31 17:28:18,104 - INFO -    24h change: -3.40%
+2026-03-31 17:28:18,104 - INFO -    Position size: 0.015420 contracts
+2026-03-31 17:28:18,104 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:18,104 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:18,104 - INFO -    Stop-loss: $1732.6050 (+5.0%)
+2026-03-31 17:28:18,104 - INFO -    Take-profit: $1518.0920 (-8.0%)
+2026-03-31 17:28:18,105 - INFO - ✅ FUTURES SHORT PLAN CREATED for MKR/USDT
+2026-03-31 17:28:18,105 - INFO -    Would short 0.015420 contracts at $1650.1000
+2026-03-31 17:28:18,105 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:18,695 - ERROR - ❌ Trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-03-31 17:28:18,995 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -5.05%
+2026-03-31 17:28:18,995 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:28:18,995 - INFO -    Current price: $17.3000
+2026-03-31 17:28:18,995 - INFO -    24h change: -5.05%
+2026-03-31 17:28:18,995 - INFO -    Position size: 1.470738 contracts
+2026-03-31 17:28:18,995 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:18,995 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:18,995 - INFO -    Stop-loss: $18.1650 (+5.0%)
+2026-03-31 17:28:18,995 - INFO -    Take-profit: $15.9160 (-8.0%)
+2026-03-31 17:28:18,996 - INFO - ✅ FUTURES SHORT PLAN CREATED for COMP/USDT
+2026-03-31 17:28:18,996 - INFO -    Would short 1.470738 contracts at $17.3000
+2026-03-31 17:28:18,996 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:19,313 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:19,424 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:28:19,425 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:28:19,425 - INFO -    Current price: $0.2770
+2026-03-31 17:28:19,425 - INFO -    24h change: -1.42%
+2026-03-31 17:28:19,425 - INFO -    Position size: 91.854781 contracts
+2026-03-31 17:28:19,425 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:19,425 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:19,425 - INFO -    Stop-loss: $0.2909 (+5.0%)
+2026-03-31 17:28:19,425 - INFO -    Take-profit: $0.2548 (-8.0%)
+2026-03-31 17:28:19,428 - INFO - ✅ FUTURES SHORT PLAN CREATED for SNX/USDT
+2026-03-31 17:28:19,428 - INFO -    Would short 91.854781 contracts at $0.2770
+2026-03-31 17:28:19,428 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:19,745 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:19,854 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.45%
+2026-03-31 17:28:19,855 - INFO - 🎯 PREPARING FUTURES SHORT: YFI/USDT
+2026-03-31 17:28:19,855 - INFO -    Current price: $2441.0000
+2026-03-31 17:28:19,855 - INFO -    24h change: -1.45%
+2026-03-31 17:28:19,855 - INFO -    Position size: 0.010424 contracts
+2026-03-31 17:28:19,855 - INFO -    Position value: $25.44 (with 3x leverage)
+2026-03-31 17:28:19,855 - INFO -    Capital at risk: $8.48
+2026-03-31 17:28:19,855 - INFO -    Stop-loss: $2563.0500 (+5.0%)
+2026-03-31 17:28:19,855 - INFO -    Take-profit: $2245.7200 (-8.0%)
+2026-03-31 17:28:19,859 - INFO - ✅ FUTURES SHORT PLAN CREATED for YFI/USDT
+2026-03-31 17:28:19,859 - INFO -    Would short 0.010424 contracts at $2441.0000
+2026-03-31 17:28:19,859 - INFO -    With 3x leverage ($25.44 position)
+2026-03-31 17:28:20,176 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:28:20,177 - INFO - 
+📈 CYCLE 1 SUMMARY:
+2026-03-31 17:28:20,177 - INFO -    Short plans created: 20
+2026-03-31 17:28:20,177 - INFO -    Total plans: 20
+2026-03-31 17:28:20,177 - INFO -    Cycle duration: 10.9 seconds
+2026-03-31 17:28:20,177 - INFO -    Free balance: $42.41
+2026-03-31 17:28:20,177 - INFO -    📋 SHORT TRADE PLANS READY!
+2026-03-31 17:28:20,177 - INFO -    Check futures_trade_plans.json
+2026-03-31 17:28:20,177 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:28:20,178 - INFO - ======================================================================
+2026-03-31 17:28:20,291 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:28:20,291 - INFO -    Free USDT: $4.74
+2026-03-31 17:28:20,291 - INFO -    Total USDT: $77.78
+2026-03-31 17:29:20,337 - INFO - 
+📊 FUTURES CYCLE 2 - 17:29:20
+2026-03-31 17:29:20,337 - INFO - --------------------------------------------------
+2026-03-31 17:29:20,337 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:29:20,448 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.60%
+2026-03-31 17:29:20,448 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:20,568 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.44%
+2026-03-31 17:29:20,568 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:20,679 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -4.01%
+2026-03-31 17:29:20,679 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:20,791 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.18%
+2026-03-31 17:29:20,792 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:20,900 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.71%
+2026-03-31 17:29:20,900 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,011 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.84%
+2026-03-31 17:29:21,011 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,121 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.91%
+2026-03-31 17:29:21,121 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,248 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -2.02%
+2026-03-31 17:29:21,249 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,249 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:29:21,361 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.35%
+2026-03-31 17:29:21,361 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,475 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.97%
+2026-03-31 17:29:21,476 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,586 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -1.00%
+2026-03-31 17:29:21,587 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,813 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.35%
+2026-03-31 17:29:21,813 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:21,924 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.50%
+2026-03-31 17:29:21,925 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,149 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.19%
+2026-03-31 17:29:22,150 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,260 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.73%
+2026-03-31 17:29:22,260 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,534 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:29:22,647 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.13%
+2026-03-31 17:29:22,647 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,766 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:29:22,767 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,876 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.94%
+2026-03-31 17:29:22,876 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:22,990 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:29:22,990 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:23,103 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.69%
+2026-03-31 17:29:23,103 - WARNING - ⚠️  Insufficient futures balance: $4.74
+2026-03-31 17:29:23,103 - INFO - 
+📈 CYCLE 2 SUMMARY:
+2026-03-31 17:29:23,103 - INFO -    Short plans created: 0
+2026-03-31 17:29:23,103 - INFO -    Total plans: 20
+2026-03-31 17:29:23,103 - INFO -    Cycle duration: 2.8 seconds
+2026-03-31 17:29:23,103 - INFO -    Free balance: $4.74
+2026-03-31 17:29:23,103 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:29:23,104 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:29:23,104 - INFO - ======================================================================
+2026-03-31 17:29:23,220 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:29:23,220 - INFO -    Free USDT: $4.70
+2026-03-31 17:29:23,220 - INFO -    Total USDT: $77.75
+2026-03-31 17:30:23,249 - INFO - 
+📊 FUTURES CYCLE 3 - 17:30:23
+2026-03-31 17:30:23,249 - INFO - --------------------------------------------------
+2026-03-31 17:30:23,249 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:30:23,779 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.54%
+2026-03-31 17:30:23,779 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:24,195 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.36%
+2026-03-31 17:30:24,195 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:24,719 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.95%
+2026-03-31 17:30:24,719 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:24,833 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.14%
+2026-03-31 17:30:24,833 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:25,243 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.66%
+2026-03-31 17:30:25,243 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:25,355 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.76%
+2026-03-31 17:30:25,356 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:25,876 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.86%
+2026-03-31 17:30:25,876 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,101 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.93%
+2026-03-31 17:30:26,102 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,102 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:30:26,218 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.27%
+2026-03-31 17:30:26,218 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,332 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.94%
+2026-03-31 17:30:26,333 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,450 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -1.00%
+2026-03-31 17:30:26,450 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,810 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.31%
+2026-03-31 17:30:26,811 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:26,921 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.42%
+2026-03-31 17:30:26,922 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:27,149 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.16%
+2026-03-31 17:30:27,149 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:27,334 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.73%
+2026-03-31 17:30:27,334 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:27,564 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:30:27,676 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.07%
+2026-03-31 17:30:27,676 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:27,856 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:30:27,857 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:27,967 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.89%
+2026-03-31 17:30:27,967 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:28,082 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.77%
+2026-03-31 17:30:28,082 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:28,197 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.77%
+2026-03-31 17:30:28,197 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:30:28,197 - INFO - 
+📈 CYCLE 3 SUMMARY:
+2026-03-31 17:30:28,197 - INFO -    Short plans created: 0
+2026-03-31 17:30:28,197 - INFO -    Total plans: 20
+2026-03-31 17:30:28,197 - INFO -    Cycle duration: 4.9 seconds
+2026-03-31 17:30:28,197 - INFO -    Free balance: $4.70
+2026-03-31 17:30:28,197 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:30:28,198 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:30:28,198 - INFO - ======================================================================
+2026-03-31 17:30:28,430 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:30:28,430 - INFO -    Free USDT: $4.70
+2026-03-31 17:30:28,430 - INFO -    Total USDT: $77.76
+2026-03-31 17:31:28,466 - INFO - 
+📊 FUTURES CYCLE 4 - 17:31:28
+2026-03-31 17:31:28,466 - INFO - --------------------------------------------------
+2026-03-31 17:31:28,466 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:31:28,576 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.54%
+2026-03-31 17:31:28,576 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:28,686 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.34%
+2026-03-31 17:31:28,686 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:28,796 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.92%
+2026-03-31 17:31:28,796 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:28,906 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.06%
+2026-03-31 17:31:28,906 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,017 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.63%
+2026-03-31 17:31:29,017 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,126 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.77%
+2026-03-31 17:31:29,127 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,235 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.83%
+2026-03-31 17:31:29,235 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,344 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.91%
+2026-03-31 17:31:29,344 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,344 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:31:29,452 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.27%
+2026-03-31 17:31:29,453 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,561 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -0.97%
+2026-03-31 17:31:29,561 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,672 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.95%
+2026-03-31 17:31:29,672 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:29,907 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.34%
+2026-03-31 17:31:29,907 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,018 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.38%
+2026-03-31 17:31:30,018 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,244 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.18%
+2026-03-31 17:31:30,244 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,356 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.73%
+2026-03-31 17:31:30,356 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,579 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:31:30,687 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.06%
+2026-03-31 17:31:30,687 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,797 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:31:30,797 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:30,910 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.94%
+2026-03-31 17:31:30,910 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:31,020 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.07%
+2026-03-31 17:31:31,021 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:31,132 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.69%
+2026-03-31 17:31:31,132 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:31:31,132 - INFO - 
+📈 CYCLE 4 SUMMARY:
+2026-03-31 17:31:31,132 - INFO -    Short plans created: 0
+2026-03-31 17:31:31,132 - INFO -    Total plans: 20
+2026-03-31 17:31:31,132 - INFO -    Cycle duration: 2.7 seconds
+2026-03-31 17:31:31,132 - INFO -    Free balance: $4.70
+2026-03-31 17:31:31,133 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:31:31,133 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:31:31,133 - INFO - ======================================================================
+2026-03-31 17:31:31,247 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:31:31,247 - INFO -    Free USDT: $4.70
+2026-03-31 17:31:31,247 - INFO -    Total USDT: $77.75
+2026-03-31 17:32:31,250 - INFO - 
+📊 FUTURES CYCLE 5 - 17:32:31
+2026-03-31 17:32:31,251 - INFO - --------------------------------------------------
+2026-03-31 17:32:31,251 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:32:31,364 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.58%
+2026-03-31 17:32:31,364 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:31,477 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.38%
+2026-03-31 17:32:31,477 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:31,587 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.95%
+2026-03-31 17:32:31,587 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:31,698 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.06%
+2026-03-31 17:32:31,698 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:31,811 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.65%
+2026-03-31 17:32:31,811 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:31,923 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.69%
+2026-03-31 17:32:31,924 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,034 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.82%
+2026-03-31 17:32:32,034 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,145 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.93%
+2026-03-31 17:32:32,145 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,145 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:32:32,257 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.27%
+2026-03-31 17:32:32,258 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,369 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -1.03%
+2026-03-31 17:32:32,369 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,481 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.98%
+2026-03-31 17:32:32,482 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,594 - INFO - ⚡ FUTURES SHORT SIGNAL: ATOM/USDT down -0.89%
+2026-03-31 17:32:32,594 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,705 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.39%
+2026-03-31 17:32:32,705 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:32,816 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.35%
+2026-03-31 17:32:32,816 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,040 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.22%
+2026-03-31 17:32:33,040 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,192 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.73%
+2026-03-31 17:32:33,193 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,484 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:32:33,597 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.11%
+2026-03-31 17:32:33,598 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,709 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:32:33,709 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,823 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -5.00%
+2026-03-31 17:32:33,823 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:33,936 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:32:33,936 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:34,050 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.69%
+2026-03-31 17:32:34,051 - WARNING - ⚠️  Insufficient futures balance: $4.70
+2026-03-31 17:32:34,051 - INFO - 
+📈 CYCLE 5 SUMMARY:
+2026-03-31 17:32:34,051 - INFO -    Short plans created: 0
+2026-03-31 17:32:34,051 - INFO -    Total plans: 20
+2026-03-31 17:32:34,051 - INFO -    Cycle duration: 2.8 seconds
+2026-03-31 17:32:34,051 - INFO -    Free balance: $4.70
+2026-03-31 17:32:34,051 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:32:34,051 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:32:34,051 - INFO - ======================================================================
+2026-03-31 17:32:34,199 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:32:34,199 - INFO -    Free USDT: $4.86
+2026-03-31 17:32:34,199 - INFO -    Total USDT: $77.87
+2026-03-31 17:33:34,199 - INFO - 
+📊 FUTURES CYCLE 6 - 17:33:34
+2026-03-31 17:33:34,199 - INFO - --------------------------------------------------
+2026-03-31 17:33:34,200 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:33:34,311 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.58%
+2026-03-31 17:33:34,312 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,428 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.36%
+2026-03-31 17:33:34,428 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,540 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.99%
+2026-03-31 17:33:34,540 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,651 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -2.94%
+2026-03-31 17:33:34,651 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,763 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.59%
+2026-03-31 17:33:34,763 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,874 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.76%
+2026-03-31 17:33:34,875 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:34,985 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.81%
+2026-03-31 17:33:34,985 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,100 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.91%
+2026-03-31 17:33:35,100 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,101 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:33:35,211 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.27%
+2026-03-31 17:33:35,211 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,327 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -1.14%
+2026-03-31 17:33:35,328 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,441 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.93%
+2026-03-31 17:33:35,442 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,669 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.28%
+2026-03-31 17:33:35,669 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:35,787 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.31%
+2026-03-31 17:33:35,788 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,011 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.13%
+2026-03-31 17:33:36,011 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,124 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.61%
+2026-03-31 17:33:36,125 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,349 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:33:36,464 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.08%
+2026-03-31 17:33:36,464 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,581 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:33:36,582 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,697 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.84%
+2026-03-31 17:33:36,697 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,813 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:33:36,813 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,926 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.61%
+2026-03-31 17:33:36,927 - WARNING - ⚠️  Insufficient futures balance: $4.86
+2026-03-31 17:33:36,927 - INFO - 
+📈 CYCLE 6 SUMMARY:
+2026-03-31 17:33:36,927 - INFO -    Short plans created: 0
+2026-03-31 17:33:36,927 - INFO -    Total plans: 20
+2026-03-31 17:33:36,927 - INFO -    Cycle duration: 2.7 seconds
+2026-03-31 17:33:36,927 - INFO -    Free balance: $4.86
+2026-03-31 17:33:36,927 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:33:36,927 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:33:36,927 - INFO - ======================================================================
+2026-03-31 17:33:37,039 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:33:37,039 - INFO -    Free USDT: $4.53
+2026-03-31 17:33:37,039 - INFO -    Total USDT: $77.63
+2026-03-31 17:34:37,081 - INFO - 
+📊 FUTURES CYCLE 7 - 17:34:37
+2026-03-31 17:34:37,082 - INFO - --------------------------------------------------
+2026-03-31 17:34:37,082 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:34:37,193 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.62%
+2026-03-31 17:34:37,194 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,305 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.40%
+2026-03-31 17:34:37,305 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,417 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.93%
+2026-03-31 17:34:37,417 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,532 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.06%
+2026-03-31 17:34:37,533 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,642 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.56%
+2026-03-31 17:34:37,643 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,751 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.69%
+2026-03-31 17:34:37,751 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,863 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.82%
+2026-03-31 17:34:37,863 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,974 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.97%
+2026-03-31 17:34:37,974 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:37,974 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:34:38,085 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.33%
+2026-03-31 17:34:38,085 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,194 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -1.25%
+2026-03-31 17:34:38,194 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,303 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.97%
+2026-03-31 17:34:38,303 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,525 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.31%
+2026-03-31 17:34:38,525 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,635 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.35%
+2026-03-31 17:34:38,635 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,860 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.18%
+2026-03-31 17:34:38,860 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:38,970 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.84%
+2026-03-31 17:34:38,970 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,187 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:34:39,299 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.08%
+2026-03-31 17:34:39,299 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,411 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:34:39,411 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,520 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.84%
+2026-03-31 17:34:39,520 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,632 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.77%
+2026-03-31 17:34:39,632 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,746 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.77%
+2026-03-31 17:34:39,746 - WARNING - ⚠️  Insufficient futures balance: $4.53
+2026-03-31 17:34:39,746 - INFO - 
+📈 CYCLE 7 SUMMARY:
+2026-03-31 17:34:39,746 - INFO -    Short plans created: 0
+2026-03-31 17:34:39,746 - INFO -    Total plans: 20
+2026-03-31 17:34:39,747 - INFO -    Cycle duration: 2.7 seconds
+2026-03-31 17:34:39,747 - INFO -    Free balance: $4.53
+2026-03-31 17:34:39,747 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:34:39,747 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:34:39,747 - INFO - ======================================================================
+2026-03-31 17:34:39,863 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:34:39,864 - INFO -    Free USDT: $4.82
+2026-03-31 17:34:39,864 - INFO -    Total USDT: $77.85
+2026-03-31 17:35:39,908 - INFO - 
+📊 FUTURES CYCLE 8 - 17:35:39
+2026-03-31 17:35:39,908 - INFO - --------------------------------------------------
+2026-03-31 17:35:39,908 - INFO - 🔍 Analyzing 26 futures pairs...
+2026-03-31 17:35:40,023 - INFO - ⚡ FUTURES SHORT SIGNAL: BTC/USDT down -1.60%
+2026-03-31 17:35:40,023 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,138 - INFO - ⚡ FUTURES SHORT SIGNAL: ETH/USDT down -1.37%
+2026-03-31 17:35:40,138 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,249 - INFO - ⚡ FUTURES SHORT SIGNAL: SOL/USDT down -3.86%
+2026-03-31 17:35:40,249 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,360 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down -3.02%
+2026-03-31 17:35:40,361 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,472 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down -2.62%
+2026-03-31 17:35:40,472 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,582 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down -2.77%
+2026-03-31 17:35:40,582 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,693 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down -2.76%
+2026-03-31 17:35:40,693 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,805 - INFO - ⚡ FUTURES SHORT SIGNAL: AVAX/USDT down -1.94%
+2026-03-31 17:35:40,806 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:40,806 - ERROR - Error analyzing MATIC futures: binance does not have market symbol MATIC/USDT
+2026-03-31 17:35:40,917 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down -2.29%
+2026-03-31 17:35:40,917 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,031 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down -1.28%
+2026-03-31 17:35:41,031 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,142 - INFO - ⚡ FUTURES SHORT SIGNAL: LTC/USDT down -0.91%
+2026-03-31 17:35:41,142 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,367 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down -2.29%
+2026-03-31 17:35:41,367 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,478 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down -3.26%
+2026-03-31 17:35:41,479 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,706 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down -2.19%
+2026-03-31 17:35:41,706 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:41,817 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down -2.61%
+2026-03-31 17:35:41,817 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,044 - ERROR - Error analyzing EOS futures: binance does not have market symbol EOS/USDT
+2026-03-31 17:35:42,158 - INFO - ⚡ FUTURES SHORT SIGNAL: AAVE/USDT down -2.06%
+2026-03-31 17:35:42,158 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,273 - INFO - ⚡ FUTURES SHORT SIGNAL: MKR/USDT down -3.40%
+2026-03-31 17:35:42,273 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,383 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down -4.89%
+2026-03-31 17:35:42,383 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,497 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down -1.42%
+2026-03-31 17:35:42,497 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,607 - INFO - ⚡ FUTURES SHORT SIGNAL: YFI/USDT down -1.85%
+2026-03-31 17:35:42,607 - WARNING - ⚠️  Insufficient futures balance: $4.82
+2026-03-31 17:35:42,607 - INFO - 
+📈 CYCLE 8 SUMMARY:
+2026-03-31 17:35:42,607 - INFO -    Short plans created: 0
+2026-03-31 17:35:42,607 - INFO -    Total plans: 20
+2026-03-31 17:35:42,607 - INFO -    Cycle duration: 2.7 seconds
+2026-03-31 17:35:42,607 - INFO -    Free balance: $4.82
+2026-03-31 17:35:42,607 - INFO -    ⏳ No strong short signals this cycle
+2026-03-31 17:35:42,607 - INFO - 
+⏰ Next futures scan in 60 seconds...
+2026-03-31 17:35:42,607 - INFO - ======================================================================
+2026-03-31 17:35:42,717 - INFO - 💰 Binance Futures balance:
+2026-03-31 17:35:42,717 - INFO -    Free USDT: $4.97
+2026-03-31 17:35:42,717 - INFO -    Total USDT: $77.95

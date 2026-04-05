@@ -1,0 +1,75 @@
+2026-04-03 10:31:24,957 - INFO - ✅ Gemini exchange initialized for auto-trading
+2026-04-03 10:31:24,960 - INFO - ✅ Binance exchange initialized for auto-trading
+2026-04-03 10:31:24,960 - INFO - ======================================================================
+2026-04-03 10:31:24,960 - INFO - 🤖 AUTO ARBITRAGE BOT STARTED
+2026-04-03 10:31:24,960 - INFO - Monitoring 27 cryptos
+2026-04-03 10:31:24,960 - INFO - Min spread: 0.4%
+2026-04-03 10:31:24,960 - INFO - Min profit: $0.25
+2026-04-03 10:31:24,960 - INFO - Trade size: 8.0% of capital
+2026-04-03 10:31:24,960 - INFO - ======================================================================
+2026-04-03 10:31:24,960 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 1 - 10:31:24
+2026-04-03 10:31:32,687 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:31:45,236 - INFO - 📊 Market Status:
+2026-04-03 10:31:45,954 - INFO -   BTC: G=$66624.45, B=$66616.72, Spread=0.01%
+2026-04-03 10:31:46,514 - INFO -   ETH: G=$2052.07, B=$2052.15, Spread=0.00%
+2026-04-03 10:31:47,081 - INFO -   SOL: G=$79.24, B=$79.18, Spread=0.08%
+2026-04-03 10:31:47,696 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.08%
+2026-04-03 10:31:47,696 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:31:48,408 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.19%
+2026-04-03 10:31:48,913 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.04%
+2026-04-03 10:31:49,539 - INFO -   AVAX: G=$8.80, B=$8.79, Spread=0.13%
+2026-04-03 10:31:50,053 - INFO -   LINK: G=$8.66, B=$8.65, Spread=0.06%
+2026-04-03 10:31:50,481 - INFO -   UNI: G=$3.19, B=$3.19, Spread=0.03%
+2026-04-03 10:31:51,073 - INFO -   LTC: G=$52.42, B=$52.41, Spread=0.02%
+2026-04-03 10:31:51,714 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.06%
+2026-04-03 10:31:52,335 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:31:52,882 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.06%
+2026-04-03 10:31:53,512 - INFO -   AAVE: G=$95.04, B=$94.77, Spread=0.29%
+2026-04-03 10:31:54,253 - INFO -   COMP: G=$16.69, B=$16.70, Spread=0.06%
+2026-04-03 10:31:54,669 - INFO -   YFI: G=$2430.78, B=$2421.00, Spread=0.40%
+2026-04-03 10:31:55,273 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:31:55,659 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.91%
+2026-04-03 10:31:56,273 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.05%
+2026-04-03 10:31:56,913 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:31:57,525 - INFO -   BCH: G=$444.99, B=$444.20, Spread=0.18%
+2026-04-03 10:31:58,139 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.21%
+2026-04-03 10:31:58,694 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.39%
+2026-04-03 10:31:59,300 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.27%
+2026-04-03 10:31:59,897 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.11%
+2026-04-03 10:32:00,398 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.53%
+2026-04-03 10:32:00,399 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:32:00,399 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:32:30,446 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 2 - 10:32:30
+2026-04-03 10:32:32,474 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:32:44,948 - INFO - 📊 Market Status:
+2026-04-03 10:32:45,564 - INFO -   BTC: G=$66624.45, B=$66649.22, Spread=0.04%
+2026-04-03 10:32:46,171 - INFO -   ETH: G=$2052.07, B=$2054.09, Spread=0.10%
+2026-04-03 10:32:46,765 - INFO -   SOL: G=$79.22, B=$79.25, Spread=0.03%
+2026-04-03 10:32:47,299 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.04%
+2026-04-03 10:32:47,300 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:32:47,813 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.19%
+2026-04-03 10:32:48,330 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.06%
+2026-04-03 10:32:48,938 - INFO -   AVAX: G=$8.80, B=$8.79, Spread=0.13%
+2026-04-03 10:32:49,455 - INFO -   LINK: G=$8.66, B=$8.65, Spread=0.08%
+2026-04-03 10:32:50,078 - INFO -   UNI: G=$3.19, B=$3.19, Spread=0.03%
+2026-04-03 10:32:50,682 - INFO -   LTC: G=$52.42, B=$52.44, Spread=0.04%
+2026-04-03 10:32:51,325 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.00%
+2026-04-03 10:32:51,850 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:32:52,393 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.03%
+2026-04-03 10:32:52,938 - INFO -   AAVE: G=$94.81, B=$94.86, Spread=0.05%
+2026-04-03 10:32:53,545 - INFO -   COMP: G=$16.69, B=$16.70, Spread=0.06%
+2026-04-03 10:32:54,153 - INFO -   YFI: G=$2430.78, B=$2421.00, Spread=0.40%
+2026-04-03 10:32:54,797 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:32:55,428 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.91%
+2026-04-03 10:32:56,038 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.14%
+2026-04-03 10:32:56,601 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:32:57,159 - INFO -   BCH: G=$444.99, B=$444.40, Spread=0.13%
+2026-04-03 10:32:57,792 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:32:58,299 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.17%
+2026-04-03 10:32:58,912 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:32:59,531 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.23%
+2026-04-03 10:33:00,079 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.46%
+2026-04-03 10:33:00,079 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:33:00,080 - INFO - 💤 Next scan in 30 seconds...

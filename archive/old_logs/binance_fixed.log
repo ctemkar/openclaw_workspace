@@ -1,0 +1,597 @@
+2026-03-31 17:36:40,512 - INFO - ✅ Simple Safety Monitor loaded for Binance
+2026-03-31 17:36:40,513 - INFO - ======================================================================
+2026-03-31 17:36:40,513 - INFO - 🚀 BINANCE FUTURES SHORT TRADING BOT WITH SAFETY
+2026-03-31 17:36:40,513 - INFO - ======================================================================
+2026-03-31 17:36:40,513 - INFO - SHORT threshold: 0.8% drop
+2026-03-31 17:36:40,513 - INFO - Futures capital: $50.00
+2026-03-31 17:36:40,513 - INFO - Leverage: 3x (conservative)
+2026-03-31 17:36:40,513 - INFO - Position size: 20% of capital
+2026-03-31 17:36:40,513 - INFO - Stop-loss: 5%, Take-profit: 8%
+2026-03-31 17:36:40,513 - INFO - Scan interval: 60 seconds
+2026-03-31 17:36:40,513 - INFO - ✅ SAFETY FEATURES ENABLED:
+2026-03-31 17:36:40,513 - INFO -    • Market crash detection
+2026-03-31 17:36:40,513 - INFO -    • Basic technical indicators
+2026-03-31 17:36:40,513 - INFO -    • Price action monitoring
+2026-03-31 17:36:40,513 - INFO - ======================================================================
+2026-03-31 17:36:40,513 - INFO - 🚨 REAL TRADING MODE - ACTIVE
+2026-03-31 17:36:40,513 - INFO -    Trades WILL be executed on Binance Futures
+2026-03-31 17:36:40,513 - INFO -    Using 3x leverage for short positions
+2026-03-31 17:36:40,513 - INFO - ======================================================================
+2026-03-31 17:36:40,513 - INFO - 
+📊 FUTURES SCAN CYCLE 1 - 17:36:40
+2026-03-31 17:36:40,513 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:40,516 - INFO - 
+🔍 Scanning 18 cryptocurrencies for short opportunities...
+2026-03-31 17:36:42,435 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down 2.74%
+2026-03-31 17:36:42,436 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:42,439 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:36:42,439 - INFO -     Current price: $0.0900
+2026-03-31 17:36:42,439 - INFO -     24h change: -2.74%
+2026-03-31 17:36:42,439 - INFO -     Position size: 333.296300 contracts
+2026-03-31 17:36:42,439 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:42,439 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:42,439 - INFO -     Stop-loss: $0.0945 (+5%)
+2026-03-31 17:36:42,439 - INFO -     Take-profit: $0.0828 (-8%)
+2026-03-31 17:36:44,898 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:45,048 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down 3.10%
+2026-03-31 17:36:45,049 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:45,063 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:36:45,064 - INFO -     Current price: $0.2403
+2026-03-31 17:36:45,064 - INFO -     24h change: -3.10%
+2026-03-31 17:36:45,064 - INFO -     Position size: 124.843945 contracts
+2026-03-31 17:36:45,064 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:45,064 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:45,064 - INFO -     Stop-loss: $0.2523 (+5%)
+2026-03-31 17:36:45,064 - INFO -     Take-profit: $0.2211 (-8%)
+2026-03-31 17:36:47,076 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:47,225 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down 2.69%
+2026-03-31 17:36:47,226 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:47,240 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:36:47,240 - INFO -     Current price: $1.3097
+2026-03-31 17:36:47,240 - INFO -     24h change: -2.69%
+2026-03-31 17:36:47,240 - INFO -     Position size: 22.906009 contracts
+2026-03-31 17:36:47,240 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:47,240 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:47,240 - INFO -     Stop-loss: $1.3752 (+5%)
+2026-03-31 17:36:47,240 - INFO -     Take-profit: $1.2049 (-8%)
+2026-03-31 17:36:49,343 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:49,488 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down 2.84%
+2026-03-31 17:36:49,488 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:49,498 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:36:49,498 - INFO -     Current price: $1.2300
+2026-03-31 17:36:49,498 - INFO -     24h change: -2.84%
+2026-03-31 17:36:49,498 - INFO -     Position size: 24.390244 contracts
+2026-03-31 17:36:49,499 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:49,499 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:49,499 - INFO -     Stop-loss: $1.2915 (+5%)
+2026-03-31 17:36:49,499 - INFO -     Take-profit: $1.1316 (-8%)
+2026-03-31 17:36:51,677 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:51,824 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down 2.33%
+2026-03-31 17:36:51,825 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:51,837 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:36:51,837 - INFO -     Current price: $8.5520
+2026-03-31 17:36:51,837 - INFO -     24h change: -2.33%
+2026-03-31 17:36:51,837 - INFO -     Position size: 3.507951 contracts
+2026-03-31 17:36:51,837 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:51,837 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:51,837 - INFO -     Stop-loss: $8.9796 (+5%)
+2026-03-31 17:36:51,837 - INFO -     Take-profit: $7.8678 (-8%)
+2026-03-31 17:36:53,958 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:54,104 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down 1.34%
+2026-03-31 17:36:54,105 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:54,115 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:36:54,115 - INFO -     Current price: $3.4580
+2026-03-31 17:36:54,115 - INFO -     24h change: -1.34%
+2026-03-31 17:36:54,115 - INFO -     Position size: 8.675535 contracts
+2026-03-31 17:36:54,115 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:54,115 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:54,116 - INFO -     Stop-loss: $3.6309 (+5%)
+2026-03-31 17:36:54,116 - INFO -     Take-profit: $3.1814 (-8%)
+2026-03-31 17:36:56,295 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:56,445 - INFO - ⚡ FUTURES SHORT SIGNAL: ATOM/USDT down 0.95%
+2026-03-31 17:36:56,446 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:56,458 - INFO - 🎯 PREPARING FUTURES SHORT: ATOM/USDT
+2026-03-31 17:36:56,459 - INFO -     Current price: $1.6700
+2026-03-31 17:36:56,459 - INFO -     24h change: -0.95%
+2026-03-31 17:36:56,459 - INFO -     Position size: 17.964072 contracts
+2026-03-31 17:36:56,459 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:56,459 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:56,459 - INFO -     Stop-loss: $1.7535 (+5%)
+2026-03-31 17:36:56,459 - INFO -     Take-profit: $1.5364 (-8%)
+2026-03-31 17:36:58,651 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:36:58,804 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down 2.29%
+2026-03-31 17:36:58,804 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:36:58,818 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:36:58,818 - INFO -     Current price: $8.0200
+2026-03-31 17:36:58,818 - INFO -     24h change: -2.29%
+2026-03-31 17:36:58,819 - INFO -     Position size: 3.740648 contracts
+2026-03-31 17:36:58,819 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:36:58,819 - INFO -     Capital at risk: $10.00
+2026-03-31 17:36:58,819 - INFO -     Stop-loss: $8.4210 (+5%)
+2026-03-31 17:36:58,819 - INFO -     Take-profit: $7.3784 (-8%)
+2026-03-31 17:37:00,814 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:00,938 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down 3.29%
+2026-03-31 17:37:00,938 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:37:00,941 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:37:00,941 - INFO -     Current price: $0.1646
+2026-03-31 17:37:00,941 - INFO -     24h change: -3.29%
+2026-03-31 17:37:00,941 - INFO -     Position size: 182.260024 contracts
+2026-03-31 17:37:00,941 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:37:00,941 - INFO -     Capital at risk: $10.00
+2026-03-31 17:37:00,941 - INFO -     Stop-loss: $0.1728 (+5%)
+2026-03-31 17:37:00,941 - INFO -     Take-profit: $0.1514 (-8%)
+2026-03-31 17:37:02,995 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:03,230 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down 2.18%
+2026-03-31 17:37:03,230 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:37:03,233 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:37:03,233 - INFO -     Current price: $0.0066
+2026-03-31 17:37:03,233 - INFO -     24h change: -2.18%
+2026-03-31 17:37:03,233 - INFO -     Position size: 4540.638717 contracts
+2026-03-31 17:37:03,233 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:37:03,233 - INFO -     Capital at risk: $10.00
+2026-03-31 17:37:03,233 - INFO -     Stop-loss: $0.0069 (+5%)
+2026-03-31 17:37:03,234 - INFO -     Take-profit: $0.0061 (-8%)
+2026-03-31 17:37:05,377 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:05,554 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down 2.73%
+2026-03-31 17:37:05,554 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:37:05,558 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:37:05,558 - INFO -     Current price: $0.8210
+2026-03-31 17:37:05,558 - INFO -     24h change: -2.73%
+2026-03-31 17:37:05,558 - INFO -     Position size: 36.540804 contracts
+2026-03-31 17:37:05,558 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:37:05,558 - INFO -     Capital at risk: $10.00
+2026-03-31 17:37:05,558 - INFO -     Stop-loss: $0.8620 (+5%)
+2026-03-31 17:37:05,558 - INFO -     Take-profit: $0.7553 (-8%)
+2026-03-31 17:37:07,661 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:07,920 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down 4.89%
+2026-03-31 17:37:07,921 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:37:07,936 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:37:07,936 - INFO -     Current price: $17.3100
+2026-03-31 17:37:07,936 - INFO -     24h change: -4.89%
+2026-03-31 17:37:07,936 - INFO -     Position size: 1.733102 contracts
+2026-03-31 17:37:07,936 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:37:07,936 - INFO -     Capital at risk: $10.00
+2026-03-31 17:37:07,936 - INFO -     Stop-loss: $18.1755 (+5%)
+2026-03-31 17:37:07,936 - INFO -     Take-profit: $15.9252 (-8%)
+2026-03-31 17:37:10,092 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:10,241 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down 1.78%
+2026-03-31 17:37:10,242 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:37:10,253 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:37:10,253 - INFO -     Current price: $0.2760
+2026-03-31 17:37:10,253 - INFO -     24h change: -1.78%
+2026-03-31 17:37:10,253 - INFO -     Position size: 108.695652 contracts
+2026-03-31 17:37:10,253 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:37:10,253 - INFO -     Capital at risk: $10.00
+2026-03-31 17:37:10,253 - INFO -     Stop-loss: $0.2898 (+5%)
+2026-03-31 17:37:10,253 - INFO -     Take-profit: $0.2539 (-8%)
+2026-03-31 17:37:13,075 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:37:13,088 - INFO - 📊 No strong short opportunities found this cycle
+2026-03-31 17:37:13,104 - INFO - ⏰ Next scan in 60 seconds...
+2026-03-31 17:38:13,105 - INFO - 
+📊 FUTURES SCAN CYCLE 2 - 17:38:13
+2026-03-31 17:38:13,106 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:13,122 - INFO - 
+🔍 Scanning 18 cryptocurrencies for short opportunities...
+2026-03-31 17:38:15,150 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down 2.65%
+2026-03-31 17:38:15,150 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:15,153 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:38:15,153 - INFO -     Current price: $0.0900
+2026-03-31 17:38:15,153 - INFO -     24h change: -2.65%
+2026-03-31 17:38:15,153 - INFO -     Position size: 333.333333 contracts
+2026-03-31 17:38:15,153 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:15,153 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:15,153 - INFO -     Stop-loss: $0.0945 (+5%)
+2026-03-31 17:38:15,153 - INFO -     Take-profit: $0.0828 (-8%)
+2026-03-31 17:38:17,589 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:17,714 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down 2.87%
+2026-03-31 17:38:17,714 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:17,717 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:38:17,718 - INFO -     Current price: $0.2407
+2026-03-31 17:38:17,718 - INFO -     24h change: -2.87%
+2026-03-31 17:38:17,718 - INFO -     Position size: 124.636477 contracts
+2026-03-31 17:38:17,718 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:17,718 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:17,718 - INFO -     Stop-loss: $0.2527 (+5%)
+2026-03-31 17:38:17,718 - INFO -     Take-profit: $0.2214 (-8%)
+2026-03-31 17:38:20,404 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:20,631 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down 2.67%
+2026-03-31 17:38:20,631 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:20,645 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:38:20,645 - INFO -     Current price: $1.3098
+2026-03-31 17:38:20,645 - INFO -     24h change: -2.67%
+2026-03-31 17:38:20,645 - INFO -     Position size: 22.904260 contracts
+2026-03-31 17:38:20,645 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:20,645 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:20,645 - INFO -     Stop-loss: $1.3753 (+5%)
+2026-03-31 17:38:20,645 - INFO -     Take-profit: $1.2050 (-8%)
+2026-03-31 17:38:22,846 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:22,978 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down 2.77%
+2026-03-31 17:38:22,978 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:22,981 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:38:22,981 - INFO -     Current price: $1.2300
+2026-03-31 17:38:22,981 - INFO -     24h change: -2.77%
+2026-03-31 17:38:22,981 - INFO -     Position size: 24.390244 contracts
+2026-03-31 17:38:22,981 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:22,981 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:22,981 - INFO -     Stop-loss: $1.2915 (+5%)
+2026-03-31 17:38:22,981 - INFO -     Take-profit: $1.1316 (-8%)
+2026-03-31 17:38:25,365 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:25,512 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down 2.19%
+2026-03-31 17:38:25,513 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:25,526 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:38:25,526 - INFO -     Current price: $8.5570
+2026-03-31 17:38:25,526 - INFO -     24h change: -2.19%
+2026-03-31 17:38:25,526 - INFO -     Position size: 3.505902 contracts
+2026-03-31 17:38:25,526 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:25,526 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:25,526 - INFO -     Stop-loss: $8.9849 (+5%)
+2026-03-31 17:38:25,526 - INFO -     Take-profit: $7.8724 (-8%)
+2026-03-31 17:38:27,971 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:28,098 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down 1.20%
+2026-03-31 17:38:28,098 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:28,102 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:38:28,102 - INFO -     Current price: $3.4600
+2026-03-31 17:38:28,102 - INFO -     24h change: -1.20%
+2026-03-31 17:38:28,102 - INFO -     Position size: 8.670520 contracts
+2026-03-31 17:38:28,102 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:28,102 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:28,102 - INFO -     Stop-loss: $3.6330 (+5%)
+2026-03-31 17:38:28,102 - INFO -     Take-profit: $3.1832 (-8%)
+2026-03-31 17:38:30,307 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:30,486 - INFO - ⚡ FUTURES SHORT SIGNAL: ATOM/USDT down 0.89%
+2026-03-31 17:38:30,486 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:30,490 - INFO - 🎯 PREPARING FUTURES SHORT: ATOM/USDT
+2026-03-31 17:38:30,490 - INFO -     Current price: $1.6700
+2026-03-31 17:38:30,490 - INFO -     24h change: -0.89%
+2026-03-31 17:38:30,490 - INFO -     Position size: 17.964072 contracts
+2026-03-31 17:38:30,490 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:30,490 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:30,490 - INFO -     Stop-loss: $1.7535 (+5%)
+2026-03-31 17:38:30,490 - INFO -     Take-profit: $1.5364 (-8%)
+2026-03-31 17:38:32,900 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:33,107 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down 2.32%
+2026-03-31 17:38:33,108 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:33,123 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:38:33,123 - INFO -     Current price: $8.0160
+2026-03-31 17:38:33,123 - INFO -     24h change: -2.32%
+2026-03-31 17:38:33,123 - INFO -     Position size: 3.742515 contracts
+2026-03-31 17:38:33,123 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:33,123 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:33,123 - INFO -     Stop-loss: $8.4168 (+5%)
+2026-03-31 17:38:33,123 - INFO -     Take-profit: $7.3747 (-8%)
+2026-03-31 17:38:35,312 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:35,451 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down 3.30%
+2026-03-31 17:38:35,451 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:35,454 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:38:35,455 - INFO -     Current price: $0.1646
+2026-03-31 17:38:35,455 - INFO -     24h change: -3.30%
+2026-03-31 17:38:35,455 - INFO -     Position size: 182.315406 contracts
+2026-03-31 17:38:35,455 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:35,455 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:35,455 - INFO -     Stop-loss: $0.1728 (+5%)
+2026-03-31 17:38:35,455 - INFO -     Take-profit: $0.1514 (-8%)
+2026-03-31 17:38:37,819 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:38,065 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down 2.12%
+2026-03-31 17:38:38,066 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:38,069 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:38:38,069 - INFO -     Current price: $0.0066
+2026-03-31 17:38:38,069 - INFO -     24h change: -2.12%
+2026-03-31 17:38:38,069 - INFO -     Position size: 4540.638717 contracts
+2026-03-31 17:38:38,069 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:38,069 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:38,069 - INFO -     Stop-loss: $0.0069 (+5%)
+2026-03-31 17:38:38,069 - INFO -     Take-profit: $0.0061 (-8%)
+2026-03-31 17:38:40,565 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:40,717 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down 2.50%
+2026-03-31 17:38:40,718 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:40,732 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:38:40,732 - INFO -     Current price: $0.8200
+2026-03-31 17:38:40,732 - INFO -     24h change: -2.50%
+2026-03-31 17:38:40,732 - INFO -     Position size: 36.585366 contracts
+2026-03-31 17:38:40,732 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:40,732 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:40,732 - INFO -     Stop-loss: $0.8610 (+5%)
+2026-03-31 17:38:40,732 - INFO -     Take-profit: $0.7544 (-8%)
+2026-03-31 17:38:43,173 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:43,449 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down 4.84%
+2026-03-31 17:38:43,450 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:43,464 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:38:43,464 - INFO -     Current price: $17.3100
+2026-03-31 17:38:43,464 - INFO -     24h change: -4.84%
+2026-03-31 17:38:43,464 - INFO -     Position size: 1.733102 contracts
+2026-03-31 17:38:43,464 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:43,464 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:43,464 - INFO -     Stop-loss: $18.1755 (+5%)
+2026-03-31 17:38:43,464 - INFO -     Take-profit: $15.9252 (-8%)
+2026-03-31 17:38:46,002 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:46,212 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down 1.42%
+2026-03-31 17:38:46,212 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:38:46,216 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:38:46,216 - INFO -     Current price: $0.2770
+2026-03-31 17:38:46,216 - INFO -     24h change: -1.42%
+2026-03-31 17:38:46,216 - INFO -     Position size: 108.303249 contracts
+2026-03-31 17:38:46,216 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:38:46,216 - INFO -     Capital at risk: $10.00
+2026-03-31 17:38:46,216 - INFO -     Stop-loss: $0.2909 (+5%)
+2026-03-31 17:38:46,216 - INFO -     Take-profit: $0.2548 (-8%)
+2026-03-31 17:38:48,311 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:38:48,343 - INFO - 📊 No strong short opportunities found this cycle
+2026-03-31 17:38:48,358 - INFO - ⏰ Next scan in 60 seconds...
+2026-03-31 17:39:48,382 - INFO - 
+📊 FUTURES SCAN CYCLE 3 - 17:39:48
+2026-03-31 17:39:48,383 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:48,396 - INFO - 
+🔍 Scanning 18 cryptocurrencies for short opportunities...
+2026-03-31 17:39:50,236 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down 2.52%
+2026-03-31 17:39:50,236 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:50,239 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:39:50,239 - INFO -     Current price: $0.0900
+2026-03-31 17:39:50,239 - INFO -     24h change: -2.52%
+2026-03-31 17:39:50,239 - INFO -     Position size: 333.481547 contracts
+2026-03-31 17:39:50,239 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:39:50,239 - INFO -     Capital at risk: $10.00
+2026-03-31 17:39:50,239 - INFO -     Stop-loss: $0.0945 (+5%)
+2026-03-31 17:39:50,239 - INFO -     Take-profit: $0.0828 (-8%)
+2026-03-31 17:39:52,613 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:39:52,734 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down 2.87%
+2026-03-31 17:39:52,735 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:52,738 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:39:52,738 - INFO -     Current price: $0.2406
+2026-03-31 17:39:52,738 - INFO -     24h change: -2.87%
+2026-03-31 17:39:52,738 - INFO -     Position size: 124.688279 contracts
+2026-03-31 17:39:52,738 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:39:52,738 - INFO -     Capital at risk: $10.00
+2026-03-31 17:39:52,738 - INFO -     Stop-loss: $0.2526 (+5%)
+2026-03-31 17:39:52,738 - INFO -     Take-profit: $0.2214 (-8%)
+2026-03-31 17:39:55,226 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:39:55,369 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down 2.62%
+2026-03-31 17:39:55,370 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:55,383 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:39:55,383 - INFO -     Current price: $1.3095
+2026-03-31 17:39:55,383 - INFO -     24h change: -2.62%
+2026-03-31 17:39:55,383 - INFO -     Position size: 22.909507 contracts
+2026-03-31 17:39:55,383 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:39:55,383 - INFO -     Capital at risk: $10.00
+2026-03-31 17:39:55,383 - INFO -     Stop-loss: $1.3750 (+5%)
+2026-03-31 17:39:55,383 - INFO -     Take-profit: $1.2047 (-8%)
+2026-03-31 17:39:57,397 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:39:57,519 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down 2.69%
+2026-03-31 17:39:57,519 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:57,522 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:39:57,522 - INFO -     Current price: $1.2300
+2026-03-31 17:39:57,522 - INFO -     24h change: -2.69%
+2026-03-31 17:39:57,522 - INFO -     Position size: 24.390244 contracts
+2026-03-31 17:39:57,522 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:39:57,523 - INFO -     Capital at risk: $10.00
+2026-03-31 17:39:57,523 - INFO -     Stop-loss: $1.2915 (+5%)
+2026-03-31 17:39:57,523 - INFO -     Take-profit: $1.1316 (-8%)
+2026-03-31 17:39:59,627 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:39:59,768 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down 2.11%
+2026-03-31 17:39:59,769 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:39:59,782 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:39:59,782 - INFO -     Current price: $8.5470
+2026-03-31 17:39:59,782 - INFO -     24h change: -2.11%
+2026-03-31 17:39:59,782 - INFO -     Position size: 3.510004 contracts
+2026-03-31 17:39:59,782 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:39:59,783 - INFO -     Capital at risk: $10.00
+2026-03-31 17:39:59,783 - INFO -     Stop-loss: $8.9744 (+5%)
+2026-03-31 17:39:59,783 - INFO -     Take-profit: $7.8632 (-8%)
+2026-03-31 17:40:02,044 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:02,169 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down 1.26%
+2026-03-31 17:40:02,169 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:02,173 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:40:02,173 - INFO -     Current price: $3.4560
+2026-03-31 17:40:02,173 - INFO -     24h change: -1.26%
+2026-03-31 17:40:02,173 - INFO -     Position size: 8.680556 contracts
+2026-03-31 17:40:02,173 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:02,173 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:02,173 - INFO -     Stop-loss: $3.6288 (+5%)
+2026-03-31 17:40:02,173 - INFO -     Take-profit: $3.1795 (-8%)
+2026-03-31 17:40:04,152 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:04,389 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down 2.40%
+2026-03-31 17:40:04,389 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:04,392 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:40:04,392 - INFO -     Current price: $8.0070
+2026-03-31 17:40:04,392 - INFO -     24h change: -2.40%
+2026-03-31 17:40:04,392 - INFO -     Position size: 3.746722 contracts
+2026-03-31 17:40:04,392 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:04,392 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:04,392 - INFO -     Stop-loss: $8.4073 (+5%)
+2026-03-31 17:40:04,392 - INFO -     Take-profit: $7.3664 (-8%)
+2026-03-31 17:40:06,723 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:06,847 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down 3.40%
+2026-03-31 17:40:06,847 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:06,850 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:40:06,850 - INFO -     Current price: $0.1644
+2026-03-31 17:40:06,850 - INFO -     24h change: -3.40%
+2026-03-31 17:40:06,850 - INFO -     Position size: 182.515057 contracts
+2026-03-31 17:40:06,850 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:06,850 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:06,850 - INFO -     Stop-loss: $0.1726 (+5%)
+2026-03-31 17:40:06,850 - INFO -     Take-profit: $0.1512 (-8%)
+2026-03-31 17:40:09,269 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:09,504 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down 2.19%
+2026-03-31 17:40:09,504 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:09,507 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:40:09,507 - INFO -     Current price: $0.0066
+2026-03-31 17:40:09,507 - INFO -     24h change: -2.19%
+2026-03-31 17:40:09,507 - INFO -     Position size: 4546.143355 contracts
+2026-03-31 17:40:09,507 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:09,507 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:09,507 - INFO -     Stop-loss: $0.0069 (+5%)
+2026-03-31 17:40:09,507 - INFO -     Take-profit: $0.0061 (-8%)
+2026-03-31 17:40:11,654 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:11,807 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down 2.73%
+2026-03-31 17:40:11,807 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:11,819 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:40:11,819 - INFO -     Current price: $0.8190
+2026-03-31 17:40:11,819 - INFO -     24h change: -2.73%
+2026-03-31 17:40:11,820 - INFO -     Position size: 36.630037 contracts
+2026-03-31 17:40:11,820 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:11,820 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:11,820 - INFO -     Stop-loss: $0.8599 (+5%)
+2026-03-31 17:40:11,820 - INFO -     Take-profit: $0.7535 (-8%)
+2026-03-31 17:40:14,276 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:14,533 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down 4.84%
+2026-03-31 17:40:14,534 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:14,549 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:40:14,550 - INFO -     Current price: $17.3100
+2026-03-31 17:40:14,550 - INFO -     24h change: -4.84%
+2026-03-31 17:40:14,550 - INFO -     Position size: 1.733102 contracts
+2026-03-31 17:40:14,550 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:14,550 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:14,550 - INFO -     Stop-loss: $18.1755 (+5%)
+2026-03-31 17:40:14,550 - INFO -     Take-profit: $15.9252 (-8%)
+2026-03-31 17:40:16,925 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:17,075 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down 1.43%
+2026-03-31 17:40:17,076 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:40:17,090 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:40:17,091 - INFO -     Current price: $0.2760
+2026-03-31 17:40:17,091 - INFO -     24h change: -1.43%
+2026-03-31 17:40:17,091 - INFO -     Position size: 108.695652 contracts
+2026-03-31 17:40:17,091 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:40:17,091 - INFO -     Capital at risk: $10.00
+2026-03-31 17:40:17,091 - INFO -     Stop-loss: $0.2898 (+5%)
+2026-03-31 17:40:17,091 - INFO -     Take-profit: $0.2539 (-8%)
+2026-03-31 17:40:19,396 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:40:19,434 - INFO - 📊 No strong short opportunities found this cycle
+2026-03-31 17:40:19,448 - INFO - ⏰ Next scan in 60 seconds...
+2026-03-31 17:41:19,459 - INFO - 
+📊 FUTURES SCAN CYCLE 4 - 17:41:19
+2026-03-31 17:41:19,460 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:19,463 - INFO - 
+🔍 Scanning 18 cryptocurrencies for short opportunities...
+2026-03-31 17:41:21,230 - INFO - ⚡ FUTURES SHORT SIGNAL: DOGE/USDT down 2.53%
+2026-03-31 17:41:21,230 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:21,234 - INFO - 🎯 PREPARING FUTURES SHORT: DOGE/USDT
+2026-03-31 17:41:21,234 - INFO -     Current price: $0.0900
+2026-03-31 17:41:21,234 - INFO -     24h change: -2.53%
+2026-03-31 17:41:21,234 - INFO -     Position size: 333.333333 contracts
+2026-03-31 17:41:21,234 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:21,234 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:21,234 - INFO -     Stop-loss: $0.0945 (+5%)
+2026-03-31 17:41:21,234 - INFO -     Take-profit: $0.0828 (-8%)
+2026-03-31 17:41:23,334 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:23,458 - INFO - ⚡ FUTURES SHORT SIGNAL: ADA/USDT down 2.79%
+2026-03-31 17:41:23,458 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:23,461 - INFO - 🎯 PREPARING FUTURES SHORT: ADA/USDT
+2026-03-31 17:41:23,461 - INFO -     Current price: $0.2407
+2026-03-31 17:41:23,462 - INFO -     24h change: -2.79%
+2026-03-31 17:41:23,462 - INFO -     Position size: 124.636477 contracts
+2026-03-31 17:41:23,462 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:23,462 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:23,462 - INFO -     Stop-loss: $0.2527 (+5%)
+2026-03-31 17:41:23,462 - INFO -     Take-profit: $0.2214 (-8%)
+2026-03-31 17:41:25,600 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:25,747 - INFO - ⚡ FUTURES SHORT SIGNAL: XRP/USDT down 2.57%
+2026-03-31 17:41:25,748 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:25,763 - INFO - 🎯 PREPARING FUTURES SHORT: XRP/USDT
+2026-03-31 17:41:25,763 - INFO -     Current price: $1.3106
+2026-03-31 17:41:25,763 - INFO -     24h change: -2.57%
+2026-03-31 17:41:25,763 - INFO -     Position size: 22.890279 contracts
+2026-03-31 17:41:25,763 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:25,763 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:25,763 - INFO -     Stop-loss: $1.3761 (+5%)
+2026-03-31 17:41:25,763 - INFO -     Take-profit: $1.2058 (-8%)
+2026-03-31 17:41:27,966 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:28,116 - INFO - ⚡ FUTURES SHORT SIGNAL: DOT/USDT down 2.77%
+2026-03-31 17:41:28,117 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:28,130 - INFO - 🎯 PREPARING FUTURES SHORT: DOT/USDT
+2026-03-31 17:41:28,130 - INFO -     Current price: $1.2300
+2026-03-31 17:41:28,130 - INFO -     24h change: -2.77%
+2026-03-31 17:41:28,130 - INFO -     Position size: 24.390244 contracts
+2026-03-31 17:41:28,130 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:28,130 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:28,130 - INFO -     Stop-loss: $1.2915 (+5%)
+2026-03-31 17:41:28,131 - INFO -     Take-profit: $1.1316 (-8%)
+2026-03-31 17:41:30,262 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:30,460 - INFO - ⚡ FUTURES SHORT SIGNAL: LINK/USDT down 2.10%
+2026-03-31 17:41:30,460 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:30,473 - INFO - 🎯 PREPARING FUTURES SHORT: LINK/USDT
+2026-03-31 17:41:30,473 - INFO -     Current price: $8.5510
+2026-03-31 17:41:30,473 - INFO -     24h change: -2.10%
+2026-03-31 17:41:30,473 - INFO -     Position size: 3.508362 contracts
+2026-03-31 17:41:30,473 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:30,473 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:30,473 - INFO -     Stop-loss: $8.9786 (+5%)
+2026-03-31 17:41:30,473 - INFO -     Take-profit: $7.8669 (-8%)
+2026-03-31 17:41:32,616 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:32,758 - INFO - ⚡ FUTURES SHORT SIGNAL: UNI/USDT down 1.43%
+2026-03-31 17:41:32,758 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:32,772 - INFO - 🎯 PREPARING FUTURES SHORT: UNI/USDT
+2026-03-31 17:41:32,772 - INFO -     Current price: $3.4520
+2026-03-31 17:41:32,773 - INFO -     24h change: -1.43%
+2026-03-31 17:41:32,773 - INFO -     Position size: 8.690614 contracts
+2026-03-31 17:41:32,773 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:32,773 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:32,773 - INFO -     Stop-loss: $3.6246 (+5%)
+2026-03-31 17:41:32,773 - INFO -     Take-profit: $3.1758 (-8%)
+2026-03-31 17:41:35,115 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:35,378 - INFO - ⚡ FUTURES SHORT SIGNAL: ETC/USDT down 2.41%
+2026-03-31 17:41:35,379 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:35,393 - INFO - 🎯 PREPARING FUTURES SHORT: ETC/USDT
+2026-03-31 17:41:35,393 - INFO -     Current price: $8.0100
+2026-03-31 17:41:35,393 - INFO -     24h change: -2.41%
+2026-03-31 17:41:35,393 - INFO -     Position size: 3.745318 contracts
+2026-03-31 17:41:35,393 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:35,393 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:35,394 - INFO -     Stop-loss: $8.4105 (+5%)
+2026-03-31 17:41:35,394 - INFO -     Take-profit: $7.3692 (-8%)
+2026-03-31 17:41:37,660 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:37,806 - INFO - ⚡ FUTURES SHORT SIGNAL: XLM/USDT down 3.36%
+2026-03-31 17:41:37,807 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:37,819 - INFO - 🎯 PREPARING FUTURES SHORT: XLM/USDT
+2026-03-31 17:41:37,819 - INFO -     Current price: $0.1644
+2026-03-31 17:41:37,819 - INFO -     24h change: -3.36%
+2026-03-31 17:41:37,819 - INFO -     Position size: 182.437363 contracts
+2026-03-31 17:41:37,819 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:37,819 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:37,819 - INFO -     Stop-loss: $0.1727 (+5%)
+2026-03-31 17:41:37,819 - INFO -     Take-profit: $0.1513 (-8%)
+2026-03-31 17:41:39,923 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:40,177 - INFO - ⚡ FUTURES SHORT SIGNAL: VET/USDT down 2.21%
+2026-03-31 17:41:40,178 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:40,192 - INFO - 🎯 PREPARING FUTURES SHORT: VET/USDT
+2026-03-31 17:41:40,192 - INFO -     Current price: $0.0066
+2026-03-31 17:41:40,192 - INFO -     24h change: -2.21%
+2026-03-31 17:41:40,192 - INFO -     Position size: 4545.454545 contracts
+2026-03-31 17:41:40,193 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:40,193 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:40,193 - INFO -     Stop-loss: $0.0069 (+5%)
+2026-03-31 17:41:40,193 - INFO -     Take-profit: $0.0061 (-8%)
+2026-03-31 17:41:42,872 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:43,017 - INFO - ⚡ FUTURES SHORT SIGNAL: FIL/USDT down 2.85%
+2026-03-31 17:41:43,018 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:43,031 - INFO - 🎯 PREPARING FUTURES SHORT: FIL/USDT
+2026-03-31 17:41:43,032 - INFO -     Current price: $0.8180
+2026-03-31 17:41:43,032 - INFO -     24h change: -2.85%
+2026-03-31 17:41:43,032 - INFO -     Position size: 36.674817 contracts
+2026-03-31 17:41:43,032 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:43,032 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:43,032 - INFO -     Stop-loss: $0.8589 (+5%)
+2026-03-31 17:41:43,032 - INFO -     Take-profit: $0.7526 (-8%)
+2026-03-31 17:41:45,234 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:45,471 - INFO - ⚡ FUTURES SHORT SIGNAL: COMP/USDT down 4.89%
+2026-03-31 17:41:45,471 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:45,474 - INFO - 🎯 PREPARING FUTURES SHORT: COMP/USDT
+2026-03-31 17:41:45,474 - INFO -     Current price: $17.3000
+2026-03-31 17:41:45,474 - INFO -     24h change: -4.89%
+2026-03-31 17:41:45,474 - INFO -     Position size: 1.734104 contracts
+2026-03-31 17:41:45,474 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:45,474 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:45,474 - INFO -     Stop-loss: $18.1650 (+5%)
+2026-03-31 17:41:45,474 - INFO -     Take-profit: $15.9160 (-8%)
+2026-03-31 17:41:47,525 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:47,672 - INFO - ⚡ FUTURES SHORT SIGNAL: SNX/USDT down 1.43%
+2026-03-31 17:41:47,673 - INFO - ✅ Binance API keys loaded
+2026-03-31 17:41:47,687 - INFO - 🎯 PREPARING FUTURES SHORT: SNX/USDT
+2026-03-31 17:41:47,687 - INFO -     Current price: $0.2760
+2026-03-31 17:41:47,687 - INFO -     24h change: -1.43%
+2026-03-31 17:41:47,688 - INFO -     Position size: 108.695652 contracts
+2026-03-31 17:41:47,688 - INFO -     Position value: $30.00 (with 3x leverage)
+2026-03-31 17:41:47,688 - INFO -     Capital at risk: $10.00
+2026-03-31 17:41:47,688 - INFO -     Stop-loss: $0.2898 (+5%)
+2026-03-31 17:41:47,688 - INFO -     Take-profit: $0.2539 (-8%)
+2026-03-31 17:41:49,839 - ERROR - ❌ Trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-03-31 17:41:49,876 - INFO - 📊 No strong short opportunities found this cycle
+2026-03-31 17:41:49,890 - INFO - ⏰ Next scan in 60 seconds...

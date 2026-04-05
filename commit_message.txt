@@ -1,0 +1,21 @@
+🔒 SECURITY: Remove hardcoded secrets, use environment variables
+
+Critical security fixes:
+- Removed hardcoded Telegram bot tokens from files
+- Updated Telegram bots to use environment variables
+- Created secure bot template (telegram_bot_secure.py)
+- Added comprehensive .gitignore for secret files
+- Created .env.example template (safe to commit)
+- Added SECURITY_CHECKLIST.md for future reference
+- Removed secret-containing files from git tracking
+
+Security improvements:
+- No more hardcoded API keys or tokens
+- All secrets now use environment variables
+- Clear documentation for secure setup
+- Regular security audit commands provided
+
+NEVER commit:
+- .env files with actual secrets
+- Files with hardcoded API keys/tokens
+- Audit logs with sensitive data

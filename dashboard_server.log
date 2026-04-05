@@ -1,0 +1,23 @@
+::1 - - [06/Apr/2026 00:28:39] "GET /actual_trading_dashboard_with_real_data.html HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 00:29:59] "GET /actual_trading_dashboard_with_real_data.html HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 00:29:59] code 404, message File not found
+::1 - - [06/Apr/2026 00:29:59] "GET /real_trading_data/dashboard_data.json?t=1775410199858 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 00:29:59] "GET /api/status HTTP/1.1" 404 -
+::1 - - [06/Apr/2026 00:29:59] code 404, message File not found
+::1 - - [06/Apr/2026 00:29:59] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [06/Apr/2026 00:29:59] code 404, message File not found
+::1 - - [06/Apr/2026 00:29:59] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [06/Apr/2026 00:30:29] "GET /real_trading_data/dashboard_data.json?t=1775410229859 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 00:30:59] "GET /real_trading_data/dashboard_data.json?t=1775410259860 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:25:58] "GET /actual_trading_dashboard_with_real_data.html HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:25:58] "GET /real_trading_data/dashboard_data.json?t=1775413558226 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:25:58] code 404, message File not found
+::1 - - [06/Apr/2026 01:25:58] "GET /api/status HTTP/1.1" 404 -
+::1 - - [06/Apr/2026 01:25:58] code 404, message File not found
+::1 - - [06/Apr/2026 01:25:58] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [06/Apr/2026 01:26:28] "GET /real_trading_data/dashboard_data.json?t=1775413588270 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:26:58] "GET /real_trading_data/dashboard_data.json?t=1775413618271 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:27:28] "GET /real_trading_data/dashboard_data.json?t=1775413648270 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:27:58] "GET /real_trading_data/dashboard_data.json?t=1775413678271 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:28:28] "GET /real_trading_data/dashboard_data.json?t=1775413708270 HTTP/1.1" 200 -
+::1 - - [06/Apr/2026 01:28:58] "GET /real_trading_data/dashboard_data.json?t=1775413738270 HTTP/1.1" 200 -

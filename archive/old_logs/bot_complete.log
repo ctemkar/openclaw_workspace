@@ -1,0 +1,18 @@
+2026-04-03 01:32:38,130 - INFO - ======================================================================
+2026-04-03 01:32:38,130 - INFO - 🧠 MULTI-LLM VOTING TRADING SYSTEM
+2026-04-03 01:32:38,130 - INFO - 🤖 DeepSeek (main) + 4 Ollama LLMs consensus
+2026-04-03 01:32:38,130 - INFO - ======================================================================
+2026-04-03 01:32:38,130 - INFO - ✅ Gemini API keys loaded
+2026-04-03 01:32:38,130 - INFO - ✅ Binance API keys loaded
+2026-04-03 01:32:38,132 - INFO - ✅ Gemini exchange initialized
+2026-04-03 01:32:38,135 - INFO - ✅ Binance exchange initialized
+2026-04-03 01:32:38,135 - INFO - ✅ Exchanges initialized
+2026-04-03 01:32:38,135 - INFO - 💰 Gemini capital: $434.35
+2026-04-03 01:32:38,135 - INFO - 💰 Binance capital: $36.70
+2026-04-03 01:32:38,135 - INFO - 
+🔄 TRADING CYCLE 1 - 01:32:38
+/Users/chetantemkar/.openclaw/workspace/app/multi_llm_trading_bot_complete.py:476: RuntimeWarning: coroutine 'trading_cycle' was never awaited
+  trading_cycle(exchanges)
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2026-04-03 01:32:38,136 - INFO - ✅ Cycle 1 completed
+2026-04-03 01:32:38,136 - INFO - 💤 Sleeping for 600 seconds...

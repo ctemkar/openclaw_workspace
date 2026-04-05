@@ -1,0 +1,268 @@
+2026-03-31 19:42:17,506 - CRITICAL - ======================================================================
+2026-03-31 19:42:17,506 - CRITICAL - 🚀 FIXED BINANCE FUTURES SHORT TRADING BOT
+2026-03-31 19:42:17,506 - CRITICAL - ======================================================================
+2026-03-31 19:42:17,506 - CRITICAL - ⚠️  REAL TRADE EXECUTION ENABLED
+2026-03-31 19:42:17,506 - CRITICAL - ======================================================================
+2026-03-31 19:42:17,506 - INFO - SHORT threshold: 1.0% drop
+2026-03-31 19:42:17,506 - INFO - Max daily trades: 2
+2026-03-31 19:42:17,506 - INFO - Leverage: 2x
+2026-03-31 19:42:17,506 - INFO - Position size: 15% of capital
+2026-03-31 19:42:17,506 - INFO - Stop-loss: 3%, Take-profit: 5%
+2026-03-31 19:42:17,506 - INFO - Scan interval: 120 seconds
+2026-03-31 19:42:17,506 - CRITICAL - ======================================================================
+2026-03-31 19:42:17,506 - CRITICAL - REAL MONEY AT RISK - TRADES WILL BE EXECUTED
+2026-03-31 19:42:17,506 - CRITICAL - ======================================================================
+2026-03-31 19:42:19,363 - INFO - ✅ Binance Futures exchange connected
+2026-03-31 19:42:19,476 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:42:19,476 - INFO -    Free USDT: $64.50
+2026-03-31 19:42:19,476 - INFO -    Total USDT: $76.40
+2026-03-31 19:42:19,476 - INFO - ✅ Sufficient balance: $76.40
+2026-03-31 19:42:19,476 - INFO - 
+📊 TRADING CYCLE 1 - 19:42:19
+2026-03-31 19:42:19,476 - INFO - --------------------------------------------------
+2026-03-31 19:42:19,476 - INFO - 🔍 Analyzing 25 futures pairs...
+2026-03-31 19:42:19,588 - WARNING - ⚡ STRONG SHORT SIGNAL: BTC/USDT down -1.44%
+2026-03-31 19:42:19,589 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: BTC/USDT
+2026-03-31 19:42:19,589 - WARNING -    Current price: $66825.4000
+2026-03-31 19:42:19,589 - WARNING -    24h change: -1.44%
+2026-03-31 19:42:19,589 - WARNING -    Position size: 0.001000 contracts
+2026-03-31 19:42:19,589 - WARNING -    Position value: $19.35 (with 2x leverage)
+2026-03-31 19:42:19,589 - WARNING -    Capital at risk: $9.68
+2026-03-31 19:42:19,589 - WARNING -    Stop-loss: $68830.1620 (+3.0%)
+2026-03-31 19:42:19,589 - WARNING -    Take-profit: $63484.1300 (-5.0%)
+2026-03-31 19:42:19,589 - INFO - Setting 2x leverage for BTC/USDT...
+2026-03-31 19:42:19,590 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.001000 BTC/USDT @ market
+2026-03-31 19:42:19,860 - ERROR - ❌ Trade execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+2026-03-31 19:42:19,860 - ERROR -    Error details: binance {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+2026-03-31 19:42:20,085 - WARNING - ⚡ STRONG SHORT SIGNAL: SOL/USDT down -3.90%
+2026-03-31 19:42:20,085 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: SOL/USDT
+2026-03-31 19:42:20,086 - WARNING -    Current price: $80.8700
+2026-03-31 19:42:20,086 - WARNING -    24h change: -3.90%
+2026-03-31 19:42:20,086 - WARNING -    Position size: 0.239281 contracts
+2026-03-31 19:42:20,086 - WARNING -    Position value: $19.35 (with 2x leverage)
+2026-03-31 19:42:20,086 - WARNING -    Capital at risk: $9.68
+2026-03-31 19:42:20,086 - WARNING -    Stop-loss: $83.2961 (+3.0%)
+2026-03-31 19:42:20,086 - WARNING -    Take-profit: $76.8265 (-5.0%)
+2026-03-31 19:42:20,086 - INFO - Setting 2x leverage for SOL/USDT...
+2026-03-31 19:42:20,086 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.239281 SOL/USDT @ market
+2026-03-31 19:42:20,318 - CRITICAL - ✅ REAL SHORT ORDER EXECUTED!
+2026-03-31 19:42:20,319 - CRITICAL -    Order ID: 206469656302
+2026-03-31 19:42:20,319 - CRITICAL -    Symbol: SOL/USDT:USDT
+2026-03-31 19:42:20,319 - CRITICAL -    Side: sell
+2026-03-31 19:42:20,319 - CRITICAL -    Amount: 0.23
+2026-03-31 19:42:20,319 - CRITICAL -    Price: $80.88
+2026-03-31 19:42:20,321 - INFO - 
+📈 CYCLE 1 SUMMARY:
+2026-03-31 19:42:20,321 - INFO -    Trades executed: 1
+2026-03-31 19:42:20,321 - INFO -    Daily trades: 1/2
+2026-03-31 19:42:20,321 - INFO -    Cycle duration: 0.8 seconds
+2026-03-31 19:42:20,321 - INFO -    Free balance: $64.50
+2026-03-31 19:42:20,321 - CRITICAL -    🎯 REAL TRADE EXECUTED!
+2026-03-31 19:42:20,321 - CRITICAL -    Check executed_futures_trades.json
+2026-03-31 19:42:20,321 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:42:20,321 - INFO - ======================================================================
+2026-03-31 19:42:20,436 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:42:20,436 - INFO -    Free USDT: $58.29
+2026-03-31 19:42:20,437 - INFO -    Total USDT: $76.39
+2026-03-31 19:44:20,436 - INFO - 
+📊 TRADING CYCLE 2 - 19:44:20
+2026-03-31 19:44:20,437 - INFO - --------------------------------------------------
+2026-03-31 19:44:20,437 - INFO - 🔍 Analyzing 25 futures pairs...
+2026-03-31 19:44:20,544 - WARNING - ⚡ STRONG SHORT SIGNAL: BTC/USDT down -1.44%
+2026-03-31 19:44:20,544 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: BTC/USDT
+2026-03-31 19:44:20,544 - WARNING -    Current price: $66855.5000
+2026-03-31 19:44:20,544 - WARNING -    24h change: -1.44%
+2026-03-31 19:44:20,544 - WARNING -    Position size: 0.001000 contracts
+2026-03-31 19:44:20,544 - WARNING -    Position value: $17.49 (with 2x leverage)
+2026-03-31 19:44:20,544 - WARNING -    Capital at risk: $8.74
+2026-03-31 19:44:20,544 - WARNING -    Stop-loss: $68861.1650 (+3.0%)
+2026-03-31 19:44:20,544 - WARNING -    Take-profit: $63512.7250 (-5.0%)
+2026-03-31 19:44:20,544 - INFO - Setting 2x leverage for BTC/USDT...
+2026-03-31 19:44:20,544 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.001000 BTC/USDT @ market
+2026-03-31 19:44:20,749 - ERROR - ❌ Trade execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+2026-03-31 19:44:20,749 - ERROR -    Error details: binance {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+2026-03-31 19:44:20,972 - WARNING - ⚡ STRONG SHORT SIGNAL: SOL/USDT down -4.11%
+2026-03-31 19:44:20,972 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: SOL/USDT
+2026-03-31 19:44:20,972 - WARNING -    Current price: $80.9600
+2026-03-31 19:44:20,972 - WARNING -    24h change: -4.11%
+2026-03-31 19:44:20,972 - WARNING -    Position size: 0.216005 contracts
+2026-03-31 19:44:20,972 - WARNING -    Position value: $17.49 (with 2x leverage)
+2026-03-31 19:44:20,972 - WARNING -    Capital at risk: $8.74
+2026-03-31 19:44:20,972 - WARNING -    Stop-loss: $83.3888 (+3.0%)
+2026-03-31 19:44:20,972 - WARNING -    Take-profit: $76.9120 (-5.0%)
+2026-03-31 19:44:20,972 - INFO - Setting 2x leverage for SOL/USDT...
+2026-03-31 19:44:20,972 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.216005 SOL/USDT @ market
+2026-03-31 19:44:21,172 - CRITICAL - ✅ REAL SHORT ORDER EXECUTED!
+2026-03-31 19:44:21,172 - CRITICAL -    Order ID: 206469963009
+2026-03-31 19:44:21,172 - CRITICAL -    Symbol: SOL/USDT:USDT
+2026-03-31 19:44:21,172 - CRITICAL -    Side: sell
+2026-03-31 19:44:21,172 - CRITICAL -    Amount: 0.21
+2026-03-31 19:44:21,172 - CRITICAL -    Price: $80.96
+2026-03-31 19:44:21,172 - INFO - 
+📈 CYCLE 2 SUMMARY:
+2026-03-31 19:44:21,172 - INFO -    Trades executed: 1
+2026-03-31 19:44:21,172 - INFO -    Daily trades: 2/2
+2026-03-31 19:44:21,172 - INFO -    Cycle duration: 0.7 seconds
+2026-03-31 19:44:21,172 - INFO -    Free balance: $58.29
+2026-03-31 19:44:21,172 - CRITICAL -    🎯 REAL TRADE EXECUTED!
+2026-03-31 19:44:21,172 - CRITICAL -    Check executed_futures_trades.json
+2026-03-31 19:44:21,172 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:44:21,172 - INFO - ======================================================================
+2026-03-31 19:44:21,288 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:44:21,288 - INFO -    Free USDT: $52.55
+2026-03-31 19:44:21,288 - INFO -    Total USDT: $76.33
+2026-03-31 19:46:21,299 - INFO - 
+📊 TRADING CYCLE 3 - 19:46:21
+2026-03-31 19:46:21,300 - INFO - --------------------------------------------------
+2026-03-31 19:46:21,300 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:46:21,300 - INFO - 
+📈 CYCLE 3 SUMMARY:
+2026-03-31 19:46:21,300 - INFO -    Trades executed: 0
+2026-03-31 19:46:21,300 - INFO -    Daily trades: 2/2
+2026-03-31 19:46:21,300 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:46:21,300 - INFO -    Free balance: $52.55
+2026-03-31 19:46:21,300 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:46:21,300 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:46:21,300 - INFO - ======================================================================
+2026-03-31 19:46:21,420 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:46:21,420 - INFO -    Free USDT: $52.47
+2026-03-31 19:46:21,420 - INFO -    Total USDT: $76.27
+2026-03-31 19:48:21,421 - INFO - 
+📊 TRADING CYCLE 4 - 19:48:21
+2026-03-31 19:48:21,421 - INFO - --------------------------------------------------
+2026-03-31 19:48:21,421 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:48:21,421 - INFO - 
+📈 CYCLE 4 SUMMARY:
+2026-03-31 19:48:21,421 - INFO -    Trades executed: 0
+2026-03-31 19:48:21,421 - INFO -    Daily trades: 2/2
+2026-03-31 19:48:21,422 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:48:21,422 - INFO -    Free balance: $52.47
+2026-03-31 19:48:21,422 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:48:21,422 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:48:21,422 - INFO - ======================================================================
+2026-03-31 19:48:21,536 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:48:21,536 - INFO -    Free USDT: $3.70
+2026-03-31 19:48:21,536 - INFO -    Total USDT: $76.81
+2026-03-31 19:50:21,562 - INFO - 
+📊 TRADING CYCLE 5 - 19:50:21
+2026-03-31 19:50:21,562 - INFO - --------------------------------------------------
+2026-03-31 19:50:21,562 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:50:21,563 - INFO - 
+📈 CYCLE 5 SUMMARY:
+2026-03-31 19:50:21,563 - INFO -    Trades executed: 0
+2026-03-31 19:50:21,563 - INFO -    Daily trades: 2/2
+2026-03-31 19:50:21,563 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:50:21,563 - INFO -    Free balance: $3.70
+2026-03-31 19:50:21,563 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:50:21,563 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:50:21,563 - INFO - ======================================================================
+2026-03-31 19:50:21,677 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:50:21,677 - INFO -    Free USDT: $3.89
+2026-03-31 19:50:21,678 - INFO -    Total USDT: $76.92
+2026-03-31 19:52:21,753 - INFO - 
+📊 TRADING CYCLE 6 - 19:52:21
+2026-03-31 19:52:21,754 - INFO - --------------------------------------------------
+2026-03-31 19:52:21,754 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:52:21,754 - INFO - 
+📈 CYCLE 6 SUMMARY:
+2026-03-31 19:52:21,754 - INFO -    Trades executed: 0
+2026-03-31 19:52:21,754 - INFO -    Daily trades: 2/2
+2026-03-31 19:52:21,754 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:52:21,754 - INFO -    Free balance: $3.89
+2026-03-31 19:52:21,754 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:52:21,754 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:52:21,755 - INFO - ======================================================================
+2026-03-31 19:52:21,873 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:52:21,873 - INFO -    Free USDT: $3.93
+2026-03-31 19:52:21,873 - INFO -    Total USDT: $76.97
+2026-03-31 19:54:21,927 - INFO - 
+📊 TRADING CYCLE 7 - 19:54:21
+2026-03-31 19:54:21,927 - INFO - --------------------------------------------------
+2026-03-31 19:54:21,927 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:54:21,927 - INFO - 
+📈 CYCLE 7 SUMMARY:
+2026-03-31 19:54:21,927 - INFO -    Trades executed: 0
+2026-03-31 19:54:21,927 - INFO -    Daily trades: 2/2
+2026-03-31 19:54:21,927 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:54:21,927 - INFO -    Free balance: $3.93
+2026-03-31 19:54:21,927 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:54:21,927 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:54:21,927 - INFO - ======================================================================
+2026-03-31 19:54:22,043 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:54:22,043 - INFO -    Free USDT: $3.66
+2026-03-31 19:54:22,043 - INFO -    Total USDT: $76.75
+2026-03-31 19:56:22,119 - INFO - 
+📊 TRADING CYCLE 8 - 19:56:22
+2026-03-31 19:56:22,119 - INFO - --------------------------------------------------
+2026-03-31 19:56:22,119 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:56:22,119 - INFO - 
+📈 CYCLE 8 SUMMARY:
+2026-03-31 19:56:22,119 - INFO -    Trades executed: 0
+2026-03-31 19:56:22,120 - INFO -    Daily trades: 2/2
+2026-03-31 19:56:22,120 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:56:22,120 - INFO -    Free balance: $3.66
+2026-03-31 19:56:22,120 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:56:22,120 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:56:22,120 - INFO - ======================================================================
+2026-03-31 19:56:22,241 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:56:22,242 - INFO -    Free USDT: $3.64
+2026-03-31 19:56:22,242 - INFO -    Total USDT: $76.74
+2026-03-31 19:58:22,266 - INFO - 
+📊 TRADING CYCLE 9 - 19:58:22
+2026-03-31 19:58:22,266 - INFO - --------------------------------------------------
+2026-03-31 19:58:22,266 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 19:58:22,266 - INFO - 
+📈 CYCLE 9 SUMMARY:
+2026-03-31 19:58:22,266 - INFO -    Trades executed: 0
+2026-03-31 19:58:22,266 - INFO -    Daily trades: 2/2
+2026-03-31 19:58:22,266 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 19:58:22,267 - INFO -    Free balance: $3.64
+2026-03-31 19:58:22,267 - INFO -    ⏳ No trades this cycle
+2026-03-31 19:58:22,267 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 19:58:22,267 - INFO - ======================================================================
+2026-03-31 19:58:22,382 - INFO - 💰 Binance Futures balance:
+2026-03-31 19:58:22,382 - INFO -    Free USDT: $3.76
+2026-03-31 19:58:22,382 - INFO -    Total USDT: $76.83
+2026-03-31 20:00:22,446 - INFO - 
+📊 TRADING CYCLE 10 - 20:00:22
+2026-03-31 20:00:22,446 - INFO - --------------------------------------------------
+2026-03-31 20:00:22,446 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 20:00:22,446 - INFO - 
+📈 CYCLE 10 SUMMARY:
+2026-03-31 20:00:22,446 - INFO -    Trades executed: 0
+2026-03-31 20:00:22,446 - INFO -    Daily trades: 2/2
+2026-03-31 20:00:22,447 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 20:00:22,447 - INFO -    Free balance: $3.76
+2026-03-31 20:00:22,447 - INFO -    ⏳ No trades this cycle
+2026-03-31 20:00:22,447 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 20:00:22,447 - INFO - ======================================================================
+2026-03-31 20:00:22,561 - INFO - 💰 Binance Futures balance:
+2026-03-31 20:00:22,561 - INFO -    Free USDT: $3.71
+2026-03-31 20:00:22,562 - INFO -    Total USDT: $76.80
+2026-03-31 20:02:22,628 - INFO - 
+📊 TRADING CYCLE 11 - 20:02:22
+2026-03-31 20:02:22,628 - INFO - --------------------------------------------------
+2026-03-31 20:02:22,628 - WARNING - ⚠️  Daily trade limit reached: 2/2
+2026-03-31 20:02:22,629 - INFO - 
+📈 CYCLE 11 SUMMARY:
+2026-03-31 20:02:22,629 - INFO -    Trades executed: 0
+2026-03-31 20:02:22,629 - INFO -    Daily trades: 2/2
+2026-03-31 20:02:22,629 - INFO -    Cycle duration: 0.0 seconds
+2026-03-31 20:02:22,629 - INFO -    Free balance: $3.71
+2026-03-31 20:02:22,629 - INFO -    ⏳ No trades this cycle
+2026-03-31 20:02:22,629 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 20:02:22,629 - INFO - ======================================================================
+2026-03-31 20:02:22,747 - INFO - 💰 Binance Futures balance:
+2026-03-31 20:02:22,747 - INFO -    Free USDT: $3.41
+2026-03-31 20:02:22,747 - INFO -    Total USDT: $76.57

@@ -1,0 +1,42 @@
+2026-04-03 18:34:06,528 - INFO - 🚀 SIMPLE WORKING BOT STARTING
+2026-04-03 18:34:06,528 - INFO - 💰 Uses ONLY Binance - NO Gemini nonce issues!
+2026-04-03 18:34:06,531 - INFO - 📊 SIMPLE Trading:
+2026-04-03 18:34:06,531 - INFO -    Trade size: $20.0
+2026-04-03 18:34:06,531 - INFO -    Min profit: $0.1
+2026-04-03 18:34:06,531 - INFO -    Strategy: Binance-only (NO Gemini issues!)
+2026-04-03 18:34:06,531 - INFO - ============================================================
+2026-04-03 18:34:06,531 - INFO - 🚀 SIMPLE WORKING BOT - REAL TRADES STARTING
+2026-04-03 18:34:06,531 - INFO - ============================================================
+2026-04-03 18:34:06,531 - INFO - 🔍 Scan #1
+2026-04-03 18:34:08,644 - INFO - 💰 Binance Balance: $70.00 USDT
+2026-04-03 18:34:08,644 - INFO -    ✅ READY for $20.0 trades!
+2026-04-03 18:34:08,753 - INFO -    🎯 Found: MANA
+2026-04-03 18:34:08,753 - INFO -       Price: $0.0883
+2026-04-03 18:34:08,753 - INFO - 🎯 EXECUTING REAL TRADE TODAY!
+2026-04-03 18:34:08,753 - INFO -    Crypto: MANA
+2026-04-03 18:34:08,754 - INFO -    Strategy: TEST_TRADE
+2026-04-03 18:34:08,754 - INFO -    Trade size: $20.0
+2026-04-03 18:34:08,754 - INFO -    📈 BUYING 226.500566 MANA...
+2026-04-03 18:34:08,868 - INFO -    ✅ BOUGHT at $0.0884
+2026-04-03 18:34:08,868 - INFO -    💰 Cost: $19.98
+2026-04-03 18:34:10,936 - INFO -    📉 SELLING 226.500566 MANA...
+2026-04-03 18:34:11,054 - ERROR -    ❌ Trade failed: binance Account has insufficient balance for requested action.
+2026-04-03 18:35:11,105 - INFO - 🔍 Scan #2
+2026-04-03 18:35:11,231 - INFO - 💰 Binance Balance: $50.02 USDT
+2026-04-03 18:35:11,232 - INFO -    ✅ READY for $20.0 trades!
+2026-04-03 18:35:11,345 - INFO -    🎯 Found: MANA
+2026-04-03 18:35:11,345 - INFO -       Price: $0.0882
+2026-04-03 18:35:11,345 - INFO - 🎯 EXECUTING REAL TRADE TODAY!
+2026-04-03 18:35:11,345 - INFO -    Crypto: MANA
+2026-04-03 18:35:11,345 - INFO -    Strategy: TEST_TRADE
+2026-04-03 18:35:11,345 - INFO -    Trade size: $20.0
+2026-04-03 18:35:11,345 - INFO -    📈 BUYING 226.757370 MANA...
+2026-04-03 18:35:11,460 - INFO -    ✅ BOUGHT at $0.0883
+2026-04-03 18:35:11,461 - INFO -    💰 Cost: $19.96
+2026-04-03 18:35:13,497 - INFO -    📉 SELLING 226.757370 MANA...
+2026-04-03 18:35:13,612 - INFO -    ✅ SOLD at $0.0882
+2026-04-03 18:35:13,613 - INFO -    💰 Revenue: $19.93
+2026-04-03 18:35:13,613 - INFO -    🎉 REAL TRADE COMPLETE!
+2026-04-03 18:35:13,613 - INFO -    💰 ACTUAL Profit: $-0.02
+2026-04-03 18:35:13,613 - INFO -    📊 Total REAL trades: 1
+2026-04-03 18:35:13,613 - INFO -    📈 Total REAL profit: $-0.02

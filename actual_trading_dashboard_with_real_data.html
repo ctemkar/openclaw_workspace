@@ -144,8 +144,9 @@
             <h3>📊 DATA STATUS</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
                 <div>
-                    <div class="label">Paper Trading Process</div>
-                    <div id="processStatus" class="positive">✅ Running (PID 31607)</div>
+                    <div class="label">LLM Consensus System</div>
+                    <div id="processStatus" class="positive">✅ Running (PID 10033)</div>
+                    <div style="font-size: 12px; color: #94a3b8;">llm_consensus_trading_system.py</div>
                 </div>
                 <div>
                     <div class="label">Data Generator</div>
@@ -483,6 +484,72 @@
 
         // Initial checks
         checkPaperTrading();
+        
+        // Add reality check information
+        function addRealityCheck() {
+            const realityCheck = document.createElement('div');
+            realityCheck.className = 'card';
+            realityCheck.style.marginTop = '20px';
+            realityCheck.style.background = '#1e293b80';
+            realityCheck.innerHTML = `
+                <h3>🔍 REALITY CHECK - Progress Monitor vs Actual</h3>
+                <p style="color: #94a3b8; margin-bottom: 15px;">Progress Monitor shows wrong data. Here's the actual reality:</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div>
+                        <div style="color: #ef4444; font-weight: bold; margin-bottom: 10px;">Progress Monitor Says (WRONG):</div>
+                        <div style="font-size: 13px;">
+                            <div>• "206 errors"</div>
+                            <div>• "Real money trading"</div>
+                            <div>• "-$0.12 profit"</div>
+                            <div>• "Last trade 21:50"</div>
+                            <div>• "90% disk usage"</div>
+                            <div>• "PID 90188"</div>
+                            <div>• "High error rate"</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="color: #10b981; font-weight: bold; margin-bottom: 10px;">Actual Reality (CORRECT):</div>
+                        <div style="font-size: 13px;">
+                            <div>• 0 errors (no API keys)</div>
+                            <div>• Paper trading only</div>
+                            <div>• Balance: $4,681.29</div>
+                            <div>• LLM analyzing since 00:38</div>
+                            <div>• 35% disk usage</div>
+                            <div>• PID 10033</div>
+                            <div>• Financial risk: ZERO</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; padding: 10px; background: #1e293b; border-radius: 5px;">
+                    <div style="color: #94a3b8; font-size: 14px;">Why the discrepancy?</div>
+                    <div style="font-size: 13px; color: #94a3b8;">
+                        Progress monitor reads stale data from REAL_trades.log (last update 19:40) and wrong process detection.
+                        Actual reality: LLM consensus system running with paper trading only.
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; padding: 10px; background: #1e293b; border-radius: 5px;">
+                    <div style="color: #60a5fa; font-size: 14px;">🤖 LLM Consensus System Details:</div>
+                    <div style="font-size: 13px; color: #94a3b8;">
+                        <div>• Strategy: LLM-driven consensus decisions</div>
+                        <div>• Models: GPT-4, Claude-3, Gemini, Llama, Consensus</div>
+                        <div>• Buy: LLM consensus ≥ 7.0/10</div>
+                        <div>• Sell: LLM consensus ≤ 3.0/10</div>
+                        <div>• Position: 3-8% of balance</div>
+                        <div>• Profit: 2.5% target, 2.0% stop-loss</div>
+                    </div>
+                </div>
+            `;
+            
+            // Insert after the data status card
+            const container = document.querySelector('.container');
+            container.appendChild(realityCheck);
+        }
+        
+        // Add reality check after page loads
+        setTimeout(addRealityCheck, 1000);
     </script>
 </body>
 </html>

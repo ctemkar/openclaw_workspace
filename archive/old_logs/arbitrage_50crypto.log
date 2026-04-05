@@ -1,0 +1,53 @@
+2026-04-03 13:54:46,690 - INFO - ✅ Gemini exchange initialized for auto-trading
+2026-04-03 13:54:46,692 - INFO - ✅ Binance exchange initialized for auto-trading
+2026-04-03 13:54:46,692 - INFO - ======================================================================
+2026-04-03 13:54:46,692 - INFO - 🤖 AUTO ARBITRAGE BOT STARTED
+2026-04-03 13:54:46,692 - INFO - Monitoring 63 cryptos
+2026-04-03 13:54:46,692 - INFO - Min spread: 0.4%
+2026-04-03 13:54:46,692 - INFO - Min profit: $0.15
+2026-04-03 13:54:46,693 - INFO - Trade size: 8.0% of capital
+2026-04-03 13:54:46,693 - INFO - ======================================================================
+2026-04-03 13:54:46,693 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 1 - 13:54:46
+2026-04-03 13:54:54,557 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 13:55:06,372 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 13:55:07,388 - WARNING - ⚠️ Could not fetch prices for ETC: gemini does not have market symbol ETC/USD
+2026-04-03 13:55:07,388 - WARNING - ⚠️ Could not fetch prices for ALGO: gemini does not have market symbol ALGO/USD
+2026-04-03 13:55:07,388 - WARNING - ⚠️ Could not fetch prices for NEAR: gemini does not have market symbol NEAR/USD
+2026-04-03 13:55:07,389 - WARNING - ⚠️ Could not fetch prices for MKR: gemini does not have market symbol MKR/USD
+2026-04-03 13:55:07,389 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 13:55:07,389 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 13:55:07,389 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 13:55:07,389 - WARNING - ⚠️ Could not fetch prices for 1INCH: gemini does not have market symbol 1INCH/USD
+2026-04-03 13:55:08,004 - WARNING - ⚠️ Could not fetch prices for MEME: gemini does not have market symbol MEME/USD
+2026-04-03 13:55:09,639 - WARNING - ⚠️ Could not fetch prices for METIS: gemini does not have market symbol METIS/USD
+2026-04-03 13:55:10,587 - WARNING - ⚠️ Could not fetch prices for AGIX: gemini does not have market symbol AGIX/USD
+2026-04-03 13:55:10,588 - WARNING - ⚠️ Could not fetch prices for OCEAN: gemini does not have market symbol OCEAN/USD
+2026-04-03 13:55:11,690 - WARNING - ⚠️ Could not fetch prices for AXS: gemini does not have market symbol AXS/USD
+2026-04-03 13:55:12,227 - WARNING - ⚠️ Could not fetch prices for XMR: gemini does not have market symbol XMR/USD
+2026-04-03 13:55:12,800 - WARNING - ⚠️ Could not fetch prices for FTT: gemini does not have market symbol FTT/USD
+2026-04-03 13:55:12,800 - WARNING - ⚠️ Could not fetch prices for LEO: gemini does not have market symbol LEO/USD
+2026-04-03 13:55:12,801 - WARNING - ⚠️ Could not fetch prices for CRO: gemini does not have market symbol CRO/USD
+2026-04-03 13:55:13,946 - ERROR - ❌ Error in arbitrage cycle: unsupported format string passed to NoneType.__format__
+2026-04-03 13:56:14,016 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 2 - 13:56:14
+2026-04-03 13:56:16,712 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 13:56:28,801 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 13:56:29,915 - WARNING - ⚠️ Could not fetch prices for ETC: gemini does not have market symbol ETC/USD
+2026-04-03 13:56:29,915 - WARNING - ⚠️ Could not fetch prices for ALGO: gemini does not have market symbol ALGO/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for NEAR: gemini does not have market symbol NEAR/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for MKR: gemini does not have market symbol MKR/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 13:56:29,916 - WARNING - ⚠️ Could not fetch prices for 1INCH: gemini does not have market symbol 1INCH/USD
+2026-04-03 13:56:30,466 - WARNING - ⚠️ Could not fetch prices for MEME: gemini does not have market symbol MEME/USD
+2026-04-03 13:56:32,055 - WARNING - ⚠️ Could not fetch prices for METIS: gemini does not have market symbol METIS/USD
+2026-04-03 13:56:33,167 - WARNING - ⚠️ Could not fetch prices for AGIX: gemini does not have market symbol AGIX/USD
+2026-04-03 13:56:33,167 - WARNING - ⚠️ Could not fetch prices for OCEAN: gemini does not have market symbol OCEAN/USD
+2026-04-03 13:56:34,199 - WARNING - ⚠️ Could not fetch prices for AXS: gemini does not have market symbol AXS/USD
+2026-04-03 13:56:34,728 - WARNING - ⚠️ Could not fetch prices for XMR: gemini does not have market symbol XMR/USD
+2026-04-03 13:56:35,237 - WARNING - ⚠️ Could not fetch prices for FTT: gemini does not have market symbol FTT/USD
+2026-04-03 13:56:35,237 - WARNING - ⚠️ Could not fetch prices for LEO: gemini does not have market symbol LEO/USD
+2026-04-03 13:56:35,238 - WARNING - ⚠️ Could not fetch prices for CRO: gemini does not have market symbol CRO/USD
+2026-04-03 13:56:36,303 - ERROR - ❌ Error in arbitrage cycle: unsupported format string passed to NoneType.__format__

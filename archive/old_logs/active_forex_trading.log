@@ -1,0 +1,1324 @@
+2026-04-03 23:58:51,358 - INFO - 🚀 ACTIVE FOREX TRADER INITIALIZED
+2026-04-03 23:58:51,358 - INFO - 💰 REAL TRADING MODE: Schwab Account #13086459
+2026-04-03 23:58:51,358 - INFO - 💵 Account Balance: $220.00
+2026-04-03 23:58:51,358 - INFO - 📊 Scan interval: 60 seconds (ACTIVE!)
+2026-04-03 23:58:51,358 - INFO - 🎯 Trade size: 0.01 lots (micro)
+2026-04-03 23:58:51,358 - INFO - ⚠️  Risk per trade: 0.5% ($1.10)
+2026-04-03 23:58:51,358 - INFO - 🔄 STARTING ACTIVE FOREX TRADING
+2026-04-03 23:58:51,358 - INFO - 
+=== ACTIVE SCAN #1 at 23:58:51 ===
+2026-04-03 23:58:51,358 - INFO - 💰 Current balance: $220.00
+2026-04-03 23:58:51,358 - INFO - 📈 Total profit: $0.00
+2026-04-03 23:58:51,358 - INFO - 🎯 Trades executed: 0
+2026-04-03 23:58:51,358 - INFO - 📊 Found 5 opportunities
+2026-04-03 23:58:51,358 - INFO - 🔍 Evaluating: EUR/USD (11.3 pips)
+2026-04-03 23:58:51,358 - INFO - 🎯 EXECUTING TRADE: BUY EUR/USD
+2026-04-03 23:58:51,358 - INFO -    📊 Spread: 11.3 pips
+2026-04-03 23:58:51,358 - INFO -    💰 Potential profit: $1.13
+2026-04-03 23:58:51,358 - INFO -    💵 Position: $11.00 (5% of $220.00)
+2026-04-03 23:58:51,358 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-03 23:58:51,358 - INFO -    ✅ TRADE WON: +$1.29
+2026-04-03 23:58:51,358 - INFO -    💵 New balance: $221.29
+2026-04-03 23:58:51,358 - INFO - 🔍 Evaluating: GBP/USD (9.0 pips)
+2026-04-03 23:58:51,358 - INFO - 🎯 EXECUTING TRADE: BUY GBP/USD
+2026-04-03 23:58:51,358 - INFO -    📊 Spread: 9.0 pips
+2026-04-03 23:58:51,358 - INFO -    💰 Potential profit: $0.90
+2026-04-03 23:58:51,358 - INFO -    💵 Position: $11.06 (5% of $221.29)
+2026-04-03 23:58:51,358 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-03 23:58:51,358 - INFO -    ✅ TRADE WON: +$1.06
+2026-04-03 23:58:51,358 - INFO -    💵 New balance: $222.35
+2026-04-03 23:58:51,358 - INFO - ⏰ Next ACTIVE scan at: 23:59:51
+2026-04-03 23:58:51,358 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-03 23:58:51,358 - INFO -    💰 Current profit: $2.35
+2026-04-03 23:59:51,364 - INFO - 
+=== ACTIVE SCAN #2 at 23:59:51 ===
+2026-04-03 23:59:51,364 - INFO - 💰 Current balance: $222.35
+2026-04-03 23:59:51,365 - INFO - 📈 Total profit: $2.35
+2026-04-03 23:59:51,365 - INFO - 🎯 Trades executed: 2
+2026-04-03 23:59:51,365 - INFO - 📊 Found 5 opportunities
+2026-04-03 23:59:51,365 - INFO - 🔍 Evaluating: EUR/USD (9.5 pips)
+2026-04-03 23:59:51,365 - INFO - 🎯 EXECUTING TRADE: SELL EUR/USD
+2026-04-03 23:59:51,365 - INFO -    📊 Spread: 9.5 pips
+2026-04-03 23:59:51,365 - INFO -    💰 Potential profit: $0.95
+2026-04-03 23:59:51,365 - INFO -    💵 Position: $11.12 (5% of $222.35)
+2026-04-03 23:59:51,365 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-03 23:59:51,365 - INFO -    ✅ TRADE WON: +$0.79
+2026-04-03 23:59:51,365 - INFO -    💵 New balance: $223.14
+2026-04-03 23:59:51,365 - INFO - 🔍 Evaluating: GBP/USD (10.3 pips)
+2026-04-03 23:59:51,365 - INFO - 🎯 EXECUTING TRADE: SELL GBP/USD
+2026-04-03 23:59:51,365 - INFO -    📊 Spread: 10.3 pips
+2026-04-03 23:59:51,365 - INFO -    💰 Potential profit: $1.03
+2026-04-03 23:59:51,365 - INFO -    💵 Position: $11.16 (5% of $223.14)
+2026-04-03 23:59:51,365 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-03 23:59:51,365 - INFO -    ✅ TRADE WON: +$0.97
+2026-04-03 23:59:51,365 - INFO -    💵 New balance: $224.11
+2026-04-03 23:59:51,365 - INFO - ⏰ Next ACTIVE scan at: 00:00:51
+2026-04-03 23:59:51,365 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-03 23:59:51,365 - INFO -    💰 Current profit: $4.11
+2026-04-04 00:00:51,415 - INFO - 
+=== ACTIVE SCAN #3 at 00:00:51 ===
+2026-04-04 00:00:51,415 - INFO - 💰 Current balance: $224.11
+2026-04-04 00:00:51,415 - INFO - 📈 Total profit: $4.11
+2026-04-04 00:00:51,415 - INFO - 🎯 Trades executed: 4
+2026-04-04 00:00:51,415 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:00:51,416 - INFO - 🔍 Evaluating: EUR/USD (9.9 pips)
+2026-04-04 00:00:51,416 - INFO - 🎯 EXECUTING TRADE: BUY EUR/USD
+2026-04-04 00:00:51,416 - INFO -    📊 Spread: 9.9 pips
+2026-04-04 00:00:51,416 - INFO -    💰 Potential profit: $0.99
+2026-04-04 00:00:51,416 - INFO -    💵 Position: $11.21 (5% of $224.11)
+2026-04-04 00:00:51,416 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:00:51,416 - INFO -    ✅ TRADE WON: +$1.10
+2026-04-04 00:00:51,416 - INFO -    💵 New balance: $225.21
+2026-04-04 00:00:51,416 - INFO - 🔍 Evaluating: GBP/USD (7.9 pips)
+2026-04-04 00:00:51,417 - INFO - 🎯 EXECUTING TRADE: SELL GBP/USD
+2026-04-04 00:00:51,417 - INFO -    📊 Spread: 7.9 pips
+2026-04-04 00:00:51,417 - INFO -    💰 Potential profit: $0.79
+2026-04-04 00:00:51,417 - INFO -    💵 Position: $11.26 (5% of $225.21)
+2026-04-04 00:00:51,417 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:00:51,417 - INFO -    ❌ TRADE LOST: -$0.04
+2026-04-04 00:00:51,417 - INFO -    💵 New balance: $225.17
+2026-04-04 00:00:51,417 - INFO - ⏰ Next ACTIVE scan at: 00:01:51
+2026-04-04 00:00:51,417 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:00:51,417 - INFO -    💰 Current profit: $5.21
+2026-04-04 00:01:51,490 - INFO - 
+=== ACTIVE SCAN #4 at 00:01:51 ===
+2026-04-04 00:01:51,490 - INFO - 💰 Current balance: $225.17
+2026-04-04 00:01:51,490 - INFO - 📈 Total profit: $5.21
+2026-04-04 00:01:51,490 - INFO - 🎯 Trades executed: 6
+2026-04-04 00:01:51,490 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:01:51,491 - INFO - 🔍 Evaluating: USD/JPY (12.7 pips)
+2026-04-04 00:01:51,491 - INFO - 🎯 EXECUTING TRADE: SELL USD/JPY
+2026-04-04 00:01:51,491 - INFO -    📊 Spread: 12.7 pips
+2026-04-04 00:01:51,491 - INFO -    💰 Potential profit: $0.84
+2026-04-04 00:01:51,491 - INFO -    💵 Position: $11.26 (5% of $225.17)
+2026-04-04 00:01:51,491 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:01:51,491 - INFO -    ✅ TRADE WON: +$0.86
+2026-04-04 00:01:51,491 - INFO -    💵 New balance: $226.03
+2026-04-04 00:01:51,491 - INFO - 🔍 Evaluating: AUD/USD (14.8 pips)
+2026-04-04 00:01:51,491 - INFO - 🎯 EXECUTING TRADE: BUY AUD/USD
+2026-04-04 00:01:51,491 - INFO -    📊 Spread: 14.8 pips
+2026-04-04 00:01:51,491 - INFO -    💰 Potential profit: $1.48
+2026-04-04 00:01:51,491 - INFO -    💵 Position: $11.30 (5% of $226.03)
+2026-04-04 00:01:51,492 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:01:51,492 - INFO -    ❌ TRADE LOST: -$0.06
+2026-04-04 00:01:51,492 - INFO -    💵 New balance: $225.98
+2026-04-04 00:01:51,492 - INFO - ⏰ Next ACTIVE scan at: 00:02:51
+2026-04-04 00:01:51,492 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:01:51,492 - INFO -    💰 Current profit: $6.07
+2026-04-04 00:02:51,550 - INFO - 
+=== ACTIVE SCAN #5 at 00:02:51 ===
+2026-04-04 00:02:51,550 - INFO - 💰 Current balance: $225.98
+2026-04-04 00:02:51,550 - INFO - 📈 Total profit: $6.07
+2026-04-04 00:02:51,550 - INFO - 🎯 Trades executed: 8
+2026-04-04 00:02:51,551 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:02:51,551 - INFO - 🔍 Evaluating: EUR/USD (10.7 pips)
+2026-04-04 00:02:51,551 - INFO - 🎯 EXECUTING TRADE: SELL EUR/USD
+2026-04-04 00:02:51,551 - INFO -    📊 Spread: 10.7 pips
+2026-04-04 00:02:51,551 - INFO -    💰 Potential profit: $1.07
+2026-04-04 00:02:51,551 - INFO -    💵 Position: $11.30 (5% of $225.98)
+2026-04-04 00:02:51,551 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:02:51,551 - INFO -    ✅ TRADE WON: +$0.93
+2026-04-04 00:02:51,551 - INFO -    💵 New balance: $226.91
+2026-04-04 00:02:51,551 - INFO - 🔍 Evaluating: GBP/USD (8.0 pips)
+2026-04-04 00:02:51,551 - INFO - 🎯 EXECUTING TRADE: BUY GBP/USD
+2026-04-04 00:02:51,551 - INFO -    📊 Spread: 8.0 pips
+2026-04-04 00:02:51,551 - INFO -    💰 Potential profit: $0.80
+2026-04-04 00:02:51,551 - INFO -    💵 Position: $11.35 (5% of $226.91)
+2026-04-04 00:02:51,551 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 00:02:51,551 - INFO -    ❌ TRADE LOST: -$0.05
+2026-04-04 00:02:51,551 - INFO -    💵 New balance: $226.86
+2026-04-04 00:02:51,551 - INFO - ⏰ Next ACTIVE scan at: 00:03:51
+2026-04-04 00:02:51,551 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:02:51,551 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:03:51,576 - INFO - 
+=== ACTIVE SCAN #6 at 00:03:51 ===
+2026-04-04 00:03:51,576 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:03:51,576 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:03:51,576 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:03:51,577 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:03:51,577 - INFO - 🔍 Evaluating: EUR/USD (11.4 pips)
+2026-04-04 00:03:51,577 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:03:51,577 - INFO - 🔍 Evaluating: GBP/USD (9.4 pips)
+2026-04-04 00:03:51,577 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:03:51,577 - INFO - ⏰ Next ACTIVE scan at: 00:04:51
+2026-04-04 00:03:51,577 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:03:51,577 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:04:51,711 - INFO - 
+=== ACTIVE SCAN #7 at 00:04:51 ===
+2026-04-04 00:04:51,711 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:04:51,712 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:04:51,712 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:04:51,712 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:04:51,712 - INFO - 🔍 Evaluating: EUR/USD (5.4 pips)
+2026-04-04 00:04:51,712 - INFO -    ⏭️  Spread too low (5.4 < 7.0 pips)
+2026-04-04 00:04:51,712 - INFO - 🔍 Evaluating: GBP/USD (13.3 pips)
+2026-04-04 00:04:51,712 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:04:51,712 - INFO - ⏰ Next ACTIVE scan at: 00:05:51
+2026-04-04 00:04:51,713 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:04:51,713 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:05:51,743 - INFO - 
+=== ACTIVE SCAN #8 at 00:05:51 ===
+2026-04-04 00:05:51,743 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:05:51,743 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:05:51,743 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:05:51,744 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:05:51,744 - INFO - 🔍 Evaluating: EUR/USD (11.9 pips)
+2026-04-04 00:05:51,744 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:05:51,744 - INFO - 🔍 Evaluating: GBP/USD (7.8 pips)
+2026-04-04 00:05:51,744 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:05:51,744 - INFO - ⏰ Next ACTIVE scan at: 00:06:51
+2026-04-04 00:05:51,744 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:05:51,744 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:06:51,775 - INFO - 
+=== ACTIVE SCAN #9 at 00:06:51 ===
+2026-04-04 00:06:51,786 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:06:51,787 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:06:51,787 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:06:51,809 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:06:51,809 - INFO - 🔍 Evaluating: EUR/USD (10.3 pips)
+2026-04-04 00:06:51,810 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:06:51,810 - INFO - 🔍 Evaluating: USD/JPY (11.5 pips)
+2026-04-04 00:06:51,810 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:06:51,810 - INFO - ⏰ Next ACTIVE scan at: 00:07:51
+2026-04-04 00:06:51,810 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:06:51,810 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:07:51,859 - INFO - 
+=== ACTIVE SCAN #10 at 00:07:51 ===
+2026-04-04 00:07:51,860 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:07:51,860 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:07:51,860 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:07:51,860 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:07:51,860 - INFO - 🔍 Evaluating: EUR/USD (6.7 pips)
+2026-04-04 00:07:51,861 - INFO -    ⏭️  Spread too low (6.7 < 7.0 pips)
+2026-04-04 00:07:51,861 - INFO - 🔍 Evaluating: GBP/USD (11.4 pips)
+2026-04-04 00:07:51,861 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:07:51,861 - INFO - ⏰ Next ACTIVE scan at: 00:08:51
+2026-04-04 00:07:51,861 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:07:51,862 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:08:51,899 - INFO - 
+=== ACTIVE SCAN #11 at 00:08:51 ===
+2026-04-04 00:08:51,899 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:08:51,899 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:08:51,899 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:08:51,900 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:08:51,900 - INFO - 🔍 Evaluating: EUR/USD (8.1 pips)
+2026-04-04 00:08:51,900 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:08:51,900 - INFO - 🔍 Evaluating: GBP/USD (14.0 pips)
+2026-04-04 00:08:51,900 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:08:51,900 - INFO - ⏰ Next ACTIVE scan at: 00:09:51
+2026-04-04 00:08:51,900 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:08:51,900 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:09:51,980 - INFO - 
+=== ACTIVE SCAN #12 at 00:09:51 ===
+2026-04-04 00:09:51,997 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:09:51,998 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:09:51,998 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:09:51,998 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:09:51,999 - INFO - 🔍 Evaluating: EUR/USD (11.6 pips)
+2026-04-04 00:09:51,999 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:09:51,999 - INFO - 🔍 Evaluating: GBP/USD (12.3 pips)
+2026-04-04 00:09:51,999 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:09:52,035 - INFO - ⏰ Next ACTIVE scan at: 00:10:51
+2026-04-04 00:09:52,035 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:09:52,035 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:10:52,167 - INFO - 
+=== ACTIVE SCAN #13 at 00:10:52 ===
+2026-04-04 00:10:52,186 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:10:52,187 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:10:52,187 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:10:52,208 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:10:52,208 - INFO - 🔍 Evaluating: EUR/USD (13.6 pips)
+2026-04-04 00:10:52,208 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:10:52,208 - INFO - 🔍 Evaluating: GBP/USD (10.4 pips)
+2026-04-04 00:10:52,208 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:10:52,208 - INFO - ⏰ Next ACTIVE scan at: 00:11:52
+2026-04-04 00:10:52,208 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:10:52,208 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:11:52,641 - INFO - 
+=== ACTIVE SCAN #14 at 00:11:52 ===
+2026-04-04 00:11:52,643 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:11:52,643 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:11:52,643 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:11:52,644 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:11:52,644 - INFO - 🔍 Evaluating: EUR/USD (7.8 pips)
+2026-04-04 00:11:52,644 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:11:52,644 - INFO - 🔍 Evaluating: GBP/USD (14.3 pips)
+2026-04-04 00:11:52,644 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:11:52,645 - INFO - ⏰ Next ACTIVE scan at: 00:12:52
+2026-04-04 00:11:52,645 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:11:52,645 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:12:52,753 - INFO - 
+=== ACTIVE SCAN #15 at 00:12:52 ===
+2026-04-04 00:12:52,753 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:12:52,753 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:12:52,753 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:12:52,753 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:12:52,754 - INFO - 🔍 Evaluating: EUR/USD (14.2 pips)
+2026-04-04 00:12:52,754 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:12:52,754 - INFO - 🔍 Evaluating: GBP/USD (12.9 pips)
+2026-04-04 00:12:52,754 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:12:52,755 - INFO - ⏰ Next ACTIVE scan at: 00:13:52
+2026-04-04 00:12:52,755 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:12:52,755 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:13:52,905 - INFO - 
+=== ACTIVE SCAN #16 at 00:13:52 ===
+2026-04-04 00:13:52,906 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:13:52,906 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:13:52,906 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:13:52,906 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:13:52,906 - INFO - 🔍 Evaluating: GBP/USD (10.5 pips)
+2026-04-04 00:13:52,906 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:13:52,906 - INFO - 🔍 Evaluating: AUD/USD (12.8 pips)
+2026-04-04 00:13:52,906 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:13:52,906 - INFO - ⏰ Next ACTIVE scan at: 00:14:52
+2026-04-04 00:13:52,906 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:13:52,907 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:14:52,929 - INFO - 
+=== ACTIVE SCAN #17 at 00:14:52 ===
+2026-04-04 00:14:52,930 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:14:52,930 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:14:52,930 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:14:52,930 - INFO - 📊 Found 2 opportunities
+2026-04-04 00:14:52,930 - INFO - 🔍 Evaluating: USD/JPY (7.2 pips)
+2026-04-04 00:14:52,930 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:14:52,930 - INFO - 🔍 Evaluating: AUD/USD (14.1 pips)
+2026-04-04 00:14:52,930 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:14:52,931 - INFO - ⏰ Next ACTIVE scan at: 00:15:52
+2026-04-04 00:14:52,931 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:14:52,931 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:15:53,030 - INFO - 
+=== ACTIVE SCAN #18 at 00:15:53 ===
+2026-04-04 00:15:53,030 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:15:53,030 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:15:53,031 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:15:53,031 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:15:53,031 - INFO - 🔍 Evaluating: EUR/USD (6.7 pips)
+2026-04-04 00:15:53,031 - INFO -    ⏭️  Spread too low (6.7 < 7.0 pips)
+2026-04-04 00:15:53,031 - INFO - 🔍 Evaluating: GBP/USD (9.6 pips)
+2026-04-04 00:15:53,031 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:15:53,031 - INFO - ⏰ Next ACTIVE scan at: 00:16:53
+2026-04-04 00:15:53,031 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:15:53,031 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:16:53,176 - INFO - 
+=== ACTIVE SCAN #19 at 00:16:53 ===
+2026-04-04 00:16:53,176 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:16:53,176 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:16:53,177 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:16:53,177 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:16:53,177 - INFO - 🔍 Evaluating: EUR/USD (5.8 pips)
+2026-04-04 00:16:53,177 - INFO -    ⏭️  Spread too low (5.8 < 7.0 pips)
+2026-04-04 00:16:53,177 - INFO - 🔍 Evaluating: GBP/USD (8.3 pips)
+2026-04-04 00:16:53,177 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:16:53,177 - INFO - ⏰ Next ACTIVE scan at: 00:17:53
+2026-04-04 00:16:53,177 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:16:53,177 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:17:53,309 - INFO - 
+=== ACTIVE SCAN #20 at 00:17:53 ===
+2026-04-04 00:17:53,309 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:17:53,309 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:17:53,309 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:17:53,309 - INFO - 📊 Found 5 opportunities
+2026-04-04 00:17:53,309 - INFO - 🔍 Evaluating: EUR/USD (9.9 pips)
+2026-04-04 00:17:53,309 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:17:53,309 - INFO - 🔍 Evaluating: GBP/USD (13.1 pips)
+2026-04-04 00:17:53,309 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:17:53,310 - INFO - ⏰ Next ACTIVE scan at: 00:18:53
+2026-04-04 00:17:53,310 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:17:53,310 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:18:53,402 - INFO - 
+=== ACTIVE SCAN #21 at 00:18:53 ===
+2026-04-04 00:18:53,402 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:18:53,402 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:18:53,402 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:18:53,402 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:18:53,403 - INFO - 🔍 Evaluating: EUR/USD (9.0 pips)
+2026-04-04 00:18:53,403 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:18:53,403 - INFO - 🔍 Evaluating: GBP/USD (10.3 pips)
+2026-04-04 00:18:53,403 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:18:53,403 - INFO - ⏰ Next ACTIVE scan at: 00:19:53
+2026-04-04 00:18:53,403 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:18:53,403 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:19:53,483 - INFO - 
+=== ACTIVE SCAN #22 at 00:19:53 ===
+2026-04-04 00:19:53,483 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:19:53,483 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:19:53,483 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:19:53,484 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:19:53,484 - INFO - 🔍 Evaluating: GBP/USD (14.4 pips)
+2026-04-04 00:19:53,484 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:19:53,484 - INFO - 🔍 Evaluating: USD/JPY (7.3 pips)
+2026-04-04 00:19:53,484 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:19:53,484 - INFO - ⏰ Next ACTIVE scan at: 00:20:53
+2026-04-04 00:19:53,484 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:19:53,484 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:20:53,617 - INFO - 
+=== ACTIVE SCAN #23 at 00:20:53 ===
+2026-04-04 00:20:53,617 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:20:53,617 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:20:53,617 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:20:53,617 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:20:53,617 - INFO - 🔍 Evaluating: EUR/USD (11.2 pips)
+2026-04-04 00:20:53,618 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:20:53,618 - INFO - 🔍 Evaluating: GBP/USD (7.0 pips)
+2026-04-04 00:20:53,618 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:20:53,618 - INFO - ⏰ Next ACTIVE scan at: 00:21:53
+2026-04-04 00:20:53,618 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:20:53,618 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:21:53,635 - INFO - 
+=== ACTIVE SCAN #24 at 00:21:53 ===
+2026-04-04 00:21:53,635 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:21:53,636 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:21:53,636 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:21:53,636 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:21:53,636 - INFO - 🔍 Evaluating: GBP/USD (12.3 pips)
+2026-04-04 00:21:53,636 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:21:53,636 - INFO - 🔍 Evaluating: AUD/USD (9.6 pips)
+2026-04-04 00:21:53,636 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:21:53,636 - INFO - ⏰ Next ACTIVE scan at: 00:22:53
+2026-04-04 00:21:53,636 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:21:53,636 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:22:53,676 - INFO - 
+=== ACTIVE SCAN #25 at 00:22:53 ===
+2026-04-04 00:22:53,679 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:22:53,679 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:22:53,679 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:22:53,680 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:22:53,680 - INFO - 🔍 Evaluating: EUR/USD (10.3 pips)
+2026-04-04 00:22:53,680 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:22:53,680 - INFO - 🔍 Evaluating: USD/JPY (5.6 pips)
+2026-04-04 00:22:53,680 - INFO -    ⏭️  Spread too low (5.6 < 7.0 pips)
+2026-04-04 00:22:53,680 - INFO - ⏰ Next ACTIVE scan at: 00:23:53
+2026-04-04 00:22:53,680 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:22:53,680 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:23:53,804 - INFO - 
+=== ACTIVE SCAN #26 at 00:23:53 ===
+2026-04-04 00:23:53,827 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:23:53,827 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:23:53,827 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:23:53,849 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:23:53,849 - INFO - 🔍 Evaluating: EUR/USD (7.2 pips)
+2026-04-04 00:23:53,849 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:23:53,849 - INFO - 🔍 Evaluating: GBP/USD (9.8 pips)
+2026-04-04 00:23:53,849 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:23:53,849 - INFO - ⏰ Next ACTIVE scan at: 00:24:53
+2026-04-04 00:23:53,849 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:23:53,849 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:24:54,519 - INFO - 
+=== ACTIVE SCAN #27 at 00:24:54 ===
+2026-04-04 00:24:54,937 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:24:54,937 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:24:54,938 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:24:54,992 - INFO - 📊 Found 2 opportunities
+2026-04-04 00:24:54,993 - INFO - 🔍 Evaluating: EUR/USD (9.5 pips)
+2026-04-04 00:24:54,993 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:24:54,993 - INFO - 🔍 Evaluating: GBP/USD (7.5 pips)
+2026-04-04 00:24:54,993 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:24:54,993 - INFO - ⏰ Next ACTIVE scan at: 00:25:54
+2026-04-04 00:24:54,993 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:24:54,993 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:25:55,131 - INFO - 
+=== ACTIVE SCAN #28 at 00:25:55 ===
+2026-04-04 00:25:55,186 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:25:55,186 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:25:55,186 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:25:55,186 - INFO - 📊 Found 3 opportunities
+2026-04-04 00:25:55,186 - INFO - 🔍 Evaluating: EUR/USD (11.5 pips)
+2026-04-04 00:25:55,186 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:25:55,186 - INFO - 🔍 Evaluating: AUD/USD (10.5 pips)
+2026-04-04 00:25:55,186 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:25:55,186 - INFO - ⏰ Next ACTIVE scan at: 00:26:55
+2026-04-04 00:25:55,186 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:25:55,186 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:26:56,004 - INFO - 
+=== ACTIVE SCAN #29 at 00:26:55 ===
+2026-04-04 00:26:56,218 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:26:56,218 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:26:56,218 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:26:56,240 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:26:56,240 - INFO - 🔍 Evaluating: EUR/USD (11.7 pips)
+2026-04-04 00:26:56,240 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:26:56,240 - INFO - 🔍 Evaluating: USD/JPY (10.1 pips)
+2026-04-04 00:26:56,241 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:26:56,241 - INFO - ⏰ Next ACTIVE scan at: 00:27:56
+2026-04-04 00:26:56,241 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:26:56,241 - INFO -    💰 Current profit: $7.01
+2026-04-04 00:27:56,393 - INFO - 
+=== ACTIVE SCAN #30 at 00:27:56 ===
+2026-04-04 00:27:56,394 - INFO - 💰 Current balance: $226.86
+2026-04-04 00:27:56,394 - INFO - 📈 Total profit: $7.01
+2026-04-04 00:27:56,394 - INFO - 🎯 Trades executed: 10
+2026-04-04 00:27:56,394 - INFO - 📊 Found 4 opportunities
+2026-04-04 00:27:56,394 - INFO - 🔍 Evaluating: GBP/USD (12.9 pips)
+2026-04-04 00:27:56,394 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:27:56,394 - INFO - 🔍 Evaluating: USD/JPY (13.4 pips)
+2026-04-04 00:27:56,394 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 00:27:56,394 - INFO - ⏰ Next ACTIVE scan at: 00:28:56
+2026-04-04 00:27:56,394 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 00:27:56,394 - INFO -    💰 Current profit: $7.01
+2026-04-04 03:37:00,506 - INFO - 🚀 ACTIVE FOREX TRADER INITIALIZED
+2026-04-04 03:37:00,506 - INFO - 💰 REAL TRADING MODE: Schwab Account #13086459
+2026-04-04 03:37:00,506 - INFO - 💵 Account Balance: $220.00
+2026-04-04 03:37:00,506 - INFO - 📊 Scan interval: 60 seconds (ACTIVE!)
+2026-04-04 03:37:00,506 - INFO - 🎯 Trade size: 0.01 lots (micro)
+2026-04-04 03:37:00,506 - INFO - ⚠️  Risk per trade: 0.5% ($1.10)
+2026-04-04 03:37:00,506 - INFO - 🔄 STARTING ACTIVE FOREX TRADING
+2026-04-04 03:37:00,506 - INFO - 
+=== ACTIVE SCAN #1 at 03:37:00 ===
+2026-04-04 03:37:00,506 - INFO - 💰 Current balance: $220.00
+2026-04-04 03:37:00,506 - INFO - 📈 Total profit: $0.00
+2026-04-04 03:37:00,506 - INFO - 🎯 Trades executed: 0
+2026-04-04 03:37:00,506 - INFO - 📊 Found 4 opportunities
+2026-04-04 03:37:00,506 - INFO - 🔍 Evaluating: EUR/USD (8.4 pips)
+2026-04-04 03:37:00,506 - INFO - 🎯 EXECUTING TRADE: SELL EUR/USD
+2026-04-04 03:37:00,506 - INFO -    📊 Spread: 8.4 pips
+2026-04-04 03:37:00,507 - INFO -    💰 Potential profit: $0.84
+2026-04-04 03:37:00,507 - INFO -    💵 Position: $11.00 (5% of $220.00)
+2026-04-04 03:37:00,507 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:37:00,507 - INFO -    ✅ TRADE WON: +$0.68
+2026-04-04 03:37:00,507 - INFO -    💵 New balance: $220.68
+2026-04-04 03:37:00,507 - INFO - 🔍 Evaluating: USD/JPY (12.1 pips)
+2026-04-04 03:37:00,507 - INFO - 🎯 EXECUTING TRADE: SELL USD/JPY
+2026-04-04 03:37:00,507 - INFO -    📊 Spread: 12.1 pips
+2026-04-04 03:37:00,507 - INFO -    💰 Potential profit: $0.80
+2026-04-04 03:37:00,507 - INFO -    💵 Position: $11.03 (5% of $220.68)
+2026-04-04 03:37:00,507 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:37:00,507 - INFO -    ✅ TRADE WON: +$0.92
+2026-04-04 03:37:00,507 - INFO -    💵 New balance: $221.60
+2026-04-04 03:37:00,507 - INFO - ⏰ Next ACTIVE scan at: 03:38:00
+2026-04-04 03:37:00,507 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:37:00,507 - INFO -    💰 Current profit: $1.60
+2026-04-04 03:38:00,582 - INFO - 
+=== ACTIVE SCAN #2 at 03:38:00 ===
+2026-04-04 03:38:00,582 - INFO - 💰 Current balance: $221.60
+2026-04-04 03:38:00,582 - INFO - 📈 Total profit: $1.60
+2026-04-04 03:38:00,583 - INFO - 🎯 Trades executed: 2
+2026-04-04 03:38:00,583 - INFO - 📊 Found 2 opportunities
+2026-04-04 03:38:00,583 - INFO - 🔍 Evaluating: EUR/USD (12.2 pips)
+2026-04-04 03:38:00,583 - INFO - 🎯 EXECUTING TRADE: BUY EUR/USD
+2026-04-04 03:38:00,583 - INFO -    📊 Spread: 12.2 pips
+2026-04-04 03:38:00,583 - INFO -    💰 Potential profit: $1.22
+2026-04-04 03:38:00,583 - INFO -    💵 Position: $11.08 (5% of $221.60)
+2026-04-04 03:38:00,583 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:38:00,583 - INFO -    ✅ TRADE WON: +$1.15
+2026-04-04 03:38:00,583 - INFO -    💵 New balance: $222.76
+2026-04-04 03:38:00,583 - INFO - 🔍 Evaluating: USD/CAD (7.1 pips)
+2026-04-04 03:38:00,583 - INFO - 🎯 EXECUTING TRADE: BUY USD/CAD
+2026-04-04 03:38:00,583 - INFO -    📊 Spread: 7.1 pips
+2026-04-04 03:38:00,583 - INFO -    💰 Potential profit: $0.71
+2026-04-04 03:38:00,583 - INFO -    💵 Position: $11.14 (5% of $222.76)
+2026-04-04 03:38:00,583 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:38:00,583 - INFO -    ❌ TRADE LOST: -$0.04
+2026-04-04 03:38:00,583 - INFO -    💵 New balance: $222.72
+2026-04-04 03:38:00,583 - INFO - ⏰ Next ACTIVE scan at: 03:39:00
+2026-04-04 03:38:00,583 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:38:00,583 - INFO -    💰 Current profit: $2.76
+2026-04-04 03:39:00,590 - INFO - 
+=== ACTIVE SCAN #3 at 03:39:00 ===
+2026-04-04 03:39:00,590 - INFO - 💰 Current balance: $222.72
+2026-04-04 03:39:00,590 - INFO - 📈 Total profit: $2.76
+2026-04-04 03:39:00,590 - INFO - 🎯 Trades executed: 4
+2026-04-04 03:39:00,591 - INFO - 📊 Found 3 opportunities
+2026-04-04 03:39:00,591 - INFO - 🔍 Evaluating: USD/JPY (13.7 pips)
+2026-04-04 03:39:00,591 - INFO - 🎯 EXECUTING TRADE: BUY USD/JPY
+2026-04-04 03:39:00,591 - INFO -    📊 Spread: 13.7 pips
+2026-04-04 03:39:00,591 - INFO -    💰 Potential profit: $0.90
+2026-04-04 03:39:00,591 - INFO -    💵 Position: $11.14 (5% of $222.72)
+2026-04-04 03:39:00,591 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:39:00,591 - INFO -    ❌ TRADE LOST: -$0.06
+2026-04-04 03:39:00,591 - INFO -    💵 New balance: $222.66
+2026-04-04 03:39:00,591 - INFO - 🔍 Evaluating: AUD/USD (6.4 pips)
+2026-04-04 03:39:00,591 - INFO -    ⏭️  Spread too low (6.4 < 7.0 pips)
+2026-04-04 03:39:00,591 - INFO - ⏰ Next ACTIVE scan at: 03:40:00
+2026-04-04 03:39:00,591 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:39:00,591 - INFO -    💰 Current profit: $2.76
+2026-04-04 03:40:00,661 - INFO - 
+=== ACTIVE SCAN #4 at 03:40:00 ===
+2026-04-04 03:40:00,661 - INFO - 💰 Current balance: $222.66
+2026-04-04 03:40:00,661 - INFO - 📈 Total profit: $2.76
+2026-04-04 03:40:00,661 - INFO - 🎯 Trades executed: 5
+2026-04-04 03:40:00,661 - INFO - 📊 Found 5 opportunities
+2026-04-04 03:40:00,661 - INFO - 🔍 Evaluating: EUR/USD (9.8 pips)
+2026-04-04 03:40:00,661 - INFO - 🎯 EXECUTING TRADE: SELL EUR/USD
+2026-04-04 03:40:00,661 - INFO -    📊 Spread: 9.8 pips
+2026-04-04 03:40:00,661 - INFO -    💰 Potential profit: $0.98
+2026-04-04 03:40:00,661 - INFO -    💵 Position: $11.13 (5% of $222.66)
+2026-04-04 03:40:00,661 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:40:00,661 - INFO -    ✅ TRADE WON: +$0.87
+2026-04-04 03:40:00,661 - INFO -    💵 New balance: $223.53
+2026-04-04 03:40:00,661 - INFO - 🔍 Evaluating: GBP/USD (8.0 pips)
+2026-04-04 03:40:00,661 - INFO - 🎯 EXECUTING TRADE: SELL GBP/USD
+2026-04-04 03:40:00,661 - INFO -    📊 Spread: 8.0 pips
+2026-04-04 03:40:00,661 - INFO -    💰 Potential profit: $0.80
+2026-04-04 03:40:00,661 - INFO -    💵 Position: $11.18 (5% of $223.53)
+2026-04-04 03:40:00,661 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:40:00,662 - INFO -    ✅ TRADE WON: +$0.91
+2026-04-04 03:40:00,662 - INFO -    💵 New balance: $224.45
+2026-04-04 03:40:00,662 - INFO - ⏰ Next ACTIVE scan at: 03:41:00
+2026-04-04 03:40:00,662 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:40:00,662 - INFO -    💰 Current profit: $4.54
+2026-04-04 03:41:00,734 - INFO - 
+=== ACTIVE SCAN #5 at 03:41:00 ===
+2026-04-04 03:41:00,734 - INFO - 💰 Current balance: $224.45
+2026-04-04 03:41:00,734 - INFO - 📈 Total profit: $4.54
+2026-04-04 03:41:00,734 - INFO - 🎯 Trades executed: 7
+2026-04-04 03:41:00,734 - INFO - 📊 Found 5 opportunities
+2026-04-04 03:41:00,734 - INFO - 🔍 Evaluating: EUR/USD (8.1 pips)
+2026-04-04 03:41:00,735 - INFO - 🎯 EXECUTING TRADE: BUY EUR/USD
+2026-04-04 03:41:00,735 - INFO -    📊 Spread: 8.1 pips
+2026-04-04 03:41:00,735 - INFO -    💰 Potential profit: $0.81
+2026-04-04 03:41:00,735 - INFO -    💵 Position: $11.22 (5% of $224.45)
+2026-04-04 03:41:00,735 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:41:00,735 - INFO -    ✅ TRADE WON: +$0.93
+2026-04-04 03:41:00,735 - INFO -    💵 New balance: $225.38
+2026-04-04 03:41:00,735 - INFO - 🔍 Evaluating: GBP/USD (6.6 pips)
+2026-04-04 03:41:00,735 - INFO -    ⏭️  Spread too low (6.6 < 7.0 pips)
+2026-04-04 03:41:00,735 - INFO - ⏰ Next ACTIVE scan at: 03:42:00
+2026-04-04 03:41:00,735 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:41:00,735 - INFO -    💰 Current profit: $5.47
+2026-04-04 03:42:00,745 - INFO - 
+=== ACTIVE SCAN #6 at 03:42:00 ===
+2026-04-04 03:42:00,745 - INFO - 💰 Current balance: $225.38
+2026-04-04 03:42:00,745 - INFO - 📈 Total profit: $5.47
+2026-04-04 03:42:00,745 - INFO - 🎯 Trades executed: 8
+2026-04-04 03:42:00,745 - INFO - 📊 Found 4 opportunities
+2026-04-04 03:42:00,745 - INFO - 🔍 Evaluating: EUR/USD (5.9 pips)
+2026-04-04 03:42:00,746 - INFO -    ⏭️  Spread too low (5.9 < 7.0 pips)
+2026-04-04 03:42:00,746 - INFO - 🔍 Evaluating: USD/JPY (10.3 pips)
+2026-04-04 03:42:00,746 - INFO - 🎯 EXECUTING TRADE: BUY USD/JPY
+2026-04-04 03:42:00,746 - INFO -    📊 Spread: 10.3 pips
+2026-04-04 03:42:00,746 - INFO -    💰 Potential profit: $0.68
+2026-04-04 03:42:00,746 - INFO -    💵 Position: $11.27 (5% of $225.38)
+2026-04-04 03:42:00,746 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:42:00,746 - INFO -    ✅ TRADE WON: +$0.77
+2026-04-04 03:42:00,746 - INFO -    💵 New balance: $226.15
+2026-04-04 03:42:00,746 - INFO - ⏰ Next ACTIVE scan at: 03:43:00
+2026-04-04 03:42:00,746 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:42:00,746 - INFO -    💰 Current profit: $6.25
+2026-04-04 03:43:00,812 - INFO - 
+=== ACTIVE SCAN #7 at 03:43:00 ===
+2026-04-04 03:43:00,812 - INFO - 💰 Current balance: $226.15
+2026-04-04 03:43:00,812 - INFO - 📈 Total profit: $6.25
+2026-04-04 03:43:00,812 - INFO - 🎯 Trades executed: 9
+2026-04-04 03:43:00,813 - INFO - 📊 Found 3 opportunities
+2026-04-04 03:43:00,813 - INFO - 🔍 Evaluating: EUR/USD (7.1 pips)
+2026-04-04 03:43:00,813 - INFO - 🎯 EXECUTING TRADE: BUY EUR/USD
+2026-04-04 03:43:00,813 - INFO -    📊 Spread: 7.1 pips
+2026-04-04 03:43:00,813 - INFO -    💰 Potential profit: $0.71
+2026-04-04 03:43:00,813 - INFO -    💵 Position: $11.31 (5% of $226.15)
+2026-04-04 03:43:00,813 - INFO -    ⚠️  Risk: $0.06 (0.5% of position)
+2026-04-04 03:43:00,813 - INFO -    ✅ TRADE WON: +$0.62
+2026-04-04 03:43:00,813 - INFO -    💵 New balance: $226.77
+2026-04-04 03:43:00,813 - INFO - 🔍 Evaluating: USD/JPY (9.2 pips)
+2026-04-04 03:43:00,813 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:43:00,813 - INFO - ⏰ Next ACTIVE scan at: 03:44:00
+2026-04-04 03:43:00,814 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:43:00,814 - INFO -    💰 Current profit: $6.87
+2026-04-04 03:44:00,884 - INFO - 
+=== ACTIVE SCAN #8 at 03:44:00 ===
+2026-04-04 03:44:00,884 - INFO - 💰 Current balance: $226.77
+2026-04-04 03:44:00,884 - INFO - 📈 Total profit: $6.87
+2026-04-04 03:44:00,884 - INFO - 🎯 Trades executed: 10
+2026-04-04 03:44:00,884 - INFO - 📊 Found 4 opportunities
+2026-04-04 03:44:00,884 - INFO - 🔍 Evaluating: EUR/USD (10.2 pips)
+2026-04-04 03:44:00,884 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:44:00,884 - INFO - 🔍 Evaluating: GBP/USD (9.7 pips)
+2026-04-04 03:44:00,884 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:44:00,884 - INFO - ⏰ Next ACTIVE scan at: 03:45:00
+2026-04-04 03:44:00,884 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:44:00,884 - INFO -    💰 Current profit: $6.87
+2026-04-04 03:45:00,959 - INFO - 
+=== ACTIVE SCAN #9 at 03:45:00 ===
+2026-04-04 03:45:00,959 - INFO - 💰 Current balance: $226.77
+2026-04-04 03:45:00,959 - INFO - 📈 Total profit: $6.87
+2026-04-04 03:45:00,959 - INFO - 🎯 Trades executed: 10
+2026-04-04 03:45:00,959 - INFO - 📊 Found 3 opportunities
+2026-04-04 03:45:00,959 - INFO - 🔍 Evaluating: USD/JPY (12.6 pips)
+2026-04-04 03:45:00,959 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:45:00,959 - INFO - 🔍 Evaluating: AUD/USD (10.9 pips)
+2026-04-04 03:45:00,959 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:45:00,960 - INFO - ⏰ Next ACTIVE scan at: 03:46:00
+2026-04-04 03:45:00,960 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:45:00,960 - INFO -    💰 Current profit: $6.87
+2026-04-04 03:46:01,033 - INFO - 
+=== ACTIVE SCAN #10 at 03:46:01 ===
+2026-04-04 03:46:01,033 - INFO - 💰 Current balance: $226.77
+2026-04-04 03:46:01,033 - INFO - 📈 Total profit: $6.87
+2026-04-04 03:46:01,033 - INFO - 🎯 Trades executed: 10
+2026-04-04 03:46:01,034 - INFO - 📊 Found 3 opportunities
+2026-04-04 03:46:01,034 - INFO - 🔍 Evaluating: EUR/USD (13.2 pips)
+2026-04-04 03:46:01,034 - INFO -    ⏸️  Trade limit reached for this session
+2026-04-04 03:46:01,034 - INFO - 🔍 Evaluating: AUD/USD (5.2 pips)
+2026-04-04 03:46:01,034 - INFO -    ⏭️  Spread too low (5.2 < 7.0 pips)
+2026-04-04 03:46:01,034 - INFO - ⏰ Next ACTIVE scan at: 03:47:01
+2026-04-04 03:46:01,034 - INFO -    🚀 REAL TRADING ACTIVE with $220!
+2026-04-04 03:46:01,034 - INFO -    💰 Current profit: $6.87
+2026-04-04 04:12:47,264 - INFO - 🚀 FOREX TRADING BOT INITIALIZING
+2026-04-04 04:12:47,264 - INFO - 📝 PAPER TRADING MODE - Ready for real trading
+2026-04-04 04:12:47,264 - INFO - 📊 Trading 5 Forex pairs
+2026-04-04 04:12:47,265 - INFO - 💰 Paper balance: $10000.00
+2026-04-04 04:12:47,265 - INFO - 🎯 Risk: 1.0% per trade
+2026-04-04 04:12:47,265 - INFO - 📈 Strategy: Trend following + Mean reversion
+2026-04-04 04:12:47,265 - INFO - ============================================================
+2026-04-04 04:12:47,265 - INFO - 🚀 FOREX BOT - PAPER TRADING MODE
+2026-04-04 04:12:47,265 - INFO - 💰 Ready for real account integration
+2026-04-04 04:12:47,265 - INFO - ============================================================
+2026-04-04 04:12:47,265 - INFO - 🔍 Forex Scan #1
+2026-04-04 04:12:47,920 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:12:47,920 - INFO -    Mode: PAPER trading
+2026-04-04 04:12:47,920 - INFO -    Balance: $10000.00
+2026-04-04 04:12:47,920 - INFO -    Total Profit: $0.00
+2026-04-04 04:12:47,920 - INFO -    Open Trades: 0
+2026-04-04 04:12:47,920 - INFO -    Closed Trades: 0
+2026-04-04 04:12:47,920 - INFO -    Win Rate: 0.0%
+2026-04-04 04:12:47,920 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:12:47,921 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:14:48,021 - INFO - 🔍 Forex Scan #2
+2026-04-04 04:14:48,796 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:14:48,796 - INFO -    Mode: PAPER trading
+2026-04-04 04:14:48,796 - INFO -    Balance: $10000.00
+2026-04-04 04:14:48,796 - INFO -    Total Profit: $0.00
+2026-04-04 04:14:48,796 - INFO -    Open Trades: 0
+2026-04-04 04:14:48,796 - INFO -    Closed Trades: 0
+2026-04-04 04:14:48,796 - INFO -    Win Rate: 0.0%
+2026-04-04 04:14:48,797 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:14:48,797 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:16:50,378 - INFO - 🔍 Forex Scan #3
+2026-04-04 04:16:51,698 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:16:51,698 - INFO -    Mode: PAPER trading
+2026-04-04 04:16:51,698 - INFO -    Balance: $10000.00
+2026-04-04 04:16:51,699 - INFO -    Total Profit: $0.00
+2026-04-04 04:16:51,699 - INFO -    Open Trades: 0
+2026-04-04 04:16:51,699 - INFO -    Closed Trades: 0
+2026-04-04 04:16:51,699 - INFO -    Win Rate: 0.0%
+2026-04-04 04:16:51,699 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:16:51,699 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:18:51,759 - INFO - 🔍 Forex Scan #4
+2026-04-04 04:18:52,484 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:18:52,485 - INFO -    Mode: PAPER trading
+2026-04-04 04:18:52,485 - INFO -    Balance: $10000.00
+2026-04-04 04:18:52,485 - INFO -    Total Profit: $0.00
+2026-04-04 04:18:52,485 - INFO -    Open Trades: 0
+2026-04-04 04:18:52,485 - INFO -    Closed Trades: 0
+2026-04-04 04:18:52,485 - INFO -    Win Rate: 0.0%
+2026-04-04 04:18:52,485 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:18:52,485 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:20:52,528 - INFO - 🔍 Forex Scan #5
+2026-04-04 04:20:53,242 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:20:53,242 - INFO -    Mode: PAPER trading
+2026-04-04 04:20:53,243 - INFO -    Balance: $10000.00
+2026-04-04 04:20:53,243 - INFO -    Total Profit: $0.00
+2026-04-04 04:20:53,243 - INFO -    Open Trades: 0
+2026-04-04 04:20:53,243 - INFO -    Closed Trades: 0
+2026-04-04 04:20:53,243 - INFO -    Win Rate: 0.0%
+2026-04-04 04:20:53,243 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:20:53,243 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:22:53,248 - INFO - 🔍 Forex Scan #6
+2026-04-04 04:22:53,907 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:22:53,908 - INFO -    Mode: PAPER trading
+2026-04-04 04:22:53,908 - INFO -    Balance: $10000.00
+2026-04-04 04:22:53,908 - INFO -    Total Profit: $0.00
+2026-04-04 04:22:53,908 - INFO -    Open Trades: 0
+2026-04-04 04:22:53,908 - INFO -    Closed Trades: 0
+2026-04-04 04:22:53,908 - INFO -    Win Rate: 0.0%
+2026-04-04 04:22:53,908 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:22:53,908 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:24:53,977 - INFO - 🔍 Forex Scan #7
+2026-04-04 04:24:54,647 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:24:54,647 - INFO -    Mode: PAPER trading
+2026-04-04 04:24:54,647 - INFO -    Balance: $10000.00
+2026-04-04 04:24:54,647 - INFO -    Total Profit: $0.00
+2026-04-04 04:24:54,647 - INFO -    Open Trades: 0
+2026-04-04 04:24:54,648 - INFO -    Closed Trades: 0
+2026-04-04 04:24:54,648 - INFO -    Win Rate: 0.0%
+2026-04-04 04:24:54,648 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:24:54,648 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:26:54,681 - INFO - 🔍 Forex Scan #8
+2026-04-04 04:26:55,447 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:26:55,447 - INFO -    Mode: PAPER trading
+2026-04-04 04:26:55,447 - INFO -    Balance: $10000.00
+2026-04-04 04:26:55,447 - INFO -    Total Profit: $0.00
+2026-04-04 04:26:55,447 - INFO -    Open Trades: 0
+2026-04-04 04:26:55,447 - INFO -    Closed Trades: 0
+2026-04-04 04:26:55,447 - INFO -    Win Rate: 0.0%
+2026-04-04 04:26:55,447 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:26:55,447 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:28:55,523 - INFO - 🔍 Forex Scan #9
+2026-04-04 04:28:56,222 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:28:56,222 - INFO -    Mode: PAPER trading
+2026-04-04 04:28:56,222 - INFO -    Balance: $10000.00
+2026-04-04 04:28:56,223 - INFO -    Total Profit: $0.00
+2026-04-04 04:28:56,223 - INFO -    Open Trades: 0
+2026-04-04 04:28:56,223 - INFO -    Closed Trades: 0
+2026-04-04 04:28:56,223 - INFO -    Win Rate: 0.0%
+2026-04-04 04:28:56,223 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:28:56,223 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:30:56,222 - INFO - 🔍 Forex Scan #10
+2026-04-04 04:30:56,939 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:30:56,939 - INFO -    Price: 0.86600
+2026-04-04 04:30:56,940 - INFO -    Trend: DOWN
+2026-04-04 04:30:56,940 - INFO -    Confidence: 30.0%
+2026-04-04 04:30:56,940 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:30:56,940 - INFO -    Price: 0.75600
+2026-04-04 04:30:56,940 - INFO -    Trend: DOWN
+2026-04-04 04:30:56,940 - INFO -    Confidence: 30.0%
+2026-04-04 04:30:56,940 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:30:56,941 - INFO -    Price: 0.00627
+2026-04-04 04:30:56,941 - INFO -    Trend: DOWN
+2026-04-04 04:30:56,941 - INFO -    Confidence: 30.0%
+2026-04-04 04:30:56,941 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:30:56,941 - INFO -    Price: 1.25156
+2026-04-04 04:30:56,941 - INFO -    Trend: DOWN
+2026-04-04 04:30:56,941 - INFO -    Confidence: 30.0%
+2026-04-04 04:30:56,941 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:30:56,941 - INFO -    Price: 1.45000
+2026-04-04 04:30:56,941 - INFO -    Trend: DOWN
+2026-04-04 04:30:56,941 - INFO -    Confidence: 30.0%
+2026-04-04 04:30:56,942 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:30:56,942 - INFO -    Mode: PAPER trading
+2026-04-04 04:30:56,942 - INFO -    Balance: $10000.00
+2026-04-04 04:30:56,942 - INFO -    Total Profit: $0.00
+2026-04-04 04:30:56,942 - INFO -    Open Trades: 0
+2026-04-04 04:30:56,942 - INFO -    Closed Trades: 0
+2026-04-04 04:30:56,942 - INFO -    Win Rate: 0.0%
+2026-04-04 04:30:56,942 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:30:56,942 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:32:56,996 - INFO - 🔍 Forex Scan #11
+2026-04-04 04:32:58,318 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:32:58,318 - INFO -    Price: 0.86600
+2026-04-04 04:32:58,319 - INFO -    Trend: DOWN
+2026-04-04 04:32:58,319 - INFO -    Confidence: 30.0%
+2026-04-04 04:32:58,319 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:32:58,319 - INFO -    Price: 0.75600
+2026-04-04 04:32:58,319 - INFO -    Trend: DOWN
+2026-04-04 04:32:58,319 - INFO -    Confidence: 30.0%
+2026-04-04 04:32:58,319 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:32:58,319 - INFO -    Price: 0.00627
+2026-04-04 04:32:58,319 - INFO -    Trend: DOWN
+2026-04-04 04:32:58,319 - INFO -    Confidence: 30.0%
+2026-04-04 04:32:58,319 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:32:58,319 - INFO -    Price: 1.25156
+2026-04-04 04:32:58,319 - INFO -    Trend: DOWN
+2026-04-04 04:32:58,319 - INFO -    Confidence: 30.0%
+2026-04-04 04:32:58,319 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:32:58,320 - INFO -    Price: 1.45000
+2026-04-04 04:32:58,320 - INFO -    Trend: DOWN
+2026-04-04 04:32:58,320 - INFO -    Confidence: 30.0%
+2026-04-04 04:32:58,320 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:32:58,320 - INFO -    Mode: PAPER trading
+2026-04-04 04:32:58,320 - INFO -    Balance: $10000.00
+2026-04-04 04:32:58,323 - INFO -    Total Profit: $0.00
+2026-04-04 04:32:58,323 - INFO -    Open Trades: 0
+2026-04-04 04:32:58,323 - INFO -    Closed Trades: 0
+2026-04-04 04:32:58,323 - INFO -    Win Rate: 0.0%
+2026-04-04 04:32:58,323 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:32:58,323 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:34:58,492 - INFO - 🔍 Forex Scan #12
+2026-04-04 04:35:00,033 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:35:00,039 - INFO -    Price: 0.86600
+2026-04-04 04:35:00,039 - INFO -    Trend: DOWN
+2026-04-04 04:35:00,039 - INFO -    Confidence: 30.0%
+2026-04-04 04:35:00,039 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:35:00,039 - INFO -    Price: 0.75600
+2026-04-04 04:35:00,039 - INFO -    Trend: DOWN
+2026-04-04 04:35:00,039 - INFO -    Confidence: 30.0%
+2026-04-04 04:35:00,039 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:35:00,039 - INFO -    Price: 0.00627
+2026-04-04 04:35:00,039 - INFO -    Trend: DOWN
+2026-04-04 04:35:00,039 - INFO -    Confidence: 30.0%
+2026-04-04 04:35:00,040 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:35:00,040 - INFO -    Price: 1.25156
+2026-04-04 04:35:00,040 - INFO -    Trend: DOWN
+2026-04-04 04:35:00,040 - INFO -    Confidence: 30.0%
+2026-04-04 04:35:00,040 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:35:00,040 - INFO -    Price: 1.45000
+2026-04-04 04:35:00,040 - INFO -    Trend: DOWN
+2026-04-04 04:35:00,040 - INFO -    Confidence: 30.0%
+2026-04-04 04:35:00,040 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:35:00,040 - INFO -    Mode: PAPER trading
+2026-04-04 04:35:00,040 - INFO -    Balance: $10000.00
+2026-04-04 04:35:00,040 - INFO -    Total Profit: $0.00
+2026-04-04 04:35:00,041 - INFO -    Open Trades: 0
+2026-04-04 04:35:00,041 - INFO -    Closed Trades: 0
+2026-04-04 04:35:00,041 - INFO -    Win Rate: 0.0%
+2026-04-04 04:35:00,041 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:35:00,041 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:37:00,071 - INFO - 🔍 Forex Scan #13
+2026-04-04 04:37:00,745 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:37:00,746 - INFO -    Price: 0.86600
+2026-04-04 04:37:00,746 - INFO -    Trend: DOWN
+2026-04-04 04:37:00,746 - INFO -    Confidence: 30.0%
+2026-04-04 04:37:00,746 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:37:00,746 - INFO -    Price: 0.75600
+2026-04-04 04:37:00,746 - INFO -    Trend: DOWN
+2026-04-04 04:37:00,746 - INFO -    Confidence: 30.0%
+2026-04-04 04:37:00,746 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:37:00,746 - INFO -    Price: 0.00627
+2026-04-04 04:37:00,746 - INFO -    Trend: DOWN
+2026-04-04 04:37:00,746 - INFO -    Confidence: 30.0%
+2026-04-04 04:37:00,747 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:37:00,747 - INFO -    Price: 1.25156
+2026-04-04 04:37:00,747 - INFO -    Trend: DOWN
+2026-04-04 04:37:00,747 - INFO -    Confidence: 30.0%
+2026-04-04 04:37:00,747 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:37:00,747 - INFO -    Price: 1.45000
+2026-04-04 04:37:00,747 - INFO -    Trend: DOWN
+2026-04-04 04:37:00,747 - INFO -    Confidence: 30.0%
+2026-04-04 04:37:00,747 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:37:00,747 - INFO -    Mode: PAPER trading
+2026-04-04 04:37:00,747 - INFO -    Balance: $10000.00
+2026-04-04 04:37:00,747 - INFO -    Total Profit: $0.00
+2026-04-04 04:37:00,747 - INFO -    Open Trades: 0
+2026-04-04 04:37:00,747 - INFO -    Closed Trades: 0
+2026-04-04 04:37:00,747 - INFO -    Win Rate: 0.0%
+2026-04-04 04:37:00,747 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:37:00,747 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:39:00,793 - INFO - 🔍 Forex Scan #14
+2026-04-04 04:39:01,467 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:39:01,467 - INFO -    Price: 0.86600
+2026-04-04 04:39:01,467 - INFO -    Trend: DOWN
+2026-04-04 04:39:01,467 - INFO -    Confidence: 30.0%
+2026-04-04 04:39:01,467 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:39:01,467 - INFO -    Price: 0.75600
+2026-04-04 04:39:01,467 - INFO -    Trend: DOWN
+2026-04-04 04:39:01,467 - INFO -    Confidence: 30.0%
+2026-04-04 04:39:01,467 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:39:01,467 - INFO -    Price: 0.00627
+2026-04-04 04:39:01,467 - INFO -    Trend: DOWN
+2026-04-04 04:39:01,467 - INFO -    Confidence: 30.0%
+2026-04-04 04:39:01,467 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:39:01,467 - INFO -    Price: 1.25156
+2026-04-04 04:39:01,467 - INFO -    Trend: DOWN
+2026-04-04 04:39:01,467 - INFO -    Confidence: 30.0%
+2026-04-04 04:39:01,467 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:39:01,467 - INFO -    Price: 1.45000
+2026-04-04 04:39:01,467 - INFO -    Trend: DOWN
+2026-04-04 04:39:01,467 - INFO -    Confidence: 30.0%
+2026-04-04 04:39:01,467 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:39:01,467 - INFO -    Mode: PAPER trading
+2026-04-04 04:39:01,467 - INFO -    Balance: $10000.00
+2026-04-04 04:39:01,467 - INFO -    Total Profit: $0.00
+2026-04-04 04:39:01,467 - INFO -    Open Trades: 0
+2026-04-04 04:39:01,467 - INFO -    Closed Trades: 0
+2026-04-04 04:39:01,467 - INFO -    Win Rate: 0.0%
+2026-04-04 04:39:01,467 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:39:01,467 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:41:01,510 - INFO - 🔍 Forex Scan #15
+2026-04-04 04:41:02,174 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:41:02,175 - INFO -    Price: 0.86600
+2026-04-04 04:41:02,175 - INFO -    Trend: DOWN
+2026-04-04 04:41:02,175 - INFO -    Confidence: 30.0%
+2026-04-04 04:41:02,175 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:41:02,175 - INFO -    Price: 0.75600
+2026-04-04 04:41:02,175 - INFO -    Trend: DOWN
+2026-04-04 04:41:02,175 - INFO -    Confidence: 30.0%
+2026-04-04 04:41:02,175 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:41:02,176 - INFO -    Price: 0.00627
+2026-04-04 04:41:02,176 - INFO -    Trend: DOWN
+2026-04-04 04:41:02,176 - INFO -    Confidence: 30.0%
+2026-04-04 04:41:02,176 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:41:02,176 - INFO -    Price: 1.25156
+2026-04-04 04:41:02,176 - INFO -    Trend: DOWN
+2026-04-04 04:41:02,176 - INFO -    Confidence: 30.0%
+2026-04-04 04:41:02,176 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:41:02,176 - INFO -    Price: 1.45000
+2026-04-04 04:41:02,176 - INFO -    Trend: DOWN
+2026-04-04 04:41:02,176 - INFO -    Confidence: 30.0%
+2026-04-04 04:41:02,177 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:41:02,177 - INFO -    Mode: PAPER trading
+2026-04-04 04:41:02,177 - INFO -    Balance: $10000.00
+2026-04-04 04:41:02,177 - INFO -    Total Profit: $0.00
+2026-04-04 04:41:02,177 - INFO -    Open Trades: 0
+2026-04-04 04:41:02,177 - INFO -    Closed Trades: 0
+2026-04-04 04:41:02,177 - INFO -    Win Rate: 0.0%
+2026-04-04 04:41:02,177 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:41:02,177 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:43:02,227 - INFO - 🔍 Forex Scan #16
+2026-04-04 04:43:02,895 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:43:02,896 - INFO -    Price: 0.86600
+2026-04-04 04:43:02,896 - INFO -    Trend: DOWN
+2026-04-04 04:43:02,896 - INFO -    Confidence: 30.0%
+2026-04-04 04:43:02,896 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:43:02,896 - INFO -    Price: 0.75600
+2026-04-04 04:43:02,896 - INFO -    Trend: DOWN
+2026-04-04 04:43:02,896 - INFO -    Confidence: 30.0%
+2026-04-04 04:43:02,896 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:43:02,897 - INFO -    Price: 0.00627
+2026-04-04 04:43:02,897 - INFO -    Trend: DOWN
+2026-04-04 04:43:02,897 - INFO -    Confidence: 30.0%
+2026-04-04 04:43:02,897 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:43:02,897 - INFO -    Price: 1.25156
+2026-04-04 04:43:02,897 - INFO -    Trend: DOWN
+2026-04-04 04:43:02,897 - INFO -    Confidence: 30.0%
+2026-04-04 04:43:02,897 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:43:02,897 - INFO -    Price: 1.45000
+2026-04-04 04:43:02,897 - INFO -    Trend: DOWN
+2026-04-04 04:43:02,897 - INFO -    Confidence: 30.0%
+2026-04-04 04:43:02,897 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:43:02,898 - INFO -    Mode: PAPER trading
+2026-04-04 04:43:02,898 - INFO -    Balance: $10000.00
+2026-04-04 04:43:02,898 - INFO -    Total Profit: $0.00
+2026-04-04 04:43:02,898 - INFO -    Open Trades: 0
+2026-04-04 04:43:02,898 - INFO -    Closed Trades: 0
+2026-04-04 04:43:02,898 - INFO -    Win Rate: 0.0%
+2026-04-04 04:43:02,898 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:43:02,898 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:45:02,961 - INFO - 🔍 Forex Scan #17
+2026-04-04 04:45:03,638 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:45:03,638 - INFO -    Price: 0.86600
+2026-04-04 04:45:03,638 - INFO -    Trend: DOWN
+2026-04-04 04:45:03,638 - INFO -    Confidence: 30.0%
+2026-04-04 04:45:03,639 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:45:03,639 - INFO -    Price: 0.75600
+2026-04-04 04:45:03,639 - INFO -    Trend: DOWN
+2026-04-04 04:45:03,639 - INFO -    Confidence: 30.0%
+2026-04-04 04:45:03,639 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:45:03,639 - INFO -    Price: 0.00627
+2026-04-04 04:45:03,639 - INFO -    Trend: DOWN
+2026-04-04 04:45:03,639 - INFO -    Confidence: 30.0%
+2026-04-04 04:45:03,639 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:45:03,639 - INFO -    Price: 1.25156
+2026-04-04 04:45:03,639 - INFO -    Trend: DOWN
+2026-04-04 04:45:03,640 - INFO -    Confidence: 30.0%
+2026-04-04 04:45:03,640 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:45:03,640 - INFO -    Price: 1.45000
+2026-04-04 04:45:03,640 - INFO -    Trend: DOWN
+2026-04-04 04:45:03,640 - INFO -    Confidence: 30.0%
+2026-04-04 04:45:03,640 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:45:03,640 - INFO -    Mode: PAPER trading
+2026-04-04 04:45:03,640 - INFO -    Balance: $10000.00
+2026-04-04 04:45:03,640 - INFO -    Total Profit: $0.00
+2026-04-04 04:45:03,640 - INFO -    Open Trades: 0
+2026-04-04 04:45:03,640 - INFO -    Closed Trades: 0
+2026-04-04 04:45:03,640 - INFO -    Win Rate: 0.0%
+2026-04-04 04:45:03,641 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:45:03,641 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:47:03,701 - INFO - 🔍 Forex Scan #18
+2026-04-04 04:47:04,406 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:47:04,406 - INFO -    Price: 0.86600
+2026-04-04 04:47:04,406 - INFO -    Trend: DOWN
+2026-04-04 04:47:04,406 - INFO -    Confidence: 30.0%
+2026-04-04 04:47:04,406 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:47:04,406 - INFO -    Price: 0.75600
+2026-04-04 04:47:04,406 - INFO -    Trend: DOWN
+2026-04-04 04:47:04,406 - INFO -    Confidence: 30.0%
+2026-04-04 04:47:04,406 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:47:04,406 - INFO -    Price: 0.00627
+2026-04-04 04:47:04,407 - INFO -    Trend: DOWN
+2026-04-04 04:47:04,407 - INFO -    Confidence: 30.0%
+2026-04-04 04:47:04,407 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:47:04,407 - INFO -    Price: 1.25156
+2026-04-04 04:47:04,407 - INFO -    Trend: DOWN
+2026-04-04 04:47:04,407 - INFO -    Confidence: 30.0%
+2026-04-04 04:47:04,407 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:47:04,407 - INFO -    Price: 1.45000
+2026-04-04 04:47:04,407 - INFO -    Trend: DOWN
+2026-04-04 04:47:04,407 - INFO -    Confidence: 30.0%
+2026-04-04 04:47:04,407 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:47:04,407 - INFO -    Mode: PAPER trading
+2026-04-04 04:47:04,407 - INFO -    Balance: $10000.00
+2026-04-04 04:47:04,407 - INFO -    Total Profit: $0.00
+2026-04-04 04:47:04,407 - INFO -    Open Trades: 0
+2026-04-04 04:47:04,407 - INFO -    Closed Trades: 0
+2026-04-04 04:47:04,408 - INFO -    Win Rate: 0.0%
+2026-04-04 04:47:04,408 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:47:04,408 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:49:04,421 - INFO - 🔍 Forex Scan #19
+2026-04-04 04:49:05,072 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:49:05,072 - INFO -    Price: 0.86600
+2026-04-04 04:49:05,072 - INFO -    Trend: DOWN
+2026-04-04 04:49:05,072 - INFO -    Confidence: 30.0%
+2026-04-04 04:49:05,072 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:49:05,072 - INFO -    Price: 0.75600
+2026-04-04 04:49:05,072 - INFO -    Trend: DOWN
+2026-04-04 04:49:05,072 - INFO -    Confidence: 30.0%
+2026-04-04 04:49:05,072 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:49:05,072 - INFO -    Price: 0.00627
+2026-04-04 04:49:05,072 - INFO -    Trend: DOWN
+2026-04-04 04:49:05,072 - INFO -    Confidence: 30.0%
+2026-04-04 04:49:05,072 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:49:05,072 - INFO -    Price: 1.25156
+2026-04-04 04:49:05,072 - INFO -    Trend: DOWN
+2026-04-04 04:49:05,072 - INFO -    Confidence: 30.0%
+2026-04-04 04:49:05,072 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:49:05,072 - INFO -    Price: 1.45000
+2026-04-04 04:49:05,072 - INFO -    Trend: DOWN
+2026-04-04 04:49:05,072 - INFO -    Confidence: 30.0%
+2026-04-04 04:49:05,072 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:49:05,072 - INFO -    Mode: PAPER trading
+2026-04-04 04:49:05,072 - INFO -    Balance: $10000.00
+2026-04-04 04:49:05,072 - INFO -    Total Profit: $0.00
+2026-04-04 04:49:05,072 - INFO -    Open Trades: 0
+2026-04-04 04:49:05,072 - INFO -    Closed Trades: 0
+2026-04-04 04:49:05,072 - INFO -    Win Rate: 0.0%
+2026-04-04 04:49:05,072 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:49:05,072 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:51:05,084 - INFO - 🔍 Forex Scan #20
+2026-04-04 04:51:05,866 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:51:05,866 - INFO -    Price: 0.86600
+2026-04-04 04:51:05,866 - INFO -    Trend: DOWN
+2026-04-04 04:51:05,866 - INFO -    Confidence: 30.0%
+2026-04-04 04:51:05,867 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:51:05,867 - INFO -    Price: 0.75600
+2026-04-04 04:51:05,867 - INFO -    Trend: DOWN
+2026-04-04 04:51:05,867 - INFO -    Confidence: 30.0%
+2026-04-04 04:51:05,867 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:51:05,867 - INFO -    Price: 0.00627
+2026-04-04 04:51:05,867 - INFO -    Trend: DOWN
+2026-04-04 04:51:05,867 - INFO -    Confidence: 30.0%
+2026-04-04 04:51:05,867 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:51:05,867 - INFO -    Price: 1.25156
+2026-04-04 04:51:05,867 - INFO -    Trend: DOWN
+2026-04-04 04:51:05,867 - INFO -    Confidence: 30.0%
+2026-04-04 04:51:05,868 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:51:05,868 - INFO -    Price: 1.45000
+2026-04-04 04:51:05,868 - INFO -    Trend: DOWN
+2026-04-04 04:51:05,868 - INFO -    Confidence: 30.0%
+2026-04-04 04:51:05,868 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:51:05,868 - INFO -    Mode: PAPER trading
+2026-04-04 04:51:05,868 - INFO -    Balance: $10000.00
+2026-04-04 04:51:05,868 - INFO -    Total Profit: $0.00
+2026-04-04 04:51:05,868 - INFO -    Open Trades: 0
+2026-04-04 04:51:05,869 - INFO -    Closed Trades: 0
+2026-04-04 04:51:05,869 - INFO -    Win Rate: 0.0%
+2026-04-04 04:51:05,869 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:51:05,869 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:53:05,894 - INFO - 🔍 Forex Scan #21
+2026-04-04 04:53:06,600 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:53:06,601 - INFO -    Price: 0.86600
+2026-04-04 04:53:06,601 - INFO -    Trend: DOWN
+2026-04-04 04:53:06,601 - INFO -    Confidence: 30.0%
+2026-04-04 04:53:06,601 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:53:06,601 - INFO -    Price: 0.75600
+2026-04-04 04:53:06,601 - INFO -    Trend: DOWN
+2026-04-04 04:53:06,601 - INFO -    Confidence: 30.0%
+2026-04-04 04:53:06,601 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:53:06,601 - INFO -    Price: 0.00627
+2026-04-04 04:53:06,601 - INFO -    Trend: DOWN
+2026-04-04 04:53:06,602 - INFO -    Confidence: 30.0%
+2026-04-04 04:53:06,602 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:53:06,602 - INFO -    Price: 1.25156
+2026-04-04 04:53:06,602 - INFO -    Trend: DOWN
+2026-04-04 04:53:06,602 - INFO -    Confidence: 30.0%
+2026-04-04 04:53:06,602 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:53:06,602 - INFO -    Price: 1.45000
+2026-04-04 04:53:06,602 - INFO -    Trend: DOWN
+2026-04-04 04:53:06,602 - INFO -    Confidence: 30.0%
+2026-04-04 04:53:06,602 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:53:06,602 - INFO -    Mode: PAPER trading
+2026-04-04 04:53:06,602 - INFO -    Balance: $10000.00
+2026-04-04 04:53:06,603 - INFO -    Total Profit: $0.00
+2026-04-04 04:53:06,603 - INFO -    Open Trades: 0
+2026-04-04 04:53:06,603 - INFO -    Closed Trades: 0
+2026-04-04 04:53:06,603 - INFO -    Win Rate: 0.0%
+2026-04-04 04:53:06,603 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:53:06,603 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:55:06,688 - INFO - 🔍 Forex Scan #22
+2026-04-04 04:55:07,375 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:55:07,375 - INFO -    Price: 0.86600
+2026-04-04 04:55:07,375 - INFO -    Trend: DOWN
+2026-04-04 04:55:07,375 - INFO -    Confidence: 30.0%
+2026-04-04 04:55:07,375 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:55:07,375 - INFO -    Price: 0.75600
+2026-04-04 04:55:07,376 - INFO -    Trend: DOWN
+2026-04-04 04:55:07,376 - INFO -    Confidence: 30.0%
+2026-04-04 04:55:07,376 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:55:07,376 - INFO -    Price: 0.00627
+2026-04-04 04:55:07,376 - INFO -    Trend: DOWN
+2026-04-04 04:55:07,376 - INFO -    Confidence: 30.0%
+2026-04-04 04:55:07,376 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:55:07,376 - INFO -    Price: 1.25156
+2026-04-04 04:55:07,376 - INFO -    Trend: DOWN
+2026-04-04 04:55:07,376 - INFO -    Confidence: 30.0%
+2026-04-04 04:55:07,376 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:55:07,376 - INFO -    Price: 1.45000
+2026-04-04 04:55:07,377 - INFO -    Trend: DOWN
+2026-04-04 04:55:07,377 - INFO -    Confidence: 30.0%
+2026-04-04 04:55:07,377 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:55:07,377 - INFO -    Mode: PAPER trading
+2026-04-04 04:55:07,377 - INFO -    Balance: $10000.00
+2026-04-04 04:55:07,377 - INFO -    Total Profit: $0.00
+2026-04-04 04:55:07,377 - INFO -    Open Trades: 0
+2026-04-04 04:55:07,377 - INFO -    Closed Trades: 0
+2026-04-04 04:55:07,377 - INFO -    Win Rate: 0.0%
+2026-04-04 04:55:07,377 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:55:07,377 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:57:07,431 - INFO - 🔍 Forex Scan #23
+2026-04-04 04:57:08,127 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:57:08,128 - INFO -    Price: 0.86600
+2026-04-04 04:57:08,128 - INFO -    Trend: DOWN
+2026-04-04 04:57:08,128 - INFO -    Confidence: 30.0%
+2026-04-04 04:57:08,128 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:57:08,128 - INFO -    Price: 0.75600
+2026-04-04 04:57:08,128 - INFO -    Trend: DOWN
+2026-04-04 04:57:08,128 - INFO -    Confidence: 30.0%
+2026-04-04 04:57:08,128 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:57:08,129 - INFO -    Price: 0.00627
+2026-04-04 04:57:08,129 - INFO -    Trend: DOWN
+2026-04-04 04:57:08,129 - INFO -    Confidence: 30.0%
+2026-04-04 04:57:08,129 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:57:08,129 - INFO -    Price: 1.25156
+2026-04-04 04:57:08,129 - INFO -    Trend: DOWN
+2026-04-04 04:57:08,129 - INFO -    Confidence: 30.0%
+2026-04-04 04:57:08,129 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:57:08,129 - INFO -    Price: 1.45000
+2026-04-04 04:57:08,129 - INFO -    Trend: DOWN
+2026-04-04 04:57:08,129 - INFO -    Confidence: 30.0%
+2026-04-04 04:57:08,129 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:57:08,129 - INFO -    Mode: PAPER trading
+2026-04-04 04:57:08,130 - INFO -    Balance: $10000.00
+2026-04-04 04:57:08,130 - INFO -    Total Profit: $0.00
+2026-04-04 04:57:08,130 - INFO -    Open Trades: 0
+2026-04-04 04:57:08,130 - INFO -    Closed Trades: 0
+2026-04-04 04:57:08,130 - INFO -    Win Rate: 0.0%
+2026-04-04 04:57:08,130 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:57:08,130 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 04:59:08,261 - INFO - 🔍 Forex Scan #24
+2026-04-04 04:59:09,029 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 04:59:09,030 - INFO -    Price: 0.86600
+2026-04-04 04:59:09,030 - INFO -    Trend: DOWN
+2026-04-04 04:59:09,030 - INFO -    Confidence: 30.0%
+2026-04-04 04:59:09,030 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 04:59:09,030 - INFO -    Price: 0.75600
+2026-04-04 04:59:09,030 - INFO -    Trend: DOWN
+2026-04-04 04:59:09,030 - INFO -    Confidence: 30.0%
+2026-04-04 04:59:09,031 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 04:59:09,031 - INFO -    Price: 0.00627
+2026-04-04 04:59:09,031 - INFO -    Trend: DOWN
+2026-04-04 04:59:09,031 - INFO -    Confidence: 30.0%
+2026-04-04 04:59:09,031 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 04:59:09,031 - INFO -    Price: 1.25156
+2026-04-04 04:59:09,031 - INFO -    Trend: DOWN
+2026-04-04 04:59:09,031 - INFO -    Confidence: 30.0%
+2026-04-04 04:59:09,031 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 04:59:09,031 - INFO -    Price: 1.45000
+2026-04-04 04:59:09,031 - INFO -    Trend: DOWN
+2026-04-04 04:59:09,031 - INFO -    Confidence: 30.0%
+2026-04-04 04:59:09,032 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 04:59:09,032 - INFO -    Mode: PAPER trading
+2026-04-04 04:59:09,032 - INFO -    Balance: $10000.00
+2026-04-04 04:59:09,032 - INFO -    Total Profit: $0.00
+2026-04-04 04:59:09,032 - INFO -    Open Trades: 0
+2026-04-04 04:59:09,032 - INFO -    Closed Trades: 0
+2026-04-04 04:59:09,032 - INFO -    Win Rate: 0.0%
+2026-04-04 04:59:09,032 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 04:59:09,032 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 05:01:09,155 - INFO - 🔍 Forex Scan #25
+2026-04-04 05:01:09,885 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 05:01:09,885 - INFO -    Price: 0.86600
+2026-04-04 05:01:09,885 - INFO -    Trend: DOWN
+2026-04-04 05:01:09,885 - INFO -    Confidence: 30.0%
+2026-04-04 05:01:09,885 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 05:01:09,885 - INFO -    Price: 0.75600
+2026-04-04 05:01:09,885 - INFO -    Trend: DOWN
+2026-04-04 05:01:09,885 - INFO -    Confidence: 30.0%
+2026-04-04 05:01:09,885 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 05:01:09,886 - INFO -    Price: 0.00627
+2026-04-04 05:01:09,886 - INFO -    Trend: DOWN
+2026-04-04 05:01:09,886 - INFO -    Confidence: 30.0%
+2026-04-04 05:01:09,886 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 05:01:09,886 - INFO -    Price: 1.25156
+2026-04-04 05:01:09,886 - INFO -    Trend: DOWN
+2026-04-04 05:01:09,886 - INFO -    Confidence: 30.0%
+2026-04-04 05:01:09,886 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 05:01:09,886 - INFO -    Price: 1.45000
+2026-04-04 05:01:09,886 - INFO -    Trend: DOWN
+2026-04-04 05:01:09,886 - INFO -    Confidence: 30.0%
+2026-04-04 05:01:09,886 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 05:01:09,886 - INFO -    Mode: PAPER trading
+2026-04-04 05:01:09,886 - INFO -    Balance: $10000.00
+2026-04-04 05:01:09,886 - INFO -    Total Profit: $0.00
+2026-04-04 05:01:09,886 - INFO -    Open Trades: 0
+2026-04-04 05:01:09,886 - INFO -    Closed Trades: 0
+2026-04-04 05:01:09,886 - INFO -    Win Rate: 0.0%
+2026-04-04 05:01:09,886 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 05:01:09,886 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 05:03:10,005 - INFO - 🔍 Forex Scan #26
+2026-04-04 05:03:10,698 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 05:03:10,698 - INFO -    Price: 0.86600
+2026-04-04 05:03:10,698 - INFO -    Trend: DOWN
+2026-04-04 05:03:10,698 - INFO -    Confidence: 30.0%
+2026-04-04 05:03:10,699 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 05:03:10,699 - INFO -    Price: 0.75600
+2026-04-04 05:03:10,699 - INFO -    Trend: DOWN
+2026-04-04 05:03:10,699 - INFO -    Confidence: 30.0%
+2026-04-04 05:03:10,699 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 05:03:10,699 - INFO -    Price: 0.00627
+2026-04-04 05:03:10,699 - INFO -    Trend: DOWN
+2026-04-04 05:03:10,699 - INFO -    Confidence: 30.0%
+2026-04-04 05:03:10,699 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 05:03:10,699 - INFO -    Price: 1.25156
+2026-04-04 05:03:10,699 - INFO -    Trend: DOWN
+2026-04-04 05:03:10,699 - INFO -    Confidence: 30.0%
+2026-04-04 05:03:10,700 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 05:03:10,700 - INFO -    Price: 1.45000
+2026-04-04 05:03:10,700 - INFO -    Trend: DOWN
+2026-04-04 05:03:10,700 - INFO -    Confidence: 30.0%
+2026-04-04 05:03:10,700 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 05:03:10,700 - INFO -    Mode: PAPER trading
+2026-04-04 05:03:10,700 - INFO -    Balance: $10000.00
+2026-04-04 05:03:10,700 - INFO -    Total Profit: $0.00
+2026-04-04 05:03:10,700 - INFO -    Open Trades: 0
+2026-04-04 05:03:10,700 - INFO -    Closed Trades: 0
+2026-04-04 05:03:10,700 - INFO -    Win Rate: 0.0%
+2026-04-04 05:03:10,700 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 05:03:10,701 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 05:05:10,749 - INFO - 🔍 Forex Scan #27
+2026-04-04 05:05:12,969 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 05:05:12,969 - INFO -    Price: 0.86600
+2026-04-04 05:05:12,970 - INFO -    Trend: DOWN
+2026-04-04 05:05:12,970 - INFO -    Confidence: 30.0%
+2026-04-04 05:05:12,970 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 05:05:12,970 - INFO -    Price: 0.75600
+2026-04-04 05:05:12,970 - INFO -    Trend: DOWN
+2026-04-04 05:05:12,970 - INFO -    Confidence: 30.0%
+2026-04-04 05:05:12,970 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 05:05:12,970 - INFO -    Price: 0.00627
+2026-04-04 05:05:12,970 - INFO -    Trend: DOWN
+2026-04-04 05:05:12,970 - INFO -    Confidence: 30.0%
+2026-04-04 05:05:12,971 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 05:05:12,971 - INFO -    Price: 1.25156
+2026-04-04 05:05:12,971 - INFO -    Trend: DOWN
+2026-04-04 05:05:12,971 - INFO -    Confidence: 30.0%
+2026-04-04 05:05:12,971 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 05:05:12,971 - INFO -    Price: 1.45000
+2026-04-04 05:05:12,971 - INFO -    Trend: DOWN
+2026-04-04 05:05:12,971 - INFO -    Confidence: 30.0%
+2026-04-04 05:05:12,971 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 05:05:12,971 - INFO -    Mode: PAPER trading
+2026-04-04 05:05:12,971 - INFO -    Balance: $10000.00
+2026-04-04 05:05:12,971 - INFO -    Total Profit: $0.00
+2026-04-04 05:05:12,971 - INFO -    Open Trades: 0
+2026-04-04 05:05:12,972 - INFO -    Closed Trades: 0
+2026-04-04 05:05:12,972 - INFO -    Win Rate: 0.0%
+2026-04-04 05:05:12,972 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 05:05:12,972 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)
+2026-04-04 05:07:13,009 - INFO - 🔍 Forex Scan #28
+2026-04-04 05:07:13,688 - INFO - 📊 EUR/USD: SELL signal
+2026-04-04 05:07:13,688 - INFO -    Price: 0.86600
+2026-04-04 05:07:13,688 - INFO -    Trend: DOWN
+2026-04-04 05:07:13,688 - INFO -    Confidence: 30.0%
+2026-04-04 05:07:13,688 - INFO - 📊 GBP/USD: SELL signal
+2026-04-04 05:07:13,688 - INFO -    Price: 0.75600
+2026-04-04 05:07:13,688 - INFO -    Trend: DOWN
+2026-04-04 05:07:13,688 - INFO -    Confidence: 30.0%
+2026-04-04 05:07:13,688 - INFO - 📊 USD/JPY: SELL signal
+2026-04-04 05:07:13,688 - INFO -    Price: 0.00627
+2026-04-04 05:07:13,688 - INFO -    Trend: DOWN
+2026-04-04 05:07:13,688 - INFO -    Confidence: 30.0%
+2026-04-04 05:07:13,688 - INFO - 📊 USD/CHF: SELL signal
+2026-04-04 05:07:13,688 - INFO -    Price: 1.25156
+2026-04-04 05:07:13,688 - INFO -    Trend: DOWN
+2026-04-04 05:07:13,688 - INFO -    Confidence: 30.0%
+2026-04-04 05:07:13,688 - INFO - 📊 AUD/USD: SELL signal
+2026-04-04 05:07:13,688 - INFO -    Price: 1.45000
+2026-04-04 05:07:13,688 - INFO -    Trend: DOWN
+2026-04-04 05:07:13,688 - INFO -    Confidence: 30.0%
+2026-04-04 05:07:13,688 - INFO - 📈 PERFORMANCE SUMMARY:
+2026-04-04 05:07:13,688 - INFO -    Mode: PAPER trading
+2026-04-04 05:07:13,688 - INFO -    Balance: $10000.00
+2026-04-04 05:07:13,688 - INFO -    Total Profit: $0.00
+2026-04-04 05:07:13,688 - INFO -    Open Trades: 0
+2026-04-04 05:07:13,688 - INFO -    Closed Trades: 0
+2026-04-04 05:07:13,688 - INFO -    Win Rate: 0.0%
+2026-04-04 05:07:13,688 - INFO - 🚨 SCAN INTERVAL REDUCED FROM 10 MINUTES TO 2 MINUTES!
+2026-04-04 05:07:13,688 - INFO - ⏳ Waiting 2 minutes for next scan... (Was 10 minutes - TOO LONG!)

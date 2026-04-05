@@ -1,0 +1,35 @@
+2026-04-03 17:54:10,026 - INFO - 🚀 NONCE-FIXED BOT STARTED
+2026-04-03 17:54:10,027 - INFO - 💰 YOU HAVE: $572 Gemini + $72 Binance
+2026-04-03 17:54:10,027 - INFO - 🔍 Scan #1
+2026-04-03 17:54:15,764 - ERROR - Gemini error: gemini Nonce '1775213655487' has not increased since your last call to the Gemini API.
+2026-04-03 17:54:17,782 - INFO - 💰 Binance: $0.00
+2026-04-03 17:55:08,573 - INFO - 🔍 Scan #2
+2026-04-03 17:55:10,889 - ERROR - Gemini error: gemini Nonce '1775213710590' has not increased since your last call to the Gemini API.
+2026-04-03 17:55:11,002 - INFO - 💰 Binance: $0.00
+2026-04-03 17:56:02,160 - INFO - 🔍 Scan #3
+2026-04-03 17:56:04,554 - ERROR - Gemini error: gemini Nonce '1775213764235' has not increased since your last call to the Gemini API.
+2026-04-03 17:56:04,682 - INFO - 💰 Binance: $0.00
+2026-04-03 17:56:55,836 - INFO - 🔍 Scan #4
+2026-04-03 17:56:58,194 - ERROR - Gemini error: gemini Nonce '1775213817912' has not increased since your last call to the Gemini API.
+2026-04-03 17:56:58,324 - INFO - 💰 Binance: $0.00
+2026-04-03 17:57:49,176 - INFO - 🔍 Scan #5
+2026-04-03 17:57:51,502 - ERROR - Gemini error: gemini Nonce '1775213871213' has not increased since your last call to the Gemini API.
+2026-04-03 17:57:51,625 - INFO - 💰 Binance: $0.00
+2026-04-03 17:58:42,764 - INFO - 🔍 Scan #6
+2026-04-03 17:58:45,054 - ERROR - Gemini error: gemini Nonce '1775213924774' has not increased since your last call to the Gemini API.
+2026-04-03 17:58:45,184 - INFO - 💰 Binance: $0.00
+2026-04-03 17:59:36,195 - INFO - 🔍 Scan #7
+2026-04-03 17:59:38,572 - ERROR - Gemini error: gemini Nonce '1775213978257' has not increased since your last call to the Gemini API.
+2026-04-03 17:59:38,698 - INFO - 💰 Binance: $0.00
+2026-04-03 18:00:30,158 - INFO - 🔍 Scan #8
+2026-04-03 18:00:32,517 - ERROR - Gemini error: gemini Nonce '1775214032185' has not increased since your last call to the Gemini API.
+2026-04-03 18:00:32,633 - INFO - 💰 Binance: $0.00
+2026-04-03 18:01:23,748 - INFO - 🔍 Scan #9
+2026-04-03 18:01:26,032 - ERROR - Gemini error: gemini Nonce '1775214085756' has not increased since your last call to the Gemini API.
+2026-04-03 18:01:26,155 - INFO - 💰 Binance: $0.00
+2026-04-03 18:02:17,159 - INFO - 🔍 Scan #10
+2026-04-03 18:02:19,434 - ERROR - Gemini error: gemini Nonce '1775214139159' has not increased since your last call to the Gemini API.
+2026-04-03 18:02:19,561 - INFO - 💰 Binance: $0.00
+2026-04-03 18:03:10,497 - INFO - 🔍 Scan #11
+2026-04-03 18:03:12,858 - ERROR - Gemini error: gemini Nonce '1775214192564' has not increased since your last call to the Gemini API.
+2026-04-03 18:03:12,998 - INFO - 💰 Binance: $0.00

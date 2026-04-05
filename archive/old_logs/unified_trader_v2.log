@@ -1,0 +1,71 @@
+2026-04-02 20:23:57,185 - INFO - ======================================================================
+2026-04-02 20:23:57,185 - INFO - 🚀 UNIFIED LLM-POWERED TRADING BOT
+2026-04-02 20:23:57,185 - INFO - ======================================================================
+2026-04-02 20:23:57,185 - INFO - 🤖 Combining rule-based signals with LLM decision making
+2026-04-02 20:23:57,185 - INFO - ♊ Gemini LONG: 16 cryptos with LLM confirmation
+2026-04-02 20:23:57,185 - INFO - ₿ Binance SHORT: 26 cryptos with LLM confirmation
+2026-04-02 20:23:57,185 - INFO - 💰 Capital: Gemini $393.22, Binance $262.14
+2026-04-02 20:23:57,185 - INFO - 🎯 Position size: 10% of capital
+2026-04-02 20:23:57,185 - INFO - 📈 LONG threshold: 1.0% drop
+2026-04-02 20:23:57,185 - INFO - 📉 SHORT threshold: 1.0% drop
+2026-04-02 20:23:57,185 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-04-02 20:23:57,185 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-02 20:23:57,185 - INFO - 🧠 LLM Models: deepseek-r1, qwen3, mistral, llama3.2, gemma2
+2026-04-02 20:23:57,185 - INFO - ======================================================================
+2026-04-02 20:23:57,186 - INFO - ✅ API keys loaded
+2026-04-02 20:23:57,191 - INFO - ✅ Exchanges initialized
+2026-04-02 20:23:57,199 - INFO - ✅ Ollama available with 9 models
+2026-04-02 20:23:57,199 - INFO -    ✓ deepseek-r1 available
+2026-04-02 20:23:57,199 - INFO -    ✓ qwen3 available
+2026-04-02 20:23:57,199 - INFO -    ✓ mistral available
+2026-04-02 20:23:57,199 - WARNING -    ⚠️ llama3.2 not available
+2026-04-02 20:23:57,199 - WARNING -    ⚠️ gemma2 not available
+2026-04-02 20:23:57,199 - INFO - 
+======================================================================
+2026-04-02 20:23:57,199 - INFO - 🎯 STARTING TRADING CYCLES
+2026-04-02 20:23:57,199 - INFO - ======================================================================
+2026-04-02 20:23:57,199 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 20:23:57,199 - INFO - ======================================================================
+2026-04-02 20:23:57,199 - INFO - 📊 UNIFIED LLM TRADING CYCLE - 20:23:57
+2026-04-02 20:23:57,199 - INFO - ======================================================================
+2026-04-02 20:23:57,199 - INFO - 🔍 Checking Gemini for LONG opportunities...
+2026-04-02 20:24:04,987 - INFO - ⚠️ CONFLICT: BTC - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:08,856 - INFO - ⚠️ CONFLICT: ETH - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:12,655 - INFO - ⚠️ CONFLICT: SOL - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:12,656 - WARNING - Could not calculate 24h change for ADA/USD: gemini does not have market symbol ADA/USD
+2026-04-02 20:24:16,464 - INFO - ⚠️ CONFLICT: DOT - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:20,402 - INFO - ⚠️ CONFLICT: XRP - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:24,320 - INFO - ⚠️ CONFLICT: DOGE - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:28,151 - INFO - ⚠️ CONFLICT: LTC - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:31,980 - INFO - ⚠️ CONFLICT: UNI - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:35,808 - INFO - ⚠️ CONFLICT: LINK - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:35,808 - WARNING - Could not calculate 24h change for MATIC/USD: gemini does not have market symbol MATIC/USD
+2026-04-02 20:24:39,673 - INFO - ⚠️ CONFLICT: AVAX - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:43,520 - INFO - ⚠️ CONFLICT: ATOM - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:43,520 - WARNING - Could not calculate 24h change for ALGO/USD: gemini does not have market symbol ALGO/USD
+2026-04-02 20:24:47,441 - INFO - ⚠️ CONFLICT: FIL - Rule says LONG, LLM says HOLD
+2026-04-02 20:24:47,441 - WARNING - Could not calculate 24h change for ETC/USD: gemini does not have market symbol ETC/USD
+2026-04-02 20:24:47,441 - INFO - 🔍 Checking Binance for SHORT opportunities...
+2026-04-02 20:24:53,301 - INFO - ⚠️ CONFLICT: BTC - Rule says SHORT, LLM says HOLD
+2026-04-02 20:24:57,068 - INFO - ⚠️ CONFLICT: ETH - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:00,847 - INFO - ⚠️ CONFLICT: SOL - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:04,623 - INFO - ⚠️ CONFLICT: ADA - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:08,592 - INFO - ⚠️ CONFLICT: DOT - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:12,388 - INFO - ⚠️ CONFLICT: XRP - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:16,203 - INFO - ⚠️ CONFLICT: DOGE - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:19,986 - INFO - ⚠️ CONFLICT: LTC - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:23,792 - INFO - ⚠️ CONFLICT: UNI - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:27,611 - INFO - ⚠️ CONFLICT: LINK - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:27,726 - WARNING - Could not calculate 24h change for MATIC/USDT: binance does not have market symbol MATIC/USDT
+2026-04-02 20:25:31,582 - INFO - ⚠️ CONFLICT: AVAX - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:35,368 - INFO - ⚠️ CONFLICT: ATOM - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:39,173 - INFO - ⚠️ CONFLICT: ALGO - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:42,972 - INFO - ⚠️ CONFLICT: FIL - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:46,756 - INFO - ⚠️ CONFLICT: ETC - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:50,539 - INFO - ⚠️ CONFLICT: XTZ - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:50,654 - WARNING - Could not calculate 24h change for EOS/USDT: binance does not have market symbol EOS/USDT
+2026-04-02 20:25:54,440 - INFO - ⚠️ CONFLICT: AAVE - Rule says SHORT, LLM says HOLD
+2026-04-02 20:25:58,235 - INFO - ⚠️ CONFLICT: COMP - Rule says SHORT, LLM says HOLD
+2026-04-02 20:26:05,835 - INFO - ⚠️ CONFLICT: SNX - Rule says SHORT, LLM says HOLD
+2026-04-02 20:26:09,716 - INFO - ⚠️ CONFLICT: YFI - Rule says SHORT, LLM says HOLD

@@ -1,0 +1,80 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+🚀 UPDATED TRADING SERVER STARTING...
+   • Port: 5001
+   • Uses: Common Library (REAL data)
+   • Shows: Current P&L, SHORT trades status, Capital allocation
+   • Access: http://localhost:5001/
+
+ * Serving Flask app 'updated_trading_server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.63:5001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/Apr/2026 02:03:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:03:46] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:03:53] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:04:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:04:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:04:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:04:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:04:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:04:42] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:06:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:06:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:06:47] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:09:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:09:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:09:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:09:40] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:10:30] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:10:39] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:10:45] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:11:02] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:11:39] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:11:52] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:12:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:12:42] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:13:13] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:13:18] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:13:36] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:14:02] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:14:08] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:15:56] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:15:56] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:15:56] "GET /api/pnl HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:15:56] "GET /api/capital HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:28] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:36] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:37] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:19:38] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:20:43] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:06] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:52] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:21:56] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:22:05] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:22:24] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:24:53] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:25:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:25:56] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:25:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:27:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:27:15] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:27:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:27:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:27:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:29:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:29:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:30:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:31:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:31:01] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:31:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:31:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:31:15] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:32:04] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:33:17] "[33mGET /status HTTP/1.1[0m" 404 -
+127.0.0.1 - - [01/Apr/2026 02:33:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:33:33] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [01/Apr/2026 02:33:34] "GET /api/data HTTP/1.1" 200 -

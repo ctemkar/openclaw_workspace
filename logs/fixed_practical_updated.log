@@ -1,0 +1,514 @@
+2026-04-05 16:35:07,297 - INFO - 🚀 FIXED PRACTICAL PROFIT BOT STARTING
+2026-04-05 16:35:07,297 - INFO - 💰 Fixed MANA issue - Makes REAL money with what WORKS!
+2026-04-05 16:35:07,297 - ERROR - Error loading keys: [Errno 2] No such file or directory: '.env'
+2026-04-05 16:35:07,302 - INFO - 📊 Fixed Trading:
+2026-04-05 16:35:07,302 - INFO -    Trade %: 25.0% of MANA
+2026-04-05 16:35:07,302 - INFO -    Min profit: $0.15
+2026-04-05 16:35:07,302 - INFO - ============================================================
+2026-04-05 16:35:07,302 - INFO - 🚀 FIXED PRACTICAL PROFIT BOT - MAKING REAL MONEY
+2026-04-05 16:35:07,302 - INFO - ============================================================
+2026-04-05 16:35:07,302 - INFO - 💰 USING WHAT WORKS:
+2026-04-05 16:35:07,302 - INFO -     • Gemini PUBLIC API for prices
+2026-04-05 16:35:07,302 - INFO -     • Binance for trading
+2026-04-05 16:35:07,302 - INFO -     • Your MANA for profit
+2026-04-05 16:35:07,302 - INFO - ============================================================
+2026-04-05 16:35:07,302 - INFO - 🔍 Fixed Practical Scan #1
+2026-04-05 16:35:08,507 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:35:08,507 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:35:08,507 - INFO -     ⏳ Waiting 39 seconds...
+2026-04-05 16:35:47,629 - INFO - 🔍 Fixed Practical Scan #2
+2026-04-05 16:35:47,629 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:35:47,629 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:35:47,629 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 16:36:33,779 - INFO - 🔍 Fixed Practical Scan #3
+2026-04-05 16:36:33,780 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:36:33,780 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:36:33,780 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 16:37:33,881 - INFO - 🔍 Fixed Practical Scan #4
+2026-04-05 16:37:33,882 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:37:33,882 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:37:33,882 - INFO -     ⏳ Waiting 35 seconds...
+2026-04-05 16:38:09,030 - INFO - 🔍 Fixed Practical Scan #5
+2026-04-05 16:38:09,030 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:38:09,030 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:38:09,031 - INFO -     ⏳ Waiting 33 seconds...
+2026-04-05 16:38:42,110 - INFO - 🔍 Fixed Practical Scan #6
+2026-04-05 16:38:42,111 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:38:42,111 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:38:42,111 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 16:39:33,253 - INFO - 🔍 Fixed Practical Scan #7
+2026-04-05 16:39:33,254 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:39:33,254 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:39:33,254 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 16:40:33,316 - INFO - 🔍 Fixed Practical Scan #8
+2026-04-05 16:40:33,317 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:40:33,317 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:40:33,317 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 16:41:21,384 - INFO - 🔍 Fixed Practical Scan #9
+2026-04-05 16:41:21,384 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:41:21,384 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:41:21,384 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 16:42:19,534 - INFO - 🔍 Fixed Practical Scan #10
+2026-04-05 16:42:19,535 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:42:19,535 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:42:19,535 - INFO -     ⏳ Waiting 56 seconds...
+2026-04-05 16:43:15,657 - INFO - 🔍 Fixed Practical Scan #11
+2026-04-05 16:43:15,657 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:43:15,657 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:43:15,657 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 16:44:13,707 - INFO - 🔍 Fixed Practical Scan #12
+2026-04-05 16:44:13,707 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:44:13,707 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:44:13,707 - INFO -     ⏳ Waiting 47 seconds...
+2026-04-05 16:45:00,736 - INFO - 🔍 Fixed Practical Scan #13
+2026-04-05 16:45:00,736 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:45:00,736 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:45:00,736 - INFO -     ⏳ Waiting 45 seconds...
+2026-04-05 16:45:45,787 - INFO - 🔍 Fixed Practical Scan #14
+2026-04-05 16:45:45,787 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:45:45,788 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:45:45,788 - INFO -     ⏳ Waiting 49 seconds...
+2026-04-05 16:46:34,852 - INFO - 🔍 Fixed Practical Scan #15
+2026-04-05 16:46:34,852 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:46:34,852 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:46:34,852 - INFO -     ⏳ Waiting 43 seconds...
+2026-04-05 16:47:17,911 - INFO - 🔍 Fixed Practical Scan #16
+2026-04-05 16:47:17,912 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:47:17,912 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:47:17,912 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 16:48:14,988 - INFO - 🔍 Fixed Practical Scan #17
+2026-04-05 16:48:14,988 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:48:14,989 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:48:14,989 - INFO -     ⏳ Waiting 45 seconds...
+2026-04-05 16:49:00,024 - INFO - 🔍 Fixed Practical Scan #18
+2026-04-05 16:49:00,025 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:49:00,025 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:49:00,025 - INFO -     ⏳ Waiting 34 seconds...
+2026-04-05 16:49:34,100 - INFO - 🔍 Fixed Practical Scan #19
+2026-04-05 16:49:34,101 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:49:34,101 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:49:34,101 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 16:50:28,251 - INFO - 🔍 Fixed Practical Scan #20
+2026-04-05 16:50:28,252 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:50:28,252 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:50:28,252 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 16:51:22,387 - INFO - 🔍 Fixed Practical Scan #21
+2026-04-05 16:51:22,387 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:51:22,388 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:51:22,388 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 16:52:00,494 - INFO - 🔍 Fixed Practical Scan #22
+2026-04-05 16:52:00,495 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:52:00,495 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:52:00,495 - INFO -     ⏳ Waiting 32 seconds...
+2026-04-05 16:52:32,570 - INFO - 🔍 Fixed Practical Scan #23
+2026-04-05 16:52:32,571 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:52:32,571 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:52:32,571 - INFO -     ⏳ Waiting 52 seconds...
+2026-04-05 16:53:24,668 - INFO - 🔍 Fixed Practical Scan #24
+2026-04-05 16:53:24,669 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:53:24,669 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:53:24,669 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 16:54:24,781 - INFO - 🔍 Fixed Practical Scan #25
+2026-04-05 16:54:24,782 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:54:24,782 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:54:24,782 - INFO -     ⏳ Waiting 45 seconds...
+2026-04-05 16:55:09,792 - INFO - 🔍 Fixed Practical Scan #26
+2026-04-05 16:55:09,792 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:55:09,792 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:55:09,792 - INFO -     ⏳ Waiting 40 seconds...
+2026-04-05 16:55:49,866 - INFO - 🔍 Fixed Practical Scan #27
+2026-04-05 16:55:49,867 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:55:49,867 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:55:49,867 - INFO -     ⏳ Waiting 32 seconds...
+2026-04-05 16:56:22,017 - INFO - 🔍 Fixed Practical Scan #28
+2026-04-05 16:56:22,018 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:56:22,018 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:56:22,019 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 16:57:16,145 - INFO - 🔍 Fixed Practical Scan #29
+2026-04-05 16:57:16,146 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:57:16,146 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:57:16,146 - INFO -     ⏳ Waiting 33 seconds...
+2026-04-05 16:57:49,270 - INFO - 🔍 Fixed Practical Scan #30
+2026-04-05 16:57:49,271 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:57:49,271 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:57:49,271 - INFO -     ⏳ Waiting 56 seconds...
+2026-04-05 16:58:45,410 - INFO - 🔍 Fixed Practical Scan #31
+2026-04-05 16:58:45,410 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:58:45,410 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:58:45,410 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 16:59:23,554 - INFO - 🔍 Fixed Practical Scan #32
+2026-04-05 16:59:23,554 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 16:59:23,554 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 16:59:23,554 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:00:07,698 - INFO - 🔍 Fixed Practical Scan #33
+2026-04-05 17:00:07,699 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:00:07,699 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:00:07,699 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:00:49,844 - INFO - 🔍 Fixed Practical Scan #34
+2026-04-05 17:00:49,845 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:00:49,845 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:00:49,845 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 17:01:46,967 - INFO - 🔍 Fixed Practical Scan #35
+2026-04-05 17:01:46,968 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:01:46,968 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:01:46,968 - INFO -     ⏳ Waiting 30 seconds...
+2026-04-05 17:02:17,111 - INFO - 🔍 Fixed Practical Scan #36
+2026-04-05 17:02:17,111 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:02:17,111 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:02:17,111 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:03:08,120 - INFO - 🔍 Fixed Practical Scan #37
+2026-04-05 17:03:08,121 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:03:08,121 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:03:08,121 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:03:56,239 - INFO - 🔍 Fixed Practical Scan #38
+2026-04-05 17:03:56,240 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:03:56,240 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:03:56,240 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:04:40,348 - INFO - 🔍 Fixed Practical Scan #39
+2026-04-05 17:04:40,349 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:04:40,349 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:04:40,349 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 17:05:26,496 - INFO - 🔍 Fixed Practical Scan #40
+2026-04-05 17:05:26,497 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:05:26,497 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:05:26,497 - INFO -     ⏳ Waiting 55 seconds...
+2026-04-05 17:06:21,596 - INFO - 🔍 Fixed Practical Scan #41
+2026-04-05 17:06:21,597 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:06:21,597 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:06:21,597 - INFO -     ⏳ Waiting 50 seconds...
+2026-04-05 17:07:11,651 - INFO - 🔍 Fixed Practical Scan #42
+2026-04-05 17:07:11,652 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:07:11,652 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:07:11,653 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 17:08:05,771 - INFO - 🔍 Fixed Practical Scan #43
+2026-04-05 17:08:05,771 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:08:05,771 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:08:05,771 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:08:56,871 - INFO - 🔍 Fixed Practical Scan #44
+2026-04-05 17:08:56,871 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:08:56,872 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:08:56,872 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 17:09:56,981 - INFO - 🔍 Fixed Practical Scan #45
+2026-04-05 17:09:56,982 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:09:56,982 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:09:56,982 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:10:48,058 - INFO - 🔍 Fixed Practical Scan #46
+2026-04-05 17:10:48,059 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:10:48,059 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:10:48,059 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:11:30,194 - INFO - 🔍 Fixed Practical Scan #47
+2026-04-05 17:11:30,195 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:11:30,195 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:11:30,195 - INFO -     ⏳ Waiting 33 seconds...
+2026-04-05 17:12:03,341 - INFO - 🔍 Fixed Practical Scan #48
+2026-04-05 17:12:03,342 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:12:03,342 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:12:03,342 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 17:12:49,490 - INFO - 🔍 Fixed Practical Scan #49
+2026-04-05 17:12:49,491 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:12:49,491 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:12:49,491 - INFO -     ⏳ Waiting 50 seconds...
+2026-04-05 17:13:39,606 - INFO - 🔍 Fixed Practical Scan #50
+2026-04-05 17:13:39,607 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:13:39,607 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:13:39,607 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 17:14:36,638 - INFO - 🔍 Fixed Practical Scan #51
+2026-04-05 17:14:36,640 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:14:36,640 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:14:36,640 - INFO -     ⏳ Waiting 40 seconds...
+2026-04-05 17:15:16,775 - INFO - 🔍 Fixed Practical Scan #52
+2026-04-05 17:15:16,776 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:15:16,776 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:15:16,776 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:16:04,907 - INFO - 🔍 Fixed Practical Scan #53
+2026-04-05 17:16:04,907 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:16:04,908 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:16:04,908 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 17:17:03,019 - INFO - 🔍 Fixed Practical Scan #54
+2026-04-05 17:17:03,020 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:17:03,020 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:17:03,020 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:17:45,169 - INFO - 🔍 Fixed Practical Scan #55
+2026-04-05 17:17:45,170 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:17:45,171 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:17:45,171 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 17:18:31,255 - INFO - 🔍 Fixed Practical Scan #56
+2026-04-05 17:18:31,256 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:18:31,256 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:18:31,256 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 17:19:17,407 - INFO - 🔍 Fixed Practical Scan #57
+2026-04-05 17:19:17,409 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:19:17,409 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:19:17,409 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 17:20:11,549 - INFO - 🔍 Fixed Practical Scan #58
+2026-04-05 17:20:11,550 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:20:11,550 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:20:11,550 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 17:20:49,677 - INFO - 🔍 Fixed Practical Scan #59
+2026-04-05 17:20:49,678 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:20:49,678 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:20:49,678 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:21:31,801 - INFO - 🔍 Fixed Practical Scan #60
+2026-04-05 17:21:31,802 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:21:31,802 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:21:31,802 - INFO -     ⏳ Waiting 30 seconds...
+2026-04-05 17:22:01,876 - INFO - 🔍 Fixed Practical Scan #61
+2026-04-05 17:22:01,877 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:22:01,877 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:22:01,877 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 17:23:02,025 - INFO - 🔍 Fixed Practical Scan #62
+2026-04-05 17:23:02,026 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:23:02,026 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:23:02,026 - INFO -     ⏳ Waiting 35 seconds...
+2026-04-05 17:23:37,172 - INFO - 🔍 Fixed Practical Scan #63
+2026-04-05 17:23:37,172 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:23:37,172 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:23:37,172 - INFO -     ⏳ Waiting 31 seconds...
+2026-04-05 17:24:08,191 - INFO - 🔍 Fixed Practical Scan #64
+2026-04-05 17:24:08,191 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:24:08,191 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:24:08,191 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:24:50,343 - INFO - 🔍 Fixed Practical Scan #65
+2026-04-05 17:24:50,344 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:24:50,344 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:24:50,344 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:25:34,483 - INFO - 🔍 Fixed Practical Scan #66
+2026-04-05 17:25:34,484 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:25:34,484 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:25:34,484 - INFO -     ⏳ Waiting 43 seconds...
+2026-04-05 17:26:17,632 - INFO - 🔍 Fixed Practical Scan #67
+2026-04-05 17:26:17,633 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:26:17,633 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:26:17,633 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 17:26:55,757 - INFO - 🔍 Fixed Practical Scan #68
+2026-04-05 17:26:55,757 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:26:55,758 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:26:55,758 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 17:27:41,890 - INFO - 🔍 Fixed Practical Scan #69
+2026-04-05 17:27:41,890 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:27:41,890 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:27:41,891 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:28:29,907 - INFO - 🔍 Fixed Practical Scan #70
+2026-04-05 17:28:29,908 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:28:29,908 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:28:29,908 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:29:20,969 - INFO - 🔍 Fixed Practical Scan #71
+2026-04-05 17:29:20,970 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:29:20,970 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:29:20,970 - INFO -     ⏳ Waiting 36 seconds...
+2026-04-05 17:29:57,067 - INFO - 🔍 Fixed Practical Scan #72
+2026-04-05 17:29:57,068 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:29:57,068 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:29:57,068 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 17:30:50,122 - INFO - 🔍 Fixed Practical Scan #73
+2026-04-05 17:30:50,122 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:30:50,123 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:30:50,123 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 17:31:28,209 - INFO - 🔍 Fixed Practical Scan #74
+2026-04-05 17:31:28,210 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:31:28,210 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:31:28,210 - INFO -     ⏳ Waiting 45 seconds...
+2026-04-05 17:32:13,360 - INFO - 🔍 Fixed Practical Scan #75
+2026-04-05 17:32:13,361 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:32:13,361 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:32:13,361 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 17:33:10,512 - INFO - 🔍 Fixed Practical Scan #76
+2026-04-05 17:33:10,512 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:33:10,513 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:33:10,513 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:34:01,663 - INFO - 🔍 Fixed Practical Scan #77
+2026-04-05 17:34:01,663 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:34:01,663 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:34:01,663 - INFO -     ⏳ Waiting 59 seconds...
+2026-04-05 17:35:00,814 - INFO - 🔍 Fixed Practical Scan #78
+2026-04-05 17:35:00,816 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:35:00,816 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:35:00,816 - INFO -     ⏳ Waiting 49 seconds...
+2026-04-05 17:35:49,957 - INFO - 🔍 Fixed Practical Scan #79
+2026-04-05 17:35:49,957 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:35:49,957 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:35:49,958 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:36:34,051 - INFO - 🔍 Fixed Practical Scan #80
+2026-04-05 17:36:34,051 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:36:34,051 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:36:34,052 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:37:18,197 - INFO - 🔍 Fixed Practical Scan #81
+2026-04-05 17:37:18,197 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:37:18,198 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:37:18,198 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 17:38:11,347 - INFO - 🔍 Fixed Practical Scan #82
+2026-04-05 17:38:11,347 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:38:11,347 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:38:11,348 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:38:59,446 - INFO - 🔍 Fixed Practical Scan #83
+2026-04-05 17:38:59,447 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:38:59,447 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:38:59,447 - INFO -     ⏳ Waiting 35 seconds...
+2026-04-05 17:39:34,588 - INFO - 🔍 Fixed Practical Scan #84
+2026-04-05 17:39:34,588 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:39:34,589 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:39:34,589 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:40:18,698 - INFO - 🔍 Fixed Practical Scan #85
+2026-04-05 17:40:18,699 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:40:18,699 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:40:18,699 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 17:41:11,802 - INFO - 🔍 Fixed Practical Scan #86
+2026-04-05 17:41:11,803 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:41:11,803 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:41:11,803 - INFO -     ⏳ Waiting 36 seconds...
+2026-04-05 17:41:47,948 - INFO - 🔍 Fixed Practical Scan #87
+2026-04-05 17:41:47,949 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:41:47,949 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:41:47,949 - INFO -     ⏳ Waiting 47 seconds...
+2026-04-05 17:42:35,076 - INFO - 🔍 Fixed Practical Scan #88
+2026-04-05 17:42:35,076 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:42:35,076 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:42:35,076 - INFO -     ⏳ Waiting 32 seconds...
+2026-04-05 17:43:07,198 - INFO - 🔍 Fixed Practical Scan #89
+2026-04-05 17:43:07,199 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:43:07,199 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:43:07,199 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:43:55,345 - INFO - 🔍 Fixed Practical Scan #90
+2026-04-05 17:43:55,346 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:43:55,346 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:43:55,346 - INFO -     ⏳ Waiting 55 seconds...
+2026-04-05 17:44:50,462 - INFO - 🔍 Fixed Practical Scan #91
+2026-04-05 17:44:50,462 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:44:50,462 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:44:50,463 - INFO -     ⏳ Waiting 56 seconds...
+2026-04-05 17:45:46,591 - INFO - 🔍 Fixed Practical Scan #92
+2026-04-05 17:45:46,592 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:45:46,592 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:45:46,592 - INFO -     ⏳ Waiting 35 seconds...
+2026-04-05 17:46:21,720 - INFO - 🔍 Fixed Practical Scan #93
+2026-04-05 17:46:21,721 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:46:21,721 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:46:21,721 - INFO -     ⏳ Waiting 52 seconds...
+2026-04-05 17:47:13,771 - INFO - 🔍 Fixed Practical Scan #94
+2026-04-05 17:47:13,772 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:47:13,772 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:47:13,772 - INFO -     ⏳ Waiting 48 seconds...
+2026-04-05 17:48:01,906 - INFO - 🔍 Fixed Practical Scan #95
+2026-04-05 17:48:01,907 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:48:01,907 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:48:01,907 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 17:49:00,028 - INFO - 🔍 Fixed Practical Scan #96
+2026-04-05 17:49:00,029 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:49:00,029 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:49:00,029 - INFO -     ⏳ Waiting 44 seconds...
+2026-04-05 17:49:44,170 - INFO - 🔍 Fixed Practical Scan #97
+2026-04-05 17:49:44,171 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:49:44,171 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:49:44,171 - INFO -     ⏳ Waiting 51 seconds...
+2026-04-05 17:50:35,311 - INFO - 🔍 Fixed Practical Scan #98
+2026-04-05 17:50:35,312 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:50:35,312 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:50:35,312 - INFO -     ⏳ Waiting 42 seconds...
+2026-04-05 17:51:17,455 - INFO - 🔍 Fixed Practical Scan #99
+2026-04-05 17:51:17,456 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:51:17,457 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:51:17,457 - INFO -     ⏳ Waiting 31 seconds...
+2026-04-05 17:51:48,527 - INFO - 🔍 Fixed Practical Scan #100
+2026-04-05 17:51:48,528 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:51:48,528 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:51:48,528 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 17:52:41,577 - INFO - 🔍 Fixed Practical Scan #101
+2026-04-05 17:52:41,577 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:52:41,578 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:52:41,578 - INFO -     ⏳ Waiting 31 seconds...
+2026-04-05 17:53:12,626 - INFO - 🔍 Fixed Practical Scan #102
+2026-04-05 17:53:12,626 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:53:12,626 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:53:12,627 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 17:54:10,648 - INFO - 🔍 Fixed Practical Scan #103
+2026-04-05 17:54:10,648 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:54:10,648 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:54:10,648 - INFO -     ⏳ Waiting 41 seconds...
+2026-04-05 17:54:51,653 - INFO - 🔍 Fixed Practical Scan #104
+2026-04-05 17:54:51,653 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:54:51,653 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:54:51,653 - INFO -     ⏳ Waiting 60 seconds...
+2026-04-05 17:55:51,645 - INFO - 🔍 Fixed Practical Scan #105
+2026-04-05 17:55:51,646 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:55:51,646 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:55:51,646 - INFO -     ⏳ Waiting 38 seconds...
+2026-04-05 17:56:29,698 - INFO - 🔍 Fixed Practical Scan #106
+2026-04-05 17:56:29,699 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:56:29,699 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:56:29,699 - INFO -     ⏳ Waiting 39 seconds...
+2026-04-05 17:57:08,713 - INFO - 🔍 Fixed Practical Scan #107
+2026-04-05 17:57:08,714 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:57:08,714 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:57:08,714 - INFO -     ⏳ Waiting 43 seconds...
+2026-04-05 17:57:51,781 - INFO - 🔍 Fixed Practical Scan #108
+2026-04-05 17:57:51,781 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:57:51,781 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:57:51,782 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 17:58:48,848 - INFO - 🔍 Fixed Practical Scan #109
+2026-04-05 17:58:48,848 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:58:48,848 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:58:48,849 - INFO -     ⏳ Waiting 58 seconds...
+2026-04-05 17:59:46,986 - INFO - 🔍 Fixed Practical Scan #110
+2026-04-05 17:59:46,987 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 17:59:46,987 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 17:59:46,987 - INFO -     ⏳ Waiting 32 seconds...
+2026-04-05 18:00:19,121 - INFO - 🔍 Fixed Practical Scan #111
+2026-04-05 18:00:19,121 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:00:19,121 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:00:19,121 - INFO -     ⏳ Waiting 37 seconds...
+2026-04-05 18:00:56,238 - INFO - 🔍 Fixed Practical Scan #112
+2026-04-05 18:00:56,239 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:00:56,239 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:00:56,239 - INFO -     ⏳ Waiting 30 seconds...
+2026-04-05 18:01:26,370 - INFO - 🔍 Fixed Practical Scan #113
+2026-04-05 18:01:26,370 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:01:26,370 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:01:26,370 - INFO -     ⏳ Waiting 46 seconds...
+2026-04-05 18:02:12,520 - INFO - 🔍 Fixed Practical Scan #114
+2026-04-05 18:02:12,521 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:02:12,521 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:02:12,521 - INFO -     ⏳ Waiting 34 seconds...
+2026-04-05 18:02:46,618 - INFO - 🔍 Fixed Practical Scan #115
+2026-04-05 18:02:46,619 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:02:46,619 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:02:46,619 - INFO -     ⏳ Waiting 54 seconds...
+2026-04-05 18:03:40,670 - INFO - 🔍 Fixed Practical Scan #116
+2026-04-05 18:03:40,671 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:03:40,671 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:03:40,671 - INFO -     ⏳ Waiting 52 seconds...
+2026-04-05 18:04:32,813 - INFO - 🔍 Fixed Practical Scan #117
+2026-04-05 18:04:32,814 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:04:32,814 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:04:32,814 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 18:05:25,912 - INFO - 🔍 Fixed Practical Scan #118
+2026-04-05 18:05:25,913 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:05:25,913 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:05:25,913 - INFO -     ⏳ Waiting 57 seconds...
+2026-04-05 18:06:23,037 - INFO - 🔍 Fixed Practical Scan #119
+2026-04-05 18:06:23,038 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:06:23,038 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:06:23,038 - INFO -     ⏳ Waiting 52 seconds...
+2026-04-05 18:07:15,155 - INFO - 🔍 Fixed Practical Scan #120
+2026-04-05 18:07:15,156 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:07:15,156 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:07:15,156 - INFO -     ⏳ Waiting 53 seconds...
+2026-04-05 18:08:08,259 - INFO - 🔍 Fixed Practical Scan #121
+2026-04-05 18:08:08,260 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:08:08,260 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:08:08,260 - INFO -     ⏳ Waiting 41 seconds...
+2026-04-05 18:08:49,279 - INFO - 🔍 Fixed Practical Scan #122
+2026-04-05 18:08:49,280 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:08:49,280 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:08:49,280 - INFO -     ⏳ Waiting 37 seconds...
+2026-04-05 18:09:26,282 - INFO - 🔍 Fixed Practical Scan #123
+2026-04-05 18:09:26,283 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:09:26,283 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:09:26,283 - INFO -     ⏳ Waiting 52 seconds...
+2026-04-05 18:10:18,330 - INFO - 🔍 Fixed Practical Scan #124
+2026-04-05 18:10:18,331 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:10:18,331 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:10:18,331 - INFO -     ⏳ Waiting 35 seconds...
+2026-04-05 18:10:53,393 - INFO - 🔍 Fixed Practical Scan #125
+2026-04-05 18:10:53,393 - ERROR - ❌ Asset check error: binance requires "apiKey" credential
+2026-04-05 18:10:53,393 - INFO -     ⏳ Spread: 0.00% (monitoring)
+2026-04-05 18:10:53,394 - INFO -     ⏳ Waiting 60 seconds...

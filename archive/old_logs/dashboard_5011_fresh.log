@@ -1,0 +1,18 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Serving Flask app 'trades_dashboard_fixed'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5011
+ * Running on http://192.168.1.63:5011
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Apr/2026 01:49:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:49:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:49:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:50:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:51:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:51:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [02/Apr/2026 01:52:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:52:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [02/Apr/2026 01:53:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 01:53:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

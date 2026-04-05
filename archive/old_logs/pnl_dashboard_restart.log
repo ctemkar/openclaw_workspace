@@ -1,0 +1,24 @@
+🚀 STARTING SIMPLE P&L DASHBOARD
+   • Port: 5008
+   • Shows: P&L information as requested
+   • Priority: Cumulative P&L first
+   • Clear: SHORT trades status shown
+   • Access: http://localhost:5008/
+
+ * Serving Flask app 'simple_pnl_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.63:5008
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Apr/2026 13:40:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 13:53:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 13:53:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:12:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:12:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:12:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:40:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:54:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:55:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 15:55:39] "GET / HTTP/1.1" 200 -

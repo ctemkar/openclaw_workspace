@@ -1,0 +1,482 @@
+2026-04-03 23:39:29,743 - INFO - 🚀 AUTOMATED SYSTEM MONITOR INITIALIZED
+2026-04-03 23:39:29,743 - INFO - 📊 Monitoring 7 systems
+2026-04-03 23:39:29,743 - INFO - ⏰ Check interval: 60 seconds
+2026-04-03 23:39:29,743 - INFO - 🎯 I will proactively alert you if anything stops!
+2026-04-03 23:39:29,743 - INFO - 🔄 Starting proactive monitoring...
+2026-04-03 23:39:29,744 - INFO - 
+=== MONITOR CHECK #1 at 23:39:29 ===
+2026-04-03 23:39:30,951 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:39:31,226 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:39:31,265 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:39:31,304 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:39:31,335 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:39:31,373 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:39:31,408 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:39:31,408 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:39:31,408 - INFO - ⏰ Next automatic check at: 23:40:31
+2026-04-03 23:40:32,949 - INFO - 
+=== MONITOR CHECK #2 at 23:40:31 ===
+2026-04-03 23:40:38,524 - ERROR - Arbitration Dashboard: ❌ STOPPED (Port 5020 not responding)
+2026-04-03 23:40:38,583 - ERROR - 🚨 ALERT SENT: Arbitration Dashboard
+2026-04-03 23:40:38,682 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:40:38,716 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:40:38,749 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:40:38,783 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:40:38,817 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:40:38,851 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:40:38,851 - WARNING - ⚠️  SOME SYSTEMS NEED ATTENTION
+2026-04-03 23:40:38,851 - INFO - ⏰ Next automatic check at: 23:41:38
+2026-04-03 23:41:38,930 - INFO - 
+=== MONITOR CHECK #3 at 23:41:38 ===
+2026-04-03 23:41:39,156 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:41:39,215 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:41:39,239 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:41:39,264 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:41:39,288 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:41:39,322 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:41:39,350 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:41:39,350 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:41:39,350 - INFO - ⏰ Next automatic check at: 23:42:39
+2026-04-03 23:42:39,426 - INFO - 
+=== MONITOR CHECK #4 at 23:42:39 ===
+2026-04-03 23:42:39,624 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:42:39,683 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:42:39,715 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:42:39,741 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:42:39,766 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:42:39,790 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:42:39,815 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:42:39,815 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:42:39,815 - INFO - ⏰ Next automatic check at: 23:43:39
+2026-04-03 23:43:21,809 - INFO - 🚀 AUTOMATED SYSTEM MONITOR INITIALIZED
+2026-04-03 23:43:21,809 - INFO - 📊 Monitoring 7 systems
+2026-04-03 23:43:21,810 - INFO - ⏰ Check interval: 60 seconds
+2026-04-03 23:43:21,810 - INFO - 🎯 I will proactively alert you if anything stops!
+2026-04-03 23:43:21,810 - INFO - 🔄 Starting proactive monitoring...
+2026-04-03 23:43:21,810 - INFO - 
+=== MONITOR CHECK #1 at 23:43:21 ===
+2026-04-03 23:43:22,002 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:43:22,072 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:43:22,102 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:43:22,130 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:43:22,159 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:43:22,190 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:43:22,218 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:43:22,218 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:43:22,218 - INFO - ⏰ Next automatic check at: 23:44:22
+2026-04-03 23:44:22,240 - INFO - 
+=== MONITOR CHECK #2 at 23:44:22 ===
+2026-04-03 23:44:22,476 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:44:22,553 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:44:22,583 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:44:22,615 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:44:22,646 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:44:22,677 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:44:22,709 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:44:22,709 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:44:22,709 - INFO - ⏰ Next automatic check at: 23:45:22
+2026-04-03 23:45:22,767 - INFO - 
+=== MONITOR CHECK #3 at 23:45:22 ===
+2026-04-03 23:45:22,992 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:45:23,063 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:45:23,094 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:45:23,125 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:45:23,155 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:45:23,185 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:45:23,216 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:45:23,216 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:45:23,216 - INFO - ⏰ Next automatic check at: 23:46:23
+2026-04-03 23:46:23,241 - INFO - 
+=== MONITOR CHECK #4 at 23:46:23 ===
+2026-04-03 23:46:23,479 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:46:23,548 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:46:23,579 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:46:23,609 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:46:23,641 - ERROR - Practical Profit Bot: ❌ STOPPED
+2026-04-03 23:46:23,641 - WARNING - 🔄 Attempting auto-restart for Practical Profit Bot
+2026-04-03 23:46:23,641 - INFO - 🔄 Attempting to restart: Practical Profit Bot
+2026-04-03 23:46:27,974 - INFO - ✅ SUCCESS: Practical Profit Bot restarted
+2026-04-03 23:46:28,006 - ERROR - 🚨 ALERT: Practical Profit Bot
+2026-04-03 23:46:28,006 - INFO - ✅ Auto-restart successful for Practical Profit Bot
+2026-04-03 23:46:28,036 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:46:28,067 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:46:28,067 - WARNING - ⚠️  SOME SYSTEMS NEED ATTENTION
+2026-04-03 23:46:28,067 - INFO - ⏰ Next automatic check at: 23:47:28
+2026-04-03 23:47:28,164 - INFO - 
+=== MONITOR CHECK #5 at 23:47:28 ===
+2026-04-03 23:47:28,349 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:47:28,417 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:47:28,445 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:47:28,473 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:47:28,502 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:47:28,530 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:47:28,559 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:47:28,559 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:47:28,559 - INFO - ⏰ Next automatic check at: 23:48:28
+2026-04-03 23:48:28,710 - INFO - 
+=== MONITOR CHECK #6 at 23:48:28 ===
+2026-04-03 23:48:28,917 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:48:28,978 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:48:29,007 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:48:29,034 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:48:29,060 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:48:29,085 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:48:29,109 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:48:29,110 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:48:29,110 - INFO - ⏰ Next automatic check at: 23:49:29
+2026-04-03 23:49:29,163 - INFO - 
+=== MONITOR CHECK #7 at 23:49:29 ===
+2026-04-03 23:49:29,383 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:49:29,446 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:49:29,472 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:49:29,499 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:49:29,525 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:49:29,551 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:49:29,578 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:49:29,578 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:49:29,578 - INFO - ⏰ Next automatic check at: 23:50:29
+2026-04-03 23:50:29,729 - INFO - 
+=== MONITOR CHECK #8 at 23:50:29 ===
+2026-04-03 23:50:29,943 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:50:30,004 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:50:30,028 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:50:30,053 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:50:30,078 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:50:30,102 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:50:30,127 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:50:30,127 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:50:30,127 - INFO - ⏰ Next automatic check at: 23:51:30
+2026-04-03 23:51:30,148 - INFO - 
+=== MONITOR CHECK #9 at 23:51:30 ===
+2026-04-03 23:51:30,596 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:51:30,701 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:51:30,743 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:51:30,786 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:51:30,813 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:51:30,841 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:51:30,973 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:51:30,984 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:51:30,984 - INFO - ⏰ Next automatic check at: 23:52:30
+2026-04-03 23:52:32,749 - INFO - 
+=== MONITOR CHECK #10 at 23:52:31 ===
+2026-04-03 23:52:35,217 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:52:35,310 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:52:35,338 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:52:35,366 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:52:35,395 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:52:35,422 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:52:35,456 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:52:35,456 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:52:35,456 - INFO - ⏰ Next automatic check at: 23:53:35
+2026-04-03 23:53:35,467 - INFO - 
+=== MONITOR CHECK #11 at 23:53:35 ===
+2026-04-03 23:53:35,732 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:53:35,807 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:53:35,835 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:53:35,863 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:53:35,892 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:53:35,920 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:53:35,948 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:53:35,948 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:53:35,948 - INFO - ⏰ Next automatic check at: 23:54:35
+2026-04-03 23:54:36,076 - INFO - 
+=== MONITOR CHECK #12 at 23:54:36 ===
+2026-04-03 23:54:37,019 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:54:37,090 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:54:37,127 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:54:38,247 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:54:38,690 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:54:38,731 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:54:38,842 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:54:38,842 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:54:38,868 - INFO - ⏰ Next automatic check at: 23:55:38
+2026-04-03 23:55:38,940 - INFO - 
+=== MONITOR CHECK #13 at 23:55:38 ===
+2026-04-03 23:55:39,210 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:55:39,398 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:55:39,430 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:55:39,462 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:55:39,492 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:55:39,522 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:55:39,551 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:55:39,552 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:55:39,552 - INFO - ⏰ Next automatic check at: 23:56:39
+2026-04-03 23:56:39,594 - INFO - 
+=== MONITOR CHECK #14 at 23:56:39 ===
+2026-04-03 23:56:39,827 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:56:39,894 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:56:39,924 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:56:39,952 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:56:39,978 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:56:40,004 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:56:40,030 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:56:40,031 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:56:40,032 - INFO - ⏰ Next automatic check at: 23:57:40
+2026-04-03 23:57:40,033 - INFO - 
+=== MONITOR CHECK #15 at 23:57:40 ===
+2026-04-03 23:57:40,239 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:57:40,333 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:57:40,362 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:57:40,390 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:57:40,418 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:57:40,448 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:57:40,476 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:57:40,476 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:57:40,477 - INFO - ⏰ Next automatic check at: 23:58:40
+2026-04-03 23:58:40,540 - INFO - 
+=== MONITOR CHECK #16 at 23:58:40 ===
+2026-04-03 23:58:40,749 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:58:40,810 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:58:40,836 - ERROR - Forex Arbitration Bot ($220): ❌ STOPPED
+2026-04-03 23:58:40,837 - WARNING - 🔄 Attempting auto-restart for Forex Arbitration Bot ($220)
+2026-04-03 23:58:40,837 - INFO - 🔄 Attempting to restart: Forex Arbitration Bot ($220)
+2026-04-03 23:58:45,032 - INFO - ✅ SUCCESS: Forex Arbitration Bot ($220) restarted
+2026-04-03 23:58:45,067 - ERROR - 🚨 ALERT: Forex Arbitration Bot ($220)
+2026-04-03 23:58:45,067 - INFO - ✅ Auto-restart successful for Forex Arbitration Bot ($220)
+2026-04-03 23:58:45,095 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:58:45,122 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:58:45,148 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:58:45,173 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:58:45,173 - WARNING - ⚠️  SOME SYSTEMS NEED ATTENTION
+2026-04-03 23:58:45,173 - INFO - ⏰ Next automatic check at: 23:59:45
+2026-04-03 23:59:45,222 - INFO - 
+=== MONITOR CHECK #17 at 23:59:45 ===
+2026-04-03 23:59:45,438 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-03 23:59:45,500 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-03 23:59:45,527 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-03 23:59:45,554 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-03 23:59:45,583 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-03 23:59:45,609 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-03 23:59:45,636 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-03 23:59:45,636 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-03 23:59:45,636 - INFO - ⏰ Next automatic check at: 00:00:45
+2026-04-04 00:00:45,712 - INFO - 
+=== MONITOR CHECK #18 at 00:00:45 ===
+2026-04-04 00:00:45,929 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:00:45,990 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:00:46,015 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:00:46,041 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:00:46,066 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:00:46,092 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:00:46,117 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:00:46,117 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:00:46,117 - INFO - ⏰ Next automatic check at: 00:01:46
+2026-04-04 00:01:46,193 - INFO - 
+=== MONITOR CHECK #19 at 00:01:46 ===
+2026-04-04 00:01:46,411 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:01:46,476 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:01:46,503 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:01:46,530 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:01:46,558 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:01:46,585 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:01:46,612 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:01:46,612 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:01:46,612 - INFO - ⏰ Next automatic check at: 00:02:46
+2026-04-04 00:02:46,763 - INFO - 
+=== MONITOR CHECK #20 at 00:02:46 ===
+2026-04-04 00:02:46,981 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:02:47,087 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:02:47,113 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:02:47,139 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:02:47,164 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:02:47,189 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:02:47,215 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:02:47,215 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:02:47,215 - INFO - ⏰ Next automatic check at: 00:03:47
+2026-04-04 00:03:47,272 - INFO - 
+=== MONITOR CHECK #21 at 00:03:47 ===
+2026-04-04 00:03:47,477 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:03:47,538 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:03:47,566 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:03:47,599 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:03:47,637 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:03:47,670 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:03:47,704 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:03:47,704 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:03:47,704 - INFO - ⏰ Next automatic check at: 00:04:47
+2026-04-04 00:04:47,855 - INFO - 
+=== MONITOR CHECK #22 at 00:04:47 ===
+2026-04-04 00:04:48,071 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:04:48,138 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:04:48,170 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:04:48,200 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:04:48,231 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:04:48,261 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:04:48,287 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:04:48,287 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:04:48,287 - INFO - ⏰ Next automatic check at: 00:05:48
+2026-04-04 00:05:48,301 - INFO - 
+=== MONITOR CHECK #23 at 00:05:48 ===
+2026-04-04 00:05:48,496 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:05:48,564 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:05:48,594 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:05:48,623 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:05:48,652 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:05:48,683 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:05:48,714 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:05:48,714 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:05:48,714 - INFO - ⏰ Next automatic check at: 00:06:48
+2026-04-04 00:06:48,790 - INFO - 
+=== MONITOR CHECK #24 at 00:06:48 ===
+2026-04-04 00:06:49,157 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:06:49,244 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:06:49,275 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:06:49,306 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:06:49,339 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:06:49,373 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:06:49,404 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:06:49,404 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:06:49,404 - INFO - ⏰ Next automatic check at: 00:07:49
+2026-04-04 00:07:49,526 - INFO - 
+=== MONITOR CHECK #25 at 00:07:49 ===
+2026-04-04 00:07:51,076 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:07:51,201 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:07:51,232 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:07:51,262 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:07:51,296 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:07:51,325 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:07:51,354 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:07:51,354 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:07:51,354 - INFO - ⏰ Next automatic check at: 00:08:51
+2026-04-04 00:08:51,433 - INFO - 
+=== MONITOR CHECK #26 at 00:08:51 ===
+2026-04-04 00:08:51,665 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:08:51,745 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:08:51,778 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:08:51,807 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:08:51,833 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:08:51,858 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:08:51,884 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:08:51,884 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:08:51,884 - INFO - ⏰ Next automatic check at: 00:09:51
+2026-04-04 00:09:51,981 - INFO - 
+=== MONITOR CHECK #27 at 00:09:51 ===
+2026-04-04 00:09:54,346 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:09:54,527 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:09:54,564 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:09:54,594 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:09:54,622 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:09:54,656 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:09:54,684 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:09:54,684 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:09:54,684 - INFO - ⏰ Next automatic check at: 00:10:54
+2026-04-04 00:10:54,749 - INFO - 
+=== MONITOR CHECK #28 at 00:10:54 ===
+2026-04-04 00:10:55,087 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:10:55,245 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:10:55,274 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:10:55,304 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:10:55,334 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:10:55,362 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:10:55,390 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:10:55,390 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:10:55,390 - INFO - ⏰ Next automatic check at: 00:11:55
+2026-04-04 00:11:55,551 - INFO - 
+=== MONITOR CHECK #29 at 00:11:55 ===
+2026-04-04 00:11:55,794 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:11:55,857 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:11:55,884 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:11:55,910 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:11:55,937 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:11:55,963 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:11:55,989 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:11:55,990 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:11:55,990 - INFO - ⏰ Next automatic check at: 00:12:55
+2026-04-04 00:12:56,140 - INFO - 
+=== MONITOR CHECK #30 at 00:12:56 ===
+2026-04-04 00:12:56,349 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 00:12:56,411 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 00:12:56,439 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 00:12:56,464 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 00:12:56,490 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 00:12:56,515 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 00:12:56,540 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 00:12:56,540 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 00:12:56,540 - INFO - ⏰ Next automatic check at: 00:13:56
+2026-04-04 03:28:04,316 - INFO - 🚀 AUTOMATED SYSTEM MONITOR INITIALIZED
+2026-04-04 03:28:04,317 - INFO - 📊 Monitoring 7 systems
+2026-04-04 03:28:04,317 - INFO - ⏰ Check interval: 60 seconds
+2026-04-04 03:28:04,317 - INFO - 🎯 I will proactively alert you if anything stops!
+2026-04-04 03:28:04,317 - INFO - 🔄 Starting proactive monitoring...
+2026-04-04 03:28:04,317 - INFO - 
+=== MONITOR CHECK #1 at 03:28:04 ===
+2026-04-04 03:28:04,374 - ERROR - Arbitration Dashboard: ❌ STOPPED (Port 5020 not responding)
+2026-04-04 03:28:04,374 - WARNING - 🔄 Attempting auto-restart for Arbitration Dashboard
+2026-04-04 03:28:04,374 - INFO - 🔄 Attempting to restart: Arbitration Dashboard
+2026-04-04 03:28:08,865 - INFO - ✅ SUCCESS: Arbitration Dashboard restarted and responding on port 5020
+2026-04-04 03:28:08,999 - ERROR - 🚨 ALERT: Arbitration Dashboard
+2026-04-04 03:28:08,999 - INFO - ✅ Auto-restart successful for Arbitration Dashboard
+2026-04-04 03:28:09,254 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:28:09,344 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:28:09,392 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:28:09,439 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:28:09,482 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:28:09,532 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:28:09,533 - WARNING - ⚠️  SOME SYSTEMS NEED ATTENTION
+2026-04-04 03:28:09,533 - INFO - ⏰ Next automatic check at: 03:29:09
+2026-04-04 03:29:09,778 - INFO - 
+=== MONITOR CHECK #2 at 03:29:09 ===
+2026-04-04 03:29:10,482 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:29:10,657 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:29:10,731 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:29:10,795 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:29:10,849 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:29:10,939 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:29:11,047 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:29:11,048 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:29:11,048 - INFO - ⏰ Next automatic check at: 03:30:11
+2026-04-04 03:30:12,087 - INFO - 
+=== MONITOR CHECK #3 at 03:30:11 ===
+2026-04-04 03:30:13,799 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:30:13,909 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:30:13,961 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:30:13,999 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:30:14,048 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:30:14,081 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:30:14,120 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:30:14,120 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:30:14,121 - INFO - ⏰ Next automatic check at: 03:31:14
+2026-04-04 03:31:14,202 - INFO - 
+=== MONITOR CHECK #4 at 03:31:14 ===
+2026-04-04 03:31:14,412 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:31:14,474 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:31:14,499 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:31:14,523 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:31:14,548 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:31:14,575 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:31:14,606 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:31:14,606 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:31:14,606 - INFO - ⏰ Next automatic check at: 03:32:14
+2026-04-04 03:32:14,616 - INFO - 
+=== MONITOR CHECK #5 at 03:32:14 ===
+2026-04-04 03:32:14,794 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:32:14,858 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:32:14,886 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:32:14,917 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:32:14,948 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:32:14,975 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:32:15,003 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:32:15,004 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:32:15,004 - INFO - ⏰ Next automatic check at: 03:33:15
+2026-04-04 03:33:15,014 - INFO - 
+=== MONITOR CHECK #6 at 03:33:15 ===
+2026-04-04 03:33:15,187 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:33:15,249 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:33:15,276 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:33:15,303 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:33:15,329 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:33:15,356 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:33:15,383 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:33:15,383 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:33:15,383 - INFO - ⏰ Next automatic check at: 03:34:15
+2026-04-04 03:34:15,386 - INFO - 
+=== MONITOR CHECK #7 at 03:34:15 ===
+2026-04-04 03:34:15,574 - INFO - Arbitration Dashboard: ✅ RUNNING
+2026-04-04 03:34:15,635 - INFO - Simple Trading Dashboard: ✅ RUNNING
+2026-04-04 03:34:15,659 - INFO - Forex Arbitration Bot ($220): ✅ RUNNING
+2026-04-04 03:34:15,684 - INFO - Auto Arbitrage Bot: ✅ RUNNING
+2026-04-04 03:34:15,712 - INFO - Practical Profit Bot: ✅ RUNNING
+2026-04-04 03:34:15,739 - INFO - Market Maker Analyzer: ✅ RUNNING
+2026-04-04 03:34:15,764 - INFO - Multi-LLM Trading Bot: ✅ RUNNING
+2026-04-04 03:34:15,764 - INFO - ✅ ALL SYSTEMS OK (7 systems running)
+2026-04-04 03:34:15,764 - INFO - ⏰ Next automatic check at: 03:35:15

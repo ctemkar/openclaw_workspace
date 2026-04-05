@@ -1,0 +1,36 @@
+============================================================
+CONSERVATIVE CRYPTO TRADING ANALYSIS
+Capital: $100.00 | Stop-loss: 5.0% | Take-profit: 10.0%
+Max trades/day: 2 | Symbols: BTC/USD, ETH/USD
+============================================================
+📊 Today's trades: 2/2
+
+🔍 Analyzing BTC/USD...
+   Price: $67783.33
+   24h Change: N/A
+   SMA 10: $67553.27
+   SMA 20: $67069.11
+   Support: $67051.55
+   Resistance: $68136.29
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $67051.55 (current: $67783.33)
+   ⏸️ Skipping: Max daily trades reached
+
+🔍 Analyzing ETH/USD...
+   Price: $2070.26
+   24h Change: N/A
+   SMA 10: $2058.74
+   SMA 20: $2032.87
+   Support: $2039.91
+   Resistance: $2082.48
+   Signal: BUY (Confidence: 70%)
+   Reasons: Near support level: $2039.91 (current: $2070.26)
+   ⏸️ Skipping: Max daily trades reached
+
+📈 Trading Summary:
+   Today's trades executed: 2/2
+   Total trades: 6
+   Total P&L: $0.00
+   Available capital: $1000.00
+
+✅ Analysis complete. Next run in 1 hour.

@@ -1,0 +1,182 @@
+::1 - - [05/Apr/2026 21:26:18] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 21:26:18] code 404, message File not found
+::1 - - [05/Apr/2026 21:26:18] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 21:26:18] code 404, message File not found
+::1 - - [05/Apr/2026 21:26:18] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 21:26:20] "GET /next_gen_dashboard.html HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 21:26:20] code 404, message File not found
+::1 - - [05/Apr/2026 21:26:20] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 21:26:50] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 21:26:51] code 404, message File not found
+::1 - - [05/Apr/2026 21:26:51] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:20:17] "GET /status HTTP/1.1" 301 -
+::1 - - [05/Apr/2026 22:20:27] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:38:59] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:41:29] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:41:29] code 404, message File not found
+::1 - - [05/Apr/2026 22:41:29] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:41:34] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:41:34] code 404, message File not found
+::1 - - [05/Apr/2026 22:41:34] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:41:59] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:42:05] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:42:05] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:05] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:42:11] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:42:12] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:12] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:42:13] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:13] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:42:14] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:42:30] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:42:30] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:30] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:42:36] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:42:36] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:36] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:42:44] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:42:44] code 404, message File not found
+::1 - - [05/Apr/2026 22:42:44] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:07] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:07] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:07] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:12] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:12] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:12] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:15] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:15] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:15] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:31] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:31] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:31] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:38] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:38] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:38] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:43:44] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:43:44] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:43:46] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:43:46] code 404, message File not found
+::1 - - [05/Apr/2026 22:43:46] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:09] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:09] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:09] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:13] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:13] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:13] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:17] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:17] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:17] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:32] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:32] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:32] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:40] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:40] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:40] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:44:48] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:44:48] code 404, message File not found
+::1 - - [05/Apr/2026 22:44:48] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:11] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:11] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:11] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:14] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:14] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:14] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:19] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:19] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:19] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:33] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:33] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:33] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:42] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:42] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:42] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:45:50] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:45:50] code 404, message File not found
+::1 - - [05/Apr/2026 22:45:50] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:13] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:13] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:13] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:15] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:15] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:15] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:21] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:21] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:21] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:34] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:34] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:34] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:44] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:44] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:44] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:46:52] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:46:52] code 404, message File not found
+::1 - - [05/Apr/2026 22:46:52] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:15] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:15] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:15] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:16] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:16] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:16] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:23] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:23] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:23] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:35] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:35] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:35] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:46] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:46] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:46] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:47:54] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:47:54] code 404, message File not found
+::1 - - [05/Apr/2026 22:47:54] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:17] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:17] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:17] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:17] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:17] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:17] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:25] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:25] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:25] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:36] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:36] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:36] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:40] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:40] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:41] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:41] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:43] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:43] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:48] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:48] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:48] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:48:56] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:48:56] code 404, message File not found
+::1 - - [05/Apr/2026 22:48:56] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:49:18] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:49:18] code 404, message File not found
+::1 - - [05/Apr/2026 22:49:18] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:49:19] "GET /next_gen_dashboard.html HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:49:19] code 404, message File not found
+::1 - - [05/Apr/2026 22:49:19] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:49:37] code 404, message File not found
+::1 - - [05/Apr/2026 22:49:37] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:49:42] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:49:42] code 404, message File not found
+::1 - - [05/Apr/2026 22:49:42] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:49:56] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:50:30] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:50:38] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:50:38] code 404, message File not found
+::1 - - [05/Apr/2026 22:50:38] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:50:43] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:50:43] code 404, message File not found
+::1 - - [05/Apr/2026 22:50:43] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:51:39] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:51:39] code 404, message File not found
+::1 - - [05/Apr/2026 22:51:39] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:51:44] "GET / HTTP/1.1" 304 -
+::1 - - [05/Apr/2026 22:51:44] code 404, message File not found
+::1 - - [05/Apr/2026 22:51:44] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [05/Apr/2026 22:52:10] "GET / HTTP/1.1" 200 -
+::1 - - [05/Apr/2026 22:54:07] "GET / HTTP/1.1" 200 -

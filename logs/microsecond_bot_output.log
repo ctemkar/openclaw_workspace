@@ -1,0 +1,45 @@
+2026-04-05 14:59:42,290 - INFO - 🚀 MICROSECOND ARBITRAGE BOT STARTING
+2026-04-05 14:59:42,290 - INFO - 🎯 Using YOUR microsecond fix: nonce = int(time.time() * 1000000)
+2026-04-05 14:59:42,290 - INFO - ✅ Loaded Binance key: dT0OIm9aq8...
+2026-04-05 14:59:42,291 - INFO - ✅ Loaded Gemini key: account-oH...
+2026-04-05 14:59:42,295 - INFO - 🧪 TESTING GEMINI CONNECTION WITH MICROSECOND NONCE
+2026-04-05 14:59:43,384 - INFO - ✅ Gemini symbols: 3 available
+2026-04-05 14:59:44,487 - INFO - ✅ Gemini balances response: {'result': 'error', 'reason': 'InvalidNonce', 'message': "Nonce '1775375983384709' has not increased since your last call to the Gemini API."}
+2026-04-05 14:59:44,487 - INFO - 
+============================================================
+2026-04-05 14:59:44,487 - INFO - 🔄 CYCLE 1 - 2026-04-05 14:59:44
+2026-04-05 14:59:44,487 - INFO - ============================================================
+2026-04-05 14:59:44,487 - INFO - 📊 Getting Binance prices...
+2026-04-05 14:59:47,956 - INFO - 📊 Getting Gemini prices...
+2026-04-05 14:59:47,956 - WARNING -    XTZ not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    YFI not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    FIL not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    DOT not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    MANA not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    ATOM not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    COMP not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    UNI not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    AVAX not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,956 - WARNING -    AAVE not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 14:59:47,957 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 14:59:47,957 - INFO - ⏳ No tradable opportunities (minimum: 0.5%)
+2026-04-05 14:59:47,957 - INFO - ⏰ Next scan in 300 seconds...
+2026-04-05 15:04:47,997 - INFO - 
+============================================================
+2026-04-05 15:04:47,998 - INFO - 🔄 CYCLE 2 - 2026-04-05 15:04:47
+2026-04-05 15:04:47,998 - INFO - ============================================================
+2026-04-05 15:04:47,998 - INFO - 📊 Getting Binance prices...
+2026-04-05 15:04:49,180 - INFO - 📊 Getting Gemini prices...
+2026-04-05 15:04:49,181 - WARNING -    XTZ not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    YFI not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    FIL not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    DOT not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    MANA not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    ATOM not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    COMP not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    UNI not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    AVAX not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,181 - WARNING -    AAVE not on Gemini: 'MicrosecondArbitrageBot' object has no attribute 'gemini'
+2026-04-05 15:04:49,182 - INFO - 🏆 TOP 5 SPREADS:
+2026-04-05 15:04:49,182 - INFO - ⏳ No tradable opportunities (minimum: 0.5%)
+2026-04-05 15:04:49,182 - INFO - ⏰ Next scan in 300 seconds...

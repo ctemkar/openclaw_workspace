@@ -1,0 +1,121 @@
+2026-04-03 10:08:19,054 - INFO - ✅ Gemini exchange initialized for auto-trading
+2026-04-03 10:08:19,057 - INFO - ✅ Binance exchange initialized for auto-trading
+2026-04-03 10:08:19,057 - INFO - ======================================================================
+2026-04-03 10:08:19,057 - INFO - 🤖 AUTO ARBITRAGE BOT STARTED
+2026-04-03 10:08:19,057 - INFO - Monitoring 12 cryptos
+2026-04-03 10:08:19,057 - INFO - Min spread: 0.4%
+2026-04-03 10:08:19,057 - INFO - Min profit: $0.25
+2026-04-03 10:08:19,057 - INFO - Trade size: 8.0% of capital
+2026-04-03 10:08:19,057 - INFO - ======================================================================
+2026-04-03 10:08:19,057 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 1 - 10:08:19
+2026-04-03 10:08:30,958 - INFO - 📊 Market Status:
+2026-04-03 10:08:31,445 - INFO -   BTC: G=$66587.33, B=$66599.61, Spread=0.02%
+2026-04-03 10:08:32,082 - INFO -   ETH: G=$2054.06, B=$2054.90, Spread=0.04%
+2026-04-03 10:08:32,704 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:08:32,705 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:08:32,705 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:09:02,723 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 2 - 10:09:02
+2026-04-03 10:09:09,128 - INFO - 📊 Market Status:
+2026-04-03 10:09:09,696 - INFO -   BTC: G=$66598.64, B=$66613.60, Spread=0.02%
+2026-04-03 10:09:10,186 - INFO -   ETH: G=$2054.50, B=$2054.86, Spread=0.02%
+2026-04-03 10:09:10,695 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.36%
+2026-04-03 10:09:10,695 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:09:10,695 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:09:40,707 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 3 - 10:09:40
+2026-04-03 10:09:47,124 - INFO - 📊 Market Status:
+2026-04-03 10:09:47,643 - INFO -   BTC: G=$66598.64, B=$66604.33, Spread=0.01%
+2026-04-03 10:09:48,214 - INFO -   ETH: G=$2054.50, B=$2054.00, Spread=0.02%
+2026-04-03 10:09:48,787 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:09:48,787 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:09:48,787 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:10:18,790 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 4 - 10:10:18
+2026-04-03 10:10:25,023 - INFO - 📊 Market Status:
+2026-04-03 10:10:25,550 - INFO -   BTC: G=$66601.64, B=$66614.42, Spread=0.02%
+2026-04-03 10:10:26,160 - INFO -   ETH: G=$2054.50, B=$2054.76, Spread=0.01%
+2026-04-03 10:10:26,690 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:10:26,690 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:10:26,691 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:10:56,699 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 5 - 10:10:56
+2026-04-03 10:11:03,010 - INFO - 📊 Market Status:
+2026-04-03 10:11:03,550 - INFO -   BTC: G=$66572.67, B=$66586.20, Spread=0.02%
+2026-04-03 10:11:04,123 - INFO -   ETH: G=$2053.29, B=$2053.51, Spread=0.01%
+2026-04-03 10:11:04,675 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:11:04,676 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:11:04,676 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:11:34,741 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 6 - 10:11:34
+2026-04-03 10:11:41,219 - INFO - 📊 Market Status:
+2026-04-03 10:11:41,736 - INFO -   BTC: G=$66572.67, B=$66574.00, Spread=0.00%
+2026-04-03 10:11:42,136 - INFO -   ETH: G=$2053.29, B=$2052.54, Spread=0.04%
+2026-04-03 10:11:42,752 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:11:42,752 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:11:42,752 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:12:12,820 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 7 - 10:12:12
+2026-04-03 10:12:18,955 - INFO - 📊 Market Status:
+2026-04-03 10:12:19,373 - INFO -   BTC: G=$66572.69, B=$66579.81, Spread=0.01%
+2026-04-03 10:12:19,924 - INFO -   ETH: G=$2053.29, B=$2052.38, Spread=0.04%
+2026-04-03 10:12:20,436 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:12:20,436 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:12:20,436 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:12:50,511 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 8 - 10:12:50
+2026-04-03 10:12:56,895 - INFO - 📊 Market Status:
+2026-04-03 10:12:57,415 - INFO -   BTC: G=$66583.28, B=$66589.24, Spread=0.01%
+2026-04-03 10:12:57,943 - INFO -   ETH: G=$2052.57, B=$2052.51, Spread=0.00%
+2026-04-03 10:12:58,479 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.36%
+2026-04-03 10:12:58,522 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:12:58,522 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:13:28,561 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 9 - 10:13:28
+2026-04-03 10:13:34,880 - INFO - 📊 Market Status:
+2026-04-03 10:13:35,396 - INFO -   BTC: G=$66591.14, B=$66612.12, Spread=0.03%
+2026-04-03 10:13:35,945 - INFO -   ETH: G=$2052.47, B=$2053.35, Spread=0.04%
+2026-04-03 10:13:36,507 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.36%
+2026-04-03 10:13:36,508 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:13:36,508 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:14:06,556 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 10 - 10:14:06
+2026-04-03 10:14:13,102 - INFO - 📊 Market Status:
+2026-04-03 10:14:13,641 - INFO -   BTC: G=$66623.73, B=$66653.34, Spread=0.04%
+2026-04-03 10:14:14,190 - INFO -   ETH: G=$2054.47, B=$2054.67, Spread=0.01%
+2026-04-03 10:14:14,769 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.44%
+2026-04-03 10:14:14,770 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:14:14,770 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:14:44,819 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 11 - 10:14:44
+2026-04-03 10:14:52,193 - INFO - 📊 Market Status:
+2026-04-03 10:14:52,642 - INFO -   BTC: G=$66621.95, B=$66624.52, Spread=0.00%
+2026-04-03 10:14:53,218 - INFO -   ETH: G=$2054.59, B=$2055.27, Spread=0.03%
+2026-04-03 10:14:53,727 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.44%
+2026-04-03 10:14:53,727 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:14:53,727 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:15:23,790 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 12 - 10:15:23
+2026-04-03 10:15:30,184 - INFO - 📊 Market Status:
+2026-04-03 10:15:30,699 - INFO -   BTC: G=$66648.78, B=$66650.28, Spread=0.00%
+2026-04-03 10:15:31,179 - INFO -   ETH: G=$2055.62, B=$2055.19, Spread=0.02%
+2026-04-03 10:15:31,718 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.44%
+2026-04-03 10:15:31,718 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:15:31,718 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:16:01,743 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 13 - 10:16:01
+2026-04-03 10:16:08,078 - INFO - 📊 Market Status:
+2026-04-03 10:16:08,688 - INFO -   BTC: G=$66623.40, B=$66627.38, Spread=0.01%
+2026-04-03 10:16:09,200 - INFO -   ETH: G=$2055.62, B=$2054.45, Spread=0.06%
+2026-04-03 10:16:09,649 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.36%
+2026-04-03 10:16:09,649 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:16:09,649 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:16:39,698 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 14 - 10:16:39
+2026-04-03 10:16:46,081 - INFO - 📊 Market Status:
+2026-04-03 10:16:46,604 - INFO -   BTC: G=$66662.06, B=$66662.62, Spread=0.00%
+2026-04-03 10:16:47,167 - INFO -   ETH: G=$2055.62, B=$2056.69, Spread=0.05%
+2026-04-03 10:16:47,744 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.52%
+2026-04-03 10:16:47,744 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:16:47,745 - INFO - 💤 Next scan in 30 seconds...

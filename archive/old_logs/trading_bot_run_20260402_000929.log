@@ -1,0 +1,41 @@
+2026-04-02 00:09:29,772 - INFO - ======================================================================
+2026-04-02 00:09:29,772 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 00:09:29,772 - INFO - ======================================================================
+2026-04-02 00:09:29,772 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 00:09:29,772 - INFO - ♊ Gemini LONG: 16 cryptos ($319.04 capital - FULL BALANCE!)
+2026-04-02 00:09:29,772 - INFO - ₿ Binance SHORT: 23 cryptos ($36.70 capital, 1x)
+2026-04-02 00:09:29,772 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 00:09:29,772 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 00:09:29,772 - INFO - 💰 Position size: 15% of capital (REDUCED FOR MARGIN)
+2026-04-02 00:09:29,772 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 00:09:29,772 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 00:09:29,772 - INFO - ======================================================================
+2026-04-02 00:09:29,772 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 00:09:29,772 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 00:09:29,772 - INFO - ======================================================================
+2026-04-02 00:09:29,772 - INFO - ✅ Gemini API keys loaded
+2026-04-02 00:09:29,772 - INFO - ✅ Binance API keys loaded
+2026-04-02 00:09:29,774 - INFO - ✅ Gemini exchange initialized
+2026-04-02 00:09:29,777 - INFO - ✅ Binance Futures exchange initialized
+2026-04-02 00:09:29,777 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-02 00:09:29,777 - INFO - ======================================================================
+2026-04-02 00:09:29,777 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:09:29
+2026-04-02 00:09:29,777 - INFO - ======================================================================
+2026-04-02 00:09:29,777 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-02 00:09:41,711 - INFO - 🔍 Checking 23 cryptos on Binance for SHORT...
+2026-04-02 00:09:45,631 - INFO - ⚡ BINANCE SHORT SIGNAL: COMP down -4.39%
+2026-04-02 00:09:45,632 - INFO - 🎯 PREPARING BINANCE SHORT: COMP
+2026-04-02 00:09:45,632 - INFO -     Current price: $16.9700
+2026-04-02 00:09:45,632 - INFO -     24h change: -4.39%
+2026-04-02 00:09:45,632 - INFO -     Position size: 0.324396 contracts
+2026-04-02 00:09:45,632 - INFO -     Position value: $5.50 (with 1x leverage)
+2026-04-02 00:09:45,632 - INFO -     Capital at risk: $5.50
+2026-04-02 00:09:45,632 - INFO -     Stop-loss: $17.4791 (+3%)
+2026-04-02 00:09:45,632 - INFO -     Take-profit: $16.1215 (-5%)
+2026-04-02 00:09:45,632 - INFO - 🚀 EXECUTING BINANCE SHORT: COMP/USDT
+2026-04-02 00:09:46,012 - ERROR - ❌ Binance trade execution failed: binance {"code":-2019,"msg":"Margin is insufficient."}
+2026-04-02 00:09:46,801 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-02 00:09:46,801 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-02 00:09:46,801 - INFO - ⏱️  Cycle 1 duration: 17.0 seconds
+2026-04-02 00:09:46,801 - INFO - 📈 Total opportunities found: 1

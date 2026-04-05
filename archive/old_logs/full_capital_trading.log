@@ -1,0 +1,257 @@
+2026-04-01 00:26:06,047 - INFO - ======================================================================
+2026-04-01 00:26:06,047 - INFO - 🚀 UPDATED ENHANCED BOT - FULL CAPITAL TRADING
+2026-04-01 00:26:06,047 - INFO - ======================================================================
+2026-04-01 00:26:06,047 - INFO - 💰 TOTAL CAPITAL: $685.67
+2026-04-01 00:26:06,047 - INFO - ♊ Gemini LONG: $531.65 (16 cryptos, 1.5% threshold)
+2026-04-01 00:26:06,047 - INFO - ₿ Binance SHORT: $154.02 (26 cryptos, 3.0% threshold)
+2026-04-01 00:26:06,047 - INFO - 📈 Position size: 10% of exchange capital
+2026-04-01 00:26:06,047 - INFO - ⚖️  Leverage: 1x (SAFE)
+2026-04-01 00:26:06,047 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-04-01 00:26:06,047 - INFO - 📈 Max positions per exchange: 3
+2026-04-01 00:26:06,047 - INFO - 📉 Daily loss limit: -5%
+2026-04-01 00:26:06,047 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-01 00:26:06,047 - INFO - ======================================================================
+2026-04-01 00:26:06,047 - INFO - ⚡ TRADING BOTH EXCHANGES WITH ALL CAPITAL
+2026-04-01 00:26:06,047 - INFO - ⚡ Gemini: Buy dips (1.5%+ down)
+2026-04-01 00:26:06,047 - INFO - ⚡ Binance: Short drops (3.0%+ down)
+2026-04-01 00:26:06,047 - INFO - ======================================================================
+2026-04-01 00:26:06,047 - INFO - 📊 Loaded 0 Gemini, 3 Binance positions
+2026-04-01 00:26:06,047 - INFO - ✅ Gemini API keys loaded
+2026-04-01 00:26:06,048 - INFO - ✅ Binance API keys loaded
+2026-04-01 00:26:06,049 - INFO - ✅ Gemini exchange initialized
+2026-04-01 00:26:06,052 - INFO - ✅ Binance Futures exchange initialized
+2026-04-01 00:26:06,052 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-01 00:26:06,052 - INFO - ======================================================================
+2026-04-01 00:26:06,052 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:26:06
+2026-04-01 00:26:06,052 - INFO - ======================================================================
+2026-04-01 00:26:08,063 - WARNING - 🚨 BINANCE STOP LOSS HIT: ADA/USDT:USDT at $0.2409 (SL: $0.0000)
+2026-04-01 00:26:08,063 - INFO - 🔄 CLOSING BINANCE POSITION: ADA/USDT:USDT (STOP_LOSS)
+2026-04-01 00:26:08,270 - INFO - ✅ BINANCE POSITION CLOSED: ADA/USDT:USDT
+2026-04-01 00:26:08,271 - INFO -    Order ID: 63797604458
+2026-04-01 00:26:08,271 - INFO -    Close Price: $0.2409
+2026-04-01 00:26:08,271 - INFO -    P&L: -0.56%
+2026-04-01 00:26:08,272 - INFO - 📝 Position updated: ADA/USDT:USDT -> CLOSED
+2026-04-01 00:26:08,273 - INFO - 📊 Loaded 0 Gemini, 2 Binance positions
+2026-04-01 00:26:08,273 - INFO - 💰 Daily P&L updated: $0.00
+2026-04-01 00:26:08,391 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3394 (SL: $0.0000)
+2026-04-01 00:26:08,391 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:26:08,722 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:26:08,834 - WARNING - 🚨 BINANCE STOP LOSS HIT: SOL/USDT:USDT at $83.0700 (SL: $0.0000)
+2026-04-01 00:26:08,835 - INFO - 🔄 CLOSING BINANCE POSITION: SOL/USDT:USDT (STOP_LOSS)
+2026-04-01 00:26:09,188 - INFO - ✅ BINANCE POSITION CLOSED: SOL/USDT:USDT
+2026-04-01 00:26:09,189 - INFO -    Order ID: 206525047228
+2026-04-01 00:26:09,189 - INFO -    Close Price: $83.0700
+2026-04-01 00:26:09,189 - INFO -    P&L: -2.32%
+2026-04-01 00:26:09,191 - INFO - 📝 Position updated: SOL/USDT:USDT -> CLOSED
+2026-04-01 00:26:09,191 - INFO - 📊 Loaded 0 Gemini, 1 Binance positions
+2026-04-01 00:26:09,191 - INFO - 💰 Daily P&L updated: $0.00
+2026-04-01 00:26:09,192 - INFO - 📉 Closed 3 positions
+2026-04-01 00:26:09,192 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:26:21,101 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:26:23,242 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:26:23,242 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 00:26:23,242 - INFO -     Current price: $1650.1000
+2026-04-01 00:26:23,242 - INFO -     24h change: -3.40%
+2026-04-01 00:26:23,242 - INFO -     Position size: 0.009334 contracts
+2026-04-01 00:26:23,242 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:26:23,242 - INFO -     Capital at risk: $15.40
+2026-04-01 00:26:23,242 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 00:26:23,242 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 00:26:23,242 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 00:26:23,560 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 00:26:24,009 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:26:24,232 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:26:24,232 - INFO - 📊 STATUS: 0 Gemini, 1 Binance positions
+2026-04-01 00:26:24,232 - INFO - 💰 Daily P&L: $0.00, Total positions: 1/6
+2026-04-01 00:26:24,232 - INFO - ⏱️  Cycle 1 duration: 18.2 seconds
+2026-04-01 00:26:24,232 - INFO - 📈 Total opportunities found: 1
+2026-04-01 00:26:24,232 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:31:24,298 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-04-01 00:31:24,299 - INFO - ======================================================================
+2026-04-01 00:31:24,299 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:31:24
+2026-04-01 00:31:24,299 - INFO - ======================================================================
+2026-04-01 00:31:24,477 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3389 (SL: $0.0000)
+2026-04-01 00:31:24,477 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:31:24,682 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:31:24,682 - INFO - 📉 Closed 1 positions
+2026-04-01 00:31:24,683 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:31:33,420 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:31:35,546 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:31:35,546 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 00:31:35,546 - INFO -     Current price: $1650.1000
+2026-04-01 00:31:35,546 - INFO -     24h change: -3.40%
+2026-04-01 00:31:35,546 - INFO -     Position size: 0.009334 contracts
+2026-04-01 00:31:35,546 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:31:35,546 - INFO -     Capital at risk: $15.40
+2026-04-01 00:31:35,546 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 00:31:35,546 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 00:31:35,546 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 00:31:35,865 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 00:31:36,320 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:31:36,549 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:31:36,549 - INFO - 📊 STATUS: 0 Gemini, 1 Binance positions
+2026-04-01 00:31:36,549 - INFO - 💰 Daily P&L: $0.00, Total positions: 1/6
+2026-04-01 00:31:36,549 - INFO - ⏱️  Cycle 2 duration: 12.3 seconds
+2026-04-01 00:31:36,549 - INFO - 📈 Total opportunities found: 2
+2026-04-01 00:31:36,549 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:36:36,574 - INFO - 
+🔄 CYCLE 3 STARTING...
+2026-04-01 00:36:36,575 - INFO - ======================================================================
+2026-04-01 00:36:36,575 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:36:36
+2026-04-01 00:36:36,575 - INFO - ======================================================================
+2026-04-01 00:36:36,746 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3367 (SL: $0.0000)
+2026-04-01 00:36:36,746 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:36:37,029 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:36:37,029 - INFO - 📉 Closed 1 positions
+2026-04-01 00:36:37,029 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:36:47,074 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:36:49,249 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:36:49,249 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 00:36:49,249 - INFO -     Current price: $1650.1000
+2026-04-01 00:36:49,249 - INFO -     24h change: -3.40%
+2026-04-01 00:36:49,249 - INFO -     Position size: 0.009334 contracts
+2026-04-01 00:36:49,249 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:36:49,249 - INFO -     Capital at risk: $15.40
+2026-04-01 00:36:49,249 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 00:36:49,250 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 00:36:49,250 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 00:36:49,670 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 00:36:50,130 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:36:50,360 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:36:50,360 - INFO - 📊 STATUS: 0 Gemini, 1 Binance positions
+2026-04-01 00:36:50,360 - INFO - 💰 Daily P&L: $0.00, Total positions: 1/6
+2026-04-01 00:36:50,360 - INFO - ⏱️  Cycle 3 duration: 13.8 seconds
+2026-04-01 00:36:50,360 - INFO - 📈 Total opportunities found: 3
+2026-04-01 00:36:50,360 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:41:50,509 - INFO - 
+🔄 CYCLE 4 STARTING...
+2026-04-01 00:41:50,510 - INFO - ======================================================================
+2026-04-01 00:41:50,510 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:41:50
+2026-04-01 00:41:50,510 - INFO - ======================================================================
+2026-04-01 00:41:50,685 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3320 (SL: $0.0000)
+2026-04-01 00:41:50,686 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:41:50,938 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:41:50,938 - INFO - 📉 Closed 1 positions
+2026-04-01 00:41:50,938 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:42:01,007 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:42:03,118 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:42:03,118 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 00:42:03,118 - INFO -     Current price: $1650.1000
+2026-04-01 00:42:03,118 - INFO -     24h change: -3.40%
+2026-04-01 00:42:03,118 - INFO -     Position size: 0.009334 contracts
+2026-04-01 00:42:03,118 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:42:03,118 - INFO -     Capital at risk: $15.40
+2026-04-01 00:42:03,119 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 00:42:03,119 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 00:42:03,119 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 00:42:03,441 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 00:42:03,886 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:42:04,297 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:42:04,298 - INFO - 📊 STATUS: 0 Gemini, 1 Binance positions
+2026-04-01 00:42:04,298 - INFO - 💰 Daily P&L: $0.00, Total positions: 1/6
+2026-04-01 00:42:04,298 - INFO - ⏱️  Cycle 4 duration: 13.8 seconds
+2026-04-01 00:42:04,298 - INFO - 📈 Total opportunities found: 4
+2026-04-01 00:42:04,298 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:47:04,444 - INFO - 
+🔄 CYCLE 5 STARTING...
+2026-04-01 00:47:04,445 - INFO - ======================================================================
+2026-04-01 00:47:04,445 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:47:04
+2026-04-01 00:47:04,445 - INFO - ======================================================================
+2026-04-01 00:47:04,609 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3305 (SL: $0.0000)
+2026-04-01 00:47:04,609 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:47:04,755 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:47:04,755 - INFO - 📉 Closed 1 positions
+2026-04-01 00:47:04,755 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:47:13,678 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:47:14,330 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.00%
+2026-04-01 00:47:14,330 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 00:47:14,330 - INFO -     Current price: $0.2389
+2026-04-01 00:47:14,330 - INFO -     24h change: -3.00%
+2026-04-01 00:47:14,330 - INFO -     Position size: 64.470490 contracts
+2026-04-01 00:47:14,330 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:47:14,331 - INFO -     Capital at risk: $15.40
+2026-04-01 00:47:14,331 - INFO -     Stop-loss: $0.2461 (+3%)
+2026-04-01 00:47:14,331 - INFO -     Take-profit: $0.2270 (-5%)
+2026-04-01 00:47:14,331 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 00:47:14,719 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63798080945
+2026-04-01 00:47:14,720 - INFO -    Shorted 64.470490 contracts
+2026-04-01 00:47:14,720 - INFO -    At price: $0.2389
+2026-04-01 00:47:14,720 - INFO -    Position value: $15.40 (1x)
+2026-04-01 00:47:14,722 - INFO - 📝 Position saved: ADA/USDT sell
+2026-04-01 00:47:16,536 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:47:16,536 - INFO - 🎯 PREPARING BINANCE SHORT: MKR
+2026-04-01 00:47:16,536 - INFO -     Current price: $1650.1000
+2026-04-01 00:47:16,536 - INFO -     24h change: -3.40%
+2026-04-01 00:47:16,536 - INFO -     Position size: 0.009334 contracts
+2026-04-01 00:47:16,536 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:47:16,536 - INFO -     Capital at risk: $15.40
+2026-04-01 00:47:16,536 - INFO -     Stop-loss: $1699.6030 (+3%)
+2026-04-01 00:47:16,537 - INFO -     Take-profit: $1567.5950 (-5%)
+2026-04-01 00:47:16,537 - INFO - 🚀 EXECUTING BINANCE SHORT: MKR/USDT
+2026-04-01 00:47:16,953 - ERROR - ❌ Binance trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-04-01 00:47:17,477 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:47:17,700 - INFO - 🎯 Opportunities found this cycle: 2
+2026-04-01 00:47:17,701 - INFO - 📊 STATUS: 0 Gemini, 2 Binance positions
+2026-04-01 00:47:17,701 - INFO - 💰 Daily P&L: $0.00, Total positions: 2/6
+2026-04-01 00:47:17,701 - INFO - ⏱️  Cycle 5 duration: 13.3 seconds
+2026-04-01 00:47:17,701 - INFO - 📈 Total opportunities found: 6
+2026-04-01 00:47:17,701 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 00:51:52,439 - INFO - ======================================================================
+2026-04-01 00:51:52,439 - INFO - 🚀 UPDATED ENHANCED BOT - FULL CAPITAL TRADING
+2026-04-01 00:51:52,439 - INFO - ======================================================================
+2026-04-01 00:51:52,439 - INFO - 💰 TOTAL CAPITAL: $685.67
+2026-04-01 00:51:52,439 - INFO - ♊ Gemini LONG: $531.65 (16 cryptos, 1.5% threshold)
+2026-04-01 00:51:52,439 - INFO - ₿ Binance SHORT: $154.02 (26 cryptos, 3.0% threshold)
+2026-04-01 00:51:52,439 - INFO - 📈 Position size: 10% of exchange capital
+2026-04-01 00:51:52,439 - INFO - ⚖️  Leverage: 1x (SAFE)
+2026-04-01 00:51:52,439 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5%
+2026-04-01 00:51:52,439 - INFO - 📈 Max positions per exchange: 3
+2026-04-01 00:51:52,439 - INFO - 📉 Daily loss limit: -5%
+2026-04-01 00:51:52,439 - INFO - ⏰ Scan interval: 300 seconds
+2026-04-01 00:51:52,439 - INFO - ======================================================================
+2026-04-01 00:51:52,439 - INFO - ⚡ TRADING BOTH EXCHANGES WITH ALL CAPITAL
+2026-04-01 00:51:52,439 - INFO - ⚡ Gemini: Buy dips (1.5%+ down)
+2026-04-01 00:51:52,439 - INFO - ⚡ Binance: Short drops (3.0%+ down)
+2026-04-01 00:51:52,439 - INFO - ======================================================================
+2026-04-01 00:51:52,439 - INFO - 📊 Loaded 0 Gemini, 2 Binance positions
+2026-04-01 00:51:52,439 - INFO - ✅ Gemini API keys loaded
+2026-04-01 00:51:52,439 - INFO - ✅ Binance API keys loaded
+2026-04-01 00:51:52,441 - INFO - ✅ Gemini exchange initialized
+2026-04-01 00:51:52,444 - INFO - ✅ Binance Futures exchange initialized
+2026-04-01 00:51:52,444 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-01 00:51:52,444 - INFO - ======================================================================
+2026-04-01 00:51:52,444 - INFO - 📊 FULL CAPITAL TRADING CYCLE - 00:51:52
+2026-04-01 00:51:52,444 - INFO - ======================================================================
+2026-04-01 00:51:54,346 - WARNING - 🚨 BINANCE STOP LOSS HIT: XRP/USDT:USDT at $1.3306 (SL: $0.0000)
+2026-04-01 00:51:54,346 - INFO - 🔄 CLOSING BINANCE POSITION: XRP/USDT:USDT (STOP_LOSS)
+2026-04-01 00:51:54,548 - ERROR - ❌ Error closing Binance position XRP/USDT:USDT: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 00:51:54,660 - INFO - 📉 Closed 1 positions
+2026-04-01 00:51:54,660 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG (1.5% threshold)...
+2026-04-01 00:52:06,341 - INFO - 🔍 Checking 26 cryptos on Binance for SHORT (3.0% threshold)...
+2026-04-01 00:52:06,918 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA down -3.00%
+2026-04-01 00:52:06,919 - INFO - 🎯 PREPARING BINANCE SHORT: ADA
+2026-04-01 00:52:06,919 - INFO -     Current price: $0.2390
+2026-04-01 00:52:06,919 - INFO -     24h change: -3.00%
+2026-04-01 00:52:06,919 - INFO -     Position size: 64.443515 contracts
+2026-04-01 00:52:06,919 - INFO -     Position value: $15.40 (with 1x leverage)
+2026-04-01 00:52:06,919 - INFO -     Capital at risk: $15.40
+2026-04-01 00:52:06,919 - INFO -     Stop-loss: $0.2462 (+3%)
+2026-04-01 00:52:06,919 - INFO -     Take-profit: $0.2270 (-5%)
+2026-04-01 00:52:06,919 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA/USDT
+2026-04-01 00:52:07,283 - INFO - ✅ BINANCE SHORT ORDER EXECUTED: 63798168110
+2026-04-01 00:52:07,283 - INFO -    Shorted 64.443515 contracts
+2026-04-01 00:52:07,283 - INFO -    At price: $0.2390
+2026-04-01 00:52:07,283 - INFO -    Position value: $15.40 (1x)
+2026-04-01 00:52:07,285 - INFO - 📝 Position saved: ADA/USDT sell
+2026-04-01 00:52:08,860 - INFO - ⚡ BINANCE SHORT SIGNAL: MKR down -3.40%
+2026-04-01 00:52:08,860 - WARNING - ⚠️  Cannot trade Binance: Max Binance positions reached (3)
+2026-04-01 00:52:09,313 - ERROR - ❌ Error checking MATIC on Binance: binance does not have market symbol MATIC/USDT
+2026-04-01 00:52:09,544 - INFO - 🎯 Opportunities found this cycle: 1
+2026-04-01 00:52:09,544 - INFO - 📊 STATUS: 0 Gemini, 3 Binance positions
+2026-04-01 00:52:09,544 - INFO - 💰 Daily P&L: $0.00, Total positions: 3/6
+2026-04-01 00:52:09,544 - INFO - ⏱️  Cycle 1 duration: 17.1 seconds
+2026-04-01 00:52:09,544 - INFO - 📈 Total opportunities found: 1
+2026-04-01 00:52:09,544 - INFO - ⏰ Next cycle in 300 seconds...

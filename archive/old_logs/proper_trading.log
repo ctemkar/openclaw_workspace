@@ -1,0 +1,695 @@
+2026-04-03 17:18:23,167 - INFO - 🚀 PROPER Trading Bot Initialized
+2026-04-03 17:18:23,167 - INFO - 📊 Trading parameters:
+2026-04-03 17:18:23,167 - INFO -    Min spread: 0.4%
+2026-04-03 17:18:23,167 - INFO -    Trade size: $50.0
+2026-04-03 17:18:23,167 - INFO -    Min profit: $0.1
+2026-04-03 17:18:23,167 - INFO - ✅ API KEYS LOADED - READY FOR REAL TRADING!
+2026-04-03 17:18:23,167 - INFO - ============================================================
+2026-04-03 17:18:23,167 - INFO - 🚀 STARTING PROPER TRADING BOT
+2026-04-03 17:18:23,167 - INFO - ============================================================
+2026-04-03 17:18:23,167 - INFO - 📊 Uses EXACT .env variable names:
+2026-04-03 17:18:23,167 - INFO -    • GEMINI_API_KEY, GEMINI_API_SECRET
+2026-04-03 17:18:23,167 - INFO -    • BINANCE_API_KEY, BINANCE_API_SECRET
+2026-04-03 17:18:23,167 - INFO - ============================================================
+2026-04-03 17:18:23,167 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:18:26,934 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211506665' has not increased since your last call to the Gemini API.
+2026-04-03 17:18:28,803 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:18:29,289 - INFO -    🎯 Found opportunity: ARB - 0.74% spread
+2026-04-03 17:18:29,289 - INFO -       Profit: $0.27
+2026-04-03 17:18:29,289 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:18:29,289 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:18:29,289 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:18:30,753 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:18:30,753 - INFO -       Profit: $0.16
+2026-04-03 17:18:30,753 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:18:30,753 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:18:30,753 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:03,156 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:19:03,481 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211543157' has not increased since your last call to the Gemini API.
+2026-04-03 17:19:03,607 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:19:04,050 - INFO -    🎯 Found opportunity: ARB - 0.74% spread
+2026-04-03 17:19:04,050 - INFO -       Profit: $0.27
+2026-04-03 17:19:04,050 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:19:04,050 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:19:04,050 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:04,622 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:19:04,623 - INFO -       Profit: $0.24
+2026-04-03 17:19:04,623 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:19:04,623 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:19:04,623 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:05,710 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:19:05,710 - INFO -       Profit: $0.16
+2026-04-03 17:19:05,710 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:19:05,710 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:19:05,710 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:37,917 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:19:38,181 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211577917' has not increased since your last call to the Gemini API.
+2026-04-03 17:19:38,309 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:19:38,816 - INFO -    🎯 Found opportunity: ARB - 0.74% spread
+2026-04-03 17:19:38,816 - INFO -       Profit: $0.27
+2026-04-03 17:19:38,817 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:19:38,817 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:19:38,817 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:39,346 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:19:39,346 - INFO -       Profit: $0.24
+2026-04-03 17:19:39,347 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:19:39,347 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:19:39,347 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:19:40,431 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:19:40,431 - INFO -       Profit: $0.27
+2026-04-03 17:19:40,431 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:19:40,432 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:19:40,432 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:12,691 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:20:12,958 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211612692' has not increased since your last call to the Gemini API.
+2026-04-03 17:20:13,078 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:20:13,641 - INFO -    🎯 Found opportunity: ARB - 0.74% spread
+2026-04-03 17:20:13,642 - INFO -       Profit: $0.27
+2026-04-03 17:20:13,642 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:20:13,642 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:20:13,642 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:14,201 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:20:14,201 - INFO -       Profit: $0.24
+2026-04-03 17:20:14,201 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:20:14,201 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:20:14,201 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:15,346 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:20:15,346 - INFO -       Profit: $0.27
+2026-04-03 17:20:15,346 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:20:15,346 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:20:15,346 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:47,555 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:20:47,828 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211647556' has not increased since your last call to the Gemini API.
+2026-04-03 17:20:47,955 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:20:48,477 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:20:48,477 - INFO -       Profit: $0.17
+2026-04-03 17:20:48,477 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:20:48,477 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:20:48,477 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:48,979 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:20:48,980 - INFO -       Profit: $0.24
+2026-04-03 17:20:48,980 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:20:48,980 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:20:48,980 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:20:50,059 - INFO -    🎯 Found opportunity: MANA - 0.85% spread
+2026-04-03 17:20:50,059 - INFO -       Profit: $0.32
+2026-04-03 17:20:50,059 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:20:50,059 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:20:50,059 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:22,365 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:21:22,633 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211682366' has not increased since your last call to the Gemini API.
+2026-04-03 17:21:22,755 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:21:23,267 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:21:23,267 - INFO -       Profit: $0.17
+2026-04-03 17:21:23,267 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:21:23,267 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:21:23,267 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:23,881 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:21:23,882 - INFO -       Profit: $0.24
+2026-04-03 17:21:23,882 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:21:23,882 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:21:23,882 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:25,004 - INFO -    🎯 Found opportunity: MANA - 0.85% spread
+2026-04-03 17:21:25,004 - INFO -       Profit: $0.32
+2026-04-03 17:21:25,004 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:21:25,004 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:21:25,004 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:57,337 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:21:57,602 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211717337' has not increased since your last call to the Gemini API.
+2026-04-03 17:21:57,727 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:21:58,407 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:21:58,407 - INFO -       Profit: $0.22
+2026-04-03 17:21:58,407 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:21:58,408 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:21:58,408 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:58,904 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:21:58,905 - INFO -       Profit: $0.24
+2026-04-03 17:21:58,905 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:21:58,905 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:21:58,905 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:21:59,904 - INFO -    🎯 Found opportunity: MANA - 0.85% spread
+2026-04-03 17:21:59,905 - INFO -       Profit: $0.32
+2026-04-03 17:21:59,905 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:21:59,905 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:21:59,905 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:22:32,110 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:22:32,379 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211752110' has not increased since your last call to the Gemini API.
+2026-04-03 17:22:32,509 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:22:33,105 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:22:33,106 - INFO -       Profit: $0.17
+2026-04-03 17:22:33,106 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:22:33,106 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:22:33,106 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:22:34,692 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:22:34,693 - INFO -       Profit: $0.27
+2026-04-03 17:22:34,693 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:22:34,693 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:22:34,693 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:23:06,921 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:23:07,191 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211786921' has not increased since your last call to the Gemini API.
+2026-04-03 17:23:07,316 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:23:07,828 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:23:07,828 - INFO -       Profit: $0.27
+2026-04-03 17:23:07,828 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:23:07,828 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:23:07,828 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:23:09,550 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:23:09,550 - INFO -       Profit: $0.27
+2026-04-03 17:23:09,550 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:23:09,551 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:23:09,551 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:23:41,744 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:23:42,009 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211821745' has not increased since your last call to the Gemini API.
+2026-04-03 17:23:42,138 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:23:42,667 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:23:42,667 - INFO -       Profit: $0.27
+2026-04-03 17:23:42,667 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:23:42,667 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:23:42,667 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:23:44,372 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:23:44,372 - INFO -       Profit: $0.27
+2026-04-03 17:23:44,372 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:23:44,372 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:23:44,372 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:23:46,632 - INFO - 📊 SUMMARY: 10 scans, 0 trades
+2026-04-03 17:23:46,632 - INFO - 💰 Total profit: $0.00
+2026-04-03 17:24:16,680 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:24:17,028 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211856681' has not increased since your last call to the Gemini API.
+2026-04-03 17:24:17,152 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:24:17,656 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:24:17,656 - INFO -       Profit: $0.27
+2026-04-03 17:24:17,656 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:24:17,656 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:24:17,656 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:24:19,218 - INFO -    🎯 Found opportunity: MANA - 0.74% spread
+2026-04-03 17:24:19,218 - INFO -       Profit: $0.27
+2026-04-03 17:24:19,219 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:24:19,219 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:24:19,219 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:24:51,599 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:24:51,949 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211891600' has not increased since your last call to the Gemini API.
+2026-04-03 17:24:52,080 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:24:52,573 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:24:52,573 - INFO -       Profit: $0.27
+2026-04-03 17:24:52,573 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:24:52,573 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:24:52,573 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:24:54,211 - INFO -    🎯 Found opportunity: MANA - 0.62% spread
+2026-04-03 17:24:54,211 - INFO -       Profit: $0.21
+2026-04-03 17:24:54,211 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:24:54,212 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:24:54,212 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:25:26,358 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:25:26,626 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211926358' has not increased since your last call to the Gemini API.
+2026-04-03 17:25:26,740 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:25:27,283 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:25:27,283 - INFO -       Profit: $0.27
+2026-04-03 17:25:27,283 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:25:27,283 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:25:27,283 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:25:28,834 - INFO -    🎯 Found opportunity: MANA - 0.62% spread
+2026-04-03 17:25:28,834 - INFO -       Profit: $0.21
+2026-04-03 17:25:28,834 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:25:28,834 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:25:28,834 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:26:01,055 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:26:01,323 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211961055' has not increased since your last call to the Gemini API.
+2026-04-03 17:26:01,449 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:26:01,960 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:26:01,960 - INFO -       Profit: $0.27
+2026-04-03 17:26:01,960 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:26:01,960 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:26:01,961 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:26:03,577 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:26:03,578 - INFO -       Profit: $0.16
+2026-04-03 17:26:03,578 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:26:03,578 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:26:03,578 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:26:35,720 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:26:35,983 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775211995720' has not increased since your last call to the Gemini API.
+2026-04-03 17:26:36,106 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:26:36,671 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:26:36,671 - INFO -       Profit: $0.22
+2026-04-03 17:26:36,671 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:26:36,672 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:26:36,672 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:26:38,350 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:26:38,350 - INFO -       Profit: $0.16
+2026-04-03 17:26:38,350 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:26:38,350 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:26:38,351 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:10,568 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:27:10,833 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212030568' has not increased since your last call to the Gemini API.
+2026-04-03 17:27:10,948 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:27:11,518 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:27:11,518 - INFO -       Profit: $0.22
+2026-04-03 17:27:11,518 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:27:11,518 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:27:11,518 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:12,096 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:27:12,096 - INFO -       Profit: $0.24
+2026-04-03 17:27:12,096 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:27:12,096 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:27:12,096 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:13,273 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:27:13,273 - INFO -       Profit: $0.16
+2026-04-03 17:27:13,273 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:27:13,273 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:27:13,273 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:45,437 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:27:45,705 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212065437' has not increased since your last call to the Gemini API.
+2026-04-03 17:27:45,827 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:27:46,366 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:27:46,367 - INFO -       Profit: $0.22
+2026-04-03 17:27:46,367 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:27:46,367 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:27:46,367 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:46,931 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:27:46,931 - INFO -       Profit: $0.24
+2026-04-03 17:27:46,931 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:27:46,931 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:27:46,931 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:27:47,996 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:27:47,996 - INFO -       Profit: $0.16
+2026-04-03 17:27:47,997 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:27:47,997 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:27:47,997 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:28:20,130 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:28:20,402 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212100130' has not increased since your last call to the Gemini API.
+2026-04-03 17:28:20,524 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:28:21,082 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:28:21,082 - INFO -       Profit: $0.22
+2026-04-03 17:28:21,082 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:28:21,082 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:28:21,082 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:28:21,592 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:28:21,592 - INFO -       Profit: $0.24
+2026-04-03 17:28:21,592 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:28:21,592 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:28:21,592 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:28:54,871 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:28:55,138 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212134872' has not increased since your last call to the Gemini API.
+2026-04-03 17:28:55,263 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:28:55,814 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:28:55,814 - INFO -       Profit: $0.22
+2026-04-03 17:28:55,814 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:28:55,815 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:28:55,815 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:29:29,723 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:29:29,987 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212169724' has not increased since your last call to the Gemini API.
+2026-04-03 17:29:30,114 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:29:30,613 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:29:30,613 - INFO -       Profit: $0.22
+2026-04-03 17:29:30,614 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:29:30,614 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:29:30,614 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:29:34,403 - INFO - 📊 SUMMARY: 20 scans, 0 trades
+2026-04-03 17:29:34,404 - INFO - 💰 Total profit: $0.00
+2026-04-03 17:30:04,478 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:30:04,747 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212204479' has not increased since your last call to the Gemini API.
+2026-04-03 17:30:04,860 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:30:05,379 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:30:05,379 - INFO -       Profit: $0.22
+2026-04-03 17:30:05,379 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:30:05,379 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:30:05,379 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:30:39,127 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:30:39,393 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212239128' has not increased since your last call to the Gemini API.
+2026-04-03 17:30:39,521 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:30:40,083 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:30:40,083 - INFO -       Profit: $0.27
+2026-04-03 17:30:40,084 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:30:40,084 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:30:40,084 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:31:14,071 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:31:14,338 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212274072' has not increased since your last call to the Gemini API.
+2026-04-03 17:31:14,465 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:31:15,023 - INFO -    🎯 Found opportunity: ARB - 0.85% spread
+2026-04-03 17:31:15,023 - INFO -       Profit: $0.33
+2026-04-03 17:31:15,024 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:31:15,024 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:31:15,024 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:31:48,853 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:31:49,119 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212308854' has not increased since your last call to the Gemini API.
+2026-04-03 17:31:49,249 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:31:49,808 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:31:49,809 - INFO -       Profit: $0.27
+2026-04-03 17:31:49,809 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:31:49,809 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:31:49,809 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:32:23,719 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:32:23,990 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212343720' has not increased since your last call to the Gemini API.
+2026-04-03 17:32:24,115 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:32:24,640 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:32:24,640 - INFO -       Profit: $0.27
+2026-04-03 17:32:24,640 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:32:24,640 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:32:24,640 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:32:58,457 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:32:58,722 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212378457' has not increased since your last call to the Gemini API.
+2026-04-03 17:32:58,852 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:32:59,396 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:32:59,397 - INFO -       Profit: $0.27
+2026-04-03 17:32:59,397 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:32:59,397 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:32:59,397 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:33:33,234 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:33:33,498 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212413234' has not increased since your last call to the Gemini API.
+2026-04-03 17:33:33,630 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:33:34,147 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:33:34,148 - INFO -       Profit: $0.27
+2026-04-03 17:33:34,148 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:33:34,148 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:33:34,148 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:34:08,091 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:34:08,357 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212448092' has not increased since your last call to the Gemini API.
+2026-04-03 17:34:08,482 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:34:09,015 - INFO -    🎯 Found opportunity: ARB - 0.75% spread
+2026-04-03 17:34:09,015 - INFO -       Profit: $0.27
+2026-04-03 17:34:09,015 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:34:09,016 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:34:09,016 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:34:42,940 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:34:43,216 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212482940' has not increased since your last call to the Gemini API.
+2026-04-03 17:34:43,348 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:34:43,851 - INFO -    🎯 Found opportunity: ARB - 0.85% spread
+2026-04-03 17:34:43,851 - INFO -       Profit: $0.33
+2026-04-03 17:34:43,851 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:34:43,851 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:34:43,851 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:35:17,709 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:35:18,041 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212517709' has not increased since your last call to the Gemini API.
+2026-04-03 17:35:18,163 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:35:18,634 - INFO -    🎯 Found opportunity: ARB - 0.85% spread
+2026-04-03 17:35:18,634 - INFO -       Profit: $0.33
+2026-04-03 17:35:18,634 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:35:18,634 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:35:18,634 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:35:22,288 - INFO - 📊 SUMMARY: 30 scans, 0 trades
+2026-04-03 17:35:22,288 - INFO - 💰 Total profit: $0.00
+2026-04-03 17:35:52,363 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:35:52,638 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212552365' has not increased since your last call to the Gemini API.
+2026-04-03 17:35:52,758 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:35:53,324 - INFO -    🎯 Found opportunity: ARB - 0.96% spread
+2026-04-03 17:35:53,325 - INFO -       Profit: $0.38
+2026-04-03 17:35:53,325 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:35:53,325 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:35:53,325 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:36:27,312 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:36:27,577 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212587312' has not increased since your last call to the Gemini API.
+2026-04-03 17:36:27,704 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:36:28,203 - INFO -    🎯 Found opportunity: ARB - 0.96% spread
+2026-04-03 17:36:28,204 - INFO -       Profit: $0.38
+2026-04-03 17:36:28,204 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:36:28,204 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:36:28,204 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:37:02,137 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:37:02,414 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212622138' has not increased since your last call to the Gemini API.
+2026-04-03 17:37:02,543 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:37:03,034 - INFO -    🎯 Found opportunity: ARB - 0.85% spread
+2026-04-03 17:37:03,035 - INFO -       Profit: $0.33
+2026-04-03 17:37:03,035 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:37:03,035 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:37:03,035 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:37:36,972 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:37:37,239 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212656973' has not increased since your last call to the Gemini API.
+2026-04-03 17:37:37,365 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:37:37,925 - INFO -    🎯 Found opportunity: ARB - 0.96% spread
+2026-04-03 17:37:37,926 - INFO -       Profit: $0.38
+2026-04-03 17:37:37,926 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:37:37,926 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:37:37,926 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:38:11,828 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:38:12,093 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212691828' has not increased since your last call to the Gemini API.
+2026-04-03 17:38:12,216 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:38:12,777 - INFO -    🎯 Found opportunity: ARB - 0.96% spread
+2026-04-03 17:38:12,777 - INFO -       Profit: $0.38
+2026-04-03 17:38:12,777 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:38:12,777 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:38:12,777 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:38:46,643 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:38:46,936 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212726643' has not increased since your last call to the Gemini API.
+2026-04-03 17:38:47,067 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:38:47,664 - INFO -    🎯 Found opportunity: ARB - 0.96% spread
+2026-04-03 17:38:47,665 - INFO -       Profit: $0.38
+2026-04-03 17:38:47,665 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:38:47,665 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:38:47,665 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:39:21,357 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:39:21,628 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212761358' has not increased since your last call to the Gemini API.
+2026-04-03 17:39:21,749 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:39:22,238 - INFO -    🎯 Found opportunity: ARB - 1.07% spread
+2026-04-03 17:39:22,238 - INFO -       Profit: $0.44
+2026-04-03 17:39:22,238 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:39:22,238 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:39:22,238 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:39:56,152 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:39:56,421 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212796153' has not increased since your last call to the Gemini API.
+2026-04-03 17:39:56,544 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:39:57,093 - INFO -    🎯 Found opportunity: ARB - 1.07% spread
+2026-04-03 17:39:57,093 - INFO -       Profit: $0.44
+2026-04-03 17:39:57,093 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:39:57,093 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:39:57,093 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:40:30,789 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:40:31,079 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212830790' has not increased since your last call to the Gemini API.
+2026-04-03 17:40:31,204 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:40:31,732 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:40:31,733 - INFO -       Profit: $0.22
+2026-04-03 17:40:31,733 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:40:31,733 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:40:31,733 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:41:05,641 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:41:05,913 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212865641' has not increased since your last call to the Gemini API.
+2026-04-03 17:41:06,040 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:41:06,537 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:41:06,537 - INFO -       Profit: $0.22
+2026-04-03 17:41:06,538 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:41:06,538 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:41:06,538 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:41:10,339 - INFO - 📊 SUMMARY: 40 scans, 0 trades
+2026-04-03 17:41:10,339 - INFO - 💰 Total profit: $0.00
+2026-04-03 17:41:40,389 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:41:40,712 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212900390' has not increased since your last call to the Gemini API.
+2026-04-03 17:41:40,839 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:41:41,321 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:41:41,321 - INFO -       Profit: $0.22
+2026-04-03 17:41:41,321 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:41:41,321 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:41:41,321 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:42:15,397 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:42:15,661 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212935398' has not increased since your last call to the Gemini API.
+2026-04-03 17:42:15,792 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:42:16,454 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:42:16,455 - INFO -       Profit: $0.17
+2026-04-03 17:42:16,455 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:42:16,455 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:42:16,455 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:42:50,160 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:42:50,427 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775212970161' has not increased since your last call to the Gemini API.
+2026-04-03 17:42:50,547 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:42:51,108 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:42:51,108 - INFO -       Profit: $0.17
+2026-04-03 17:42:51,108 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:42:51,108 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:42:51,108 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:43:24,966 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:43:25,231 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213004966' has not increased since your last call to the Gemini API.
+2026-04-03 17:43:25,360 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:43:25,918 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:43:25,918 - INFO -       Profit: $0.11
+2026-04-03 17:43:25,918 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:43:25,918 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:43:25,918 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:43:59,748 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:44:00,016 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213039749' has not increased since your last call to the Gemini API.
+2026-04-03 17:44:00,140 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:44:00,658 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:44:00,659 - INFO -       Profit: $0.11
+2026-04-03 17:44:00,659 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:44:00,659 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:44:00,659 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:44:34,558 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:44:34,823 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213074559' has not increased since your last call to the Gemini API.
+2026-04-03 17:44:34,949 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:44:35,506 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:44:35,507 - INFO -       Profit: $0.17
+2026-04-03 17:44:35,507 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:44:35,507 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:44:35,507 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:44:37,117 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:44:37,117 - INFO -       Profit: $0.16
+2026-04-03 17:44:37,117 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:44:37,118 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:44:37,118 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:45:09,441 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:45:09,715 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213109442' has not increased since your last call to the Gemini API.
+2026-04-03 17:45:09,839 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:45:10,332 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:45:10,333 - INFO -       Profit: $0.17
+2026-04-03 17:45:10,333 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:45:10,333 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:45:10,333 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:45:12,011 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:45:12,011 - INFO -       Profit: $0.16
+2026-04-03 17:45:12,011 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:45:12,011 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:45:12,011 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:45:44,288 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:45:44,558 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213144288' has not increased since your last call to the Gemini API.
+2026-04-03 17:45:44,683 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:45:45,251 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:45:45,251 - INFO -       Profit: $0.11
+2026-04-03 17:45:45,251 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:45:45,251 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:45:45,251 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:45:46,936 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:45:46,937 - INFO -       Profit: $0.16
+2026-04-03 17:45:46,937 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:45:46,937 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:45:46,937 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:46:19,251 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:46:19,526 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213179252' has not increased since your last call to the Gemini API.
+2026-04-03 17:46:19,656 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:46:20,179 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:46:20,179 - INFO -       Profit: $0.11
+2026-04-03 17:46:20,179 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:46:20,179 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:46:20,179 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:46:21,887 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:46:21,887 - INFO -       Profit: $0.16
+2026-04-03 17:46:21,887 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:46:21,888 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:46:21,888 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:46:54,155 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:46:54,421 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213214156' has not increased since your last call to the Gemini API.
+2026-04-03 17:46:54,548 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:46:55,190 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:46:55,190 - INFO -       Profit: $0.11
+2026-04-03 17:46:55,190 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:46:55,191 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:46:55,191 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:46:56,723 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:46:56,724 - INFO -       Profit: $0.16
+2026-04-03 17:46:56,724 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:46:56,724 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:46:56,724 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:46:58,990 - INFO - 📊 SUMMARY: 50 scans, 0 trades
+2026-04-03 17:46:58,990 - INFO - 💰 Total profit: $0.00
+2026-04-03 17:47:29,001 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:47:29,280 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213249002' has not increased since your last call to the Gemini API.
+2026-04-03 17:47:29,408 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:47:29,882 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:47:29,882 - INFO -       Profit: $0.11
+2026-04-03 17:47:29,882 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:47:29,883 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:47:29,883 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:47:31,537 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:47:31,538 - INFO -       Profit: $0.16
+2026-04-03 17:47:31,538 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:47:31,538 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:47:31,538 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:48:03,758 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:48:04,022 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213283759' has not increased since your last call to the Gemini API.
+2026-04-03 17:48:04,152 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:48:04,691 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:48:04,691 - INFO -       Profit: $0.11
+2026-04-03 17:48:04,691 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:48:04,692 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:48:04,692 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:48:06,359 - INFO -    🎯 Found opportunity: MANA - 0.51% spread
+2026-04-03 17:48:06,359 - INFO -       Profit: $0.16
+2026-04-03 17:48:06,359 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:48:06,359 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:48:06,359 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:48:38,444 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:48:38,756 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213318445' has not increased since your last call to the Gemini API.
+2026-04-03 17:48:38,888 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:48:39,405 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:48:39,405 - INFO -       Profit: $0.11
+2026-04-03 17:48:39,405 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:48:39,405 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:48:39,405 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:49:14,205 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:49:14,470 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213354205' has not increased since your last call to the Gemini API.
+2026-04-03 17:49:14,603 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:49:15,170 - INFO -    🎯 Found opportunity: ARB - 0.43% spread
+2026-04-03 17:49:15,170 - INFO -       Profit: $0.11
+2026-04-03 17:49:15,171 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:49:15,171 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:49:15,171 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:49:48,883 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:49:49,153 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213388884' has not increased since your last call to the Gemini API.
+2026-04-03 17:49:49,281 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:49:49,886 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:49:49,887 - INFO -       Profit: $0.17
+2026-04-03 17:49:49,887 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:49:49,887 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:49:49,887 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:49:50,410 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:49:50,411 - INFO -       Profit: $0.24
+2026-04-03 17:49:50,411 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:49:50,411 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:49:50,411 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:50:23,765 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:50:24,077 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213423766' has not increased since your last call to the Gemini API.
+2026-04-03 17:50:24,205 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:50:24,799 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:50:24,799 - INFO -       Profit: $0.22
+2026-04-03 17:50:24,800 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:50:24,800 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:50:24,800 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:50:25,303 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:50:25,303 - INFO -       Profit: $0.24
+2026-04-03 17:50:25,303 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:50:25,303 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:50:25,304 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:50:58,652 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:50:58,924 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213458652' has not increased since your last call to the Gemini API.
+2026-04-03 17:50:59,046 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:50:59,579 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:50:59,579 - INFO -       Profit: $0.17
+2026-04-03 17:50:59,579 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:50:59,579 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:50:59,580 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:51:00,136 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:51:00,136 - INFO -       Profit: $0.24
+2026-04-03 17:51:00,136 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:51:00,136 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:51:00,136 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:51:33,451 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:51:33,722 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213493452' has not increased since your last call to the Gemini API.
+2026-04-03 17:51:33,844 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:51:34,351 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:51:34,352 - INFO -       Profit: $0.22
+2026-04-03 17:51:34,352 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:51:34,352 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:51:34,352 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:51:34,902 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:51:34,902 - INFO -       Profit: $0.24
+2026-04-03 17:51:34,902 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:51:34,903 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:51:34,903 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:52:08,293 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:52:08,558 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213528294' has not increased since your last call to the Gemini API.
+2026-04-03 17:52:08,678 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:52:09,238 - INFO -    🎯 Found opportunity: ARB - 0.64% spread
+2026-04-03 17:52:09,239 - INFO -       Profit: $0.22
+2026-04-03 17:52:09,239 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:52:09,239 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:52:09,239 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:52:09,782 - INFO -    🎯 Found opportunity: GALA - 0.68% spread
+2026-04-03 17:52:09,782 - INFO -       Profit: $0.24
+2026-04-03 17:52:09,782 - INFO -       Strategy: BUY Gemini, SELL Binance
+2026-04-03 17:52:09,782 - WARNING -    ⚠️ Insufficient balance on gemini
+2026-04-03 17:52:09,782 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:52:43,072 - INFO - 🔍 Scan #1: Checking 8 cryptos
+2026-04-03 17:52:43,343 - ERROR -    ❌ Error checking gemini balance: gemini Nonce '1775213563072' has not increased since your last call to the Gemini API.
+2026-04-03 17:52:43,468 - INFO -    BINANCE: $0.00 USDT available
+2026-04-03 17:52:44,027 - INFO -    🎯 Found opportunity: ARB - 0.53% spread
+2026-04-03 17:52:44,027 - INFO -       Profit: $0.17
+2026-04-03 17:52:44,027 - INFO -       Strategy: BUY Binance, SELL Gemini
+2026-04-03 17:52:44,027 - WARNING -    ⚠️ Insufficient balance on binance
+2026-04-03 17:52:44,027 - WARNING -       Need: $50.00, Have: $0.00
+2026-04-03 17:52:47,891 - INFO - 📊 SUMMARY: 60 scans, 0 trades
+2026-04-03 17:52:47,891 - INFO - 💰 Total profit: $0.00

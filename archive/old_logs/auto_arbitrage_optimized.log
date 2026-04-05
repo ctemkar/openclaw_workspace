@@ -1,0 +1,39 @@
+2026-04-03 02:48:04,083 - INFO - ✅ Gemini exchange initialized for auto-trading
+2026-04-03 02:48:04,086 - INFO - ✅ Binance exchange initialized for auto-trading
+2026-04-03 02:48:04,086 - INFO - ======================================================================
+2026-04-03 02:48:04,086 - INFO - 🤖 AUTO ARBITRAGE BOT STARTED
+2026-04-03 02:48:04,086 - INFO - Monitoring 10 cryptos
+2026-04-03 02:48:04,086 - INFO - Min spread: 0.5%
+2026-04-03 02:48:04,086 - INFO - Min profit: $1.0
+2026-04-03 02:48:04,086 - INFO - Trade size: 4.0% of capital
+2026-04-03 02:48:04,086 - INFO - ======================================================================
+2026-04-03 02:48:04,086 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 1 - 02:48:04
+2026-04-03 02:48:11,294 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 02:48:12,950 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 02:48:13,479 - INFO - 📊 Market Status:
+2026-04-03 02:48:13,977 - INFO -   BTC: G=$66974.18, B=$66980.29, Spread=0.01%
+2026-04-03 02:48:14,494 - INFO -   ETH: G=$2061.00, B=$2060.62, Spread=0.02%
+2026-04-03 02:48:15,053 - INFO -   DOT: G=$1.23, B=$1.23, Spread=0.02%
+2026-04-03 02:48:15,053 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 02:48:15,054 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 02:48:45,126 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 2 - 02:48:45
+2026-04-03 02:48:47,256 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 02:48:49,838 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 02:48:50,226 - INFO - 📊 Market Status:
+2026-04-03 02:48:50,725 - INFO -   BTC: G=$66950.94, B=$66951.34, Spread=0.00%
+2026-04-03 02:48:51,274 - INFO -   ETH: G=$2061.00, B=$2060.11, Spread=0.04%
+2026-04-03 02:48:51,833 - INFO -   DOT: G=$1.23, B=$1.23, Spread=0.02%
+2026-04-03 02:48:51,833 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 02:48:51,833 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 02:49:21,839 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 3 - 02:49:21
+2026-04-03 02:49:23,794 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 02:49:25,468 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 02:49:25,972 - INFO - 📊 Market Status:
+2026-04-03 02:49:26,534 - INFO -   BTC: G=$66940.25, B=$66943.19, Spread=0.00%
+2026-04-03 02:49:27,026 - INFO -   ETH: G=$2061.00, B=$2059.91, Spread=0.05%
+2026-04-03 02:49:27,602 - INFO -   DOT: G=$1.23, B=$1.23, Spread=0.02%
+2026-04-03 02:49:27,602 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 02:49:27,602 - INFO - 💤 Next scan in 30 seconds...

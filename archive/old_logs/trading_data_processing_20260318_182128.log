@@ -1,0 +1,71 @@
+=== Trading Data Processing Started at Wed Mar 18 18:21:28 +07 2026 ===
+Checking trading server status...
+Fetching and processing trading data...
+Fetching trading data...
+
+TRADING SYSTEM DATA REPORT
+==========================
+Generated: 2026-03-18 18:21:28 
+
+SYSTEM STATUS
+-------------
+Status: running
+Capital: $1000.00
+Last Analysis: 2026-03-18T18:20:10.275693
+Analysis Schedule: hourly
+Trading Pairs: BTC/USD, ETH/USD
+Risk Parameters:
+  • Stop-loss: 5.0%
+  • Take-profit: 10.0%
+  • Max trades/day: 2
+
+TRADING ACTIVITY
+----------------
+Total Trades: 12
+Buy Trades: 11 (91.7%)
+Sell Trades: 1 (8.3%)
+Filled Trades: 10 (83.3%)
+Pending Trades: 2
+
+MODEL/STRATEGY BREAKDOWN
+-----------------------
+Gemini-Pro:
+  • Total: 2
+  • Buys: 2
+  • Sells: 0
+Gemini:
+  • Total: 5
+  • Buys: 5
+  • Sells: 0
+LLM_Analysis_SOL_USD:
+  • Total: 1
+  • Buys: 0
+  • Sells: 1
+LLM_Analysis_ETH_USD:
+  • Total: 1
+  • Buys: 1
+  • Sells: 0
+LLM_Analysis_BTC_USD:
+  • Total: 1
+  • Buys: 1
+  • Sells: 0
+unknown:
+  • Total: 2
+  • Buys: 2
+  • Sells: 0
+
+HEALTH ASSESSMENT
+-----------------
+ISSUES DETECTED:
+  1. Heavy buy bias (91.7%)
+
+RECOMMENDATIONS
+---------------
+1. Address the issues listed above
+
+
+Report saved to: trading_report_20260318_182128.txt
+Latest summary saved to: trading_summary_latest.txt
+Running trading analysis...
+Analysis result: {"message":"Analysis completed","success":true,"timestamp":"2026-03-18T18:21:36.402799"}
+Generating final summary...

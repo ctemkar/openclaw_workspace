@@ -1,0 +1,70 @@
+2026-03-31 17:20:07,738 - INFO - ✅ Gemini API keys loaded
+2026-03-31 17:20:07,739 - INFO - ======================================================================
+2026-03-31 17:20:07,739 - INFO - 🚀 FIXED TRADING BOT STARTED
+2026-03-31 17:20:07,739 - INFO - 💰 Real Portfolio: ~$533.83
+2026-03-31 17:20:07,740 - INFO - 🎯 Trading Capital: $100.00
+2026-03-31 17:20:07,740 - INFO - ⚖️ Risk: 2.0% per trade ($2.00)
+2026-03-31 17:20:07,740 - INFO - 🛑 Stop-loss: 5.0%
+2026-03-31 17:20:07,740 - INFO - 🎯 Take-profit: 10.0%
+2026-03-31 17:20:07,740 - INFO - 📊 Max trades/day: 999
+2026-03-31 17:20:07,740 - INFO - ======================================================================
+2026-03-31 17:20:07,740 - INFO - 
+📊 TRADING CYCLE - 17:20:07
+2026-03-31 17:20:12,003 - INFO - 💰 REAL Portfolio: $530.87
+2026-03-31 17:20:12,003 - INFO -    Cash: $134.27
+2026-03-31 17:20:12,003 - INFO -    BTC: 0.005981 ($396.60)
+2026-03-31 17:20:12,567 - ERROR - ❌ Failed to check BTC/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,068 - ERROR - ❌ Failed to check ETH/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,614 - ERROR - ❌ Failed to check SOL/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,614 - INFO - 📈 Today's trades: 0/999
+2026-03-31 17:20:13,614 - INFO - ⏰ Next cycle in 5 minutes (Cycle 1)...
+2026-03-31 17:24:19,863 - INFO - ✅ Gemini API keys loaded
+2026-03-31 17:24:19,864 - INFO - ======================================================================
+2026-03-31 17:24:19,864 - INFO - 🚀 FIXED TRADING BOT STARTED
+2026-03-31 17:24:19,864 - INFO - 💰 Real Portfolio: ~$533.83
+2026-03-31 17:24:19,864 - INFO - 🎯 Trading Capital: $100.00
+2026-03-31 17:24:19,864 - INFO - ⚖️ Risk: 2.0% per trade ($2.00)
+2026-03-31 17:24:19,864 - INFO - 🛑 Stop-loss: 5.0%
+2026-03-31 17:24:19,864 - INFO - 🎯 Take-profit: 10.0%
+2026-03-31 17:24:19,864 - INFO - 📊 Max trades/day: 999
+2026-03-31 17:24:19,864 - INFO - ======================================================================
+2026-03-31 17:24:19,864 - INFO - 
+📊 TRADING CYCLE - 17:24:19
+2026-03-31 17:24:23,828 - INFO - 💰 REAL Portfolio: $531.19
+2026-03-31 17:24:23,829 - INFO -    Cash: $134.27
+2026-03-31 17:24:23,829 - INFO -    BTC: 0.005981 ($396.92)
+2026-03-31 17:24:24,398 - ERROR - ❌ Failed to check BTC/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:24:24,950 - ERROR - ❌ Failed to check ETH/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:24:25,473 - ERROR - ❌ Failed to check SOL/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:24:25,474 - INFO - 📈 Today's trades: 0/999
+2026-03-31 17:24:25,474 - INFO - ⏰ Next cycle in 5 minutes (Cycle 1)...
+2026-03-31 17:24:54,782 - INFO - ✅ Gemini API keys loaded
+2026-03-31 17:24:54,783 - INFO - ======================================================================
+2026-03-31 17:24:54,783 - INFO - 🚀 FIXED TRADING BOT STARTED
+2026-03-31 17:24:54,783 - INFO - 💰 Real Portfolio: ~$533.83
+2026-03-31 17:24:54,783 - INFO - 🎯 Trading Capital: $100.00
+2026-03-31 17:24:54,783 - INFO - ⚖️ Risk: 2.0% per trade ($2.00)
+2026-03-31 17:24:54,783 - INFO - 🛑 Stop-loss: 5.0%
+2026-03-31 17:24:54,783 - INFO - 🎯 Take-profit: 10.0%
+2026-03-31 17:24:54,783 - INFO - 📊 Max trades/day: 999
+2026-03-31 17:24:54,783 - INFO - ======================================================================
+2026-03-31 17:24:54,783 - INFO - 
+📊 TRADING CYCLE - 17:24:54
+2026-03-31 17:24:58,856 - INFO - 💰 REAL Portfolio: $531.23
+2026-03-31 17:24:58,856 - INFO -    Cash: $134.27
+2026-03-31 17:24:58,856 - INFO -    BTC: 0.005981 ($396.96)
+2026-03-31 17:24:59,430 - INFO - 🔍 BTC/USD: $66369.75 (+0.0%)
+2026-03-31 17:24:59,988 - INFO - 🔍 ETH/USD: $2025.59 (+0.0%)
+2026-03-31 17:25:00,559 - INFO - 🔍 SOL/USD: $80.76 (+0.0%)
+2026-03-31 17:25:00,559 - INFO - 📈 Today's trades: 0/999
+2026-03-31 17:25:00,559 - INFO - ⏰ Next cycle in 5 minutes (Cycle 1)...
+2026-03-31 17:30:00,560 - INFO - 
+📊 TRADING CYCLE - 17:30:00
+2026-03-31 17:30:02,019 - INFO - 💰 REAL Portfolio: $530.95
+2026-03-31 17:30:02,019 - INFO -    Cash: $134.27
+2026-03-31 17:30:02,019 - INFO -    BTC: 0.005981 ($396.67)
+2026-03-31 17:30:02,525 - INFO - 🔍 BTC/USD: $66322.29 (+0.0%)
+2026-03-31 17:30:03,023 - INFO - 🔍 ETH/USD: $2023.62 (+0.0%)
+2026-03-31 17:30:03,594 - INFO - 🔍 SOL/USD: $80.71 (+0.0%)
+2026-03-31 17:30:03,595 - INFO - 📈 Today's trades: 0/999
+2026-03-31 17:30:03,595 - INFO - ⏰ Next cycle in 5 minutes (Cycle 2)...

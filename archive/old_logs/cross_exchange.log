@@ -1,0 +1,337 @@
+2026-04-01 19:53:24,286 - INFO - ======================================================================
+2026-04-01 19:53:24,286 - INFO - 🚀 REAL 26-CRYPTO CROSS-EXCHANGE TRADING BOT
+2026-04-01 19:53:24,286 - INFO - 📈 STRATEGY: Binance signals → Gemini LONG / Binance SHORT
+2026-04-01 19:53:24,286 - INFO - ======================================================================
+2026-04-01 19:53:24,286 - INFO - ✅ Gemini API keys loaded
+2026-04-01 19:53:24,286 - INFO - ✅ Binance API keys loaded
+2026-04-01 19:53:24,288 - INFO - ✅ Gemini exchange initialized
+2026-04-01 19:53:24,291 - INFO - ✅ Binance Futures exchange initialized
+2026-04-01 19:53:24,291 - INFO - ♊ Gemini LONG: 10 available cryptos ($434.35 capital)
+2026-04-01 19:53:24,291 - INFO - ₿ Binance SHORT: 23 cryptos ($36.70 capital, 1x)
+2026-04-01 19:53:24,291 - INFO - 💰 Position size: 5% of capital
+2026-04-01 19:53:24,291 - INFO - 🎯 Thresholds: ±1.0% price change
+2026-04-01 19:53:24,291 - INFO - ⚡ USING BINANCE AS UNIFIED SIGNAL SOURCE!
+2026-04-01 19:53:24,291 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-01 19:53:24,291 - INFO - ======================================================================
+2026-04-01 19:53:24,291 - INFO - 📊 CROSS-EXCHANGE TRADING CYCLE - 19:53:24
+2026-04-01 19:53:24,291 - INFO - ======================================================================
+2026-04-01 19:53:24,291 - INFO - 🔍 Checking 23 cryptos on Binance for signals...
+2026-04-01 19:53:26,446 - INFO - ⚡ BINANCE SHORT SIGNAL: BTC up 2.55%
+2026-04-01 19:53:26,446 - INFO - 🚀 EXECUTING BINANCE SHORT: BTC
+2026-04-01 19:53:26,446 - INFO -     Binance signal: up 2.55% at $68391.4000
+2026-04-01 19:53:26,446 - INFO -     Position size: 0.000027 BTC ($1.84 with 1x)
+2026-04-01 19:53:26,446 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:26,446 - INFO -     Adjusted to minimum: 0.000073 BTC
+2026-04-01 19:53:26,446 - ERROR - ❌ Binance SHORT execution failed: binance amount of BTC/USDT:USDT must be greater than minimum amount precision of 0.001
+2026-04-01 19:53:26,561 - INFO - ⚡ BINANCE SHORT SIGNAL: ETH up 4.00%
+2026-04-01 19:53:26,561 - INFO - 🚀 EXECUTING BINANCE SHORT: ETH
+2026-04-01 19:53:26,561 - INFO -     Binance signal: up 4.00% at $2130.1300
+2026-04-01 19:53:26,561 - INFO -     Position size: 0.000861 ETH ($1.84 with 1x)
+2026-04-01 19:53:26,561 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:26,561 - INFO -     Adjusted to minimum: 0.002347 ETH
+2026-04-01 19:53:26,757 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:53:26,871 - INFO - ⚡ BINANCE SHORT SIGNAL: SOL up 2.83%
+2026-04-01 19:53:26,872 - INFO - 🚀 EXECUTING BINANCE SHORT: SOL
+2026-04-01 19:53:26,872 - INFO -     Binance signal: up 2.83% at $82.9600
+2026-04-01 19:53:26,872 - INFO -     Position size: 0.022119 SOL ($1.84 with 1x)
+2026-04-01 19:53:26,872 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:26,872 - INFO -     Adjusted to minimum: 0.060270 SOL
+2026-04-01 19:53:27,078 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:27,190 - INFO - ⚡ BINANCE SHORT SIGNAL: XRP up 3.13%
+2026-04-01 19:53:27,190 - INFO - 🚀 EXECUTING BINANCE SHORT: XRP
+2026-04-01 19:53:27,190 - INFO -     Binance signal: up 3.13% at $1.3558
+2026-04-01 19:53:27,190 - INFO -     Position size: 1.353444 XRP ($1.84 with 1x)
+2026-04-01 19:53:27,190 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:27,191 - INFO -     Adjusted to minimum: 3.687860 XRP
+2026-04-01 19:53:27,448 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:27,558 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA up 3.62%
+2026-04-01 19:53:27,558 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA
+2026-04-01 19:53:27,558 - INFO -     Binance signal: up 3.62% at $0.2491
+2026-04-01 19:53:27,558 - INFO -     Position size: 7.366519 ADA ($1.84 with 1x)
+2026-04-01 19:53:27,558 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:27,558 - INFO -     Adjusted to minimum: 20.072260 ADA
+2026-04-01 19:53:27,784 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:27,896 - INFO - ⚡ BINANCE SHORT SIGNAL: DOT up 3.06%
+2026-04-01 19:53:27,896 - INFO - 🚀 EXECUTING BINANCE SHORT: DOT
+2026-04-01 19:53:27,896 - INFO -     Binance signal: up 3.06% at $1.2800
+2026-04-01 19:53:27,896 - INFO -     Position size: 1.433594 DOT ($1.84 with 1x)
+2026-04-01 19:53:27,896 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:27,896 - INFO -     Adjusted to minimum: 3.906250 DOT
+2026-04-01 19:53:28,172 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:28,283 - INFO - ⚡ BINANCE SHORT SIGNAL: DOGE up 2.69%
+2026-04-01 19:53:28,284 - INFO - 🚀 EXECUTING BINANCE SHORT: DOGE
+2026-04-01 19:53:28,284 - INFO -     Binance signal: up 2.69% at $0.0927
+2026-04-01 19:53:28,284 - INFO -     Position size: 19.786500 DOGE ($1.84 with 1x)
+2026-04-01 19:53:28,284 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:28,284 - INFO -     Adjusted to minimum: 53.914169 DOGE
+2026-04-01 19:53:28,561 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:28,671 - INFO - ⚡ BINANCE SHORT SIGNAL: AVAX up 5.29%
+2026-04-01 19:53:28,671 - INFO - 🚀 EXECUTING BINANCE SHORT: AVAX
+2026-04-01 19:53:28,671 - INFO -     Binance signal: up 5.29% at $9.2390
+2026-04-01 19:53:28,671 - INFO -     Position size: 0.198615 AVAX ($1.84 with 1x)
+2026-04-01 19:53:28,671 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:28,671 - INFO -     Adjusted to minimum: 0.541184 AVAX
+2026-04-01 19:53:28,671 - ERROR - ❌ Binance SHORT execution failed: binance amount of AVAX/USDT:USDT must be greater than minimum amount precision of 1
+2026-04-01 19:53:28,783 - INFO - ⚡ BINANCE SHORT SIGNAL: LINK up 4.25%
+2026-04-01 19:53:28,783 - INFO - 🚀 EXECUTING BINANCE SHORT: LINK
+2026-04-01 19:53:28,783 - INFO -     Binance signal: up 4.25% at $8.9990
+2026-04-01 19:53:28,783 - INFO -     Position size: 0.203912 LINK ($1.84 with 1x)
+2026-04-01 19:53:28,783 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:28,783 - INFO -     Adjusted to minimum: 0.555617 LINK
+2026-04-01 19:53:28,986 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:53:29,095 - INFO - ⚡ BINANCE SHORT SIGNAL: UNI up 3.47%
+2026-04-01 19:53:29,095 - INFO - 🚀 EXECUTING BINANCE SHORT: UNI
+2026-04-01 19:53:29,095 - INFO -     Binance signal: up 3.47% at $3.6050
+2026-04-01 19:53:29,095 - INFO -     Position size: 0.509015 UNI ($1.84 with 1x)
+2026-04-01 19:53:29,095 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:29,095 - INFO -     Adjusted to minimum: 1.386963 UNI
+2026-04-01 19:53:29,342 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:29,454 - INFO - ⚡ BINANCE SHORT SIGNAL: LTC up 1.67%
+2026-04-01 19:53:29,455 - INFO - 🚀 EXECUTING BINANCE SHORT: LTC
+2026-04-01 19:53:29,455 - INFO -     Binance signal: up 1.67% at $54.2100
+2026-04-01 19:53:29,455 - INFO -     Position size: 0.033850 LTC ($1.84 with 1x)
+2026-04-01 19:53:29,455 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:29,455 - INFO -     Adjusted to minimum: 0.092234 LTC
+2026-04-01 19:53:29,668 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:53:29,782 - INFO - ⚡ BINANCE SHORT SIGNAL: ATOM up 2.04%
+2026-04-01 19:53:29,782 - INFO - 🚀 EXECUTING BINANCE SHORT: ATOM
+2026-04-01 19:53:29,782 - INFO -     Binance signal: up 2.04% at $1.7040
+2026-04-01 19:53:29,782 - INFO -     Position size: 1.076878 ATOM ($1.84 with 1x)
+2026-04-01 19:53:29,782 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:29,782 - INFO -     Adjusted to minimum: 2.934272 ATOM
+2026-04-01 19:53:29,981 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:30,093 - INFO - ⚡ BINANCE SHORT SIGNAL: FIL up 2.79%
+2026-04-01 19:53:30,093 - INFO - 🚀 EXECUTING BINANCE SHORT: FIL
+2026-04-01 19:53:30,093 - INFO -     Binance signal: up 2.79% at $0.8480
+2026-04-01 19:53:30,093 - INFO -     Position size: 2.163915 FIL ($1.84 with 1x)
+2026-04-01 19:53:30,093 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:30,093 - INFO -     Adjusted to minimum: 5.896226 FIL
+2026-04-01 19:53:30,338 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:30,449 - INFO - ⚡ BINANCE SHORT SIGNAL: XTZ up 2.60%
+2026-04-01 19:53:30,449 - INFO - 🚀 EXECUTING BINANCE SHORT: XTZ
+2026-04-01 19:53:30,449 - INFO -     Binance signal: up 2.60% at $0.3550
+2026-04-01 19:53:30,449 - INFO -     Position size: 5.169014 XTZ ($1.84 with 1x)
+2026-04-01 19:53:30,449 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:30,449 - INFO -     Adjusted to minimum: 14.084507 XTZ
+2026-04-01 19:53:30,647 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:30,757 - INFO - ⚡ BINANCE SHORT SIGNAL: AAVE up 2.83%
+2026-04-01 19:53:30,757 - INFO - 🚀 EXECUTING BINANCE SHORT: AAVE
+2026-04-01 19:53:30,757 - INFO -     Binance signal: up 2.83% at $99.4100
+2026-04-01 19:53:30,757 - INFO -     Position size: 0.018459 AAVE ($1.84 with 1x)
+2026-04-01 19:53:30,757 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:30,757 - INFO -     Adjusted to minimum: 0.050297 AAVE
+2026-04-01 19:53:30,757 - ERROR - ❌ Binance SHORT execution failed: binance amount of AAVE/USDT:USDT must be greater than minimum amount precision of 0.1
+2026-04-01 19:53:30,873 - INFO - ⚡ BINANCE → GEMINI SIGNAL: COMP down -2.36%
+2026-04-01 19:53:34,561 - INFO - 🚀 EXECUTING GEMINI LONG: COMP
+2026-04-01 19:53:34,561 - INFO -     Binance signal: down 2.36% at $16.9500
+2026-04-01 19:53:34,561 - INFO -     Gemini price: $16.9600
+2026-04-01 19:53:34,561 - INFO -     Position size: 1.280513 COMP ($21.72)
+2026-04-01 19:53:34,561 - ERROR - ❌ Gemini LONG execution failed: gemini createOrder() allows limit orders only
+2026-04-01 19:53:34,781 - INFO - ⚡ BINANCE SHORT SIGNAL: SNX up 3.24%
+2026-04-01 19:53:34,781 - INFO - 🚀 EXECUTING BINANCE SHORT: SNX
+2026-04-01 19:53:34,781 - INFO -     Binance signal: up 3.24% at $0.2870
+2026-04-01 19:53:34,781 - INFO -     Position size: 6.393728 SNX ($1.84 with 1x)
+2026-04-01 19:53:34,781 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:34,781 - INFO -     Adjusted to minimum: 17.421603 SNX
+2026-04-01 19:53:35,042 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4061,"msg":"Order's position side does not match user's setting."}
+2026-04-01 19:53:35,155 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ up 4.35%
+2026-04-01 19:53:35,155 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ
+2026-04-01 19:53:35,155 - INFO -     Binance signal: up 4.35% at $0.0209
+2026-04-01 19:53:35,155 - INFO -     Position size: 87.883142 ENJ ($1.84 with 1x)
+2026-04-01 19:53:35,155 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:35,155 - INFO -     Adjusted to minimum: 239.463602 ENJ
+2026-04-01 19:53:35,430 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:35,540 - INFO - ⚡ BINANCE SHORT SIGNAL: BAT up 7.66%
+2026-04-01 19:53:35,540 - INFO - 🚀 EXECUTING BINANCE SHORT: BAT
+2026-04-01 19:53:35,540 - INFO -     Binance signal: up 7.66% at $0.1012
+2026-04-01 19:53:35,540 - INFO -     Position size: 18.132411 BAT ($1.84 with 1x)
+2026-04-01 19:53:35,540 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:35,540 - INFO -     Adjusted to minimum: 49.407115 BAT
+2026-04-01 19:53:35,758 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4061,"msg":"Order's position side does not match user's setting."}
+2026-04-01 19:53:35,874 - INFO - ⚡ BINANCE → GEMINI SIGNAL: ZEC down -3.01%
+2026-04-01 19:53:36,157 - INFO - 🚀 EXECUTING GEMINI LONG: ZEC
+2026-04-01 19:53:36,157 - INFO -     Binance signal: down 3.01% at $242.6400
+2026-04-01 19:53:36,157 - INFO -     Gemini price: $242.6100
+2026-04-01 19:53:36,157 - INFO -     Position size: 0.089516 ZEC ($21.72)
+2026-04-01 19:53:36,157 - ERROR - ❌ Gemini LONG execution failed: gemini createOrder() allows limit orders only
+2026-04-01 19:53:36,268 - INFO - ⚡ BINANCE SHORT SIGNAL: MANA up 8.65%
+2026-04-01 19:53:36,268 - INFO - 🚀 EXECUTING BINANCE SHORT: MANA
+2026-04-01 19:53:36,268 - INFO -     Binance signal: up 8.65% at $0.0892
+2026-04-01 19:53:36,268 - INFO -     Position size: 20.571749 MANA ($1.84 with 1x)
+2026-04-01 19:53:36,268 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:36,268 - INFO -     Adjusted to minimum: 56.053812 MANA
+2026-04-01 19:53:36,477 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:36,598 - INFO - ⚡ BINANCE SHORT SIGNAL: OXT up 4.49%
+2026-04-01 19:53:36,598 - INFO - 🚀 EXECUTING BINANCE SHORT: OXT
+2026-04-01 19:53:36,598 - INFO -     Binance signal: up 4.49% at $0.0149
+2026-04-01 19:53:36,598 - INFO -     Position size: 123.319892 OXT ($1.84 with 1x)
+2026-04-01 19:53:36,598 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:53:36,598 - INFO -     Adjusted to minimum: 336.021505 OXT
+2026-04-01 19:53:36,843 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:53:36,844 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 19:53:36,844 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 19:53:36,844 - INFO - ⏱️  Cycle 1 duration: 300 seconds
+2026-04-01 19:53:36,844 - INFO - 📈 Total opportunities found: 0
+2026-04-01 19:58:36,846 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-04-01 19:58:36,846 - INFO - ======================================================================
+2026-04-01 19:58:36,846 - INFO - 📊 CROSS-EXCHANGE TRADING CYCLE - 19:58:36
+2026-04-01 19:58:36,846 - INFO - ======================================================================
+2026-04-01 19:58:36,846 - INFO - 🔍 Checking 23 cryptos on Binance for signals...
+2026-04-01 19:58:36,987 - INFO - ⚡ BINANCE SHORT SIGNAL: BTC up 2.57%
+2026-04-01 19:58:36,987 - INFO - 🚀 EXECUTING BINANCE SHORT: BTC
+2026-04-01 19:58:36,987 - INFO -     Binance signal: up 2.57% at $68348.7000
+2026-04-01 19:58:36,987 - INFO -     Position size: 0.000027 BTC ($1.84 with 1x)
+2026-04-01 19:58:36,987 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:36,987 - INFO -     Adjusted to minimum: 0.000073 BTC
+2026-04-01 19:58:36,987 - ERROR - ❌ Binance SHORT execution failed: binance amount of BTC/USDT:USDT must be greater than minimum amount precision of 0.001
+2026-04-01 19:58:37,099 - INFO - ⚡ BINANCE SHORT SIGNAL: ETH up 4.15%
+2026-04-01 19:58:37,099 - INFO - 🚀 EXECUTING BINANCE SHORT: ETH
+2026-04-01 19:58:37,099 - INFO -     Binance signal: up 4.15% at $2130.7700
+2026-04-01 19:58:37,099 - INFO -     Position size: 0.000861 ETH ($1.84 with 1x)
+2026-04-01 19:58:37,099 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:37,099 - INFO -     Adjusted to minimum: 0.002347 ETH
+2026-04-01 19:58:37,303 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:58:37,414 - INFO - ⚡ BINANCE SHORT SIGNAL: SOL up 2.81%
+2026-04-01 19:58:37,414 - INFO - 🚀 EXECUTING BINANCE SHORT: SOL
+2026-04-01 19:58:37,414 - INFO -     Binance signal: up 2.81% at $82.9700
+2026-04-01 19:58:37,414 - INFO -     Position size: 0.022116 SOL ($1.84 with 1x)
+2026-04-01 19:58:37,414 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:37,414 - INFO -     Adjusted to minimum: 0.060263 SOL
+2026-04-01 19:58:37,629 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:37,743 - INFO - ⚡ BINANCE SHORT SIGNAL: XRP up 2.91%
+2026-04-01 19:58:37,743 - INFO - 🚀 EXECUTING BINANCE SHORT: XRP
+2026-04-01 19:58:37,743 - INFO -     Binance signal: up 2.91% at $1.3533
+2026-04-01 19:58:37,743 - INFO -     Position size: 1.355945 XRP ($1.84 with 1x)
+2026-04-01 19:58:37,743 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:37,744 - INFO -     Adjusted to minimum: 3.694672 XRP
+2026-04-01 19:58:37,955 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:38,067 - INFO - ⚡ BINANCE SHORT SIGNAL: ADA up 3.25%
+2026-04-01 19:58:38,067 - INFO - 🚀 EXECUTING BINANCE SHORT: ADA
+2026-04-01 19:58:38,067 - INFO -     Binance signal: up 3.25% at $0.2482
+2026-04-01 19:58:38,067 - INFO -     Position size: 7.393231 ADA ($1.84 with 1x)
+2026-04-01 19:58:38,067 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:38,067 - INFO -     Adjusted to minimum: 20.145044 ADA
+2026-04-01 19:58:38,268 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:38,382 - INFO - ⚡ BINANCE SHORT SIGNAL: DOT up 2.98%
+2026-04-01 19:58:38,382 - INFO - 🚀 EXECUTING BINANCE SHORT: DOT
+2026-04-01 19:58:38,382 - INFO -     Binance signal: up 2.98% at $1.2790
+2026-04-01 19:58:38,382 - INFO -     Position size: 1.434715 DOT ($1.84 with 1x)
+2026-04-01 19:58:38,382 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:38,382 - INFO -     Adjusted to minimum: 3.909304 DOT
+2026-04-01 19:58:38,646 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:38,759 - INFO - ⚡ BINANCE SHORT SIGNAL: DOGE up 2.54%
+2026-04-01 19:58:38,759 - INFO - 🚀 EXECUTING BINANCE SHORT: DOGE
+2026-04-01 19:58:38,759 - INFO -     Binance signal: up 2.54% at $0.0925
+2026-04-01 19:58:38,759 - INFO -     Position size: 19.829263 DOGE ($1.84 with 1x)
+2026-04-01 19:58:38,759 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:38,759 - INFO -     Adjusted to minimum: 54.030689 DOGE
+2026-04-01 19:58:38,972 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:39,087 - INFO - ⚡ BINANCE SHORT SIGNAL: AVAX up 5.21%
+2026-04-01 19:58:39,087 - INFO - 🚀 EXECUTING BINANCE SHORT: AVAX
+2026-04-01 19:58:39,087 - INFO -     Binance signal: up 5.21% at $9.2270
+2026-04-01 19:58:39,087 - INFO -     Position size: 0.198873 AVAX ($1.84 with 1x)
+2026-04-01 19:58:39,087 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:39,087 - INFO -     Adjusted to minimum: 0.541888 AVAX
+2026-04-01 19:58:39,087 - ERROR - ❌ Binance SHORT execution failed: binance amount of AVAX/USDT:USDT must be greater than minimum amount precision of 1
+2026-04-01 19:58:39,197 - INFO - ⚡ BINANCE SHORT SIGNAL: LINK up 4.16%
+2026-04-01 19:58:39,197 - INFO - 🚀 EXECUTING BINANCE SHORT: LINK
+2026-04-01 19:58:39,197 - INFO -     Binance signal: up 4.16% at $8.9900
+2026-04-01 19:58:39,197 - INFO -     Position size: 0.204116 LINK ($1.84 with 1x)
+2026-04-01 19:58:39,197 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:39,197 - INFO -     Adjusted to minimum: 0.556174 LINK
+2026-04-01 19:58:39,476 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:58:39,588 - INFO - ⚡ BINANCE SHORT SIGNAL: UNI up 3.51%
+2026-04-01 19:58:39,588 - INFO - 🚀 EXECUTING BINANCE SHORT: UNI
+2026-04-01 19:58:39,588 - INFO -     Binance signal: up 3.51% at $3.6020
+2026-04-01 19:58:39,588 - INFO -     Position size: 0.509439 UNI ($1.84 with 1x)
+2026-04-01 19:58:39,588 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:39,588 - INFO -     Adjusted to minimum: 1.388118 UNI
+2026-04-01 19:58:39,842 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:39,953 - INFO - ⚡ BINANCE SHORT SIGNAL: LTC up 1.56%
+2026-04-01 19:58:39,954 - INFO - 🚀 EXECUTING BINANCE SHORT: LTC
+2026-04-01 19:58:39,954 - INFO -     Binance signal: up 1.56% at $54.1600
+2026-04-01 19:58:39,954 - INFO -     Position size: 0.033881 LTC ($1.84 with 1x)
+2026-04-01 19:58:39,954 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:39,954 - INFO -     Adjusted to minimum: 0.092319 LTC
+2026-04-01 19:58:40,154 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2026-04-01 19:58:40,264 - INFO - ⚡ BINANCE SHORT SIGNAL: ATOM up 1.80%
+2026-04-01 19:58:40,264 - INFO - 🚀 EXECUTING BINANCE SHORT: ATOM
+2026-04-01 19:58:40,264 - INFO -     Binance signal: up 1.80% at $1.7000
+2026-04-01 19:58:40,264 - INFO -     Position size: 1.079412 ATOM ($1.84 with 1x)
+2026-04-01 19:58:40,264 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:40,264 - INFO -     Adjusted to minimum: 2.941176 ATOM
+2026-04-01 19:58:40,481 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:40,597 - INFO - ⚡ BINANCE SHORT SIGNAL: FIL up 2.54%
+2026-04-01 19:58:40,597 - INFO - 🚀 EXECUTING BINANCE SHORT: FIL
+2026-04-01 19:58:40,597 - INFO -     Binance signal: up 2.54% at $0.8460
+2026-04-01 19:58:40,597 - INFO -     Position size: 2.169031 FIL ($1.84 with 1x)
+2026-04-01 19:58:40,597 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:40,597 - INFO -     Adjusted to minimum: 5.910165 FIL
+2026-04-01 19:58:40,796 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:40,908 - INFO - ⚡ BINANCE SHORT SIGNAL: XTZ up 1.73%
+2026-04-01 19:58:40,908 - INFO - 🚀 EXECUTING BINANCE SHORT: XTZ
+2026-04-01 19:58:40,908 - INFO -     Binance signal: up 1.73% at $0.3530
+2026-04-01 19:58:40,908 - INFO -     Position size: 5.198300 XTZ ($1.84 with 1x)
+2026-04-01 19:58:40,908 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:40,908 - INFO -     Adjusted to minimum: 14.164306 XTZ
+2026-04-01 19:58:41,176 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:41,284 - INFO - ⚡ BINANCE SHORT SIGNAL: AAVE up 2.60%
+2026-04-01 19:58:41,284 - INFO - 🚀 EXECUTING BINANCE SHORT: AAVE
+2026-04-01 19:58:41,284 - INFO -     Binance signal: up 2.60% at $99.1900
+2026-04-01 19:58:41,284 - INFO -     Position size: 0.018500 AAVE ($1.84 with 1x)
+2026-04-01 19:58:41,284 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:41,285 - INFO -     Adjusted to minimum: 0.050408 AAVE
+2026-04-01 19:58:41,285 - ERROR - ❌ Binance SHORT execution failed: binance amount of AAVE/USDT:USDT must be greater than minimum amount precision of 0.1
+2026-04-01 19:58:41,396 - INFO - ⚡ BINANCE → GEMINI SIGNAL: COMP down -2.30%
+2026-04-01 19:58:42,506 - INFO - 🚀 EXECUTING GEMINI LONG: COMP
+2026-04-01 19:58:42,506 - INFO -     Binance signal: down 2.30% at $16.9700
+2026-04-01 19:58:42,506 - INFO -     Gemini price: $16.9700
+2026-04-01 19:58:42,506 - INFO -     Position size: 1.279758 COMP ($21.72)
+2026-04-01 19:58:42,507 - ERROR - ❌ Gemini LONG execution failed: gemini createOrder() allows limit orders only
+2026-04-01 19:58:42,730 - INFO - ⚡ BINANCE SHORT SIGNAL: SNX up 3.61%
+2026-04-01 19:58:42,730 - INFO - 🚀 EXECUTING BINANCE SHORT: SNX
+2026-04-01 19:58:42,731 - INFO -     Binance signal: up 3.61% at $0.2870
+2026-04-01 19:58:42,731 - INFO -     Position size: 6.393728 SNX ($1.84 with 1x)
+2026-04-01 19:58:42,731 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:42,731 - INFO -     Adjusted to minimum: 17.421603 SNX
+2026-04-01 19:58:42,999 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4061,"msg":"Order's position side does not match user's setting."}
+2026-04-01 19:58:43,109 - INFO - ⚡ BINANCE SHORT SIGNAL: ENJ up 4.60%
+2026-04-01 19:58:43,109 - INFO - 🚀 EXECUTING BINANCE SHORT: ENJ
+2026-04-01 19:58:43,109 - INFO -     Binance signal: up 4.60% at $0.0209
+2026-04-01 19:58:43,109 - INFO -     Position size: 87.757054 ENJ ($1.84 with 1x)
+2026-04-01 19:58:43,110 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:43,110 - INFO -     Adjusted to minimum: 239.120038 ENJ
+2026-04-01 19:58:43,350 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:43,461 - INFO - ⚡ BINANCE SHORT SIGNAL: BAT up 7.86%
+2026-04-01 19:58:43,462 - INFO - 🚀 EXECUTING BINANCE SHORT: BAT
+2026-04-01 19:58:43,462 - INFO -     Binance signal: up 7.86% at $0.1015
+2026-04-01 19:58:43,462 - INFO -     Position size: 18.078818 BAT ($1.84 with 1x)
+2026-04-01 19:58:43,462 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:43,462 - INFO -     Adjusted to minimum: 49.261084 BAT
+2026-04-01 19:58:43,707 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:43,818 - INFO - ⚡ BINANCE → GEMINI SIGNAL: ZEC down -3.38%
+2026-04-01 19:58:44,092 - INFO - 🚀 EXECUTING GEMINI LONG: ZEC
+2026-04-01 19:58:44,092 - INFO -     Binance signal: down 3.38% at $241.9100
+2026-04-01 19:58:44,092 - INFO -     Gemini price: $242.1600
+2026-04-01 19:58:44,092 - INFO -     Position size: 0.089682 ZEC ($21.72)
+2026-04-01 19:58:44,092 - ERROR - ❌ Gemini LONG execution failed: gemini createOrder() allows limit orders only
+2026-04-01 19:58:44,216 - INFO - ⚡ BINANCE SHORT SIGNAL: MANA up 8.40%
+2026-04-01 19:58:44,216 - INFO - 🚀 EXECUTING BINANCE SHORT: MANA
+2026-04-01 19:58:44,216 - INFO -     Binance signal: up 8.40% at $0.0890
+2026-04-01 19:58:44,216 - INFO -     Position size: 20.617978 MANA ($1.84 with 1x)
+2026-04-01 19:58:44,216 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:44,216 - INFO -     Adjusted to minimum: 56.179775 MANA
+2026-04-01 19:58:44,424 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:44,535 - INFO - ⚡ BINANCE SHORT SIGNAL: OXT up 4.36%
+2026-04-01 19:58:44,535 - INFO - 🚀 EXECUTING BINANCE SHORT: OXT
+2026-04-01 19:58:44,535 - INFO -     Binance signal: up 4.36% at $0.0149
+2026-04-01 19:58:44,535 - INFO -     Position size: 123.569024 OXT ($1.84 with 1x)
+2026-04-01 19:58:44,535 - WARNING - ⚠️ Position value $1.84 < Binance minimum $5.0
+2026-04-01 19:58:44,535 - INFO -     Adjusted to minimum: 336.700337 OXT
+2026-04-01 19:58:44,746 - ERROR - ❌ Binance SHORT execution failed: binance {"code":-4164,"msg":"Order's notional must be no smaller than 5 (unless you choose reduce only)."}
+2026-04-01 19:58:44,746 - INFO - 🎯 Opportunities found this cycle: 0
+2026-04-01 19:58:44,746 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-01 19:58:44,746 - INFO - ⏱️  Cycle 2 duration: 300 seconds
+2026-04-01 19:58:44,746 - INFO - 📈 Total opportunities found: 0

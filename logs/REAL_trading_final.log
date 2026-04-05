@@ -1,0 +1,390 @@
+2026-04-05 18:18:37,637 - INFO - 💰 MAKE MONEY BOT STARTING
+2026-04-05 18:18:37,637 - INFO - 🎯 Actually trades with REAL money TODAY
+2026-04-05 18:18:37,637 - INFO - ✅ Loaded Binance key: dT0OIm9aq8...
+2026-04-05 18:18:37,640 - INFO - ============================================================
+2026-04-05 18:18:37,640 - INFO - 💰 MAKE MONEY BOT ACTIVE
+2026-04-05 18:18:37,640 - INFO - 📊 Trade size: $30.0
+2026-04-05 18:18:37,640 - INFO - 🎯 Target: YFI -1.74% arbitrage
+2026-04-05 18:18:37,640 - INFO - ============================================================
+2026-04-05 18:18:37,640 - INFO - 
+============================================================
+2026-04-05 18:18:37,640 - INFO - 🔄 CYCLE 1 - 18:18:37
+2026-04-05 18:18:37,640 - INFO - ============================================================
+2026-04-05 18:18:37,640 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:18:39,712 - INFO - 💰 Binance balance: $30.32 USDT
+2026-04-05 18:18:39,712 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:18:39,875 - INFO - 📊 YFI price: $2420.00
+2026-04-05 18:18:39,876 - INFO - 💰 BUYING: 0.012397 YFI at $2420.00 ($30.00)
+2026-04-05 18:18:39,991 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849487391', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2Ffe4d5108c6dc37ad99fde4', 'transactTime': '1775387920037', 'price': '0.00000000', 'origQty': '0.01239000', 'executedQty': '0.01239000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.02097000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775387920037', 'fills': [{'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104522'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849487391', 'clientOrderId': 'x-TKT5PX2Ffe4d5108c6dc37ad99fde4', 'timestamp': 1775387920037, 'datetime': '2026-04-05T11:18:40.037Z', 'lastTradeTimestamp': 1775387920037, 'lastUpdateTimestamp': 1775387920037, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2423.0, 'triggerPrice': None, 'amount': 0.01239, 'cost': 30.02097, 'average': 2423.0, 'filled': 0.01239, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'trades': [{'info': {'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104522'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104522', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2423.0, 'amount': 0.01239, 'cost': 30.02097, 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:18:39,991 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:18:45,033 - INFO - 🚀 SELLING: 0.012390 YFI at market price
+2026-04-05 18:18:45,157 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849487404", "orderListId": "-1", "clientOrderId": "x-TKT5PX2F973705c7bb68539a28f51a", "transactTime": "1775387925200", "price": "0.00000000", "origQty": "0.01239000", "executedQty": "0.01239000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "29.99619000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775387925200", "fills": [{"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104523"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849487404", "clientOrderId": "x-TKT5PX2F973705c7bb68539a28f51a", "timestamp": 1775387925200, "datetime": "2026-04-05T11:18:45.200Z", "lastTradeTimestamp": 1775387925200, "lastUpdateTimestamp": 1775387925200, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2421.0, "triggerPrice": null, "amount": 0.01239, "cost": 29.99619, "average": 2421.0, "filled": 0.01239, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.02999619}, "trades": [{"info": {"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104523"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104523", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2421.0, "amount": 0.01239, "cost": 29.99619, "fee": {"currency": "USDT", "cost": 0.02999619}, "fees": [{"currency": "USDT", "cost": 0.02999619}]}], "fees": [{"currency": "USDT", "cost": 0.02999619}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:18:45,157 - INFO - 💰 REAL PROFIT: $0.01 (from actual trade)
+2026-04-05 18:18:45,157 - INFO - 💰 TOTAL PROFIT: $0.01 from 1 trades
+2026-04-05 18:18:45,158 - INFO - ✅ Trade 1 successful
+2026-04-05 18:18:45,158 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:19:45,212 - INFO - 
+============================================================
+2026-04-05 18:19:45,212 - INFO - 🔄 CYCLE 2 - 18:19:45
+2026-04-05 18:19:45,212 - INFO - ============================================================
+2026-04-05 18:19:45,212 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:19:45,331 - INFO - 💰 Binance balance: $30.27 USDT
+2026-04-05 18:19:45,332 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:19:45,444 - INFO - 📊 YFI price: $2421.00
+2026-04-05 18:19:45,444 - INFO - 💰 BUYING: 0.012392 YFI at $2421.00 ($30.00)
+2026-04-05 18:19:45,557 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849487511', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2F16bb6db86e40aaff24dcc2', 'transactTime': '1775387985603', 'price': '0.00000000', 'origQty': '0.01239000', 'executedQty': '0.01239000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.02097000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775387985603', 'fills': [{'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104524'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849487511', 'clientOrderId': 'x-TKT5PX2F16bb6db86e40aaff24dcc2', 'timestamp': 1775387985603, 'datetime': '2026-04-05T11:19:45.603Z', 'lastTradeTimestamp': 1775387985603, 'lastUpdateTimestamp': 1775387985603, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2423.0, 'triggerPrice': None, 'amount': 0.01239, 'cost': 30.02097, 'average': 2423.0, 'filled': 0.01239, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'trades': [{'info': {'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104524'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104524', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2423.0, 'amount': 0.01239, 'cost': 30.02097, 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:19:45,557 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:19:50,566 - INFO - 🚀 SELLING: 0.012390 YFI at market price
+2026-04-05 18:19:50,868 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849487515", "orderListId": "-1", "clientOrderId": "x-TKT5PX2Fa34efc662dc31badf0e826", "transactTime": "1775387990916", "price": "0.00000000", "origQty": "0.01239000", "executedQty": "0.01239000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "29.99619000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775387990916", "fills": [{"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104525"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849487515", "clientOrderId": "x-TKT5PX2Fa34efc662dc31badf0e826", "timestamp": 1775387990916, "datetime": "2026-04-05T11:19:50.916Z", "lastTradeTimestamp": 1775387990916, "lastUpdateTimestamp": 1775387990916, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2421.0, "triggerPrice": null, "amount": 0.01239, "cost": 29.99619, "average": 2421.0, "filled": 0.01239, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.02999619}, "trades": [{"info": {"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104525"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104525", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2421.0, "amount": 0.01239, "cost": 29.99619, "fee": {"currency": "USDT", "cost": 0.02999619}, "fees": [{"currency": "USDT", "cost": 0.02999619}]}], "fees": [{"currency": "USDT", "cost": 0.02999619}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:19:50,868 - INFO - 💰 REAL PROFIT: $0.00 (from actual trade)
+2026-04-05 18:19:50,868 - INFO - 💰 TOTAL PROFIT: $0.01 from 2 trades
+2026-04-05 18:19:50,868 - INFO - ✅ Trade 2 successful
+2026-04-05 18:19:50,868 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:20:50,943 - INFO - 
+============================================================
+2026-04-05 18:20:50,943 - INFO - 🔄 CYCLE 3 - 18:20:50
+2026-04-05 18:20:50,944 - INFO - ============================================================
+2026-04-05 18:20:50,944 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:20:51,073 - INFO - 💰 Binance balance: $30.21 USDT
+2026-04-05 18:20:51,074 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:20:51,189 - INFO - 📊 YFI price: $2421.00
+2026-04-05 18:20:51,189 - INFO - 💰 BUYING: 0.012392 YFI at $2421.00 ($30.00)
+2026-04-05 18:20:51,306 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849487842', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2Ff9c5ebe4dbf2a7513f1cb8', 'transactTime': '1775388051351', 'price': '0.00000000', 'origQty': '0.01239000', 'executedQty': '0.01239000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.02097000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775388051351', 'fills': [{'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104526'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849487842', 'clientOrderId': 'x-TKT5PX2Ff9c5ebe4dbf2a7513f1cb8', 'timestamp': 1775388051351, 'datetime': '2026-04-05T11:20:51.351Z', 'lastTradeTimestamp': 1775388051351, 'lastUpdateTimestamp': 1775388051351, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2423.0, 'triggerPrice': None, 'amount': 0.01239, 'cost': 30.02097, 'average': 2423.0, 'filled': 0.01239, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'trades': [{'info': {'price': '2423.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104526'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104526', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2423.0, 'amount': 0.01239, 'cost': 30.02097, 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:20:51,306 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:20:56,359 - INFO - 🚀 SELLING: 0.012390 YFI at market price
+2026-04-05 18:20:56,476 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849487855", "orderListId": "-1", "clientOrderId": "x-TKT5PX2F29ee5aa5f6678e9bc3b428", "transactTime": "1775388056521", "price": "0.00000000", "origQty": "0.01239000", "executedQty": "0.01239000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "29.99619000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775388056521", "fills": [{"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104527"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849487855", "clientOrderId": "x-TKT5PX2F29ee5aa5f6678e9bc3b428", "timestamp": 1775388056521, "datetime": "2026-04-05T11:20:56.521Z", "lastTradeTimestamp": 1775388056521, "lastUpdateTimestamp": 1775388056521, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2421.0, "triggerPrice": null, "amount": 0.01239, "cost": 29.99619, "average": 2421.0, "filled": 0.01239, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.02999619}, "trades": [{"info": {"price": "2421.00000000", "qty": "0.01239000", "commission": "0.02999619", "commissionAsset": "USDT", "tradeId": "93104527"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104527", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2421.0, "amount": 0.01239, "cost": 29.99619, "fee": {"currency": "USDT", "cost": 0.02999619}, "fees": [{"currency": "USDT", "cost": 0.02999619}]}], "fees": [{"currency": "USDT", "cost": 0.02999619}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:20:56,477 - INFO - 💰 REAL PROFIT: $0.00 (from actual trade)
+2026-04-05 18:20:56,477 - INFO - 💰 TOTAL PROFIT: $0.01 from 3 trades
+2026-04-05 18:20:56,478 - INFO - ✅ Trade 3 successful
+2026-04-05 18:20:56,478 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:21:56,553 - INFO - 
+============================================================
+2026-04-05 18:21:56,553 - INFO - 🔄 CYCLE 4 - 18:21:56
+2026-04-05 18:21:56,553 - INFO - ============================================================
+2026-04-05 18:21:56,553 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:21:56,668 - INFO - 💰 Binance balance: $30.16 USDT
+2026-04-05 18:21:56,668 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:21:56,779 - INFO - 📊 YFI price: $2421.00
+2026-04-05 18:21:56,780 - INFO - 💰 BUYING: 0.012392 YFI at $2421.00 ($30.00)
+2026-04-05 18:21:56,891 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849488294', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2F5ccb96045116358eb8b0fd', 'transactTime': '1775388116940', 'price': '0.00000000', 'origQty': '0.01239000', 'executedQty': '0.01239000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.03336000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775388116940', 'fills': [{'price': '2424.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104529'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849488294', 'clientOrderId': 'x-TKT5PX2F5ccb96045116358eb8b0fd', 'timestamp': 1775388116940, 'datetime': '2026-04-05T11:21:56.940Z', 'lastTradeTimestamp': 1775388116940, 'lastUpdateTimestamp': 1775388116940, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2424.0, 'triggerPrice': None, 'amount': 0.01239, 'cost': 30.03336, 'average': 2424.0, 'filled': 0.01239, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'trades': [{'info': {'price': '2424.00000000', 'qty': '0.01239000', 'commission': '0.00001239', 'commissionAsset': 'YFI', 'tradeId': '93104529'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104529', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2424.0, 'amount': 0.01239, 'cost': 30.03336, 'fee': {'currency': 'YFI', 'cost': 1.239e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.239e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:21:56,891 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:22:01,892 - INFO - 🚀 SELLING: 0.012390 YFI at market price
+2026-04-05 18:22:02,010 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849488325", "orderListId": "-1", "clientOrderId": "x-TKT5PX2F0c50fa54995484fd9a6d5f", "transactTime": "1775388122055", "price": "0.00000000", "origQty": "0.01239000", "executedQty": "0.01239000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "30.00858000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775388122055", "fills": [{"price": "2422.00000000", "qty": "0.01239000", "commission": "0.03000858", "commissionAsset": "USDT", "tradeId": "93104530"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849488325", "clientOrderId": "x-TKT5PX2F0c50fa54995484fd9a6d5f", "timestamp": 1775388122055, "datetime": "2026-04-05T11:22:02.055Z", "lastTradeTimestamp": 1775388122055, "lastUpdateTimestamp": 1775388122055, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2422.0, "triggerPrice": null, "amount": 0.01239, "cost": 30.00858, "average": 2422.0, "filled": 0.01239, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.03000858}, "trades": [{"info": {"price": "2422.00000000", "qty": "0.01239000", "commission": "0.03000858", "commissionAsset": "USDT", "tradeId": "93104530"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104530", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2422.0, "amount": 0.01239, "cost": 30.00858, "fee": {"currency": "USDT", "cost": 0.03000858}, "fees": [{"currency": "USDT", "cost": 0.03000858}]}], "fees": [{"currency": "USDT", "cost": 0.03000858}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:22:02,011 - INFO - 💰 REAL PROFIT: $0.01 (from actual trade)
+2026-04-05 18:22:02,011 - INFO - 💰 TOTAL PROFIT: $0.02 from 4 trades
+2026-04-05 18:22:02,012 - INFO - ✅ Trade 4 successful
+2026-04-05 18:22:02,012 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:23:02,081 - INFO - 
+============================================================
+2026-04-05 18:23:02,081 - INFO - 🔄 CYCLE 5 - 18:23:02
+2026-04-05 18:23:02,081 - INFO - ============================================================
+2026-04-05 18:23:02,081 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:23:02,208 - INFO - 💰 Binance balance: $30.11 USDT
+2026-04-05 18:23:02,208 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:23:02,321 - INFO - 📊 YFI price: $2422.00
+2026-04-05 18:23:02,321 - INFO - 💰 BUYING: 0.012386 YFI at $2422.00 ($30.00)
+2026-04-05 18:23:02,434 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849488837', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2F5a7386e7ec2a5041d7251e', 'transactTime': '1775388182482', 'price': '0.00000000', 'origQty': '0.01238000', 'executedQty': '0.01238000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.00912000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775388182482', 'fills': [{'price': '2424.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104531'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849488837', 'clientOrderId': 'x-TKT5PX2F5a7386e7ec2a5041d7251e', 'timestamp': 1775388182482, 'datetime': '2026-04-05T11:23:02.482Z', 'lastTradeTimestamp': 1775388182482, 'lastUpdateTimestamp': 1775388182482, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2424.0, 'triggerPrice': None, 'amount': 0.01238, 'cost': 30.00912, 'average': 2424.0, 'filled': 0.01238, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'trades': [{'info': {'price': '2424.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104531'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104531', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2424.0, 'amount': 0.01238, 'cost': 30.00912, 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:23:02,434 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:23:07,510 - INFO - 🚀 SELLING: 0.012380 YFI at market price
+2026-04-05 18:23:07,630 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849488862", "orderListId": "-1", "clientOrderId": "x-TKT5PX2Fce75eaf88875668dbb1a2a", "transactTime": "1775388187677", "price": "0.00000000", "origQty": "0.01238000", "executedQty": "0.01238000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "29.98436000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775388187677", "fills": [{"price": "2422.00000000", "qty": "0.01238000", "commission": "0.02998436", "commissionAsset": "USDT", "tradeId": "93104532"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849488862", "clientOrderId": "x-TKT5PX2Fce75eaf88875668dbb1a2a", "timestamp": 1775388187677, "datetime": "2026-04-05T11:23:07.677Z", "lastTradeTimestamp": 1775388187677, "lastUpdateTimestamp": 1775388187677, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2422.0, "triggerPrice": null, "amount": 0.01238, "cost": 29.98436, "average": 2422.0, "filled": 0.01238, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.02998436}, "trades": [{"info": {"price": "2422.00000000", "qty": "0.01238000", "commission": "0.02998436", "commissionAsset": "USDT", "tradeId": "93104532"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104532", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2422.0, "amount": 0.01238, "cost": 29.98436, "fee": {"currency": "USDT", "cost": 0.02998436}, "fees": [{"currency": "USDT", "cost": 0.02998436}]}], "fees": [{"currency": "USDT", "cost": 0.02998436}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:23:07,630 - INFO - 💰 REAL PROFIT: $-0.00 (from actual trade)
+2026-04-05 18:23:07,631 - INFO - 💰 TOTAL PROFIT: $0.02 from 5 trades
+2026-04-05 18:23:07,632 - INFO - ✅ Trade 5 successful
+2026-04-05 18:23:07,632 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:24:07,707 - INFO - 
+============================================================
+2026-04-05 18:24:07,707 - INFO - 🔄 CYCLE 6 - 18:24:07
+2026-04-05 18:24:07,707 - INFO - ============================================================
+2026-04-05 18:24:07,707 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:24:07,822 - INFO - 💰 Binance balance: $30.05 USDT
+2026-04-05 18:24:07,822 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 18:24:07,933 - INFO - 📊 YFI price: $2422.00
+2026-04-05 18:24:07,933 - INFO - 💰 BUYING: 0.012386 YFI at $2422.00 ($30.00)
+2026-04-05 18:24:08,045 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849489193', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2Fd39a87e2f26b79e7ce0960', 'transactTime': '1775388248095', 'price': '0.00000000', 'origQty': '0.01238000', 'executedQty': '0.01238000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.02150000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775388248095', 'fills': [{'price': '2425.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104533'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849489193', 'clientOrderId': 'x-TKT5PX2Fd39a87e2f26b79e7ce0960', 'timestamp': 1775388248095, 'datetime': '2026-04-05T11:24:08.095Z', 'lastTradeTimestamp': 1775388248095, 'lastUpdateTimestamp': 1775388248095, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2425.0, 'triggerPrice': None, 'amount': 0.01238, 'cost': 30.0215, 'average': 2425.0, 'filled': 0.01238, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'trades': [{'info': {'price': '2425.00000000', 'qty': '0.01238000', 'commission': '0.00001238', 'commissionAsset': 'YFI', 'tradeId': '93104533'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104533', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2425.0, 'amount': 0.01238, 'cost': 30.0215, 'fee': {'currency': 'YFI', 'cost': 1.238e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.238e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 18:24:08,045 - INFO - ⏳ Waiting 5 seconds for Binance settlement...
+2026-04-05 18:24:13,117 - INFO - 🚀 SELLING: 0.012380 YFI at market price
+2026-04-05 18:24:13,233 - INFO - ✅ SELL executed: {"info": {"symbol": "YFIUSDT", "orderId": "2849489211", "orderListId": "-1", "clientOrderId": "x-TKT5PX2Fc14ab7156eb6477225a5ac", "transactTime": "1775388253281", "price": "0.00000000", "origQty": "0.01238000", "executedQty": "0.01238000", "origQuoteOrderQty": "0.00000000", "cummulativeQuoteQty": "29.99674000", "status": "FILLED", "timeInForce": "GTC", "type": "MARKET", "side": "SELL", "workingTime": "1775388253281", "fills": [{"price": "2423.00000000", "qty": "0.01238000", "commission": "0.02999674", "commissionAsset": "USDT", "tradeId": "93104534"}], "selfTradePreventionMode": "EXPIRE_MAKER"}, "id": "2849489211", "clientOrderId": "x-TKT5PX2Fc14ab7156eb6477225a5ac", "timestamp": 1775388253281, "datetime": "2026-04-05T11:24:13.281Z", "lastTradeTimestamp": 1775388253281, "lastUpdateTimestamp": 1775388253281, "symbol": "YFI/USDT", "type": "market", "timeInForce": "GTC", "postOnly": false, "reduceOnly": null, "side": "sell", "price": 2423.0, "triggerPrice": null, "amount": 0.01238, "cost": 29.99674, "average": 2423.0, "filled": 0.01238, "remaining": 0.0, "status": "closed", "fee": {"currency": "USDT", "cost": 0.02999674}, "trades": [{"info": {"price": "2423.00000000", "qty": "0.01238000", "commission": "0.02999674", "commissionAsset": "USDT", "tradeId": "93104534"}, "timestamp": null, "datetime": null, "symbol": "YFI/USDT", "id": "93104534", "order": null, "type": null, "side": null, "takerOrMaker": null, "price": 2423.0, "amount": 0.01238, "cost": 29.99674, "fee": {"currency": "USDT", "cost": 0.02999674}, "fees": [{"currency": "USDT", "cost": 0.02999674}]}], "fees": [{"currency": "USDT", "cost": 0.02999674}], "stopPrice": null, "takeProfitPrice": null, "stopLossPrice": null}
+2026-04-05 18:24:13,233 - INFO - 💰 REAL PROFIT: $0.01 (from actual trade)
+2026-04-05 18:24:13,234 - INFO - 💰 TOTAL PROFIT: $0.04 from 6 trades
+2026-04-05 18:24:13,234 - INFO - ✅ Trade 6 successful
+2026-04-05 18:24:13,234 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:25:13,307 - INFO - 
+============================================================
+2026-04-05 18:25:13,308 - INFO - 🔄 CYCLE 7 - 18:25:13
+2026-04-05 18:25:13,308 - INFO - ============================================================
+2026-04-05 18:25:13,308 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:25:13,440 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:25:13,441 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:25:13,441 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:25:13,441 - WARNING - ⚠️ Trade 7 failed or skipped
+2026-04-05 18:25:13,441 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:26:13,509 - INFO - 
+============================================================
+2026-04-05 18:26:13,510 - INFO - 🔄 CYCLE 8 - 18:26:13
+2026-04-05 18:26:13,510 - INFO - ============================================================
+2026-04-05 18:26:13,510 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:26:13,643 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:26:13,643 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:26:13,643 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:26:13,644 - WARNING - ⚠️ Trade 8 failed or skipped
+2026-04-05 18:26:13,644 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:27:13,718 - INFO - 
+============================================================
+2026-04-05 18:27:13,718 - INFO - 🔄 CYCLE 9 - 18:27:13
+2026-04-05 18:27:13,718 - INFO - ============================================================
+2026-04-05 18:27:13,718 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:27:13,837 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:27:13,837 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:27:13,837 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:27:13,837 - WARNING - ⚠️ Trade 9 failed or skipped
+2026-04-05 18:27:13,837 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:28:13,872 - INFO - 
+============================================================
+2026-04-05 18:28:13,873 - INFO - 🔄 CYCLE 10 - 18:28:13
+2026-04-05 18:28:13,873 - INFO - ============================================================
+2026-04-05 18:28:13,873 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:28:14,007 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:28:14,007 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:28:14,007 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:28:14,008 - WARNING - ⚠️ Trade 10 failed or skipped
+2026-04-05 18:28:14,008 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:29:14,070 - INFO - 
+============================================================
+2026-04-05 18:29:14,070 - INFO - 🔄 CYCLE 11 - 18:29:14
+2026-04-05 18:29:14,070 - INFO - ============================================================
+2026-04-05 18:29:14,070 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:29:14,203 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:29:14,204 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:29:14,204 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:29:14,204 - WARNING - ⚠️ Trade 11 failed or skipped
+2026-04-05 18:29:14,204 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:30:14,236 - INFO - 
+============================================================
+2026-04-05 18:30:14,236 - INFO - 🔄 CYCLE 12 - 18:30:14
+2026-04-05 18:30:14,236 - INFO - ============================================================
+2026-04-05 18:30:14,237 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:30:14,372 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:30:14,372 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:30:14,372 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:30:14,372 - WARNING - ⚠️ Trade 12 failed or skipped
+2026-04-05 18:30:14,372 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:31:14,414 - INFO - 
+============================================================
+2026-04-05 18:31:14,414 - INFO - 🔄 CYCLE 13 - 18:31:14
+2026-04-05 18:31:14,414 - INFO - ============================================================
+2026-04-05 18:31:14,414 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:31:14,540 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:31:14,540 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:31:14,541 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:31:14,541 - WARNING - ⚠️ Trade 13 failed or skipped
+2026-04-05 18:31:14,541 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:32:14,547 - INFO - 
+============================================================
+2026-04-05 18:32:14,547 - INFO - 🔄 CYCLE 14 - 18:32:14
+2026-04-05 18:32:14,547 - INFO - ============================================================
+2026-04-05 18:32:14,547 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:32:14,662 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:32:14,662 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:32:14,662 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:32:14,662 - WARNING - ⚠️ Trade 14 failed or skipped
+2026-04-05 18:32:14,662 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:33:14,736 - INFO - 
+============================================================
+2026-04-05 18:33:14,737 - INFO - 🔄 CYCLE 15 - 18:33:14
+2026-04-05 18:33:14,737 - INFO - ============================================================
+2026-04-05 18:33:14,737 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:33:14,867 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:33:14,867 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:33:14,867 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:33:14,867 - WARNING - ⚠️ Trade 15 failed or skipped
+2026-04-05 18:33:14,868 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:34:14,938 - INFO - 
+============================================================
+2026-04-05 18:34:14,939 - INFO - 🔄 CYCLE 16 - 18:34:14
+2026-04-05 18:34:14,939 - INFO - ============================================================
+2026-04-05 18:34:14,939 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:34:15,057 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:34:15,057 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:34:15,057 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:34:15,057 - WARNING - ⚠️ Trade 16 failed or skipped
+2026-04-05 18:34:15,057 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:35:15,131 - INFO - 
+============================================================
+2026-04-05 18:35:15,132 - INFO - 🔄 CYCLE 17 - 18:35:15
+2026-04-05 18:35:15,132 - INFO - ============================================================
+2026-04-05 18:35:15,132 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:35:15,258 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:35:15,259 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:35:15,259 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:35:15,259 - WARNING - ⚠️ Trade 17 failed or skipped
+2026-04-05 18:35:15,259 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:36:15,279 - INFO - 
+============================================================
+2026-04-05 18:36:15,279 - INFO - 🔄 CYCLE 18 - 18:36:15
+2026-04-05 18:36:15,279 - INFO - ============================================================
+2026-04-05 18:36:15,279 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:36:15,407 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:36:15,408 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:36:15,408 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:36:15,408 - WARNING - ⚠️ Trade 18 failed or skipped
+2026-04-05 18:36:15,408 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:37:15,469 - INFO - 
+============================================================
+2026-04-05 18:37:15,469 - INFO - 🔄 CYCLE 19 - 18:37:15
+2026-04-05 18:37:15,469 - INFO - ============================================================
+2026-04-05 18:37:15,470 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:37:15,598 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:37:15,599 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:37:15,599 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:37:15,599 - WARNING - ⚠️ Trade 19 failed or skipped
+2026-04-05 18:37:15,599 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:38:15,656 - INFO - 
+============================================================
+2026-04-05 18:38:15,656 - INFO - 🔄 CYCLE 20 - 18:38:15
+2026-04-05 18:38:15,656 - INFO - ============================================================
+2026-04-05 18:38:15,657 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:38:15,788 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:38:15,788 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:38:15,789 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:38:15,789 - WARNING - ⚠️ Trade 20 failed or skipped
+2026-04-05 18:38:15,789 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:39:15,843 - INFO - 
+============================================================
+2026-04-05 18:39:15,844 - INFO - 🔄 CYCLE 21 - 18:39:15
+2026-04-05 18:39:15,844 - INFO - ============================================================
+2026-04-05 18:39:15,844 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:39:15,972 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:39:15,973 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:39:15,973 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:39:15,973 - WARNING - ⚠️ Trade 21 failed or skipped
+2026-04-05 18:39:15,973 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:40:16,015 - INFO - 
+============================================================
+2026-04-05 18:40:16,015 - INFO - 🔄 CYCLE 22 - 18:40:16
+2026-04-05 18:40:16,015 - INFO - ============================================================
+2026-04-05 18:40:16,016 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:40:16,139 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:40:16,139 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:40:16,140 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:40:16,140 - WARNING - ⚠️ Trade 22 failed or skipped
+2026-04-05 18:40:16,140 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:41:16,184 - INFO - 
+============================================================
+2026-04-05 18:41:16,184 - INFO - 🔄 CYCLE 23 - 18:41:16
+2026-04-05 18:41:16,184 - INFO - ============================================================
+2026-04-05 18:41:16,184 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:41:16,313 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:41:16,314 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:41:16,314 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:41:16,314 - WARNING - ⚠️ Trade 23 failed or skipped
+2026-04-05 18:41:16,314 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:42:16,387 - INFO - 
+============================================================
+2026-04-05 18:42:16,388 - INFO - 🔄 CYCLE 24 - 18:42:16
+2026-04-05 18:42:16,388 - INFO - ============================================================
+2026-04-05 18:42:16,388 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:42:16,522 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:42:16,522 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:42:16,523 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:42:16,523 - WARNING - ⚠️ Trade 24 failed or skipped
+2026-04-05 18:42:16,523 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:43:16,578 - INFO - 
+============================================================
+2026-04-05 18:43:16,579 - INFO - 🔄 CYCLE 25 - 18:43:16
+2026-04-05 18:43:16,579 - INFO - ============================================================
+2026-04-05 18:43:16,579 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:43:16,709 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:43:16,710 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:43:16,710 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:43:16,710 - WARNING - ⚠️ Trade 25 failed or skipped
+2026-04-05 18:43:16,710 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:44:16,825 - INFO - 
+============================================================
+2026-04-05 18:44:16,825 - INFO - 🔄 CYCLE 26 - 18:44:16
+2026-04-05 18:44:16,825 - INFO - ============================================================
+2026-04-05 18:44:16,825 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:44:16,946 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:44:16,946 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:44:16,946 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:44:16,946 - WARNING - ⚠️ Trade 26 failed or skipped
+2026-04-05 18:44:16,946 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:45:16,957 - INFO - 
+============================================================
+2026-04-05 18:45:16,958 - INFO - 🔄 CYCLE 27 - 18:45:16
+2026-04-05 18:45:16,958 - INFO - ============================================================
+2026-04-05 18:45:16,958 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:45:17,083 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:45:17,084 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:45:17,084 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:45:17,084 - WARNING - ⚠️ Trade 27 failed or skipped
+2026-04-05 18:45:17,084 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:46:17,159 - INFO - 
+============================================================
+2026-04-05 18:46:17,160 - INFO - 🔄 CYCLE 28 - 18:46:17
+2026-04-05 18:46:17,160 - INFO - ============================================================
+2026-04-05 18:46:17,160 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:46:17,275 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:46:17,275 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:46:17,275 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:46:17,275 - WARNING - ⚠️ Trade 28 failed or skipped
+2026-04-05 18:46:17,275 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:47:17,319 - INFO - 
+============================================================
+2026-04-05 18:47:17,319 - INFO - 🔄 CYCLE 29 - 18:47:17
+2026-04-05 18:47:17,319 - INFO - ============================================================
+2026-04-05 18:47:17,319 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:47:17,437 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:47:17,437 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:47:17,437 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:47:17,437 - WARNING - ⚠️ Trade 29 failed or skipped
+2026-04-05 18:47:17,437 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:48:17,512 - INFO - 
+============================================================
+2026-04-05 18:48:17,513 - INFO - 🔄 CYCLE 30 - 18:48:17
+2026-04-05 18:48:17,513 - INFO - ============================================================
+2026-04-05 18:48:17,513 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:48:17,649 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:48:17,649 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:48:17,650 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:48:17,650 - WARNING - ⚠️ Trade 30 failed or skipped
+2026-04-05 18:48:17,650 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:49:17,692 - INFO - 
+============================================================
+2026-04-05 18:49:17,693 - INFO - 🔄 CYCLE 31 - 18:49:17
+2026-04-05 18:49:17,693 - INFO - ============================================================
+2026-04-05 18:49:17,693 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:49:17,828 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:49:17,829 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:49:17,829 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:49:17,829 - WARNING - ⚠️ Trade 31 failed or skipped
+2026-04-05 18:49:17,829 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:50:17,849 - INFO - 
+============================================================
+2026-04-05 18:50:17,849 - INFO - 🔄 CYCLE 32 - 18:50:17
+2026-04-05 18:50:17,849 - INFO - ============================================================
+2026-04-05 18:50:17,849 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:50:17,967 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:50:17,967 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:50:17,967 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:50:17,967 - WARNING - ⚠️ Trade 32 failed or skipped
+2026-04-05 18:50:17,967 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:51:18,043 - INFO - 
+============================================================
+2026-04-05 18:51:18,043 - INFO - 🔄 CYCLE 33 - 18:51:18
+2026-04-05 18:51:18,043 - INFO - ============================================================
+2026-04-05 18:51:18,043 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:51:18,174 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:51:18,174 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:51:18,174 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:51:18,174 - WARNING - ⚠️ Trade 33 failed or skipped
+2026-04-05 18:51:18,174 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 18:52:18,234 - INFO - 
+============================================================
+2026-04-05 18:52:18,235 - INFO - 🔄 CYCLE 34 - 18:52:18
+2026-04-05 18:52:18,235 - INFO - ============================================================
+2026-04-05 18:52:18,235 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 18:52:18,364 - INFO - 💰 Binance balance: $30.00 USDT
+2026-04-05 18:52:18,364 - ERROR - ❌ Insufficient balance: $30.00 < $30.0
+2026-04-05 18:52:18,364 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 18:52:18,364 - WARNING - ⚠️ Trade 34 failed or skipped
+2026-04-05 18:52:18,364 - INFO - ⏰ Next trade in 60 seconds...

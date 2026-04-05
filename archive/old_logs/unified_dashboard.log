@@ -1,0 +1,61 @@
+🚀 Starting Unified Dashboard on http://localhost:5013
+   Single Source of Truth from arbitrage_config.json
+ * Serving Flask app 'unified_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5013
+ * Running on http://192.168.1.63:5013
+[33mPress CTRL+C to quit[0m
+[2026-04-03 14:36:35,688] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/unified_dashboard.py", line 62, in index
+    <p><strong>Status:</strong> {config.get('crypto_stats', {{}}).get('status', 'N/A')}</p>
+                                                            ^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+127.0.0.1 - - [03/Apr/2026 14:36:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Apr/2026 14:36:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:36:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-04-03 14:38:46,534] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/unified_dashboard.py", line 62, in index
+    <p><strong>Status:</strong> {config.get('crypto_stats', {{}}).get('status', 'N/A')}</p>
+                                                            ^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+127.0.0.1 - - [03/Apr/2026 14:38:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Apr/2026 14:38:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-04-03 14:42:25,500] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/chetantemkar/.openclaw/workspace/app/unified_dashboard.py", line 62, in index
+    <p><strong>Status:</strong> {config.get('crypto_stats', {{}}).get('status', 'N/A')}</p>
+                                                            ^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+127.0.0.1 - - [03/Apr/2026 14:42:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Apr/2026 14:42:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

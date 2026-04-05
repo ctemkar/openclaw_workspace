@@ -1,0 +1,4 @@
+  File "/Users/chetantemkar/.openclaw/workspace/app/simple_fixed_dashboard.py", line 237
+    issues = DataQualityChecker.check_trades(trades)
+    ^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 235

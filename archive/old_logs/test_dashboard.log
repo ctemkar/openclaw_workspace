@@ -1,0 +1,10 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+Starting test dashboard on port 5012...
+ * Serving Flask app 'test_simple_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5012
+ * Running on http://192.168.1.63:5012
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Apr/2026 01:50:59] "GET / HTTP/1.1" 200 -

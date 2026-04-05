@@ -1,0 +1,42 @@
+2026-04-04 04:15:36,561 - INFO - ============================================================
+2026-04-04 04:15:36,561 - INFO - 🚀 STARTING AUTO-RESTART MONITOR FOR TRADING BOTS
+2026-04-04 04:15:36,561 - INFO - ============================================================
+2026-04-04 04:15:36,700 - INFO - 👀 Starting monitor for Forex Arbitration Bot (checking every 60s)
+2026-04-04 04:15:36,700 - INFO - 🚀 Started monitor thread for Forex Arbitration Bot
+2026-04-04 04:15:36,701 - INFO - 👀 Starting monitor for Auto Arbitrage Bot (checking every 60s)
+2026-04-04 04:15:36,701 - INFO - 🚀 Started monitor thread for Auto Arbitrage Bot
+2026-04-04 04:15:36,702 - INFO - 👀 Starting monitor for Practical Profit Bot (checking every 60s)
+2026-04-04 04:15:36,702 - INFO - 🚀 Started monitor thread for Practical Profit Bot
+2026-04-04 04:15:36,704 - INFO - 👀 Starting monitor for Multi-LLM Trading Bot (checking every 60s)
+2026-04-04 04:15:36,704 - INFO - 🚀 Started monitor thread for Multi-LLM Trading Bot
+2026-04-04 05:46:55,047 - WARNING - 🚨 Forex Arbitration Bot is NOT RUNNING! Attempting auto-restart...
+2026-04-04 05:46:55,462 - INFO - 🔄 Starting Forex Arbitration Bot...
+2026-04-04 05:46:58,675 - INFO - ✅ Forex Arbitration Bot started successfully!
+2026-04-04 05:46:58,676 - INFO - ✅ Forex Arbitration Bot auto-restarted successfully
+2026-04-04 06:00:00,770 - INFO - ✓ Forex Arbitration Bot is running normally
+2026-04-04 06:05:00,352 - INFO - ✓ Practical Profit Bot is running normally
+2026-04-04 06:05:00,353 - INFO - ✓ Multi-LLM Trading Bot is running normally
+2026-04-04 06:05:00,309 - INFO - ✓ Auto Arbitrage Bot is running normally
+2026-04-04 13:25:00,522 - INFO - ✓ Auto Arbitrage Bot is running normally
+2026-04-04 13:25:00,547 - INFO - ✓ Forex Arbitration Bot is running normally
+2026-04-04 13:25:00,590 - INFO - ✓ Multi-LLM Trading Bot is running normally
+2026-04-04 13:25:00,590 - INFO - ✓ Practical Profit Bot is running normally
+2026-04-04 16:45:01,142 - INFO - ✓ Practical Profit Bot is running normally
+2026-04-04 16:45:01,098 - INFO - ✓ Multi-LLM Trading Bot is running normally
+2026-04-04 16:45:01,203 - INFO - ✓ Auto Arbitrage Bot is running normally
+2026-04-04 21:52:43,292 - WARNING - 🚨 Practical Profit Bot is NOT RUNNING! Attempting auto-restart...
+2026-04-04 21:52:43,308 - INFO - 🔄 Starting Practical Profit Bot...
+2026-04-04 21:52:46,373 - INFO - ✅ Practical Profit Bot started successfully!
+2026-04-04 21:52:46,373 - INFO - ✅ Practical Profit Bot auto-restarted successfully
+2026-04-04 22:04:44,915 - WARNING - 🚨 Multi-LLM Trading Bot is NOT RUNNING! Attempting auto-restart...
+2026-04-04 22:04:44,917 - INFO - 🔄 Starting Multi-LLM Trading Bot...
+2026-04-04 22:04:48,027 - INFO - ✅ Multi-LLM Trading Bot started successfully!
+2026-04-04 22:04:48,027 - INFO - ✅ Multi-LLM Trading Bot auto-restarted successfully
+2026-04-04 22:22:50,073 - WARNING - 🚨 Multi-LLM Trading Bot is NOT RUNNING! Attempting auto-restart...
+2026-04-04 22:22:50,074 - INFO - 🔄 Starting Multi-LLM Trading Bot...
+2026-04-04 22:22:53,205 - INFO - ✅ Multi-LLM Trading Bot started successfully!
+2026-04-04 22:22:53,205 - INFO - ✅ Multi-LLM Trading Bot auto-restarted successfully
+2026-04-04 22:33:51,177 - WARNING - 🚨 Practical Profit Bot is NOT RUNNING! Attempting auto-restart...
+2026-04-04 22:33:51,178 - INFO - 🔄 Starting Practical Profit Bot...
+2026-04-04 22:33:54,271 - INFO - ✅ Practical Profit Bot started successfully!
+2026-04-04 22:33:54,271 - INFO - ✅ Practical Profit Bot auto-restarted successfully

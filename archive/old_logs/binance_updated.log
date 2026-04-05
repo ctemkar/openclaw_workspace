@@ -1,0 +1,82 @@
+2026-03-31 13:24:50,922 - CRITICAL - ======================================================================
+2026-03-31 13:24:50,923 - CRITICAL - 🚀 REAL BINANCE FUTURES SHORT TRADING BOT
+2026-03-31 13:24:50,923 - CRITICAL - ======================================================================
+2026-03-31 13:24:50,923 - CRITICAL - ⚠️  WARNING: REAL TRADE EXECUTION ENABLED
+2026-03-31 13:24:50,923 - CRITICAL - ======================================================================
+2026-03-31 13:24:50,923 - INFO - SHORT threshold: 0.5% drop
+2026-03-31 13:24:50,923 - INFO - Max daily trades: 2
+2026-03-31 13:24:50,923 - INFO - Leverage: 2x (conservative)
+2026-03-31 13:24:50,923 - INFO - Position size: 10% of capital
+2026-03-31 13:24:50,923 - INFO - Stop-loss: 2%, Take-profit: 4%
+2026-03-31 13:24:50,923 - INFO - Scan interval: 120 seconds
+2026-03-31 13:24:50,923 - CRITICAL - ======================================================================
+2026-03-31 13:24:50,923 - CRITICAL - REAL MONEY AT RISK - TRADES WILL BE EXECUTED
+2026-03-31 13:24:50,923 - CRITICAL - ======================================================================
+2026-03-31 13:24:52,682 - INFO - ✅ Binance Futures exchange connected
+2026-03-31 13:24:52,794 - WARNING - ⚠️  Could not set position mode: binance {"code":-4067,"msg":"Position side cannot be changed if there exists open orders."}
+2026-03-31 13:24:52,794 - INFO -    Trying to continue anyway...
+2026-03-31 13:24:52,909 - INFO - 💰 Binance Futures balance:
+2026-03-31 13:24:52,909 - INFO -    Free USDT: $41.81
+2026-03-31 13:24:52,909 - INFO -    Total USDT: $77.45
+2026-03-31 13:24:52,909 - INFO - ✅ Sufficient balance: $77.45
+2026-03-31 13:24:52,910 - INFO - Daily trades today: 0/2
+2026-03-31 13:24:52,910 - INFO - 
+📊 REAL TRADING CYCLE 1 - 13:24:52
+2026-03-31 13:24:52,910 - INFO - --------------------------------------------------
+2026-03-31 13:24:52,910 - INFO - 🔍 Analyzing futures pairs for SHORT opportunities...
+2026-03-31 13:24:58,162 - WARNING - ⚡ STRONG SHORT SIGNAL: MKR/USDT down -3.40% (RSI: 100)
+2026-03-31 13:24:58,162 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: MKR/USDT
+2026-03-31 13:24:58,162 - WARNING -    Current price: $1650.1000
+2026-03-31 13:24:58,162 - WARNING -    24h change: -3.40%
+2026-03-31 13:24:58,163 - WARNING -    Position size: 0.005068 contracts
+2026-03-31 13:24:58,163 - WARNING -    Position value: $8.36 (with 2x leverage)
+2026-03-31 13:24:58,163 - WARNING -    Capital at risk: $4.18
+2026-03-31 13:24:58,163 - WARNING -    Stop-loss: $1683.1020 (+2.0%)
+2026-03-31 13:24:58,163 - WARNING -    Take-profit: $1584.0960 (-4.0%)
+2026-03-31 13:24:58,163 - INFO - Setting 2x leverage for MKR/USDT...
+2026-03-31 13:24:58,465 - INFO - Setting up SHORT position for MKR/USDT...
+2026-03-31 13:24:58,465 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.005068 MKR/USDT @ market
+2026-03-31 13:24:58,754 - ERROR - ❌ Trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-03-31 13:24:59,593 - INFO - 
+📈 CYCLE 1 SUMMARY:
+2026-03-31 13:24:59,593 - INFO -    Trades executed: 0
+2026-03-31 13:24:59,593 - INFO -    Daily trades: 0/2
+2026-03-31 13:24:59,593 - INFO -    Cycle duration: 6.7 seconds
+2026-03-31 13:24:59,593 - INFO -    Free balance: $41.81
+2026-03-31 13:24:59,593 - INFO -    ⏳ No trades this cycle
+2026-03-31 13:24:59,593 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 13:24:59,594 - INFO - ======================================================================
+2026-03-31 13:24:59,888 - INFO - 💰 Binance Futures balance:
+2026-03-31 13:24:59,889 - INFO -    Free USDT: $41.77
+2026-03-31 13:24:59,889 - INFO -    Total USDT: $77.42
+2026-03-31 13:26:59,940 - INFO - 
+📊 REAL TRADING CYCLE 2 - 13:26:59
+2026-03-31 13:26:59,941 - INFO - --------------------------------------------------
+2026-03-31 13:26:59,941 - INFO - 🔍 Analyzing futures pairs for SHORT opportunities...
+2026-03-31 13:27:05,551 - WARNING - ⚡ STRONG SHORT SIGNAL: MKR/USDT down -3.40% (RSI: 100)
+2026-03-31 13:27:05,551 - WARNING - 🎯 ATTEMPTING REAL FUTURES SHORT: MKR/USDT
+2026-03-31 13:27:05,551 - WARNING -    Current price: $1650.1000
+2026-03-31 13:27:05,552 - WARNING -    24h change: -3.40%
+2026-03-31 13:27:05,552 - WARNING -    Position size: 0.005062 contracts
+2026-03-31 13:27:05,552 - WARNING -    Position value: $8.35 (with 2x leverage)
+2026-03-31 13:27:05,552 - WARNING -    Capital at risk: $4.18
+2026-03-31 13:27:05,552 - WARNING -    Stop-loss: $1683.1020 (+2.0%)
+2026-03-31 13:27:05,552 - WARNING -    Take-profit: $1584.0960 (-4.0%)
+2026-03-31 13:27:05,552 - INFO - Setting 2x leverage for MKR/USDT...
+2026-03-31 13:27:05,662 - INFO - Setting up SHORT position for MKR/USDT...
+2026-03-31 13:27:05,662 - WARNING - 📉 PLACING REAL SHORT ORDER: 0.005062 MKR/USDT @ market
+2026-03-31 13:27:06,067 - ERROR - ❌ Trade execution failed: binance {"code":-4140,"msg":"Invalid symbol status for opening position."}
+2026-03-31 13:27:07,102 - INFO - 
+📈 CYCLE 2 SUMMARY:
+2026-03-31 13:27:07,103 - INFO -    Trades executed: 0
+2026-03-31 13:27:07,103 - INFO -    Daily trades: 0/2
+2026-03-31 13:27:07,103 - INFO -    Cycle duration: 7.2 seconds
+2026-03-31 13:27:07,103 - INFO -    Free balance: $41.77
+2026-03-31 13:27:07,103 - INFO -    ⏳ No trades this cycle
+2026-03-31 13:27:07,103 - INFO - 
+⏰ Next scan in 120 seconds...
+2026-03-31 13:27:07,103 - INFO - ======================================================================
+2026-03-31 13:27:07,216 - INFO - 💰 Binance Futures balance:
+2026-03-31 13:27:07,217 - INFO -    Free USDT: $41.90
+2026-03-31 13:27:07,217 - INFO -    Total USDT: $77.51

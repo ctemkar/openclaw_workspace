@@ -1,0 +1,244 @@
+2026-04-03 10:26:42,508 - INFO - ✅ Gemini exchange initialized for auto-trading
+2026-04-03 10:26:42,511 - INFO - ✅ Binance exchange initialized for auto-trading
+2026-04-03 10:26:42,511 - INFO - ======================================================================
+2026-04-03 10:26:42,511 - INFO - 🤖 AUTO ARBITRAGE BOT STARTED
+2026-04-03 10:26:42,511 - INFO - Monitoring 34 cryptos
+2026-04-03 10:26:42,511 - INFO - Min spread: 0.4%
+2026-04-03 10:26:42,511 - INFO - Min profit: $0.25
+2026-04-03 10:26:42,511 - INFO - Trade size: 8.0% of capital
+2026-04-03 10:26:42,511 - INFO - ======================================================================
+2026-04-03 10:26:42,511 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 1 - 10:26:42
+2026-04-03 10:26:49,872 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:26:56,982 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:26:57,628 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:26:57,628 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:27:02,442 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:27:02,443 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:27:02,443 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:27:02,999 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:27:03,000 - INFO - 📊 Market Status:
+2026-04-03 10:27:03,606 - INFO -   BTC: G=$66680.50, B=$66668.47, Spread=0.02%
+2026-04-03 10:27:04,221 - INFO -   ETH: G=$2055.18, B=$2054.51, Spread=0.03%
+2026-04-03 10:27:04,947 - INFO -   SOL: G=$79.37, B=$79.31, Spread=0.08%
+2026-04-03 10:27:05,335 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.04%
+2026-04-03 10:27:05,336 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:27:05,928 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.36%
+2026-04-03 10:27:06,429 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.04%
+2026-04-03 10:27:07,042 - INFO -   AVAX: G=$8.80, B=$8.81, Spread=0.10%
+2026-04-03 10:27:07,649 - INFO -   LINK: G=$8.67, B=$8.67, Spread=0.01%
+2026-04-03 10:27:08,261 - INFO -   UNI: G=$3.20, B=$3.19, Spread=0.10%
+2026-04-03 10:27:08,851 - INFO -   LTC: G=$52.28, B=$52.42, Spread=0.27%
+2026-04-03 10:27:09,365 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.06%
+2026-04-03 10:27:09,894 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.20%
+2026-04-03 10:27:10,536 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.12%
+2026-04-03 10:27:11,129 - INFO -   AAVE: G=$95.04, B=$94.94, Spread=0.11%
+2026-04-03 10:27:11,634 - INFO -   COMP: G=$16.69, B=$16.68, Spread=0.06%
+2026-04-03 10:27:12,178 - INFO -   YFI: G=$2430.78, B=$2423.00, Spread=0.32%
+2026-04-03 10:27:12,178 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:27:12,795 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:27:12,795 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:27:12,796 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:27:13,438 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.85%
+2026-04-03 10:27:14,069 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.14%
+2026-04-03 10:27:14,693 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:27:15,687 - INFO -   BCH: G=$444.99, B=$444.50, Spread=0.11%
+2026-04-03 10:27:16,312 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.18%
+2026-04-03 10:27:16,837 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.11%
+2026-04-03 10:27:17,435 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.00%
+2026-04-03 10:27:18,074 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.23%
+2026-04-03 10:27:18,074 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:27:18,074 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:27:18,074 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:27:18,583 - INFO -   INJ: G=$2.81, B=$2.80, Spread=0.25%
+2026-04-03 10:27:18,583 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:27:18,583 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:27:18,583 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:27:48,586 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 2 - 10:27:48
+2026-04-03 10:27:50,637 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:27:57,562 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:27:58,180 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:27:58,222 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:28:03,475 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:28:03,516 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:28:03,516 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:28:04,130 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:28:04,130 - INFO - 📊 Market Status:
+2026-04-03 10:28:04,634 - INFO -   BTC: G=$66643.73, B=$66645.44, Spread=0.00%
+2026-04-03 10:28:05,174 - INFO -   ETH: G=$2053.20, B=$2052.97, Spread=0.01%
+2026-04-03 10:28:05,734 - INFO -   SOL: G=$79.34, B=$79.25, Spread=0.11%
+2026-04-03 10:28:06,366 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.01%
+2026-04-03 10:28:06,367 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:28:06,960 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:28:07,531 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.02%
+2026-04-03 10:28:08,036 - INFO -   AVAX: G=$8.80, B=$8.80, Spread=0.01%
+2026-04-03 10:28:08,550 - INFO -   LINK: G=$8.67, B=$8.66, Spread=0.11%
+2026-04-03 10:28:09,235 - INFO -   UNI: G=$3.20, B=$3.19, Spread=0.23%
+2026-04-03 10:28:09,808 - INFO -   LTC: G=$52.28, B=$52.39, Spread=0.21%
+2026-04-03 10:28:10,376 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.06%
+2026-04-03 10:28:11,018 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:28:11,567 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.06%
+2026-04-03 10:28:12,089 - INFO -   AAVE: G=$95.04, B=$94.84, Spread=0.22%
+2026-04-03 10:28:12,596 - INFO -   COMP: G=$16.69, B=$16.68, Spread=0.06%
+2026-04-03 10:28:13,125 - INFO -   YFI: G=$2430.78, B=$2423.00, Spread=0.32%
+2026-04-03 10:28:13,125 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:28:13,745 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:28:13,746 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:28:13,746 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:28:14,263 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.85%
+2026-04-03 10:28:14,871 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.10%
+2026-04-03 10:28:15,470 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:28:16,080 - INFO -   BCH: G=$444.99, B=$444.40, Spread=0.13%
+2026-04-03 10:28:16,630 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.18%
+2026-04-03 10:28:17,249 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.17%
+2026-04-03 10:28:17,746 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.27%
+2026-04-03 10:28:18,405 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.08%
+2026-04-03 10:28:18,405 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:28:18,406 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:28:18,406 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:28:18,984 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.39%
+2026-04-03 10:28:19,006 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:28:19,006 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:28:19,006 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:28:49,084 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 3 - 10:28:49
+2026-04-03 10:28:51,282 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:28:58,217 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:28:58,817 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:28:58,818 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:29:03,473 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:29:03,495 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:29:03,496 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:29:04,155 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:29:04,155 - INFO - 📊 Market Status:
+2026-04-03 10:29:04,731 - INFO -   BTC: G=$66622.53, B=$66622.73, Spread=0.00%
+2026-04-03 10:29:05,327 - INFO -   ETH: G=$2051.97, B=$2051.89, Spread=0.00%
+2026-04-03 10:29:05,967 - INFO -   SOL: G=$79.20, B=$79.18, Spread=0.03%
+2026-04-03 10:29:06,591 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.01%
+2026-04-03 10:29:06,591 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:29:07,199 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.28%
+2026-04-03 10:29:07,914 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.03%
+2026-04-03 10:29:08,395 - INFO -   AVAX: G=$8.80, B=$8.80, Spread=0.01%
+2026-04-03 10:29:08,967 - INFO -   LINK: G=$8.66, B=$8.66, Spread=0.05%
+2026-04-03 10:29:09,607 - INFO -   UNI: G=$3.19, B=$3.19, Spread=0.07%
+2026-04-03 10:29:10,247 - INFO -   LTC: G=$52.28, B=$52.39, Spread=0.21%
+2026-04-03 10:29:10,837 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.06%
+2026-04-03 10:29:11,330 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:29:11,921 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.06%
+2026-04-03 10:29:12,452 - INFO -   AAVE: G=$95.04, B=$94.80, Spread=0.26%
+2026-04-03 10:29:12,977 - INFO -   COMP: G=$16.69, B=$16.69, Spread=0.00%
+2026-04-03 10:29:13,585 - INFO -   YFI: G=$2430.78, B=$2423.00, Spread=0.32%
+2026-04-03 10:29:13,585 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:29:14,196 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:29:14,196 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:29:14,196 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:29:14,710 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.85%
+2026-04-03 10:29:15,250 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.05%
+2026-04-03 10:29:16,235 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.02%
+2026-04-03 10:29:16,622 - INFO -   BCH: G=$444.99, B=$444.20, Spread=0.18%
+2026-04-03 10:29:17,297 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.12%
+2026-04-03 10:29:17,852 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.17%
+2026-04-03 10:29:18,290 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:29:18,774 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.11%
+2026-04-03 10:29:18,774 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:29:18,774 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:29:18,774 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:29:19,269 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.39%
+2026-04-03 10:29:19,269 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:29:19,270 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:29:19,270 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:29:49,363 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 4 - 10:29:49
+2026-04-03 10:29:51,573 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:29:58,534 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:29:59,219 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:29:59,219 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:30:03,866 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:30:03,895 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:30:03,896 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:30:04,526 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:30:04,526 - INFO - 📊 Market Status:
+2026-04-03 10:30:05,083 - INFO -   BTC: G=$66626.66, B=$66634.49, Spread=0.01%
+2026-04-03 10:30:05,664 - INFO -   ETH: G=$2052.07, B=$2052.63, Spread=0.03%
+2026-04-03 10:30:06,210 - INFO -   SOL: G=$79.20, B=$79.20, Spread=0.00%
+2026-04-03 10:30:06,841 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.09%
+2026-04-03 10:30:06,841 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:30:07,454 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.19%
+2026-04-03 10:30:08,003 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.07%
+2026-04-03 10:30:08,544 - INFO -   AVAX: G=$8.80, B=$8.80, Spread=0.01%
+2026-04-03 10:30:09,193 - INFO -   LINK: G=$8.66, B=$8.65, Spread=0.06%
+2026-04-03 10:30:09,840 - INFO -   UNI: G=$3.19, B=$3.19, Spread=0.03%
+2026-04-03 10:30:10,486 - INFO -   LTC: G=$52.42, B=$52.41, Spread=0.02%
+2026-04-03 10:30:11,130 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.06%
+2026-04-03 10:30:11,776 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:30:12,424 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.06%
+2026-04-03 10:30:13,129 - INFO -   AAVE: G=$95.04, B=$94.82, Spread=0.24%
+2026-04-03 10:30:13,516 - INFO -   COMP: G=$16.69, B=$16.70, Spread=0.06%
+2026-04-03 10:30:14,099 - INFO -   YFI: G=$2430.78, B=$2423.00, Spread=0.32%
+2026-04-03 10:30:14,122 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:30:14,742 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:30:14,748 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:30:14,748 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:30:15,269 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.91%
+2026-04-03 10:30:15,845 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.05%
+2026-04-03 10:30:16,417 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:30:17,068 - INFO -   BCH: G=$444.99, B=$444.30, Spread=0.16%
+2026-04-03 10:30:17,563 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.12%
+2026-04-03 10:30:18,122 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.17%
+2026-04-03 10:30:18,612 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:30:19,230 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.11%
+2026-04-03 10:30:19,230 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:30:19,231 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:30:19,231 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:30:19,648 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.43%
+2026-04-03 10:30:19,715 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:30:19,715 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:30:19,715 - INFO - 💤 Next scan in 30 seconds...
+2026-04-03 10:30:49,773 - INFO - 
+🔄 AUTO-ARBITRAGE CYCLE 5 - 10:30:49
+2026-04-03 10:30:52,047 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:30:59,168 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:30:59,733 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:30:59,734 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:31:04,497 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:31:04,499 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:31:04,499 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:31:05,108 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:31:05,109 - INFO - 📊 Market Status:
+2026-04-03 10:31:05,708 - INFO -   BTC: G=$66626.66, B=$66643.19, Spread=0.02%
+2026-04-03 10:31:06,352 - INFO -   ETH: G=$2052.07, B=$2053.41, Spread=0.07%
+2026-04-03 10:31:06,942 - INFO -   SOL: G=$79.23, B=$79.23, Spread=0.00%
+2026-04-03 10:31:07,447 - INFO -   XRP: G=$1.32, B=$1.32, Spread=0.09%
+2026-04-03 10:31:07,448 - WARNING - ⚠️ Could not fetch prices for ADA: gemini does not have market symbol ADA/USD
+2026-04-03 10:31:07,996 - INFO -   DOT: G=$1.23, B=$1.24, Spread=0.19%
+2026-04-03 10:31:08,596 - INFO -   DOGE: G=$0.09, B=$0.09, Spread=0.03%
+2026-04-03 10:31:09,246 - INFO -   AVAX: G=$8.80, B=$8.79, Spread=0.13%
+2026-04-03 10:31:09,806 - INFO -   LINK: G=$8.66, B=$8.66, Spread=0.05%
+2026-04-03 10:31:10,621 - INFO -   UNI: G=$3.19, B=$3.19, Spread=0.03%
+2026-04-03 10:31:11,019 - INFO -   LTC: G=$52.42, B=$52.42, Spread=0.00%
+2026-04-03 10:31:11,519 - INFO -   ATOM: G=$1.69, B=$1.69, Spread=0.12%
+2026-04-03 10:31:12,065 - INFO -   FIL: G=$0.83, B=$0.83, Spread=0.08%
+2026-04-03 10:31:12,581 - INFO -   XTZ: G=$0.35, B=$0.35, Spread=0.06%
+2026-04-03 10:31:13,109 - INFO -   AAVE: G=$95.04, B=$94.84, Spread=0.22%
+2026-04-03 10:31:13,639 - INFO -   COMP: G=$16.69, B=$16.70, Spread=0.06%
+2026-04-03 10:31:14,301 - INFO -   YFI: G=$2430.78, B=$2421.00, Spread=0.40%
+2026-04-03 10:31:14,302 - WARNING - ⚠️ Could not fetch prices for SNX: gemini does not have market symbol SNX/USD
+2026-04-03 10:31:14,850 - INFO -   BAT: G=$0.09, B=$0.09, Spread=1.86%
+2026-04-03 10:31:14,851 - WARNING - ⚠️ Could not fetch prices for ZRX: gemini does not have market symbol ZRX/USD
+2026-04-03 10:31:14,851 - WARNING - ⚠️ Could not fetch prices for ENJ: gemini does not have market symbol ENJ/USD
+2026-04-03 10:31:15,505 - INFO -   SUSHI: G=$0.19, B=$0.19, Spread=0.91%
+2026-04-03 10:31:16,099 - INFO -   CRV: G=$0.21, B=$0.21, Spread=0.05%
+2026-04-03 10:31:16,738 - INFO -   SHIB: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:31:17,203 - INFO -   BCH: G=$444.99, B=$444.30, Spread=0.16%
+2026-04-03 10:31:17,822 - INFO -   PEPE: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:31:18,376 - INFO -   WIF: G=$0.18, B=$0.18, Spread=0.17%
+2026-04-03 10:31:18,962 - INFO -   BONK: G=$0.00, B=$0.00, Spread=0.09%
+2026-04-03 10:31:19,534 - INFO -   FLOKI: G=$0.00, B=$0.00, Spread=0.15%
+2026-04-03 10:31:19,534 - WARNING - ⚠️ Could not fetch prices for ORDI: gemini does not have market symbol ORDI/USD
+2026-04-03 10:31:19,534 - WARNING - ⚠️ Could not fetch prices for 1000SATS: gemini does not have market symbol 1000SATS/USD
+2026-04-03 10:31:19,535 - WARNING - ⚠️ Could not fetch prices for RUNE: gemini does not have market symbol RUNE/USD
+2026-04-03 10:31:20,140 - INFO -   INJ: G=$2.81, B=$2.79, Spread=0.43%
+2026-04-03 10:31:20,141 - WARNING - ⚠️ Could not fetch prices for MATIC: gemini does not have market symbol MATIC/USD
+2026-04-03 10:31:20,141 - INFO - ⏳ No profitable arbitrage opportunities found
+2026-04-03 10:31:20,141 - INFO - 💤 Next scan in 30 seconds...

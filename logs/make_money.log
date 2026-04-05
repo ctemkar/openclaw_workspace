@@ -1,0 +1,248 @@
+2026-04-05 16:12:55,609 - INFO - 💰 MAKE MONEY BOT STARTING
+2026-04-05 16:12:55,609 - INFO - 🎯 Actually trades with REAL money TODAY
+2026-04-05 16:12:55,610 - INFO - ✅ Loaded Binance key: dT0OIm9aq8...
+2026-04-05 16:12:55,613 - INFO - ============================================================
+2026-04-05 16:12:55,613 - INFO - 💰 MAKE MONEY BOT ACTIVE
+2026-04-05 16:12:55,613 - INFO - 📊 Trade size: $30.0
+2026-04-05 16:12:55,613 - INFO - 🎯 Target: YFI -1.74% arbitrage
+2026-04-05 16:12:55,613 - INFO - ============================================================
+2026-04-05 16:12:55,613 - INFO - 
+============================================================
+2026-04-05 16:12:55,613 - INFO - 🔄 CYCLE 1 - 16:12:55
+2026-04-05 16:12:55,613 - INFO - ============================================================
+2026-04-05 16:12:55,613 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:12:57,703 - INFO - 💰 Binance balance: $20.55 USDT
+2026-04-05 16:12:57,703 - ERROR - ❌ Insufficient balance: $20.55 < $30.0
+2026-04-05 16:12:57,704 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:12:57,704 - WARNING - ⚠️ Trade 1 failed or skipped
+2026-04-05 16:12:57,704 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:13:57,765 - INFO - 
+============================================================
+2026-04-05 16:13:57,797 - INFO - 🔄 CYCLE 2 - 16:13:57
+2026-04-05 16:13:57,798 - INFO - ============================================================
+2026-04-05 16:13:57,798 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:13:58,036 - INFO - 💰 Binance balance: $20.55 USDT
+2026-04-05 16:13:58,036 - ERROR - ❌ Insufficient balance: $20.55 < $30.0
+2026-04-05 16:13:58,037 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:13:58,037 - WARNING - ⚠️ Trade 2 failed or skipped
+2026-04-05 16:13:58,037 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:14:58,034 - INFO - 
+============================================================
+2026-04-05 16:14:58,056 - INFO - 🔄 CYCLE 3 - 16:14:58
+2026-04-05 16:14:58,057 - INFO - ============================================================
+2026-04-05 16:14:58,100 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:14:58,233 - INFO - 💰 Binance balance: $20.55 USDT
+2026-04-05 16:14:58,233 - ERROR - ❌ Insufficient balance: $20.55 < $30.0
+2026-04-05 16:14:58,233 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:14:58,233 - WARNING - ⚠️ Trade 3 failed or skipped
+2026-04-05 16:14:58,233 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:15:58,254 - INFO - 
+============================================================
+2026-04-05 16:15:58,256 - INFO - 🔄 CYCLE 4 - 16:15:58
+2026-04-05 16:15:58,257 - INFO - ============================================================
+2026-04-05 16:15:58,257 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:15:58,383 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:15:58,383 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:15:58,384 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:15:58,384 - WARNING - ⚠️ Trade 4 failed or skipped
+2026-04-05 16:15:58,384 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:16:58,459 - INFO - 
+============================================================
+2026-04-05 16:16:58,460 - INFO - 🔄 CYCLE 5 - 16:16:58
+2026-04-05 16:16:58,460 - INFO - ============================================================
+2026-04-05 16:16:58,460 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:16:58,587 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:16:58,587 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:16:58,587 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:16:58,587 - WARNING - ⚠️ Trade 5 failed or skipped
+2026-04-05 16:16:58,587 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:17:58,610 - INFO - 
+============================================================
+2026-04-05 16:17:58,613 - INFO - 🔄 CYCLE 6 - 16:17:58
+2026-04-05 16:17:58,613 - INFO - ============================================================
+2026-04-05 16:17:58,613 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:17:58,739 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:17:58,739 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:17:58,739 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:17:58,739 - WARNING - ⚠️ Trade 6 failed or skipped
+2026-04-05 16:17:58,739 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:18:58,805 - INFO - 
+============================================================
+2026-04-05 16:18:58,806 - INFO - 🔄 CYCLE 7 - 16:18:58
+2026-04-05 16:18:58,806 - INFO - ============================================================
+2026-04-05 16:18:58,806 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:18:58,922 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:18:58,922 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:18:58,922 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:18:58,922 - WARNING - ⚠️ Trade 7 failed or skipped
+2026-04-05 16:18:58,922 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:19:58,997 - INFO - 
+============================================================
+2026-04-05 16:19:58,998 - INFO - 🔄 CYCLE 8 - 16:19:58
+2026-04-05 16:19:58,998 - INFO - ============================================================
+2026-04-05 16:19:58,998 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:19:59,121 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:19:59,121 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:19:59,121 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:19:59,122 - WARNING - ⚠️ Trade 8 failed or skipped
+2026-04-05 16:19:59,122 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:20:59,195 - INFO - 
+============================================================
+2026-04-05 16:20:59,196 - INFO - 🔄 CYCLE 9 - 16:20:59
+2026-04-05 16:20:59,196 - INFO - ============================================================
+2026-04-05 16:20:59,196 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:20:59,324 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:20:59,324 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:20:59,324 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:20:59,325 - WARNING - ⚠️ Trade 9 failed or skipped
+2026-04-05 16:20:59,325 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:21:59,353 - INFO - 
+============================================================
+2026-04-05 16:21:59,355 - INFO - 🔄 CYCLE 10 - 16:21:59
+2026-04-05 16:21:59,355 - INFO - ============================================================
+2026-04-05 16:21:59,355 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:21:59,481 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:21:59,482 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:21:59,482 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:21:59,482 - WARNING - ⚠️ Trade 10 failed or skipped
+2026-04-05 16:21:59,482 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:22:59,512 - INFO - 
+============================================================
+2026-04-05 16:22:59,513 - INFO - 🔄 CYCLE 11 - 16:22:59
+2026-04-05 16:22:59,513 - INFO - ============================================================
+2026-04-05 16:22:59,514 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:22:59,642 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:22:59,642 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:22:59,643 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:22:59,643 - WARNING - ⚠️ Trade 11 failed or skipped
+2026-04-05 16:22:59,643 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:23:59,644 - INFO - 
+============================================================
+2026-04-05 16:23:59,644 - INFO - 🔄 CYCLE 12 - 16:23:59
+2026-04-05 16:23:59,644 - INFO - ============================================================
+2026-04-05 16:23:59,644 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:23:59,782 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:23:59,782 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:23:59,783 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:23:59,783 - WARNING - ⚠️ Trade 12 failed or skipped
+2026-04-05 16:23:59,783 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:24:59,798 - INFO - 
+============================================================
+2026-04-05 16:24:59,800 - INFO - 🔄 CYCLE 13 - 16:24:59
+2026-04-05 16:24:59,800 - INFO - ============================================================
+2026-04-05 16:24:59,800 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:24:59,917 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:24:59,917 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:24:59,917 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:24:59,918 - WARNING - ⚠️ Trade 13 failed or skipped
+2026-04-05 16:24:59,918 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:25:59,983 - INFO - 
+============================================================
+2026-04-05 16:26:00,001 - INFO - 🔄 CYCLE 14 - 16:26:00
+2026-04-05 16:26:00,001 - INFO - ============================================================
+2026-04-05 16:26:00,033 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:26:02,904 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:26:02,906 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:26:02,907 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:26:02,907 - WARNING - ⚠️ Trade 14 failed or skipped
+2026-04-05 16:26:02,907 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:27:03,037 - INFO - 
+============================================================
+2026-04-05 16:27:03,071 - INFO - 🔄 CYCLE 15 - 16:27:03
+2026-04-05 16:27:03,071 - INFO - ============================================================
+2026-04-05 16:27:03,071 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:27:03,306 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:27:03,306 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:27:03,306 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:27:03,306 - WARNING - ⚠️ Trade 15 failed or skipped
+2026-04-05 16:27:03,306 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:28:03,309 - INFO - 
+============================================================
+2026-04-05 16:28:03,418 - INFO - 🔄 CYCLE 16 - 16:28:03
+2026-04-05 16:28:03,418 - INFO - ============================================================
+2026-04-05 16:28:03,418 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:28:03,688 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:28:03,688 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:28:03,688 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:28:03,688 - WARNING - ⚠️ Trade 16 failed or skipped
+2026-04-05 16:28:03,688 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:29:03,899 - INFO - 
+============================================================
+2026-04-05 16:29:04,002 - INFO - 🔄 CYCLE 17 - 16:29:04
+2026-04-05 16:29:04,004 - INFO - ============================================================
+2026-04-05 16:29:04,004 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:29:05,121 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:29:05,122 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:29:05,148 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:29:05,187 - WARNING - ⚠️ Trade 17 failed or skipped
+2026-04-05 16:29:05,187 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:30:05,597 - INFO - 
+============================================================
+2026-04-05 16:30:05,928 - INFO - 🔄 CYCLE 18 - 16:30:05
+2026-04-05 16:30:05,931 - INFO - ============================================================
+2026-04-05 16:30:05,931 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:30:06,288 - INFO - 💰 Binance balance: $10.59 USDT
+2026-04-05 16:30:06,289 - ERROR - ❌ Insufficient balance: $10.59 < $30.0
+2026-04-05 16:30:06,289 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:30:06,289 - WARNING - ⚠️ Trade 18 failed or skipped
+2026-04-05 16:30:06,289 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:31:06,326 - INFO - 
+============================================================
+2026-04-05 16:31:06,338 - INFO - 🔄 CYCLE 19 - 16:31:06
+2026-04-05 16:31:06,338 - INFO - ============================================================
+2026-04-05 16:31:06,338 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:31:06,501 - INFO - 💰 Binance balance: $10.36 USDT
+2026-04-05 16:31:06,501 - ERROR - ❌ Insufficient balance: $10.36 < $30.0
+2026-04-05 16:31:06,501 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:31:06,501 - WARNING - ⚠️ Trade 19 failed or skipped
+2026-04-05 16:31:06,501 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:32:06,575 - INFO - 
+============================================================
+2026-04-05 16:32:06,577 - INFO - 🔄 CYCLE 20 - 16:32:06
+2026-04-05 16:32:06,577 - INFO - ============================================================
+2026-04-05 16:32:06,577 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:32:06,697 - INFO - 💰 Binance balance: $40.89 USDT
+2026-04-05 16:32:06,697 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 16:32:06,830 - INFO - 📊 YFI price: $2417.00
+2026-04-05 16:32:06,830 - INFO - 💰 BUYING: 0.012412 YFI at $2417.00 ($30.00)
+2026-04-05 16:32:06,974 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849473031', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2Fcea5e3eab42f23a548f050', 'transactTime': '1775381527002', 'price': '0.00000000', 'origQty': '0.01241000', 'executedQty': '0.01241000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.01979000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775381527002', 'fills': [{'price': '2419.00000000', 'qty': '0.01241000', 'commission': '0.00001241', 'commissionAsset': 'YFI', 'tradeId': '93104340'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849473031', 'clientOrderId': 'x-TKT5PX2Fcea5e3eab42f23a548f050', 'timestamp': 1775381527002, 'datetime': '2026-04-05T09:32:07.002Z', 'lastTradeTimestamp': 1775381527002, 'lastUpdateTimestamp': 1775381527002, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2419.0, 'triggerPrice': None, 'amount': 0.01241, 'cost': 30.01979, 'average': 2419.0, 'filled': 0.01241, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.241e-05}, 'trades': [{'info': {'price': '2419.00000000', 'qty': '0.01241000', 'commission': '0.00001241', 'commissionAsset': 'YFI', 'tradeId': '93104340'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104340', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2419.0, 'amount': 0.01241, 'cost': 30.01979, 'fee': {'currency': 'YFI', 'cost': 1.241e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.241e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.241e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 16:32:06,975 - INFO - 📈 WOULD SELL: 0.012410 YFI at $2459.06
+2026-04-05 16:32:06,975 - INFO - 💰 SIMULATED PROFIT: $0.52 (1.74% spread)
+2026-04-05 16:32:06,980 - INFO - 💰 TOTAL PROFIT: $0.52 from 1 trades
+2026-04-05 16:32:06,980 - INFO - ✅ Trade 20 successful
+2026-04-05 16:32:06,980 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:33:07,025 - INFO - 
+============================================================
+2026-04-05 16:33:07,026 - INFO - 🔄 CYCLE 21 - 16:33:07
+2026-04-05 16:33:07,026 - INFO - ============================================================
+2026-04-05 16:33:07,026 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:33:07,152 - INFO - 💰 Binance balance: $10.87 USDT
+2026-04-05 16:33:07,152 - ERROR - ❌ Insufficient balance: $10.87 < $30.0
+2026-04-05 16:33:07,152 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:33:07,152 - WARNING - ⚠️ Trade 21 failed or skipped
+2026-04-05 16:33:07,153 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:34:07,175 - INFO - 
+============================================================
+2026-04-05 16:34:07,175 - INFO - 🔄 CYCLE 22 - 16:34:07
+2026-04-05 16:34:07,176 - INFO - ============================================================
+2026-04-05 16:34:07,176 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:34:07,304 - INFO - 💰 Binance balance: $39.81 USDT
+2026-04-05 16:34:07,305 - INFO - ✅ Sufficient balance for $30.0 trades
+2026-04-05 16:34:07,429 - INFO - 📊 YFI price: $2418.00
+2026-04-05 16:34:07,429 - INFO - 💰 BUYING: 0.012407 YFI at $2418.00 ($30.00)
+2026-04-05 16:34:07,549 - INFO - ✅ BUY executed: {'info': {'symbol': 'YFIUSDT', 'orderId': '2849473367', 'orderListId': '-1', 'clientOrderId': 'x-TKT5PX2F9d6dba80ac95a812cadc9e', 'transactTime': '1775381647589', 'price': '0.00000000', 'origQty': '0.01240000', 'executedQty': '0.01240000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '30.00800000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': '1775381647589', 'fills': [{'price': '2420.00000000', 'qty': '0.01240000', 'commission': '0.00001240', 'commissionAsset': 'YFI', 'tradeId': '93104358'}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}, 'id': '2849473367', 'clientOrderId': 'x-TKT5PX2F9d6dba80ac95a812cadc9e', 'timestamp': 1775381647589, 'datetime': '2026-04-05T09:34:07.589Z', 'lastTradeTimestamp': 1775381647589, 'lastUpdateTimestamp': 1775381647589, 'symbol': 'YFI/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': None, 'side': 'buy', 'price': 2420.0, 'triggerPrice': None, 'amount': 0.0124, 'cost': 30.008, 'average': 2420.0, 'filled': 0.0124, 'remaining': 0.0, 'status': 'closed', 'fee': {'currency': 'YFI', 'cost': 1.24e-05}, 'trades': [{'info': {'price': '2420.00000000', 'qty': '0.01240000', 'commission': '0.00001240', 'commissionAsset': 'YFI', 'tradeId': '93104358'}, 'timestamp': None, 'datetime': None, 'symbol': 'YFI/USDT', 'id': '93104358', 'order': None, 'type': None, 'side': None, 'takerOrMaker': None, 'price': 2420.0, 'amount': 0.0124, 'cost': 30.008, 'fee': {'currency': 'YFI', 'cost': 1.24e-05}, 'fees': [{'currency': 'YFI', 'cost': 1.24e-05}]}], 'fees': [{'currency': 'YFI', 'cost': 1.24e-05}], 'stopPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None}
+2026-04-05 16:34:07,550 - INFO - 📈 WOULD SELL: 0.012400 YFI at $2460.07
+2026-04-05 16:34:07,550 - INFO - 💰 SIMULATED PROFIT: $0.52 (1.74% spread)
+2026-04-05 16:34:07,552 - INFO - 💰 TOTAL PROFIT: $1.04 from 2 trades
+2026-04-05 16:34:07,553 - INFO - ✅ Trade 22 successful
+2026-04-05 16:34:07,553 - INFO - ⏰ Next trade in 60 seconds...
+2026-04-05 16:35:07,594 - INFO - 
+============================================================
+2026-04-05 16:35:07,595 - INFO - 🔄 CYCLE 23 - 16:35:07
+2026-04-05 16:35:07,595 - INFO - ============================================================
+2026-04-05 16:35:07,595 - INFO - 🎯 TRADING YFI ARBITRAGE
+2026-04-05 16:35:07,713 - INFO - 💰 Binance balance: $9.80 USDT
+2026-04-05 16:35:07,713 - ERROR - ❌ Insufficient balance: $9.80 < $30.0
+2026-04-05 16:35:07,714 - ERROR - ❌ Cannot trade - insufficient balance
+2026-04-05 16:35:07,714 - WARNING - ⚠️ Trade 23 failed or skipped
+2026-04-05 16:35:07,714 - INFO - ⏰ Next trade in 60 seconds...

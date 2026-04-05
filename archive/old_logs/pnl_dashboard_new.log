@@ -1,0 +1,11 @@
+🚀 STARTING SIMPLE P&L DASHBOARD
+   • Port: 5008
+   • Shows: P&L information as requested
+   • Priority: Cumulative P&L first
+   • Clear: SHORT trades status shown
+   • Access: http://localhost:5008/
+
+ * Serving Flask app 'simple_pnl_dashboard'
+ * Debug mode: off
+Address already in use
+Port 5008 is in use by another program. Either identify and stop that program, or start the server with a different port.

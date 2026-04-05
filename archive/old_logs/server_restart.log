@@ -1,0 +1,35 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[2026-03-31 15:34:39.973728] Running trading analysis...
+Starting Conservative Crypto Trading Server on port 5001...
+Capital: $1,000 | Stop-loss: 5% | Take-profit: 10%
+Max trades/day: 2 | Pairs: BTC/USD, ETH/USD
+Server running at http://localhost:5001
+ * Serving Flask app 'trading_server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.63:5001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [31/Mar/2026 15:34:55] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:34:55,920 - INFO - 127.0.0.1 - - [31/Mar/2026 15:34:55] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:08] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:08,612 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:08] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /trades HTTP/1.1" 200 -
+2026-03-31 15:35:11,624 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:11,624 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /trades HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /trades HTTP/1.1" 200 -
+2026-03-31 15:35:11,625 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:11] "GET /trades HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:16] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:16,816 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:16] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:52] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:52,261 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:52] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:54] "GET /trades HTTP/1.1" 200 -
+2026-03-31 15:35:54,753 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:54] "GET /trades HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:54] "GET /trades HTTP/1.1" 200 -
+2026-03-31 15:35:54,755 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:54] "GET /trades HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:55] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:55,398 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:55] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 15:35:59] "GET /status HTTP/1.1" 200 -
+2026-03-31 15:35:59,887 - INFO - 127.0.0.1 - - [31/Mar/2026 15:35:59] "GET /status HTTP/1.1" 200 -

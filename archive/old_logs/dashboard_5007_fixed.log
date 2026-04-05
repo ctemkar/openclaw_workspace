@@ -1,0 +1,25 @@
+======================================================================
+📊 TRADING SYSTEM DASHBOARD - WITH TRADE ROWS
+======================================================================
+✅ Shows 40 trade rows on main dashboard (port 5007)
+✅ Complete overview with summary statistics
+======================================================================
+Dashboard: http://localhost:5007
+API Status: http://localhost:5007/api/status
+API Trades: http://localhost:5007/api/trades
+Trades Dashboard: http://localhost:5011
+Detailed Trade Rows: http://localhost:5012
+======================================================================
+ * Serving Flask app 'dashboard_with_trade_rows'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://192.168.1.63:5007
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Apr/2026 22:50:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 22:50:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 22:50:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 22:50:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [02/Apr/2026 22:50:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Apr/2026 22:50:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

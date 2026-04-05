@@ -1,0 +1,79 @@
+2026-04-03 18:11:16,667 - INFO - 🚀 SPOT-FUTURES TRADER STARTING
+2026-04-03 18:11:16,667 - INFO - 💰 You have: $71 Binance Futures, $571 Gemini
+2026-04-03 18:11:16,672 - INFO - 📊 Trading: 6 cryptos
+2026-04-03 18:11:16,672 - INFO -    Min spread: 0.4%
+2026-04-03 18:11:16,672 - INFO -    Trade size: $10.0
+2026-04-03 18:11:16,672 - INFO - ============================================================
+2026-04-03 18:11:16,672 - INFO - 🚀 SPOT-FUTURES TRADER - REALITY CHECK
+2026-04-03 18:11:16,672 - INFO - ============================================================
+2026-04-03 18:11:16,672 - INFO - 🔍 Scan #1
+2026-04-03 18:11:18,982 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:11:18,982 - INFO -    USDT Free: $0.00
+2026-04-03 18:11:18,982 - INFO -    USDT Total: $0.00
+2026-04-03 18:11:18,982 - WARNING -    ⚠️ NO USDT in SPOT wallet!
+2026-04-03 18:11:18,982 - WARNING -    💡 Transfer from FUTURES wallet needed
+2026-04-03 18:11:57,774 - ERROR - ❌ Gemini error: gemini Nonce '1775214717485' has not increased since your last call to the Gemini API.
+2026-04-03 18:11:57,774 - INFO -    💡 Check manually on Gemini.com
+2026-04-03 18:12:01,238 - INFO -    ⏳ No opportunities found
+2026-04-03 18:12:31,252 - INFO - 🔍 Scan #2
+2026-04-03 18:12:31,391 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:12:31,393 - INFO -    USDT Free: $0.00
+2026-04-03 18:12:31,396 - INFO -    USDT Total: $0.00
+2026-04-03 18:12:31,397 - WARNING -    ⚠️ NO USDT in SPOT wallet!
+2026-04-03 18:12:31,397 - WARNING -    💡 Transfer from FUTURES wallet needed
+2026-04-03 18:12:34,425 - INFO -    ⏳ No opportunities found
+2026-04-03 18:13:04,437 - INFO - 🔍 Scan #3
+2026-04-03 18:13:04,563 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:13:04,563 - INFO -    USDT Free: $0.00
+2026-04-03 18:13:04,563 - INFO -    USDT Total: $0.00
+2026-04-03 18:13:04,563 - WARNING -    ⚠️ NO USDT in SPOT wallet!
+2026-04-03 18:13:04,563 - WARNING -    💡 Transfer from FUTURES wallet needed
+2026-04-03 18:13:07,940 - INFO -    ⏳ No opportunities found
+2026-04-03 18:13:38,041 - INFO - 🔍 Scan #4
+2026-04-03 18:13:38,167 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:13:38,167 - INFO -    USDT Free: $40.00
+2026-04-03 18:13:38,168 - INFO -    USDT Total: $40.00
+2026-04-03 18:13:41,422 - INFO -    ⏳ No opportunities found
+2026-04-03 18:14:11,500 - INFO - 🔍 Scan #5
+2026-04-03 18:14:11,632 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:14:11,633 - INFO -    USDT Free: $40.00
+2026-04-03 18:14:11,633 - INFO -    USDT Total: $40.00
+2026-04-03 18:14:15,179 - INFO -    ⏳ No opportunities found
+2026-04-03 18:14:45,321 - INFO - 🔍 Scan #6
+2026-04-03 18:14:45,451 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:14:45,452 - INFO -    USDT Free: $40.00
+2026-04-03 18:14:45,452 - INFO -    USDT Total: $40.00
+2026-04-03 18:15:21,687 - ERROR - ❌ Gemini error: gemini Nonce '1775214920470' has not increased since your last call to the Gemini API.
+2026-04-03 18:15:21,687 - INFO -    💡 Check manually on Gemini.com
+2026-04-03 18:15:25,213 - INFO -    ⏳ No opportunities found
+2026-04-03 18:15:55,252 - INFO - 🔍 Scan #7
+2026-04-03 18:15:55,384 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:15:55,384 - INFO -    USDT Free: $40.00
+2026-04-03 18:15:55,385 - INFO -    USDT Total: $40.00
+2026-04-03 18:15:58,693 - INFO -    ⏳ No opportunities found
+2026-04-03 18:16:28,801 - INFO - 🔍 Scan #8
+2026-04-03 18:16:28,932 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:16:28,932 - INFO -    USDT Free: $40.00
+2026-04-03 18:16:28,932 - INFO -    USDT Total: $40.00
+2026-04-03 18:16:32,021 - INFO -    ⏳ No opportunities found
+2026-04-03 18:17:02,102 - INFO - 🔍 Scan #9
+2026-04-03 18:17:02,222 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:17:02,222 - INFO -    USDT Free: $40.00
+2026-04-03 18:17:02,223 - INFO -    USDT Total: $40.00
+2026-04-03 18:17:05,320 - INFO -    ⏳ No opportunities found
+2026-04-03 18:17:35,357 - INFO - 🔍 Scan #10
+2026-04-03 18:17:35,482 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:17:35,483 - INFO -    USDT Free: $40.00
+2026-04-03 18:17:35,483 - INFO -    USDT Total: $40.00
+2026-04-03 18:17:38,564 - INFO -    ⏳ No opportunities found
+2026-04-03 18:18:08,579 - INFO - 🔍 Scan #11
+2026-04-03 18:18:08,704 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:18:08,704 - INFO -    USDT Free: $40.00
+2026-04-03 18:18:08,704 - INFO -    USDT Total: $40.00
+2026-04-03 18:18:44,858 - ERROR - ❌ Gemini error: gemini Nonce '1775215123772' has not increased since your last call to the Gemini API.
+2026-04-03 18:18:44,858 - INFO -    💡 Check manually on Gemini.com
+2026-04-03 18:18:47,952 - INFO -    ⏳ No opportunities found
+2026-04-03 18:19:18,007 - INFO - 🔍 Scan #12
+2026-04-03 18:19:18,122 - INFO - 💰 Binance SPOT Wallet:
+2026-04-03 18:19:18,122 - INFO -    USDT Free: $40.00
+2026-04-03 18:19:18,122 - INFO -    USDT Total: $40.00

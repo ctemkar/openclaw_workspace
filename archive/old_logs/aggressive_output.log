@@ -1,0 +1,41 @@
+2026-04-03 18:19:21,173 - INFO - 🚀 AGGRESSIVE TRADER STARTING
+2026-04-03 18:19:21,174 - INFO - 💰 You have $40 in Binance Spot - READY TO TRADE!
+2026-04-03 18:19:21,178 - INFO - 📊 AGGRESSIVE Trading:
+2026-04-03 18:19:21,178 - INFO -    Min spread: 0.4%
+2026-04-03 18:19:21,178 - INFO -    Trade size: $20.0 (2x!)
+2026-04-03 18:19:21,178 - INFO -    Min profit: $0.1
+2026-04-03 18:19:21,178 - INFO - ============================================================
+2026-04-03 18:19:21,178 - INFO - 🚀 STARTING AGGRESSIVE TRADING
+2026-04-03 18:19:21,178 - INFO - 💰 USING YOUR $40 SPOT WALLET
+2026-04-03 18:19:21,178 - INFO - ============================================================
+2026-04-03 18:19:21,178 - INFO - 🔍 AGGRESSIVE Scan #1
+2026-04-03 18:19:23,191 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:19:23,191 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:19:29,532 - INFO -    ⏳ No AGGRESSIVE opportunities found
+2026-04-03 18:19:59,537 - INFO - 🔍 AGGRESSIVE Scan #2
+2026-04-03 18:19:59,658 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:19:59,658 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:20:02,691 - INFO -    ⏳ No AGGRESSIVE opportunities found
+2026-04-03 18:20:32,705 - INFO - 🔍 AGGRESSIVE Scan #3
+2026-04-03 18:20:32,830 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:20:32,831 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:20:33,208 - INFO -    🎯 Found: MANA - 0.70% spread
+2026-04-03 18:20:33,209 - INFO -       Profit: $0.10
+2026-04-03 18:20:33,209 - INFO - 🎯 EXECUTING AGGRESSIVE TRADE: MANA
+2026-04-03 18:20:33,209 - INFO -    Spread: 0.70%
+2026-04-03 18:20:33,209 - INFO -    Expected profit: $0.10
+2026-04-03 18:20:33,209 - INFO -    Trade size: $20.0
+2026-04-03 18:20:33,209 - INFO -    📈 BUYING 228.362640 MANA on gemini...
+2026-04-03 18:20:33,209 - ERROR -    ❌ Trade failed: gemini createOrder() allows limit orders only
+2026-04-03 18:21:03,222 - INFO - 🔍 AGGRESSIVE Scan #4
+2026-04-03 18:21:03,350 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:21:03,351 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:21:06,483 - INFO -    ⏳ No AGGRESSIVE opportunities found
+2026-04-03 18:21:36,558 - INFO - 🔍 AGGRESSIVE Scan #5
+2026-04-03 18:21:36,680 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:21:36,681 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:21:39,756 - INFO -    ⏳ No AGGRESSIVE opportunities found
+2026-04-03 18:22:09,775 - INFO - 🔍 AGGRESSIVE Scan #6
+2026-04-03 18:22:09,900 - INFO - 💰 Binance Spot: $40.00 USDT
+2026-04-03 18:22:09,901 - INFO -    ✅ SUFFICIENT BALANCE for $20.0 trades
+2026-04-03 18:22:13,033 - INFO -    ⏳ No AGGRESSIVE opportunities found

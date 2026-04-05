@@ -1,0 +1,58 @@
+2026-04-03 18:25:52,551 - INFO - 🚀 FIXED GEMINI TRADER STARTING
+2026-04-03 18:25:52,551 - INFO - 💰 FIXED: Uses LIMIT orders for Gemini
+2026-04-03 18:25:52,556 - INFO - 📊 Trading: 6 cryptos
+2026-04-03 18:25:52,556 - INFO -    Trade size: $30.0
+2026-04-03 18:25:52,556 - INFO -    Min profit: $0.07
+2026-04-03 18:25:52,556 - INFO - ============================================================
+2026-04-03 18:25:52,556 - INFO - 🚀 FIXED GEMINI TRADER - LIMIT ORDERS
+2026-04-03 18:25:52,556 - INFO - ============================================================
+2026-04-03 18:25:52,556 - INFO - 🔍 Fixed Scan #1
+2026-04-03 18:25:54,823 - INFO - 💰 Balance: $40.00 USDT
+2026-04-03 18:25:54,824 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:25:58,808 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:25:58,809 - INFO -       Profit: $0.15
+2026-04-03 18:25:58,809 - INFO - 🎯 EXECUTING FIXED TRADE: MANA
+2026-04-03 18:25:58,809 - INFO -    Spread: 0.70%
+2026-04-03 18:25:58,809 - INFO -    Expected profit: $0.15
+2026-04-03 18:25:58,809 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:25:59,099 - ERROR -    ❌ Trade failed: gemini Nonce '1775215558811' has not increased since your last call to the Gemini API.
+2026-04-03 18:26:29,174 - INFO - 🔍 Fixed Scan #2
+2026-04-03 18:26:29,302 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:26:29,303 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:26:29,725 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:26:29,725 - INFO -       Profit: $0.15
+2026-04-03 18:26:29,725 - INFO - 🎯 EXECUTING FIXED TRADE: MANA
+2026-04-03 18:26:29,725 - INFO -    Spread: 0.70%
+2026-04-03 18:26:29,725 - INFO -    Expected profit: $0.15
+2026-04-03 18:26:29,725 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:26:29,999 - ERROR -    ❌ Trade failed: gemini Nonce '1775215589726' has not increased since your last call to the Gemini API.
+2026-04-03 18:27:00,019 - INFO - 🔍 Fixed Scan #3
+2026-04-03 18:27:00,144 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:27:00,145 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:27:00,551 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:27:00,551 - INFO -       Profit: $0.15
+2026-04-03 18:27:00,551 - INFO - 🎯 EXECUTING FIXED TRADE: MANA
+2026-04-03 18:27:00,551 - INFO -    Spread: 0.70%
+2026-04-03 18:27:00,551 - INFO -    Expected profit: $0.15
+2026-04-03 18:27:00,551 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:27:00,846 - ERROR -    ❌ Trade failed: gemini Nonce '1775215620552' has not increased since your last call to the Gemini API.
+2026-04-03 18:27:30,870 - INFO - 🔍 Fixed Scan #4
+2026-04-03 18:27:30,996 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:27:30,996 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:27:31,386 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:27:31,386 - INFO -       Profit: $0.15
+2026-04-03 18:27:31,386 - INFO - 🎯 EXECUTING FIXED TRADE: MANA
+2026-04-03 18:27:31,386 - INFO -    Spread: 0.70%
+2026-04-03 18:27:31,386 - INFO -    Expected profit: $0.15
+2026-04-03 18:27:31,386 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:27:31,657 - ERROR -    ❌ Trade failed: gemini Nonce '1775215651387' has not increased since your last call to the Gemini API.
+2026-04-03 18:28:01,732 - INFO - 🔍 Fixed Scan #5
+2026-04-03 18:28:01,857 - INFO - 💰 Balance: $70.00 USDT
+2026-04-03 18:28:01,857 - INFO -    ✅ READY for $30.0 trades!
+2026-04-03 18:28:02,292 - INFO -    🎯 Found: MANA - 0.70%
+2026-04-03 18:28:02,292 - INFO -       Profit: $0.15
+2026-04-03 18:28:02,292 - INFO - 🎯 EXECUTING FIXED TRADE: MANA
+2026-04-03 18:28:02,292 - INFO -    Spread: 0.70%
+2026-04-03 18:28:02,292 - INFO -    Expected profit: $0.15
+2026-04-03 18:28:02,293 - INFO -    📈 BUYING 342.543960 MANA...
+2026-04-03 18:28:02,593 - ERROR -    ❌ Trade failed: gemini Nonce '1775215682293' has not increased since your last call to the Gemini API.

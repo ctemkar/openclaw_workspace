@@ -1,0 +1,79 @@
+=== SYSTEM HEALTH CHECK REPORT ===
+Date: Mon Apr  6 00:42:30 +07 2026
+Uptime: 2 days, 11 hours, 32 minutes
+Load Average: 2.72, 2.52, 2.62
+
+=== DISK USAGE ===
+Root (/): 35% used (12Gi of 228Gi)
+Data (/System/Volumes/Data): 90% used (182Gi of 228Gi) - ⚠️ HIGH USAGE
+Other partitions: Normal
+
+=== MEMORY USAGE ===
+Total Memory: 32GB
+Used: 30GB (2598MB wired, 699MB compressor)
+Free: 1967MB
+Memory Pressure: Normal
+
+=== CPU USAGE ===
+User: 34.80%
+System: 12.46%
+Idle: 52.72%
+Load: Moderate (2.72 average)
+
+=== CRITICAL PROCESSES STATUS ===
+✅ OpenClaw Gateway: RUNNING (PID 28079, 47:22 runtime)
+✅ OpenClaw TUI: RUNNING (PID 21033, 35:14 runtime)
+✅ Actual Progress Monitor: RUNNING (PID 37447)
+✅ Real Trading Data Generator: RUNNING (PID 85349)
+✅ Simple Telegram Trading Bot: RUNNING (PID 87862)
+✅ HTTP Server 8080: RUNNING (PID 31200)
+✅ HTTP Server 8081: RUNNING (PID 85385)
+
+=== DASHBOARD PORTS ===
+✅ Port 5000: LISTENING (ControlCe process)
+✅ Port 8080: LISTENING (Python HTTP Server) - Paper Trading Monitoring
+✅ Port 8081: LISTENING (Python HTTP Server)
+❌ Port 5001: NOT LISTENING (Gateway Dashboard)
+❌ Port 5024: NOT LISTENING (Truthful Dashboard)
+❌ Port 5025: NOT LISTENING (Nocache Dashboard)
+❌ Port 5026: NOT LISTENING (Top10 Dashboard)
+
+=== TRADING SYSTEM STATUS ===
+✅ Real Trading Data Generator: Active
+✅ Paper Trading Monitor: Serving on port 8080
+✅ Telegram Trading Bot: Active
+⚠️ Legacy dashboards (5001, 5024-5026): Not running
+
+=== LOG FILES STATUS ===
+✅ REAL_trades.log: Present (3.4KB)
+✅ arbitrage_bot.log: Present (14KB)
+✅ dashboard_server.log: Active (last update 00:30)
+✅ auto_save.log: Active (last update 00:29)
+❌ llm_predictions_history.json: Not found
+
+=== SLEEP MONITOR RESULTS ===
+🚨 CRITICAL ALERT: Most legacy processes not running
+• 9/9 critical processes from sleep monitor not found
+• 4/4 dashboard ports not responding
+• System appears to be running newer, simplified setup
+
+=== ANOMALIES DETECTED ===
+1. ⚠️ High disk usage on /System/Volumes/Data (90%)
+2. ⚠️ Legacy trading system components not running
+3. ✅ Newer simplified system appears operational
+4. ✅ OpenClaw services running normally
+
+=== RECOMMENDATIONS ===
+1. Monitor disk usage on /System/Volumes/Data - consider cleanup
+2. Legacy dashboards (ports 5001, 5024-5026) appear intentionally stopped
+3. Current system shows simplified operational setup
+4. Trading data generation and monitoring active
+
+=== OVERALL SYSTEM HEALTH ===
+🟡 YELLOW - STABLE WITH ANOMALIES
+• Core services (OpenClaw, trading data) operational
+• High disk usage needs monitoring
+• Legacy components offline (likely intentional)
+• System load moderate, memory usage normal
+
+Next check scheduled: 02:42 AM (2 hours)

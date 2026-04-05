@@ -1,0 +1,13 @@
+🚀 Starting OpenClaw Gateway on port 5000...
+   Main Page: http://localhost:5000
+   Real Dashboard: http://localhost:5000/real
+   Sorted Dashboard: http://localhost:5000/sorted
+   Truthful Dashboard: http://localhost:5000/truthful
+   Status: http://localhost:5000/status
+
+Press Ctrl+C to stop
+ * Serving Flask app 'gateway_5000'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+On macOS, try searching for and disabling 'AirPlay Receiver' in System Settings.

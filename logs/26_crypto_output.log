@@ -1,0 +1,209 @@
+2026-04-05 00:38:05,389 - INFO - ======================================================================
+2026-04-05 00:38:05,389 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-05 00:38:05,389 - INFO - ======================================================================
+2026-04-05 00:38:05,389 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-05 00:38:05,389 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-05 00:38:05,389 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-05 00:38:05,390 - INFO - 📈 LONG threshold: 0.5% drop (MORE AGGRESSIVE!)
+2026-04-05 00:38:05,390 - INFO - 📉 SHORT threshold: 0.5% drop (MORE AGGRESSIVE!)
+2026-04-05 00:38:05,390 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-05 00:38:05,390 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-05 00:38:05,390 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-05 00:38:05,390 - INFO - ======================================================================
+2026-04-05 00:38:05,390 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-05 00:38:05,390 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-05 00:38:05,390 - INFO - ======================================================================
+2026-04-05 00:38:05,390 - INFO - ✅ Gemini API keys loaded
+2026-04-05 00:38:05,390 - INFO - ✅ Binance API keys loaded
+2026-04-05 00:38:05,391 - INFO - ✅ Gemini exchange initialized
+2026-04-05 00:38:05,394 - INFO - ✅ Binance Futures exchange initialized
+2026-04-05 00:38:05,394 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-05 00:38:05,394 - INFO - ======================================================================
+2026-04-05 00:38:05,394 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:38:05
+2026-04-05 00:38:05,394 - INFO - ======================================================================
+2026-04-05 00:38:05,394 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 00:38:09,715 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 00:38:09,716 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 00:38:09,716 - INFO - ⏱️  Cycle 1 duration: 4.3 seconds
+2026-04-05 00:38:09,716 - INFO - 📈 Total opportunities found: 0
+2026-04-05 00:43:09,774 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-04-05 00:43:09,774 - INFO - ======================================================================
+2026-04-05 00:43:09,774 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:43:09
+2026-04-05 00:43:09,774 - INFO - ======================================================================
+2026-04-05 00:43:09,774 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 00:43:13,162 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 00:43:13,162 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 00:43:13,162 - INFO - ⏱️  Cycle 2 duration: 3.4 seconds
+2026-04-05 00:43:13,163 - INFO - 📈 Total opportunities found: 0
+2026-04-05 00:48:13,202 - INFO - 
+🔄 CYCLE 3 STARTING...
+2026-04-05 00:48:13,202 - INFO - ======================================================================
+2026-04-05 00:48:13,202 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:48:13
+2026-04-05 00:48:13,202 - INFO - ======================================================================
+2026-04-05 00:48:13,202 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 00:48:16,700 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 00:48:16,701 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 00:48:16,701 - INFO - ⏱️  Cycle 3 duration: 3.5 seconds
+2026-04-05 00:48:16,701 - INFO - 📈 Total opportunities found: 0
+2026-04-05 00:53:16,766 - INFO - 
+🔄 CYCLE 4 STARTING...
+2026-04-05 00:53:16,766 - INFO - ======================================================================
+2026-04-05 00:53:16,766 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:53:16
+2026-04-05 00:53:16,766 - INFO - ======================================================================
+2026-04-05 00:53:16,767 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 00:53:20,703 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 00:53:20,703 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 00:53:20,703 - INFO - ⏱️  Cycle 4 duration: 3.9 seconds
+2026-04-05 00:53:20,703 - INFO - 📈 Total opportunities found: 0
+2026-04-05 00:58:20,760 - INFO - 
+🔄 CYCLE 5 STARTING...
+2026-04-05 00:58:20,760 - INFO - ======================================================================
+2026-04-05 00:58:20,760 - INFO - 📊 26-CRYPTO TRADING CYCLE - 00:58:20
+2026-04-05 00:58:20,760 - INFO - ======================================================================
+2026-04-05 00:58:20,760 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 00:58:24,376 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 00:58:24,376 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 00:58:24,377 - INFO - ⏱️  Cycle 5 duration: 3.6 seconds
+2026-04-05 00:58:24,377 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:03:24,412 - INFO - 
+🔄 CYCLE 6 STARTING...
+2026-04-05 01:03:24,413 - INFO - ======================================================================
+2026-04-05 01:03:24,413 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:03:24
+2026-04-05 01:03:24,413 - INFO - ======================================================================
+2026-04-05 01:03:24,413 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:03:28,073 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:03:28,073 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:03:28,073 - INFO - ⏱️  Cycle 6 duration: 3.7 seconds
+2026-04-05 01:03:28,074 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:08:28,143 - INFO - 
+🔄 CYCLE 7 STARTING...
+2026-04-05 01:08:28,144 - INFO - ======================================================================
+2026-04-05 01:08:28,144 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:08:28
+2026-04-05 01:08:28,144 - INFO - ======================================================================
+2026-04-05 01:08:28,144 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:08:31,086 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:08:31,086 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:08:31,086 - INFO - ⏱️  Cycle 7 duration: 2.9 seconds
+2026-04-05 01:08:31,086 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:13:31,219 - INFO - 
+🔄 CYCLE 8 STARTING...
+2026-04-05 01:13:31,220 - INFO - ======================================================================
+2026-04-05 01:13:31,220 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:13:31
+2026-04-05 01:13:31,221 - INFO - ======================================================================
+2026-04-05 01:13:31,221 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:13:34,299 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:13:34,299 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:13:34,299 - INFO - ⏱️  Cycle 8 duration: 3.1 seconds
+2026-04-05 01:13:34,299 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:18:34,444 - INFO - 
+🔄 CYCLE 9 STARTING...
+2026-04-05 01:18:34,444 - INFO - ======================================================================
+2026-04-05 01:18:34,444 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:18:34
+2026-04-05 01:18:34,444 - INFO - ======================================================================
+2026-04-05 01:18:34,445 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:18:38,221 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:18:38,221 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:18:38,222 - INFO - ⏱️  Cycle 9 duration: 3.8 seconds
+2026-04-05 01:18:38,222 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:23:38,368 - INFO - 
+🔄 CYCLE 10 STARTING...
+2026-04-05 01:23:38,369 - INFO - ======================================================================
+2026-04-05 01:23:38,369 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:23:38
+2026-04-05 01:23:38,369 - INFO - ======================================================================
+2026-04-05 01:23:38,369 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:23:41,621 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:23:41,622 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:23:41,622 - INFO - ⏱️  Cycle 10 duration: 3.3 seconds
+2026-04-05 01:23:41,622 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:28:41,742 - INFO - 
+🔄 CYCLE 11 STARTING...
+2026-04-05 01:28:41,743 - INFO - ======================================================================
+2026-04-05 01:28:41,743 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:28:41
+2026-04-05 01:28:41,743 - INFO - ======================================================================
+2026-04-05 01:28:41,743 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:28:44,645 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:28:44,645 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:28:44,646 - INFO - ⏱️  Cycle 11 duration: 2.9 seconds
+2026-04-05 01:28:44,646 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:33:44,796 - INFO - 
+🔄 CYCLE 12 STARTING...
+2026-04-05 01:33:44,797 - INFO - ======================================================================
+2026-04-05 01:33:44,797 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:33:44
+2026-04-05 01:33:44,797 - INFO - ======================================================================
+2026-04-05 01:33:44,797 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:33:47,758 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:33:47,758 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:33:47,759 - INFO - ⏱️  Cycle 12 duration: 3.0 seconds
+2026-04-05 01:33:47,759 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:38:47,934 - INFO - 
+🔄 CYCLE 13 STARTING...
+2026-04-05 01:38:47,935 - INFO - ======================================================================
+2026-04-05 01:38:47,935 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:38:47
+2026-04-05 01:38:47,935 - INFO - ======================================================================
+2026-04-05 01:38:47,935 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:38:51,797 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:38:51,797 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:38:51,797 - INFO - ⏱️  Cycle 13 duration: 3.9 seconds
+2026-04-05 01:38:51,797 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:43:51,920 - INFO - 
+🔄 CYCLE 14 STARTING...
+2026-04-05 01:43:51,921 - INFO - ======================================================================
+2026-04-05 01:43:51,921 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:43:51
+2026-04-05 01:43:51,921 - INFO - ======================================================================
+2026-04-05 01:43:51,921 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:43:54,964 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:43:54,965 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:43:54,965 - INFO - ⏱️  Cycle 14 duration: 3.0 seconds
+2026-04-05 01:43:54,965 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:48:55,113 - INFO - 
+🔄 CYCLE 15 STARTING...
+2026-04-05 01:48:55,114 - INFO - ======================================================================
+2026-04-05 01:48:55,114 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:48:55
+2026-04-05 01:48:55,114 - INFO - ======================================================================
+2026-04-05 01:48:55,114 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:48:58,178 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:48:58,178 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:48:58,178 - INFO - ⏱️  Cycle 15 duration: 3.1 seconds
+2026-04-05 01:48:58,178 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:53:58,358 - INFO - 
+🔄 CYCLE 16 STARTING...
+2026-04-05 01:53:58,358 - INFO - ======================================================================
+2026-04-05 01:53:58,358 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:53:58
+2026-04-05 01:53:58,358 - INFO - ======================================================================
+2026-04-05 01:53:58,358 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:54:03,098 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:54:03,098 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:54:03,098 - INFO - ⏱️  Cycle 16 duration: 4.7 seconds
+2026-04-05 01:54:03,098 - INFO - 📈 Total opportunities found: 0
+2026-04-05 01:59:03,250 - INFO - 
+🔄 CYCLE 17 STARTING...
+2026-04-05 01:59:03,251 - INFO - ======================================================================
+2026-04-05 01:59:03,251 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:59:03
+2026-04-05 01:59:03,251 - INFO - ======================================================================
+2026-04-05 01:59:03,251 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 01:59:06,138 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 01:59:06,138 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 01:59:06,138 - INFO - ⏱️  Cycle 17 duration: 2.9 seconds
+2026-04-05 01:59:06,138 - INFO - 📈 Total opportunities found: 0
+2026-04-05 02:04:06,236 - INFO - 
+🔄 CYCLE 18 STARTING...
+2026-04-05 02:04:06,236 - INFO - ======================================================================
+2026-04-05 02:04:06,236 - INFO - 📊 26-CRYPTO TRADING CYCLE - 02:04:06
+2026-04-05 02:04:06,236 - INFO - ======================================================================
+2026-04-05 02:04:06,236 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 02:04:09,581 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 02:04:09,581 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 02:04:09,582 - INFO - ⏱️  Cycle 18 duration: 3.3 seconds
+2026-04-05 02:04:09,582 - INFO - 📈 Total opportunities found: 0
+2026-04-05 02:09:09,745 - INFO - 
+🔄 CYCLE 19 STARTING...
+2026-04-05 02:09:09,745 - INFO - ======================================================================
+2026-04-05 02:09:09,745 - INFO - 📊 26-CRYPTO TRADING CYCLE - 02:09:09
+2026-04-05 02:09:09,745 - INFO - ======================================================================
+2026-04-05 02:09:09,745 - INFO - 🔍 Checking 23 cryptos on Binance for prices...
+2026-04-05 02:09:12,694 - INFO - 🎯 Arbitrage opportunities found this cycle: 0
+2026-04-05 02:09:12,695 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-05 02:09:12,695 - INFO - ⏱️  Cycle 19 duration: 2.9 seconds
+2026-04-05 02:09:12,695 - INFO - 📈 Total opportunities found: 0

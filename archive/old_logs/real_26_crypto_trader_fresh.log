@@ -1,0 +1,425 @@
+2026-04-03 01:20:10,880 - INFO - ======================================================================
+2026-04-03 01:20:10,881 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-03 01:20:10,881 - INFO - ======================================================================
+2026-04-03 01:20:10,881 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-03 01:20:10,881 - INFO - ♊ Gemini LONG: 16 cryptos ($393.22 capital - FULL BALANCE!)
+2026-04-03 01:20:10,881 - INFO - ₿ Binance SHORT: 23 cryptos ($262.14 capital, 1x)
+2026-04-03 01:20:10,881 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-03 01:20:10,881 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-03 01:20:10,881 - INFO - 💰 Position size: 10% of capital (REDUCED FOR MARGIN)
+2026-04-03 01:20:10,881 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-03 01:20:10,881 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-03 01:20:10,881 - INFO - ======================================================================
+2026-04-03 01:20:10,881 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-03 01:20:10,881 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-03 01:20:10,881 - INFO - ======================================================================
+2026-04-03 01:20:10,881 - INFO - ✅ Gemini API keys loaded
+2026-04-03 01:20:10,881 - INFO - ✅ Binance API keys loaded
+2026-04-03 01:20:10,882 - INFO - ✅ Gemini exchange initialized
+2026-04-03 01:20:10,885 - INFO - ✅ Binance Futures exchange initialized
+2026-04-03 01:20:10,885 - INFO - 
+🔄 CYCLE 1 STARTING...
+2026-04-03 01:20:10,885 - INFO - ======================================================================
+2026-04-03 01:20:10,885 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:20:10
+2026-04-03 01:20:10,885 - INFO - ======================================================================
+2026-04-03 01:20:10,885 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-03 01:20:16,013 - INFO - 📊 BTC 24h change calculated: -2.15%
+2026-04-03 01:20:16,013 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): BTC down -2.15%
+2026-04-03 01:20:16,013 - INFO - 🎯 PREPARING GEMINI LONG (DIP): BTC
+2026-04-03 01:20:16,013 - INFO -     Current price: $66775.59
+2026-04-03 01:20:16,013 - INFO -     24h change: -2.15%
+2026-04-03 01:20:16,013 - INFO -     Position size: 0.000589 BTC
+2026-04-03 01:20:16,013 - INFO -     Position value: $39.32
+2026-04-03 01:20:16,013 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:16,013 - INFO -     Stop-loss: $68778.86 (+3%)
+2026-04-03 01:20:16,013 - INFO -     Take-profit: $63436.81 (-5%)
+2026-04-03 01:20:16,569 - INFO - 🚀 EXECUTING GEMINI LONG: BTC/USD
+2026-04-03 01:20:16,860 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154016570' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:18,005 - INFO - 📊 ETH 24h change calculated: -4.07%
+2026-04-03 01:20:18,005 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): ETH down -4.07%
+2026-04-03 01:20:18,006 - INFO - 🎯 PREPARING GEMINI LONG (DIP): ETH
+2026-04-03 01:20:18,006 - INFO -     Current price: $2048.94
+2026-04-03 01:20:18,006 - INFO -     24h change: -4.07%
+2026-04-03 01:20:18,006 - INFO -     Position size: 0.019191 ETH
+2026-04-03 01:20:18,006 - INFO -     Position value: $39.32
+2026-04-03 01:20:18,006 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:18,006 - INFO -     Stop-loss: $2110.41 (+3%)
+2026-04-03 01:20:18,006 - INFO -     Take-profit: $1946.49 (-5%)
+2026-04-03 01:20:18,570 - INFO - 🚀 EXECUTING GEMINI LONG: ETH/USD
+2026-04-03 01:20:18,920 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154018571' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:20,037 - INFO - 📊 SOL 24h change calculated: -6.60%
+2026-04-03 01:20:20,037 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): SOL down -6.60%
+2026-04-03 01:20:20,037 - INFO - 🎯 PREPARING GEMINI LONG (DIP): SOL
+2026-04-03 01:20:20,037 - INFO -     Current price: $78.88
+2026-04-03 01:20:20,037 - INFO -     24h change: -6.60%
+2026-04-03 01:20:20,037 - INFO -     Position size: 0.498517 SOL
+2026-04-03 01:20:20,037 - INFO -     Position value: $39.32
+2026-04-03 01:20:20,037 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:20,037 - INFO -     Stop-loss: $81.24 (+3%)
+2026-04-03 01:20:20,038 - INFO -     Take-profit: $74.93 (-5%)
+2026-04-03 01:20:20,559 - INFO - 🚀 EXECUTING GEMINI LONG: SOL/USD
+2026-04-03 01:20:20,860 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154020560' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:22,054 - INFO - 📊 XRP 24h change calculated: -3.78%
+2026-04-03 01:20:22,054 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): XRP down -3.78%
+2026-04-03 01:20:22,054 - INFO - 🎯 PREPARING GEMINI LONG (DIP): XRP
+2026-04-03 01:20:22,055 - INFO -     Current price: $1.30
+2026-04-03 01:20:22,055 - INFO -     24h change: -3.78%
+2026-04-03 01:20:22,055 - INFO -     Position size: 30.239318 XRP
+2026-04-03 01:20:22,055 - INFO -     Position value: $39.32
+2026-04-03 01:20:22,055 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:22,055 - INFO -     Stop-loss: $1.34 (+3%)
+2026-04-03 01:20:22,055 - INFO -     Take-profit: $1.24 (-5%)
+2026-04-03 01:20:22,617 - INFO - 🚀 EXECUTING GEMINI LONG: XRP/USD
+2026-04-03 01:20:22,906 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154022618' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:24,152 - INFO - 📊 DOT 24h change calculated: -3.34%
+2026-04-03 01:20:24,153 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): DOT down -3.34%
+2026-04-03 01:20:24,153 - INFO - 🎯 PREPARING GEMINI LONG (DIP): DOT
+2026-04-03 01:20:24,153 - INFO -     Current price: $1.23
+2026-04-03 01:20:24,153 - INFO -     24h change: -3.34%
+2026-04-03 01:20:24,153 - INFO -     Position size: 31.888736 DOT
+2026-04-03 01:20:24,153 - INFO -     Position value: $39.32
+2026-04-03 01:20:24,153 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:24,153 - INFO -     Stop-loss: $1.27 (+3%)
+2026-04-03 01:20:24,153 - INFO -     Take-profit: $1.17 (-5%)
+2026-04-03 01:20:24,660 - INFO - 🚀 EXECUTING GEMINI LONG: DOT/USD
+2026-04-03 01:20:24,946 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154024660' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:26,071 - INFO - 📊 DOGE 24h change calculated: -3.33%
+2026-04-03 01:20:26,071 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): DOGE down -3.33%
+2026-04-03 01:20:26,071 - INFO - 🎯 PREPARING GEMINI LONG (DIP): DOGE
+2026-04-03 01:20:26,071 - INFO -     Current price: $0.09
+2026-04-03 01:20:26,072 - INFO -     24h change: -3.33%
+2026-04-03 01:20:26,072 - INFO -     Position size: 437.786684 DOGE
+2026-04-03 01:20:26,072 - INFO -     Position value: $39.32
+2026-04-03 01:20:26,072 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:26,072 - INFO -     Stop-loss: $0.09 (+3%)
+2026-04-03 01:20:26,072 - INFO -     Take-profit: $0.09 (-5%)
+2026-04-03 01:20:26,633 - INFO - 🚀 EXECUTING GEMINI LONG: DOGE/USD
+2026-04-03 01:20:27,011 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154026633' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:28,081 - INFO - 📊 AVAX 24h change calculated: -5.69%
+2026-04-03 01:20:28,082 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): AVAX down -5.69%
+2026-04-03 01:20:28,082 - INFO - 🎯 PREPARING GEMINI LONG (DIP): AVAX
+2026-04-03 01:20:28,082 - INFO -     Current price: $8.66
+2026-04-03 01:20:28,082 - INFO -     24h change: -5.69%
+2026-04-03 01:20:28,082 - INFO -     Position size: 4.540122 AVAX
+2026-04-03 01:20:28,082 - INFO -     Position value: $39.32
+2026-04-03 01:20:28,082 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:28,082 - INFO -     Stop-loss: $8.92 (+3%)
+2026-04-03 01:20:28,082 - INFO -     Take-profit: $8.23 (-5%)
+2026-04-03 01:20:28,634 - INFO - 🚀 EXECUTING GEMINI LONG: AVAX/USD
+2026-04-03 01:20:28,917 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154028635' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:30,063 - INFO - 📊 LINK 24h change calculated: -5.02%
+2026-04-03 01:20:30,064 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): LINK down -5.02%
+2026-04-03 01:20:30,064 - INFO - 🎯 PREPARING GEMINI LONG (DIP): LINK
+2026-04-03 01:20:30,064 - INFO -     Current price: $8.55
+2026-04-03 01:20:30,064 - INFO -     24h change: -5.02%
+2026-04-03 01:20:30,064 - INFO -     Position size: 4.598548 LINK
+2026-04-03 01:20:30,064 - INFO -     Position value: $39.32
+2026-04-03 01:20:30,064 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:30,064 - INFO -     Stop-loss: $8.81 (+3%)
+2026-04-03 01:20:30,064 - INFO -     Take-profit: $8.12 (-5%)
+2026-04-03 01:20:30,623 - INFO - 🚀 EXECUTING GEMINI LONG: LINK/USD
+2026-04-03 01:20:30,932 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154030624' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:32,073 - INFO - 📊 UNI 24h change calculated: -13.64%
+2026-04-03 01:20:32,073 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): UNI down -13.64%
+2026-04-03 01:20:32,073 - INFO - 🎯 PREPARING GEMINI LONG (DIP): UNI
+2026-04-03 01:20:32,073 - INFO -     Current price: $3.13
+2026-04-03 01:20:32,073 - INFO -     24h change: -13.64%
+2026-04-03 01:20:32,073 - INFO -     Position size: 12.544903 UNI
+2026-04-03 01:20:32,073 - INFO -     Position value: $39.32
+2026-04-03 01:20:32,073 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:32,073 - INFO -     Stop-loss: $3.23 (+3%)
+2026-04-03 01:20:32,073 - INFO -     Take-profit: $2.98 (-5%)
+2026-04-03 01:20:32,644 - INFO - 🚀 EXECUTING GEMINI LONG: UNI/USD
+2026-04-03 01:20:32,937 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154032645' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:34,120 - INFO - 📊 LTC 24h change calculated: -4.45%
+2026-04-03 01:20:34,121 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): LTC down -4.45%
+2026-04-03 01:20:34,121 - INFO - 🎯 PREPARING GEMINI LONG (DIP): LTC
+2026-04-03 01:20:34,121 - INFO -     Current price: $51.79
+2026-04-03 01:20:34,121 - INFO -     24h change: -4.45%
+2026-04-03 01:20:34,121 - INFO -     Position size: 0.759259 LTC
+2026-04-03 01:20:34,121 - INFO -     Position value: $39.32
+2026-04-03 01:20:34,121 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:34,121 - INFO -     Stop-loss: $53.34 (+3%)
+2026-04-03 01:20:34,121 - INFO -     Take-profit: $49.20 (-5%)
+2026-04-03 01:20:34,692 - INFO - 🚀 EXECUTING GEMINI LONG: LTC/USD
+2026-04-03 01:20:34,974 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154034692' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:36,101 - INFO - 📊 ATOM 24h change calculated: -3.41%
+2026-04-03 01:20:36,101 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): ATOM down -3.41%
+2026-04-03 01:20:36,101 - INFO - 🎯 PREPARING GEMINI LONG (DIP): ATOM
+2026-04-03 01:20:36,101 - INFO -     Current price: $1.64
+2026-04-03 01:20:36,101 - INFO -     24h change: -3.41%
+2026-04-03 01:20:36,101 - INFO -     Position size: 23.947625 ATOM
+2026-04-03 01:20:36,101 - INFO -     Position value: $39.32
+2026-04-03 01:20:36,101 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:36,101 - INFO -     Stop-loss: $1.69 (+3%)
+2026-04-03 01:20:36,101 - INFO -     Take-profit: $1.56 (-5%)
+2026-04-03 01:20:36,676 - INFO - 🚀 EXECUTING GEMINI LONG: ATOM/USD
+2026-04-03 01:20:36,957 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154036677' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:38,136 - INFO - 📊 FIL 24h change calculated: -4.16%
+2026-04-03 01:20:38,136 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): FIL down -4.16%
+2026-04-03 01:20:38,136 - INFO - 🎯 PREPARING GEMINI LONG (DIP): FIL
+2026-04-03 01:20:38,136 - INFO -     Current price: $0.81
+2026-04-03 01:20:38,137 - INFO -     24h change: -4.16%
+2026-04-03 01:20:38,137 - INFO -     Position size: 48.473866 FIL
+2026-04-03 01:20:38,137 - INFO -     Position value: $39.32
+2026-04-03 01:20:38,137 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:38,137 - INFO -     Stop-loss: $0.84 (+3%)
+2026-04-03 01:20:38,137 - INFO -     Take-profit: $0.77 (-5%)
+2026-04-03 01:20:38,676 - INFO - 🚀 EXECUTING GEMINI LONG: FIL/USD
+2026-04-03 01:20:38,961 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154038676' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:40,062 - INFO - 📊 XTZ 24h change calculated: -4.34%
+2026-04-03 01:20:40,063 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): XTZ down -4.34%
+2026-04-03 01:20:40,063 - INFO - 🎯 PREPARING GEMINI LONG (DIP): XTZ
+2026-04-03 01:20:40,063 - INFO -     Current price: $0.34
+2026-04-03 01:20:40,063 - INFO -     24h change: -4.34%
+2026-04-03 01:20:40,063 - INFO -     Position size: 115.212423 XTZ
+2026-04-03 01:20:40,063 - INFO -     Position value: $39.32
+2026-04-03 01:20:40,063 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:40,063 - INFO -     Stop-loss: $0.35 (+3%)
+2026-04-03 01:20:40,063 - INFO -     Take-profit: $0.32 (-5%)
+2026-04-03 01:20:40,638 - INFO - 🚀 EXECUTING GEMINI LONG: XTZ/USD
+2026-04-03 01:20:40,916 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154040638' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:42,053 - INFO - 📊 AAVE 24h change calculated: -4.93%
+2026-04-03 01:20:42,053 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): AAVE down -4.93%
+2026-04-03 01:20:42,053 - INFO - 🎯 PREPARING GEMINI LONG (DIP): AAVE
+2026-04-03 01:20:42,053 - INFO -     Current price: $94.56
+2026-04-03 01:20:42,053 - INFO -     24h change: -4.93%
+2026-04-03 01:20:42,053 - INFO -     Position size: 0.415855 AAVE
+2026-04-03 01:20:42,053 - INFO -     Position value: $39.32
+2026-04-03 01:20:42,053 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:42,054 - INFO -     Stop-loss: $97.39 (+3%)
+2026-04-03 01:20:42,054 - INFO -     Take-profit: $89.83 (-5%)
+2026-04-03 01:20:42,627 - INFO - 🚀 EXECUTING GEMINI LONG: AAVE/USD
+2026-04-03 01:20:42,910 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154042628' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:44,112 - INFO - 📊 COMP 24h change calculated: -2.96%
+2026-04-03 01:20:44,112 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): COMP down -2.96%
+2026-04-03 01:20:44,112 - INFO - 🎯 PREPARING GEMINI LONG (DIP): COMP
+2026-04-03 01:20:44,112 - INFO -     Current price: $16.40
+2026-04-03 01:20:44,112 - INFO -     24h change: -2.96%
+2026-04-03 01:20:44,112 - INFO -     Position size: 2.397683 COMP
+2026-04-03 01:20:44,112 - INFO -     Position value: $39.32
+2026-04-03 01:20:44,112 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:44,112 - INFO -     Stop-loss: $16.89 (+3%)
+2026-04-03 01:20:44,112 - INFO -     Take-profit: $15.58 (-5%)
+2026-04-03 01:20:44,623 - INFO - 🚀 EXECUTING GEMINI LONG: COMP/USD
+2026-04-03 01:20:44,906 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154044623' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:45,962 - INFO - 📊 YFI 24h change calculated: -2.26%
+2026-04-03 01:20:45,962 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): YFI down -2.26%
+2026-04-03 01:20:45,962 - INFO - 🎯 PREPARING GEMINI LONG (DIP): YFI
+2026-04-03 01:20:45,963 - INFO -     Current price: $2418.27
+2026-04-03 01:20:45,963 - INFO -     24h change: -2.26%
+2026-04-03 01:20:45,963 - INFO -     Position size: 0.016260 YFI
+2026-04-03 01:20:45,963 - INFO -     Position value: $39.32
+2026-04-03 01:20:45,963 - INFO -     Capital at risk: $39.32
+2026-04-03 01:20:45,963 - INFO -     Stop-loss: $2490.82 (+3%)
+2026-04-03 01:20:45,963 - INFO -     Take-profit: $2297.36 (-5%)
+2026-04-03 01:20:46,538 - INFO - 🚀 EXECUTING GEMINI LONG: YFI/USD
+2026-04-03 01:20:46,874 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154046538' has not increased since your last call to the Gemini API.
+2026-04-03 01:20:46,874 - INFO - 🔍 Checking 23 cryptos on Binance for SHORT...
+2026-04-03 01:20:46,874 - INFO - 🎯 Opportunities found this cycle: 16
+2026-04-03 01:20:46,874 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-03 01:20:46,874 - INFO - ⏱️  Cycle 1 duration: 36.0 seconds
+2026-04-03 01:20:46,875 - INFO - 📈 Total opportunities found: 16
+2026-04-03 01:25:46,945 - INFO - 
+🔄 CYCLE 2 STARTING...
+2026-04-03 01:25:46,946 - INFO - ======================================================================
+2026-04-03 01:25:46,946 - INFO - 📊 26-CRYPTO TRADING CYCLE - 01:25:46
+2026-04-03 01:25:46,946 - INFO - ======================================================================
+2026-04-03 01:25:46,946 - INFO - 🔍 Checking 16 cryptos on Gemini for LONG...
+2026-04-03 01:25:48,612 - INFO - 📊 BTC 24h change calculated: -2.26%
+2026-04-03 01:25:48,612 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): BTC down -2.26%
+2026-04-03 01:25:48,612 - INFO - 🎯 PREPARING GEMINI LONG (DIP): BTC
+2026-04-03 01:25:48,612 - INFO -     Current price: $66698.02
+2026-04-03 01:25:48,612 - INFO -     24h change: -2.26%
+2026-04-03 01:25:48,612 - INFO -     Position size: 0.000590 BTC
+2026-04-03 01:25:48,612 - INFO -     Position value: $39.32
+2026-04-03 01:25:48,612 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:48,612 - INFO -     Stop-loss: $68698.96 (+3%)
+2026-04-03 01:25:48,612 - INFO -     Take-profit: $63363.12 (-5%)
+2026-04-03 01:25:49,165 - INFO - 🚀 EXECUTING GEMINI LONG: BTC/USD
+2026-04-03 01:25:49,444 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154349166' has not increased since your last call to the Gemini API.
+2026-04-03 01:25:50,616 - INFO - 📊 ETH 24h change calculated: -4.14%
+2026-04-03 01:25:50,617 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): ETH down -4.14%
+2026-04-03 01:25:50,617 - INFO - 🎯 PREPARING GEMINI LONG (DIP): ETH
+2026-04-03 01:25:50,617 - INFO -     Current price: $2047.42
+2026-04-03 01:25:50,617 - INFO -     24h change: -4.14%
+2026-04-03 01:25:50,617 - INFO -     Position size: 0.019206 ETH
+2026-04-03 01:25:50,617 - INFO -     Position value: $39.32
+2026-04-03 01:25:50,617 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:50,617 - INFO -     Stop-loss: $2108.84 (+3%)
+2026-04-03 01:25:50,617 - INFO -     Take-profit: $1945.05 (-5%)
+2026-04-03 01:25:51,182 - INFO - 🚀 EXECUTING GEMINI LONG: ETH/USD
+2026-04-03 01:25:51,456 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154351183' has not increased since your last call to the Gemini API.
+2026-04-03 01:25:52,564 - INFO - 📊 SOL 24h change calculated: -6.76%
+2026-04-03 01:25:52,565 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): SOL down -6.76%
+2026-04-03 01:25:52,565 - INFO - 🎯 PREPARING GEMINI LONG (DIP): SOL
+2026-04-03 01:25:52,565 - INFO -     Current price: $78.74
+2026-04-03 01:25:52,565 - INFO -     24h change: -6.76%
+2026-04-03 01:25:52,565 - INFO -     Position size: 0.499397 SOL
+2026-04-03 01:25:52,565 - INFO -     Position value: $39.32
+2026-04-03 01:25:52,565 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:52,565 - INFO -     Stop-loss: $81.10 (+3%)
+2026-04-03 01:25:52,565 - INFO -     Take-profit: $74.80 (-5%)
+2026-04-03 01:25:53,135 - INFO - 🚀 EXECUTING GEMINI LONG: SOL/USD
+2026-04-03 01:25:53,424 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154353136' has not increased since your last call to the Gemini API.
+2026-04-03 01:25:54,587 - INFO - 📊 XRP 24h change calculated: -3.76%
+2026-04-03 01:25:54,587 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): XRP down -3.76%
+2026-04-03 01:25:54,587 - INFO - 🎯 PREPARING GEMINI LONG (DIP): XRP
+2026-04-03 01:25:54,587 - INFO -     Current price: $1.30
+2026-04-03 01:25:54,587 - INFO -     24h change: -3.76%
+2026-04-03 01:25:54,588 - INFO -     Position size: 30.234203 XRP
+2026-04-03 01:25:54,588 - INFO -     Position value: $39.32
+2026-04-03 01:25:54,588 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:54,588 - INFO -     Stop-loss: $1.34 (+3%)
+2026-04-03 01:25:54,588 - INFO -     Take-profit: $1.24 (-5%)
+2026-04-03 01:25:55,110 - INFO - 🚀 EXECUTING GEMINI LONG: XRP/USD
+2026-04-03 01:25:55,388 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154355111' has not increased since your last call to the Gemini API.
+2026-04-03 01:25:56,481 - INFO - 📊 DOT 24h change calculated: -3.34%
+2026-04-03 01:25:56,482 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): DOT down -3.34%
+2026-04-03 01:25:56,482 - INFO - 🎯 PREPARING GEMINI LONG (DIP): DOT
+2026-04-03 01:25:56,482 - INFO -     Current price: $1.23
+2026-04-03 01:25:56,482 - INFO -     24h change: -3.34%
+2026-04-03 01:25:56,482 - INFO -     Position size: 31.888736 DOT
+2026-04-03 01:25:56,482 - INFO -     Position value: $39.32
+2026-04-03 01:25:56,482 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:56,482 - INFO -     Stop-loss: $1.27 (+3%)
+2026-04-03 01:25:56,482 - INFO -     Take-profit: $1.17 (-5%)
+2026-04-03 01:25:57,045 - INFO - 🚀 EXECUTING GEMINI LONG: DOT/USD
+2026-04-03 01:25:57,322 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154357046' has not increased since your last call to the Gemini API.
+2026-04-03 01:25:58,373 - INFO - 📊 DOGE 24h change calculated: -3.33%
+2026-04-03 01:25:58,373 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): DOGE down -3.33%
+2026-04-03 01:25:58,373 - INFO - 🎯 PREPARING GEMINI LONG (DIP): DOGE
+2026-04-03 01:25:58,373 - INFO -     Current price: $0.09
+2026-04-03 01:25:58,373 - INFO -     24h change: -3.33%
+2026-04-03 01:25:58,373 - INFO -     Position size: 437.786684 DOGE
+2026-04-03 01:25:58,373 - INFO -     Position value: $39.32
+2026-04-03 01:25:58,373 - INFO -     Capital at risk: $39.32
+2026-04-03 01:25:58,373 - INFO -     Stop-loss: $0.09 (+3%)
+2026-04-03 01:25:58,373 - INFO -     Take-profit: $0.09 (-5%)
+2026-04-03 01:25:58,896 - INFO - 🚀 EXECUTING GEMINI LONG: DOGE/USD
+2026-04-03 01:25:59,166 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154358896' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:00,333 - INFO - 📊 AVAX 24h change calculated: -5.69%
+2026-04-03 01:26:00,333 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): AVAX down -5.69%
+2026-04-03 01:26:00,334 - INFO - 🎯 PREPARING GEMINI LONG (DIP): AVAX
+2026-04-03 01:26:00,334 - INFO -     Current price: $8.66
+2026-04-03 01:26:00,334 - INFO -     24h change: -5.69%
+2026-04-03 01:26:00,334 - INFO -     Position size: 4.540122 AVAX
+2026-04-03 01:26:00,334 - INFO -     Position value: $39.32
+2026-04-03 01:26:00,334 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:00,334 - INFO -     Stop-loss: $8.92 (+3%)
+2026-04-03 01:26:00,334 - INFO -     Take-profit: $8.23 (-5%)
+2026-04-03 01:26:00,877 - INFO - 🚀 EXECUTING GEMINI LONG: AVAX/USD
+2026-04-03 01:26:01,159 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154360878' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:02,298 - INFO - 📊 LINK 24h change calculated: -5.02%
+2026-04-03 01:26:02,298 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): LINK down -5.02%
+2026-04-03 01:26:02,298 - INFO - 🎯 PREPARING GEMINI LONG (DIP): LINK
+2026-04-03 01:26:02,298 - INFO -     Current price: $8.55
+2026-04-03 01:26:02,298 - INFO -     24h change: -5.02%
+2026-04-03 01:26:02,298 - INFO -     Position size: 4.598548 LINK
+2026-04-03 01:26:02,298 - INFO -     Position value: $39.32
+2026-04-03 01:26:02,298 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:02,298 - INFO -     Stop-loss: $8.81 (+3%)
+2026-04-03 01:26:02,298 - INFO -     Take-profit: $8.12 (-5%)
+2026-04-03 01:26:02,871 - INFO - 🚀 EXECUTING GEMINI LONG: LINK/USD
+2026-04-03 01:26:03,187 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154362871' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:04,215 - INFO - 📊 UNI 24h change calculated: -13.70%
+2026-04-03 01:26:04,215 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): UNI down -13.70%
+2026-04-03 01:26:04,215 - INFO - 🎯 PREPARING GEMINI LONG (DIP): UNI
+2026-04-03 01:26:04,215 - INFO -     Current price: $3.13
+2026-04-03 01:26:04,215 - INFO -     24h change: -13.70%
+2026-04-03 01:26:04,215 - INFO -     Position size: 12.553715 UNI
+2026-04-03 01:26:04,215 - INFO -     Position value: $39.32
+2026-04-03 01:26:04,215 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:04,215 - INFO -     Stop-loss: $3.23 (+3%)
+2026-04-03 01:26:04,215 - INFO -     Take-profit: $2.98 (-5%)
+2026-04-03 01:26:04,790 - INFO - 🚀 EXECUTING GEMINI LONG: UNI/USD
+2026-04-03 01:26:05,065 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154364791' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:06,272 - INFO - 📊 LTC 24h change calculated: -4.45%
+2026-04-03 01:26:06,272 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): LTC down -4.45%
+2026-04-03 01:26:06,273 - INFO - 🎯 PREPARING GEMINI LONG (DIP): LTC
+2026-04-03 01:26:06,273 - INFO -     Current price: $51.79
+2026-04-03 01:26:06,273 - INFO -     24h change: -4.45%
+2026-04-03 01:26:06,273 - INFO -     Position size: 0.759259 LTC
+2026-04-03 01:26:06,273 - INFO -     Position value: $39.32
+2026-04-03 01:26:06,273 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:06,273 - INFO -     Stop-loss: $53.34 (+3%)
+2026-04-03 01:26:06,273 - INFO -     Take-profit: $49.20 (-5%)
+2026-04-03 01:26:06,827 - INFO - 🚀 EXECUTING GEMINI LONG: LTC/USD
+2026-04-03 01:26:07,182 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154366828' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:08,170 - INFO - 📊 ATOM 24h change calculated: -3.41%
+2026-04-03 01:26:08,170 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): ATOM down -3.41%
+2026-04-03 01:26:08,170 - INFO - 🎯 PREPARING GEMINI LONG (DIP): ATOM
+2026-04-03 01:26:08,170 - INFO -     Current price: $1.64
+2026-04-03 01:26:08,170 - INFO -     24h change: -3.41%
+2026-04-03 01:26:08,171 - INFO -     Position size: 23.947625 ATOM
+2026-04-03 01:26:08,171 - INFO -     Position value: $39.32
+2026-04-03 01:26:08,171 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:08,171 - INFO -     Stop-loss: $1.69 (+3%)
+2026-04-03 01:26:08,171 - INFO -     Take-profit: $1.56 (-5%)
+2026-04-03 01:26:08,686 - INFO - 🚀 EXECUTING GEMINI LONG: ATOM/USD
+2026-04-03 01:26:08,969 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154368687' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:10,124 - INFO - 📊 FIL 24h change calculated: -3.98%
+2026-04-03 01:26:10,124 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): FIL down -3.98%
+2026-04-03 01:26:10,124 - INFO - 🎯 PREPARING GEMINI LONG (DIP): FIL
+2026-04-03 01:26:10,124 - INFO -     Current price: $0.81
+2026-04-03 01:26:10,124 - INFO -     24h change: -3.98%
+2026-04-03 01:26:10,124 - INFO -     Position size: 48.384398 FIL
+2026-04-03 01:26:10,125 - INFO -     Position value: $39.32
+2026-04-03 01:26:10,125 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:10,125 - INFO -     Stop-loss: $0.84 (+3%)
+2026-04-03 01:26:10,125 - INFO -     Take-profit: $0.77 (-5%)
+2026-04-03 01:26:10,652 - INFO - 🚀 EXECUTING GEMINI LONG: FIL/USD
+2026-04-03 01:26:10,924 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154370653' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:12,044 - INFO - 📊 XTZ 24h change calculated: -4.34%
+2026-04-03 01:26:12,044 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): XTZ down -4.34%
+2026-04-03 01:26:12,044 - INFO - 🎯 PREPARING GEMINI LONG (DIP): XTZ
+2026-04-03 01:26:12,044 - INFO -     Current price: $0.34
+2026-04-03 01:26:12,044 - INFO -     24h change: -4.34%
+2026-04-03 01:26:12,045 - INFO -     Position size: 115.212423 XTZ
+2026-04-03 01:26:12,045 - INFO -     Position value: $39.32
+2026-04-03 01:26:12,045 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:12,045 - INFO -     Stop-loss: $0.35 (+3%)
+2026-04-03 01:26:12,045 - INFO -     Take-profit: $0.32 (-5%)
+2026-04-03 01:26:12,586 - INFO - 🚀 EXECUTING GEMINI LONG: XTZ/USD
+2026-04-03 01:26:12,861 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154372587' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:14,036 - INFO - 📊 AAVE 24h change calculated: -4.93%
+2026-04-03 01:26:14,037 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): AAVE down -4.93%
+2026-04-03 01:26:14,037 - INFO - 🎯 PREPARING GEMINI LONG (DIP): AAVE
+2026-04-03 01:26:14,037 - INFO -     Current price: $94.56
+2026-04-03 01:26:14,037 - INFO -     24h change: -4.93%
+2026-04-03 01:26:14,037 - INFO -     Position size: 0.415855 AAVE
+2026-04-03 01:26:14,037 - INFO -     Position value: $39.32
+2026-04-03 01:26:14,037 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:14,037 - INFO -     Stop-loss: $97.39 (+3%)
+2026-04-03 01:26:14,037 - INFO -     Take-profit: $89.83 (-5%)
+2026-04-03 01:26:14,612 - INFO - 🚀 EXECUTING GEMINI LONG: AAVE/USD
+2026-04-03 01:26:14,889 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154374613' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:15,947 - INFO - 📊 COMP 24h change calculated: -2.37%
+2026-04-03 01:26:15,947 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): COMP down -2.37%
+2026-04-03 01:26:15,947 - INFO - 🎯 PREPARING GEMINI LONG (DIP): COMP
+2026-04-03 01:26:15,947 - INFO -     Current price: $16.50
+2026-04-03 01:26:15,947 - INFO -     24h change: -2.37%
+2026-04-03 01:26:15,947 - INFO -     Position size: 2.383152 COMP
+2026-04-03 01:26:15,947 - INFO -     Position value: $39.32
+2026-04-03 01:26:15,947 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:15,947 - INFO -     Stop-loss: $17.00 (+3%)
+2026-04-03 01:26:15,947 - INFO -     Take-profit: $15.67 (-5%)
+2026-04-03 01:26:16,461 - INFO - 🚀 EXECUTING GEMINI LONG: COMP/USD
+2026-04-03 01:26:16,731 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154376461' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:17,911 - INFO - 📊 YFI 24h change calculated: -2.26%
+2026-04-03 01:26:17,911 - INFO - ⚡ GEMINI LONG SIGNAL (DIP): YFI down -2.26%
+2026-04-03 01:26:17,911 - INFO - 🎯 PREPARING GEMINI LONG (DIP): YFI
+2026-04-03 01:26:17,911 - INFO -     Current price: $2418.27
+2026-04-03 01:26:17,911 - INFO -     24h change: -2.26%
+2026-04-03 01:26:17,911 - INFO -     Position size: 0.016260 YFI
+2026-04-03 01:26:17,912 - INFO -     Position value: $39.32
+2026-04-03 01:26:17,912 - INFO -     Capital at risk: $39.32
+2026-04-03 01:26:17,912 - INFO -     Stop-loss: $2490.82 (+3%)
+2026-04-03 01:26:17,912 - INFO -     Take-profit: $2297.36 (-5%)
+2026-04-03 01:26:18,486 - INFO - 🚀 EXECUTING GEMINI LONG: YFI/USD
+2026-04-03 01:26:19,080 - ERROR - ❌ Gemini trade execution failed: gemini Nonce '1775154378487' has not increased since your last call to the Gemini API.
+2026-04-03 01:26:19,080 - INFO - 🔍 Checking 23 cryptos on Binance for SHORT...
+2026-04-03 01:26:19,081 - INFO - 🎯 Opportunities found this cycle: 16
+2026-04-03 01:26:19,081 - INFO - ⏰ Next cycle in 300 seconds...
+2026-04-03 01:26:19,081 - INFO - ⏱️  Cycle 2 duration: 32.1 seconds
+2026-04-03 01:26:19,081 - INFO - 📈 Total opportunities found: 32

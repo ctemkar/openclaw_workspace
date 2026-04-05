@@ -1,0 +1,23 @@
+🚀 Starting Arbitrage Dashboard on http://localhost:5010
+ * Serving Flask app 'arbitrage_dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.1.63:5010
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Apr/2026 14:06:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:06:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:06:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:06:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:06:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:07:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:07:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:07:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:07:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:08:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:08:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:08:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:08:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/Apr/2026 14:09:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 14:09:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

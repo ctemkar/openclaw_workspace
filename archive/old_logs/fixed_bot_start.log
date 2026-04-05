@@ -1,0 +1,20 @@
+2026-03-31 17:20:07,738 - INFO - ✅ Gemini API keys loaded
+2026-03-31 17:20:07,739 - INFO - ======================================================================
+2026-03-31 17:20:07,739 - INFO - 🚀 FIXED TRADING BOT STARTED
+2026-03-31 17:20:07,739 - INFO - 💰 Real Portfolio: ~$533.83
+2026-03-31 17:20:07,740 - INFO - 🎯 Trading Capital: $100.00
+2026-03-31 17:20:07,740 - INFO - ⚖️ Risk: 2.0% per trade ($2.00)
+2026-03-31 17:20:07,740 - INFO - 🛑 Stop-loss: 5.0%
+2026-03-31 17:20:07,740 - INFO - 🎯 Take-profit: 10.0%
+2026-03-31 17:20:07,740 - INFO - 📊 Max trades/day: 999
+2026-03-31 17:20:07,740 - INFO - ======================================================================
+2026-03-31 17:20:07,740 - INFO - 
+📊 TRADING CYCLE - 17:20:07
+2026-03-31 17:20:12,003 - INFO - 💰 REAL Portfolio: $530.87
+2026-03-31 17:20:12,003 - INFO -    Cash: $134.27
+2026-03-31 17:20:12,003 - INFO -    BTC: 0.005981 ($396.60)
+2026-03-31 17:20:12,567 - ERROR - ❌ Failed to check BTC/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,068 - ERROR - ❌ Failed to check ETH/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,614 - ERROR - ❌ Failed to check SOL/USD: unsupported operand type(s) for -: 'float' and 'NoneType'
+2026-03-31 17:20:13,614 - INFO - 📈 Today's trades: 0/999
+2026-03-31 17:20:13,614 - INFO - ⏰ Next cycle in 5 minutes (Cycle 1)...

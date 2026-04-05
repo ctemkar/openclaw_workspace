@@ -1,0 +1,18 @@
+2026-04-02 00:12:33,567 - INFO - ======================================================================
+2026-04-02 00:12:33,567 - INFO - 🚀 REAL 26-CRYPTO TRADING BOT - AGGRESSIVE MODE!
+2026-04-02 00:12:33,567 - INFO - ======================================================================
+2026-04-02 00:12:33,567 - INFO - 📊 Trading ALL 26 cryptocurrencies
+2026-04-02 00:12:33,567 - INFO - ♊ Gemini LONG: 16 cryptos ($319.04 capital - FULL BALANCE!)
+2026-04-02 00:12:33,567 - INFO - ₿ Binance SHORT: 23 cryptos ($0.00 capital, 1x)
+2026-04-02 00:12:33,567 - INFO - 📈 LONG threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 00:12:33,567 - INFO - 📉 SHORT threshold: 1.0% drop (MORE AGGRESSIVE!)
+2026-04-02 00:12:33,567 - INFO - 💰 Position size: 20% of capital (REDUCED FOR MARGIN)
+2026-04-02 00:12:33,567 - INFO - 🛑 Stop-loss: 3%, ✅ Take-profit: 5% (HIGHER PROFIT!)
+2026-04-02 00:12:33,567 - INFO - ⏰ Scan interval: 300 seconds (FASTER!)
+2026-04-02 00:12:33,567 - INFO - ======================================================================
+2026-04-02 00:12:33,567 - INFO - ⚡ Trades WILL be executed on BOTH exchanges!
+2026-04-02 00:12:33,567 - INFO - ⚡ USING FULL BALANCE - NOT SITTING ON SIDELINES!
+2026-04-02 00:12:33,567 - INFO - ======================================================================
+2026-04-02 00:12:33,567 - INFO - ✅ Gemini API keys loaded
+2026-04-02 00:12:33,567 - INFO - ✅ Binance API keys loaded
+2026-04-02 00:12:33,570 - INFO - ✅ Gemini exchange initialized
