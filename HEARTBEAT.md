@@ -43,11 +43,11 @@
 - **FAST Progress Monitor:** ✅ **WORKING** (fast_progress_monitor.sh - no API timeouts)
 
 **⚠️ ISSUES NEEDING ATTENTION:**
-1. **Trade Counting Inconsistent:** Log shows trades 1-52 then resets to 1 ("53 trades" is misleading)
-2. **Limited REAL Trading:** Only 2 REAL trades today (first: $-0.02, second: $0.00)
-3. **Gemini Nonce Error:** Still present, limiting arbitrage trading
-4. **MANA Spread Small:** 0.07% (too small for arbitrage)
-5. **No API Keys:** .env file deleted for security, need secure way to load keys for real trading
+1. **Progress Monitor Discrepancy:** Shows "PRACTICAL PROFIT BOT NOT RUNNING" but bot IS running (PID: 38543) - naming mismatch
+2. **Trade Counting Inconsistent:** Log shows trades 1-52 then resets to 1 ("53 trades" is misleading)
+3. **Limited REAL Trading:** Small profits/losses on individual trades
+4. **Gemini Nonce Error:** Still present, limiting arbitrage trading
+5. **MANA Spread Small:** -0.63% (too small for arbitrage)
 
 **✅ RECENT SUCCESS:**
 1. **Trade Size Adjusted:** Reduced from $30.00 to $29.00 to match available balance
