@@ -1,0 +1,70 @@
+[
+  {
+    "symbol": "XTZ",
+    "quantitative": {
+      "symbol": "XTZ",
+      "spread_percent": 3.9,
+      "net_profit": -3.83,
+      "risk_score": 6,
+      "recommendation": "AVOID",
+      "confidence": 85
+    },
+    "qualitative": {
+      "symbol": "XTZ",
+      "recommendation": "TRADE",
+      "confidence": 75,
+      "risk": "medium",
+      "insight": "Large spread but persistent - could be structural",
+      "trust_numbers": false
+    },
+    "cio_decision": {
+      "symbol": "XTZ",
+      "final_recommendation": "WAIT",
+      "action": "MONITOR",
+      "confidence": 52.5,
+      "trust_decision": "TRUST_QUALITATIVE",
+      "quant_score": 0.0,
+      "qual_score": 0.75,
+      "final_score": 0.525
+    },
+    "trade_plan": {
+      "symbol": "XTZ",
+      "action": "NO_TRADE",
+      "reason": "CIO AI: MONITOR"
+    }
+  },
+  {
+    "symbol": "YFI",
+    "quantitative": {
+      "symbol": "YFI",
+      "spread_percent": 1.48,
+      "net_profit": -7.56,
+      "risk_score": 10,
+      "recommendation": "AVOID",
+      "confidence": 85
+    },
+    "qualitative": {
+      "symbol": "YFI",
+      "recommendation": "AVOID",
+      "confidence": 80,
+      "risk": "high",
+      "insight": "High fees kill profit, spread too persistent",
+      "trust_numbers": true
+    },
+    "cio_decision": {
+      "symbol": "YFI",
+      "final_recommendation": "SKIP",
+      "action": "AVOID",
+      "confidence": 0.0,
+      "trust_decision": "TRUST_NUMBERS",
+      "quant_score": 0.0,
+      "qual_score": 0.0,
+      "final_score": 0.0
+    },
+    "trade_plan": {
+      "symbol": "YFI",
+      "action": "NO_TRADE",
+      "reason": "CIO AI: AVOID"
+    }
+  }
+]
