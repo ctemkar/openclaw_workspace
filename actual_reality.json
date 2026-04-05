@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-06T00:27:39.693958",
+  "timestamp": "2026-04-06T00:29:40.083259",
   "security": {
     "api_keys": 0,
     "real_trading": "IMPOSSIBLE",
@@ -8,8 +8,8 @@
   "paper_trading": {
     "active": true,
     "pid": "31607",
-    "balance": 6536.090790461922,
-    "trades": 20,
+    "balance": 6244.515083020373,
+    "trades": 22,
     "strategy": "Momentum-based"
   },
   "system": {
