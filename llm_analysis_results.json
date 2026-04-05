@@ -1,0 +1,18 @@
+{
+  "YFI": {
+    "analysis": "Arbitrage opportunity exists with a potential profit of $35.82 ($2458.8200 - $2423.0000) on a trade size of $30.",
+    "profit_potential": "high",
+    "risk": "low",
+    "transfer_issue": "yes",
+    "recommendation": "avoid",
+    "reason": "The transfer fee of $8.00 may exceed the potential profit, making this arbitrage opportunity unviable."
+  },
+  "FIL": {
+    "analysis": "FIL price difference between Binance and Gemini presents a potential arbitrage opportunity, but the transfer fee may impact profitability.",
+    "profit_potential": "low",
+    "risk": "medium",
+    "transfer_issue": "yes",
+    "recommendation": "avoid",
+    "reason": "The $5.00 transfer fee is likely to exceed the potential profit of approximately $0.0021 ($30 x 0.62% spread), making this trade not worth pursuing."
+  }
+}

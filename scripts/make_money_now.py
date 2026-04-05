@@ -43,7 +43,7 @@ class MakeMoneyBot:
         })
         
         # Trading parameters
-        self.trade_size_usd = 29.0  # Reduced to $29 per trade (balance is $29.94)
+        self.trade_size_usd = 28.50  # Reduced to $28.50 per trade (current balance is $28.97)
         self.min_spread = 0.4  # 0.4% minimum spread (OUR RULE!)
         self.scan_interval = 60  # 1 minute scans
         
