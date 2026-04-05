@@ -1,0 +1,62 @@
+=== SLEEP MONITOR REPORT ===
+Time: Sun Apr  5 22:50:29 +07 2026
+User: Chetu (Sleeping)
+
+=== SYSTEM STATUS ===
+CPU Usage: 19.73% user, 11.73% sys, 68.53% idle
+Memory: 73237 pages free (out of 2097152 total pages)
+System Load: Normal
+
+=== DASHBOARD STATUS ===
+✅ Port 5001: Gateway Dashboard - RESPONDING (200 OK)
+✅ Port 5024: Truthful Dashboard - RESPONDING (200 OK)  
+✅ Port 5025: Nocache Dashboard - RESPONDING (200 OK)
+✅ Port 5026: Top10 Dashboard - RESPONDING (200 OK)
+
+=== TRADING ACTIVITY ===
+⚠️ Trading Bot Status: PARTIALLY ACTIVE
+- make_money_now.py appears to be running (based on log activity)
+- Recent trades detected in make_money_now.log (last activity: 21:50)
+- Issue detected: SELL errors with "insufficient balance" messages
+- Paper trading system (final_paper_trading_system.py) appears to be running
+
+=== PROCESS STATUS ===
+Active Python processes detected: 2
+Dashboards running: 4 (simple HTTP servers)
+Trading bots: At least 1 active (make_money_now.py)
+
+=== LOG ACTIVITY ===
+Recent log updates: 10 log files updated in last hour
+Active logging detected in:
+- make_money_now.log (trading activity)
+- gateway.log (dashboard access)
+- Various dashboard logs
+
+=== SECURITY STATUS ===
+✅ No unauthorized access detected
+✅ All dashboards secured (localhost only)
+✅ Trading activity appears to be paper/simulated (no real API keys in use)
+
+=== SUMMARY ===
+🟡 SYSTEM PARTIALLY STABLE
+
+GOOD:
+- All 4 dashboards are running and responding
+- System resources are normal (CPU idle: 68.53%)
+- Basic monitoring is active
+- No critical errors in system logs
+
+ISSUES:
+- Trading bot has sell order errors ("insufficient balance")
+- Some expected processes from old sleep monitor script not running
+- Trading activity appears to be paper/simulated only
+
+RECOMMENDATIONS:
+1. Check trading bot balance/configuration issues
+2. Verify paper trading system is functioning correctly
+3. Consider restarting problematic trading processes
+4. Continue monitoring for stability
+
+=== NEXT CHECK ===
+Next sleep monitor check scheduled in 30 minutes
+System will continue monitoring while user sleeps
