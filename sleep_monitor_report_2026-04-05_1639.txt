@@ -1,0 +1,82 @@
+=== SLEEP MONITOR REPORT ===
+Time: Sun Apr  5 16:39:44 +07 2026
+User: Chetu (Sleeping)
+Location: Asia/Bangkok (GMT+7)
+
+=== SYSTEM STATUS ===
+
+✅ ACTIVE PROCESSES:
+1. fixed_practical_profit_bot.py (PID: 83248) - Running
+2. make_money_now.py (PID: 83123) - Running  
+3. real_time_top10_dashboard.py (PID: 78174) - Running on port 5026
+4. truthful_dashboard.py (PID: 74851) - Running on port 5024
+5. nocache_dashboard.py (PID: 51117) - Running on port 5025
+6. gateway_5000.py (PID: 51043) - Running on port 5001
+7. practical_monitor_bot.py (PID: 38543) - Running
+8. microsecond_arbitrage_bot.py (2 instances) - Running
+9. real_26_crypto_arbitrage_bot.py (PID: 55581) - Running since 3:35AM
+
+✅ ACTIVE DASHBOARDS:
+- Port 5001: OpenClaw Gateway Dashboard Hub ✅ RESPONDING
+- Port 5025: LIVE Dashboard (nocache) ✅ RESPONDING  
+- Port 5024: TRUTHFUL Dashboard ✅ RESPONDING
+- Port 5026: REAL-TIME Top 10 Spreads ✅ RESPONDING
+
+⚠️ NOTE: Dashboards are running on ports 5001, 5024-5026, NOT 5010-5020 as expected by sleep_monitor.sh
+
+=== TRADING ACTIVITY ===
+
+📊 LLM Predictions: 374 recorded (from llm_predictions_history.json)
+
+🔍 BOT STATUS:
+- Fixed Practical Profit Bot: SCANNING but has API credential errors (binance requires "apiKey")
+- Microsecond Arbitrage Bot: ACTIVE - Found 2 tradable opportunities in last scan
+  • YFI: 1.73% spread (BUY_BINANCE_SELL_GEMINI)
+  • DOT: 0.56% spread (BUY_BINANCE_SELL_GEMINI)
+- Real 26 Crypto Arbitrage Bot: RUNNING since 3:35AM (long-running)
+
+=== SYSTEM RESOURCES ===
+
+💻 CPU Usage: 12.39% user, 10.8% sys, 77.52% idle
+📊 Load Average: 2.14 (1min), 2.49 (5min), 2.71 (15min)
+💾 Memory: 31GB used, 937MB free
+🔄 System stable with moderate load
+
+=== ERROR CHECK (LAST HOUR) ===
+
+⚠️ API CREDENTIAL ERRORS:
+- Fixed Practical Profit Bot: Repeated "binance requires 'apiKey' credential" errors
+- This suggests API keys may need refresh or reconfiguration
+
+✅ NO CRITICAL ERRORS:
+- No system crashes or fatal exceptions detected
+- All processes continue running despite API errors
+- Dashboards responding normally
+
+=== SUMMARY ===
+
+🟡 SYSTEM PARTIALLY OPERATIONAL
+
+✅ WHAT'S WORKING:
+1. All 4 dashboard services are running and responding
+2. Multiple trading bots are actively scanning
+3. System resources are stable
+4. No critical crashes or failures
+
+⚠️ WHAT NEEDS ATTENTION:
+1. API credential errors in Fixed Practical Profit Bot
+2. Sleep monitor script expects wrong ports (5010-5020 vs actual 5001, 5024-5026)
+3. Some bots may not be executing trades due to API issues
+
+🔧 RECOMMENDATIONS:
+1. Update sleep_monitor.sh to check correct ports (5001, 5024-5026)
+2. Check Binance API credentials for fixed_practical_profit_bot.py
+3. Consider restarting bots with API errors after credential fix
+4. System is stable enough for continued monitoring
+
+=== NEXT STEPS ===
+
+Next sleep monitor check in 30 minutes (approx 17:10)
+System will continue monitoring while Chetu sleeps
+
+Report generated: 2026-04-05 16:39:44 +07

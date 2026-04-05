@@ -17,10 +17,15 @@ echo ""
 # 1. Check all critical processes
 echo -e "${BLUE}1. PROCESS STATUS:${NC}"
 critical_processes=(
-    "real_dashboard_simple.py"
-    "arbitration_trading_dashboard.py"
-    "simple_trading_dashboard.py"
-    "forex_bot_with_schwab.py"
+    "real_time_top10_dashboard.py"
+    "truthful_dashboard.py"
+    "nocache_dashboard.py"
+    "gateway_5000.py"
+    "fixed_practical_profit_bot.py"
+    "make_money_now.py"
+    "practical_monitor_bot.py"
+    "microsecond_arbitrage_bot.py"
+    "real_26_crypto_arbitrage_bot.py"
 )
 
 all_running=true
@@ -35,14 +40,19 @@ done
 
 # 2. Check dashboard ports
 echo -e "\n${BLUE}2. DASHBOARD PORTS:${NC}"
-ports=(5010 5015 5020)
+ports=(5001 5024 5025 5026)
+port_names=("Gateway Dashboard" "Truthful Dashboard" "Nocache Dashboard" "Top10 Dashboard")
+
+i=0
 for port in "${ports[@]}"; do
+    name="${port_names[$i]}"
     if curl -s --connect-timeout 5 "http://localhost:$port/" > /dev/null; then
-        echo -e "  ${GREEN}✅ Port $port responding${NC}"
+        echo -e "  ${GREEN}✅ $name (Port $port) responding${NC}"
     else
-        echo -e "  ${RED}❌ Port $port not responding${NC}"
+        echo -e "  ${RED}❌ $name (Port $port) not responding${NC}"
         all_running=false
     fi
+    i=$((i+1))
 done
 
 # 3. Check trading bot activity

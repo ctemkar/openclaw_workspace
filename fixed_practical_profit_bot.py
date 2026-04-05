@@ -113,7 +113,7 @@ class FixedPracticalProfitBot:
             logging.info(f"    Gemini Price: ${gemini_price:.4f}")
             logging.info(f"    Spread: {abs(spread):.2f}%")
             
-            if abs(spread) >= 0.5:
+            if abs(spread) >= 0.4:  # OUR RULE: ≥0.4%
                 potential_profit = 30 * (abs(spread)/100) - 0.06
                 logging.info(f"    💰 Potential: ${potential_profit:.2f} profit with $30")
             
@@ -226,8 +226,8 @@ class FixedPracticalProfitBot:
             # Check assets
             mana_price, gemini_price, spread = self.check_assets()
             
-            # Check if spread is profitable
-            if spread >= 0.5:
+            # Check if spread is profitable (OUR RULE: ≥0.4%)
+            if spread >= 0.4:
                 logging.info(f"    🎯 Spread: {spread:.2f}% (PROFITABLE!)")
                 
                 # Execute trade

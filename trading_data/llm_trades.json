@@ -223,5 +223,28 @@
     },
     "order_id": "16877649804",
     "timestamp": "2026-04-05T16:15:26.622887"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "SOL/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 79.77,
+    "amount": 0.1253604111821487,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "SOL",
+      "buy_score": 2.2,
+      "sell_score": 2.3,
+      "confidence": 7.0,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: The stock price has slightly decreased by -0.07% in the last 24 hours. This could be a sign of consolidation or minor correction after a potential run-up. However, without more context or analysis on SOL's fundamentals and market conditions, I recommend caution.",
+        "llama3: SOL's recent price drop is concerning. With a negative 24-hour change of -0.07%, the market seems to be slightly bearish. However, this decline may be an opportunity for long-term investors to accumulate shares at a discount."
+      ],
+      "signal": "NEUTRAL"
+    },
+    "order_id": "16877672963",
+    "timestamp": "2026-04-05T16:30:46.281697"
   }
 ]
