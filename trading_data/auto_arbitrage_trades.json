@@ -29408,5 +29408,39 @@
     "success": false,
     "error": "gemini createOrder() allows limit orders only",
     "execution_time": "2026-04-05T10:09:27.883438"
+  },
+  {
+    "crypto": "RNDR",
+    "direction": "gemini_to_binance",
+    "buy_exchange": "gemini",
+    "sell_exchange": "binance",
+    "spread_percent": 269.417,
+    "buy_price": 1.903,
+    "sell_price": 7.03,
+    "trade_size": 12.0,
+    "crypto_amount": 6.3058,
+    "net_profit": 32.27,
+    "profit_percent": 268.947,
+    "timestamp": "2026-04-05T10:10:17.410029",
+    "success": false,
+    "error": "gemini createOrder() allows limit orders only",
+    "execution_time": "2026-04-05T10:10:41.612786"
+  },
+  {
+    "crypto": "RNDR",
+    "direction": "gemini_to_binance",
+    "buy_exchange": "gemini",
+    "sell_exchange": "binance",
+    "spread_percent": 269.417,
+    "buy_price": 1.903,
+    "sell_price": 7.03,
+    "trade_size": 12.0,
+    "crypto_amount": 6.3058,
+    "net_profit": 32.27,
+    "profit_percent": 268.947,
+    "timestamp": "2026-04-05T10:11:30.731406",
+    "success": false,
+    "error": "gemini createOrder() allows limit orders only",
+    "execution_time": "2026-04-05T10:11:54.616861"
   }
 ]
