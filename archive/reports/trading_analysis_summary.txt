@@ -1,0 +1,42 @@
+
+CRYPTO TRADING ANALYSIS REPORT
+Date: 2026-03-31 10:53:41
+
+TRADING PARAMETERS:
+- Capital: $1,000
+- Risk Management: 5% stop-loss, 10% take-profit
+- Daily Limit: Maximum 2 trades
+- Strategy: Conservative (only clear opportunities)
+
+MARKET ANALYSIS:
+
+BTC/USD:
+  Current Price: $67,696.71
+  24h Change: +0.00%
+  Market Sentiment: BEARISH
+  Trading Signal: SELL
+  Signal Reason: Price near strong resistance (0.00% away) with bearish sentiment
+
+ETH/USD:
+  Current Price: $2,066.22
+  24h Change: +0.00%
+  Market Sentiment: BULLISH
+  Trading Signal: BUY
+  Signal Reason: Price near strong support (0.00% away) with bullish sentiment
+
+TRADING RECOMMENDATIONS:
+Total Opportunities: 2/2 trades recommended
+
+Recommended Actions:
+- SELL BTC/USD at $67,696.71
+  Position: 0.007386 BTC ($500.00)
+  Stop Loss: 5% ($71,081.55)
+  Take Profit: 10% ($60,927.04)
+- BUY ETH/USD at $2,066.22
+  Position: 0.241988 ETH ($500.00)
+  Stop Loss: 5% ($1,962.91)
+  Take Profit: 10% ($2,272.84)
+
+NEXT ANALYSIS:
+Next scheduled analysis will run according to cron schedule.
+Current trades used today: 0/2

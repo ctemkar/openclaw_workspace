@@ -1,0 +1,141 @@
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Monitoring Time: 2026-04-01 11:26:00 (Asia/Bangkok)
+Current Time: Wednesday, April 1st, 2026 — 11:26 AM (Asia/Bangkok) / 2026-04-01 04:26 UTC
+Cron Job ID: fa6555b5-4cba-4480-96c8-b2b99ea46218
+
+=== DASHBOARD STATUS ===
+• Target Dashboard (Port 5001): ❌ NOT RUNNING
+• Alternative Dashboard (Port 5009): ✅ ACTIVE (Real Trading P&L Dashboard)
+• Dashboard Last Accessed: 2026-04-01 11:24:33
+• Dashboard Status: ✅ ACTIVE (serving real-time data)
+• Data Quality: ✅ REAL DATA ONLY - No hardcoded values
+• Cron Configuration Issue: 🔴 MISCONFIGURED (monitoring port 5001 but dashboard on 5009)
+
+=== REAL-TIME MARKET DATA ===
+• Current SOL Price: $83.35 (CoinGecko API - 11:26:00)
+• SOL Stop-Loss Level: $80.10 (3.9% below current)
+• SOL Take-Profit Level: $86.68 (4.0% above current)
+• Current Status: ✅ SAFE (Price above stop-loss, below take-profit)
+• Distance to Stop-Loss: +$3.25 (+3.9%)
+• Distance to Take-Profit: -$3.33 (-4.0%)
+• No active stop-loss or take-profit triggers detected
+
+=== ACTIVE TRADING BOT STATUS ===
+• Primary Bot: real_26_crypto_trader.py
+• Bot Status: ✅ ACTIVE (PID: 37929, Started: 10:05AM)
+• Last Cycle: Cycle 16 completed at 11:23:55 (2 minutes ago)
+• Bot Mode: AGGRESSIVE (1.0% thresholds, 10% position size)
+• Capital Allocation: $134.27 on each exchange (FULL BALANCE)
+• Bot Uptime: Active and scanning (16 cycles completed)
+• Secondary Bot: crypto_trading_llm_live.py (PID: 6080, Started: 6:05AM)
+• Total Opportunities Found: 57 signals detected
+
+=== CURRENT DASHBOARD DATA (Port 5009) ===
+• Initial Capital: $946.97
+• Current Capital: $531.65
+• Cumulative P&L: -$415.32 (-43.86%) 🔴 CRITICAL
+• Available Capital: $265.85
+• Total Capital: $531.65
+• Deployed Capital: $265.80 (50.0%)
+• Cash Reserve: $265.85 (50.0%)
+• Recovery Needed: $415.32 (78.1% gain required to break even)
+
+=== EXCHANGE CAPITAL ALLOCATION ===
+• Gemini Capital: $412.03 (77.5% of total)
+• Binance Capital: $119.62 (22.5% of total)
+• Gemini P&L: +$3.48 (5 SOL positions - improving)
+• Binance P&L: -$1.00 (3 open positions, 7 closed shorts: -$2.17)
+• Total Open P&L: +$2.48 (improved from +$1.93)
+
+=== OPEN POSITIONS ANALYSIS ===
+• Gemini Positions: 5 SOL positions, P&L: +$3.48 (improving)
+• Binance Positions: 3 open positions, 7 closed shorts (-$2.17)
+• Position Status: PROFITABLE (small gains, improving)
+• No immediate stop-loss or take-profit triggers
+
+=== RISK PARAMETERS ANALYSIS ===
+• Stop-Loss Setting: 5% (from trading_config.json)
+• Take-Profit Setting: 10% (from trading_config.json)
+• Max Position Size: 20% (from trading_config.json)
+• Max Daily Trades: 2 (from trading_state.json)
+• Current Daily Trades: 0 (from trading_state.json)
+• Capital Drawdown Threshold: 20% (exceeded by 23.86%)
+
+=== TRADING EXECUTION ISSUES ===
+1. 🔴 Binance Margin Insufficient: "Margin is insufficient" errors preventing trades
+2. 🔴 Symbol Status Errors: MKR/USDT "Invalid symbol status for opening position"
+3. 🔴 Symbol Availability: MATIC/USDT not available on Binance Futures
+4. ⚠️ Recent Trade Failures: ENJ short failed due to margin (11:23:55)
+5. ⚠️ MKR short failed due to symbol status (11:23:54)
+
+=== SYSTEM CONFIGURATION ISSUES ===
+1. 🔴 Cron Job Misconfigured: Monitoring port 5001 but dashboard on port 5009
+2. 🔴 Capital Drawdown Exceeded: 43.86% loss (threshold: 20%)
+3. 🔴 Binance Margin Issues: "Margin is insufficient" errors
+4. ⚠️ Symbol Restrictions: MKR/USDT "Invalid symbol status"
+5. ✅ Active Bot: Trading bot running and scanning
+6. ✅ Dashboard Active: Real-time data available on port 5009
+7. ✅ Data Quality: REAL DATA ONLY - No hardcoded values
+
+=== CRITICAL ALERTS SUMMARY ===
+1. 🔴 CAPITAL DRAWDOWN EXCEEDED: 43.86% (threshold: 20%) - SEVERE LOSS
+2. 🔴 CRON JOB MISCONFIGURED: Monitoring port 5001 but dashboard on port 5009
+3. 🔴 BINANCE MARGIN INSUFFICIENT: Multiple "Margin is insufficient" errors
+4. 🔴 TRADING RESTRICTIONS: MKR/USDT "Invalid symbol status for opening position"
+5. ⚠️ DASHBOARD PORT MISMATCH: Target port 5001 inactive, alternative 5009 active
+6. ✅ ACTIVE TRADING BOT: New bot running and executing cycles
+7. ✅ DATA QUALITY: REAL DATA ONLY - No hardcoded values
+
+=== CAPITAL CRISIS ANALYSIS ===
+• Initial Capital: $946.97
+• Current Capital: $531.65 (from dashboard)
+• Loss Amount: -$415.32
+• Loss Percentage: -43.86%
+• Risk Threshold Exceeded By: 23.86%
+• Recovery Needed: $415.32 (78.1% gain required to break even)
+• Status: 🔴 CRITICAL - Immediate attention required
+
+=== STOP-LOSS/TAKE-PROFIT MONITORING ===
+• SOL Current Price: $83.35 (CoinGecko API)
+• SOL Stop-Loss Level: $80.10 (3.9% below current)
+• SOL Take-Profit Level: $86.68 (4.0% above current)
+• Distance to Stop-Loss: +$3.25 (+3.9%)
+• Distance to Take-Profit: -$3.33 (-4.0%)
+• Status: ✅ NO TRIGGERS ACTIVE
+
+=== RECOMMENDED IMMEDIATE ACTIONS ===
+1. 🔴 ADDRESS CAPITAL DRAWDOWN: Review trading strategy and risk management
+2. 🔴 FIX CRON CONFIGURATION: Update monitoring to port 5009
+3. 🔴 RESOLVE BINANCE MARGIN: Check account funding and margin requirements
+4. ⚠️ VERIFY SYMBOL AVAILABILITY: Check which symbols are tradeable on Binance Futures
+5. ⚠️ REDUCE POSITION SIZES: Consider smaller positions due to capital constraints
+6. ✅ CONTINUE MONITORING: Keep bot active but monitor closely
+
+=== ALERT PRIORITY ===
+PRIORITY 1 (CRITICAL):
+• Capital drawdown exceeding 20% threshold
+• Cron job misconfiguration
+• Binance margin insufficient errors
+
+PRIORITY 2 (HIGH):
+• Symbol trading restrictions
+• Low trading success rate
+• Dashboard port mismatch
+
+PRIORITY 3 (MEDIUM):
+• Active bot monitoring
+• Price level monitoring
+• System status tracking
+
+=== NEXT STEPS ===
+• Immediate: Address capital drawdown and margin issues
+• Short-term: Fix cron configuration and verify symbols
+• Ongoing: Continuous monitoring of bot performance
+• Review: Trading strategy and risk parameters
+
+=== MONITORING LOGS UPDATED ===
+• trading_monitoring.log: ✅ Updated with current status
+• critical_alerts.log: ✅ Updated with critical alerts
+• This summary saved to: trading_monitoring_summary_20260401_1126.txt
+
+=== END OF MONITORING SUMMARY ===

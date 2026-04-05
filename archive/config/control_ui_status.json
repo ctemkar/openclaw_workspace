@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-01T22:54:19.315143",
+  "exchange": "gemini",
+  "status": "operational",
+  "assets": {
+    "reported_by_ui": 2,
+    "actual_count": 9,
+    "discrepancy": "UI shows 2 assets, but API returns 9 assets",
+    "actual_assets": [
+      "USD",
+      "BTC",
+      "ETH",
+      "BCH",
+      "AMP",
+      "FTM",
+      "SOL",
+      "POL",
+      "MON"
+    ]
+  },
+  "balances": {
+    "reported_by_ui": "Unknown (UI shows 'only 2 assets')",
+    "actual_usd": 14.473002213988185,
+    "actual_available_usd": 14.473002213988185,
+    "note": "UI may be showing cached or incorrect data"
+  },
+  "system_health": {
+    "api_connectivity": "\u2705 Working",
+    "data_freshness": "\u26a0\ufe0f Stale in UI",
+    "recommendation": "Refresh UI cache or restart Control UI"
+  },
+  "trading_capacity": {
+    "available_capital": "$14.47",
+    "sufficient_for_trading": "\u274c Insufficient (needs > $50 for meaningful trades)",
+    "recommendation": "Add funds to Gemini or use existing crypto holdings"
+  }
+}

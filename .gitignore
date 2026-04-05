@@ -1,34 +1,37 @@
-
-# API Keys - DO NOT COMMIT
-.gemini_key
-.gemini_secret
-.binance_key
-.binance_secret
-secure/*.key
-secure/*.secret
-*.log
-__pycache__/
-
-# API Key directories - NEVER COMMIT THESE!
+# API KEYS - NEVER COMMIT THESE
 secure_keys/
-keys/
-secrets/
 *.key
 *.secret
-
-# API Keys and Secrets
-.env
-.env.*
 *.env
-secure_keys/
-secrets/
-*.key
-*.secret
+.env*
+api_keys.json
+config.json
+credentials.json
 
-# Archive folder - contains old/unused files
-archive/
+# Trading system
+trading_mode.txt
+paper_trading_keys/
+demo_paper_trades.json
+simulated_trades_audit.json
+safety_lock.json
 
-# Old logs and backups
-*.backup
-*.backup*
-backup_*
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

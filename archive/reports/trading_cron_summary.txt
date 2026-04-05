@@ -1,0 +1,42 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Execution Time: 2026-03-31 04:29:22 (Asia/Bangkok)
+
+SYSTEM STATUS:
+✅ Trading system running normally
+✅ Last analysis completed: 2026-03-31T04:27:33
+✅ Capital: $250.00
+✅ Hourly analysis schedule active
+
+TRADING ACTIVITY:
+• Total trades: 4
+• Trading pairs: BTC/USD, ETH/USD
+• Daily limit: 2 trades (VIOLATION: 4 trades - 100% over limit)
+
+MARKET DATA:
+• BTC/USD: $66,806.82
+• ETH/USD: $2,042.29
+• Market sentiment: BULLISH
+• Current signal: BUY (BTC/USD recommended)
+
+CRITICAL ALERTS DETECTED (2):
+🚨 STOP-LOSS BREACHED: ETH/USD position at $2325.28 (-12.16%)
+🚨 STOP-LOSS BREACHED: ETH/USD position at $2193.60 (-6.89%)
+
+RISK ASSESSMENT:
+• Portfolio health: POOR
+• Stop-loss breaches: 2 positions
+• Take-profit triggers: None
+• Drawdown indicators: CRITICAL for ETH positions
+
+ACTIONS REQUIRED:
+1. IMMEDIATE: Review and address stop-loss breaches on ETH positions
+2. ENFORCE: Daily trade limit (currently exceeded by 100%)
+3. ADJUST: Consider tighter risk parameters or position sizing
+
+DATA LOGGED:
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+NEXT MONITORING: Scheduled for next hourly analysis
+=====================================

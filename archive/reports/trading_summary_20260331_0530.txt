@@ -1,0 +1,58 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Monitoring Time: 2026-03-31 05:30:20 (Asia/Bangkok)
+Dashboard URL: http://localhost:5001/
+
+SYSTEM STATUS:
+✅ Dashboard is running
+✅ Last analysis: 2026-03-31 04:43:09
+✅ Analysis scheduled: hourly
+✅ Capital: $250.00
+✅ Risk parameters: 5% stop-loss, 10% take-profit
+
+CURRENT MARKET PRICES:
+• BTC/USD: $66,775.00
+• ETH/USD: $2,035.74
+
+ACTIVE TRADES (4 positions):
+1. ETH/USD BUY @ $2,325.28 (0.086 qty) - DOWN 12.5% 🚨
+2. ETH/USD BUY @ $2,193.60 (0.0912 qty) - DOWN 7.2% 🚨  
+3. BTC/USD BUY @ $67,247.51 (0.002974 qty) - DOWN 0.7%
+4. ETH/USD BUY @ $2,052.38 (0.0974 qty) - DOWN 0.8%
+
+PORTFOLIO PERFORMANCE:
+• Total Investment: $799.93
+• Total P&L: -$42.32
+• Total Return: -5.3% 🚨
+
+CRITICAL ALERTS:
+1. 🚨 TWO STOP-LOSS TRIGGERS: ETH trades #1 & #2 are below 5% stop-loss
+2. 🚨 CRITICAL DRAWDOWN: Overall portfolio down 5.3%
+3. ⚠️ DAILY TRADE LIMIT REACHED: 2/2 trades used today
+
+RISK ASSESSMENT:
+• HIGH RISK: Multiple positions in drawdown
+• ETH exposure appears problematic
+• Trading limit reached - no new trades possible today
+• Market conditions: Bearish for ETH
+
+RECOMMENDATIONS:
+1. IMMEDIATE: Review and potentially close losing ETH positions
+2. Consider hedging strategies for ETH exposure
+3. Pause trading until next day (limit reached)
+4. Review trading strategy - current approach showing losses
+5. Next analysis scheduled for ~05:43 UTC+7
+
+DATA LOGGED:
+• Monitoring log: trading_monitoring.log
+• Critical alerts: critical_alerts.log
+• This summary: trading_summary_20260331_0530.txt
+
+NEXT STEPS:
+1. Monitor ETH price movement closely
+2. Wait for next scheduled analysis at ~05:43
+3. Review strategy effectiveness
+4. Consider adjusting risk parameters if losses continue
+
+=====================================
+END OF MONITORING REPORT

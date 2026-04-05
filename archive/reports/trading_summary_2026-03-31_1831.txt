@@ -1,0 +1,82 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-31 18:31:44 (Asia/Bangkok)
+Monitoring Job: trading_dashboard_monitor (cron:8edabbce-f4e7-494c-8e85-70c75b5e859a)
+
+EXECUTIVE SUMMARY:
+=================
+🔴 CRITICAL SYSTEM STATUS - IMMEDIATE INTERVENTION REQUIRED
+
+1. CAPITAL LOSS: 46.3% drawdown from initial $250.00 to $134.27
+2. RISK MANAGEMENT FAILURE: Multiple stop-loss triggers not executed
+3. EXECUTION UNCERTAINTY: Conflicting real/simulation mode indicators
+4. PORTFOLIO HEALTH: 4 open positions, all at loss or minimal gain
+
+DETAILED ANALYSIS:
+=================
+
+SYSTEM STATUS:
+- Dashboard: ✅ ONLINE (http://localhost:5001/)
+- Service: ✅ RUNNING
+- Last Analysis: 2026-03-31T18:01:21.756284 (30 minutes ago)
+- Capital: $134.27 (46.3% loss from $250.00 initial)
+- P&L: -$0.3868 (negative, stable)
+
+PORTFOLIO:
+- Open Positions: 4 (all Binance)
+- Realized P&L: $0.00 (no closed positions)
+- Unrealized P&L: -$0.3868
+
+RECENT TRADES (5):
+1. ETH/USD BUY @ $2,325.28 (13:39:49) - Current: $2,036.41 (-12.4%)
+2. ETH/USD BUY @ $2,193.60 (00:33:02) - Current: $2,036.41 (-7.2%)
+3. BTC/USD BUY @ $67,247.51 (21:29:41) - Current: $66,596.00 (-0.97%)
+4. ETH/USD BUY @ $2,052.38 (21:29:42) - Current: $2,036.41 (-0.78%)
+5. ETH/USD BUY @ $2,021.51 (07:24:00) - Current: $2,036.41 (+0.74%)
+
+CRITICAL ISSUES:
+================
+1. STOP-LOSS EXECUTION FAILURE:
+   - ETH @ $2,325.28: -12.4% (should have closed at -5% = $2,209.02)
+   - ETH @ $2,193.60: -7.2% (should have closed at -5% = $2,083.92)
+   - Both positions have exceeded stop-loss by significant margins
+
+2. EXECUTION MODE CONFLICT:
+   - Dashboard claims: "REAL TRADING - LIVE"
+   - Summary indicates: "SIMULATED - API credentials needed"
+   - Unclear if trades are actually being executed
+
+3. RISK PARAMETER VIOLATIONS:
+   - Max trades/day: 999 (effectively unlimited - high risk)
+   - Stop-loss: 5% configured but not enforced
+   - Position size: 20% of capital per trade (aggressive)
+
+4. CAPITAL DRAWDOWN:
+   - 46.3% loss from initial capital
+   - Well beyond typical risk limits (20-25% max)
+
+IMMEDIATE ACTIONS REQUIRED:
+===========================
+1. PAUSE ALL TRADING ACTIVITY
+2. MANUALLY CLOSE POSITIONS WITH STOP-LOSS VIOLATIONS:
+   - ETH @ $2,325.28
+   - ETH @ $2,193.60
+3. VERIFY EXECUTION MODE (Real vs Simulated)
+4. REVIEW AND FIX RISK MANAGEMENT SYSTEM
+5. REDUCE MAX DAILY TRADES TO 2-5
+6. AUDIT CAPITAL AND P&L CALCULATIONS
+
+NEXT STEPS:
+===========
+1. Continuous monitoring every 30 minutes
+2. Alert persistence until issues resolved
+3. System audit to identify root causes
+4. Strategy review for profitability
+
+MONITORING OUTPUTS:
+===================
+- Full monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+- This summary: /Users/chetantemkar/.openclaw/workspace/app/trading_summary_2026-03-31_1831.txt
+
+SYSTEM STATUS: 🔴 CRITICAL - TRADING SHOULD BE PAUSED IMMEDIATELY

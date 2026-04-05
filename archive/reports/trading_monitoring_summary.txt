@@ -1,0 +1,59 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=======================================
+Timestamp: 2026-03-18 10:14:00 (Asia/Bangkok)
+
+DASHBOARD STATUS:
+- Dashboard: ACTIVE (Port 59745)
+- Trading Bot: RUNNING (2 processes: 72293, 67305)
+- Gateway: Running on port 5001 (redirecting to 59745)
+
+MARKET DATA:
+- BTC: $74,320.00
+- ETH: $2,331.67
+- SOL: $94.96
+
+TRADING ACTIVITY:
+- Total Trades: 6 (all BUY orders for BTC/USD)
+- Recent Trades (since last check): 2 new trades at 10:14
+- Total Investment: $60.00
+- Total BTC Holdings: 0.00080415 BTC
+- Current Portfolio Value: $59.76
+
+PERFORMANCE:
+- Average Buy Price: $74,612.74
+- Current P&L: -$0.24 (-0.39%)
+- All positions are underwater but within normal range
+- No stop-loss or take-profit orders triggered
+
+CRITICAL ALERTS:
+1. CRITICAL: Trading Script Runtime Error (10:06:00)
+   - Missing functions: update_task_statuses() and cleanup_managed_processes()
+   - Trading automation compromised
+   - URGENCY: HIGH - Requires immediate attention
+
+2. WARNING: Portfolio Performance Alert (09:56:00)
+   - Portfolio underwater: -0.50% loss
+   - Distance to stop-loss: 2.50%
+   - Distance to take-profit: 2.50%
+   - No immediate action required
+
+RISK ASSESSMENT:
+- Maximum Drawdown: 0.39% (within normal range)
+- Distance to typical stop-loss (2-5%): ~0.39% (safe)
+- Distance to typical take-profit (3-10%): ~0.39% (far from target)
+- No critical drawdown detected
+
+SYSTEM ISSUES:
+- API endpoints returning 404 errors
+- Trading script has runtime errors
+- Dashboard accessible but trading functionality may be compromised
+
+RECOMMENDATIONS:
+1. IMMEDIATE: Fix trading script runtime errors
+2. Implement stop-loss orders for risk management
+3. Check API endpoint configuration
+4. Monitor for additional buy signals
+5. Consider averaging down if trend continues
+
+NEXT CHECK: Scheduled for next cron execution
+=======================================

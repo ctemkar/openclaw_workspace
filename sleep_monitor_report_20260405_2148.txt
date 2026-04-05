@@ -1,0 +1,63 @@
+=== SLEEP MONITOR REPORT ===
+Time: 2026-04-05 21:48:27 (Asia/Bangkok)
+Location: Asia/Bangkok (GMT+7)
+
+=== SYSTEM STATUS ===
+• Disk usage: 90% used (182Gi/228Gi) - ⚠️ HIGH USAGE
+• Memory: System appears stable
+• Active trading process: 1 running (real_26_crypto_arbitrage_bot.py)
+
+=== TRADING STATUS ===
+📊 Profit Summary:
+• Current total: $-0.12
+• Total trades: 10
+• Recent trend: Mixed results with small losses
+
+💰 Real Money Trading:
+• Successful trades: 0
+• Errors: 204 (mostly insufficient balance)
+• Recent status: ❌ Cannot trade - insufficient balance ($28.25 USDT available, needs $28.5+)
+• Last attempt: 2026-04-05 21:48:39
+
+🚀 Next Gen Trading System:
+• Status: Error reading results file
+• Issue: JSON file format problem
+
+🔄 Arbitrage Bot Status:
+• Active: Yes (real_26_crypto_arbitrage_bot.py)
+• Last cycle: Found 2 trading opportunities (YFI: -1.54%, DOT: -0.58%)
+• Action: BUY_BINANCE_SELL_GEMINI
+• Next cycle: Every 300 seconds (5 minutes)
+
+=== MARKET CONDITIONS ===
+• BTC/USDT: $66,919.45
+• Market: Active and accessible
+
+=== WATCHDOG STATUS ===
+• Watchdog: Running but encountering script errors
+• Issues: bash associative array syntax errors
+• Bot restart attempts: Multiple failures
+• Status: ⚠️ Needs attention
+
+=== CRITICAL ISSUES ===
+1. ⚠️ HIGH DISK USAGE: 90% - Risk of system slowdown
+2. ❌ INSUFFICIENT BALANCE: $28.25 USDT - Trading halted
+3. ⚠️ WATCHDOG ERRORS: Script syntax issues
+4. ⚠️ NEXT GEN SYSTEM: File format problems
+
+=== RECOMMENDATIONS ===
+1. Free up disk space immediately (target: <80%)
+2. Add more USDT to Binance account for trading
+3. Fix watchdog script syntax errors
+4. Check next_gen_trading_results.json format
+5. Monitor balance closely - trading paused due to low funds
+
+=== OVERALL STATUS ===
+🟡 YELLOW ALERT - SYSTEM NEEDS ATTENTION
+• Trading: PAUSED (insufficient funds)
+• Monitoring: ACTIVE with issues
+• System: STABLE but high disk usage
+• Market: ACCESSIBLE
+
+Next check scheduled in 30 minutes.
+=== END OF REPORT ===

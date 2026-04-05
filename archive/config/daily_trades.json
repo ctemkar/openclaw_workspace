@@ -1,0 +1,70 @@
+{
+  "date": "2026-03-31",
+  "trades": [
+    {
+      "id": "2840140992784793",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "price": 67918.89,
+      "amount": 0.003991,
+      "value": 271.06428999,
+      "fees": 1.35532,
+      "stop_loss": 64522.945499999994,
+      "take_profit": 74710.77900000001,
+      "timestamp": "2026-03-31T09:26:52.210000",
+      "status": "closed",
+      "close_price": 66762.28,
+      "close_timestamp": "2026-03-31T19:36:10.000000",
+      "close_fees": 1.99,
+      "pnl": -5.21,
+      "pnl_percent": -1.92,
+      "source": "GEMINI_API_VERIFIED",
+      "notes": "Bought at $67,918.89, Sold at $66,762.28. Loss: -$5.21 (-1.92%)",
+      "last_updated": "2026-03-31T21:07:00.000000"
+    },
+    {
+      "id": "2840140992790798",
+      "symbol": "BTC/USD",
+      "side": "buy",
+      "price": 67790.48,
+      "amount": 0.00199,
+      "value": 134.9030552,
+      "fees": 0.67451,
+      "stop_loss": 64400.95599999999,
+      "take_profit": 74569.528,
+      "timestamp": "2026-03-31T09:34:15.173000",
+      "status": "closed",
+      "close_price": 66762.28,
+      "close_timestamp": "2026-03-31T19:36:10.000000",
+      "close_fees": 1.99,
+      "pnl": -2.34,
+      "pnl_percent": -1.74,
+      "source": "GEMINI_API_VERIFIED",
+      "notes": "Bought at $67,790.48, Sold at $66,762.28. Loss: -$2.34 (-1.74%)",
+      "last_updated": "2026-03-31T21:07:00.000000"
+    },
+    {
+      "id": "BTC_SALE_20260331_193610",
+      "symbol": "BTC/USD",
+      "side": "sell",
+      "price": 66762.28,
+      "amount": 0.005981,
+      "value": 399.306,
+      "fees": 1.99,
+      "timestamp": "2026-03-31T19:36:10.000000",
+      "status": "filled",
+      "source": "GEMINI_TRADE_HISTORY",
+      "notes": "Sold entire BTC position (0.005981 BTC) at $66,762.28. Combined sale of two buy positions.",
+      "last_updated": "2026-03-31T21:07:00.000000"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2026-03-31T21:07:00.000000",
+    "source": "Gemini Trade History + System Repair",
+    "verified": true,
+    "total_portfolio_value": 531.6466512208059,
+    "btc_holdings": 0.0,
+    "free_usd": 531.6466512208059,
+    "notes": "UPDATED: BTC positions closed at 19:36:10. No BTC holdings remaining. Only Binance short positions active."
+  }
+}

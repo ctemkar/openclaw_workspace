@@ -11,6 +11,7 @@ import ccxt
 import time
 import logging
 import json
+import os
 from datetime import datetime
 
 # Setup logging
@@ -54,12 +55,42 @@ class MakeMoneyBot:
     def load_binance_keys(self):
         """Load Binance keys from secure_keys"""
         try:
-            with open('secure_keys/.binance_key', 'r') as f:
+            # Try multiple possible paths
+            possible_paths = [
+                'secure_keys/.binance_key',           # Current directory
+                '../secure_keys/.binance_key',        # Parent directory (when run from scripts/)
+                os.path.expanduser('~/.openclaw/keys/binance.key'),  # Global keys
+            ]
+            
+            key_path = None
+            secret_path = None
+            
+            # Find key file
+            for path in possible_paths:
+                if os.path.exists(path):
+                    key_path = path
+                    secret_path = path.replace('.key', '.secret')
+                    if os.path.exists(secret_path):
+                        break
+                    else:
+                        secret_path = path.replace('binance.key', 'binance.secret')
+            
+            if not key_path or not os.path.exists(key_path):
+                logger.error("❌ Binance key file not found in any location")
+                return "", ""
+            
+            if not secret_path or not os.path.exists(secret_path):
+                logger.error(f"❌ Binance secret file not found: {secret_path}")
+                return "", ""
+            
+            with open(key_path, 'r') as f:
                 key = f.read().strip()
-            with open('secure_keys/.binance_secret', 'r') as f:
+            with open(secret_path, 'r') as f:
                 secret = f.read().strip()
-            logger.info(f"✅ Loaded Binance key: {key[:10]}...")
+            
+            logger.info(f"✅ Loaded Binance key from {key_path}: {key[:10]}...")
             return key, secret
+            
         except Exception as e:
             logger.error(f"❌ Error loading Binance keys: {e}")
             return "", ""

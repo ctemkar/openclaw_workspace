@@ -1,0 +1,57 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=======================================
+Timestamp: 2026-03-30 22:40 GMT+7
+
+SYSTEM STATUS:
+✅ Trading system is RUNNING
+✅ Last analysis: 2026-03-30 22:01:11
+✅ Analysis scheduled: hourly
+✅ Capital: $100.00
+✅ Port: 5001
+
+RISK PARAMETERS:
+• Stop-loss: 5.0%
+• Take-profit: 10.0%
+• Max trades/day: 2
+• Trading pairs: BTC/USD, ETH/USD
+
+TRADING ACTIVITY:
+• Total recent trades: 10
+• Today's trades executed: 2/2 (limit reached)
+• All trades are BUY orders
+• No SELL orders detected
+• Trade status: All "filled"
+
+MARKET ANALYSIS:
+• BTC/USD: BUY signal (70% confidence)
+  - Price: $67,777.93
+  - Support: $67,051.55
+  - Resistance: $68,136.29
+• ETH/USD: BUY signal (70% confidence)
+  - Price: $2,069.87
+  - Support: $2,039.91
+  - Resistance: $2,082.48
+
+CRITICAL ALERTS:
+⚠️ NO CRITICAL ALERTS DETECTED
+• No stop-loss orders triggered
+• No take-profit orders executed
+• No critical drawdown events
+• System operating within normal parameters
+
+ISSUES TO MONITOR:
+1. P&L shows $0.00 - verify profit/loss tracking
+2. No exit trades (sell orders) in recent data
+3. Daily trade limit reached (2/2)
+
+RECOMMENDATIONS:
+• Monitor for upcoming sell orders
+• Verify that stop-loss and take-profit mechanisms are active
+• Check next hourly analysis for updates
+
+FILES CREATED:
+• trading_monitoring.log - Complete extracted data
+• critical_alerts.log - Alert status and monitoring notes
+• analysis_summary.txt - This summary
+
+NEXT CHECK: Hourly analysis (approx. 23:01)

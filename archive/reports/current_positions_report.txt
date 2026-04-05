@@ -1,0 +1,120 @@
+================================================================================
+📊 CURRENT POSITIONS REPORT - INDIVIDUAL P&L
+================================================================================
+Generated: 2026-03-31 20:36:03
+Total Positions: 7 (2 Gemini, 5 Binance)
+
+🔵 GEMINI POSITIONS (LONG)
+----------------------------------------
+1. BTC/USD
+   Side: BUY
+   Entry: $67918.89
+   Current: $66614.22
+   Quantity: 0.003991
+   Entry Value: $271.06
+   Current Value: $265.86
+   P&L: 🔴 $-5.21 (-1.92%)
+   Days Held: 0.44
+   Trade ID: 2840140992784793
+
+2. BTC/USD
+   Side: BUY
+   Entry: $67790.48
+   Current: $66614.22
+   Quantity: 0.001990
+   Entry Value: $134.90
+   Current Value: $132.56
+   P&L: 🔴 $-2.34 (-1.74%)
+   Days Held: 0.43
+   Trade ID: 2840140992790798
+
+🟡 BINANCE POSITIONS (SHORT with 3x Leverage)
+----------------------------------------
+1. ETH/USDT
+   Side: SELL (SHORT)
+   Entry: $2053.63
+   Current: $2047.70
+   Quantity: 0.014608
+   Position Value: $30.00
+   Capital at Risk: $10.00
+   Leverage: 3x
+   P&L: 🟢 $+0.09 (+0.29%)
+   Days Held: 0.01
+
+2. SOL/USDT
+   Side: SELL (SHORT)
+   Entry: $80.96
+   Current: $80.79
+   Quantity: 0.370553
+   Position Value: $30.00
+   Capital at Risk: $10.00
+   Leverage: 3x
+   P&L: 🟢 $+0.06 (+0.21%)
+   Days Held: 0.01
+
+3. XRP/USDT
+   Side: SELL (SHORT)
+   Entry: $1.32
+   Current: $1.32
+   Quantity: 22.794620
+   Position Value: $30.00
+   Capital at Risk: $10.00
+   Leverage: 3x
+   P&L: 🟢 $+0.01 (+0.02%)
+   Days Held: 0.01
+
+4. ADA/USDT
+   Side: SELL (SHORT)
+   Entry: $0.24
+   Current: $0.24
+   Quantity: 124.533001
+   Position Value: $30.00
+   Capital at Risk: $10.00
+   Leverage: 3x
+   P&L: 🟢 $+0.02 (+0.08%)
+   Days Held: 0.01
+
+5. DOT/USDT
+   Side: SELL (SHORT)
+   Entry: $1.24
+   Current: $1.24
+   Quantity: 24.115756
+   Position Value: $30.00
+   Capital at Risk: $10.00
+   Leverage: 3x
+   P&L: 🟢 $+0.05 (+0.16%)
+   Days Held: 0.01
+
+💰 POSITION SUMMARY
+----------------------------------------
+Gemini Total:
+  • Positions: 2
+  • Total Value: $398.42
+  • Total P&L: $-7.55
+  • Capital at Risk: $0.00
+Binance Total:
+  • Positions: 5
+  • Total Position Value: $150.23
+  • Total P&L: $+0.23
+  • Total Capital at Risk: $50.00
+  • Leverage: 3x
+
+📈 PERFORMANCE ANALYSIS
+----------------------------------------
+Winning Positions: 5
+Losing Positions: 2
+Current Win Rate: 71.4%
+Best Performer: ETH/USDT - $+0.09 (+0.29%)
+Worst Performer: BTC/USD - $-5.21 (-1.92%)
+
+🚨 CAPITAL ALLOCATION ISSUE
+----------------------------------------
+Binance Free Balance: $3.47 (TRADING BLOCKED)
+Binance Total Balance: $76.61
+Capital Tied in Positions: $50.00
+
+To use entire $76:
+1. Close positions → Free up $50.00
+2. Use full $76.61 for new aggressive trading
+
+================================================================================

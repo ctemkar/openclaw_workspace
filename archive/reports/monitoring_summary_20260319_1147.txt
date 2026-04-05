@@ -1,0 +1,77 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Monitoring Time: 2026-03-19 11:47:57 (Asia/Bangkok)
+Cron Job: trading_dashboard_monitor
+
+EXECUTIVE SUMMARY:
+------------------
+🚨 CRITICAL ALERT: Stop-loss conditions triggered for 2 ETH/USD positions
+⚠️ WARNING: BTC/USD positions at critical drawdown levels (4.82-4.85%)
+✅ System Status: Dashboard operational, last analysis at 11:47:10
+
+DETAILED FINDINGS:
+------------------
+1. SYSTEM STATUS:
+   - Dashboard: http://localhost:5001/ (accessible)
+   - Status: running
+   - Capital: $1000.00
+   - Daily trade limit: 2/2 (reached)
+   - Last analysis: 2026-03-19T11:47:10.148754
+
+2. STOP-LOSS TRIGGERS DETECTED:
+   a) ETH/USD Position 1:
+      - Entry: $2331.78 (10:21:22)
+      - Current: ~$2192.39
+      - Drawdown: 5.97% (EXCEEDS 5% STOP-LOSS)
+   
+   b) ETH/USD Position 2:
+      - Entry: $2325.28 (13:39:49)
+      - Current: ~$2192.39
+      - Drawdown: 5.71% (EXCEEDS 5% STOP-LOSS)
+
+3. CRITICAL WARNINGS:
+   - BTC/USD positions with 4.82-4.85% drawdown (approaching 5% stop-loss)
+   - Entry prices: $74335.92, $74308.00, $74308.79, $74332.65, $74319.47
+   - Current BTC price: ~$70726.13
+
+4. MARKET ANALYSIS:
+   - BTC/USD: $70726.13, BUY signal (70% confidence)
+   - ETH/USD: $2192.39, BUY signal (70% confidence)
+   - Both pairs at max daily trades limit
+
+5. FILES UPDATED:
+   ✓ trading_monitoring.log - Complete monitoring data with drawdown calculations
+   ✓ critical_alerts.log - Stop-loss triggers and recommended actions
+   ✓ This summary file
+
+RECOMMENDED ACTIONS:
+--------------------
+IMMEDIATE (High Priority):
+1. Execute stop-loss orders for the 2 ETH/USD positions
+2. Monitor BTC/USD positions closely - prepare for potential stop-loss
+3. Review current market conditions before any new trades
+
+SHORT-TERM:
+1. Consider adjusting stop-loss percentage from 5% based on volatility
+2. Review position sizing strategy
+3. Analyze why multiple positions reached critical drawdown simultaneously
+
+SYSTEM:
+1. Verify automated stop-loss execution is working
+2. Ensure proper logging of all trade executions
+3. Schedule additional analysis before next trading window
+
+NEXT MONITORING:
+----------------
+Scheduled: Next hourly analysis (~12:47:10)
+Manual Check: Recommended within 15 minutes due to critical alerts
+
+ALERT STATUS:
+-------------
+🔴 CRITICAL: Stop-loss triggers require immediate attention
+🟡 WARNING: Multiple positions at critical levels
+🟢 Normal: System operational, logging functioning
+
+---
+Monitoring completed by: OpenClaw Trading Dashboard Monitor
+Timestamp: 2026-03-19 04:47:57 UTC

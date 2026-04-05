@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-04-01T00:02:27.807796",
+  "capital": 1000.0,
+  "trades_executed": 1,
+  "max_trades_per_day": 2,
+  "analysis_results": [
+    {
+      "analysis": {
+        "symbol": "BTCUSD",
+        "price": 64064.09,
+        "support": 64000.0,
+        "resistance": 66000.0,
+        "distance_to_support_pct": 0.1,
+        "distance_to_resistance_pct": 3.02,
+        "trend": "BULLISH",
+        "volume": 3103600.97,
+        "timestamp": "2026-04-01T00:02:27.807748"
+      },
+      "decision": {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "price": 64064.09,
+        "position_size": 0.00780468,
+        "stop_loss": 60860.89,
+        "take_profit": 70470.5,
+        "risk_reward_ratio": 2.0,
+        "reason": "Near support (0.1%), bullish trend detected"
+      }
+    },
+    {
+      "analysis": {
+        "symbol": "ETHUSD",
+        "price": 3488.85,
+        "support": 3400.0,
+        "resistance": 3600.0,
+        "distance_to_support_pct": 2.55,
+        "distance_to_resistance_pct": 3.19,
+        "trend": "NEUTRAL",
+        "volume": 1727096.24,
+        "timestamp": "2026-04-01T00:02:27.807762"
+      },
+      "decision": {
+        "symbol": "ETHUSD",
+        "action": "HOLD",
+        "reason": "Market conditions not favorable. Trend: NEUTRAL, Support distance: 2.55%, Resistance distance: 3.19%"
+      }
+    }
+  ],
+  "risk_parameters": {
+    "stop_loss_pct": 0.05,
+    "take_profit_pct": 0.1
+  }
+}

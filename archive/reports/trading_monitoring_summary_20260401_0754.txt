@@ -1,0 +1,184 @@
+TRADING MONITORING SUMMARY
+============================
+Timestamp: 2026-04-01 07:54:00 (Asia/Bangkok)
+Monitoring Source: Cron job d12f2d3d-5055-4ff2-a4c7-049ab58a43c4
+
+EXECUTIVE SUMMARY
+-----------------
+Status: CRITICAL - Multiple system failures, severe capital crisis
+Overall Health: 1/10 (Extreme risk - immediate intervention required)
+Primary Issues: 43.86% capital drawdown, $3.64 available capital, bots offline/stuck
+Immediate Actions: 7 critical actions required
+
+DASHBOARD STATUS
+----------------
+• Dashboard Port 5001: ❌ NOT RUNNING (Server not responding)
+• Alternative Ports: 5007, 5008, 5009 (all inactive)
+• Last Dashboard Activity: 2026-04-01 02:30:10 (5.4+ hours ago)
+• Impact: No real-time monitoring, manual verification required
+• Action: 🔴 RESTART DASHBOARD SERVICE ON PORT 5009
+
+TRADING BOT STATUS
+------------------
+• Enhanced 26-Crypto Bot: ❌ STOPPED (Last: Cycle 1 at 05:48:54)
+• crypto_trading_llm_live.py: ⚠️ RUNNING BUT INACTIVE (PID: 6080)
+• Updated Bot (bot_common.log): ⚠️ STUCK (last cycle 105 at 03:25:00)
+• Last Bot Activity: 03:25:00 (4.5+ hours inactive)
+• Bot Issues: Low capital, Binance API errors, appears stuck
+• Action: 🔴 KILL STUCK PROCESSES AND RESTART BOTS
+
+CAPITAL & P&L STATUS
+--------------------
+• Initial Capital: $946.97
+• Current Capital: $531.65
+• Cumulative P&L: -$415.32 (-43.86%) 🔴 CRITICAL
+• Available Capital: $3.64 🔴 CRITICAL
+• Total Capital: $685.67
+• Deployed Capital: $265.82 (5 SOL positions)
+• Cash Reserve: $419.85
+• Recovery Needed: +78.1% to break even
+
+REAL-TIME MARKET DATA
+---------------------
+• SOL/USD (CoinGecko): $83.09 (as of 07:54 AM)
+• Last Known SOL Price (Gemini): $83.107 (06:53 log)
+• Price Change: -$0.017 (-0.02%) from last known
+• Market Status: Stable, minor decline
+
+OPEN POSITIONS (5 TOTAL)
+------------------------
+• Asset: SOL/USD (Gemini)
+• Average Entry Price: ~$82.36
+• Total Position Value: $265.82
+• Current SOL Price: $83.09 (real-time)
+• Price vs Entry: +$0.73 (+0.89%)
+• Unrealized P&L: ~+$2.37 (+0.89%)
+• Position Status: PROFITABLE (below take-profit)
+
+STOP-LOSS/TAKE-PROFIT ANALYSIS
+------------------------------
+• Stop-Loss Trigger: < $79.89 (3% from entry $82.36)
+• Take-Profit Trigger: > $86.48 (5% from entry $82.36)
+• Current Price: $83.09
+• Distance to Stop-Loss: +$3.20 (+4.01%)
+• Distance to Take-Profit: -$3.39 (-4.08%)
+• Stop-Loss Status: ❌ NOT TRIGGERED ($83.09 > $79.89)
+• Take-Profit Status: ❌ NOT TRIGGERED ($83.09 < $86.48)
+
+BOT FAILURE DETAILS
+-------------------
+1. ENHANCED 26-CRYPTO BOT STOPPED (05:48:54):
+   • Last Cycle: Cycle 1 (attempted to short MKR/USDT)
+   • Binance API Error: "Invalid symbol status for opening position" (MKR/USDT)
+   • Binance API Error: "Margin is insufficient" (ENJ/USDT)
+   • Status: Bot stopped due to API errors
+
+2. UPDATED BOT (bot_common.log) STUCK:
+   • Last Cycle: Cycle 105 at 03:25:00
+   • No trading activity since 01:25:40
+   • Status: Appears stuck in loop or inactive
+   • Issue: Low available capital ($3.64)
+
+3. crypto_trading_llm_live.py:
+   • Status: Process running (PID: 6080)
+   • Activity: Unknown (no recent logs)
+   • Likely stuck or inactive
+
+EXCHANGE CONNECTIVITY
+---------------------
+• Gemini: ⚠️ PARTIAL (positions open, API timeout on current fetch)
+• Binance: ⚠️ ISSUES (API errors, symbol status problems)
+• API Status: DOWN (progress_monitor.log shows "API is DOWN")
+• Last Binance Error: "Invalid symbol status for opening position"
+• Market Data Issue: MATIC/USDT not available on Binance
+
+CRON JOB CRISIS
+---------------
+⚠️ DUPLICATE CRON JOB ISSUE:
+• Over 50+ duplicate trading_dashboard_monitor jobs
+• Monitoring non-existent port 5001
+• Using OpenRouter (billing errors detected)
+• 9+ cleanup processes active since 05:58 AM
+• Potential financial impact: OpenRouter billing charges
+• Status: Cleanup in progress
+
+CRITICAL RISKS (7 TOTAL)
+------------------------
+1. 🔴 43.86% capital drawdown (exceeds 20% threshold)
+2. 🔴 $3.64 available capital (critically low, cannot trade)
+3. 🔴 Enhanced trading bot offline (stopped at 05:48:54)
+4. 🔴 Trading bot stuck/inactive (4.5+ hours)
+5. 🔴 Dashboard monitoring completely offline
+6. 🔴 Exchange API connectivity issues (API is DOWN)
+7. 🔴 Duplicate cron jobs causing billing errors
+
+DRAWDOWN ANALYSIS
+-----------------
+• Current Drawdown: 43.86% (-$415.32)
+• Drawdown Threshold: 20%
+• Exceedance: 23.86% above threshold
+• Recovery Needed: +78.1% to break even
+• Status: 🔴 CRITICAL - Exceeds risk limits
+
+AVAILABLE CAPITAL CRISIS
+------------------------
+• Available Capital: $3.64
+• Minimum Required: $13.43 (for 10% position size)
+• Shortfall: $9.79 (72.9% short)
+• Impact: Cannot execute new trades
+• Status: 🔴 CRITICAL - Trading halted
+
+IMMEDIATE ACTIONS REQUIRED
+--------------------------
+1. 🔴 DEPOSIT ADDITIONAL CAPITAL - Minimum $100 needed for trading
+2. 🔴 KILL STUCK BOT PROCESSES - Restart all trading bots fresh
+3. 🔴 RESTART ENHANCED 26-CRYPTO TRADING BOT
+4. 🔴 RESTART DASHBOARD SERVICE on port 5009
+5. 🔴 CHECK OPENROUTER BILLING for duplicate cron job charges
+6. 🔴 INVESTIGATE BINANCE API CONNECTIVITY issues
+7. 🔴 REVIEW TRADING STRATEGY given 43.86% drawdown
+
+POSITION MANAGEMENT
+-------------------
+• Current Positions: 5 SOL positions (profitable +0.89%)
+• Stop-Loss: NOT TRIGGERED (safe margin: +4.01%)
+• Take-Profit: NOT TRIGGERED (needs +4.08% move)
+• Recommendation: Hold positions, monitor for TP/SL triggers
+• Risk: Positions not actively managed due to bot failures
+
+SYSTEM CLEANUP STATUS
+---------------------
+• Cleanup Processes: 9+ Python processes active
+• Purpose: Disabling duplicate cron jobs
+• Issue: OpenRouter billing errors, monitoring non-existent port
+• Status: ACTIVE (since 05:58 AM)
+• Progress: Unknown (need to check completion)
+
+MONITORING RESULTS
+------------------
+• Log File Updated: trading_monitoring.log (07:51)
+• Critical Alerts Updated: critical_alerts.log (07:52)
+• Data Sources: Multiple trading logs, bot status, real-time APIs
+• Alert Conditions Met: Drawdown >20%, available capital <$10, bots offline
+• Next Check: IMMEDIATE MANUAL INTERVENTION REQUIRED
+
+OVERALL ASSESSMENT
+------------------
+The trading system is in CRITICAL condition with multiple simultaneous failures:
+
+1. CAPITAL CRISIS: 43.86% drawdown exceeds risk limits, $3.64 available capital
+2. SYSTEM FAILURES: Multiple trading bots offline/stuck
+3. MONITORING GAP: Dashboard completely offline, no real-time visibility
+4. CONNECTIVITY ISSUES: Exchange API connectivity down
+5. BILLING RISK: Duplicate cron jobs causing OpenRouter charges
+
+Despite these critical issues:
+• Current SOL positions are profitable (+0.89%)
+• No stop-loss/take-profit triggers have been hit
+• Cash reserve available ($419.85)
+• Real-time price data accessible via CoinGecko
+
+IMMEDIATE PRIORITY: Restore trading capability by adding capital and restarting bots. The system cannot self-recover from this state.
+
+END OF MONITORING SUMMARY
+=========================

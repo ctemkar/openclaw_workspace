@@ -1,0 +1,73 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Time: 2026-03-31 13:12:49 (Asia/Bangkok)
+Dashboard: http://localhost:5001/
+
+SYSTEM STATUS:
+✅ Dashboard: Running
+📊 Last Analysis: 2026-03-31T13:04:54.962105 (8 minutes ago)
+💰 Capital: $175.53 (DECREASED 29.79% from $250.00)
+🎯 Risk Parameters: 5% Stop-loss, 10% Take-profit, 2 trades/day max
+
+MARKET DATA:
+• BTC/USD: $67,453.00 (-0.36% from last check)
+• ETH/USD: $2,057.76 (-0.39% from last check)
+• Market Sentiment: Neutral to Bearish for ETH
+
+PORTFOLIO ANALYSIS:
+• Total Trades: 5 (exceeds 2/day limit - VIOLATION)
+• Active Trades: 3
+• Stopped Trades: 2 (both ETH positions)
+• Total Investment: $1,300.05 (740.67% of capital - CRITICAL)
+• Total P&L: -$25.29 (-1.95%)
+• Portfolio Value: $1,274.76
+• Drawdown: -1.95%
+
+CRITICAL ALERTS (9):
+1. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,325.28 (-11.51% loss)
+2. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -11.51% (beyond 5% stop-loss)
+3. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,193.60 (-6.19% loss)
+4. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -6.19% (beyond 5% stop-loss)
+5. ⚠️ EXTREME CAPITAL UTILIZATION: 740.67% of allocated capital - CRITICAL
+6. ⚠️ DAILY TRADE LIMIT VIOLATION: 5 trades vs 2 allowed
+7. 🚨 CAPITAL REDUCTION ALERT: -29.79% from $250.00 to $175.53
+8. ⚠️ EXTREME LEVERAGE RISK: 740.67% capital utilization
+9. ⚠️ POSITION CONCENTRATION: 80% ETH exposure
+
+POSITION DETAILS:
+1. ETH/USD BUY @ $2,325.28: -11.51% (STOP-LOSS TRIGGERED) - LOSS: $-23.00
+2. ETH/USD BUY @ $2,193.60: -6.19% (STOP-LOSS TRIGGERED) - LOSS: $-12.39
+3. BTC/USD BUY @ $67,247.51: +0.31% (ACTIVE) - GAIN: $+0.61
+4. ETH/USD BUY @ $2,052.38: +0.26% (ACTIVE) - GAIN: $+0.52
+5. ETH/USD BUY @ $2,021.51: +1.79% (ACTIVE) - GAIN: $+8.97
+
+RISK ASSESSMENT:
+• Risk Level: CRITICAL - Multiple severe violations detected
+• Capital Overutilization: EXTREME (740.67% - CRITICAL)
+• Position Concentration: 80% ETH, 20% BTC (HIGH RISK)
+• Stop-loss Effectiveness: 40% (2/5 trades triggered)
+• Daily Limit Compliance: FAILED (5 trades vs 2 allowed)
+• Capital Health: POOR (-29.79% reduction)
+
+IMMEDIATE ACTIONS REQUIRED:
+1. CLOSE losing ETH positions ($2,325.28 and $2,193.60) to realize $-35.39 loss
+2. REDUCE position sizes to maximum 20% of capital ($35.11 per trade)
+3. PAUSE all new trading until capital utilization < 100%
+4. REBALANCE portfolio to maximum 50% ETH exposure
+5. REVIEW and ADJUST ETH trading strategy
+6. IMPLEMENT stricter position sizing (max 10% per trade)
+
+NEXT STEPS:
+• Next scheduled analysis: ~22 minutes from now
+• Monitor BTC position for take-profit target ($73,972.26)
+• Review ETH positions for potential recovery or exit
+• Adjust risk parameters based on current market conditions
+• Consider implementing circuit breaker for extreme capital utilization
+
+LOGS UPDATED:
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+=====================================
+Monitoring complete. SYSTEM REQUIRES IMMEDIATE INTERVENTION.
+CRITICAL RISK LEVEL: EXTREME LEVERAGE AND CAPITAL UTILIZATION DETECTED.

@@ -1,0 +1,40 @@
+
+TRADING SYSTEM DATA REPORT
+==========================
+Generated: 2026-03-31 05:25:06 
+
+SYSTEM STATUS
+-------------
+Status: running
+Capital: $250.00
+Last Analysis: 2026-03-31T04:43:09.187157
+Analysis Schedule: hourly
+Trading Pairs: BTC/USD, ETH/USD
+Risk Parameters:
+  • Stop-loss: 5.0%
+  • Take-profit: 10.0%
+  • Max trades/day: 2
+
+TRADING ACTIVITY
+----------------
+Total Trades: 4
+Buy Trades: 4 (100.0%)
+Sell Trades: 0 (0.0%)
+Filled Trades: 0 (0.0%)
+Pending Trades: 4
+
+MODEL/STRATEGY BREAKDOWN
+-----------------------
+unknown:
+  • Total: 4
+  • Buys: 4
+  • Sells: 0
+
+HEALTH ASSESSMENT
+-----------------
+ISSUES DETECTED:
+  1. Heavy buy bias (100.0%)
+
+RECOMMENDATIONS
+---------------
+1. Address the issues listed above

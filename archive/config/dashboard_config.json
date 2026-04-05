@@ -1,0 +1,28 @@
+{
+  "dashboard": {
+    "port": 5080,
+    "refresh_seconds": 30,
+    "sections": [
+      "wallet_balance",
+      "open_positions",
+      "recent_trades",
+      "performance_metrics",
+      "market_analysis",
+      "risk_exposure"
+    ]
+  },
+  "metrics": {
+    "track_pnl": true,
+    "track_win_rate": true,
+    "track_sharpe_ratio": true,
+    "track_max_drawdown": true,
+    "track_daily_returns": true
+  },
+  "alerts": {
+    "funds_received": true,
+    "trade_executed": true,
+    "stop_loss_hit": true,
+    "take_profit_hit": true,
+    "daily_limit_reached": true
+  }
+}

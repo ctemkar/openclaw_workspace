@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-04-01T03:45:55.635399",
+  "paper_balance": 25000.0,
+  "trades_executed": [
+    {
+      "id": "PAPER_1774989955_7952",
+      "symbol": "BTCUSD",
+      "action": "BUY",
+      "entry_price": 67975.67,
+      "position_size": 0.220667,
+      "position_value": 30000.0,
+      "stop_loss": 62537.62,
+      "take_profit": 78172.02,
+      "risk": 1200.0,
+      "potential_reward": 2250.0,
+      "risk_reward_ratio": 1.9,
+      "leverage": 2.0,
+      "timestamp": "2026-04-01T03:45:55.635077",
+      "status": "OPEN",
+      "conditions": "RSI OK (51.9), Uptrend (56%)",
+      "metrics": {
+        "momentum": 0.07,
+        "volume_ratio": 1.04,
+        "volatility": 0.41,
+        "rsi": 51.9
+      }
+    },
+    {
+      "id": "PAPER_1774989955_7688",
+      "symbol": "ETHUSD",
+      "action": "BUY",
+      "entry_price": 2074.92,
+      "position_size": 7.229188,
+      "position_value": 30000.0,
+      "stop_loss": 1908.93,
+      "take_profit": 2386.16,
+      "risk": 1200.0,
+      "potential_reward": 2250.0,
+      "risk_reward_ratio": 1.9,
+      "leverage": 2.0,
+      "timestamp": "2026-04-01T03:45:55.635086",
+      "status": "OPEN",
+      "conditions": "RSI OK (50.7), Uptrend (56%)",
+      "metrics": {
+        "momentum": 0.1,
+        "volume_ratio": 0.99,
+        "volatility": 0.55,
+        "rsi": 50.7
+      }
+    },
+    {
+      "id": "PAPER_1774989955_4839",
+      "symbol": "SOLUSD",
+      "action": "BUY",
+      "entry_price": 83.85,
+      "position_size": 178.884658,
+      "position_value": 30000.0,
+      "stop_loss": 77.14,
+      "take_profit": 96.43,
+      "risk": 1200.0,
+      "potential_reward": 2250.0,
+      "risk_reward_ratio": 1.9,
+      "leverage": 2.0,
+      "timestamp": "2026-04-01T03:45:55.635093",
+      "status": "OPEN",
+      "conditions": "RSI OK (45.4), Uptrend (56%)",
+      "metrics": {
+        "momentum": 0.07,
+        "volume_ratio": 0.95,
+        "volatility": 0.59,
+        "rsi": 45.4
+      }
+    }
+  ],
+  "summary": {
+    "total_trades": 3,
+    "total_position_value": 90000.0,
+    "total_risk": 3600.0,
+    "total_potential_reward": 6750.0
+  }
+}

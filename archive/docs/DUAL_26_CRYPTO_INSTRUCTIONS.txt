@@ -1,0 +1,60 @@
+
+    DUAL EXCHANGE 26-CRYPTO TRADING SYSTEM
+    ======================================
+    
+    STRATEGY:
+    • LONG positions on Gemini (16 available cryptos)
+    • SHORT positions on Binance (all 26 cryptos)
+    • Total coverage: 26 cryptocurrencies
+    
+    CAPITAL ALLOCATION:
+    • Total: $250.00
+    • Gemini (LONG): $200.00
+    • Binance (SHORT): $50.00
+    
+    CRYPTOCURRENCIES (26 total):
+    BTC, ETH, SOL, ADA, XRP, DOT, DOGE, AVAX, MATIC, LINK, UNI, LTC, ATOM, ETC, XLM, ALGO, VET, FIL, ICP, XTZ, EOS, AAVE, MKR, COMP, SNX, YFI
+    
+    GEMINI LONG PAIRS (16 available):
+    BTC/USD, ETH/USD, SOL/USD, XRP/USD, DOT/USD, DOGE/USD, AVAX/USD, LINK/USD, UNI/USD, LTC/USD, ATOM/USD, FIL/USD, XTZ/USD, AAVE/USD, COMP/USD, YFI/USD
+    
+    BINANCE SHORT PAIRS (26 available):
+    All 26 cryptocurrencies with USDT pairs
+    
+    TRADING PARAMETERS:
+    Gemini (LONG):
+    • Stop-loss: 5%
+    • Take-profit: 10%
+    • Max daily trades: 3
+    • Min signal strength: 0.3%
+    
+    Binance (SHORT):
+    • Stop-loss: 7%
+    • Take-profit: 8%
+    • Max daily trades: 2
+    • Min signal strength: 0.4%
+    
+    MONITORING:
+    • Scan interval: Every 2 minutes
+    • Dashboard: http://127.0.0.1:5080
+    • API Status: http://127.0.0.1:5001/status
+    • Analysis logs: 26_crypto_analysis.log
+    • Trade logs: 26_crypto_trades.json
+    
+    SETUP STATUS:
+    • Gemini: ✅ Connected (Balance: $542.27)
+    • Binance: ⚠️ Needs API secret key configuration
+    • Trading Server: ✅ Running on port 5001
+    
+    IMMEDIATE ACTIONS:
+    1. Add Binance API secret to secure_keys/.binance_secret
+    2. Start trading: python3 simple_26_crypto_bot.py
+    3. Monitor: tail -f 26_crypto_analysis.log
+    
+    FILES CREATED:
+    1. dual_26_crypto_config.json - Main configuration
+    2. Updated simple_26_crypto_bot.py
+    3. gemini_available_pairs.json - Gemini supported pairs
+    
+    ACTIVATED: 2026-03-31 00:04:21
+    

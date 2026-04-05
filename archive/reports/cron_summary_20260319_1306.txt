@@ -1,0 +1,48 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Timestamp: 2026-03-19 13:06:00 (Asia/Bangkok)
+
+SYSTEM STATUS:
+✅ Dashboard accessible at http://localhost:5001/
+✅ Trading system: running
+✅ Capital: $1000.00 (100% intact)
+✅ Last analysis: 2026-03-19T13:04:39.808782
+✅ Risk parameters: Stop-loss 5%, Take-profit 10%
+✅ Daily trade limit: 2/2 trades used
+
+TRADING ACTIVITY:
+📊 Total trades: 10
+🟢 Buy trades: 10 (100%)
+🔴 Sell trades: 0 (0%)
+📈 Latest trade: ETH/USD BUY @ $2331.78 (10:21:22)
+
+CRITICAL FINDINGS:
+⚠️ WARNING: Heavy buy bias detected
+- All 10 recent trades are BUY orders
+- No SELL trades in recent history
+- Trading appears to be accumulation-only strategy
+- Potential overexposure risk if market turns
+
+RISK ASSESSMENT:
+✅ No stop-loss orders triggered
+✅ No take-profit orders triggered
+✅ No critical drawdown detected
+⚠️ Position concentration risk: HIGH (all buys, no sells)
+⚠️ Strategy imbalance: HIGH (missing profit-taking)
+
+ALERT STATUS:
+🔸 WARNING: Heavy buy bias (10 buys, 0 sells)
+🔸 WARNING: No sell trades detected
+🔸 INFO: Daily trade limit reached (2/2)
+
+RECOMMENDATIONS:
+1. Review trading algorithm for lack of sell-side logic
+2. Implement profit-taking mechanisms
+3. Monitor position concentration risk
+4. Verify stop-loss orders are active
+5. Consider adding position size limits
+
+NEXT MONITORING: Scheduled for next cron execution
+LOG FILES UPDATED:
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log

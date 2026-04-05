@@ -1,0 +1,64 @@
+=== TRADING DASHBOARD MONITORING SUMMARY ===
+Timestamp: 2026-03-31 19:12:30 (Asia/Bangkok)
+
+🚨 CRITICAL ALERT: CAPITAL BELOW $200 PRESERVATION THRESHOLD 🚨
+
+SYSTEM STATUS:
+- Dashboard: ✅ Running at http://localhost:5001/
+- Execution Mode: ✅ REAL TRADING - LIVE
+- Last Analysis: 2026-03-31T19:01:29.808018
+- Next Analysis: ~20:01 (48 minutes)
+
+CAPITAL STATUS:
+- Initial Capital: $250.00
+- Current Capital: $199.08
+- Drawdown: -20.4% ($50.92 loss) 🚨 CRITICAL
+- Status: 🚨 BELOW $200 CRITICAL THRESHOLD
+
+PORTFOLIO SUMMARY:
+- Open Positions: 6 (Binance: 6, Gemini: 0)
+- Total Trades: 6 executed
+- Realized P&L: $0.00
+- Unrealized P&L: +$0.3534
+- Portfolio Composition: 80% ETH, 20% BTC 🚨 HIGH CONCENTRATION
+
+TRADE ANALYSIS (5 positions tracked):
+- Profitable: 1 position (+1.0%)
+- Losing: 2 positions (-0.5% to -0.9%)
+- Stop-loss Triggered: 2 positions (-6.9% to -12.2%) 🚨 NOT CLOSED
+- Success Rate: 20% (1/5)
+
+CRITICAL ISSUES DETECTED:
+1. 🚨 Capital below $200 preservation threshold ($199.08)
+2. 🚨 20.4% drawdown from initial capital
+3. 🚨 2 stop-loss triggered positions still open
+4. 🚨 80% portfolio concentration in ETH
+5. 🚨 Unlimited daily trades (999) - overtrading risk
+6. 🚨 No realized profits despite 6 trades
+
+RISK PARAMETERS:
+- Stop-loss: 5.0% (appears too tight for crypto volatility)
+- Take-profit: 10.0%
+- Max daily trades: 999 (UNLIMITED - 🚨 RISKY)
+- Position size: ~$200 per trade
+
+MARKET CONDITIONS:
+- BTC: $66,628.00
+- ETH: $2,041.50
+- Market Sentiment: NEUTRAL
+- Trading Signal: BUY (recommends BTC/USD entry)
+
+EMERGENCY RECOMMENDATIONS:
+1. 🔴 PAUSE ALL NEW TRADES immediately
+2. 🔴 CLOSE stop-loss triggered positions (#1 and #2)
+3. 🔴 REDUCE max daily trades from 999 to 3
+4. 🔴 CONSIDER switching to paper trading mode
+5. 🟡 REVIEW and widen stop-loss to 8-10%
+6. 🟡 DIVERSIFY portfolio (reduce ETH to <40%)
+
+NEXT MONITORING: Hourly (next at ~20:01)
+
+=== END OF SUMMARY ===
+Monitoring logs updated:
+- /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+- /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log

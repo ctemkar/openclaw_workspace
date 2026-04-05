@@ -1,0 +1,47 @@
+=== SLEEP MONITOR REPORT ===
+Time: 2026-04-02 12:18:18 +07
+User: Chetu (Sleeping)
+
+=== CRITICAL SYSTEMS STATUS ===
+
+1. TRADING BOT: ✅ RUNNING (real_26_crypto_trader.py)
+   - Process ID: 59319
+   - Last activity: Checking logs shows continuous 5-minute cycles
+   - Status: Monitoring 16 Gemini cryptos (LONG) and 23 Binance cryptos (SHORT)
+
+2. MAIN DASHBOARD: ✅ RUNNING (port 5007)
+   - Process: original_dashboard_fixed.py
+   - Status: Responding correctly
+
+3. OTHER DASHBOARDS: ❌ NOT RUNNING
+   - Port 5008: trades_dashboard_fixed.py - NOT RUNNING
+   - Port 5009: simple_pnl_fixed.py - NOT RUNNING
+   - Port 5011: simple_fixed_dashboard.py - NOT RUNNING
+
+4. LLM CONSENSUS BOT: ❌ NOT RUNNING
+   - Process: llm_consensus_bot.py - NOT FOUND
+
+=== SYSTEM HEALTH ===
+
+CPU Usage: ~14% (normal)
+Memory: Adequate free pages
+Disk: 23% used (healthy)
+
+=== TRADING ACTIVITY ===
+
+LLM Predictions: 274 recorded in history
+Recent cycles: No trading opportunities found (market quiet)
+Last error: Binance order notional too small (non-critical)
+
+=== RECOMMENDATIONS ===
+
+1. Main trading system is operational ✅
+2. Primary dashboard is working ✅
+3. Consider restarting LLM consensus bot if needed
+4. Secondary dashboards can be started if required
+
+=== OVERALL STATUS: STABLE (with minor issues) ===
+The core trading system is running normally. Chetu can sleep peacefully.
+
+=== NEXT CHECK ===
+Scheduled in 30 minutes (approx 12:48 PM)

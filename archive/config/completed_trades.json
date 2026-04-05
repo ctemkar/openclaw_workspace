@@ -1,0 +1,42 @@
+[
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2325.28,
+    "quantity": 0.086,
+    "time": "13:39:49",
+    "reason": "Near support level: $2308.08 (current: $2325.28)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2193.6,
+    "quantity": 0.0912,
+    "time": "00:33:02",
+    "reason": "Near support level: $2167.99 (current: $2193.60)"
+  },
+  {
+    "symbol": "BTC/USD",
+    "side": "BUY",
+    "price": 67247.51,
+    "quantity": 0.002974,
+    "time": "21:29:41",
+    "reason": "Near support level: $67110.20 (current: $67247.51)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2052.38,
+    "quantity": 0.0974,
+    "time": "21:29:42",
+    "reason": "Near support level: $2033.94 (current: $2052.38)"
+  },
+  {
+    "symbol": "ETH/USD",
+    "side": "BUY",
+    "price": 2021.51,
+    "quantity": 0.2474,
+    "time": "07:24:00",
+    "reason": "Conservative entry: ETH showing +0.68% 24h momentum. Risk/Reward 1:2 with 5% stop-loss ($1,920.43) and 10% take-profit ($2,223.66)"
+  }
+]

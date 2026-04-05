@@ -1,0 +1,66 @@
+TRADING DASHBOARD MONITORING SUMMARY
+=====================================
+Time: 2026-03-31 12:31:45 (Asia/Bangkok)
+Dashboard: http://localhost:5001/
+
+SYSTEM STATUS:
+✅ Dashboard: Running
+📊 Last Analysis: 2026-03-31T11:34:18.045835 (1 hour ago)
+💰 Capital: $250.00
+🎯 Risk Parameters: 5% Stop-loss, 10% Take-profit, 2 trades/day max
+
+MARKET DATA:
+• BTC/USD: $67,568.00
+• ETH/USD: $2,062.86
+• Market Sentiment: Bullish
+
+PORTFOLIO ANALYSIS:
+• Total Trades: 5 (exceeds 2/day limit)
+• Active Trades: 3
+• Stopped Trades: 2 (both ETH positions)
+• Total Investment: $1,300.05 (520% of capital - CRITICAL)
+• Total P&L: -$23.27 (-1.79%)
+• Portfolio Value: $1,276.78
+• Drawdown: -1.79%
+
+CRITICAL ALERTS (6):
+1. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,325.28 (-11.29% loss)
+2. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -11.29% (beyond 5% stop-loss)
+3. 🚨 STOP-LOSS TRIGGERED: ETH/USD @ $2,193.60 (-5.95% loss)
+4. ⚠️ CRITICAL DRAWDOWN: ETH/USD at -5.95% (beyond 5% stop-loss)
+5. ⚠️ HIGH CAPITAL UTILIZATION: 520% of allocated capital
+6. ⚠️ DAILY TRADE LIMIT VIOLATION: 5 trades vs 2 allowed
+
+POSITION DETAILS:
+1. ETH/USD BUY @ $2,325.28: -11.29% (STOP-LOSS TRIGGERED)
+2. ETH/USD BUY @ $2,193.60: -5.95% (STOP-LOSS TRIGGERED)
+3. BTC/USD BUY @ $67,247.51: +0.48% (ACTIVE)
+4. ETH/USD BUY @ $2,052.38: +0.51% (ACTIVE)
+5. ETH/USD BUY @ $2,021.51: +2.05% (ACTIVE)
+
+RISK ASSESSMENT:
+• Risk Level: HIGH - Multiple violations detected
+• Capital Overutilization: EXTREME (520%)
+• Position Concentration: 80% ETH, 20% BTC
+• Stop-loss Effectiveness: 40% (2/5 trades triggered)
+• Daily Limit Compliance: FAILED (5 trades vs 2 allowed)
+
+IMMEDIATE ACTIONS REQUIRED:
+1. Close losing ETH positions to realize losses and free capital
+2. Reduce position sizes to align with $250 capital
+3. Pause all new trading until capital utilization < 100%
+4. Review and adjust ETH trading strategy
+5. Implement stricter position sizing (max 20% per trade)
+
+NEXT STEPS:
+• Next scheduled analysis: ~30 minutes from now
+• Monitor BTC position for take-profit target ($73,972.26)
+• Review ETH positions for potential recovery or exit
+• Adjust risk parameters based on current market conditions
+
+LOGS UPDATED:
+• Monitoring log: /Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log
+• Critical alerts: /Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log
+
+=====================================
+Monitoring complete. System requires immediate attention.

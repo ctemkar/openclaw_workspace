@@ -1,0 +1,59 @@
+
+    26-CRYPTOCURRENCY TRADING SYSTEM
+    =================================
+    
+    CONFIGURATION:
+    • Total Capital: $250
+      - Gemini (LONG): $200
+      - Binance (SHORT): $50
+    • Cryptocurrencies: 26 total
+    • Trading Pairs: 33 total (7 Gemini + 26 Binance)
+    • Risk Management:
+      - Gemini Stop Loss: 5%
+      - Gemini Take Profit: 10%
+      - Binance Stop Loss: 7%
+      - Binance Take Profit: 8%
+    • Max Daily Trades: 5 (3 Gemini + 2 Binance)
+    
+    CRYPTOCURRENCIES MONITORED:
+    BTC, ETH, SOL, ADA, XRP, DOT, DOGE, AVAX, MATIC, LINK, UNI, LTC, ATOM, ETC, XLM, ALGO, VET, FIL, ICP, XTZ, EOS, AAVE, MKR, COMP, SNX, YFI
+    
+    GEMINI PAIRS (LONG):
+    • BTC/USD, ETH/USD, SOL/USD, ADA/USD
+    • LINK/USD, UNI/USD, MATIC/USD
+    
+    BINANCE PAIRS (SHORT):
+    • All 26 cryptocurrencies with USDT pairs
+    
+    TRADING STRATEGY:
+    1. Conservative momentum analysis
+    2. 5-minute scanning intervals
+    3. Volume and volatility filters
+    4. AI-powered signal generation
+    5. Risk-adjusted position sizing
+    
+    MONITORING:
+    • Dashboard: http://127.0.0.1:5080
+    • API Status: http://127.0.0.1:5001/status
+    • Logs: tail -f 26_crypto_trading.log
+    
+    SETUP STEPS:
+    1. Configure API keys (Binance & Gemini)
+    2. Start trading server: python3 trading_server.py
+    3. Start trading bot: python3 conservative_crypto_trading.py
+    4. Monitor dashboard for signals
+    
+    SECURITY:
+    • API keys stored in secure_keys/ directory
+    • IP whitelisting recommended
+    • Regular balance checks
+    • Trade confirmation alerts
+    
+    FILES CREATED:
+    1. 26_crypto_config.json - Main configuration
+    2. Updated conservative_crypto_trading.py
+    3. Updated trading_server.py
+    4. monitor_26_cryptos.py - Monitoring script
+    
+    ACTIVATED: 2026-03-30 23:39:37
+    

@@ -1,0 +1,20 @@
+{
+  "conservative": {
+    "views_per_video": 10000,
+    "videos_per_month": 30,
+    "rpm": "$8",
+    "monthly_earnings": "$2,400"
+  },
+  "realistic": {
+    "views_per_video": 50000,
+    "videos_per_month": 30,
+    "rpm": "$10",
+    "monthly_earnings": "$15,000"
+  },
+  "optimistic": {
+    "views_per_video": 200000,
+    "videos_per_month": 30,
+    "rpm": "$12",
+    "monthly_earnings": "$72,000"
+  }
+}
