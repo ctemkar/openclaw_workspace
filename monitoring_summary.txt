@@ -1,4 +1,0 @@
-Trading Dashboard Monitoring - 2026-04-01 09:36:47
-Data extracted from 5 endpoints and logged to trading_monitoring.log
-
-No critical alerts detected. System operating normally.

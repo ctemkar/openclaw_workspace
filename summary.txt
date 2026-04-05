@@ -1,7 +1,0 @@
-Trading monitoring summary:
-Trading logs, status updates, and risk parameters have been monitored and logged.
-
-Critical Alerts Found:
-Simulated Critical Alerts:
-- 2026-03-20 19:30:00 UTC: Stop-loss triggered on trade #12345 (AAPL). Loss: 8%.
-- 2026-03-20 19:31:00 UTC: Critical drawdown detected. Current: 9.5%.

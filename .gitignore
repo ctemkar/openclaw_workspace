@@ -24,3 +24,11 @@ secure_keys/
 secrets/
 *.key
 *.secret
+
+# Archive folder - contains old/unused files
+archive/
+
+# Old logs and backups
+*.backup
+*.backup*
+backup_*
