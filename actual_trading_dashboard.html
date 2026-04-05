@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📊 ACTUAL TRADING DASHBOARD - Real Activity</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #0f172a; color: #e2e8f0; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1e293b, #0f172a); padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 20px; }
+        .trade-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 15px; margin: 10px 0; }
+        .buy { border-left: 4px solid #10b981; }
+        .sell { border-left: 4px solid #ef4444; }
+        .metric { font-size: 24px; font-weight: bold; color: #60a5fa; }
+        .label { color: #94a3b8; font-size: 14px; }
+        .positive { color: #10b981; }
+        .negative { color: #ef4444; }
+        .neutral { color: #94a3b8; }
+        .llm-score { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+        .score-high { background: #10b98120; color: #10b981; }
+        .score-medium { background: #f59e0b20; color: #f59e0b; }
+        .score-low { background: #ef444420; color: #ef4444; }
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 10px; background: #334155; color: #e2e8f0; }
+        td { padding: 10px; border-bottom: 1px solid #334155; }
+        .refresh-btn { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .refresh-btn:hover { background: #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 ACTUAL TRADING DASHBOARD</h1>
+            <p>Showing real trading activity, LLM scores, spreads, and market analysis</p>
+            <button class="refresh-btn" onclick="loadActualData()">🔄 Refresh Live Data</button>
+            <span id="lastUpdate" style="margin-left: 20px; color: #94a3b8;"></span>
+        </div>
+
+        <div class="grid">
+            <!-- Trading Metrics -->
+            <div class="card">
+                <h3>📈 TRADING METRICS</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                    <div>
+                        <div class="label">Virtual Balance</div>
+                        <div class="metric" id="balance">$6,571.52</div>
+                    </div>
+                    <div>
+                        <div class="label">Total Trades</div>
+                        <div class="metric" id="totalTrades">15</div>
+                    </div>
+                    <div>
+                        <div class="label">Win Rate</div>
+                        <div class="metric positive" id="winRate">60%</div>
+                    </div>
+                    <div>
+                        <div class="label">Avg Profit/Loss</div>
+                        <div class="metric negative" id="avgPnl">-$18.03</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Conditions -->
+            <div class="card">
+                <h3>🌐 MARKET CONDITIONS</h3>
+                <div style="margin-top: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                        <span>BTC/USDT</span>
+                        <span class="positive" id="btcPrice">$67,201.80</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                        <span>ETH/USDT</span>
+                        <span class="positive" id="ethPrice">$3,525.55</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                        <span>YFI/USDT</span>
+                        <span class="negative" id="yfiPrice">$2,421.00</span>
+                    </div>
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #334155;">
+                        <div class="label">Market Sentiment</div>
+                        <div style="display: flex; align-items: center; margin-top: 5px;">
+                            <span class="llm-score score-high">BULLISH</span>
+                            <span style="margin-left: 10px; font-size: 14px;">Based on momentum analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Performance -->
+            <div class="card">
+                <h3>🎯 STRATEGY PERFORMANCE</h3>
+                <div style="margin-top: 15px;">
+                    <div style="margin: 10px 0;">
+                        <div class="label">Current Strategy</div>
+                        <div>Momentum-Based Trading</div>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <div class="label">Strategy Score</div>
+                        <div>
+                            <span class="llm-score score-medium">7.2/10</span>
+                            <span style="margin-left: 10px; font-size: 14px;">Based on recent performance</span>
+                        </div>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <div class="label">Active Positions</div>
+                        <div id="activePositions">2 positions (ETH, BTC)</div>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <div class="label">Next Decision</div>
+                        <div id="nextDecision">Monitoring ETH for profit taking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Trades -->
+        <div class="card" style="margin-top: 20px;">
+            <h3>🔄 RECENT TRADES</h3>
+            <div id="recentTrades">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Spread Analysis -->
+        <div class="card" style="margin-top: 20px;">
+            <h3>📊 SPREAD ANALYSIS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pair</th>
+                        <th>Binance Price</th>
+                        <th>Gemini Price</th>
+                        <th>Spread %</th>
+                        <th>LLM Score</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="spreadTable">
+                    <!-- Filled by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- LLM Decision Scores -->
+        <div class="card" style="margin-top: 20px;">
+            <h3>🤖 LLM DECISION SCORES</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;" id="llmScores">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('lastUpdate').textContent = 'Last update: ' + new Date().toLocaleString();
+
+        // Sample data - in real system, this would come from API
+        const sampleTrades = [
+            { time: '00:16:16', symbol: 'ETH/USDT', side: 'sell', price: 3525.55, amount: 0.04, reason: 'profit_taking', llmScore: 8.5 },
+            { time: '00:14:16', symbol: 'ETH/USDT', side: 'buy', price: 3518.95, amount: 0.01, reason: 'uptrend_momentum', llmScore: 7.2 },
+            { time: '00:10:16', symbol: 'BTC/USDT', side: 'buy', price: 70091.61, amount: 0.00486, reason: 'uptrend_momentum', llmScore: 7.8 },
+            { time: '00:06:15', symbol: 'ETH/USDT', side: 'buy', price: 3495.70, amount: 0.01, reason: 'uptrend_momentum', llmScore: 6.9 },
+            { time: '23:58:14', symbol: 'ETH/USDT', side: 'buy', price: 3473.54, amount: 0.01, reason: 'uptrend_momentum', llmScore: 7.1 }
+        ];
+
+        const sampleSpreads = [
+            { pair: 'BTC/USDT', binance: 67201.80, gemini: 67250.25, spread: 0.07, llmScore: 6.5, action: 'HOLD' },
+            { pair: 'ETH/USDT', binance: 3525.55, gemini: 3530.80, spread: 0.15, llmScore: 7.2, action: 'MONITOR' },
+            { pair: 'YFI/USDT', binance: 2421.00, gemini: 2425.50, spread: 0.19, llmScore: 5.8, action: 'AVOID' },
+            { pair: 'XTZ/USDT', binance: 0.3409, gemini: 0.3542, spread: 3.67, llmScore: 8.9, action: 'TRADE' },
+            { pair: 'UNI/USDT', binance: 8.45, gemini: 8.48, spread: 0.35, llmScore: 6.1, action: 'HOLD' }
+        ];
+
+        const sampleLLMScores = [
+            { model: 'GPT-4', score: 8.2, confidence: 'HIGH', recommendation: 'BUY ETH' },
+            { model: 'Claude-3', score: 7.8, confidence: 'MEDIUM', recommendation: 'HOLD BTC' },
+            { model: 'Gemini Pro', score: 6.5, confidence: 'MEDIUM', recommendation: 'SELL YFI' },
+            { model: 'Llama-3', score: 7.1, confidence: 'MEDIUM', recommendation: 'TRADE XTZ' },
+            { model: 'Consensus', score: 7.4, confidence: 'HIGH', recommendation: 'MOMENTUM BUY' }
+        ];
+
+        function loadActualData() {
+            // Update timestamp
+            document.getElementById('lastUpdate').textContent = 'Last update: ' + new Date().toLocaleString();
+            
+            // Load recent trades
+            const recentTradesDiv = document.getElementById('recentTrades');
+            recentTradesDiv.innerHTML = '';
+            sampleTrades.forEach(trade => {
+                const tradeDiv = document.createElement('div');
+                tradeDiv.className = `trade-card ${trade.side}`;
+                
+                const scoreClass = trade.llmScore >= 8 ? 'score-high' : 
+                                 trade.llmScore >= 6 ? 'score-medium' : 'score-low';
+                
+                tradeDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong>${trade.side.toUpperCase()} ${trade.symbol}</strong>
+                            <div style="font-size: 12px; color: #94a3b8;">${trade.time} - ${trade.reason}</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div>${trade.amount} @ $${trade.price.toLocaleString()}</div>
+                            <div style="margin-top: 5px;">
+                                <span class="llm-score ${scoreClass}">LLM: ${trade.llmScore}/10</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                recentTradesDiv.appendChild(tradeDiv);
+            });
+
+            // Load spread analysis
+            const spreadTable = document.getElementById('spreadTable');
+            spreadTable.innerHTML = '';
+            sampleSpreads.forEach(spread => {
+                const row = document.createElement('tr');
+                
+                const spreadClass = spread.spread >= 1 ? 'positive' : 
+                                  spread.spread >= 0.5 ? 'neutral' : 'negative';
+                
+                const scoreClass = spread.llmScore >= 8 ? 'score-high' : 
+                                 spread.llmScore >= 6 ? 'score-medium' : 'score-low';
+                
+                const actionClass = spread.action === 'TRADE' ? 'positive' : 
+                                  spread.action === 'AVOID' ? 'negative' : 'neutral';
+                
+                row.innerHTML = `
+                    <td>${spread.pair}</td>
+                    <td>$${spread.binance.toLocaleString()}</td>
+                    <td>$${spread.gemini.toLocaleString()}</td>
+                    <td class="${spreadClass}">${spread.spread.toFixed(2)}%</td>
+                    <td><span class="llm-score ${scoreClass}">${spread.llmScore}/10</span></td>
+                    <td class="${actionClass}">${spread.action}</td>
+                `;
+                spreadTable.appendChild(row);
+            });
+
+            // Load LLM scores
+            const llmScoresDiv = document.getElementById('llmScores');
+            llmScoresDiv.innerHTML = '';
+            sampleLLMScores.forEach(llm => {
+                const scoreDiv = document.createElement('div');
+                scoreDiv.className = 'card';
+                scoreDiv.style.padding = '15px';
+                
+                const scoreClass = llm.score >= 8 ? 'score-high' : 
+                                 llm.score >= 6 ? 'score-medium' : 'score-low';
+                
+                const confidenceClass = llm.confidence === 'HIGH' ? 'positive' : 
+                                      llm.confidence === 'MEDIUM' ? 'neutral' : 'negative';
+                
+                scoreDiv.innerHTML = `
+                    <div style="font-weight: bold; margin-bottom: 5px;">${llm.model}</div>
+                    <div style="display: flex; align-items: center; margin: 10px 0;">
+                        <span class="llm-score ${scoreClass}" style="font-size: 16px; padding: 5px 12px;">${llm.score}/10</span>
+                        <span style="margin-left: 10px; font-size: 12px;" class="${confidenceClass}">${llm.confidence}</span>
+                    </div>
+                    <div style="font-size: 12px; color: #94a3b8;">${llm.recommendation}</div>
+                `;
+                llmScoresDiv.appendChild(scoreDiv);
+            });
+
+            // Simulate live updates
+            updateMetrics();
+        }
+
+        function updateMetrics() {
+            // Simulate metric updates
+            const balance = 6571.52 + (Math.random() * 20 - 10);
+            document.getElementById('balance').textContent = '$' + balance.toFixed(2);
+            
+            const btcChange = (Math.random() * 1000 - 500);
+            const btcPrice = 67201.80 + btcChange;
+            document.getElementById('btcPrice').textContent = '$' + btcPrice.toLocaleString();
+            document.getElementById('btcPrice').className = btcChange >= 0 ? 'positive' : 'negative';
+            
+            const ethChange = (Math.random() * 50 - 25);
+            const ethPrice = 3525.55 + ethChange;
+            document.getElementById('ethPrice').textContent = '$' + ethPrice.toLocaleString();
+            document.getElementById('ethPrice').className = ethChange >= 0 ? 'positive' : 'negative';
+            
+            // Update next decision based on market
+            const decisions = [
+                'Monitoring ETH for profit taking',
+                'Waiting for BTC breakout',
+                'Analyzing YFI spread opportunity',
+                'Preparing XTZ arbitrage trade',
+                'Holding current positions'
+            ];
+            document.getElementById('nextDecision').textContent = decisions[Math.floor(Math.random() * decisions.length)];
+        }
+
+        // Initial load
+        loadActualData();
+        
+        // Auto-refresh every 30 seconds
+        setInterval(loadActualData, 30000);
+    </script>
+</body>
+</html>

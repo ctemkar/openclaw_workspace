@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-06T00:24:18.380901",
+  "total": "228Gi",
+  "used": "12Gi",
+  "percent": "35%",
+  "status": "NORMAL",
+  "progress_monitor_wrong": true,
+  "progress_monitor_says": "90% used (182GB/228GB)",
+  "actual_reality": "35% used (12Gi/228Gi)",
+  "verification": "Verified with df -h /"
+}
