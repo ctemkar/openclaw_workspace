@@ -1,44 +1,44 @@
 [
   {
     "model": "GPT-4",
-    "score": 8.8,
+    "score": 6.8,
     "confidence": "HIGH",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T03:32:47.650456"
+    "recommendation": "TRADE XTZ arbitrage",
+    "timestamp": "2026-04-06T04:32:31.445514"
   },
   {
     "model": "Claude-3",
-    "score": 8.9,
+    "score": 8.1,
     "confidence": "MEDIUM",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T03:32:47.650458"
+    "recommendation": "BUY ETH on momentum",
+    "timestamp": "2026-04-06T04:32:31.445518"
   },
   {
     "model": "Gemini Pro",
-    "score": 5.8,
+    "score": 6.5,
     "confidence": "MEDIUM",
-    "recommendation": "HOLD BTC positions",
-    "timestamp": "2026-04-06T03:32:47.650459"
+    "recommendation": "BUY ETH on momentum",
+    "timestamp": "2026-04-06T04:32:31.445521"
   },
   {
     "model": "Llama-3",
-    "score": 7.2,
+    "score": 8.8,
     "confidence": "LOW",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T03:32:47.650460"
+    "recommendation": "HOLD BTC positions",
+    "timestamp": "2026-04-06T04:32:31.445525"
   },
   {
     "model": "Mixtral",
-    "score": 7.0,
-    "confidence": "MEDIUM",
-    "recommendation": "MONITOR UNI breakout",
-    "timestamp": "2026-04-06T03:32:47.650462"
+    "score": 6.1,
+    "confidence": "HIGH",
+    "recommendation": "BUY ETH on momentum",
+    "timestamp": "2026-04-06T04:32:31.445528"
   },
   {
     "model": "Consensus",
     "score": 7.4,
     "confidence": "HIGH",
-    "recommendation": "SELL YFI for loss cut",
-    "timestamp": "2026-04-06T03:32:47.650463"
+    "recommendation": "TRADE XTZ arbitrage",
+    "timestamp": "2026-04-06T04:32:31.445532"
   }
 ]

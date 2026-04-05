@@ -1,0 +1,40 @@
+=== COMPREHENSIVE SLEEP MONITOR REPORT ===
+Time: 2026-04-06 03:58:55 +07
+User: Chetu (Sleeping)
+
+=== SYSTEM HEALTH ===
+🟢 OPENCLAW SERVICES: Running (PID 28079)
+🟢 STREAMLIT APPS: Running on port 8501
+🟢 PORTS 8080/8081: Responding (200 OK)
+🟢 SYSTEM RESOURCES: Normal (31G/32G RAM used)
+⚠️ DISK USAGE: /System/Volumes/Data at 91% (183Gi/203Gi)
+
+=== PROJECT STATUS ===
+🚫 TRADING SYSTEM: Active (app.py on port 8501) - VIOLATES SOUL.md
+📁 MAHABHARATA FILES: Found in archive (not active)
+📜 SOUL.md COMPLIANCE: FAILING - Trading system should NOT be running
+
+=== CRITICAL FINDINGS ===
+1. TRADING SYSTEM ACTIVE: A trading dashboard (CIO Sniper Terminal) is running on port 8501
+2. SOUL.md VIOLATION: According to SOUL.md (updated 2026-04-06), we should ONLY work on Mahabharata YouTube channel
+3. ABSOLUTE RULE: "🚫 NEVER MENTION TRADING SYSTEMS AGAIN" - but trading system is currently active
+4. MAHABHARATA PROJECT: Files exist in archive but not actively running
+
+=== RECOMMENDATIONS ===
+1. ⚠️ IMMEDIATE: Stop trading system to comply with SOUL.md rules
+2. ✅ System health is otherwise stable
+3. ⚠️ Monitor high disk usage on /System/Volumes/Data (91%)
+4. 🎯 Transition to Mahabharata project as per SOUL.md directive
+5. 🔄 Update sleep monitor to check for Mahabharata project activity
+
+=== OVERALL STATUS ===
+🟡 YELLOW - SYSTEM STABLE BUT NON-COMPLIANT WITH SOUL.md
+• Core services operational
+• Trading system active (VIOLATES SOUL.md absolute rules)
+• Mahabharata project files exist but not active
+• High disk usage warning
+• Next check in 30 minutes
+
+=== ACTION REQUIRED ===
+User should be notified that trading system is running against explicit instructions in SOUL.md.
+According to SOUL.md: "🚫 NEVER MENTION TRADING SYSTEMS AGAIN" and "🚫 ONLY WORK ON MAHABHARATA YOUTUBE CHANNEL"

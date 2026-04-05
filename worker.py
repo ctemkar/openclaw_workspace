@@ -30,7 +30,7 @@ def update_status(msg, asset=None):
 
 def get_score(m, s, b, g, sp):
     try:
-        res = ollama.chat(model=m, messages=[{'role': 'user', 'content': f"Asset:{s}, B:{b}, G:{g}, Spd:{sp}%. Score 1(Sell) to 10(Buy). 5 Neutral. Num only."}])
+        res = ollama.chat(model=m, messages=[{'role': 'user', 'content': f"Asset:{s}, B:{b}, G:{g}, Spd:{sp}%. Score 1-10. Num only."}])
         t = re.sub(r'<think>.*?</think>', '', res['message']['content'], flags=re.DOTALL)
         n = re.findall(r"[-+]?\d*\.\d+|\d+", t)
         return min(max(float(n[-1]), 1.0), 10.0) if n else 5.0
@@ -61,24 +61,23 @@ while True:
         if (now - ls).total_seconds() > 300:
             for sym in TOP_10:
                 try:
-                    update_status("🔍 ACTIVE SCAN", sym)
+                    update_status("🔍 SCANNING", sym)
                     bt, gt = binance.fetch_ticker(sym), gemini.fetch_ticker(sym.replace('/USDT', '/USD'))
                     bp, gp = bt['last'], gt['last']
                     spd = round(((gp - bp) / bp) * 100, 4)
                     votes = {}
                     for i, m in enumerate(MODELS):
-                        update_status(f"🔍 ANALYZING ({i+1}/8 Models)", sym)
+                        update_status(f"🔍 ANALYZING ({i+1}/8)", sym)
                         score = get_score(m, sym, bp, gp, spd)
                         votes[m] = score
                         if score != 5.0:
                             s["active_signals"].append({"asset": sym, "model": m, "entry": bp, "expiry": (datetime.now() + timedelta(minutes=5)).isoformat(), "score": score})
                         save_live(sym, votes, f"{i+1}/8")
-                    save_state(s)
+                        save_state(s)
                 except: continue
             s["last_scan"] = datetime.now().isoformat()
         else:
-            wait = int(300 - (now - ls).total_seconds())
-            update_status(f"⏳ IDLE (Next scan in {wait}s)")
+            update_status(f"⏳ IDLE", None)
         save_state(s)
         time.sleep(10)
     except: time.sleep(10)
