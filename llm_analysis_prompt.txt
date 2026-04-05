@@ -1,0 +1,55 @@
+# CRYPTO ARBITRAGE ANALYSIS FOR LLM
+
+## MARKET DATA (YFI - Yearn Finance)
+**Current Time**: 2026-04-05 19:22 (Asia/Bangkok)
+
+### PRICES:
+- **Binance**: $2,423.00
+- **Gemini**: $2,458.82
+- **Spread**: 1.46% (Gemini is 1.46% higher)
+
+### HISTORY:
+- Spread has persisted for 2+ hours
+- Binance price fluctuating: $2,422 - $2,425
+- Gemini price stable: ~$2,458
+- No convergence observed
+
+### TRADING CONSTRAINTS:
+- Transfer fee (Binance→Gemini): $5-$20 (Ethereum gas)
+- Transfer time: 30+ minutes
+- Trade size: $30
+- Potential profit if transfer was free: $0.43
+
+## ANALYSIS QUESTIONS:
+
+1. **PRICE CONVERGENCE PROBABILITY**:
+   - What is the probability (%) that Binance YFI price will rise to match Gemini price ($2,458) within:
+     a) 1 hour?
+     b) 6 hours?
+     c) 24 hours?
+
+2. **ARBITRAGE ASSESSMENT**:
+   - Is this a true arbitrage opportunity?
+   - Why or why not?
+   - What barriers prevent arbitrage from closing this spread?
+
+3. **TRADING RECOMMENDATION**:
+   - Should we buy YFI on Binance at $2,423?
+   - Expected profit/loss?
+   - Risk assessment?
+
+4. **MARKET DYNAMICS**:
+   - Why might this spread persist for hours?
+   - What would cause it to close?
+   - Is this "Kimchi premium" type situation?
+
+5. **STRATEGY ADVICE**:
+   - Best action: Buy, Sell, or Wait?
+   - If buy, when to sell?
+   - Position sizing recommendation?
+
+## PLEASE PROVIDE:
+- Probability estimates with reasoning
+- Clear buy/sell/hold recommendation
+- Risk assessment (1-10 scale)
+- Expected outcome timeline
