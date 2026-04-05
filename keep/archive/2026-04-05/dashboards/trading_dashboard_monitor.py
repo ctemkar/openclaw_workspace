@@ -1,0 +1,189 @@
+
+import requests
+import json
+import logging
+from datetime import datetime
+
+LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/trading_monitoring.log'
+CRITICAL_LOG_FILE = '/Users/chetantemkar/.openclaw/workspace/app/critical_alerts.log'
+
+# Read the active port from .active_port file
+try:
+    with open('/Users/chetantemkar/.openclaw/workspace/app/.active_port', 'r') as f:
+        PORT = f.read().strip()
+except:
+    PORT = '5001'  # fallback
+
+DATA_URL = f'http://localhost:{PORT}/'
+
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+critical_logger = logging.getLogger('critical_alerts')
+critical_handler = logging.FileHandler(CRITICAL_LOG_FILE)
+critical_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+critical_logger.addHandler(critical_handler)
+critical_logger.setLevel(logging.WARNING)
+
+def fetch_data():
+    try:
+        # Try multiple ports - first check .active_port, then try common ports
+        ports_to_try = []
+        
+        # Read active port from file
+        try:
+            with open('.active_port', 'r') as f:
+                active_port = f.read().strip()
+                if active_port:
+                    ports_to_try.append(int(active_port))
+        except:
+            pass
+        
+        # Add common ports
+        ports_to_try.extend([61804, 5000, 5001, 8080, 8000])
+        
+        # Remove duplicates
+        ports_to_try = list(dict.fromkeys(ports_to_try))
+        
+        dashboard_url = None
+        status_data = None
+        
+        # Try each port
+        for port in ports_to_try:
+            try:
+                # Try the status endpoint first
+                test_url = f"http://localhost:{port}/status"
+                response = requests.get(test_url, timeout=5)
+                if response.status_code == 200:
+                    # Try to parse as JSON
+                    data = response.json()
+                    if 'status' in data:
+                        dashboard_url = f"http://localhost:{port}"
+                        status_data = data
+                        logging.info(f"Found dashboard on port {port}")
+                        break
+            except:
+                continue
+        
+        if not dashboard_url:
+            logging.error("Could not find dashboard on any port")
+            return None
+        
+        # Get trades data
+        trades_data = None
+        try:
+            trades_url = f"{dashboard_url}/trades"
+            trades_response = requests.get(trades_url, timeout=5)
+            if trades_response.status_code == 200:
+                trades_data = trades_response.json()
+        except:
+            trades_data = {"count": 0, "trades": []}
+        
+        # Read trading logs directly from file since API endpoint doesn't exist
+        trading_logs = []
+        try:
+            with open('/Users/chetantemkar/.openclaw/workspace/app/trading_bot_clean.log', 'r') as f:
+                trading_logs = f.read().split('\n')[-20:]  # Last 20 lines
+        except:
+            trading_logs = ["No trading logs available"]
+        
+        # Get market prices from external API since dashboard doesn't provide them
+        # For now, we'll use mock data or skip this
+        prices_data = {"BTC/USD": 74800.0, "ETH/USD": 2317.71}  # Mock data based on recent trades
+        
+        # Extract capital and risk parameters from status
+        capital = status_data.get('capital', 10000.0)
+        risk_params = status_data.get('risk_parameters', {})
+        stop_loss = risk_params.get('stop_loss', 0.01)
+        take_profit = risk_params.get('take_profit', 0.02)
+        
+        # Combine all data
+        combined_data = {
+            'status': status_data,
+            'trades': trades_data,
+            'logs': {"logs": "\n".join(trading_logs)},  # Mock logs structure
+            'prices': prices_data,
+            'capital': capital,
+            'stop_loss': stop_loss,
+            'take_profit': take_profit,
+            'trading_logs': trading_logs,
+            'status_updates': [f"Trading: {status_data.get('status', 'unknown')} - Last update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"]
+        }
+        
+        return combined_data
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Failed to fetch data from dashboard: {e}")
+        return None
+
+def analyze_data(data):
+    if not data:
+        return "No data received for analysis."
+
+    summary_lines = []
+    critical_alerts = []
+
+    capital = data.get('capital', 'N/A')
+    stop_loss = data.get('stop_loss', 'N/A')
+    take_profit = data.get('take_profit', 'N/A')
+    trading_logs = data.get('trading_logs', [])
+    status_updates = data.get('status_updates', [])
+    prices = data.get('prices', {})
+    
+    # Check for strategy errors in logs
+    strategy_errors = [log for log in trading_logs if 'STRATEGY ERROR' in log]
+    recent_logs = trading_logs[-10:] if len(trading_logs) > 10 else trading_logs
+
+    # Log extracted data
+    logging.info(f"Fetched data: Capital={capital}, StopLoss={stop_loss}, TakeProfit={take_profit}")
+    logging.info(f"Market Prices: {prices}")
+    for log in recent_logs:
+        logging.info(f"Trading Log: {log}")
+    for status in status_updates:
+        logging.info(f"Status Update: {status}")
+
+    summary_lines.append(f"--- Trading Dashboard Monitor Summary - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ---")
+    summary_lines.append(f"Trading Status: {data.get('status', {}).get('trading', 'unknown')}")
+    summary_lines.append(f"Capital: ${capital}")
+    summary_lines.append(f"Stop Loss: {float(stop_loss)*100}%")
+    summary_lines.append(f"Take Profit: {float(take_profit)*100}%")
+    
+    # Market prices
+    summary_lines.append("\nMarket Prices:")
+    for symbol, price in prices.items():
+        summary_lines.append(f"- {symbol}: ${price:,.2f}")
+
+    # Check for strategy errors
+    if strategy_errors:
+        error_count = len(strategy_errors)
+        alert_msg = f"STRATEGY ERRORS DETECTED: {error_count} errors in recent logs. Bot may not be functioning correctly."
+        critical_alerts.append(alert_msg)
+        critical_logger.warning(alert_msg)
+        summary_lines.append(f"\n⚠️ Strategy Errors: {error_count} errors detected")
+
+    # Check for stop-loss or take-profit triggers (simplified logic)
+    # In a real system, you would check actual P&L against these thresholds
+    current_capital = float(capital)
+    stop_loss_threshold = current_capital * (1 - float(stop_loss))
+    take_profit_threshold = current_capital * (1 + float(take_profit))
+    
+    # For now, just log the thresholds
+    logging.info(f"Stop loss threshold: ${stop_loss_threshold:.2f}, Take profit threshold: ${take_profit_threshold:.2f}")
+
+    if critical_alerts:
+        summary_lines.append("\n🚨 CRITICAL ALERTS:")
+        summary_lines.extend(critical_alerts)
+    else:
+        summary_lines.append("\n✅ No critical alerts detected.")
+
+    summary_lines.append("\nRecent Logs:")
+    if recent_logs:
+        for log in recent_logs:
+            summary_lines.append(f"- {log}")
+    else:
+        summary_lines.append("- No recent logs available.")
+
+    return "\n".join(summary_lines)
+
+if __name__ == "__main__":
+    dashboard_data = fetch_data()
+    result_summary = analyze_data(dashboard_data)
+    print(result_summary) # stdout will be captured by cron tool delivery

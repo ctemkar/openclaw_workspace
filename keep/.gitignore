@@ -1,0 +1,26 @@
+
+# API Keys - DO NOT COMMIT
+.gemini_key
+.gemini_secret
+.binance_key
+.binance_secret
+secure/*.key
+secure/*.secret
+*.log
+__pycache__/
+
+# API Key directories - NEVER COMMIT THESE!
+secure_keys/
+keys/
+secrets/
+*.key
+*.secret
+
+# API Keys and Secrets
+.env
+.env.*
+*.env
+secure_keys/
+secrets/
+*.key
+*.secret
