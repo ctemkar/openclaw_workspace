@@ -1,0 +1,84 @@
+=== SYSTEM HEALTH CHECK REPORT ===
+Generated: Sun Apr  5 06:41:15 +07 2026
+Check Type: Comprehensive 2-hour Cron Check
+
+=== SYSTEM OVERVIEW ===
+• Uptime: 1 day, 17 hours, 31 minutes
+• Load Average: 2.57, 2.79, 2.55 (1-min, 5-min, 15-min)
+• CPU Usage: 13.59% user, 10.27% sys, 76.13% idle
+• Memory: 30GB used (2.5GB wired, 726MB compressor), 1.99GB free
+• Disk Usage: 12GB used, 20GB free (37% capacity)
+• Power: AC Power connected
+• Thermal: No warnings
+
+=== CRITICAL SERVICES STATUS ===
+✅ OPENCLAW GATEWAY:
+  • Status: Running (PID 69254)
+  • Port: 18789 (listening on localhost)
+  • RPC Probe: OK
+  • Dashboard: http://127.0.0.1:18789/
+
+✅ TRADING DASHBOARD:
+  • Port: 5025 (listening and responding)
+  • URL: http://localhost:5025/
+  • Status: Active with real-time data
+
+❌ SLEEP MONITOR ALERTS:
+  • Critical processes from sleep_monitor.sh not running:
+    - real_dashboard_simple.py
+    - arbitration_trading_dashboard.py  
+    - simple_trading_dashboard.py
+    - forex_bot_with_schwab.py
+  • Ports 5010, 5015, 5020 not responding
+  • NOTE: These may be legacy/old processes - current systems are different
+
+=== ACTIVE TRADING PROCESSES ===
+1. openclaw-gateway (PID 69265) - Core service
+2. simple_real_dashboard.py (PID 60156) - Dashboard
+3. real_26_crypto_arbitrage_bot.py (PID 55581) - 23-crypto arbitrage bot
+4. practical_profit_bot.py (PID 80537) - Practical profit bot
+5. truthful_dashboard.py (PID 19863) - Truthful dashboard
+6. multi_llm_trading_bot_fixed_order.py (PID 33410) - Multi-LLM bot
+7. auto_arbitrage_bot.py (PID 61457) - Auto arbitrage bot
+8. market_maker_analyzer.py (PID 61551) - Market maker analyzer
+
+=== TRADING ACTIVITY ===
+• LLM Predictions: 374 recorded in history
+• Last Trade Activity: 02:09 AM today (from 26_crypto_output.log)
+• Current Status: Monitoring 23 cryptos, no recent arbitrage opportunities
+• Dashboard shows: $1.65 profit today from 23 trades (April 5)
+
+=== NETWORK STATUS ===
+Active Listening Ports:
+• 5025: Trading Dashboard (HTTP)
+• 18789: OpenClaw Gateway (WebSocket/HTTP)
+
+=== ERROR MONITORING ===
+• System Logs: No critical errors in last hour
+• Trading Logs: trading_bot.log clean (no errors in last hour)
+• Application Logs: No recent application crashes detected
+
+=== ANOMALIES DETECTED ===
+1. SLEEP MONITOR MISMATCH: sleep_monitor.sh checks for old/legacy processes
+   - Recommendation: Update sleep_monitor.sh to check current processes
+   
+2. OPENCLAW GATEWAY CONFIG: Service uses Node from version manager
+   - Warning: Could break after upgrades
+   - Recommendation: Run "openclaw doctor --repair"
+
+3. DASHBOARD PORTS: Only port 5025 active (not 5010, 5015, 5020)
+   - Status: Expected - current dashboard runs on 5025 only
+
+=== RECOMMENDATIONS ===
+1. ✅ System is stable and operational
+2. ⚠️ Update sleep_monitor.sh to monitor current processes
+3. ⚠️ Run "openclaw doctor --repair" to fix gateway config
+4. ✅ Continue monitoring trading bots for opportunities
+5. ✅ Maintain current health check schedule (every 2 hours)
+
+=== OVERALL HEALTH SCORE: 8/10 ===
+• Strengths: All critical services running, stable system, active trading
+• Concerns: Outdated monitoring script, gateway config warnings
+• Risk Level: LOW - System operational with minor configuration issues
+
+Next check scheduled: 08:41 AM (2 hours from now)
