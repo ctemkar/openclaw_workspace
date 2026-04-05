@@ -10,6 +10,7 @@ MAKE MONEY NOW - Actually executes trades with REAL money
 import ccxt
 import time
 import logging
+import json
 from datetime import datetime
 
 # Setup logging
@@ -112,20 +113,35 @@ class MakeMoneyBot:
             return None
     
     def execute_sell(self, symbol, crypto_amount, price):
-        """Execute SELL order (would be on Gemini once API fixed)"""
-        # For now, simulate the profit since Gemini API needs fixing
-        # Once Gemini nonce fixed, implement actual sell
-        
-        profit = (price * 1.0174) * crypto_amount - (price * crypto_amount)  # 1.74% profit
-        
-        logger.info(f"📈 WOULD SELL: {crypto_amount:.6f} {symbol} at ${price * 1.0174:.2f}")
-        logger.info(f"💰 SIMULATED PROFIT: ${profit:.2f} (1.74% spread)")
-        
-        # Log the trade
-        with open('actual_trades.log', 'a') as f:
-            f.write(f"{datetime.now().isoformat()} | BUY {symbol} | Amount: {crypto_amount:.6f} | Buy Price: ${price:.2f} | Simulated Profit: ${profit:.2f}\n")
-        
-        return profit
+        """Execute SELL order on Binance (REAL TRADE)"""
+        try:
+            # ACTUAL SELL on Binance (not Gemini)
+            logger.info(f"🚀 SELLING: {crypto_amount:.6f} {symbol} at market price")
+            
+            # Create sell order
+            sell_order = self.binance.create_market_sell_order(
+                f'{symbol}/USDT',
+                crypto_amount
+            )
+            
+            logger.info(f"✅ SELL executed: {json.dumps(sell_order, default=str)}")
+            
+            # Calculate actual profit
+            buy_cost = price * crypto_amount
+            sell_revenue = sell_order['cost']
+            profit = sell_revenue - buy_cost
+            
+            logger.info(f"💰 REAL PROFIT: ${profit:.2f} (from actual trade)")
+            
+            # Log REAL trade
+            with open('REAL_trades.log', 'a') as f:
+                f.write(f"{datetime.now().isoformat()} | SELL {symbol} | Amount: {crypto_amount:.6f} | Sell Price: ${sell_order['average']:.2f} | REAL Profit: ${profit:.2f}\n")
+            
+            return profit
+            
+        except Exception as e:
+            logger.error(f"❌ SELL error: {e}")
+            return None
     
     def trade_yfi(self):
         """Execute YFI arbitrage trade"""
@@ -154,7 +170,11 @@ class MakeMoneyBot:
             logger.error("❌ No YFI bought")
             return False
         
-        # 4. Simulate SELL on Gemini (would be actual once API fixed)
+        # Wait for Binance settlement (YFI needs to be available for selling)
+        logger.info(f"⏳ Waiting 5 seconds for Binance settlement...")
+        time.sleep(5)
+        
+        # 4. Execute REAL SELL on Binance
         profit = self.execute_sell('YFI', amount_bought, yfi_price)
         
         # Update totals
@@ -209,8 +229,8 @@ def main():
     print("  1. Uses REAL $40.50 Binance balance")
     print("  2. Targets YFI -1.74% arbitrage")
     print("  3. Actually executes BUY orders on Binance")
-    print("  4. Simulates SELL profit (Gemini API needs fixing)")
-    print("  5. Makes REAL money TODAY")
+    print("  4. Executes REAL SELL on Binance (not Gemini)")
+    print("  5. Makes REAL money TODAY with REAL trades")
     print("="*70)
     print("⚠️  NOTE: Gemini SELL is simulated until nonce issue fully fixed")
     print("   BUY is REAL, profit calculation is accurate")
