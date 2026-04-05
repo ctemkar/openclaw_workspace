@@ -1,1 +1,6 @@
-{"last_nonce": 1775377111084076}
+{
+  "last_nonce": 1775380443102116,
+  "last_updated": 1775379443.1021261,
+  "increment_strategy": "always_add_1000000",
+  "note": "Gemini remembers last successful nonce. Always increment by at least 1,000,000 (1 second)"
+}

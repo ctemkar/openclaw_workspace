@@ -2,10 +2,10 @@
 echo "=== FAST PROGRESS MONITOR - $(date '+%Y-%m-%d %H:%M:%S %Z') ==="
 echo ""
 
-# Check if practical profit bot is running
-if ps aux | grep -v grep | grep -q "practical_profit_bot.py"; then
-    BOT_PID=$(ps aux | grep "practical_profit_bot.py" | grep -v grep | awk '{print $2}')
-    echo "[OK] PRACTICAL PROFIT BOT RUNNING (PID: $BOT_PID)"
+# Check if practical monitor bot is running
+if ps aux | grep -v grep | grep -q "practical_monitor_bot.py"; then
+    BOT_PID=$(ps aux | grep "practical_monitor_bot.py" | grep -v grep | awk '{print $2}')
+    echo "[OK] PRACTICAL MONITOR BOT RUNNING (PID: $BOT_PID)"
     
     # Get the VERY LAST trade from the log
     if [ -f "practical_profits.log" ]; then
@@ -35,8 +35,33 @@ if ps aux | grep -v grep | grep -q "practical_profit_bot.py"; then
             echo "   No trades in log"
         fi
     fi
+    
+    # Get latest monitor status
+    if [ -f "practical_monitor.log" ]; then
+        LAST_CHECK=$(tail -5 practical_monitor.log 2>/dev/null | grep "MARKET CHECK" | tail -1)
+        if [ -n "$LAST_CHECK" ]; then
+            LAST_TIME=$(echo "$LAST_CHECK" | awk '{print $1" "$2}')
+            BINANCE_PRICE=$(tail -10 practical_monitor.log 2>/dev/null | grep "Binance MANA/USDT" | tail -1 | awk -F': \\$' '{print $2}')
+            GEMINI_PRICE=$(tail -10 practical_monitor.log 2>/dev/null | grep "Gemini MANA/USD" | tail -1 | awk -F': \\$' '{print $2}')
+            SPREAD=$(tail -10 practical_monitor.log 2>/dev/null | grep "Spread:" | tail -1 | awk '{print $2}')
+            
+            echo "[MONITOR] LATEST CHECK:"
+            echo "   Time: $LAST_TIME"
+            echo "   Binance: \$$BINANCE_PRICE"
+            echo "   Gemini: \$$GEMINI_PRICE"
+            echo "   Spread: $SPREAD%"
+            
+            # Check if spread is profitable
+            SPREAD_NUM=$(echo "$SPREAD" | sed 's/%//')
+            if (( $(echo "$SPREAD_NUM >= 0.5" | bc -l) )); then
+                echo "   🎯 PROFITABLE OPPORTUNITY DETECTED!"
+            else
+                echo "   ⏳ Spread too small for arbitrage"
+            fi
+        fi
+    fi
 else
-    echo "[ERROR] PRACTICAL PROFIT BOT NOT RUNNING"
+    echo "[ERROR] PRACTICAL MONITOR BOT NOT RUNNING"
 fi
 
 echo ""

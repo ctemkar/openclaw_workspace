@@ -155,5 +155,73 @@
     },
     "order_id": "16876254591",
     "timestamp": "2026-04-05T03:18:53.700141"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "SOL/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 79.68,
+    "amount": 0.1255020080321285,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "SOL",
+      "buy_score": 2.0,
+      "sell_score": 2.55,
+      "confidence": 6.5,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: The stock price of SOL is decreasing by -0.47% in the last 24 hours. This could be a sign that the market is cooling down. However, with no major red flags or extreme bearish signals, I wouldn't recommend selling aggressively either.",
+        "llama3: SOL's recent price drop is not alarming as the 24h change is only -0.47%, indicating a minor correction within its overall uptrend. However, the stock is still trading above its 50-day moving average and has shown resilience in the past."
+      ],
+      "signal": "NEUTRAL"
+    },
+    "order_id": "16877622003",
+    "timestamp": "2026-04-05T16:00:12.746634"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "UNI/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 3.074,
+    "amount": 3.2530904359141184,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "UNI",
+      "buy_score": 2.6,
+      "sell_score": 1.3,
+      "confidence": 6.5,
+      "model_count": 2,
+      "reasons": [
+        "llama3.1: UNI is experiencing a minor decline of 1.98%, which could indicate market volatility or a brief correction. However, its current price of $3.07 suggests a relatively stable position in the market. I recommend cautious optimism for buying, but selling/shorting does not seem like a priority with such low sell score.",
+        "llama3: UNI has experienced a negative price change over the past 24 hours, which may indicate market uncertainty or volatility. However, the decline is relatively minor and UNI still maintains a moderate upward trend in the long-term. I would not strongly recommend buying or selling at this time."
+      ],
+      "signal": "NEUTRAL"
+    },
+    "order_id": "5038310433",
+    "timestamp": "2026-04-05T16:00:13.011655"
+  },
+  {
+    "exchange": "binance",
+    "symbol": "SOL/USDT",
+    "side": "buy",
+    "type": "LONG_LLM",
+    "price": 79.69,
+    "amount": 0.12548625925461163,
+    "position_value": 10.0,
+    "llm_consensus": {
+      "crypto": "SOL",
+      "buy_score": 1.4,
+      "sell_score": 2.1,
+      "confidence": 7.0,
+      "model_count": 1,
+      "reasons": [
+        "llama3: SOL's recent decline in price is not alarming as it has been trading within a relatively stable range. However, the current price may be slightly overvalued compared to its historical average. A more significant correction or pullback could present a better entry point for buyers."
+      ],
+      "signal": "NEUTRAL"
+    },
+    "order_id": "16877649804",
+    "timestamp": "2026-04-05T16:15:26.622887"
   }
 ]
