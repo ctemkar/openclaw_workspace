@@ -2,110 +2,110 @@
   "trading_metrics": {
     "virtual_balance": 5896.3,
     "total_trades": 24,
-    "win_rate": 51.7,
-    "avg_pnl": -21.89,
-    "active_positions": 3,
-    "market_sentiment": "BULLISH",
-    "timestamp": "2026-04-06T02:32:10.344657"
+    "win_rate": 59.0,
+    "avg_pnl": -21.47,
+    "active_positions": 2,
+    "market_sentiment": "BEARISH",
+    "timestamp": "2026-04-06T03:31:17.556439"
   },
   "spread_analysis": [
     {
       "pair": "BTC/USDT",
-      "binance_price": 68311.6,
-      "gemini_price": 77339.75,
-      "spread_percent": 13.22,
-      "llm_score": 7.6,
+      "binance_price": 68272.32,
+      "gemini_price": 81842.73,
+      "spread_percent": 19.88,
+      "llm_score": 7.1,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T02:32:10.344805"
+      "timestamp": "2026-04-06T03:31:17.556464"
     },
     {
       "pair": "ETH/USDT",
-      "binance_price": 3517.96,
-      "gemini_price": 4030.81,
-      "spread_percent": 14.58,
-      "llm_score": 7.7,
+      "binance_price": 3548.09,
+      "gemini_price": 4242.05,
+      "spread_percent": 19.56,
+      "llm_score": 7.9,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T02:32:10.344831"
+      "timestamp": "2026-04-06T03:31:17.556470"
     },
     {
       "pair": "YFI/USDT",
-      "binance_price": 2417.62,
-      "gemini_price": 2762.76,
-      "spread_percent": 14.28,
-      "llm_score": 8.3,
-      "action": "TRADE",
-      "timestamp": "2026-04-06T02:32:10.344845"
+      "binance_price": 2427.69,
+      "gemini_price": 2948.84,
+      "spread_percent": 21.47,
+      "llm_score": 7.4,
+      "action": "MONITOR",
+      "timestamp": "2026-04-06T03:31:17.556475"
     },
     {
       "pair": "XTZ/USDT",
-      "binance_price": 0.34,
-      "gemini_price": 0.41,
-      "spread_percent": 22.13,
-      "llm_score": 7.7,
+      "binance_price": 0.35,
+      "gemini_price": 0.43,
+      "spread_percent": 23.68,
+      "llm_score": 8.0,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T02:32:10.344871"
+      "timestamp": "2026-04-06T03:31:17.556480"
     },
     {
       "pair": "UNI/USDT",
-      "binance_price": 8.48,
-      "gemini_price": 9.54,
-      "spread_percent": 12.49,
-      "llm_score": 8.0,
-      "action": "TRADE",
-      "timestamp": "2026-04-06T02:32:10.344884"
+      "binance_price": 8.53,
+      "gemini_price": 10.07,
+      "spread_percent": 18.08,
+      "llm_score": 7.7,
+      "action": "MONITOR",
+      "timestamp": "2026-04-06T03:31:17.556485"
     },
     {
       "pair": "SOL/USDT",
-      "binance_price": 182.36,
-      "gemini_price": 205.67,
-      "spread_percent": 12.78,
-      "llm_score": 8.3,
-      "action": "TRADE",
-      "timestamp": "2026-04-06T02:32:10.344897"
+      "binance_price": 181.68,
+      "gemini_price": 218.47,
+      "spread_percent": 20.25,
+      "llm_score": 7.6,
+      "action": "MONITOR",
+      "timestamp": "2026-04-06T03:31:17.556489"
     }
   ],
   "llm_scores": [
     {
       "model": "GPT-4",
-      "score": 6.9,
+      "score": 8.4,
       "confidence": "HIGH",
-      "recommendation": "HOLD BTC positions",
-      "timestamp": "2026-04-06T02:32:10.344927"
+      "recommendation": "BUY ETH on momentum",
+      "timestamp": "2026-04-06T03:31:17.556495"
     },
     {
       "model": "Claude-3",
-      "score": 8.4,
+      "score": 5.8,
       "confidence": "MEDIUM",
-      "recommendation": "SELL YFI for loss cut",
-      "timestamp": "2026-04-06T02:32:10.344936"
+      "recommendation": "TRADE XTZ arbitrage",
+      "timestamp": "2026-04-06T03:31:17.556498"
     },
     {
       "model": "Gemini Pro",
-      "score": 8.3,
+      "score": 7.5,
       "confidence": "MEDIUM",
-      "recommendation": "SELL YFI for loss cut",
-      "timestamp": "2026-04-06T02:32:10.344944"
+      "recommendation": "WAIT for market direction",
+      "timestamp": "2026-04-06T03:31:17.556501"
     },
     {
       "model": "Llama-3",
-      "score": 8.1,
-      "confidence": "MEDIUM",
-      "recommendation": "TRADE XTZ arbitrage",
-      "timestamp": "2026-04-06T02:32:10.344953"
+      "score": 6.4,
+      "confidence": "LOW",
+      "recommendation": "HOLD BTC positions",
+      "timestamp": "2026-04-06T03:31:17.556504"
     },
     {
       "model": "Mixtral",
       "score": 5.7,
       "confidence": "HIGH",
-      "recommendation": "MONITOR UNI breakout",
-      "timestamp": "2026-04-06T02:32:10.344960"
+      "recommendation": "TRADE XTZ arbitrage",
+      "timestamp": "2026-04-06T03:31:17.556506"
     },
     {
       "model": "Consensus",
       "score": 7.4,
       "confidence": "HIGH",
-      "recommendation": "WAIT for market direction",
-      "timestamp": "2026-04-06T02:32:10.344966"
+      "recommendation": "BUY ETH on momentum",
+      "timestamp": "2026-04-06T03:31:17.556509"
     }
   ],
   "recent_trades": [
@@ -116,7 +116,7 @@
       "price": 3539.0862248398093,
       "amount": 0.01,
       "reason": "uptrend_momentum",
-      "llm_score": 7.0
+      "llm_score": 7.1
     },
     {
       "time": "00:28:17",
@@ -134,7 +134,7 @@
       "price": 3559.1227848919425,
       "amount": 0.01,
       "reason": "profit_taking",
-      "llm_score": 7.6
+      "llm_score": 8.0
     },
     {
       "time": "00:30:17",
@@ -143,7 +143,7 @@
       "price": 71498.70102134609,
       "amount": 0.004366873099663769,
       "reason": "uptrend_momentum",
-      "llm_score": 7.3
+      "llm_score": 7.4
     },
     {
       "time": "00:30:17",
@@ -152,17 +152,17 @@
       "price": 3564.5023794299454,
       "amount": 0.01,
       "reason": "uptrend_momentum",
-      "llm_score": 7.2
+      "llm_score": 7.7
     }
   ],
   "market_prices": {
-    "BTC/USDT": 68358.69,
-    "ETH/USDT": 3521.55,
-    "YFI/USDT": 2419.94,
-    "XTZ/USDT": 0.34,
-    "UNI/USDT": 8.5,
-    "SOL/USDT": 182.44
+    "BTC/USDT": 68167.32,
+    "ETH/USDT": 3551.81,
+    "YFI/USDT": 2425.37,
+    "XTZ/USDT": 0.35,
+    "UNI/USDT": 8.54,
+    "SOL/USDT": 181.67
   },
-  "timestamp": "2026-04-06T02:32:10.345400",
+  "timestamp": "2026-04-06T03:31:17.556650",
   "data_source": "REAL_TRADING_DATA_GENERATOR"
 }

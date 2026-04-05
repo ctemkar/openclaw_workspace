@@ -4,108 +4,119 @@ import ollama
 import pandas as pd
 import time
 import re
+import json
+import os
 from datetime import datetime, timedelta
 
-st.set_page_config(page_title="AI Shadow Engine", layout="wide")
-st.title("🕵️‍♂️ AI SHADOW ATTRIBUTION ENGINE (5-MIN WINDOW)")
+st.set_page_config(page_title="AI CIO Terminal", layout="wide")
+st.title("⚖️ THE CIO ENSEMBLE: 50-ASSET SHADOW TERMINAL")
 
-binance = ccxt.binance({
-    'apiKey': 'ecTeKrOgmLbP1HspJsXCU5Wf6TKSlE6PmTNZfKWbmjFA9koTx3T29xvcDnguYaf6',
-    'secret': 'cLfkqqy4nLbp51Z8x4823FJ01317WwDTst8id2bMi5SEXJykiUag5IRn7kKhrilo',
-    'enableRateLimit': True
-})
+STATE_FILE = 'state.json'
+MODELS = ['llama3', 'phi4', 'mistral', 'deepseek-r1:7b', 'qwen2.5:7b', 'gemma2:9b', 'llama3.2', 'llama3.1']
+TOP_10 = ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'ADA/USDT', 'DOGE/USDT', 'LINK/USDT', 'AVAX/USDT', 'DOT/USDT', 'MATIC/USDT']
+
+def load_state():
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, 'r') as f:
+                data = json.load(f)
+                if "model_stats" in data: return data
+        except: pass
+    return {
+        "model_stats": {m: {"PL": 0.0, "Wins": 0, "Signals": 0} for m in MODELS},
+        "active_signals": [],
+        "last_scan": (datetime.now() - timedelta(minutes=10)).isoformat()
+    }
+
+def save_state(s):
+    with open(STATE_FILE, 'w') as f:
+        json.dump(s, f)
+
+binance = ccxt.binance({'apiKey': 'ecTeKrOgmLbP1HspJsXCU5Wf6TKSlE6PmTNZfKWbmjFA9koTx3T29xvcDnguYaf6', 'secret': 'cLfkqqy4nLbp51Z8x4823FJ01317WwDTst8id2bMi5SEXJykiUag5IRn7kKhrilo', 'enableRateLimit': True})
 binance.set_sandbox_mode(True)
 gemini = ccxt.gemini({'enableRateLimit': True})
 
-MODELS = ['llama3', 'phi4', 'mistral', 'deepseek-r1:7b', 'qwen2.5:7b', 'gemma2:9b', 'llama3.2', 'llama3.1']
+state = load_state()
 
-if 'model_stats' not in st.session_state:
-    st.session_state.model_stats = {m: {"Shadow_PL": 0.0, "Accuracy": 0.0, "Signals": 0} for m in MODELS}
-if 'active_signals' not in st.session_state:
-    st.session_state.active_signals = []
-
-m1, m2, m3, m4 = st.columns(4)
-b_metric = m1.empty()
-g_metric = m2.empty()
-s_metric = m3.empty()
-a_metric = m4.empty()
+m1, m2, m3 = st.columns(3)
+scan_status = m1.empty()
+active_ticker = m2.empty()
+spread_ticker = m3.empty()
 
 st.divider()
-st.subheader("🗳️ Current Consensus Vote (Real-Time)")
-votes_display = st.empty()
+col_lead, col_active = st.columns([3, 2])
+lead_table = col_lead.empty()
+active_df_display = col_active.empty()
 
-st.divider()
-col_lead, col_active = st.columns([1, 1])
-
-with col_lead:
-    st.subheader("🏆 Shadow Leaderboard")
-    leaderboard_display = st.empty()
-
-with col_active:
-    st.subheader("⏱️ Pending Signal Evaluation (5-Min Wait)")
-    pending_display = st.empty()
-
-def get_model_vote(model_name, bp, gp, spd):
-    prompt = f"Price B:{bp}, G:{gp}, Spread:{spd}%. Score 1-10 on Buy Binance. Number only."
+def get_clean_score(model, symbol, bp, gp, spd):
     try:
-        res = ollama.chat(model=model_name, messages=[{'role': 'user', 'content': prompt}])
-        score_text = res['message']['content']
-        score = float(re.findall(r"[-+]?\d*\.\d+|\d+", score_text)[0])
-        return min(max(score, 1.0), 10.0)
-    except:
-        return 5.0
+        res = ollama.chat(model=model, messages=[{'role': 'user', 'content': f"Asset:{symbol}, B:{bp}, G:{gp}, Spread:{spd}%. Score 1-10. Number only."}])
+        text = re.sub(r'<think>.*?</think>', '', res['message']['content'], flags=re.DOTALL)
+        nums = re.findall(r"[-+]?\d*\.\d+|\d+", text)
+        return min(max(float(nums[-1]), 1.0), 10.0) if nums else 5.0
+    except: return 5.0
+
+def render_ui(s):
+    df = pd.DataFrame.from_dict(s["model_stats"], orient='index')
+    df['Accuracy'] = (df['Wins'] / df['Signals']).fillna(0.0).round(4)
+    lead_table.table(df[['PL', 'Accuracy', 'Signals']].sort_values(by="PL", ascending=False))
+    if s["active_signals"]:
+        active_df_display.dataframe(pd.DataFrame(s["active_signals"])[['asset', 'model', 'expiry']])
+    else:
+        active_df_display.info("No active signals maturing.")
 
 while True:
     try:
-        btick = binance.fetch_ticker('BTC/USDT')
-        gtick = gemini.fetch_ticker('BTC/USD')
-        bp, gp = btick['last'], gtick['last']
-        spd = round(((gp - bp) / bp) * 100, 4)
+        now = datetime.now()
+        render_ui(state)
         
-        b_metric.metric("Binance BTC", f"${bp}")
-        g_metric.metric("Gemini BTC", f"${gp}")
-        s_metric.metric("Spread %", f"{spd}%")
-        
-        votes = {m: get_model_vote(m, bp, gp, spd) for m in MODELS}
-        a_metric.metric("Avg Score", round(sum(votes.values())/8, 2))
-
-        votes_df = pd.DataFrame([votes])
-        votes_display.dataframe(votes_df)
-
-        for m, score in votes.items():
-            if score >= 7.0:
-                st.session_state.active_signals.append({
-                    "model": m,
-                    "entry_price": bp,
-                    "expiry": datetime.now() + timedelta(minutes=5),
-                    "score": score
-                })
-        
-        current_time = datetime.now()
-        remaining_signals = []
-        for sig in st.session_state.active_signals:
-            if current_time >= sig['expiry']:
-                profit = (bp - sig['entry_price']) * (25.0 / sig['entry_price'])
-                st.session_state.model_stats[sig['model']]["Shadow_PL"] += profit
-                st.session_state.model_stats[sig['model']]["Signals"] += 1
-                wins = 1 if profit > 0 else 0
-                total_sigs = st.session_state.model_stats[sig['model']]["Signals"]
-                current_acc = st.session_state.model_stats[sig['model']]["Accuracy"]
-                st.session_state.model_stats[sig['model']]["Accuracy"] = round(((current_acc * (total_sigs - 1)) + wins) / total_sigs, 4)
+        matured = False
+        remaining = []
+        for sig in state["active_signals"]:
+            if now >= datetime.fromisoformat(sig['expiry']):
+                matured = True
+                curr = binance.fetch_ticker(sig['asset'])['last']
+                profit = (curr - sig['entry']) * (25.0 / sig['entry'])
+                m = sig['model']
+                state["model_stats"][m]["PL"] += profit
+                state["model_stats"][m]["Signals"] += 1
+                if profit > 0: state["model_stats"][m]["Wins"] += 1
             else:
-                remaining_signals.append(sig)
-        
-        st.session_state.active_signals = remaining_signals
+                remaining.append(sig)
+        state["active_signals"] = remaining
+        if matured: 
+            save_state(state)
+            render_ui(state)
 
-        leader_df = pd.DataFrame.from_dict(st.session_state.model_stats, orient='index').astype(float)
-        leaderboard_display.table(leader_df.sort_values(by="Shadow_PL", ascending=False))
-        
-        if st.session_state.active_signals:
-            pending_df = pd.DataFrame(st.session_state.active_signals)
-            pending_display.dataframe(pending_df[['model', 'entry_price', 'score', 'expiry']])
+        last_scan = datetime.fromisoformat(state["last_scan"])
+        if (now - last_scan).total_seconds() > 300:
+            with st.status("🚀 Scanning Markets...", expanded=True) as status:
+                for symbol in TOP_10:
+                    try:
+                        status.write(f"Analyzing {symbol}...")
+                        bt = binance.fetch_ticker(symbol)
+                        gt = gemini.fetch_ticker(symbol.replace('/USDT', '/USD'))
+                        bp, gp = bt['last'], gt['last']
+                        spd = round(((gp - bp) / bp) * 100, 4)
+                        active_ticker.metric("Active Asset", symbol)
+                        spread_ticker.metric("Current Spread", f"{spd}%")
+                        if abs(spd) > 0.05:
+                            for m in MODELS:
+                                score = get_clean_score(m, symbol, bp, gp, spd)
+                                if score >= 7.0:
+                                    state["active_signals"].append({
+                                        "asset": symbol, "model": m, "entry": bp,
+                                        "expiry": (datetime.now() + timedelta(minutes=5)).isoformat(), "score": score
+                                    })
+                                    render_ui(state)
+                        save_state(state)
+                    except: continue
+                state["last_scan"] = datetime.now().isoformat()
+                save_state(state)
+                status.update(label="✅ Scan Complete", state="complete")
         else:
-            pending_display.write("Waiting for high-confidence signals to enter waitlist...")
+            scan_status.warning(f"⏳ IDLE: Next scan in {int(300 - (now - last_scan).total_seconds())}s")
 
-        time.sleep(20)
+        time.sleep(10)
     except Exception as e:
         time.sleep(10)
