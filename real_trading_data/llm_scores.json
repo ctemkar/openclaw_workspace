@@ -1,44 +1,44 @@
 [
   {
     "model": "GPT-4",
-    "score": 5.4,
+    "score": 6.9,
     "confidence": "HIGH",
     "recommendation": "HOLD BTC positions",
-    "timestamp": "2026-04-06T02:30:40.176927"
+    "timestamp": "2026-04-06T02:32:10.344927"
   },
   {
     "model": "Claude-3",
-    "score": 6.5,
+    "score": 8.4,
     "confidence": "MEDIUM",
-    "recommendation": "MONITOR UNI breakout",
-    "timestamp": "2026-04-06T02:30:40.176932"
+    "recommendation": "SELL YFI for loss cut",
+    "timestamp": "2026-04-06T02:32:10.344936"
   },
   {
     "model": "Gemini Pro",
-    "score": 6.4,
+    "score": 8.3,
     "confidence": "MEDIUM",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T02:30:40.176934"
+    "recommendation": "SELL YFI for loss cut",
+    "timestamp": "2026-04-06T02:32:10.344944"
   },
   {
     "model": "Llama-3",
-    "score": 5.5,
-    "confidence": "HIGH",
+    "score": 8.1,
+    "confidence": "MEDIUM",
     "recommendation": "TRADE XTZ arbitrage",
-    "timestamp": "2026-04-06T02:30:40.176935"
+    "timestamp": "2026-04-06T02:32:10.344953"
   },
   {
     "model": "Mixtral",
-    "score": 7.8,
-    "confidence": "LOW",
-    "recommendation": "SELL YFI for loss cut",
-    "timestamp": "2026-04-06T02:30:40.176937"
+    "score": 5.7,
+    "confidence": "HIGH",
+    "recommendation": "MONITOR UNI breakout",
+    "timestamp": "2026-04-06T02:32:10.344960"
   },
   {
     "model": "Consensus",
     "score": 7.4,
     "confidence": "HIGH",
-    "recommendation": "HOLD BTC positions",
-    "timestamp": "2026-04-06T02:30:40.176938"
+    "recommendation": "WAIT for market direction",
+    "timestamp": "2026-04-06T02:32:10.344966"
   }
 ]

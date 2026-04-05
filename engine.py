@@ -6,7 +6,7 @@ import time
 import re
 from datetime import datetime, timedelta
 
-st.set_page_config(page_title="AI Shadow Leaderboard", layout="wide")
+st.set_page_config(page_title="AI Shadow Engine", layout="wide")
 st.title("🕵️‍♂️ AI SHADOW ATTRIBUTION ENGINE (5-MIN WINDOW)")
 
 binance = ccxt.binance({
@@ -31,6 +31,10 @@ s_metric = m3.empty()
 a_metric = m4.empty()
 
 st.divider()
+st.subheader("🗳️ Current Consensus Vote (Real-Time)")
+votes_display = st.empty()
+
+st.divider()
 col_lead, col_active = st.columns([1, 1])
 
 with col_lead:
@@ -38,7 +42,7 @@ with col_lead:
     leaderboard_display = st.empty()
 
 with col_active:
-    st.subheader("⏱️ Pending Signal Evaluation")
+    st.subheader("⏱️ Pending Signal Evaluation (5-Min Wait)")
     pending_display = st.empty()
 
 def get_model_vote(model_name, bp, gp, spd):
@@ -65,6 +69,9 @@ while True:
         votes = {m: get_model_vote(m, bp, gp, spd) for m in MODELS}
         a_metric.metric("Avg Score", round(sum(votes.values())/8, 2))
 
+        votes_df = pd.DataFrame([votes])
+        votes_display.dataframe(votes_df)
+
         for m, score in votes.items():
             if score >= 7.0:
                 st.session_state.active_signals.append({
@@ -81,6 +88,10 @@ while True:
                 profit = (bp - sig['entry_price']) * (25.0 / sig['entry_price'])
                 st.session_state.model_stats[sig['model']]["Shadow_PL"] += profit
                 st.session_state.model_stats[sig['model']]["Signals"] += 1
+                wins = 1 if profit > 0 else 0
+                total_sigs = st.session_state.model_stats[sig['model']]["Signals"]
+                current_acc = st.session_state.model_stats[sig['model']]["Accuracy"]
+                st.session_state.model_stats[sig['model']]["Accuracy"] = round(((current_acc * (total_sigs - 1)) + wins) / total_sigs, 4)
             else:
                 remaining_signals.append(sig)
         
@@ -89,11 +100,11 @@ while True:
         leader_df = pd.DataFrame.from_dict(st.session_state.model_stats, orient='index').astype(float)
         leaderboard_display.table(leader_df.sort_values(by="Shadow_PL", ascending=False))
         
-        pending_df = pd.DataFrame(st.session_state.active_signals)
-        if not pending_df.empty:
-            pending_display.dataframe(pending_df[['model', 'entry_price', 'score']])
+        if st.session_state.active_signals:
+            pending_df = pd.DataFrame(st.session_state.active_signals)
+            pending_display.dataframe(pending_df[['model', 'entry_price', 'score', 'expiry']])
         else:
-            pending_display.write("Waiting for high-confidence signals...")
+            pending_display.write("Waiting for high-confidence signals to enter waitlist...")
 
         time.sleep(20)
     except Exception as e:
