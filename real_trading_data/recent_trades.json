@@ -15,7 +15,7 @@
     "price": 71367.25611391761,
     "amount": 0.004579194399760097,
     "reason": "uptrend_momentum",
-    "llm_score": 7.2
+    "llm_score": 7.3
   },
   {
     "time": "00:28:17",
@@ -33,7 +33,7 @@
     "price": 71498.70102134609,
     "amount": 0.004366873099663769,
     "reason": "uptrend_momentum",
-    "llm_score": 6.9
+    "llm_score": 7.0
   },
   {
     "time": "00:30:17",
@@ -42,6 +42,6 @@
     "price": 3564.5023794299454,
     "amount": 0.01,
     "reason": "uptrend_momentum",
-    "llm_score": 7.5
+    "llm_score": 7.2
   }
 ]
