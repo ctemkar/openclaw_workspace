@@ -2,110 +2,110 @@
   "trading_metrics": {
     "virtual_balance": 5896.3,
     "total_trades": 24,
-    "win_rate": 62.8,
-    "avg_pnl": -21.75,
+    "win_rate": 54.9,
+    "avg_pnl": -1.87,
     "active_positions": 1,
     "market_sentiment": "BULLISH",
-    "timestamp": "2026-04-06T07:36:47.583994"
+    "timestamp": "2026-04-06T07:37:47.941042"
   },
   "spread_analysis": [
     {
       "pair": "BTC/USDT",
-      "binance_price": 68983.98,
-      "gemini_price": 105156.2,
-      "spread_percent": 52.44,
-      "llm_score": 7.7,
+      "binance_price": 68988.19,
+      "gemini_price": 105296.45,
+      "spread_percent": 52.63,
+      "llm_score": 7.0,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T07:36:47.584128"
+      "timestamp": "2026-04-06T07:37:47.941133"
     },
     {
       "pair": "ETH/USDT",
-      "binance_price": 3413.04,
-      "gemini_price": 5598.17,
-      "spread_percent": 64.02,
-      "llm_score": 7.8,
+      "binance_price": 3414.79,
+      "gemini_price": 5598.53,
+      "spread_percent": 63.95,
+      "llm_score": 7.4,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T07:36:47.584157"
+      "timestamp": "2026-04-06T07:37:47.941148"
     },
     {
       "pair": "YFI/USDT",
-      "binance_price": 2402.96,
-      "gemini_price": 3654.47,
-      "spread_percent": 52.08,
-      "llm_score": 8.1,
-      "action": "TRADE",
-      "timestamp": "2026-04-06T07:36:47.584171"
+      "binance_price": 2397.4,
+      "gemini_price": 3653.23,
+      "spread_percent": 52.38,
+      "llm_score": 7.8,
+      "action": "MONITOR",
+      "timestamp": "2026-04-06T07:37:47.941154"
     },
     {
       "pair": "XTZ/USDT",
       "binance_price": 0.35,
       "gemini_price": 0.56,
-      "spread_percent": 60.17,
-      "llm_score": 8.0,
+      "spread_percent": 60.26,
+      "llm_score": 8.3,
       "action": "TRADE",
-      "timestamp": "2026-04-06T07:36:47.584192"
+      "timestamp": "2026-04-06T07:37:47.941164"
     },
     {
       "pair": "UNI/USDT",
       "binance_price": 8.67,
-      "gemini_price": 12.54,
-      "spread_percent": 44.58,
-      "llm_score": 7.8,
+      "gemini_price": 12.58,
+      "spread_percent": 45.14,
+      "llm_score": 7.5,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T07:36:47.584204"
+      "timestamp": "2026-04-06T07:37:47.941174"
     },
     {
       "pair": "SOL/USDT",
-      "binance_price": 176.16,
-      "gemini_price": 290.84,
-      "spread_percent": 65.1,
-      "llm_score": 7.9,
+      "binance_price": 176.29,
+      "gemini_price": 290.8,
+      "spread_percent": 64.95,
+      "llm_score": 7.7,
       "action": "MONITOR",
-      "timestamp": "2026-04-06T07:36:47.584217"
+      "timestamp": "2026-04-06T07:37:47.941179"
     }
   ],
   "llm_scores": [
     {
       "model": "GPT-4",
-      "score": 6.6,
+      "score": 6.8,
       "confidence": "HIGH",
-      "recommendation": "WAIT for market direction",
-      "timestamp": "2026-04-06T07:36:47.584243"
+      "recommendation": "HOLD BTC positions",
+      "timestamp": "2026-04-06T07:37:47.941195"
     },
     {
       "model": "Claude-3",
-      "score": 5.8,
+      "score": 6.1,
       "confidence": "MEDIUM",
-      "recommendation": "HOLD BTC positions",
-      "timestamp": "2026-04-06T07:36:47.584251"
+      "recommendation": "SELL YFI for loss cut",
+      "timestamp": "2026-04-06T07:37:47.941198"
     },
     {
       "model": "Gemini Pro",
-      "score": 8.0,
+      "score": 6.2,
       "confidence": "MEDIUM",
-      "recommendation": "HOLD BTC positions",
-      "timestamp": "2026-04-06T07:36:47.584258"
+      "recommendation": "TRADE XTZ arbitrage",
+      "timestamp": "2026-04-06T07:37:47.941201"
     },
     {
       "model": "Llama-3",
-      "score": 8.2,
-      "confidence": "LOW",
-      "recommendation": "WAIT for market direction",
-      "timestamp": "2026-04-06T07:36:47.584280"
+      "score": 6.3,
+      "confidence": "HIGH",
+      "recommendation": "BUY ETH on momentum",
+      "timestamp": "2026-04-06T07:37:47.941204"
     },
     {
       "model": "Mixtral",
-      "score": 8.4,
+      "score": 7.7,
       "confidence": "HIGH",
-      "recommendation": "MONITOR UNI breakout",
-      "timestamp": "2026-04-06T07:36:47.584287"
+      "recommendation": "TRADE XTZ arbitrage",
+      "timestamp": "2026-04-06T07:37:47.941207"
     },
     {
       "model": "Consensus",
       "score": 7.4,
       "confidence": "HIGH",
       "recommendation": "HOLD BTC positions",
-      "timestamp": "2026-04-06T07:36:47.584294"
+      "timestamp": "2026-04-06T07:37:47.941210"
     }
   ],
   "recent_trades": [
@@ -116,7 +116,7 @@
       "price": 3539.0862248398093,
       "amount": 0.01,
       "reason": "uptrend_momentum",
-      "llm_score": 7.3
+      "llm_score": 7.1
     },
     {
       "time": "00:28:17",
@@ -125,7 +125,7 @@
       "price": 71367.25611391761,
       "amount": 0.004579194399760097,
       "reason": "uptrend_momentum",
-      "llm_score": 7.4
+      "llm_score": 7.2
     },
     {
       "time": "00:28:17",
@@ -134,7 +134,7 @@
       "price": 3559.1227848919425,
       "amount": 0.01,
       "reason": "profit_taking",
-      "llm_score": 7.6
+      "llm_score": 7.3
     },
     {
       "time": "00:30:17",
@@ -143,7 +143,7 @@
       "price": 71498.70102134609,
       "amount": 0.004366873099663769,
       "reason": "uptrend_momentum",
-      "llm_score": 7.6
+      "llm_score": 6.9
     },
     {
       "time": "00:30:17",
@@ -152,17 +152,17 @@
       "price": 3564.5023794299454,
       "amount": 0.01,
       "reason": "uptrend_momentum",
-      "llm_score": 7.6
+      "llm_score": 7.5
     }
   ],
   "market_prices": {
-    "BTC/USDT": 68960.32,
-    "ETH/USDT": 3419.69,
-    "YFI/USDT": 2399.45,
+    "BTC/USDT": 69042.94,
+    "ETH/USDT": 3410.49,
+    "YFI/USDT": 2398.95,
     "XTZ/USDT": 0.35,
-    "UNI/USDT": 8.67,
-    "SOL/USDT": 176.45
+    "UNI/USDT": 8.66,
+    "SOL/USDT": 176.55
   },
-  "timestamp": "2026-04-06T07:36:47.584711",
+  "timestamp": "2026-04-06T07:37:47.941483",
   "data_source": "REAL_TRADING_DATA_GENERATOR"
 }
