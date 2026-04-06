@@ -1,0 +1,11 @@
+{
+  "models": {
+    "analysis": "gpt-oss-120b",
+    "execution": "llama-4-scout",
+    "voice_control": "whisper-large-v3-turbo"
+  },
+  "endpoints": {
+    "schwab": "https://api.schwab.com/v1",
+    "gemini": "https://api.gemini.com/v1"
+  }
+}

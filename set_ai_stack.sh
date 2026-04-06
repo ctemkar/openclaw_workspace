@@ -1,0 +1,7 @@
+export AI_REASONING="gpt-oss-120b"
+export AI_TOOLS="llama-4-scout"
+export AI_VISION="llama-4-scout"
+export AI_STT="whisper-large-v3-turbo"
+export AI_TTS="orpheus-english"
+export AI_LANG="llama-4-scout"
+printf "AI Stack configurations updated for zsh session\n"
