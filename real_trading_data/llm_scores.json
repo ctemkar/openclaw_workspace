@@ -1,44 +1,44 @@
 [
   {
     "model": "GPT-4",
-    "score": 5.5,
+    "score": 6.6,
     "confidence": "HIGH",
-    "recommendation": "MONITOR UNI breakout",
-    "timestamp": "2026-04-06T06:36:32.846536"
+    "recommendation": "WAIT for market direction",
+    "timestamp": "2026-04-06T07:36:47.584243"
   },
   {
     "model": "Claude-3",
-    "score": 9.1,
+    "score": 5.8,
     "confidence": "MEDIUM",
     "recommendation": "HOLD BTC positions",
-    "timestamp": "2026-04-06T06:36:32.846540"
+    "timestamp": "2026-04-06T07:36:47.584251"
   },
   {
     "model": "Gemini Pro",
-    "score": 6.7,
+    "score": 8.0,
     "confidence": "MEDIUM",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T06:36:32.846543"
+    "recommendation": "HOLD BTC positions",
+    "timestamp": "2026-04-06T07:36:47.584258"
   },
   {
     "model": "Llama-3",
-    "score": 7.2,
-    "confidence": "HIGH",
-    "recommendation": "TRADE XTZ arbitrage",
-    "timestamp": "2026-04-06T06:36:32.846546"
+    "score": 8.2,
+    "confidence": "LOW",
+    "recommendation": "WAIT for market direction",
+    "timestamp": "2026-04-06T07:36:47.584280"
   },
   {
     "model": "Mixtral",
-    "score": 8.2,
+    "score": 8.4,
     "confidence": "HIGH",
-    "recommendation": "WAIT for market direction",
-    "timestamp": "2026-04-06T06:36:32.846549"
+    "recommendation": "MONITOR UNI breakout",
+    "timestamp": "2026-04-06T07:36:47.584287"
   },
   {
     "model": "Consensus",
     "score": 7.4,
     "confidence": "HIGH",
-    "recommendation": "TRADE XTZ arbitrage",
-    "timestamp": "2026-04-06T06:36:32.846552"
+    "recommendation": "HOLD BTC positions",
+    "timestamp": "2026-04-06T07:36:47.584294"
   }
 ]
