@@ -1,9 +1,9 @@
 {
   "virtual_balance": 5896.3,
   "total_trades": 24,
-  "win_rate": 56.6,
-  "avg_pnl": -12.5,
+  "win_rate": 62.3,
+  "avg_pnl": -2.29,
   "active_positions": 3,
-  "market_sentiment": "BULLISH",
-  "timestamp": "2026-04-06T09:38:19.742687"
+  "market_sentiment": "NEUTRAL",
+  "timestamp": "2026-04-06T09:39:50.248082"
 }
