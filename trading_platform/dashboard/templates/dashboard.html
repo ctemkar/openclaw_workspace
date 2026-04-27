@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Platform Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .pnl-positive { color: #10b981; }
+    .pnl-negative { color: #ef4444; }
+    .pnl-zero     { color: #6b7280; }
+    .badge-open       { background:#d1fae5; color:#065f46; }
+    .badge-flatten    { background:#fef9c3; color:#713f12; }
+    .badge-pre        { background:#dbeafe; color:#1e40af; }
+    .badge-lunch      { background:#f3e8ff; color:#6b21a8; }
+    .badge-closed     { background:#f3f4f6; color:#374151; }
+    .badge-holiday    { background:#fce7f3; color:#9d174d; }
+    .badge-circuit    { background:#fee2e2; color:#7f1d1d; }
+    #pnlChart { width:100%; height:140px; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-mono min-h-screen">
+
+<!-- Header -->
+<header class="bg-gray-900 border-b border-gray-700 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-3">
+    <span class="text-green-400 text-xl font-bold">⬡ OpenClaw</span>
+    <span class="text-gray-400 text-sm">Day Trading Platform</span>
+  </div>
+  <div class="flex items-center gap-4 text-sm">
+    <span id="sessionBadge" class="px-3 py-1 rounded-full text-xs font-bold badge-closed">● CLOSED</span>
+    <span id="clock" class="text-gray-400">--:--:--</span>
+    <span id="lastUpdate" class="text-gray-600 text-xs">never</span>
+  </div>
+</header>
+
+<!-- Alerts -->
+<div id="alertsBar" class="hidden bg-red-900 border-b border-red-700 px-6 py-2 text-red-200 text-sm"></div>
+
+<!-- Main Grid -->
+<main class="p-4 grid grid-cols-12 gap-4">
+
+  <!-- Account Summary Row -->
+  <section class="col-span-12 grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-3">
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Equity</p>
+      <p id="acctEquity" class="text-lg font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Cash</p>
+      <p id="acctCash" class="text-lg font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Buying Power</p>
+      <p id="acctBP" class="text-lg font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Daily P&L</p>
+      <p id="acctDailyPnl" class="text-lg font-bold">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Unrealized P&L</p>
+      <p id="acctUnrealized" class="text-lg font-bold">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Realized P&L</p>
+      <p id="acctRealized" class="text-lg font-bold">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Portfolio Value</p>
+      <p id="acctPortfolio" class="text-lg font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Positions</p>
+      <p id="acctPositions" class="text-lg font-bold text-white">—</p>
+    </div>
+  </section>
+
+  <!-- Metrics Row -->
+  <section class="col-span-12 grid grid-cols-3 sm:grid-cols-6 xl:grid-cols-8 gap-3">
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Win Rate</p>
+      <p id="mWinRate" class="text-base font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Trades</p>
+      <p id="mTrades" class="text-base font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Avg Win</p>
+      <p id="mAvgWin" class="text-base font-bold pnl-positive">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Avg Loss</p>
+      <p id="mAvgLoss" class="text-base font-bold pnl-negative">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Expectancy</p>
+      <p id="mExpectancy" class="text-base font-bold">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Sharpe</p>
+      <p id="mSharpe" class="text-base font-bold text-white">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Max DD</p>
+      <p id="mMaxDD" class="text-base font-bold pnl-negative">—</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-3 border border-gray-800">
+      <p class="text-gray-500 text-xs">Avg Slip (bps)</p>
+      <p id="mSlip" class="text-base font-bold text-white">—</p>
+    </div>
+  </section>
+
+  <!-- Positions Table -->
+  <section class="col-span-12 xl:col-span-8 bg-gray-900 rounded-lg border border-gray-800 overflow-hidden">
+    <div class="px-4 py-2 border-b border-gray-800 flex items-center justify-between">
+      <h2 class="text-sm font-bold text-gray-300">Open Positions</h2>
+      <span id="posCount" class="text-xs text-gray-500">0 positions</span>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="text-gray-500 text-xs border-b border-gray-800">
+            <th class="px-4 py-2 text-left">Symbol</th>
+            <th class="px-4 py-2 text-right">Qty</th>
+            <th class="px-4 py-2 text-right">Entry</th>
+            <th class="px-4 py-2 text-right">Current</th>
+            <th class="px-4 py-2 text-right">Unrealized P&L</th>
+            <th class="px-4 py-2 text-right">Realized P&L</th>
+          </tr>
+        </thead>
+        <tbody id="positionsBody">
+          <tr><td colspan="6" class="px-4 py-6 text-center text-gray-600">No open positions</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- P&L Sparkline -->
+  <section class="col-span-12 xl:col-span-4 bg-gray-900 rounded-lg border border-gray-800 p-4">
+    <h2 class="text-sm font-bold text-gray-300 mb-3">Session P&L</h2>
+    <canvas id="pnlChart"></canvas>
+  </section>
+
+  <!-- Recent Fills -->
+  <section class="col-span-12 xl:col-span-6 bg-gray-900 rounded-lg border border-gray-800 overflow-hidden">
+    <div class="px-4 py-2 border-b border-gray-800">
+      <h2 class="text-sm font-bold text-gray-300">Recent Fills</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="text-gray-500 text-xs border-b border-gray-800">
+            <th class="px-4 py-2 text-left">Time</th>
+            <th class="px-4 py-2 text-left">Symbol</th>
+            <th class="px-4 py-2 text-left">Side</th>
+            <th class="px-4 py-2 text-right">Qty</th>
+            <th class="px-4 py-2 text-right">Price</th>
+            <th class="px-4 py-2 text-left">Strategy</th>
+          </tr>
+        </thead>
+        <tbody id="fillsBody">
+          <tr><td colspan="6" class="px-4 py-6 text-center text-gray-600">No fills yet</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Rejection Stats -->
+  <section class="col-span-12 xl:col-span-6 bg-gray-900 rounded-lg border border-gray-800 p-4">
+    <h2 class="text-sm font-bold text-gray-300 mb-3">Execution Quality</h2>
+    <div class="grid grid-cols-2 gap-3 text-sm">
+      <div>
+        <p class="text-gray-500 text-xs">Rejections</p>
+        <p id="eqRejections" class="font-bold text-white">—</p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xs">Rejection Rate</p>
+        <p id="eqRejRate" class="font-bold text-white">—</p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xs">Gross P&L</p>
+        <p id="eqGrossPnl" class="font-bold">—</p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xs">Net P&L</p>
+        <p id="eqNetPnl" class="font-bold">—</p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xs">Current Drawdown</p>
+        <p id="eqCurrDD" class="font-bold pnl-negative">—</p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xs">W / L</p>
+        <p id="eqWL" class="font-bold text-white">—</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const fmt = (v) => v == null ? '—' : v.toLocaleString('en-US', {style:'currency', currency:'USD', minimumFractionDigits:2});
+const fmtPct = (v) => v == null ? '—' : (v * 100).toFixed(2) + '%';
+const fmtN = (v) => v == null ? '—' : v.toFixed(2);
+
+function pnlClass(v) {
+  if (v > 0) return 'pnl-positive';
+  if (v < 0) return 'pnl-negative';
+  return 'pnl-zero';
+}
+
+const pnlHistory = [];
+
+function updateClock() {
+  document.getElementById('clock').textContent = new Date().toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function sessionBadgeClass(state) {
+  const m = {
+    OPEN:'badge-open', FLATTEN:'badge-flatten', PRE_MARKET:'badge-pre',
+    LUNCH:'badge-lunch', CLOSED:'badge-closed', HOLIDAY:'badge-holiday', UNKNOWN:'badge-closed'
+  };
+  return m[state] || 'badge-closed';
+}
+
+async function fetchStatus() {
+  try {
+    const r = await fetch('/api/status');
+    const d = await r.json();
+
+    document.getElementById('lastUpdate').textContent = 'updated ' + new Date().toLocaleTimeString();
+
+    // Session badge
+    const badge = document.getElementById('sessionBadge');
+    badge.textContent = '● ' + (d.session_state || 'UNKNOWN');
+    badge.className = 'px-3 py-1 rounded-full text-xs font-bold ' + sessionBadgeClass(d.session_state);
+
+    // Alerts
+    const alertsBar = document.getElementById('alertsBar');
+    if (d.alerts && d.alerts.length > 0) {
+      alertsBar.classList.remove('hidden');
+      alertsBar.innerHTML = d.alerts.map(a => `⚠ ${a}`).join(' &nbsp;|&nbsp; ');
+    } else {
+      alertsBar.classList.add('hidden');
+    }
+
+    // Account
+    const a = d.account || {};
+    document.getElementById('acctEquity').textContent = fmt(a.equity);
+    document.getElementById('acctCash').textContent = fmt(a.cash);
+    document.getElementById('acctBP').textContent = fmt(a.buying_power);
+    const dailyEl = document.getElementById('acctDailyPnl');
+    dailyEl.textContent = fmt(a.daily_pnl);
+    dailyEl.className = 'text-lg font-bold ' + pnlClass(a.daily_pnl);
+    const urEl = document.getElementById('acctUnrealized');
+    urEl.textContent = fmt(a.unrealized_pnl);
+    urEl.className = 'text-lg font-bold ' + pnlClass(a.unrealized_pnl);
+    const rEl = document.getElementById('acctRealized');
+    rEl.textContent = fmt(a.realized_pnl);
+    rEl.className = 'text-lg font-bold ' + pnlClass(a.realized_pnl);
+    document.getElementById('acctPortfolio').textContent = fmt(a.portfolio_value);
+    document.getElementById('acctPositions').textContent = a.positions_count ?? '—';
+
+    if (a.daily_pnl != null) {
+      pnlHistory.push(a.daily_pnl);
+      if (pnlHistory.length > 200) pnlHistory.shift();
+      drawChart();
+    }
+
+    // Positions
+    const tbody = document.getElementById('positionsBody');
+    document.getElementById('posCount').textContent = (d.positions || []).length + ' positions';
+    if (!d.positions || d.positions.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6" class="px-4 py-6 text-center text-gray-600">No open positions</td></tr>';
+    } else {
+      tbody.innerHTML = d.positions.map(p => `
+        <tr class="border-t border-gray-800 hover:bg-gray-800 transition-colors">
+          <td class="px-4 py-2 font-bold text-white">${p.symbol}</td>
+          <td class="px-4 py-2 text-right">${p.quantity}</td>
+          <td class="px-4 py-2 text-right text-gray-300">$${p.avg_entry_price}</td>
+          <td class="px-4 py-2 text-right text-gray-300">$${p.current_price}</td>
+          <td class="px-4 py-2 text-right font-semibold ${pnlClass(p.unrealized_pnl)}">${fmt(p.unrealized_pnl)}</td>
+          <td class="px-4 py-2 text-right font-semibold ${pnlClass(p.realized_pnl)}">${fmt(p.realized_pnl)}</td>
+        </tr>`).join('');
+    }
+
+    // Fills
+    const fbody = document.getElementById('fillsBody');
+    if (!d.recent_fills || d.recent_fills.length === 0) {
+      fbody.innerHTML = '<tr><td colspan="6" class="px-4 py-6 text-center text-gray-600">No fills yet</td></tr>';
+    } else {
+      fbody.innerHTML = [...d.recent_fills].reverse().map(f => `
+        <tr class="border-t border-gray-800 hover:bg-gray-800 transition-colors">
+          <td class="px-4 py-2 text-gray-400 text-xs">${new Date(f.timestamp).toLocaleTimeString()}</td>
+          <td class="px-4 py-2 font-bold text-white">${f.symbol}</td>
+          <td class="px-4 py-2 font-semibold ${f.side==='BUY'?'pnl-positive':'pnl-negative'}">${f.side}</td>
+          <td class="px-4 py-2 text-right">${f.quantity}</td>
+          <td class="px-4 py-2 text-right text-gray-300">$${f.price}</td>
+          <td class="px-4 py-2 text-gray-400 text-xs">${f.strategy_id||'—'}</td>
+        </tr>`).join('');
+    }
+  } catch(e) {
+    console.error('Status fetch error', e);
+  }
+}
+
+async function fetchMetrics() {
+  try {
+    const r = await fetch('/api/metrics');
+    const m = await r.json();
+    if (m.error) return;
+
+    document.getElementById('mWinRate').textContent = fmtPct(m.win_rate);
+    document.getElementById('mTrades').textContent = m.total_trades ?? '—';
+    document.getElementById('mAvgWin').textContent = fmt(m.avg_win);
+    document.getElementById('mAvgLoss').textContent = fmt(m.avg_loss);
+    const expEl = document.getElementById('mExpectancy');
+    expEl.textContent = fmt(m.expectancy);
+    expEl.className = 'text-base font-bold ' + pnlClass(m.expectancy);
+    document.getElementById('mSharpe').textContent = m.sharpe_ratio != null ? m.sharpe_ratio.toFixed(3) : '—';
+    document.getElementById('mMaxDD').textContent = fmtPct(m.max_drawdown);
+    document.getElementById('mSlip').textContent = m.avg_slippage_bps != null ? m.avg_slippage_bps.toFixed(1) : '—';
+
+    document.getElementById('eqRejections').textContent = m.rejection_count ?? '—';
+    document.getElementById('eqRejRate').textContent = fmtPct(m.rejection_rate);
+    const gEl = document.getElementById('eqGrossPnl');
+    gEl.textContent = fmt(m.gross_pnl);
+    gEl.className = 'font-bold ' + pnlClass(m.gross_pnl);
+    const nEl = document.getElementById('eqNetPnl');
+    nEl.textContent = fmt(m.net_pnl);
+    nEl.className = 'font-bold ' + pnlClass(m.net_pnl);
+    document.getElementById('eqCurrDD').textContent = fmtPct(m.current_drawdown);
+    document.getElementById('eqWL').textContent = `${m.winning_trades ?? 0} / ${m.losing_trades ?? 0}`;
+  } catch(e) {
+    console.error('Metrics fetch error', e);
+  }
+}
+
+function drawChart() {
+  const canvas = document.getElementById('pnlChart');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.clientWidth || 300;
+  const H = canvas.clientHeight || 120;
+  canvas.width = W; canvas.height = H;
+  ctx.clearRect(0,0,W,H);
+  if (pnlHistory.length < 2) return;
+
+  const min = Math.min(...pnlHistory);
+  const max = Math.max(...pnlHistory);
+  const range = max - min || 1;
+  const pad = 10;
+
+  ctx.beginPath();
+  pnlHistory.forEach((v, i) => {
+    const x = pad + (i / (pnlHistory.length - 1)) * (W - 2*pad);
+    const y = H - pad - ((v - min) / range) * (H - 2*pad);
+    i === 0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+  });
+  const lastVal = pnlHistory[pnlHistory.length-1];
+  ctx.strokeStyle = lastVal >= 0 ? '#10b981' : '#ef4444';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Zero line
+  const zeroY = H - pad - ((0 - min) / range) * (H - 2*pad);
+  ctx.beginPath();
+  ctx.moveTo(pad, zeroY); ctx.lineTo(W-pad, zeroY);
+  ctx.strokeStyle = 'rgba(156,163,175,0.3)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4,4]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+async function refresh() {
+  await fetchStatus();
+  await fetchMetrics();
+}
+
+refresh();
+setInterval(refresh, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+exchange:
+  name: Euronext
+  timezone: Europe/Paris
+  open_time: "09:00"
+  close_time: "17:30"
+  pre_open_time: "08:00"
+  lunch_start: "12:30"
+  lunch_end: "13:00"
+  entry_cutoff_time: "17:15"
+  flatten_before_close_mins: 15
+  holidays: []
+  allow_overnight: false
+
+broker:
+  adapter: paper
+  paper_initial_capital: 100000.0
+
+risk:
+  max_daily_loss_pct: 2.0
+  max_per_trade_risk_pct: 1.0
+  max_per_symbol_pct: 10.0
+  max_portfolio_concentration_pct: 25.0
+  max_concurrent_positions: 10
+  kill_switch: false
+  atr_period: 14
+  atr_multiplier: 2.0
+
+strategy:
+  enabled_strategies:
+    - momentum
+    - mean_reversion
+  symbol_universe:
+    - AMS.AS
+    - MC.PA
+    - OR.PA
+    - SAN.PA
+    - TTE.PA
+    - BNP.PA
+    - ASML.AS
+    - SAP.DE
+    - SIE.DE
+    - ALV.DE
+  min_volume: 1000000.0
+  min_price: 5.0
+
+execution:
+  max_retries: 3
+  retry_backoff_seconds: 0.5
+  time_in_force: DAY
+
+data:
+  primary_feed: polygon
+  freshness_threshold_seconds: 30
+  heartbeat_interval_seconds: 10
+
+dashboard:
+  host: "0.0.0.0"
+  port: 8080
+
+mode: paper

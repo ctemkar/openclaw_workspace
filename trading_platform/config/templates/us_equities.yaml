@@ -1,0 +1,61 @@
+exchange:
+  name: NYSE/NASDAQ
+  timezone: America/New_York
+  open_time: "09:30"
+  close_time: "16:00"
+  pre_open_time: "09:00"
+  entry_cutoff_time: "15:45"
+  flatten_before_close_mins: 15
+  holidays: []
+  allow_overnight: false
+
+broker:
+  adapter: paper
+  paper_initial_capital: 100000.0
+
+risk:
+  max_daily_loss_pct: 2.0
+  max_per_trade_risk_pct: 1.0
+  max_per_symbol_pct: 10.0
+  max_portfolio_concentration_pct: 25.0
+  max_concurrent_positions: 10
+  kill_switch: false
+  atr_period: 14
+  atr_multiplier: 2.0
+
+strategy:
+  enabled_strategies:
+    - momentum
+    - mean_reversion
+    - breakout
+  symbol_universe:
+    - SPY
+    - QQQ
+    - IWM
+    - AAPL
+    - MSFT
+    - AMZN
+    - GOOGL
+    - META
+    - NVDA
+    - AMD
+    - JPM
+    - BAC
+  min_volume: 5000000.0
+  min_price: 10.0
+
+execution:
+  max_retries: 3
+  retry_backoff_seconds: 0.5
+  time_in_force: DAY
+
+data:
+  primary_feed: polygon
+  freshness_threshold_seconds: 30
+  heartbeat_interval_seconds: 10
+
+dashboard:
+  host: "0.0.0.0"
+  port: 8080
+
+mode: paper
