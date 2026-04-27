@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trading Platform Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
   <style>
     .pnl-positive { color: #10b981; }
     .pnl-negative { color: #ef4444; }
@@ -295,7 +295,7 @@ async function fetchStatus() {
     } else {
       fbody.innerHTML = [...d.recent_fills].reverse().map(f => `
         <tr class="border-t border-gray-800 hover:bg-gray-800 transition-colors">
-          <td class="px-4 py-2 text-gray-400 text-xs">${new Date(f.timestamp).toLocaleTimeString()}</td>
+          <td class="px-4 py-2 text-gray-400 text-xs">${new Date(f.timestamp).toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false})}</td>
           <td class="px-4 py-2 font-bold text-white">${f.symbol}</td>
           <td class="px-4 py-2 font-semibold ${f.side==='BUY'?'pnl-positive':'pnl-negative'}">${f.side}</td>
           <td class="px-4 py-2 text-right">${f.quantity}</td>

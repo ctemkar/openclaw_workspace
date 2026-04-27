@@ -1,6 +1,7 @@
 from __future__ import annotations
 import csv
 import json
+import time
 from datetime import datetime, timezone
 from typing import Dict, Iterator, List, Optional, Tuple
 
@@ -108,7 +109,14 @@ class ReplayEngine:
     # ------------------------------------------------------------------
 
     def __iter__(self) -> Iterator[Tuple[datetime, Dict[str, Quote]]]:
+        prev_ts: Optional[datetime] = None
         for bar in self._bars[self._cursor:]:
+            ts, _ = bar
+            if prev_ts is not None and self._speed_multiplier > 0:
+                delta = (ts - prev_ts).total_seconds() / self._speed_multiplier
+                if delta > 0:
+                    time.sleep(delta)
+            prev_ts = ts
             self._cursor += 1
             yield bar
 
